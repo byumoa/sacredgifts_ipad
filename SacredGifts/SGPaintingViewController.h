@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 PepperGum Games. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "SGNavigationViewController.h"
 #import "SGPaintingImageView.h"
 #import "SGClosableOverlayView.h"
 
@@ -27,7 +27,7 @@ typedef enum
     kModuleTypeSocial = 8
 }ModuleType;
 
-@interface SGPaintingViewController : UIViewController<SGPaintingImageViewDelegate, SGClosableOverlayViewDelegate>
+@interface SGPaintingViewController : SGNavigationViewController<SGPaintingImageViewDelegate, SGClosableOverlayViewDelegate>
 {
     ModuleType m_currentModule;
     CGRect m_lastPortraitFrame;
@@ -39,6 +39,7 @@ typedef enum
 @property (weak, nonatomic) IBOutlet SGOverlayView *topBarView;
 @property (weak, nonatomic) IBOutlet SGOverlayView *bottomBarView;
 @property (strong, nonatomic) SGOverlayView* currentOverlayView;
+@property (weak, nonatomic) NSDictionary* config;
 
 - (void)configWithDictionary:(NSDictionary*)config;
 - (IBAction)pressedModuleBtn: (UIButton*)sender;

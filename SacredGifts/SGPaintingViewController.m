@@ -60,7 +60,10 @@ const CGPoint kSocialCenter = {384, 795};
 //-------------------------------------------------- Creation ----------
 - (void)viewDidLoad
 {
+    NSLog(@"SGPaintingViewController viewDidLoad");
     [super viewDidLoad];
+    
+    [self configWithDictionary:self.config];
     
     [self addOverlayType:kModuleTypeTitle pushesPaintingDown:NO];
     m_lastPortraitFrame = CGRectMake(0, -40, 768, 1004);
@@ -68,6 +71,8 @@ const CGPoint kSocialCenter = {384, 795};
 
 - (void)configWithDictionary:(NSDictionary*)config
 {
+    NSLog(@"SGPaintingViewController configWithDictionary");
+    
     [self addMainPainting:config];
     [self populateModuleButtonsWithArray:(NSArray*)[config objectForKey:@"Modules"]];
     

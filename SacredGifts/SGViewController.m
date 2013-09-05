@@ -19,8 +19,7 @@ const NSString* kPaintingNameChristAndTheRichYoungRulerStr = @"christ_and_the_ri
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    [self transitionToPainting:kPaintingNameChristAndTheRichYoungRulerStr];
+	//[self transitionToPainting:kPaintingNameChristAndTheRichYoungRulerStr];
 }
 
 -(void)transitionToPainting: (const NSString*)paintingName
