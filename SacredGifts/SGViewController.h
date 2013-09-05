@@ -13,4 +13,5 @@
 {
     SGPaintingViewController *_paintingViewController;
 }
+@property (weak, nonatomic) IBOutlet UIImageView *spalshImgView;
 @end
