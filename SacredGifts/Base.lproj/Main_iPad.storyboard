@@ -467,11 +467,17 @@
                                 <rect key="frame" x="0.0" y="954" width="768" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ex7-GQ-pJI">
+                                <rect key="frame" x="0.0" y="676" width="768" height="278"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.87040070564516125" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="paintingImageView" destination="VdB-kg-beo" id="iKZ-SE-Oxe"/>
+                        <outlet property="tombstone" destination="ex7-GQ-pJI" id="S4I-aB-x6a"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ObG-bp-XU0" userLabel="First Responder" sceneMemberID="firstResponder"/>

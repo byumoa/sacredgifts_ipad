@@ -17,6 +17,7 @@
 }
 
 @property (weak, nonatomic) IBOutlet SGPaintingImageView *paintingImageView;
+@property (weak, nonatomic) IBOutlet UIImageView *tombstone;
 
 -(void)configWithInfo:(NSDictionary *)userInfo;
 

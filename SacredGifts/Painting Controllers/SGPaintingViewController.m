@@ -24,10 +24,11 @@
 -(void)addMainPainting:(NSDictionary *)config
 {
     NSString* paintingName = (NSString*)[config objectForKey:@"paintingName"];
-    NSString *fullPath = [[NSBundle mainBundle] pathForResource:@"MainPainting" ofType:@"png" inDirectory:[NSString stringWithFormat: @"PaintingResources/%@", paintingName]];
-    self.paintingImageView.image = [UIImage imageWithContentsOfFile:fullPath];
-    NSLog(@"paintingName: %@", paintingName);
-    NSLog(@"fullPath: %@", fullPath);
+    NSString *paintingPath = [[NSBundle mainBundle] pathForResource:@"MainPainting" ofType:@"png" inDirectory:[NSString stringWithFormat: @"PaintingResources/%@", paintingName]];
+    self.paintingImageView.image = [UIImage imageWithContentsOfFile:paintingPath];
+    
+    NSString *tombstonePath = [[NSBundle mainBundle] pathForResource:@"tombstone" ofType:@"png" inDirectory:[NSString stringWithFormat: @"PaintingResources/%@", paintingName]];
+    self.tombstone.image = [UIImage imageWithContentsOfFile:tombstonePath];
     //self.paintingImageView.delegate = self;
 }
 
