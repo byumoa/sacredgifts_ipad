@@ -74,6 +74,10 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="SG_Home_SplashScreen.png" id="zKe-di-iZj">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -81,6 +85,7 @@
                         <outlet property="backBtn" destination="ygj-IJ-KWP" id="xk2-By-WQu"/>
                         <outlet property="footerView" destination="vJA-Jz-DAr" id="vap-x7-JlY"/>
                         <outlet property="headerView" destination="Ksf-Tw-7Rg" id="ed3-ih-wMI"/>
+                        <outlet property="splash" destination="zKe-di-iZj" id="aR0-Tl-6DU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -495,9 +500,12 @@
         <image name="SG_Home_BlochBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_BlochBtn.png" width="768" height="205"/>
         <image name="SG_Home_DonateBtn-on.png" width="245" height="123"/>
+        <image name="SG_Home_DonateBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_DonateBtn.png" width="245" height="123"/>
         <image name="SG_Home_ExhibitionBtn-on.png" width="768" height="205"/>
+        <image name="SG_Home_ExhibitionBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_ExhibitionBtn.png" width="768" height="205"/>
+        <image name="SG_Home_FeedbackBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_FeedbackBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_FeedbackBtn.png" width="245" height="123"/>
         <image name="SG_Home_FilmBtn-on.png" width="768" height="205"/>
@@ -515,6 +523,7 @@
         <image name="SG_Home_ReservationBtn.png" width="768" height="205"/>
         <image name="SG_Home_SchwartzBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_SchwartzBtn.png" width="768" height="205"/>
+        <image name="SG_Home_SplashScreen.png" width="768" height="1024"/>
         <image name="SG_Home__FindPaintingOVerlay_MOCKUP.png" width="774" height="1023"/>
         <image name="painting_thumb_burial.png" width="101" height="131"/>
         <image name="painting_thumb_capture.png" width="100" height="131"/>

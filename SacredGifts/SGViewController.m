@@ -24,6 +24,10 @@
     homeC.delegate = self;
     
     [self displayContentController:homeC];
+    
+    [UIView animateWithDuration:1.0 animations:^{
+        self.splash.alpha = 0;
+    }];
 }
 
 @end

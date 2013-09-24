@@ -10,5 +10,6 @@
 #import "SGNavigationContainerViewController.h"
 
 @interface SGViewController : SGNavigationContainerViewController
+@property (weak, nonatomic) IBOutlet UIImageView *splash;
 
 @end
