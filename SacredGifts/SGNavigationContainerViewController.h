@@ -10,7 +10,7 @@
 
 @interface SGNavigationContainerViewController : SGContainerViewController <SGContentControllerDelegate, UIWebViewDelegate>
 {
-    NSString* _lastViewControllerIDStr;
+    NSString* _backViewControllerIDStr;
     UIWebView* _donateWebView;
 }
 

@@ -22,14 +22,17 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    _lastViewControllerIDStr = (NSString*)kControllerIDHomeStr;
+    _backViewControllerIDStr = (NSString*)kControllerIDHomeStr;
     self.backBtn.alpha = 0.5;
     self.backBtn.enabled = NO;
 }
 
 -(IBAction)pressedBack:(UIButton*)sender
 {
-    [self transitionFromController:self.currentContentController toControllerID:_lastViewControllerIDStr fromButtonRect:sender.frame withAnimType:kAnimTypeZoomOut];
+    if( [self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDPaintingContainerStr])
+        _backViewControllerIDStr = (NSString*)kControllerIDFindAPaintingStr;
+    
+    [self transitionFromController:self.currentContentController toControllerID:_backViewControllerIDStr fromButtonRect:sender.frame withAnimType:kAnimTypeZoomOut];
 }
 
 #pragma mark webview
@@ -90,8 +93,6 @@
 #pragma mark Delegate
 -(UIViewController*)transitionFromController:(UIViewController *)fromController toControllerID:(const NSString *)toControllerID fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
 {
-    _lastViewControllerIDStr = fromController.restorationIdentifier;
-    
     float backBtnAlpha = 1;
     if( [toControllerID isEqualToString: (NSString*)kControllerIDHomeStr] )
         backBtnAlpha = 0.5;
