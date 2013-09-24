@@ -7,8 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SGPaintingImageView.h"
+#import "SGClosableOverlayView.h"
 
 @interface SGPaintingViewController : UIViewController
+{
+    ModuleType m_currentModule;
+    CGRect m_lastPortraitFrame;
+}
+
+@property (weak, nonatomic) IBOutlet SGPaintingImageView *paintingImageView;
 
 -(void)configWithInfo:(NSDictionary *)userInfo;
 

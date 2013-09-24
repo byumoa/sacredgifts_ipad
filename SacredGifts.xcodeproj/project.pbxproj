@@ -209,6 +209,9 @@
 		612630B017EDF27000AD35BE /* SG_Home_FindBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630AC17EDF27000AD35BE /* SG_Home_FindBtn-on@2x.png */; };
 		612630D317EE0B5000AD35BE /* SG_Home__FindPaintingOVerlay_MOCKUP.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630D217EE0B5000AD35BE /* SG_Home__FindPaintingOVerlay_MOCKUP.png */; };
 		6186388B17F0C99C00F4A6BE /* SGContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186388A17F0C99C00F4A6BE /* SGContainerViewController.m */; };
+		6186A80017F196970047097F /* SGPaintingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186A7FF17F196970047097F /* SGPaintingImageView.m */; };
+		6186A80317F197460047097F /* SGOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186A80217F197460047097F /* SGOverlayView.m */; };
+		6186A80617F197DC0047097F /* SGClosableOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186A80517F197DC0047097F /* SGClosableOverlayView.m */; };
 		6190A50F17ED34B000860B8F /* SGHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6190A50E17ED34B000860B8F /* SGHomeViewController.m */; };
 		6190A51217ED367C00860B8F /* SGNavigationContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6190A51117ED367C00860B8F /* SGNavigationContainerViewController.m */; };
 		6190A51617ED3B9800860B8F /* SGContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6190A51517ED3B9800860B8F /* SGContentViewController.m */; };
@@ -439,6 +442,12 @@
 		612630D217EE0B5000AD35BE /* SG_Home__FindPaintingOVerlay_MOCKUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_Home__FindPaintingOVerlay_MOCKUP.png; sourceTree = "<group>"; };
 		6186388917F0C99C00F4A6BE /* SGContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGContainerViewController.h; sourceTree = "<group>"; };
 		6186388A17F0C99C00F4A6BE /* SGContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGContainerViewController.m; sourceTree = "<group>"; };
+		6186A7FE17F196970047097F /* SGPaintingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPaintingImageView.h; sourceTree = "<group>"; };
+		6186A7FF17F196970047097F /* SGPaintingImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPaintingImageView.m; sourceTree = "<group>"; };
+		6186A80117F197460047097F /* SGOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGOverlayView.h; sourceTree = "<group>"; };
+		6186A80217F197460047097F /* SGOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGOverlayView.m; sourceTree = "<group>"; };
+		6186A80417F197DC0047097F /* SGClosableOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGClosableOverlayView.h; sourceTree = "<group>"; };
+		6186A80517F197DC0047097F /* SGClosableOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGClosableOverlayView.m; sourceTree = "<group>"; };
 		6190A50D17ED34B000860B8F /* SGHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHomeViewController.h; sourceTree = "<group>"; };
 		6190A50E17ED34B000860B8F /* SGHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHomeViewController.m; sourceTree = "<group>"; };
 		6190A51017ED367C00860B8F /* SGNavigationContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGNavigationContainerViewController.h; sourceTree = "<group>"; };
@@ -822,6 +831,12 @@
 				6191A72C17F003F3003755F9 /* SGPaintingContainerViewController.m */,
 				6191A72E17F00444003755F9 /* SGPaintingViewController.h */,
 				6191A72F17F00444003755F9 /* SGPaintingViewController.m */,
+				6186A7FE17F196970047097F /* SGPaintingImageView.h */,
+				6186A7FF17F196970047097F /* SGPaintingImageView.m */,
+				6186A80117F197460047097F /* SGOverlayView.h */,
+				6186A80217F197460047097F /* SGOverlayView.m */,
+				6186A80417F197DC0047097F /* SGClosableOverlayView.h */,
+				6186A80517F197DC0047097F /* SGClosableOverlayView.m */,
 			);
 			path = "Painting Controllers";
 			sourceTree = "<group>";
@@ -1110,6 +1125,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6186A80017F196970047097F /* SGPaintingImageView.m in Sources */,
 				6190A50F17ED34B000860B8F /* SGHomeViewController.m in Sources */,
 				6191A72D17F003F3003755F9 /* SGPaintingContainerViewController.m in Sources */,
 				61008A9117ED03F0005E39CE /* SGAppDelegate.m in Sources */,
@@ -1121,7 +1137,9 @@
 				6190A51D17EDCB7F00860B8F /* SGMeetTheArtistsViewController.m in Sources */,
 				6191A73017F00444003755F9 /* SGPaintingViewController.m in Sources */,
 				6190A52017EDCBC900860B8F /* SGAboutTheExhibitionViewController.m in Sources */,
+				6186A80317F197460047097F /* SGOverlayView.m in Sources */,
 				6190A51617ED3B9800860B8F /* SGContentViewController.m in Sources */,
+				6186A80617F197DC0047097F /* SGClosableOverlayView.m in Sources */,
 				6190A51A17ED3E3200860B8F /* SGConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
