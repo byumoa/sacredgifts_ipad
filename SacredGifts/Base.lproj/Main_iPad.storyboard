@@ -100,7 +100,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="kzm-On-8yx">
-                                <rect key="frame" x="18" y="189" width="732" height="195"/>
+                                <rect key="frame" x="0.0" y="189" width="768" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="SG_Home_FindBtn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -111,7 +111,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="e1S-K6-Raj">
-                                <rect key="frame" x="17" y="394" width="732" height="195"/>
+                                <rect key="frame" x="0.0" y="402" width="768" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="SG_Home_MeetArtistsBtn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -122,7 +122,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kfF-Bv-6ev">
-                                <rect key="frame" x="0.0" y="595" width="768" height="205"/>
+                                <rect key="frame" x="0.0" y="615" width="768" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="SG_Home_ExhibitionBtn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -372,7 +372,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ESv-V8-rCO">
-                                <rect key="frame" x="0.0" y="183" width="768" height="205"/>
+                                <rect key="frame" x="0.0" y="189" width="768" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="SG_Home_BlochBtn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -380,7 +380,7 @@
                                 <state key="highlighted" image="SG_Home_BlochBtn-on.png"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="I54-Zz-A5v">
-                                <rect key="frame" x="-27" y="389" width="823" height="205"/>
+                                <rect key="frame" x="0.0" y="402" width="768" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="SG_Home_HoffmanBtn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -388,7 +388,7 @@
                                 <state key="highlighted" image="SG_Home_HoffmanBtn-on.png"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CBc-NW-NKD">
-                                <rect key="frame" x="-27" y="596" width="823" height="205"/>
+                                <rect key="frame" x="0.0" y="615" width="768" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="SG_Home_SchwartzBtn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -416,7 +416,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Whn-1f-3jF">
-                                <rect key="frame" x="-28" y="184" width="823" height="205"/>
+                                <rect key="frame" x="0.0" y="189" width="768" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="SG_Home_OriginsBtn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -424,7 +424,7 @@
                                 <state key="highlighted" image="SG_Home_OriginsBtn-on.png"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zjD-Fl-7iI">
-                                <rect key="frame" x="0.0" y="389" width="768" height="205"/>
+                                <rect key="frame" x="0.0" y="402" width="768" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="SG_Home_FilmBtn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -432,7 +432,7 @@
                                 <state key="highlighted" image="SG_Home_FilmBtn-on.png"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HcG-w8-2FS">
-                                <rect key="frame" x="0.0" y="595" width="768" height="205"/>
+                                <rect key="frame" x="0.0" y="615" width="768" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="SG_Home_ReservationBtn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -488,21 +488,21 @@
         <image name="SG_General_TopBar.png" width="768" height="62"/>
         <image name="SG_Home_BlochBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_BlochBtn.png" width="768" height="205"/>
-        <image name="SG_Home_DonateBtn-on.png" width="245" height="124"/>
-        <image name="SG_Home_DonateBtn.png" width="245" height="124"/>
+        <image name="SG_Home_DonateBtn-on.png" width="245" height="123"/>
+        <image name="SG_Home_DonateBtn.png" width="245" height="123"/>
         <image name="SG_Home_ExhibitionBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_ExhibitionBtn.png" width="768" height="205"/>
         <image name="SG_Home_FeedbackBtn-on.png" width="245" height="123"/>
-        <image name="SG_Home_FeedbackBtn.png" width="245" height="124"/>
+        <image name="SG_Home_FeedbackBtn.png" width="245" height="123"/>
         <image name="SG_Home_FilmBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_FilmBtn.png" width="768" height="205"/>
-        <image name="SG_Home_FindBtn-on.png" width="732" height="195"/>
-        <image name="SG_Home_FindBtn.png" width="732" height="195"/>
+        <image name="SG_Home_FindBtn-on.png" width="768" height="205"/>
+        <image name="SG_Home_FindBtn.png" width="768" height="205"/>
         <image name="SG_Home_Footer_BG.png" width="804" height="161"/>
         <image name="SG_Home_HoffmanBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_HoffmanBtn.png" width="768" height="205"/>
-        <image name="SG_Home_MeetArtistsBtn-on.png" width="732" height="206"/>
-        <image name="SG_Home_MeetArtistsBtn.png" width="732" height="195"/>
+        <image name="SG_Home_MeetArtistsBtn-on.png" width="768" height="205"/>
+        <image name="SG_Home_MeetArtistsBtn.png" width="768" height="205"/>
         <image name="SG_Home_OriginsBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_OriginsBtn.png" width="768" height="205"/>
         <image name="SG_Home_ReservationBtn-on.png" width="768" height="205"/>
