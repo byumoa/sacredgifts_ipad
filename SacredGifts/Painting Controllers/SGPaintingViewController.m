@@ -8,10 +8,11 @@
 
 #import "SGPaintingViewController.h"
 
-@interface SGPaintingViewController ()
-
-@end
-
 @implementation SGPaintingViewController
+
+-(void)configWithInfo:(NSDictionary *)userInfo
+{
+    NSLog(@"SGPaintingViewController CONTENT");
+}
 
 @end

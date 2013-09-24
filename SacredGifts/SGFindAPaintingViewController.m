@@ -23,7 +23,6 @@
 }
 
 - (IBAction)touchedPainting:(UIButton *)sender {
-    //[self.delegate transitionFromController:self toControllerID:kControllerIDPaintingContainerStr fromButtonRect:sender.frame withAnimType:kAnimTypeZoomIn];
-    [self.delegate transitionFromController:self toPaintingID:@"Dummy ID" fromButtonRect:sender.frame withAnimType:kAnimTypeZoomIn];
+    [self.delegate transitionFromController:self toPaintingNamed:@"ruler" fromButtonRect:sender.frame withAnimType:kAnimTypeZoomIn];
 }
 @end

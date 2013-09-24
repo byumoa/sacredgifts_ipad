@@ -23,7 +23,7 @@
 -(void)configWithInfo:(NSDictionary *)userInfo
 {
     //Get config working now!
-    
+    NSLog(@"");
 }
 
 @end

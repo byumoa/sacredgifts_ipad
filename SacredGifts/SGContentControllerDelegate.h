@@ -10,5 +10,5 @@
 
 @protocol SGContentControllerDelegate <NSObject>
 - (UIViewController*)transitionFromController: (UIViewController*)fromController toControllerID: (const NSString*)toControllerID fromButtonRect: (CGRect)frame withAnimType: (const NSString*)animType;
-- (void)transitionFromController: (UIViewController*)fromController toPaintingID: (const NSString*)toPaintingID fromButtonRect: (CGRect)frame withAnimType: (const NSString*)animType;
+- (void)transitionFromController: (UIViewController*)fromController toPaintingNamed: (const NSString*)paintingName fromButtonRect: (CGRect)frame withAnimType: (const NSString*)animType;
 @end

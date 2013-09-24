@@ -10,6 +10,7 @@
 #import "SGConstants.h"
 #import "SGPaintingContainerViewController.h"
 #import "SGContentViewController.h"
+#import "SGPaintingViewController.h"
 
 @interface SGNavigationContainerViewController ()
 - (void)pressedWebViewBack: (id)sender;
@@ -123,11 +124,15 @@
     return toController;
 }
 
--(void)transitionFromController:(UIViewController *)fromController toPaintingID:(const NSString *)toPaintingID fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
+-(void)transitionFromController:(UIViewController *)fromController toPaintingNamed:(const NSString *)paintingName fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
 {
     SGPaintingContainerViewController* paintingContainer = (SGPaintingContainerViewController*)[self transitionFromController:fromController toControllerID:kControllerIDPaintingContainerStr fromButtonRect:frame withAnimType:animType];
     
-    [paintingContainer configWithInfo:nil];
+    NSString *fullPath = [[NSBundle mainBundle] pathForResource:@"paintingConfig" ofType:@"plist" inDirectory:[NSString stringWithFormat: @"PaintingResources/%@", paintingName]];
+    NSMutableDictionary *config = [NSMutableDictionary dictionaryWithContentsOfFile:fullPath];
+    [config setObject:paintingName forKey:@"paintingName"];
+    
+    [(SGPaintingViewController*)paintingContainer.currentContentController configWithInfo:(NSDictionary*)config];
 }
 
 @end

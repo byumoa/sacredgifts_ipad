@@ -10,4 +10,6 @@
 
 @interface SGPaintingViewController : UIViewController
 
+-(void)configWithInfo:(NSDictionary *)userInfo;
+
 @end
