@@ -31,6 +31,8 @@
 {
     if( [self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDPaintingContainerStr])
         _backViewControllerIDStr = (NSString*)kControllerIDFindAPaintingStr;
+    else
+        _backViewControllerIDStr = (NSString*)kControllerIDHomeStr;
     
     [self transitionFromController:self.currentContentController toControllerID:_backViewControllerIDStr fromButtonRect:sender.frame withAnimType:kAnimTypeZoomOut];
 }
