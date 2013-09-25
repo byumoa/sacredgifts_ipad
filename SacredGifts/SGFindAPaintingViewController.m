@@ -30,15 +30,10 @@ const int kPaintingIDTemple = 18;
 
 @implementation SGFindAPaintingViewController
 
--(id)initWithCoder:(NSCoder *)aDecoder
+-(void)viewDidLoad
 {
-    if( self = [super initWithCoder:aDecoder])
-    {
-        _backgroundPatternStr = @"SG_Home_BG-FindPainting_Pattern.png";
-        _blurredBackgroundPatternStr = @"SG_Home_BG-FindPainting_Pattern_Blurred.png";
-    }
-    
-    return self;
+    _blurImageName = @"sg_home_bg-findpainting_blur.png";
+    [super viewDidLoad];
 }
 
 - (IBAction)touchedPainting:(UIButton *)sender

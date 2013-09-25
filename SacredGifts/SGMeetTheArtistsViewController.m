@@ -8,17 +8,13 @@
 
 #import "SGMeetTheArtistsViewController.h"
 
+
 @implementation SGMeetTheArtistsViewController
 
--(id)initWithCoder:(NSCoder *)aDecoder
+-(void)viewDidLoad
 {
-    if( [super initWithCoder:aDecoder])
-    {
-        _backgroundPatternStr = @"SG_Home_BG-MeetArtists_Pattern.png";
-        _blurredBackgroundPatternStr = @"SG_Home_BG-MeetArtists_Pattern_Blurred.png";
-    }
-    
-    return self;
+    _blurImageName = @"sg_home_bg-meetartists_blur.png";
+    [super viewDidLoad];
 }
 
 @end

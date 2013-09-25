@@ -54,25 +54,7 @@ extern const NSString* kPaintingNameSermon;
 extern const NSString* kPaintingNameShepherds;
 extern const NSString* kPaintingNameTemple;
 
-/*
-extern const int kPaintingIDBurial;
-extern const int kPaintingIDCapture;
-extern const int kPaintingIDChildren;
-extern const int kPaintingIDCleansing;
-extern const int kPaintingIDConsolator;
-extern const int kPaintingIDCross;
-extern const int kPaintingIDDenial;
-extern const int kPaintingIDEmmaus;
-extern const int kPaintingIDGarden;
-extern const int kPaintingIDGethsemane;
-extern const int kPaintingIDHealing;
-extern const int kPaintingIDMocking;
-extern const int kPaintingIDResurrection;
-extern const int kPaintingIDRuler;
-extern const int kPaintingIDSavior;
-extern const int kPaintingIDSermon;
-extern const int kPaintingIDShepherds;
-extern const int kPaintingIDTemple;
-*/
+extern const CGRect kBlurFrame;
+
 extern const NSString* kDontateURLStr;
 extern const CGRect kWebviewBackBtnFrm;

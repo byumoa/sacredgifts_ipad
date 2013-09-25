@@ -11,7 +11,11 @@
 
 @interface SGContentViewController : UIViewController
 {
-    NSString* _backgroundPatternStr, *_blurredBackgroundPatternStr;
+    NSString* _blurImageName;
 }
+
 @property(strong, nonatomic) id<SGContentControllerDelegate> delegate;
+
+@property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *blurredViews;
+
 @end

@@ -10,15 +10,10 @@
 
 @implementation SGAboutTheExhibitionViewController
 
--(id)initWithCoder:(NSCoder *)aDecoder
+-(void)viewDidLoad
 {
-    if( [super initWithCoder:aDecoder])
-    {
-        _backgroundPatternStr = @"SG_General_BG_Pattern.png";
-        _blurredBackgroundPatternStr = @"SG_General_BG_Pattern_Blur.png";
-    }
-    
-    return self;
+    _blurImageName = @"sg_home_bg-exhibition_blur.png";
+    [super viewDidLoad];
 }
 
 @end

@@ -268,6 +268,17 @@
 		6186A8A717F24D250047097F /* home__FindPainting_MOCKUP.png in Resources */ = {isa = PBXBuildFile; fileRef = 6186A8A617F24D250047097F /* home__FindPainting_MOCKUP.png */; };
 		6186A8AA17F290800047097F /* sg_home_bg-exhibition.png in Resources */ = {isa = PBXBuildFile; fileRef = 6186A8A817F290800047097F /* sg_home_bg-exhibition.png */; };
 		6186A8AB17F290800047097F /* sg_home_bg-exhibition@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6186A8A917F290800047097F /* sg_home_bg-exhibition@2x.png */; };
+		6186A8AE17F2F4CD0047097F /* SGBlurManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186A8AD17F2F4CD0047097F /* SGBlurManager.m */; };
+		6186A8B017F324510047097F /* libQCAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6186A8AF17F324510047097F /* libQCAR.a */; };
+		6186A8B217F324590047097F /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6186A8B117F324590047097F /* Security.framework */; };
+		6186A8B417F324610047097F /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6186A8B317F324610047097F /* OpenGLES.framework */; };
+		6186A8B617F3246A0047097F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6186A8B517F3246A0047097F /* QuartzCore.framework */; };
+		6186A8B817F3247B0047097F /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6186A8B717F3247B0047097F /* AVFoundation.framework */; };
+		6186A8BA17F324820047097F /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6186A8B917F324820047097F /* CoreMedia.framework */; };
+		6186A8BC17F3248A0047097F /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6186A8BB17F3248A0047097F /* CoreVideo.framework */; };
+		6186A8BE17F324930047097F /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6186A8BD17F324930047097F /* SystemConfiguration.framework */; };
+		6186A8C217F325000047097F /* SacredGiftsPaintings.dat in Resources */ = {isa = PBXBuildFile; fileRef = 6186A8C017F325000047097F /* SacredGiftsPaintings.dat */; };
+		6186A8C317F325000047097F /* SacredGiftsPaintings.xml in Resources */ = {isa = PBXBuildFile; fileRef = 6186A8C117F325000047097F /* SacredGiftsPaintings.xml */; };
 		6190A50F17ED34B000860B8F /* SGHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6190A50E17ED34B000860B8F /* SGHomeViewController.m */; };
 		6190A51217ED367C00860B8F /* SGNavigationContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6190A51117ED367C00860B8F /* SGNavigationContainerViewController.m */; };
 		6190A51617ED3B9800860B8F /* SGContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6190A51517ED3B9800860B8F /* SGContentViewController.m */; };
@@ -560,6 +571,18 @@
 		6186A8A617F24D250047097F /* home__FindPainting_MOCKUP.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = home__FindPainting_MOCKUP.png; sourceTree = "<group>"; };
 		6186A8A817F290800047097F /* sg_home_bg-exhibition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_bg-exhibition.png"; sourceTree = "<group>"; };
 		6186A8A917F290800047097F /* sg_home_bg-exhibition@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_bg-exhibition@2x.png"; sourceTree = "<group>"; };
+		6186A8AC17F2F4CD0047097F /* SGBlurManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGBlurManager.h; sourceTree = "<group>"; };
+		6186A8AD17F2F4CD0047097F /* SGBlurManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBlurManager.m; sourceTree = "<group>"; };
+		6186A8AF17F324510047097F /* libQCAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQCAR.a; path = "../../Developer/vuforia-sdk-ios-2-6-8/build/lib/arm/libQCAR.a"; sourceTree = "<group>"; };
+		6186A8B117F324590047097F /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		6186A8B317F324610047097F /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		6186A8B517F3246A0047097F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		6186A8B717F3247B0047097F /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		6186A8B917F324820047097F /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		6186A8BB17F3248A0047097F /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		6186A8BD17F324930047097F /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		6186A8C017F325000047097F /* SacredGiftsPaintings.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = SacredGiftsPaintings.dat; sourceTree = "<group>"; };
+		6186A8C117F325000047097F /* SacredGiftsPaintings.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SacredGiftsPaintings.xml; sourceTree = "<group>"; };
 		6190A50D17ED34B000860B8F /* SGHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHomeViewController.h; sourceTree = "<group>"; };
 		6190A50E17ED34B000860B8F /* SGHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHomeViewController.m; sourceTree = "<group>"; };
 		6190A51017ED367C00860B8F /* SGNavigationContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGNavigationContainerViewController.h; sourceTree = "<group>"; };
@@ -584,6 +607,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6186A8BE17F324930047097F /* SystemConfiguration.framework in Frameworks */,
+				6186A8BC17F3248A0047097F /* CoreVideo.framework in Frameworks */,
+				6186A8BA17F324820047097F /* CoreMedia.framework in Frameworks */,
+				6186A8B817F3247B0047097F /* AVFoundation.framework in Frameworks */,
+				6186A8B617F3246A0047097F /* QuartzCore.framework in Frameworks */,
+				6186A8B417F324610047097F /* OpenGLES.framework in Frameworks */,
+				6186A8B217F324590047097F /* Security.framework in Frameworks */,
+				6186A8B017F324510047097F /* libQCAR.a in Frameworks */,
 				61008A8317ED03F0005E39CE /* CoreGraphics.framework in Frameworks */,
 				61008A8517ED03F0005E39CE /* UIKit.framework in Frameworks */,
 				61008A8117ED03F0005E39CE /* Foundation.framework in Frameworks */,
@@ -627,6 +658,14 @@
 		61008A7F17ED03F0005E39CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6186A8BD17F324930047097F /* SystemConfiguration.framework */,
+				6186A8BB17F3248A0047097F /* CoreVideo.framework */,
+				6186A8B917F324820047097F /* CoreMedia.framework */,
+				6186A8B717F3247B0047097F /* AVFoundation.framework */,
+				6186A8B517F3246A0047097F /* QuartzCore.framework */,
+				6186A8B317F324610047097F /* OpenGLES.framework */,
+				6186A8B117F324590047097F /* Security.framework */,
+				6186A8AF17F324510047097F /* libQCAR.a */,
 				61008A8017ED03F0005E39CE /* Foundation.framework */,
 				61008A8217ED03F0005E39CE /* CoreGraphics.framework */,
 				61008A8417ED03F0005E39CE /* UIKit.framework */,
@@ -658,6 +697,8 @@
 				6190A51C17EDCB7F00860B8F /* SGMeetTheArtistsViewController.m */,
 				6190A51E17EDCBC900860B8F /* SGAboutTheExhibitionViewController.h */,
 				6190A51F17EDCBC900860B8F /* SGAboutTheExhibitionViewController.m */,
+				6186A8AC17F2F4CD0047097F /* SGBlurManager.h */,
+				6186A8AD17F2F4CD0047097F /* SGBlurManager.m */,
 			);
 			path = SacredGifts;
 			sourceTree = "<group>";
@@ -694,6 +735,7 @@
 		61008ABA17ED058B005E39CE /* GeneralResources */ = {
 			isa = PBXGroup;
 			children = (
+				6186A8BF17F324F00047097F /* AR Assets */,
 				6186A8A617F24D250047097F /* home__FindPainting_MOCKUP.png */,
 				610303C517F189E20060A83E /* Backgrounds */,
 				612630D417EE4FFD00AD35BE /* Thumbnails */,
@@ -976,6 +1018,15 @@
 				6186A85A17F241560047097F /* painting_thumb_temple@2x.png */,
 			);
 			path = Thumbnails;
+			sourceTree = "<group>";
+		};
+		6186A8BF17F324F00047097F /* AR Assets */ = {
+			isa = PBXGroup;
+			children = (
+				6186A8C017F325000047097F /* SacredGiftsPaintings.dat */,
+				6186A8C117F325000047097F /* SacredGiftsPaintings.xml */,
+			);
+			path = "AR Assets";
 			sourceTree = "<group>";
 		};
 		6191A72917F001B7003755F9 /* SGNavigation */ = {
@@ -1285,6 +1336,7 @@
 				6186A89A17F241560047097F /* painting_thumb_sermon@2x.png in Resources */,
 				61008A9417ED03F0005E39CE /* Main_iPhone.storyboard in Resources */,
 				61008BD917ED058C005E39CE /* SG_General_Painting_MusicBtn@2x.png in Resources */,
+				6186A8C317F325000047097F /* SacredGiftsPaintings.xml in Resources */,
 				61008BE617ED058C005E39CE /* SG_General_ScanBtn-on.png in Resources */,
 				61008B7517ED058C005E39CE /* SG_Home_ExhibitionBtn-on.png in Resources */,
 				610303D217F18A020060A83E /* sg_home_bg-exhibition_blur.png in Resources */,
@@ -1329,6 +1381,7 @@
 				61008B9A17ED058C005E39CE /* SG_Home_ReservationBtn@2x.png in Resources */,
 				61008BEA17ED058C005E39CE /* SG_General_TopBar.png in Resources */,
 				6186A86517F241560047097F /* painting_thumb_children.png in Resources */,
+				6186A8C217F325000047097F /* SacredGiftsPaintings.dat in Resources */,
 				610303D617F18A020060A83E /* sg_home_bg-findpainting.png in Resources */,
 				61008BB717ED058C005E39CE /* SG_General_Module_Overlay_Schwartz.png in Resources */,
 			);
@@ -1355,6 +1408,7 @@
 				61008A9117ED03F0005E39CE /* SGAppDelegate.m in Sources */,
 				6190A51217ED367C00860B8F /* SGNavigationContainerViewController.m in Sources */,
 				61008A9A17ED03F0005E39CE /* SGViewController.m in Sources */,
+				6186A8AE17F2F4CD0047097F /* SGBlurManager.m in Sources */,
 				61008A8D17ED03F0005E39CE /* main.m in Sources */,
 				61008C0917ED1B4C005E39CE /* SGFindAPaintingViewController.m in Sources */,
 				6186388B17F0C99C00F4A6BE /* SGContainerViewController.m in Sources */,
@@ -1502,8 +1556,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SacredGifts/SacredGifts-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = "SacredGifts/SacredGifts-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ontario/Developer/vuforia-sdk-ios-2-6-8/build/lib/arm",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1515,8 +1577,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SacredGifts/SacredGifts-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+				);
 				INFOPLIST_FILE = "SacredGifts/SacredGifts-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/ontario/Developer/vuforia-sdk-ios-2-6-8/build/lib/arm",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

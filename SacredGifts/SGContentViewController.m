@@ -7,20 +7,25 @@
 //
 
 #import "SGContentViewController.h"
+#import "SGBlurManager.h"
+#import "SGConstants.h"
 
 const CGRect headerBackerFrame = {0,0,768,62};
 
 @implementation SGContentViewController
 
--(id)initWithCoder:(NSCoder *)aDecoder
-{
-    if( self = [super initWithCoder:aDecoder])
-    {
-        _backgroundPatternStr = @"SG_Home_BG-Home_Pattern.png";
-        _blurredBackgroundPatternStr = @"SG_Home_BG-Home_Pattern_Blurred.png";
-    }
+-(void)viewDidLoad
+{    
+    [super viewDidLoad];
     
-    return self;
+    SGBlurManager* blurManager = [SGBlurManager sharedManager];
+    [[SGBlurManager sharedManager] setBlurImageWithName:(NSString*)_blurImageName andFrame:kBlurFrame];
+
+    for( UIView* blurredView in self.blurredViews )
+    {
+        UIView* blurBacking = [blurManager blurBackingForView:blurredView];
+        [self.view insertSubview:blurBacking belowSubview:blurredView];
+    }
 }
 
 @end

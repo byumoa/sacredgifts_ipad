@@ -141,6 +141,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outletCollection property="blurredViews" destination="kzm-On-8yx" id="HJE-Xv-tyf"/>
+                        <outletCollection property="blurredViews" destination="e1S-K6-Raj" id="S2f-IL-aC4"/>
+                        <outletCollection property="blurredViews" destination="kfF-Bv-6ev" id="nTt-PE-xuZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Luk-dA-5TZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -429,6 +434,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outletCollection property="blurredViews" destination="ESv-V8-rCO" id="UyC-d9-IkW"/>
+                        <outletCollection property="blurredViews" destination="I54-Zz-A5v" id="FCk-v4-DmK"/>
+                        <outletCollection property="blurredViews" destination="CBc-NW-NKD" id="W4R-Kh-FT2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vat-ZX-hpE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -473,6 +483,11 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outletCollection property="blurredViews" destination="Whn-1f-3jF" id="jzQ-NI-AXs"/>
+                        <outletCollection property="blurredViews" destination="zjD-Fl-7iI" id="Sdd-ST-3lf"/>
+                        <outletCollection property="blurredViews" destination="HcG-w8-2FS" id="h0L-tH-oj4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upi-qV-PHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

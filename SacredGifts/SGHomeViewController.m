@@ -8,6 +8,7 @@
 
 #import "SGHomeViewController.h"
 #import "SGConstants.h"
+#import "SGBlurManager.h"
 
 @interface SGHomeViewController ()
 - (IBAction)pressedBtn:(UIButton *)sender;
@@ -17,8 +18,8 @@
 
 -(void)viewDidLoad
 {
+    _blurImageName = @"sg_home_bg-home_blur.png";
     [super viewDidLoad];
-    
 }
 
 - (IBAction)pressedBtn:(UIButton *)sender
