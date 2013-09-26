@@ -21,7 +21,12 @@ const CGRect headerBackerFrame = {0,0,768,62};
     SGBlurManager* blurManager = [SGBlurManager sharedManager];
     [[SGBlurManager sharedManager] setBlurImageWithName:(NSString*)_blurImageName andFrame:kBlurFrame];
 
-    for( UIView* blurredView in self.blurredViews )
+    NSArray* containersBlurredViews = [self.delegate viewsForBlurredBackingInController:self];
+    _allBlurredViews = [NSMutableArray new];
+    [_allBlurredViews addObjectsFromArray:containersBlurredViews];
+    [_allBlurredViews addObjectsFromArray:self.blurredViews];
+    
+    for( UIView* blurredView in _allBlurredViews )
     {
         UIView* blurBacking = [blurManager blurBackingForView:blurredView];
         [self.view insertSubview:blurBacking belowSubview:blurredView];

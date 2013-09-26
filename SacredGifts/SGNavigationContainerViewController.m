@@ -11,6 +11,7 @@
 #import "SGPaintingContainerViewController.h"
 #import "SGContentViewController.h"
 #import "SGPaintingViewController.h"
+#import "SGBlurManager.h"
 
 @interface SGNavigationContainerViewController ()
 - (void)pressedWebViewBack: (id)sender;
@@ -136,6 +137,11 @@
     [config setObject:paintingName forKey:@"paintingName"];
     
     [(SGPaintingViewController*)paintingContainer.currentContentController configWithInfo:(NSDictionary*)config];
+}
+
+-(NSArray *)viewsForBlurredBackingInController:(UIViewController *)contentController
+{
+    return [NSArray arrayWithObject:self.headerView];
 }
 
 @end
