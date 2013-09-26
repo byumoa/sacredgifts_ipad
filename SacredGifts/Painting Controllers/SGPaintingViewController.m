@@ -9,16 +9,20 @@
 #import "SGPaintingViewController.h"
 
 @interface SGPaintingViewController (PrivateAPIs)
-
 - (void) addMainPainting:(NSDictionary*)config;
-
 @end
 
 @implementation SGPaintingViewController
-
 -(void)configWithInfo:(NSDictionary *)userInfo
 {
     [self addMainPainting:userInfo];
+    
+    NSArray* blurredViews = [NSArray arrayWithObject:self.tombstone];
+    
+    NSString* paintingName = (NSString*)[userInfo objectForKey:@"paintingName"];
+    NSString *blurredPaintingPath = [[NSBundle mainBundle] pathForResource:@"MainPainting Blurred" ofType:@"png" inDirectory:[NSString stringWithFormat: @"PaintingResources/%@", paintingName]];
+    
+    [self.delegate contentController:self viewsForBlurredBacking:blurredViews blurredImgPath:blurredPaintingPath];
 }
 
 -(void)addMainPainting:(NSDictionary *)config
@@ -29,7 +33,6 @@
     
     NSString *tombstonePath = [[NSBundle mainBundle] pathForResource:@"tombstone" ofType:@"png" inDirectory:[NSString stringWithFormat: @"PaintingResources/%@", paintingName]];
     self.tombstone.image = [UIImage imageWithContentsOfFile:tombstonePath];
-    //self.paintingImageView.delegate = self;
 }
 
 @end

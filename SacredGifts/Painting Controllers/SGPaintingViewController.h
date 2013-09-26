@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "SGPaintingImageView.h"
 #import "SGClosableOverlayView.h"
+#import "SGContentControllerDelegate.h"
 
 @interface SGPaintingViewController : UIViewController
 {
@@ -18,6 +19,7 @@
 
 @property (weak, nonatomic) IBOutlet SGPaintingImageView *paintingImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *tombstone;
+@property (weak, nonatomic) id<SGContentControllerDelegate> delegate;
 
 -(void)configWithInfo:(NSDictionary *)userInfo;
 

@@ -8,6 +8,8 @@
 
 #import "SGBlurManager.h"
 
+const CGRect kBlurredPaintingFrame = {0,62,768,892};
+
 @implementation SGBlurManager
 
 +(id)sharedManager
@@ -27,7 +29,11 @@
     _blurFrame = frame;
 }
 
--(void)setBlurImageWithPath:(NSString *)imagePathStr{}
+-(void)setBlurImageWithPath:(NSString *)imagePathStr
+{
+    _currentBlurImg = [UIImage imageWithContentsOfFile:imagePathStr];
+    _blurFrame = kBlurredPaintingFrame;
+}
 
 -(UIView *)blurBackingForView:(UIView *)view
 {

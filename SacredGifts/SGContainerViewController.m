@@ -8,6 +8,8 @@
 
 #import "SGContainerViewController.h"
 #import "SGContentViewController.h"
+#import "SGBlurManager.h"
+#import "SGConstants.h"
 
 @implementation SGContainerViewController
 
@@ -32,6 +34,35 @@
         [oldC removeFromParentViewController];
         [newC didMoveToParentViewController:self];
     }];
+}
+
+-(void)contentController:(UIViewController *)contentController viewsForBlurredBacking:(NSArray*)views blurredImgName:(NSString *)blurredImgName
+{
+    SGBlurManager* blurManager = [SGBlurManager sharedManager];
+    [[SGBlurManager sharedManager] setBlurImageWithName:blurredImgName andFrame:kBlurFrame];
+    
+    [_allBlurredViews addObjectsFromArray:views];
+    
+    for( UIView* blurredView in _allBlurredViews )
+    {
+        UIView* blurBacking = [blurManager blurBackingForView:blurredView];
+        [self.currentContentController.view insertSubview:blurBacking belowSubview:blurredView];
+    }
+}
+
+-(void)contentController:(UIViewController *)contentController viewsForBlurredBacking:(NSArray *)views blurredImgPath:(NSString *)blurredImgPath
+{
+    SGBlurManager* blurManager = [SGBlurManager sharedManager];
+    //[[SGBlurManager sharedManager] setBlurImageWithName:blurredImgName andFrame:kBlurFrame];
+    [[SGBlurManager sharedManager] setBlurImageWithPath:blurredImgPath];
+    
+    [_allBlurredViews addObjectsFromArray:views];
+    
+    for( UIView* blurredView in _allBlurredViews )
+    {
+        UIView* blurBacking = [blurManager blurBackingForView:blurredView];
+        [self.currentContentController.view insertSubview:blurBacking belowSubview:blurredView];
+    }
 }
 
 @end

@@ -514,7 +514,7 @@
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="ex7-GQ-pJI">
-                                <rect key="frame" x="0.0" y="676" width="768" height="278"/>
+                                <rect key="frame" x="0.0" y="840" width="768" height="114"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>

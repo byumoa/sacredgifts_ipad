@@ -10,8 +10,9 @@
 #import "SGContentControllerDelegate.h"
 @class SGContentViewController;
 
-@interface SGContainerViewController : UIViewController{
+@interface SGContainerViewController : UIViewController<SGContentControllerDelegate>{
     void (^animTransitionBlock)(void);
+    NSMutableArray* _allBlurredViews;
 }
 @property (weak, nonatomic) SGContentViewController* currentContentController;
 

@@ -7,11 +7,9 @@
 //
 
 #import "SGNavigationContainerViewController.h"
-#import "SGConstants.h"
 #import "SGPaintingContainerViewController.h"
 #import "SGContentViewController.h"
 #import "SGPaintingViewController.h"
-#import "SGBlurManager.h"
 
 @interface SGNavigationContainerViewController ()
 - (void)pressedWebViewBack: (id)sender;
@@ -141,18 +139,9 @@
 
 -(void)contentController:(UIViewController *)contentController viewsForBlurredBacking:(NSArray*)views blurredImgName:(NSString *)blurredImgName
 {
-    SGBlurManager* blurManager = [SGBlurManager sharedManager];
-    [[SGBlurManager sharedManager] setBlurImageWithName:blurredImgName andFrame:kBlurFrame];
-    
     _allBlurredViews = [NSMutableArray new];
-    [_allBlurredViews addObjectsFromArray:views];
     [_allBlurredViews addObject:self.headerView];
-    
-    for( UIView* blurredView in _allBlurredViews )
-    {
-        UIView* blurBacking = [blurManager blurBackingForView:blurredView];
-        [self.currentContentController.view insertSubview:blurBacking belowSubview:blurredView];
-    }
+    [super contentController:contentController viewsForBlurredBacking:views blurredImgName:blurredImgName];
 }
 
 @end

@@ -8,11 +8,11 @@
 
 #import "SGContainerViewController.h"
 
-@interface SGNavigationContainerViewController : SGContainerViewController <SGContentControllerDelegate, UIWebViewDelegate>
+@interface SGNavigationContainerViewController : SGContainerViewController <UIWebViewDelegate>
 {
     NSString* _backViewControllerIDStr;
     UIWebView* _donateWebView;
-    NSMutableArray* _allBlurredViews;
+    //NSMutableArray* _allBlurredViews;
 }
 
 @property (weak, nonatomic) IBOutlet UIView *headerView;
