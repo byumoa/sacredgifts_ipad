@@ -12,7 +12,6 @@
 @interface SGContentViewController : UIViewController
 {
     NSString* _blurImageName;
-    NSMutableArray* _allBlurredViews;
 }
 
 @property(strong, nonatomic) id<SGContentControllerDelegate> delegate;

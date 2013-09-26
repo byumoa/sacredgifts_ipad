@@ -139,9 +139,20 @@
     [(SGPaintingViewController*)paintingContainer.currentContentController configWithInfo:(NSDictionary*)config];
 }
 
--(NSArray *)viewsForBlurredBackingInController:(UIViewController *)contentController
+-(void)contentController:(UIViewController *)contentController viewsForBlurredBacking:(NSArray*)views blurredImgName:(NSString *)blurredImgName
 {
-    return [NSArray arrayWithObject:self.headerView];
+    SGBlurManager* blurManager = [SGBlurManager sharedManager];
+    [[SGBlurManager sharedManager] setBlurImageWithName:blurredImgName andFrame:kBlurFrame];
+    
+    _allBlurredViews = [NSMutableArray new];
+    [_allBlurredViews addObjectsFromArray:views];
+    [_allBlurredViews addObject:self.headerView];
+    
+    for( UIView* blurredView in _allBlurredViews )
+    {
+        UIView* blurBacking = [blurManager blurBackingForView:blurredView];
+        [self.currentContentController.view insertSubview:blurBacking belowSubview:blurredView];
+    }
 }
 
 @end
