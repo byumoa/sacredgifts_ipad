@@ -11,12 +11,12 @@ typedef enum
     kModuleTypeNone = 0,
     kModuleTypeTitle = 1,
     kModuleTypeSummary = 2,
-    kModuleTypeContext = 3,
-    kModuleTypeDetails = 4,
-    kModuleTypeCommentary = 5,
-    kModuleTypeMusic = 6,
-    kModuleTypeChildrens = 7,
-    kModuleTypeSocial = 8
+    kModuleTypePerspective = 3,
+    kModuleTypeMusic = 4,
+    kModuleTypeChildrens = 5,
+    kModuleTypeSocial = 6,
+    kModuleTypeGifts = 7,
+    kModuleTypeDetails = 8
 }ModuleType;
 
 typedef enum
@@ -34,6 +34,8 @@ extern const NSString* kControllerIDMeetTheArtistsStr;
 extern const NSString* kControllerIDAboutTheExhibitionStr;
 extern const NSString* kControllerIDPaintingContainerStr;
 extern const NSString* kControllerIDPaintingStr;
+
+extern const NSString* kOverlayControllerIDTombstone;
 
 extern const NSString* kPaintingNameBurial;
 extern const NSString* kPaintingNameCapture;
@@ -58,3 +60,25 @@ extern const CGRect kBlurFrame;
 
 extern const NSString* kDontateURLStr;
 extern const CGRect kWebviewBackBtnFrm;
+
+extern const NSString* kPaintingResourcesStr;
+
+extern const NSString* kModuleBtnSummaryImageNrm;
+extern const NSString* kModuleBtnSummaryImageSel;
+extern const NSString* kModuleBtnDetailsImageNrm;
+extern const NSString* kModuleBtnDetailsImageSel;
+extern const NSString* kModuleBtnMusicImageNrm;
+extern const NSString* kModuleBtnMusicImageSel;
+extern const NSString* kModuleBtnChildrensImageNrm;
+extern const NSString* kModuleBtnChildrensImageSel;
+extern const NSString* kModuleBtnPerspectiveImageNrm;
+extern const NSString* kModuleBtnPerspectiveImageSel;
+extern const NSString* kModuleBtnGiftsImageNrm;
+extern const NSString* kModuleBtnGiftsImageSel;
+
+extern const NSString* kSummaryStr;
+extern const NSString* kPerspectiveStr;
+extern const NSString* kGiftsStr;
+extern const NSString* kMusicStr;
+extern const NSString* kChildrensStr;
+extern const NSString* kDetailsStr;

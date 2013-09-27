@@ -175,6 +175,15 @@
 		610303DB17F18A020060A83E /* sg_home_bg-meetartists_blur.png in Resources */ = {isa = PBXBuildFile; fileRef = 610303CF17F18A020060A83E /* sg_home_bg-meetartists_blur.png */; };
 		610303DC17F18A020060A83E /* sg_home_bg-meetartists.png in Resources */ = {isa = PBXBuildFile; fileRef = 610303D017F18A020060A83E /* sg_home_bg-meetartists.png */; };
 		610303DD17F18A020060A83E /* sg_home_bg-meetartists@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 610303D117F18A020060A83E /* sg_home_bg-meetartists@2x.png */; };
+		6109795F17F5D509005A7E14 /* SG_General_Painting_GiftsBtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109795717F5D509005A7E14 /* SG_General_Painting_GiftsBtn-on.png */; };
+		6109796017F5D509005A7E14 /* SG_General_Painting_GiftsBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109795817F5D509005A7E14 /* SG_General_Painting_GiftsBtn-on@2x.png */; };
+		6109796117F5D509005A7E14 /* SG_General_Painting_GiftsBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109795917F5D509005A7E14 /* SG_General_Painting_GiftsBtn.png */; };
+		6109796217F5D509005A7E14 /* SG_General_Painting_GiftsBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109795A17F5D509005A7E14 /* SG_General_Painting_GiftsBtn@2x.png */; };
+		6109796317F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109795B17F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn-on.png */; };
+		6109796417F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109795C17F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn-on@2x.png */; };
+		6109796517F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109795D17F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn.png */; };
+		6109796617F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109795E17F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn@2x.png */; };
+		6109796A17F60D4A005A7E14 /* SGOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6109796917F60D4A005A7E14 /* SGOverlayViewController.m */; };
 		612630A517EDEE3300AD35BE /* SG_Home_MeetArtistsBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630A117EDEE3300AD35BE /* SG_Home_MeetArtistsBtn@2x.png */; };
 		612630A617EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630A217EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on@2x.png */; };
 		612630A717EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630A317EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on.png */; };
@@ -473,6 +482,16 @@
 		610303CF17F18A020060A83E /* sg_home_bg-meetartists_blur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_bg-meetartists_blur.png"; sourceTree = "<group>"; };
 		610303D017F18A020060A83E /* sg_home_bg-meetartists.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_bg-meetartists.png"; sourceTree = "<group>"; };
 		610303D117F18A020060A83E /* sg_home_bg-meetartists@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_bg-meetartists@2x.png"; sourceTree = "<group>"; };
+		6109795717F5D509005A7E14 /* SG_General_Painting_GiftsBtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Painting_GiftsBtn-on.png"; sourceTree = "<group>"; };
+		6109795817F5D509005A7E14 /* SG_General_Painting_GiftsBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Painting_GiftsBtn-on@2x.png"; sourceTree = "<group>"; };
+		6109795917F5D509005A7E14 /* SG_General_Painting_GiftsBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_General_Painting_GiftsBtn.png; sourceTree = "<group>"; };
+		6109795A17F5D509005A7E14 /* SG_General_Painting_GiftsBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Painting_GiftsBtn@2x.png"; sourceTree = "<group>"; };
+		6109795B17F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Painting_PerspectivesBtn-on.png"; sourceTree = "<group>"; };
+		6109795C17F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Painting_PerspectivesBtn-on@2x.png"; sourceTree = "<group>"; };
+		6109795D17F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_General_Painting_PerspectivesBtn.png; sourceTree = "<group>"; };
+		6109795E17F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Painting_PerspectivesBtn@2x.png"; sourceTree = "<group>"; };
+		6109796817F60D4A005A7E14 /* SGOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGOverlayViewController.h; sourceTree = "<group>"; };
+		6109796917F60D4A005A7E14 /* SGOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGOverlayViewController.m; sourceTree = "<group>"; };
 		612630A117EDEE3300AD35BE /* SG_Home_MeetArtistsBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_MeetArtistsBtn@2x.png"; sourceTree = "<group>"; };
 		612630A217EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_MeetArtistsBtn-on@2x.png"; sourceTree = "<group>"; };
 		612630A317EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_MeetArtistsBtn-on.png"; sourceTree = "<group>"; };
@@ -673,6 +692,7 @@
 		61008A8617ED03F0005E39CE /* SacredGifts */ = {
 			isa = PBXGroup;
 			children = (
+				6109796717F5F9B4005A7E14 /* Overlay Controllers */,
 				6191A72917F001B7003755F9 /* SGNavigation */,
 				6191A72A17F00298003755F9 /* Painting Controllers */,
 				6190A51817ED3E3200860B8F /* SGConstants.h */,
@@ -818,6 +838,14 @@
 		61008AFE17ED058B005E39CE /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				6109795717F5D509005A7E14 /* SG_General_Painting_GiftsBtn-on.png */,
+				6109795817F5D509005A7E14 /* SG_General_Painting_GiftsBtn-on@2x.png */,
+				6109795917F5D509005A7E14 /* SG_General_Painting_GiftsBtn.png */,
+				6109795A17F5D509005A7E14 /* SG_General_Painting_GiftsBtn@2x.png */,
+				6109795B17F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn-on.png */,
+				6109795C17F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn-on@2x.png */,
+				6109795D17F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn.png */,
+				6109795E17F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn@2x.png */,
 				61008AFF17ED058B005E39CE /* SG_General_BackBtn-on.png */,
 				61008B0017ED058B005E39CE /* SG_General_BackBtn-on@2x.png */,
 				61008B0117ED058B005E39CE /* SG_General_BackBtn.png */,
@@ -935,6 +963,15 @@
 				610303D117F18A020060A83E /* sg_home_bg-meetartists@2x.png */,
 			);
 			path = Backgrounds;
+			sourceTree = "<group>";
+		};
+		6109796717F5F9B4005A7E14 /* Overlay Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6109796817F60D4A005A7E14 /* SGOverlayViewController.h */,
+				6109796917F60D4A005A7E14 /* SGOverlayViewController.m */,
+			);
+			path = "Overlay Controllers";
 			sourceTree = "<group>";
 		};
 		612630D417EE4FFD00AD35BE /* Thumbnails */ = {
@@ -1211,6 +1248,7 @@
 				6186A85C17F241560047097F /* painting_thumb_burial-on@2x.png in Resources */,
 				61008B7617ED058C005E39CE /* SG_Home_ExhibitionBtn-on@2x.png in Resources */,
 				61008BA517ED058C005E39CE /* SG_General_BackBtn-on.png in Resources */,
+				6109796517F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn.png in Resources */,
 				61008BA717ED058C005E39CE /* SG_General_BackBtn.png in Resources */,
 				61008B7B17ED058C005E39CE /* SG_Home_FeedbackBtn.png in Resources */,
 				61008BB917ED058C005E39CE /* SG_General_ModuleButtonBar.png in Resources */,
@@ -1237,12 +1275,14 @@
 				61008BD417ED058C005E39CE /* SG_General_Painting_ModuleBtn@2x.png in Resources */,
 				6186A89917F241560047097F /* painting_thumb_sermon.png in Resources */,
 				6186A86217F241560047097F /* painting_thumb_capture@2x.png in Resources */,
+				6109795F17F5D509005A7E14 /* SG_General_Painting_GiftsBtn-on.png in Resources */,
 				61008B9217ED058C005E39CE /* SG_Home_OriginsBtn@2x.png in Resources */,
 				61008BDF17ED058C005E39CE /* SG_General_Painting_ShareBtn-on@2x.png in Resources */,
 				61008B9317ED058C005E39CE /* SG_Home_PaintingListBtn-on.png in Resources */,
 				6186A89617F241560047097F /* painting_thumb_savior@2x.png in Resources */,
 				61008BEC17ED058C005E39CE /* SG_General_Share_email-on.png in Resources */,
 				61008BAE17ED058C005E39CE /* SG_General_Module_CloseBtn-on@2x.png in Resources */,
+				6109796217F5D509005A7E14 /* SG_General_Painting_GiftsBtn@2x.png in Resources */,
 				610303D417F18A020060A83E /* sg_home_bg-metal@2x.png in Resources */,
 				61008BC217ED058C005E39CE /* SG_General_Painting_CommentaryBtn@2x.png in Resources */,
 				6186A89017F241560047097F /* painting_thumb_ruler-on@2x.png in Resources */,
@@ -1266,6 +1306,7 @@
 				61008A9C17ED03F0005E39CE /* Images.xcassets in Resources */,
 				61008BD817ED058C005E39CE /* SG_General_Painting_MusicBtn.png in Resources */,
 				6186A89D17F241560047097F /* painting_thumb_shepherds.png in Resources */,
+				6109796317F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn-on.png in Resources */,
 				6186A85E17F241560047097F /* painting_thumb_burial@2x.png in Resources */,
 				61008BCF17ED058C005E39CE /* SG_General_Painting_DetailsBtn.png in Resources */,
 				61008B9917ED058C005E39CE /* SG_Home_ReservationBtn.png in Resources */,
@@ -1296,6 +1337,7 @@
 				61008B9117ED058C005E39CE /* SG_Home_OriginsBtn.png in Resources */,
 				61008B7317ED058C005E39CE /* SG_Home_DonateBtn.png in Resources */,
 				61008BED17ED058C005E39CE /* SG_General_Share_email-on@2x.png in Resources */,
+				6109796017F5D509005A7E14 /* SG_General_Painting_GiftsBtn-on@2x.png in Resources */,
 				61008B8017ED058C005E39CE /* SG_Home_FilmBtn@2x.png in Resources */,
 				612630A617EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on@2x.png in Resources */,
 				61008BBF17ED058C005E39CE /* SG_General_Painting_CommentaryBtn-on.png in Resources */,
@@ -1339,6 +1381,7 @@
 				61008BF017ED058C005E39CE /* SG_General_Share_fb-on.png in Resources */,
 				61008BE717ED058C005E39CE /* SG_General_ScanBtn-on@2x.png in Resources */,
 				61008BCD17ED058C005E39CE /* SG_General_Painting_DetailsBtn-on.png in Resources */,
+				6109796617F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn@2x.png in Resources */,
 				61008BC317ED058C005E39CE /* SG_General_Painting_ContextBtn-on.png in Resources */,
 				61008BBA17ED058C005E39CE /* SG_General_ModuleButtonBar@2x.png in Resources */,
 				61008BE817ED058C005E39CE /* SG_General_ScanBtn.png in Resources */,
@@ -1346,6 +1389,7 @@
 				610303D317F18A020060A83E /* sg_home_bg-metal.png in Resources */,
 				6186A86317F241560047097F /* painting_thumb_children-on.png in Resources */,
 				61008BDB17ED058C005E39CE /* SG_General_Painting_PanoramaBtn-on@2x.png in Resources */,
+				6109796417F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn-on@2x.png in Resources */,
 				61008B7C17ED058C005E39CE /* SG_Home_FeedbackBtn@2x.png in Resources */,
 				6186A89F17F241560047097F /* painting_thumb_temple-on.png in Resources */,
 				61008BFB17ED058C005E39CE /* SG_General_Share_thanks@2x.png in Resources */,
@@ -1375,6 +1419,7 @@
 				61008B7717ED058C005E39CE /* SG_Home_ExhibitionBtn.png in Resources */,
 				6186A88D17F241560047097F /* painting_thumb_resurrection.png in Resources */,
 				61008B9A17ED058C005E39CE /* SG_Home_ReservationBtn@2x.png in Resources */,
+				6109796117F5D509005A7E14 /* SG_General_Painting_GiftsBtn.png in Resources */,
 				61008BEA17ED058C005E39CE /* SG_General_TopBar.png in Resources */,
 				6186A86517F241560047097F /* painting_thumb_children.png in Resources */,
 				6186A8C217F325000047097F /* SacredGiftsPaintings.dat in Resources */,
@@ -1403,6 +1448,7 @@
 				6191A72D17F003F3003755F9 /* SGPaintingContainerViewController.m in Sources */,
 				61008A9117ED03F0005E39CE /* SGAppDelegate.m in Sources */,
 				6190A51217ED367C00860B8F /* SGNavigationContainerViewController.m in Sources */,
+				6109796A17F60D4A005A7E14 /* SGOverlayViewController.m in Sources */,
 				61008A9A17ED03F0005E39CE /* SGViewController.m in Sources */,
 				6186A8AE17F2F4CD0047097F /* SGBlurManager.m in Sources */,
 				61008A8D17ED03F0005E39CE /* main.m in Sources */,

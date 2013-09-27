@@ -12,7 +12,6 @@
 {
     NSString* _backViewControllerIDStr;
     UIWebView* _donateWebView;
-    //NSMutableArray* _allBlurredViews;
 }
 
 @property (weak, nonatomic) IBOutlet UIView *headerView;

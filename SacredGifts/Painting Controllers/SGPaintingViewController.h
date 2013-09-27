@@ -10,6 +10,7 @@
 #import "SGPaintingImageView.h"
 #import "SGClosableOverlayView.h"
 #import "SGContentControllerDelegate.h"
+@class SGOverlayViewController;
 
 @interface SGPaintingViewController : UIViewController
 {
@@ -18,8 +19,9 @@
 }
 
 @property (weak, nonatomic) IBOutlet SGPaintingImageView *paintingImageView;
-@property (weak, nonatomic) IBOutlet UIImageView *tombstone;
+@property (weak, nonatomic) SGOverlayViewController* overlayController;
 @property (weak, nonatomic) id<SGContentControllerDelegate> delegate;
+@property (weak, nonatomic) IBOutlet UIView *footerView;
 
 -(void)configWithInfo:(NSDictionary *)userInfo;
 
