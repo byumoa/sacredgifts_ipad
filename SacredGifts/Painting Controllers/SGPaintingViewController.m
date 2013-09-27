@@ -75,9 +75,7 @@ const int kFooterBtnY = 35;
     
     NSString *tombstonePath = [[NSBundle mainBundle] pathForResource:@"tombstone" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, paintingName]];
     self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:(NSString *)kOverlayControllerIDTombstone];
-    CGRect frame = self.overlayController.view.frame;
     
-    NSLog(@"frame: {%f,%f,%f,%f}", frame.origin.x, frame.origin.y, frame.size.width,frame.size.height);
     [self.overlayController addBackgroundImgWithPath:tombstonePath];
     [self.view addSubview:self.overlayController.view];
 }
