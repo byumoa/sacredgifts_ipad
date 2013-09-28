@@ -513,7 +513,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="VdB-kg-beo" userLabel="PaintingImgView" customClass="SGPaintingImageView">
-                                <rect key="frame" x="0.0" y="62" width="768" height="892"/>
+                                <rect key="frame" x="0.0" y="66" width="768" height="892"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <view contentMode="scaleToFill" id="qR1-fw-PT0" userLabel="FooterView">
@@ -547,10 +547,10 @@
             </objects>
             <point key="canvasLocation" x="1792" y="-195"/>
         </scene>
-        <!--Overlay View Controller-->
+        <!--Tombstone Overlay View Controller-->
         <scene sceneID="Pf1-fy-jtR">
             <objects>
-                <viewController restorationIdentifier="Tombstone Overlay" storyboardIdentifier="Tombstone Overlay" id="nHH-xu-ogh" customClass="SGOverlayViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="tombstone" storyboardIdentifier="tombstone" id="nHH-xu-ogh" customClass="SGTombstoneOverlayViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="S2I-X6-tPC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="114"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -563,7 +563,115 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wS-qT-saf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2596" y="715"/>
+            <point key="canvasLocation" x="2582" y="480"/>
+        </scene>
+        <!--Summary Overlay View Controller-->
+        <scene sceneID="e9N-v8-aZb">
+            <objects>
+                <viewController restorationIdentifier="summary" storyboardIdentifier="summary" id="wQF-Fi-40D" customClass="SGSummaryOverlayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mRA-g8-ZvB">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="524"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xNh-x6-hsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2621" y="122"/>
+        </scene>
+        <!--Music Overlay View Controller-->
+        <scene sceneID="f2i-UZ-Q7R">
+            <objects>
+                <viewController restorationIdentifier="music" storyboardIdentifier="music" id="9nI-4S-Qna" customClass="SGMusicOverlayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VZr-XD-eeZ">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="400"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mFU-g6-Ogu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2676" y="294"/>
+        </scene>
+        <!--Childrens Overlay View Controller-->
+        <scene sceneID="7kj-5c-EQf">
+            <objects>
+                <viewController restorationIdentifier="childrens" storyboardIdentifier="childrens" id="R97-2Z-edN" customClass="SGChildrensOverlayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iW5-Ox-6f2">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="400"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sPd-we-w8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2740" y="343"/>
+        </scene>
+        <!--Gift Overlay View Controller-->
+        <scene sceneID="HjJ-QA-JCS">
+            <objects>
+                <viewController restorationIdentifier="gift" storyboardIdentifier="gift" id="mbo-aK-ZTE" customClass="SGGiftOverlayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Foc-kY-8IB">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="400"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="N9y-RY-da3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2800" y="389"/>
+        </scene>
+        <!--Details Overlay View Controller-->
+        <scene sceneID="noX-fo-s7z">
+            <objects>
+                <viewController restorationIdentifier="details" storyboardIdentifier="details" id="OiJ-Kp-f7z" customClass="SGDetailsOverlayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vig-Pv-Spu">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="400"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HAF-Eg-Whv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2863" y="434"/>
+        </scene>
+        <!--Persepectives Overlay View Controller-->
+        <scene sceneID="DZE-8h-2cY">
+            <objects>
+                <viewController restorationIdentifier="perspectives" storyboardIdentifier="perspectives" id="1dS-zG-iXX" customClass="SGPersepectivesOverlayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Akh-Jk-sxB">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="400"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="B3q-g6-eVd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2901" y="488"/>
         </scene>
     </scenes>
     <resources>

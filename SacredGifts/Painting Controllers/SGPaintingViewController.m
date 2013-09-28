@@ -11,8 +11,6 @@
 
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
-const CGPoint kTombstoneCenter = {384, 850};
-const CGPoint kSummaryCenter = {384, 670};
 
 @interface SGPaintingViewController (PrivateAPIs)
 - (void) addMainPainting:(NSString*)paintingName;
@@ -20,16 +18,17 @@ const CGPoint kSummaryCenter = {384, 670};
 - (UIButton*)footerBtnForTag:(ModuleType)moduleType;
 - (void)pressedModuleBtn:(UIButton *)sender;
 - (ModuleType)getModuleTypeForStr: (NSString*)moduleStr;
-- (void)addNewOverlayOfType: (ModuleType)moduleType forPainting: (NSString*)paintingStr;
+- (NSString*)getStringForModule: (ModuleType)moduleType;
+-(void)addNewOverlayOfType:(NSString*)moduleStr forPainting:(NSString *)paintingStr;
 @end
 
 @implementation SGPaintingViewController
--(void)configWithInfo:(NSDictionary *)userInfo
+-(void)configWithPaintingName:(NSString *)paintingStr;
 {
     //Main Painting
-    _paintingNameStr = (NSString*)[userInfo objectForKey:@"paintingName"];
+    _paintingNameStr = paintingStr;
     [self addMainPainting:_paintingNameStr];
-    [self addNewOverlayOfType:kModuleTypeTitle forPainting:_paintingNameStr];
+    [self addNewOverlayOfType:(NSString*)kTombstoneStr forPainting:_paintingNameStr];
     
     NSArray* blurredViews = [NSArray arrayWithObject:self.overlayController.view];
     NSString *blurredPaintingPath = [[NSBundle mainBundle] pathForResource:@"MainPainting Blurred" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, _paintingNameStr]];
@@ -41,7 +40,7 @@ const CGPoint kSummaryCenter = {384, 670};
 -(void)addFooterButtonsForPainting:(NSString *)paintingNameStr
 {
     int currentBtnIndex = 0;
-    NSArray* buttonTypeStrArr = [NSArray arrayWithObjects:kSummaryStr,/*kPerspectiveStr,*/ kGiftsStr, kMusicStr, kChildrensStr, nil];
+    NSArray* buttonTypeStrArr = [NSArray arrayWithObjects:kSummaryStr,kPerspectiveStr, kGiftsStr, kMusicStr, kChildrensStr, kDetailsStr, nil];
     
     for( NSString* buttonTypeStr in buttonTypeStrArr)
     {
@@ -59,7 +58,7 @@ const CGPoint kSummaryCenter = {384, 670};
 
 - (ModuleType) getModuleTypeForStr: (NSString*)moduleStr
 {
-    if(  [moduleStr isEqualToString: (NSString*)kSummaryStr] )
+    if( [moduleStr isEqualToString: (NSString*)kSummaryStr] )
         return kModuleTypeSummary;
     else if( [moduleStr isEqualToString: (NSString*)kChildrensStr] )
         return kModuleTypeChildrens;
@@ -68,6 +67,23 @@ const CGPoint kSummaryCenter = {384, 670};
     else if( [moduleStr isEqualToString: (NSString*)kMusicStr] )
         return kModuleTypeMusic;
     else return kModuleTypeGifts;
+}
+
+-(NSString *)getStringForModule:(ModuleType)moduleType
+{
+    switch (moduleType) {
+        case kModuleTypeChildrens:      return (NSString*)kChildrensStr;    break;
+        case kModuleTypeDetails:        return (NSString*)kDetailsStr;      break;
+        case kModuleTypeGifts:          return (NSString*)kGiftsStr;        break;
+        case kModuleTypeMusic:          return (NSString*)kMusicStr;        break;
+        case kModuleTypePerspective:    return (NSString*)kPerspectiveStr;  break;
+        case kModuleTypeSocial:         return (NSString*)kSocialStr;       break;
+        case kModuleTypeSummary:        return (NSString*)kSummaryStr;      break;
+        case kModuleTypeTombstone:      return (NSString*)kTombstoneStr;    break;
+        case kModuleTypeNone:           default:                            break;
+    }
+    
+    return nil;
 }
 
 -(void)addMainPainting:(NSString*)paintingName
@@ -79,36 +95,41 @@ const CGPoint kSummaryCenter = {384, 670};
 -(UIButton *)footerBtnForTag:(ModuleType)moduleType
 {
     UIButton* returnBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    NSString* btnImgStrNrm = @"";
+    NSString* btnImgStrHil = @"";
     
     switch( moduleType )
     {
         case kModuleTypeSummary:
-            [returnBtn setImage:[UIImage imageNamed:(NSString*)kModuleBtnSummaryImageNrm] forState:UIControlStateNormal];
-            [returnBtn setImage:[UIImage imageNamed:(NSString*)kModuleBtnSummaryImageSel] forState:UIControlStateSelected];
+            btnImgStrNrm = (NSString*)kModuleBtnSummaryImageNrm;
+            btnImgStrHil = (NSString*)kModuleBtnSummaryImageSel;
             break;
         case kModuleTypePerspective:
-            [returnBtn setImage:[UIImage imageNamed:(NSString*)kModuleBtnPerspectiveImageNrm] forState:UIControlStateNormal];
-            [returnBtn setImage:[UIImage imageNamed:(NSString*)kModuleBtnPerspectiveImageSel] forState:UIControlStateSelected];
+            btnImgStrNrm = (NSString*)kModuleBtnPerspectiveImageNrm;
+            btnImgStrHil = (NSString*)kModuleBtnPerspectiveImageSel;
             break;
         case kModuleTypeChildrens:
-            [returnBtn setImage:[UIImage imageNamed:(NSString*)kModuleBtnChildrensImageNrm] forState:UIControlStateNormal];
-            [returnBtn setImage:[UIImage imageNamed:(NSString*)kModuleBtnChildrensImageSel] forState:UIControlStateSelected];
+            btnImgStrNrm = (NSString*)kModuleBtnChildrensImageNrm;
+            btnImgStrHil = (NSString*)kModuleBtnChildrensImageSel;
             break;
         case kModuleTypeMusic:
-            [returnBtn setImage:[UIImage imageNamed:(NSString*)kModuleBtnMusicImageNrm] forState:UIControlStateNormal];
-            [returnBtn setImage:[UIImage imageNamed:(NSString*)kModuleBtnMusicImageSel] forState:UIControlStateSelected];
+            btnImgStrNrm = (NSString*)kModuleBtnMusicImageNrm;
+            btnImgStrHil = (NSString*)kModuleBtnMusicImageSel;
             break;
         case kModuleTypeGifts:
-            [returnBtn setImage:[UIImage imageNamed:(NSString*)kModuleBtnGiftsImageNrm] forState:UIControlStateNormal];
-            [returnBtn setImage:[UIImage imageNamed:(NSString*)kModuleBtnGiftsImageSel] forState:UIControlStateSelected];
+            btnImgStrNrm = (NSString*)kModuleBtnGiftsImageNrm;
+            btnImgStrHil = (NSString*)kModuleBtnGiftsImageSel;
             break;
         case kModuleTypeDetails:
-            [returnBtn setImage:[UIImage imageNamed:(NSString*)kModuleBtnDetailsImageNrm] forState:UIControlStateNormal];
-            [returnBtn setImage:[UIImage imageNamed:(NSString*)kModuleBtnDetailsImageSel] forState:UIControlStateSelected];
+            btnImgStrNrm = (NSString*)kModuleBtnDetailsImageNrm;
+            btnImgStrHil = (NSString*)kModuleBtnDetailsImageSel;
             break;
         default:
             break;
     }
+    
+    [returnBtn setImage:[UIImage imageNamed:btnImgStrNrm] forState:UIControlStateNormal];
+    [returnBtn setImage:[UIImage imageNamed:btnImgStrHil] forState:UIControlStateHighlighted];
     
     CGSize s = returnBtn.imageView.image.size;
     returnBtn.frame = CGRectMake(0, 0, s.width, s.height);
@@ -123,43 +144,28 @@ const CGPoint kSummaryCenter = {384, 670};
     if( moduleType == _currentModule ) return;
     _currentModule = moduleType;
     
-    [self addNewOverlayOfType:moduleType forPainting:_paintingNameStr];
+    [self addNewOverlayOfType:[self getStringForModule:moduleType] forPainting:_paintingNameStr];
 }
 
--(void)addNewOverlayOfType:(ModuleType)moduleType forPainting:(NSString *)paintingStr
+-(void)addNewOverlayOfType:(NSString*)moduleStr forPainting:(NSString *)paintingStr
 {
-    if( self.overlayController != nil )
-    {
-        SGOverlayViewController* dyingController = self.overlayController;
+    //Transition current overlay off
+    if( self.overlayController != nil ){
+        SGOverlayViewController* exitingOverlay = self.overlayController;
         [UIView animateWithDuration:0.25 animations:^{
-            dyingController.view.alpha = 0;
+            exitingOverlay.view.alpha = 0;
         } completion:^(BOOL finished) {
-            [dyingController.view removeFromSuperview];
+            [exitingOverlay.view removeFromSuperview];
         }];
     }
     
-    switch (moduleType) {
-        case kModuleTypeTitle:
-        {
-            NSString *tombstonePath = [[NSBundle mainBundle] pathForResource:@"tombstone" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, paintingStr]];
-            self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:(NSString *)kOverlayControllerIDTombstone];
-            [self.overlayController addBackgroundImgWithPath:tombstonePath];
-            self.overlayController.view.center = kTombstoneCenter;
-        }
-            break;
-        case kModuleTypeSummary:
-        {
-            NSString *summaryPath = [[NSBundle mainBundle] pathForResource:@"summary" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingStr, @"summary"]];
-            self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:(NSString *)kOverlayControllerIDTombstone];
-            [self.overlayController addBackgroundImgWithPath:summaryPath];
-            self.overlayController.view.center = kSummaryCenter;
-        }
-            
-        default:
-            break;
-    }
+    //Create new overlay veiwController
+    NSString *overlayPath = [[NSBundle mainBundle] pathForResource:moduleStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingStr, moduleStr]];
+    self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:moduleStr];
+    [self.overlayController addBackgroundImgWithPath:overlayPath];
     
-    [self.view addSubview:self.overlayController.view];
+    //Transition new overlay on
+    [self.view insertSubview:self.overlayController.view belowSubview:self.footerView];
     self.overlayController.view.alpha = 0;
     [UIView animateWithDuration:0.25 animations:^{
         self.overlayController.view.alpha = 1;

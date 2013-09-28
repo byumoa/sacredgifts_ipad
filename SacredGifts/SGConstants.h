@@ -9,7 +9,7 @@
 typedef enum
 {
     kModuleTypeNone = 0,
-    kModuleTypeTitle = 1,
+    kModuleTypeTombstone = 1,
     kModuleTypeSummary = 2,
     kModuleTypePerspective = 3,
     kModuleTypeMusic = 4,
@@ -34,11 +34,6 @@ extern const NSString* kControllerIDMeetTheArtistsStr;
 extern const NSString* kControllerIDAboutTheExhibitionStr;
 extern const NSString* kControllerIDPaintingContainerStr;
 extern const NSString* kControllerIDPaintingStr;
-
-extern const NSString* kOverlayControllerIDTombstone;
-extern const NSString* kOverlayControllerIDSummary;
-extern const NSString* kOverlayControllerIDMusic;
-extern const NSString* kOverlayControllerIDChildrens;
 
 extern const NSString* kPaintingNameAalborg;
 extern const NSString* kPaintingNameBurial;
@@ -86,3 +81,5 @@ extern const NSString* kGiftsStr;
 extern const NSString* kMusicStr;
 extern const NSString* kChildrensStr;
 extern const NSString* kDetailsStr;
+extern const NSString* kTombstoneStr;
+extern const NSString* kSocialStr;

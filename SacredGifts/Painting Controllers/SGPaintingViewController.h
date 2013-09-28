@@ -24,6 +24,6 @@
 @property (weak, nonatomic) id<SGContentControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIView *footerView;
 
--(void)configWithInfo:(NSDictionary *)userInfo;
+-(void)configWithPaintingName:(NSString *)paintingStr;
 
 @end

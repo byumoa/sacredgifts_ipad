@@ -11,6 +11,7 @@
 @interface SGOverlayViewController : UIViewController
 {
     NSString* _bgImagePath;
+    CGPoint _centerPos;
 }
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath;

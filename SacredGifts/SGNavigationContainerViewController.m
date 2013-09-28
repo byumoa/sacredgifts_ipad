@@ -126,15 +126,11 @@
     return toController;
 }
 
--(void)transitionFromController:(UIViewController *)fromController toPaintingNamed:(const NSString *)paintingName fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
+-(void)transitionFromController:(UIViewController *)fromController toPaintingNamed:(NSString *)paintingName fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
 {
     SGPaintingContainerViewController* paintingContainer = (SGPaintingContainerViewController*)[self transitionFromController:fromController toControllerID:kControllerIDPaintingContainerStr fromButtonRect:frame withAnimType:animType];
     
-    NSString *fullPath = [[NSBundle mainBundle] pathForResource:@"paintingConfig" ofType:@"plist" inDirectory:[NSString stringWithFormat: @"PaintingResources/%@", paintingName]];
-    NSMutableDictionary *config = [NSMutableDictionary dictionaryWithContentsOfFile:fullPath];
-    [config setObject:paintingName forKey:@"paintingName"];
-    
-    [(SGPaintingViewController*)paintingContainer.currentContentController configWithInfo:(NSDictionary*)config];
+    [(SGPaintingViewController*)paintingContainer.currentContentController configWithPaintingName:paintingName];
 }
 
 -(void)contentController:(UIViewController *)contentController viewsForBlurredBacking:(NSArray*)views blurredImgName:(NSString *)blurredImgName

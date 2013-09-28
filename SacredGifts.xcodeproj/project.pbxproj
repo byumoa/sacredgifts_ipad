@@ -189,6 +189,13 @@
 		6109797417F65EB6005A7E14 /* painting_thumb_aalborg-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109797017F65EB6005A7E14 /* painting_thumb_aalborg-on@2x.png */; };
 		6109797517F65EB6005A7E14 /* painting_thumb_aalborg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109797117F65EB6005A7E14 /* painting_thumb_aalborg.png */; };
 		6109797617F65EB6005A7E14 /* painting_thumb_aalborg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109797217F65EB6005A7E14 /* painting_thumb_aalborg@2x.png */; };
+		6109797C17F743A5005A7E14 /* SGMusicOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6109797B17F743A5005A7E14 /* SGMusicOverlayViewController.m */; };
+		6109797F17F74DEE005A7E14 /* SGTombstoneOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6109797E17F74DEE005A7E14 /* SGTombstoneOverlayViewController.m */; };
+		6109798217F74DFB005A7E14 /* SGSummaryOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6109798117F74DFB005A7E14 /* SGSummaryOverlayViewController.m */; };
+		6109798817F750C3005A7E14 /* SGGiftOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6109798717F750C3005A7E14 /* SGGiftOverlayViewController.m */; };
+		6109798B17F750D9005A7E14 /* SGChildrensOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6109798A17F750D9005A7E14 /* SGChildrensOverlayViewController.m */; };
+		6109798E17F750E5005A7E14 /* SGDetailsOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6109798D17F750E5005A7E14 /* SGDetailsOverlayViewController.m */; };
+		6109799117F75116005A7E14 /* SGPersepectivesOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6109799017F75116005A7E14 /* SGPersepectivesOverlayViewController.m */; };
 		612630A517EDEE3300AD35BE /* SG_Home_MeetArtistsBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630A117EDEE3300AD35BE /* SG_Home_MeetArtistsBtn@2x.png */; };
 		612630A617EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630A217EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on@2x.png */; };
 		612630A717EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630A317EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on.png */; };
@@ -502,6 +509,20 @@
 		6109797017F65EB6005A7E14 /* painting_thumb_aalborg-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "painting_thumb_aalborg-on@2x.png"; sourceTree = "<group>"; };
 		6109797117F65EB6005A7E14 /* painting_thumb_aalborg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = painting_thumb_aalborg.png; sourceTree = "<group>"; };
 		6109797217F65EB6005A7E14 /* painting_thumb_aalborg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "painting_thumb_aalborg@2x.png"; sourceTree = "<group>"; };
+		6109797A17F743A5005A7E14 /* SGMusicOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMusicOverlayViewController.h; sourceTree = "<group>"; };
+		6109797B17F743A5005A7E14 /* SGMusicOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMusicOverlayViewController.m; sourceTree = "<group>"; };
+		6109797D17F74DEE005A7E14 /* SGTombstoneOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTombstoneOverlayViewController.h; sourceTree = "<group>"; };
+		6109797E17F74DEE005A7E14 /* SGTombstoneOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTombstoneOverlayViewController.m; sourceTree = "<group>"; };
+		6109798017F74DFB005A7E14 /* SGSummaryOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSummaryOverlayViewController.h; sourceTree = "<group>"; };
+		6109798117F74DFB005A7E14 /* SGSummaryOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSummaryOverlayViewController.m; sourceTree = "<group>"; };
+		6109798617F750C3005A7E14 /* SGGiftOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGiftOverlayViewController.h; sourceTree = "<group>"; };
+		6109798717F750C3005A7E14 /* SGGiftOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGiftOverlayViewController.m; sourceTree = "<group>"; };
+		6109798917F750D9005A7E14 /* SGChildrensOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGChildrensOverlayViewController.h; sourceTree = "<group>"; };
+		6109798A17F750D9005A7E14 /* SGChildrensOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGChildrensOverlayViewController.m; sourceTree = "<group>"; };
+		6109798C17F750E5005A7E14 /* SGDetailsOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGDetailsOverlayViewController.h; sourceTree = "<group>"; };
+		6109798D17F750E5005A7E14 /* SGDetailsOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGDetailsOverlayViewController.m; sourceTree = "<group>"; };
+		6109798F17F75116005A7E14 /* SGPersepectivesOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPersepectivesOverlayViewController.h; sourceTree = "<group>"; };
+		6109799017F75116005A7E14 /* SGPersepectivesOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPersepectivesOverlayViewController.m; sourceTree = "<group>"; };
 		612630A117EDEE3300AD35BE /* SG_Home_MeetArtistsBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_MeetArtistsBtn@2x.png"; sourceTree = "<group>"; };
 		612630A217EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_MeetArtistsBtn-on@2x.png"; sourceTree = "<group>"; };
 		612630A317EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_MeetArtistsBtn-on.png"; sourceTree = "<group>"; };
@@ -981,6 +1002,20 @@
 			children = (
 				6109796817F60D4A005A7E14 /* SGOverlayViewController.h */,
 				6109796917F60D4A005A7E14 /* SGOverlayViewController.m */,
+				6109797A17F743A5005A7E14 /* SGMusicOverlayViewController.h */,
+				6109797B17F743A5005A7E14 /* SGMusicOverlayViewController.m */,
+				6109797D17F74DEE005A7E14 /* SGTombstoneOverlayViewController.h */,
+				6109797E17F74DEE005A7E14 /* SGTombstoneOverlayViewController.m */,
+				6109798017F74DFB005A7E14 /* SGSummaryOverlayViewController.h */,
+				6109798117F74DFB005A7E14 /* SGSummaryOverlayViewController.m */,
+				6109798617F750C3005A7E14 /* SGGiftOverlayViewController.h */,
+				6109798717F750C3005A7E14 /* SGGiftOverlayViewController.m */,
+				6109798917F750D9005A7E14 /* SGChildrensOverlayViewController.h */,
+				6109798A17F750D9005A7E14 /* SGChildrensOverlayViewController.m */,
+				6109798C17F750E5005A7E14 /* SGDetailsOverlayViewController.h */,
+				6109798D17F750E5005A7E14 /* SGDetailsOverlayViewController.m */,
+				6109798F17F75116005A7E14 /* SGPersepectivesOverlayViewController.h */,
+				6109799017F75116005A7E14 /* SGPersepectivesOverlayViewController.m */,
 			);
 			path = "Overlay Controllers";
 			sourceTree = "<group>";
@@ -1466,13 +1501,19 @@
 				6186A80017F196970047097F /* SGPaintingImageView.m in Sources */,
 				6190A50F17ED34B000860B8F /* SGHomeViewController.m in Sources */,
 				6191A72D17F003F3003755F9 /* SGPaintingContainerViewController.m in Sources */,
+				6109798817F750C3005A7E14 /* SGGiftOverlayViewController.m in Sources */,
 				61008A9117ED03F0005E39CE /* SGAppDelegate.m in Sources */,
 				6190A51217ED367C00860B8F /* SGNavigationContainerViewController.m in Sources */,
+				6109799117F75116005A7E14 /* SGPersepectivesOverlayViewController.m in Sources */,
+				6109797C17F743A5005A7E14 /* SGMusicOverlayViewController.m in Sources */,
 				6109796A17F60D4A005A7E14 /* SGOverlayViewController.m in Sources */,
+				6109798E17F750E5005A7E14 /* SGDetailsOverlayViewController.m in Sources */,
+				6109797F17F74DEE005A7E14 /* SGTombstoneOverlayViewController.m in Sources */,
 				61008A9A17ED03F0005E39CE /* SGViewController.m in Sources */,
 				6186A8AE17F2F4CD0047097F /* SGBlurManager.m in Sources */,
 				61008A8D17ED03F0005E39CE /* main.m in Sources */,
 				61008C0917ED1B4C005E39CE /* SGFindAPaintingViewController.m in Sources */,
+				6109798217F74DFB005A7E14 /* SGSummaryOverlayViewController.m in Sources */,
 				6186388B17F0C99C00F4A6BE /* SGContainerViewController.m in Sources */,
 				6190A51D17EDCB7F00860B8F /* SGMeetTheArtistsViewController.m in Sources */,
 				6191A73017F00444003755F9 /* SGPaintingViewController.m in Sources */,
@@ -1480,6 +1521,7 @@
 				6186A80317F197460047097F /* SGOverlayView.m in Sources */,
 				6190A51617ED3B9800860B8F /* SGContentViewController.m in Sources */,
 				6186A80617F197DC0047097F /* SGClosableOverlayView.m in Sources */,
+				6109798B17F750D9005A7E14 /* SGChildrensOverlayViewController.m in Sources */,
 				6190A51A17ED3E3200860B8F /* SGConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
