@@ -59,7 +59,6 @@
     for( UIView* blurredView in _allBlurredViews ){
         UIView* blurBacking = [blurManager blurBackingForView:blurredView];
         [self.currentContentController.view insertSubview:blurBacking belowSubview:blurredView];
-        CGRect f = blurBacking.frame;
     }
 }
 
