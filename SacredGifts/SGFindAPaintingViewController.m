@@ -27,6 +27,7 @@ const int kPaintingIDSavior = 15;
 const int kPaintingIDSermon = 16;
 const int kPaintingIDShepherds = 17;
 const int kPaintingIDTemple = 18;
+const int kPaintingIDAalborg = 19;
 
 @implementation SGFindAPaintingViewController
 
@@ -93,6 +94,9 @@ const int kPaintingIDTemple = 18;
             break;
         case kPaintingIDTemple:
             paintingName = (NSString*)kPaintingNameTemple;
+            break;
+        case kPaintingIDAalborg:
+            paintingName = (NSString*)kPaintingNameAalborg;
             break;
             
         default:

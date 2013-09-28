@@ -185,6 +185,10 @@
 		6109796617F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109795E17F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn@2x.png */; };
 		6109796A17F60D4A005A7E14 /* SGOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6109796917F60D4A005A7E14 /* SGOverlayViewController.m */; };
 		6109796C17F648BE005A7E14 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109796B17F648BE005A7E14 /* Default-568h@2x.png */; };
+		6109797317F65EB6005A7E14 /* painting_thumb_aalborg-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109796F17F65EB6005A7E14 /* painting_thumb_aalborg-on.png */; };
+		6109797417F65EB6005A7E14 /* painting_thumb_aalborg-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109797017F65EB6005A7E14 /* painting_thumb_aalborg-on@2x.png */; };
+		6109797517F65EB6005A7E14 /* painting_thumb_aalborg.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109797117F65EB6005A7E14 /* painting_thumb_aalborg.png */; };
+		6109797617F65EB6005A7E14 /* painting_thumb_aalborg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6109797217F65EB6005A7E14 /* painting_thumb_aalborg@2x.png */; };
 		612630A517EDEE3300AD35BE /* SG_Home_MeetArtistsBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630A117EDEE3300AD35BE /* SG_Home_MeetArtistsBtn@2x.png */; };
 		612630A617EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630A217EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on@2x.png */; };
 		612630A717EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630A317EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on.png */; };
@@ -494,6 +498,10 @@
 		6109796817F60D4A005A7E14 /* SGOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGOverlayViewController.h; sourceTree = "<group>"; };
 		6109796917F60D4A005A7E14 /* SGOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGOverlayViewController.m; sourceTree = "<group>"; };
 		6109796B17F648BE005A7E14 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		6109796F17F65EB6005A7E14 /* painting_thumb_aalborg-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "painting_thumb_aalborg-on.png"; sourceTree = "<group>"; };
+		6109797017F65EB6005A7E14 /* painting_thumb_aalborg-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "painting_thumb_aalborg-on@2x.png"; sourceTree = "<group>"; };
+		6109797117F65EB6005A7E14 /* painting_thumb_aalborg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = painting_thumb_aalborg.png; sourceTree = "<group>"; };
+		6109797217F65EB6005A7E14 /* painting_thumb_aalborg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "painting_thumb_aalborg@2x.png"; sourceTree = "<group>"; };
 		612630A117EDEE3300AD35BE /* SG_Home_MeetArtistsBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_MeetArtistsBtn@2x.png"; sourceTree = "<group>"; };
 		612630A217EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_MeetArtistsBtn-on@2x.png"; sourceTree = "<group>"; };
 		612630A317EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_MeetArtistsBtn-on.png"; sourceTree = "<group>"; };
@@ -980,6 +988,10 @@
 		612630D417EE4FFD00AD35BE /* Thumbnails */ = {
 			isa = PBXGroup;
 			children = (
+				6109796F17F65EB6005A7E14 /* painting_thumb_aalborg-on.png */,
+				6109797017F65EB6005A7E14 /* painting_thumb_aalborg-on@2x.png */,
+				6109797117F65EB6005A7E14 /* painting_thumb_aalborg.png */,
+				6109797217F65EB6005A7E14 /* painting_thumb_aalborg@2x.png */,
 				6186A81317F241560047097F /* painting_thumb_burial-on.png */,
 				6186A81417F241560047097F /* painting_thumb_burial-on@2x.png */,
 				6186A81517F241560047097F /* painting_thumb_burial.png */,
@@ -1211,6 +1223,7 @@
 				61008BB517ED058C005E39CE /* SG_General_Module_Overlay_Hofmann.png in Resources */,
 				6186A87817F241560047097F /* painting_thumb_emmaus-on@2x.png in Resources */,
 				6186A86A17F241560047097F /* painting_thumb_cleansing@2x.png in Resources */,
+				6109797617F65EB6005A7E14 /* painting_thumb_aalborg@2x.png in Resources */,
 				6186A86F17F241560047097F /* painting_thumb_cross-on.png in Resources */,
 				61008B8F17ED058C005E39CE /* SG_Home_OriginsBtn-on.png in Resources */,
 				61008B6D17ED058C005E39CE /* SG_Home_BlochBtn-on.png in Resources */,
@@ -1391,6 +1404,7 @@
 				61008BE817ED058C005E39CE /* SG_General_ScanBtn.png in Resources */,
 				6186A88817F241560047097F /* painting_thumb_mocking-on@2x.png in Resources */,
 				610303D317F18A020060A83E /* sg_home_bg-metal.png in Resources */,
+				6109797417F65EB6005A7E14 /* painting_thumb_aalborg-on@2x.png in Resources */,
 				6186A86317F241560047097F /* painting_thumb_children-on.png in Resources */,
 				61008BDB17ED058C005E39CE /* SG_General_Painting_PanoramaBtn-on@2x.png in Resources */,
 				6109796417F5D509005A7E14 /* SG_General_Painting_PerspectivesBtn-on@2x.png in Resources */,
@@ -1414,12 +1428,14 @@
 				61008B6F17ED058C005E39CE /* SG_Home_BlochBtn.png in Resources */,
 				61008BB617ED058C005E39CE /* SG_General_Module_Overlay_Hofmann@2x.png in Resources */,
 				6186A88117F241560047097F /* painting_thumb_gethsemane.png in Resources */,
+				6109797517F65EB6005A7E14 /* painting_thumb_aalborg.png in Resources */,
 				61008BD117ED058C005E39CE /* SG_General_Painting_ModuleBtn-on.png in Resources */,
 				6186A81217F241330047097F /* sg_home_label_schwartz@2x.png in Resources */,
 				6186A87B17F241560047097F /* painting_thumb_garden-on.png in Resources */,
 				61008B7917ED058C005E39CE /* SG_Home_FeedbackBtn-on.png in Resources */,
 				6186A87217F241560047097F /* painting_thumb_cross@2x.png in Resources */,
 				6186A86817F241560047097F /* painting_thumb_cleansing-on@2x.png in Resources */,
+				6109797317F65EB6005A7E14 /* painting_thumb_aalborg-on.png in Resources */,
 				61008B7717ED058C005E39CE /* SG_Home_ExhibitionBtn.png in Resources */,
 				6186A88D17F241560047097F /* painting_thumb_resurrection.png in Resources */,
 				61008B9A17ED058C005E39CE /* SG_Home_ReservationBtn@2x.png in Resources */,

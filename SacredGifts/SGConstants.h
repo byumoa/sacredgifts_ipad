@@ -37,6 +37,7 @@ extern const NSString* kControllerIDPaintingStr;
 
 extern const NSString* kOverlayControllerIDTombstone;
 
+extern const NSString* kPaintingNameAalborg;
 extern const NSString* kPaintingNameBurial;
 extern const NSString* kPaintingNameCapture;
 extern const NSString* kPaintingNameChildren;
