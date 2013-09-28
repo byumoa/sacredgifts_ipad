@@ -17,8 +17,11 @@ const NSString* kControllerIDPaintingContainerStr = @"SacredGifts PaintingContai
 const NSString* kControllerIDPaintingStr = @"SacredGifts Painting";
 
 const NSString* kOverlayControllerIDTombstone = @"Tombstone Overlay";
+const NSString* kOverlayControllerIDSummary = @"Summary Overlay";
+const NSString* kOverlayControllerIDMusic = @"Music Overlay";
+const NSString* kOverlayControllerIDChildrens = @"Childrens Overlay";
 
-const NSString* kPaintingNameAalborg = @"aalborg";
+const NSString* kPaintingNameAalborg  = @"aalborg";
 const NSString* kPaintingNameBurial = @"burial";
 const NSString* kPaintingNameCapture = @"capture";
 const NSString* kPaintingNameChildren = @"children";

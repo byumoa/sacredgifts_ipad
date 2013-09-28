@@ -12,6 +12,7 @@
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
 const CGPoint kTombstoneCenter = {384, 850};
+const CGPoint kSummaryCenter = {384, 670};
 
 @interface SGPaintingViewController (PrivateAPIs)
 - (void) addMainPainting:(NSString*)paintingName;
@@ -19,21 +20,22 @@ const CGPoint kTombstoneCenter = {384, 850};
 - (UIButton*)footerBtnForTag:(ModuleType)moduleType;
 - (void)pressedModuleBtn:(UIButton *)sender;
 - (ModuleType)getModuleTypeForStr: (NSString*)moduleStr;
+- (void)addNewOverlayOfType: (ModuleType)moduleType forPainting: (NSString*)paintingStr;
 @end
 
 @implementation SGPaintingViewController
 -(void)configWithInfo:(NSDictionary *)userInfo
 {
     //Main Painting
-    NSString* paintingName = (NSString*)[userInfo objectForKey:@"paintingName"];
-    [self addMainPainting:paintingName];
+    _paintingNameStr = (NSString*)[userInfo objectForKey:@"paintingName"];
+    [self addMainPainting:_paintingNameStr];
+    [self addNewOverlayOfType:kModuleTypeTitle forPainting:_paintingNameStr];
     
     NSArray* blurredViews = [NSArray arrayWithObject:self.overlayController.view];
-    //NSArray* blurredViews = [NSArray arrayWithObject:[[self.overlayController.view subviews] objectAtIndex:0]];
-    NSString *blurredPaintingPath = [[NSBundle mainBundle] pathForResource:@"MainPainting Blurred" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, paintingName]];
+    NSString *blurredPaintingPath = [[NSBundle mainBundle] pathForResource:@"MainPainting Blurred" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, _paintingNameStr]];
     [self.delegate contentController:self viewsForBlurredBacking:blurredViews blurredImgPath:blurredPaintingPath];
     
-    [self addFooterButtonsForPainting:paintingName];
+    [self addFooterButtonsForPainting:_paintingNameStr];
 }
 
 -(void)addFooterButtonsForPainting:(NSString *)paintingNameStr
@@ -72,13 +74,6 @@ const CGPoint kTombstoneCenter = {384, 850};
 {
     NSString *paintingPath = [[NSBundle mainBundle] pathForResource:@"MainPainting" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, paintingName]];
     self.paintingImageView.image = [UIImage imageWithContentsOfFile:paintingPath];
-    
-    NSString *tombstonePath = [[NSBundle mainBundle] pathForResource:@"tombstone" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, paintingName]];
-    self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:(NSString *)kOverlayControllerIDTombstone];
-    
-    [self.overlayController addBackgroundImgWithPath:tombstonePath];
-    [self.view addSubview:self.overlayController.view];
-    self.overlayController.view.center = kTombstoneCenter;
 }
 
 -(UIButton *)footerBtnForTag:(ModuleType)moduleType
@@ -124,42 +119,51 @@ const CGPoint kTombstoneCenter = {384, 850};
 
 - (void)pressedModuleBtn:(UIButton *)sender
 {
-    switch (sender.tag) {
-        case kModuleTypeGifts:
-            NSLog(@"Pressed Gifts");
-            break;
-        case kModuleTypeChildrens:
-            NSLog(@"Pressed Childrens");
-            break;
-        case kModuleTypeDetails:
-            NSLog(@"Pressed Details");
-            break;
-        case kModuleTypeMusic:
-            NSLog(@"Pressed Music");
+    ModuleType moduleType = sender.tag;
+    if( moduleType == _currentModule ) return;
+    _currentModule = moduleType;
+    
+    [self addNewOverlayOfType:moduleType forPainting:_paintingNameStr];
+}
+
+-(void)addNewOverlayOfType:(ModuleType)moduleType forPainting:(NSString *)paintingStr
+{
+    if( self.overlayController != nil )
+    {
+        SGOverlayViewController* dyingController = self.overlayController;
+        [UIView animateWithDuration:0.25 animations:^{
+            dyingController.view.alpha = 0;
+        } completion:^(BOOL finished) {
+            [dyingController.view removeFromSuperview];
+        }];
+    }
+    
+    switch (moduleType) {
+        case kModuleTypeTitle:
+        {
+            NSString *tombstonePath = [[NSBundle mainBundle] pathForResource:@"tombstone" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, paintingStr]];
+            self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:(NSString *)kOverlayControllerIDTombstone];
+            [self.overlayController addBackgroundImgWithPath:tombstonePath];
+            self.overlayController.view.center = kTombstoneCenter;
+        }
             break;
         case kModuleTypeSummary:
-            NSLog(@"Pressed Summary");
-            break;
-        case kModuleTypePerspective:
-            NSLog(@"Pressed Perspective");
-            break;
+        {
+            NSString *summaryPath = [[NSBundle mainBundle] pathForResource:@"summary" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingStr, @"summary"]];
+            self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:(NSString *)kOverlayControllerIDTombstone];
+            [self.overlayController addBackgroundImgWithPath:summaryPath];
+            self.overlayController.view.center = kSummaryCenter;
+        }
             
         default:
             break;
     }
-    /*
-    if( self.overlay == nil )
-    {
-        [self.paintingView animateDown];
-        SGOverlayView *overlayView = [SGOverlayView new];
-        self.overlay = overlayView;
-        [self.view addSubview:self.overlay];
-        
-        CGRect f = self.paintingView.mainPainting.frame;
-        [overlayView animateOnWithPaintingTargetSize:f.size];
-        overlayView.delegate = self;
-    }
-     */
+    
+    [self.view addSubview:self.overlayController.view];
+    self.overlayController.view.alpha = 0;
+    [UIView animateWithDuration:0.25 animations:^{
+        self.overlayController.view.alpha = 1;
+    }];
 }
 
 @end

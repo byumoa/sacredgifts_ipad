@@ -14,12 +14,13 @@
 
 @interface SGPaintingViewController : UIViewController
 {
-    ModuleType m_currentModule;
-    CGRect m_lastPortraitFrame;
+    ModuleType _currentModule;
+    CGRect _lastPortraitFrame;
+    NSString* _paintingNameStr;
 }
 
 @property (weak, nonatomic) IBOutlet SGPaintingImageView *paintingImageView;
-@property (weak, nonatomic) SGOverlayViewController* overlayController;
+@property (strong, nonatomic) SGOverlayViewController* overlayController;
 @property (weak, nonatomic) id<SGContentControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIView *footerView;
 
