@@ -53,15 +53,13 @@
 -(void)contentController:(UIViewController *)contentController viewsForBlurredBacking:(NSArray *)views blurredImgPath:(NSString *)blurredImgPath
 {
     SGBlurManager* blurManager = [SGBlurManager sharedManager];
-    //[[SGBlurManager sharedManager] setBlurImageWithName:blurredImgName andFrame:kBlurFrame];
     [[SGBlurManager sharedManager] setBlurImageWithPath:blurredImgPath];
     
     [_allBlurredViews addObjectsFromArray:views];
-    
-    for( UIView* blurredView in _allBlurredViews )
-    {
+    for( UIView* blurredView in _allBlurredViews ){
         UIView* blurBacking = [blurManager blurBackingForView:blurredView];
         [self.currentContentController.view insertSubview:blurBacking belowSubview:blurredView];
+        CGRect f = blurBacking.frame;
     }
 }
 

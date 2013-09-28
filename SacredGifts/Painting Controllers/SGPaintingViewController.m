@@ -11,6 +11,7 @@
 
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
+const CGPoint kTombstoneCenter = {384, 850};
 
 @interface SGPaintingViewController (PrivateAPIs)
 - (void) addMainPainting:(NSString*)paintingName;
@@ -27,11 +28,10 @@ const int kFooterBtnY = 35;
     NSString* paintingName = (NSString*)[userInfo objectForKey:@"paintingName"];
     [self addMainPainting:paintingName];
     
-    /*
-    NSArray* blurredViews = [NSArray arrayWithObject:self.overlayController];
+    NSArray* blurredViews = [NSArray arrayWithObject:self.overlayController.view];
+    //NSArray* blurredViews = [NSArray arrayWithObject:[[self.overlayController.view subviews] objectAtIndex:0]];
     NSString *blurredPaintingPath = [[NSBundle mainBundle] pathForResource:@"MainPainting Blurred" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, paintingName]];
     [self.delegate contentController:self viewsForBlurredBacking:blurredViews blurredImgPath:blurredPaintingPath];
-    */
     
     [self addFooterButtonsForPainting:paintingName];
 }
@@ -78,6 +78,7 @@ const int kFooterBtnY = 35;
     
     [self.overlayController addBackgroundImgWithPath:tombstonePath];
     [self.view addSubview:self.overlayController.view];
+    self.overlayController.view.center = kTombstoneCenter;
 }
 
 -(UIButton *)footerBtnForTag:(ModuleType)moduleType

@@ -8,8 +8,6 @@
 
 #import "SGOverlayViewController.h"
 
-const CGPoint kTombstoneCenter = {384, 850};
-
 @interface SGOverlayViewController ()
 
 @end
@@ -21,7 +19,6 @@ const CGPoint kTombstoneCenter = {384, 850};
     UIImageView* bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:bgImgPath]];
     self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, bgImageView.image.size.width, bgImageView.image.size.height);
     [self.view addSubview:bgImageView];
-    bgImageView.center = kTombstoneCenter;
 }
 
 - (void)viewDidLoad
