@@ -20,14 +20,17 @@
 {
     [super viewDidLoad];
     
-    SGHomeViewController* homeC = [self.storyboard instantiateViewControllerWithIdentifier:(NSString*)kControllerIDHomeStr];
-    homeC.delegate = self;
+    if( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad)
+    {
+        SGHomeViewController* homeC = [self.storyboard instantiateViewControllerWithIdentifier:(NSString*)kControllerIDHomeStr];
+        homeC.delegate = self;
     
-    [self displayContentController:homeC];
+        [self displayContentController:homeC];
     
-    [UIView animateWithDuration:1.0 animations:^{
-        self.splash.alpha = 0;
-    }];
+        [UIView animateWithDuration:1.0 animations:^{
+            self.splash.alpha = 0;
+        }];
+    }
 }
 
 @end
