@@ -8,11 +8,8 @@
 
 #import "SGChildrensOverlayViewController.h"
 
-@interface SGChildrensOverlayViewController ()
-
-@end
-
 @implementation SGChildrensOverlayViewController
+@synthesize fingerPaintView = _fingerPaintView;
 
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -26,9 +23,23 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    
     self.view.frame = CGRectMake(0, 66, 768, 892);
     
+    _fingerPaintView = [SGFingerPaintView new];
+    _fingerPaintView.frame = self.view.frame;
+    _fingerPaintView.userInteractionEnabled = YES;
+    _fingerPaintView.backgroundColor = [UIColor redColor];
+    _fingerPaintView.maskThis = self.bgImageView;
+    _fingerPaintView.backgroundColor = [UIColor clearColor];
+    self.bgImageView.userInteractionEnabled = NO;
+    [self.view addSubview:_fingerPaintView];
+}
+
+- (void)addBackgroundImgWithPath: (NSString*)bgImgPath
+{
+    [super addBackgroundImgWithPath:bgImgPath];
+    //_fingerPaintView.maskThis = self.bgImageView;
+    //_fingerPaintView.originalImage = [self.bgImageView.image CGImage];
 }
 
 @end

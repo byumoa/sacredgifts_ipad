@@ -204,6 +204,7 @@
 		612630AE17EDF27000AD35BE /* SG_Home_FindBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630AA17EDF27000AD35BE /* SG_Home_FindBtn.png */; };
 		612630AF17EDF27000AD35BE /* SG_Home_FindBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630AB17EDF27000AD35BE /* SG_Home_FindBtn@2x.png */; };
 		612630B017EDF27000AD35BE /* SG_Home_FindBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630AC17EDF27000AD35BE /* SG_Home_FindBtn-on@2x.png */; };
+		6180C75117F993A10062FB7D /* SGFingerPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6180C75017F993A10062FB7D /* SGFingerPaintView.m */; };
 		6186388B17F0C99C00F4A6BE /* SGContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186388A17F0C99C00F4A6BE /* SGContainerViewController.m */; };
 		6186A80017F196970047097F /* SGPaintingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186A7FF17F196970047097F /* SGPaintingImageView.m */; };
 		6186A80317F197460047097F /* SGOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186A80217F197460047097F /* SGOverlayView.m */; };
@@ -531,6 +532,8 @@
 		612630AA17EDF27000AD35BE /* SG_Home_FindBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_Home_FindBtn.png; sourceTree = "<group>"; };
 		612630AB17EDF27000AD35BE /* SG_Home_FindBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_FindBtn@2x.png"; sourceTree = "<group>"; };
 		612630AC17EDF27000AD35BE /* SG_Home_FindBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_FindBtn-on@2x.png"; sourceTree = "<group>"; };
+		6180C74F17F993A10062FB7D /* SGFingerPaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFingerPaintView.h; sourceTree = "<group>"; };
+		6180C75017F993A10062FB7D /* SGFingerPaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGFingerPaintView.m; sourceTree = "<group>"; };
 		6186388917F0C99C00F4A6BE /* SGContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGContainerViewController.h; sourceTree = "<group>"; };
 		6186388A17F0C99C00F4A6BE /* SGContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGContainerViewController.m; sourceTree = "<group>"; };
 		6186A7FE17F196970047097F /* SGPaintingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPaintingImageView.h; sourceTree = "<group>"; };
@@ -1000,6 +1003,8 @@
 		6109796717F5F9B4005A7E14 /* Overlay Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				6180C74F17F993A10062FB7D /* SGFingerPaintView.h */,
+				6180C75017F993A10062FB7D /* SGFingerPaintView.m */,
 				6109796817F60D4A005A7E14 /* SGOverlayViewController.h */,
 				6109796917F60D4A005A7E14 /* SGOverlayViewController.m */,
 				6109797A17F743A5005A7E14 /* SGMusicOverlayViewController.h */,
@@ -1516,6 +1521,7 @@
 				6109798217F74DFB005A7E14 /* SGSummaryOverlayViewController.m in Sources */,
 				6186388B17F0C99C00F4A6BE /* SGContainerViewController.m in Sources */,
 				6190A51D17EDCB7F00860B8F /* SGMeetTheArtistsViewController.m in Sources */,
+				6180C75117F993A10062FB7D /* SGFingerPaintView.m in Sources */,
 				6191A73017F00444003755F9 /* SGPaintingViewController.m in Sources */,
 				6190A52017EDCBC900860B8F /* SGAboutTheExhibitionViewController.m in Sources */,
 				6186A80317F197460047097F /* SGOverlayView.m in Sources */,

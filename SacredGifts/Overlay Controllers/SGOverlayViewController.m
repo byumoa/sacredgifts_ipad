@@ -16,9 +16,9 @@
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath
 {
-    UIImageView* bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:bgImgPath]];
-    self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, bgImageView.image.size.width, bgImageView.image.size.height);
-    [self.view addSubview:bgImageView];
+    self.bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:bgImgPath]];
+    self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.bgImageView.image.size.width, self.bgImageView.image.size.height);
+    [self.view addSubview:self.bgImageView];
     self.view.center = _centerPos;
 }
 

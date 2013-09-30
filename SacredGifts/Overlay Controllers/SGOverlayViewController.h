@@ -13,6 +13,7 @@
     NSString* _bgImagePath;
     CGPoint _centerPos;
 }
+@property(nonatomic, strong) UIImageView* bgImageView;
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath;
 

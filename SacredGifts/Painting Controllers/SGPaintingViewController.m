@@ -162,7 +162,6 @@ const int kFooterBtnY = 35;
     //Create new overlay veiwController
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:moduleStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingStr, moduleStr]];
     self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:moduleStr];
-    [self.overlayController addBackgroundImgWithPath:overlayPath];
     
     //Transition new overlay on
     [self.view insertSubview:self.overlayController.view belowSubview:self.footerView];
@@ -170,6 +169,7 @@ const int kFooterBtnY = 35;
     [UIView animateWithDuration:0.25 animations:^{
         self.overlayController.view.alpha = 1;
     }];
+    [self.overlayController addBackgroundImgWithPath:overlayPath];
 }
 
 @end
