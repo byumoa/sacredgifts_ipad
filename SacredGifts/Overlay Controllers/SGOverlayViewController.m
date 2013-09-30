@@ -9,7 +9,7 @@
 #import "SGOverlayViewController.h"
 
 @interface SGOverlayViewController ()
-
+- (void)configureBGImage;
 @end
 
 @implementation SGOverlayViewController
@@ -17,6 +17,17 @@
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath
 {
     self.bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:bgImgPath]];
+    [self configureBGImage];
+}
+
+-(void)addBackgroundImgWithImgName:(NSString *)bgImgName
+{
+    self.bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:bgImgName]];
+    [self configureBGImage];
+}
+
+-(void)configureBGImage
+{
     self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.bgImageView.image.size.width, self.bgImageView.image.size.height);
     [self.view addSubview:self.bgImageView];
     self.view.center = _centerPos;

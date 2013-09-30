@@ -160,7 +160,6 @@ const int kFooterBtnY = 35;
     }
     
     //Create new overlay veiwController
-    NSString *overlayPath = [[NSBundle mainBundle] pathForResource:moduleStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingStr, moduleStr]];
     self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:moduleStr];
     
     //Transition new overlay on
@@ -169,7 +168,15 @@ const int kFooterBtnY = 35;
     [UIView animateWithDuration:0.25 animations:^{
         self.overlayController.view.alpha = 1;
     }];
-    [self.overlayController addBackgroundImgWithPath:overlayPath];
+    
+    //Configure new overlay viewController
+    if( [moduleStr isEqualToString:(NSString*)kPerspectiveStr]){
+        
+    }
+    else{
+        NSString *overlayPath = [[NSBundle mainBundle] pathForResource:moduleStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingStr, moduleStr]];
+        [self.overlayController addBackgroundImgWithPath:overlayPath];
+    }
 }
 
 @end

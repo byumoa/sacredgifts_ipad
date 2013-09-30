@@ -16,5 +16,6 @@
 @property(nonatomic, strong) UIImageView* bgImageView;
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath;
+- (void)addBackgroundImgWithImgName: (NSString*)bgImgName;
 
 @end
