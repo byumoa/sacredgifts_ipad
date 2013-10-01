@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4510" systemVersion="12F37" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
+        <deployment defaultVersion="1536" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3742"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SGViewController" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="BYZ-38-t0r" customClass="SGViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -81,6 +82,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="backBtn" destination="ygj-IJ-KWP" id="xk2-By-WQu"/>
                         <outlet property="footerView" destination="vJA-Jz-DAr" id="vap-x7-JlY"/>
@@ -95,7 +97,7 @@
         <!--Home View Controller-->
         <scene sceneID="U3q-qI-bVq">
             <objects>
-                <viewController restorationIdentifier="SacredGifts Home" storyboardIdentifier="SacredGifts Home" id="rWn-Ap-S9g" customClass="SGHomeViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SacredGifts Home" storyboardIdentifier="SacredGifts Home" wantsFullScreenLayout="YES" id="rWn-Ap-S9g" customClass="SGHomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w3m-kU-NRY">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -141,6 +143,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outletCollection property="blurredViews" destination="kzm-On-8yx" id="HJE-Xv-tyf"/>
                         <outletCollection property="blurredViews" destination="e1S-K6-Raj" id="S2f-IL-aC4"/>
@@ -154,12 +157,13 @@
         <!--Painting Container View Controller-->
         <scene sceneID="8OC-Kg-Gyd">
             <objects>
-                <viewController restorationIdentifier="SacredGifts PaintingContainer" storyboardIdentifier="SacredGifts PaintingContainer" id="11c-ez-SXP" customClass="SGPaintingContainerViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SacredGifts PaintingContainer" storyboardIdentifier="SacredGifts PaintingContainer" wantsFullScreenLayout="YES" id="11c-ez-SXP" customClass="SGPaintingContainerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hta-UW-5HZ">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B8J-Vg-9ON" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -168,7 +172,7 @@
         <!--FindA Painting View Controller-->
         <scene sceneID="Uxd-LW-xna">
             <objects>
-                <viewController restorationIdentifier="SacredGifts FindAPainting" storyboardIdentifier="SacredGifts FindAPainting" id="S3D-aX-bvd" customClass="SGFindAPaintingViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SacredGifts FindAPainting" storyboardIdentifier="SacredGifts FindAPainting" wantsFullScreenLayout="YES" id="S3D-aX-bvd" customClass="SGFindAPaintingViewController" sceneMemberID="viewController">
                     <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="myh-rR-qDe">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -401,6 +405,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FPG-bt-khs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -409,7 +414,7 @@
         <!--Meet The Artists View Controller-->
         <scene sceneID="WzT-8Z-BUq">
             <objects>
-                <viewController restorationIdentifier="SacredGifts MeetTheArtists" storyboardIdentifier="SacredGifts MeetTheArtists" id="x7a-eH-1TN" customClass="SGMeetTheArtistsViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SacredGifts MeetTheArtists" storyboardIdentifier="SacredGifts MeetTheArtists" wantsFullScreenLayout="YES" id="x7a-eH-1TN" customClass="SGMeetTheArtistsViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RNK-YD-rBJ">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -445,6 +450,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outletCollection property="blurredViews" destination="ESv-V8-rCO" id="UyC-d9-IkW"/>
                         <outletCollection property="blurredViews" destination="I54-Zz-A5v" id="FCk-v4-DmK"/>
@@ -458,7 +464,7 @@
         <!--About The Exhibition View Controller-->
         <scene sceneID="yuB-Df-6F5">
             <objects>
-                <viewController restorationIdentifier="SacredGifts AboutTheExhibition" storyboardIdentifier="SacredGifts AboutTheExhibition" id="idu-wO-YB6" customClass="SGAboutTheExhibitionViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SacredGifts AboutTheExhibition" storyboardIdentifier="SacredGifts AboutTheExhibition" wantsFullScreenLayout="YES" id="idu-wO-YB6" customClass="SGAboutTheExhibitionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JqO-8s-eke">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -494,6 +500,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outletCollection property="blurredViews" destination="Whn-1f-3jF" id="jzQ-NI-AXs"/>
                         <outletCollection property="blurredViews" destination="zjD-Fl-7iI" id="Sdd-ST-3lf"/>
@@ -507,7 +514,7 @@
         <!--Painting View Controller-->
         <scene sceneID="BGv-Jj-T43">
             <objects>
-                <viewController restorationIdentifier="SacredGifts Painting" storyboardIdentifier="SacredGifts Painting" id="4y1-Fu-WWq" customClass="SGPaintingViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SacredGifts Painting" storyboardIdentifier="SacredGifts Painting" wantsFullScreenLayout="YES" id="4y1-Fu-WWq" customClass="SGPaintingViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TwP-o8-tQ6">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -538,6 +545,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="footerView" destination="qR1-fw-PT0" id="qe0-Bk-vWI"/>
                         <outlet property="paintingImageView" destination="VdB-kg-beo" id="iKZ-SE-Oxe"/>
