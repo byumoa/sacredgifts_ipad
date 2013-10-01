@@ -15,6 +15,7 @@ typedef enum
     kNavigationDestinationMeetTheArtists = 2,
     kNavigationDestinationAboutTheExhibition = 3
 }NavigationDestination;
+
 @interface SGHomeViewController : SGContentViewController
 
 @end
