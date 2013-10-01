@@ -44,14 +44,17 @@ const int kFooterBtnY = 35;
     
     for( NSString* buttonTypeStr in buttonTypeStrArr)
     {
-        NSString* overlayPath = [[NSBundle mainBundle] pathForResource:buttonTypeStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingNameStr, buttonTypeStr]];
+        NSString* overlayPath = [[NSBundle mainBundle] pathForResource:buttonTypeStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", paintingNameStr, buttonTypeStr]];
         
+        //Overlay path is nnull in iOS6
+        NSLog(@"kPaintingResourcesStr:%@, paintingNameStr:%@ buttonTypeStr:%@", kPaintingResourcesStr, paintingNameStr, buttonTypeStr);
         if( overlayPath != nil)
         {
             UIButton* overlayBtn = [self footerBtnForTag:[self getModuleTypeForStr:buttonTypeStr]];
             int xOffset = 70 + currentBtnIndex++ * kFooterBtnOffset;
             overlayBtn.center = CGPointMake(xOffset, kFooterBtnY);
             [self.footerView addSubview:overlayBtn];
+            NSLog(@"overlayBtn %i: %@", overlayBtn.tag, buttonTypeStr);
         }
     }
 }

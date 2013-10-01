@@ -77,7 +77,7 @@
                             </view>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="SG_Home_SplashScreen.png" id="zKe-di-iZj">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -694,12 +694,9 @@
         <image name="SG_Home_BlochBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_BlochBtn.png" width="768" height="205"/>
         <image name="SG_Home_DonateBtn-on.png" width="245" height="123"/>
-        <image name="SG_Home_DonateBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_DonateBtn.png" width="245" height="123"/>
         <image name="SG_Home_ExhibitionBtn-on.png" width="768" height="205"/>
-        <image name="SG_Home_ExhibitionBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_ExhibitionBtn.png" width="768" height="205"/>
-        <image name="SG_Home_FeedbackBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_FeedbackBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_FeedbackBtn.png" width="245" height="123"/>
         <image name="SG_Home_FilmBtn-on.png" width="768" height="205"/>

@@ -22,7 +22,6 @@
 		61008AA517ED03F0005E39CE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61008A8417ED03F0005E39CE /* UIKit.framework */; };
 		61008AAD17ED03F0005E39CE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 61008AAB17ED03F0005E39CE /* InfoPlist.strings */; };
 		61008AAF17ED03F0005E39CE /* SacredGiftsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 61008AAE17ED03F0005E39CE /* SacredGiftsTests.m */; };
-		61008AB917ED0580005E39CE /* PaintingResources in Resources */ = {isa = PBXBuildFile; fileRef = 61008AB817ED0580005E39CE /* PaintingResources */; };
 		61008B6D17ED058C005E39CE /* SG_Home_BlochBtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 61008AC617ED058B005E39CE /* SG_Home_BlochBtn-on.png */; };
 		61008B6E17ED058C005E39CE /* SG_Home_BlochBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61008AC717ED058B005E39CE /* SG_Home_BlochBtn-on@2x.png */; };
 		61008B6F17ED058C005E39CE /* SG_Home_BlochBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 61008AC817ED058B005E39CE /* SG_Home_BlochBtn.png */; };
@@ -308,6 +307,7 @@
 		6190A52017EDCBC900860B8F /* SGAboutTheExhibitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6190A51F17EDCBC900860B8F /* SGAboutTheExhibitionViewController.m */; };
 		6191A72D17F003F3003755F9 /* SGPaintingContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6191A72C17F003F3003755F9 /* SGPaintingContainerViewController.m */; };
 		6191A73017F00444003755F9 /* SGPaintingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6191A72F17F00444003755F9 /* SGPaintingViewController.m */; };
+		61C877CC17FAEDC600087C1E /* PaintingResources in Resources */ = {isa = PBXBuildFile; fileRef = 61C877CB17FAEDC600087C1E /* PaintingResources */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -341,7 +341,6 @@
 		61008AAA17ED03F0005E39CE /* SacredGiftsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SacredGiftsTests-Info.plist"; sourceTree = "<group>"; };
 		61008AAC17ED03F0005E39CE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		61008AAE17ED03F0005E39CE /* SacredGiftsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SacredGiftsTests.m; sourceTree = "<group>"; };
-		61008AB817ED0580005E39CE /* PaintingResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PaintingResources; sourceTree = "<group>"; };
 		61008AC617ED058B005E39CE /* SG_Home_BlochBtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_BlochBtn-on.png"; sourceTree = "<group>"; };
 		61008AC717ED058B005E39CE /* SG_Home_BlochBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_BlochBtn-on@2x.png"; sourceTree = "<group>"; };
 		61008AC817ED058B005E39CE /* SG_Home_BlochBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_Home_BlochBtn.png; sourceTree = "<group>"; };
@@ -651,6 +650,7 @@
 		6191A72C17F003F3003755F9 /* SGPaintingContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPaintingContainerViewController.m; sourceTree = "<group>"; };
 		6191A72E17F00444003755F9 /* SGPaintingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPaintingViewController.h; sourceTree = "<group>"; };
 		6191A72F17F00444003755F9 /* SGPaintingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPaintingViewController.m; sourceTree = "<group>"; };
+		61C877CB17FAEDC600087C1E /* PaintingResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PaintingResources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -688,7 +688,7 @@
 			isa = PBXGroup;
 			children = (
 				6109796B17F648BE005A7E14 /* Default-568h@2x.png */,
-				61008AB817ED0580005E39CE /* PaintingResources */,
+				61C877CB17FAEDC600087C1E /* PaintingResources */,
 				61008ABA17ED058B005E39CE /* GeneralResources */,
 				61008A8617ED03F0005E39CE /* SacredGifts */,
 				61008AA817ED03F0005E39CE /* SacredGiftsTests */,
@@ -1311,6 +1311,7 @@
 				61008BCA17ED058C005E39CE /* SG_General_Painting_DetailMarkerBtn@2x.png in Resources */,
 				6186A8A217F241560047097F /* painting_thumb_temple@2x.png in Resources */,
 				61008BAF17ED058C005E39CE /* SG_General_Module_CloseBtn.png in Resources */,
+				61C877CC17FAEDC600087C1E /* PaintingResources in Resources */,
 				6186A87117F241560047097F /* painting_thumb_cross.png in Resources */,
 				61008B7417ED058C005E39CE /* SG_Home_DonateBtn@2x.png in Resources */,
 				61008B9E17ED058C005E39CE /* SG_Home_ScanPaintingBtn@2x.png in Resources */,
@@ -1323,7 +1324,6 @@
 				6186A88A17F241560047097F /* painting_thumb_mocking@2x.png in Resources */,
 				61008B8617ED058C005E39CE /* SG_Home_Footer_BG@2x.png in Resources */,
 				61008BA617ED058C005E39CE /* SG_General_BackBtn-on@2x.png in Resources */,
-				61008AB917ED0580005E39CE /* PaintingResources in Resources */,
 				61008B8B17ED058C005E39CE /* SG_Home_LearnMoreBtn-on.png in Resources */,
 				61008BCB17ED058C005E39CE /* SG_General_Painting_DetailOverlay.png in Resources */,
 				6186A86017F241560047097F /* painting_thumb_capture-on@2x.png in Resources */,
