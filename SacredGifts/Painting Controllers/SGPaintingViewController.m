@@ -44,7 +44,6 @@ const int kPerspectivesButtonWidth = 161;
 
 -(void)addFooterButtonsForPainting:(NSString *)paintingNameStr
 {
-    int currentBtnIndex = 0;
     NSArray* buttonTypeStrArr = [NSArray arrayWithObjects:kGiftsStr, kSummaryStr,kPerspectiveStr, kMusicStr, kChildrensStr, kDetailsStr, nil];
     
     for( NSString* buttonTypeStr in buttonTypeStrArr)
@@ -55,7 +54,6 @@ const int kPerspectivesButtonWidth = 161;
         {
             ModuleType moduleType = [self getModuleTypeForStr:buttonTypeStr];
             UIButton* overlayBtn = [self footerBtnForTag:moduleType];
-            //int xOffset = 70 + currentBtnIndex++ * kFooterBtnOffset;
             int offset = kGeneralButtonWidth;
             if( moduleType == kModuleTypePerspective )      offset = kPerspectivesButtonWidth;
             else if( moduleType == kSummaryButtonWidth )    offset = kSummaryButtonWidth;
