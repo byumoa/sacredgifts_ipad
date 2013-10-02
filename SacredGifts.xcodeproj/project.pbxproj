@@ -203,6 +203,7 @@
 		612630AE17EDF27000AD35BE /* SG_Home_FindBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630AA17EDF27000AD35BE /* SG_Home_FindBtn.png */; };
 		612630AF17EDF27000AD35BE /* SG_Home_FindBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630AB17EDF27000AD35BE /* SG_Home_FindBtn@2x.png */; };
 		612630B017EDF27000AD35BE /* SG_Home_FindBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630AC17EDF27000AD35BE /* SG_Home_FindBtn-on@2x.png */; };
+		615B941C17FBEF2F00B42466 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 615B941B17FBEF2F00B42466 /* Default.png */; };
 		6180C75117F993A10062FB7D /* SGFingerPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6180C75017F993A10062FB7D /* SGFingerPaintView.m */; };
 		6186388B17F0C99C00F4A6BE /* SGContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186388A17F0C99C00F4A6BE /* SGContainerViewController.m */; };
 		6186A80017F196970047097F /* SGPaintingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186A7FF17F196970047097F /* SGPaintingImageView.m */; };
@@ -531,6 +532,7 @@
 		612630AA17EDF27000AD35BE /* SG_Home_FindBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_Home_FindBtn.png; sourceTree = "<group>"; };
 		612630AB17EDF27000AD35BE /* SG_Home_FindBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_FindBtn@2x.png"; sourceTree = "<group>"; };
 		612630AC17EDF27000AD35BE /* SG_Home_FindBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_FindBtn-on@2x.png"; sourceTree = "<group>"; };
+		615B941B17FBEF2F00B42466 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		6180C74F17F993A10062FB7D /* SGFingerPaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFingerPaintView.h; sourceTree = "<group>"; };
 		6180C75017F993A10062FB7D /* SGFingerPaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGFingerPaintView.m; sourceTree = "<group>"; };
 		6186388917F0C99C00F4A6BE /* SGContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGContainerViewController.h; sourceTree = "<group>"; };
@@ -865,6 +867,7 @@
 				61008AFA17ED058B005E39CE /* SG_Home_SchwartzBtn.png */,
 				61008AFB17ED058B005E39CE /* SG_Home_SchwartzBtn@2x.png */,
 				61008AFC17ED058B005E39CE /* SG_Home_SplashScreen.png */,
+				615B941B17FBEF2F00B42466 /* Default.png */,
 				61008AFD17ED058B005E39CE /* SG_Home_SplashScreen@2x.png */,
 			);
 			path = home;
@@ -1291,6 +1294,7 @@
 				61008B9617ED058C005E39CE /* SG_Home_PaintingListBtn@2x.png in Resources */,
 				61008B9417ED058C005E39CE /* SG_Home_PaintingListBtn-on@2x.png in Resources */,
 				61008BDA17ED058C005E39CE /* SG_General_Painting_PanoramaBtn-on.png in Resources */,
+				615B941C17FBEF2F00B42466 /* Default.png in Resources */,
 				6186A89217F241560047097F /* painting_thumb_ruler@2x.png in Resources */,
 				61008B7A17ED058C005E39CE /* SG_Home_FeedbackBtn-on@2x.png in Resources */,
 				61008B9D17ED058C005E39CE /* SG_Home_ScanPaintingBtn.png in Resources */,
