@@ -12,6 +12,10 @@
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
 
+const int kGeneralButtonWidth = 120;
+const int kSummaryButtonWidth = 128;
+const int kPerspectivesButtonWidth = 161;
+
 @interface SGPaintingViewController (PrivateAPIs)
 - (void) addMainPainting:(NSString*)paintingName;
 - (void) addFooterButtonsForPainting: (NSString*)paintingNameStr;
@@ -34,27 +38,30 @@ const int kFooterBtnY = 35;
     NSString *blurredPaintingPath = [[NSBundle mainBundle] pathForResource:@"MainPainting Blurred" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, _paintingNameStr]];
     [self.delegate contentController:self viewsForBlurredBacking:blurredViews blurredImgPath:blurredPaintingPath];
     
+    _currentFooterBtnX = -kGeneralButtonWidth / 2;
     [self addFooterButtonsForPainting:_paintingNameStr];
 }
 
 -(void)addFooterButtonsForPainting:(NSString *)paintingNameStr
 {
     int currentBtnIndex = 0;
-    NSArray* buttonTypeStrArr = [NSArray arrayWithObjects:kSummaryStr,kPerspectiveStr, kGiftsStr, kMusicStr, kChildrensStr, kDetailsStr, nil];
+    NSArray* buttonTypeStrArr = [NSArray arrayWithObjects:kGiftsStr, kSummaryStr,kPerspectiveStr, kMusicStr, kChildrensStr, kDetailsStr, nil];
     
     for( NSString* buttonTypeStr in buttonTypeStrArr)
     {
         NSString* overlayPath = [[NSBundle mainBundle] pathForResource:buttonTypeStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", paintingNameStr, buttonTypeStr]];
         
-        //Overlay path is nnull in iOS6
-        NSLog(@"kPaintingResourcesStr:%@, paintingNameStr:%@ buttonTypeStr:%@", kPaintingResourcesStr, paintingNameStr, buttonTypeStr);
         if( overlayPath != nil)
         {
-            UIButton* overlayBtn = [self footerBtnForTag:[self getModuleTypeForStr:buttonTypeStr]];
-            int xOffset = 70 + currentBtnIndex++ * kFooterBtnOffset;
-            overlayBtn.center = CGPointMake(xOffset, kFooterBtnY);
+            ModuleType moduleType = [self getModuleTypeForStr:buttonTypeStr];
+            UIButton* overlayBtn = [self footerBtnForTag:moduleType];
+            //int xOffset = 70 + currentBtnIndex++ * kFooterBtnOffset;
+            int offset = kGeneralButtonWidth;
+            if( moduleType == kModuleTypePerspective )      offset = kPerspectivesButtonWidth;
+            else if( moduleType == kSummaryButtonWidth )    offset = kSummaryButtonWidth;
+            _currentFooterBtnX += offset;
+            overlayBtn.center = CGPointMake(_currentFooterBtnX, kFooterBtnY);
             [self.footerView addSubview:overlayBtn];
-            NSLog(@"overlayBtn %i: %@", overlayBtn.tag, buttonTypeStr);
         }
     }
 }

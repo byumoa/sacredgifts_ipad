@@ -17,6 +17,7 @@
     ModuleType _currentModule;
     CGRect _lastPortraitFrame;
     NSString* _paintingNameStr;
+    int _currentFooterBtnX;
 }
 
 @property (weak, nonatomic) IBOutlet SGPaintingImageView *paintingImageView;
