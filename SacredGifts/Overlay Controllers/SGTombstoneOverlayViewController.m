@@ -21,7 +21,7 @@
         self.moduleType = kModuleTypeTombstone;
     }
     
-    return [super init];
+    return self;
 }
 
 @end

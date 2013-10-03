@@ -18,7 +18,7 @@
         self.moduleType = kModuleTypeChildrens;
     }
     
-    return [super init];
+    return self;
 }
 
 -(void)viewDidLoad

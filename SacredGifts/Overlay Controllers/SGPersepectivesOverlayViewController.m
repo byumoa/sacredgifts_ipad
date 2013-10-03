@@ -21,7 +21,7 @@
         self.moduleType = kModuleTypePerspective;
     }
     
-    return [super init];
+    return self;
 }
 
 @end

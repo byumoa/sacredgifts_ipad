@@ -20,7 +20,7 @@ const int kPerspectivesButtonWidth = 161;
 - (void) addMainPainting:(NSString*)paintingName;
 - (void) addFooterButtonsForPainting: (NSString*)paintingNameStr;
 - (UIButton*)footerBtnForTag:(ModuleType)moduleType;
-- (void)pressedModuleBtn:(UIButton *)sender;
+- (IBAction)pressedModuleBtn:(UIButton *)sender;
 - (ModuleType)getModuleTypeForStr: (NSString*)moduleStr;
 - (NSString*)getStringForModule: (ModuleType)moduleType;
 - (void)addNewOverlayOfType:(NSString*)moduleStr forPainting:(NSString *)paintingStr;
@@ -99,6 +99,7 @@ const int kPerspectivesButtonWidth = 161;
 {
     NSString *paintingPath = [[NSBundle mainBundle] pathForResource:@"MainPainting" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, paintingName]];
     self.paintingImageView.image = [UIImage imageWithContentsOfFile:paintingPath];
+    self.paintingImageView.delegate = self;
 }
 
 -(UIButton *)footerBtnForTag:(ModuleType)moduleType
@@ -148,12 +149,11 @@ const int kPerspectivesButtonWidth = 161;
     return returnBtn;
 }
 
-- (void)pressedModuleBtn:(UIButton *)sender
+- (IBAction)pressedModuleBtn:(UIButton *)sender
 {
     ModuleType moduleType = sender.tag;
     if( moduleType == self.overlayController.moduleType )
     {
-        NSLog(@"self.footerView.subviews: %@", self.footerView.subviews);
         sender.selected = NO;
         [self removeCurrentOverlay];
     }
@@ -177,7 +177,6 @@ const int kPerspectivesButtonWidth = 161;
     
     //Create new overlay veiwController
     self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:moduleStr];
-    
     //Transition new overlay on
     [self.view insertSubview:self.overlayController.view belowSubview:self.footerView];
     self.overlayController.view.alpha = 0;
@@ -186,8 +185,11 @@ const int kPerspectivesButtonWidth = 161;
     }];
     
     //Configure new overlay viewController
-    if( [moduleStr isEqualToString:(NSString*)kPerspectiveStr]){
+    if( self.overlayController.moduleType == kModuleTypePerspective){
         
+    }
+    else if( self.overlayController.moduleType == kModuleTypeSocial ){
+        [self.overlayController addBackgroundImgWithImgName:@"SG_General_Module_Overlay.png"];
     }
     else{
         NSString *overlayPath = [[NSBundle mainBundle] pathForResource:moduleStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingStr, moduleStr]];
@@ -205,6 +207,19 @@ const int kPerspectivesButtonWidth = 161;
             [exitingOverlay.view removeFromSuperview];
         }];
     }
+    self.overlayController = nil;
+}
+
+-(void)paintingTapped:(SGPaintingImageView *)paintingView
+{
+    float targetAlpha = 1;
+    if( self.footerView.alpha == 1 )
+        targetAlpha = 0;
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.footerView.alpha = targetAlpha;
+        self.overlayController.view.alpha = targetAlpha;
+    }];
 }
 
 @end

@@ -21,7 +21,7 @@
         self.moduleType = kModuleTypeSummary;
     }
     
-    return [super init];
+    return self;
 }
 
 @end

@@ -21,7 +21,7 @@
         self.moduleType = kModuleTypeGifts;
     }
     
-    return [super init];
+    return self;
 }
 
 @end

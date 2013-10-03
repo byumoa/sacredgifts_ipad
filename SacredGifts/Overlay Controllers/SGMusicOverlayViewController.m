@@ -21,7 +21,7 @@
         self.moduleType = kModuleTypeMusic;
     }
     
-    return [super init];
+    return self;
 }
 
 @end

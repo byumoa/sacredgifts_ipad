@@ -12,7 +12,7 @@
 #import "SGContentControllerDelegate.h"
 @class SGOverlayViewController;
 
-@interface SGPaintingViewController : UIViewController
+@interface SGPaintingViewController : UIViewController <SGPaintingImageViewDelegate>
 {
     CGRect _lastPortraitFrame;
     NSString* _paintingNameStr;
