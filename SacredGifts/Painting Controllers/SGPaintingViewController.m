@@ -23,7 +23,8 @@ const int kPerspectivesButtonWidth = 161;
 - (void)pressedModuleBtn:(UIButton *)sender;
 - (ModuleType)getModuleTypeForStr: (NSString*)moduleStr;
 - (NSString*)getStringForModule: (ModuleType)moduleType;
--(void)addNewOverlayOfType:(NSString*)moduleStr forPainting:(NSString *)paintingStr;
+- (void)addNewOverlayOfType:(NSString*)moduleStr forPainting:(NSString *)paintingStr;
+- (void)removeCurrentOverlay;
 @end
 
 @implementation SGPaintingViewController
@@ -138,6 +139,7 @@ const int kPerspectivesButtonWidth = 161;
     
     [returnBtn setImage:[UIImage imageNamed:btnImgStrNrm] forState:UIControlStateNormal];
     [returnBtn setImage:[UIImage imageNamed:btnImgStrHil] forState:UIControlStateHighlighted];
+    [returnBtn setImage:[UIImage imageNamed:btnImgStrHil] forState:UIControlStateSelected];
     
     CGSize s = returnBtn.imageView.image.size;
     returnBtn.frame = CGRectMake(0, 0, s.width, s.height);
@@ -149,23 +151,29 @@ const int kPerspectivesButtonWidth = 161;
 - (void)pressedModuleBtn:(UIButton *)sender
 {
     ModuleType moduleType = sender.tag;
-    if( moduleType == _currentModule ) return;
-    _currentModule = moduleType;
-    
-    [self addNewOverlayOfType:[self getStringForModule:moduleType] forPainting:_paintingNameStr];
+    if( moduleType == self.overlayController.moduleType )
+    {
+        NSLog(@"self.footerView.subviews: %@", self.footerView.subviews);
+        sender.selected = NO;
+        [self removeCurrentOverlay];
+    }
+    else
+    {
+        [self addNewOverlayOfType:[self getStringForModule:moduleType] forPainting:_paintingNameStr];
+        
+        SEL setSelectedSelector = sel_registerName("setSelected:");
+        for( UIView *subview in self.footerView.subviews ){
+            if( [subview respondsToSelector:setSelectedSelector])
+                ((UIButton*)subview).selected = NO;
+        }
+        sender.selected = YES;
+    }
 }
 
 -(void)addNewOverlayOfType:(NSString*)moduleStr forPainting:(NSString *)paintingStr
 {
     //Transition current overlay off
-    if( self.overlayController != nil ){
-        SGOverlayViewController* exitingOverlay = self.overlayController;
-        [UIView animateWithDuration:0.25 animations:^{
-            exitingOverlay.view.alpha = 0;
-        } completion:^(BOOL finished) {
-            [exitingOverlay.view removeFromSuperview];
-        }];
-    }
+    [self removeCurrentOverlay];
     
     //Create new overlay veiwController
     self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:moduleStr];
@@ -184,6 +192,18 @@ const int kPerspectivesButtonWidth = 161;
     else{
         NSString *overlayPath = [[NSBundle mainBundle] pathForResource:moduleStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingStr, moduleStr]];
         [self.overlayController addBackgroundImgWithPath:overlayPath];
+    }
+}
+
+-(void)removeCurrentOverlay
+{
+    if( self.overlayController != nil ){
+        SGOverlayViewController* exitingOverlay = self.overlayController;
+        [UIView animateWithDuration:0.25 animations:^{
+            exitingOverlay.view.alpha = 0;
+        } completion:^(BOOL finished) {
+            [exitingOverlay.view removeFromSuperview];
+        }];
     }
 }
 

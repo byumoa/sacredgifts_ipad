@@ -14,7 +14,6 @@
 
 @interface SGPaintingViewController : UIViewController
 {
-    ModuleType _currentModule;
     CGRect _lastPortraitFrame;
     NSString* _paintingNameStr;
     int _currentFooterBtnX;

@@ -18,6 +18,7 @@
 {
     if( self = [super initWithCoder:aDecoder]){
         _centerPos = CGPointMake(384, 670);
+        self.moduleType = kModuleTypeSummary;
     }
     
     return [super init];

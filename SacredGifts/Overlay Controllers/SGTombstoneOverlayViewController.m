@@ -18,6 +18,7 @@
 {
     if( self = [super initWithCoder:aDecoder]){
         _centerPos = CGPointMake(384, 850);
+        self.moduleType = kModuleTypeTombstone;
     }
     
     return [super init];

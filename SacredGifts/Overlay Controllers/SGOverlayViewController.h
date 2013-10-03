@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SGConstants.h"
 
 @interface SGOverlayViewController : UIViewController
 {
@@ -14,6 +15,7 @@
     CGPoint _centerPos;
 }
 @property(nonatomic, strong) UIImageView* bgImageView;
+@property(nonatomic) ModuleType moduleType;
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath;
 - (void)addBackgroundImgWithImgName: (NSString*)bgImgName;
