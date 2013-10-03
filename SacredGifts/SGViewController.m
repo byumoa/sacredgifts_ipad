@@ -11,7 +11,7 @@
 #import "SGConstants.h"
 
 @interface SGViewController ()
-
+- (void)fadeSplash: (NSTimer*)timer;
 @end
 
 @implementation SGViewController
@@ -27,10 +27,21 @@
     
         [self displayContentController:homeC];
     
-        [UIView animateWithDuration:1.0 animations:^{
-            self.splash.alpha = 0;
-        }];
+        [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(fadeSplash:) userInfo:nil repeats:NO];
     }
+}
+
+-(void)fadeSplash:(NSTimer *)timer
+{
+    [UIView animateWithDuration:1.0 animations:^{
+        self.splash.alpha = 0;
+    }];
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if( self.splash.alpha > 0 )
+        [self fadeSplash:nil];
 }
 
 @end
