@@ -22,7 +22,7 @@
 {
     [super viewDidLoad];
     _backViewControllerIDStr = (NSString*)kControllerIDHomeStr;
-    self.backBtn.alpha = 0.5;
+    self.backBtn.alpha = 0.0;
     self.backBtn.enabled = NO;
 }
 
@@ -96,7 +96,7 @@
 {
     float backBtnAlpha = 1;
     if( [toControllerID isEqualToString: (NSString*)kControllerIDHomeStr] )
-        backBtnAlpha = 0.5;
+        backBtnAlpha = 0;
     self.backBtn.enabled = backBtnAlpha == 1;
     
     [UIView animateWithDuration:0.25 animations:^{
