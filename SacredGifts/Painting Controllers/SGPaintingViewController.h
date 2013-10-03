@@ -26,4 +26,6 @@
 
 -(void)configWithPaintingName:(NSString *)paintingStr;
 
+- (IBAction)swipeRecognized:(UISwipeGestureRecognizer *)sender;
+
 @end

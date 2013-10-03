@@ -205,6 +205,7 @@
 		612630B017EDF27000AD35BE /* SG_Home_FindBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630AC17EDF27000AD35BE /* SG_Home_FindBtn-on@2x.png */; };
 		615B941C17FBEF2F00B42466 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 615B941B17FBEF2F00B42466 /* Default.png */; };
 		615B953D17FDF41700B42466 /* SGSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615B953C17FDF41700B42466 /* SGSocialViewController.m */; };
+		615B954017FE279200B42466 /* SGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615B953F17FE279200B42466 /* SGWebViewController.m */; };
 		6180C75117F993A10062FB7D /* SGFingerPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6180C75017F993A10062FB7D /* SGFingerPaintView.m */; };
 		6186388B17F0C99C00F4A6BE /* SGContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186388A17F0C99C00F4A6BE /* SGContainerViewController.m */; };
 		6186A80017F196970047097F /* SGPaintingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186A7FF17F196970047097F /* SGPaintingImageView.m */; };
@@ -536,6 +537,8 @@
 		615B941B17FBEF2F00B42466 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		615B953B17FDF41700B42466 /* SGSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSocialViewController.h; sourceTree = "<group>"; };
 		615B953C17FDF41700B42466 /* SGSocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSocialViewController.m; sourceTree = "<group>"; };
+		615B953E17FE279200B42466 /* SGWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGWebViewController.h; sourceTree = "<group>"; };
+		615B953F17FE279200B42466 /* SGWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGWebViewController.m; sourceTree = "<group>"; };
 		6180C74F17F993A10062FB7D /* SGFingerPaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFingerPaintView.h; sourceTree = "<group>"; };
 		6180C75017F993A10062FB7D /* SGFingerPaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGFingerPaintView.m; sourceTree = "<group>"; };
 		6186388917F0C99C00F4A6BE /* SGContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGContainerViewController.h; sourceTree = "<group>"; };
@@ -755,6 +758,8 @@
 				6190A51F17EDCBC900860B8F /* SGAboutTheExhibitionViewController.m */,
 				6186A8AC17F2F4CD0047097F /* SGBlurManager.h */,
 				6186A8AD17F2F4CD0047097F /* SGBlurManager.m */,
+				615B953E17FE279200B42466 /* SGWebViewController.h */,
+				615B953F17FE279200B42466 /* SGWebViewController.m */,
 			);
 			path = SacredGifts;
 			sourceTree = "<group>";
@@ -1531,6 +1536,7 @@
 				6186388B17F0C99C00F4A6BE /* SGContainerViewController.m in Sources */,
 				6190A51D17EDCB7F00860B8F /* SGMeetTheArtistsViewController.m in Sources */,
 				6180C75117F993A10062FB7D /* SGFingerPaintView.m in Sources */,
+				615B954017FE279200B42466 /* SGWebViewController.m in Sources */,
 				6191A73017F00444003755F9 /* SGPaintingViewController.m in Sources */,
 				6190A52017EDCBC900860B8F /* SGAboutTheExhibitionViewController.m in Sources */,
 				6186A80317F197460047097F /* SGOverlayView.m in Sources */,

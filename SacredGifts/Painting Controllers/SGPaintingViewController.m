@@ -43,6 +43,14 @@ const int kPerspectivesButtonWidth = 161;
     [self addFooterButtonsForPainting:_paintingNameStr];
 }
 
+- (IBAction)swipeRecognized:(UISwipeGestureRecognizer *)sender
+{
+    if( sender.direction == UISwipeGestureRecognizerDirectionRight )
+        NSLog(@"SwipedRight");
+    else
+        NSLog(@"SwipeLeft");
+}
+
 -(void)addFooterButtonsForPainting:(NSString *)paintingNameStr
 {
     NSArray* buttonTypeStrArr = [NSArray arrayWithObjects:kGiftsStr, kSummaryStr,kPerspectiveStr, kMusicStr, kChildrensStr, kDetailsStr, nil];

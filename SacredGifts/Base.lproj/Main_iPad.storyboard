@@ -522,6 +522,11 @@
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="VdB-kg-beo" userLabel="PaintingImgView" customClass="SGPaintingImageView">
                                 <rect key="frame" x="0.0" y="66" width="768" height="892"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="8uu-xi-fyc" appends="YES" id="cEH-zh-qxz"/>
+                                    <outletCollection property="gestureRecognizers" destination="ZV3-Kv-dqN" appends="YES" id="nSd-f1-aqO"/>
+                                </connections>
                             </imageView>
                             <view contentMode="scaleToFill" id="qR1-fw-PT0" userLabel="FooterView">
                                 <rect key="frame" x="0.0" y="954" width="768" height="70"/>
@@ -556,6 +561,16 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ObG-bp-XU0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="8uu-xi-fyc">
+                    <connections>
+                        <action selector="swipeRecognized:" destination="4y1-Fu-WWq" id="JLj-6S-dvl"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="left" id="ZV3-Kv-dqN">
+                    <connections>
+                        <action selector="swipeRecognized:" destination="4y1-Fu-WWq" id="Dhq-3J-O6m"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1792" y="-195"/>
         </scene>
@@ -701,7 +716,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6KJ-T6-uSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2505" y="411"/>
+            <point key="canvasLocation" x="2563" y="429"/>
         </scene>
     </scenes>
     <resources>

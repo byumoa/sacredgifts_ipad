@@ -77,6 +77,8 @@
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)erro{
     [self dismissWebview];
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:@"We could not reach the internet at this time" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
 }
 
 -(void)pressedWebViewBack:(id)sender{
