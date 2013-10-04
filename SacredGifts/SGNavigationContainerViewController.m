@@ -110,27 +110,21 @@
     toController.delegate = self;
     
     BOOL isTransitionToPainting = [toController.restorationIdentifier isEqualToString:(NSString*)kControllerIDPaintingContainerStr];
-    if( NO )//isTransitionToPainting )
-    {
-        
-    }
-    else
-    {
-        __weak typeof(self) weakSelf = self;
-        animTransitionBlock = ^(void){
-            //newC.view.frame = self.view.frame;
-            toController.view.alpha = 1;
-            [weakSelf.view bringSubviewToFront:weakSelf.headerView];
-            [weakSelf.view bringSubviewToFront:weakSelf.footerView];
-            weakSelf.footerView.alpha = !isTransitionToPainting;
-            /*
-             CGRect f = self.view.frame;
-             oldC.view.frame = CGRectMake(f.origin.x - f.size.width/2,
-             f.origin.y - f.size.height/2,
-             f.size.width * 2, f.size.height*2);
-             */
+
+    __weak typeof(self) weakSelf = self;
+    animTransitionBlock = ^(void){
+        //newC.view.frame = self.view.frame;
+        toController.view.alpha = 1;
+        [weakSelf.view bringSubviewToFront:weakSelf.headerView];
+        [weakSelf.view bringSubviewToFront:weakSelf.footerView];
+        weakSelf.footerView.alpha = !isTransitionToPainting;
+        /*
+         CGRect f = self.view.frame;
+         oldC.view.frame = CGRectMake(f.origin.x - f.size.width/2,
+         f.origin.y - f.size.height/2,
+         f.size.width * 2, f.size.height*2);
+         */
         };
-    }
     
     [self cycleFromViewController:fromController toViewController:toController fromButtonRect:frame falling:animType];
     

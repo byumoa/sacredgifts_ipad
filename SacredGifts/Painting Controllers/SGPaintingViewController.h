@@ -10,7 +10,7 @@
 #import "SGPaintingImageView.h"
 #import "SGClosableOverlayView.h"
 #import "SGContentControllerDelegate.h"
-@class SGOverlayViewController;
+#import "SGOverlayViewController.h"
 
 @interface SGPaintingViewController : UIViewController <SGPaintingImageViewDelegate>
 {

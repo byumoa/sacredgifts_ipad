@@ -21,6 +21,29 @@
     toController.delegate = self;
 }
 
+-(void)transitionFromController:(UIViewController *)fromController toPaintingNamed:(NSString *)paintingName fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
+{
+    SGPaintingViewController* toController = [self.storyboard instantiateViewControllerWithIdentifier:(NSString*)kControllerIDPaintingStr];
+    toController.delegate = self;
+ 
+    int dir = animType == kAnimTypeSwipeLeft ? 1 : -1;
+    
+    CGPoint targetCenter = toController.view.center;
+    CGPoint startCenter = targetCenter;
+    startCenter.x += 768 * dir;
+    CGPoint exitCenter = targetCenter;
+    exitCenter.x -= 768 * dir;
+    toController.view.center = startCenter;
+    animTransitionBlock = ^(void){
+        toController.view.alpha = 1;
+        toController.view.center = targetCenter;
+        fromController.view.center = exitCenter;
+    };
+    
+    [self cycleFromViewController:(UIViewController*)self.currentContentController toViewController:toController fromButtonRect:CGRectZero falling:kAnimTypeZoomIn];
+    [toController configWithPaintingName:paintingName];
+}
+
 -(void)contentController:(UIViewController *)contentController viewsForBlurredBacking:(NSArray*)views blurredImgName:(NSString *)blurredImgName
 {
     _allBlurredViews = [NSMutableArray new];

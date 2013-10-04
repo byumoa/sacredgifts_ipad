@@ -7,7 +7,6 @@
 //
 
 #import "SGPaintingViewController.h"
-#import "SGOverlayViewController.h"
 
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
@@ -25,6 +24,7 @@ const int kPerspectivesButtonWidth = 161;
 - (NSString*)getStringForModule: (ModuleType)moduleType;
 - (void)addNewOverlayOfType:(NSString*)moduleStr forPainting:(NSString *)paintingStr;
 - (void)removeCurrentOverlay;
+- (void)addTombstoneDelayed: (NSTimer*)timer;
 @end
 
 @implementation SGPaintingViewController
@@ -33,8 +33,12 @@ const int kPerspectivesButtonWidth = 161;
     //Main Painting
     _paintingNameStr = paintingStr;
     [self addMainPainting:_paintingNameStr];
+    [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(addTombstoneDelayed:) userInfo:nil repeats:NO];
+}
+
+-(void)addTombstoneDelayed:(NSTimer *)timer
+{
     [self addNewOverlayOfType:(NSString*)kTombstoneStr forPainting:_paintingNameStr];
-    
     NSArray* blurredViews = [NSArray arrayWithObject:self.overlayController.view];
     NSString *blurredPaintingPath = [[NSBundle mainBundle] pathForResource:@"MainPainting Blurred" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, _paintingNameStr]];
     [self.delegate contentController:self viewsForBlurredBacking:blurredViews blurredImgPath:blurredPaintingPath];
@@ -45,12 +49,11 @@ const int kPerspectivesButtonWidth = 161;
 
 - (IBAction)swipeRecognized:(UISwipeGestureRecognizer *)sender
 {
+    NSString* swipeDir = (NSString*)kAnimTypeSwipeLeft;
     if( sender.direction == UISwipeGestureRecognizerDirectionRight )
-        NSLog(@"SwipedRight");
-    else
-        NSLog(@"SwipeLeft");
+        swipeDir = (NSString*)kAnimTypeSwipeRight;
     
-    //[self.delegate transitionFromController:self toPaintingNamed:(NSString*)kPaintingNameTemple fromButtonRect:CGRectZero withAnimType:kAnimTypeZoomIn];
+    [self.delegate transitionFromController:self toPaintingNamed:(NSString*)kPaintingNameTemple fromButtonRect:CGRectZero withAnimType:swipeDir];
 }
 
 -(void)addFooterButtonsForPainting:(NSString *)paintingNameStr
