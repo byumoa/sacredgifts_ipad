@@ -10,7 +10,29 @@
 
 const int inset = 20;
 
+@interface SGPaintingImageView()
+
+- (void)tapRecognized: (UITapGestureRecognizer*)recognizer;
+
+@end
+
 @implementation SGPaintingImageView
+
+-(id)initWithCoder:(NSCoder *)aDecoder
+{
+    if( self = [super initWithCoder:aDecoder])
+    {
+        UITapGestureRecognizer* recognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapRecognized:)];
+        [self addGestureRecognizer:recognizer];
+    }
+    
+    return self;
+}
+
+-(void)tapRecognized:(UITapGestureRecognizer *)recognizer
+{
+    [self.delegate paintingTapped:self];
+}
 
 -(void)animateDownWithDelay: (float)delay;
 {
@@ -32,11 +54,6 @@ const int inset = 20;
     } completion:nil];
     
     self.isDown = NO;
-}
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
-{
-    [self.delegate paintingTapped:self];
 }
 
 @end
