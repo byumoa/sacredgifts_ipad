@@ -255,4 +255,29 @@ const int kPerspectivesButtonWidth = 161;
     }];
 }
 
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    if( UIInterfaceOrientationIsPortrait( self.interfaceOrientation ))
+        _lastPortraitFrame = self.paintingImageView.frame;
+    
+    if( UIInterfaceOrientationIsPortrait(toInterfaceOrientation)){
+        self.paintingImageView.frame = _lastPortraitFrame;
+        [UIView animateWithDuration:duration animations:^{
+            //[self.footerView fadeIn];
+            //[self.overlayController fadeIn];
+            self.footerView.alpha = 1;
+            self.overlayController.view.alpha = 1;
+        }];
+        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
+    }
+    else{
+        self.paintingImageView.frame = CGRectMake(0, -20, 1024, 768);
+        [UIView animateWithDuration:duration animations:^{
+            self.footerView.alpha = 0;
+            self.overlayController.view.alpha = 0;
+        }];
+        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
+    }
+}
+
 @end

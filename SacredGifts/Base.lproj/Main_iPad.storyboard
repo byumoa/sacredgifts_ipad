@@ -521,7 +521,7 @@
                         <subviews>
                             <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="VdB-kg-beo" userLabel="PaintingImgView" customClass="SGPaintingImageView">
                                 <rect key="frame" x="0.0" y="66" width="768" height="892"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <gestureRecognizers/>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="8uu-xi-fyc" appends="YES" id="cEH-zh-qxz"/>
