@@ -24,6 +24,7 @@
 @property (weak, nonatomic) id<SGContentControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIView *footerView;
 @property (nonatomic) float frameOverlayDelay;
+@property (nonatomic) int currentPaintingIndex;
 
 -(void)configWithPaintingName:(NSString *)paintingStr;
 

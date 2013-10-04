@@ -25,6 +25,7 @@ const int kPerspectivesButtonWidth = 161;
 - (void)addNewOverlayOfType:(NSString*)moduleStr forPainting:(NSString *)paintingStr;
 - (void)removeCurrentOverlay;
 - (void)addTombstoneDelayed: (NSTimer*)timer;
+- (int)calcCurrentPaintingIndex;
 @end
 
 @implementation SGPaintingViewController
@@ -34,6 +35,18 @@ const int kPerspectivesButtonWidth = 161;
     _paintingNameStr = paintingStr;
     [self addMainPainting:_paintingNameStr];
     [NSTimer scheduledTimerWithTimeInterval:self.frameOverlayDelay target:self selector:@selector(addTombstoneDelayed:) userInfo:nil repeats:NO];
+    self.currentPaintingIndex = [self calcCurrentPaintingIndex];
+}
+
+-(int)calcCurrentPaintingIndex
+{
+    for( int i = 0; i < kTotalPaintings; i++ )
+    {
+        if( [_paintingNameStr isEqualToString:(NSString*)kPaintingNames[i]])
+            return i;
+    }
+    
+    return 0;
 }
 
 -(void)addTombstoneDelayed:(NSTimer *)timer
@@ -50,10 +63,17 @@ const int kPerspectivesButtonWidth = 161;
 - (IBAction)swipeRecognized:(UISwipeGestureRecognizer *)sender
 {
     NSString* swipeDir = (NSString*)kAnimTypeSwipeLeft;
+    int nextPaintingIndex = self.currentPaintingIndex + 1;
     if( sender.direction == UISwipeGestureRecognizerDirectionRight )
+    {
         swipeDir = (NSString*)kAnimTypeSwipeRight;
-    
-    [self.delegate transitionFromController:self toPaintingNamed:@"temple" fromButtonRect:CGRectZero withAnimType:swipeDir];
+        nextPaintingIndex -= 2;
+        if( nextPaintingIndex < 0 )
+            nextPaintingIndex += kTotalPaintings;
+    }
+    nextPaintingIndex %= kTotalPaintings;
+    NSString* nextPaintingName = (NSString*)kPaintingNames[nextPaintingIndex];
+    [self.delegate transitionFromController:self toPaintingNamed:nextPaintingName fromButtonRect:CGRectZero withAnimType:swipeDir];
 }
 
 -(void)addFooterButtonsForPainting:(NSString *)paintingNameStr

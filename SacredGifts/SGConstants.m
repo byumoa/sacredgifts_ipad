@@ -18,6 +18,7 @@ const NSString* kControllerIDAboutTheExhibitionStr = @"SacredGifts AboutTheExhib
 const NSString* kControllerIDPaintingContainerStr = @"SacredGifts PaintingContainer";
 const NSString* kControllerIDPaintingStr = @"SacredGifts Painting";
 
+const int kTotalPaintings = 19;
 const NSString* kPaintingNames[] = {
     @"aalborg",
     @"burial",
@@ -28,8 +29,8 @@ const NSString* kPaintingNames[] = {
     @"cross",
     @"denial",
     @"emmaus",
-    @"garden",//?
-    @"gethsemane",//?
+    @"garden",
+    @"gethsemane",
     @"healing",
     @"mocking",
     @"resurrection",

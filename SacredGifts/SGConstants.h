@@ -37,6 +37,7 @@ extern const NSString* kControllerIDAboutTheExhibitionStr;
 extern const NSString* kControllerIDPaintingContainerStr;
 extern const NSString* kControllerIDPaintingStr;
 
+extern const int kTotalPaintings;
 extern const NSString* kPaintingNames[];
 /*
 extern const NSString* kPaintingNameAalborg;
