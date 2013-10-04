@@ -18,6 +18,29 @@ const NSString* kControllerIDAboutTheExhibitionStr = @"SacredGifts AboutTheExhib
 const NSString* kControllerIDPaintingContainerStr = @"SacredGifts PaintingContainer";
 const NSString* kControllerIDPaintingStr = @"SacredGifts Painting";
 
+const NSString* kPaintingNames[] = {
+    @"aalborg",
+    @"burial",
+    @"capture",
+    @"children",
+    @"cleansing",
+    @"consolator",
+    @"cross",
+    @"denial",
+    @"emmaus",
+    @"garden",//?
+    @"gethsemane",//?
+    @"healing",
+    @"mocking",
+    @"resurrection",
+    @"ruler",
+    @"savior",
+    @"sermon",
+    @"shepherds",
+    @"temple"
+};
+
+/*
 const NSString* kPaintingNameAalborg  = @"aalborg";
 const NSString* kPaintingNameBurial = @"burial";
 const NSString* kPaintingNameCapture = @"capture";
@@ -37,6 +60,7 @@ const NSString* kPaintingNameSavior = @"savior";
 const NSString* kPaintingNameSermon = @"sermon";
 const NSString* kPaintingNameShepherds = @"shepherds";
 const NSString* kPaintingNameTemple = @"temple";
+*/
 
 const NSString* kDontateURLStr = @"https://donate.ldsphilanthropies.org/TNHO3ajmoEyyUA7Sb5uKkg/G/5ZgVo9Qd8EmHpj8ZRnFhzg?cat=YjqfYR-gMES1sqWvh2cJ4g&cde1=795";
 const CGRect kWebviewBackBtnFrm = {10, 10, 100, 60 };

@@ -37,6 +37,8 @@ extern const NSString* kControllerIDAboutTheExhibitionStr;
 extern const NSString* kControllerIDPaintingContainerStr;
 extern const NSString* kControllerIDPaintingStr;
 
+extern const NSString* kPaintingNames[];
+/*
 extern const NSString* kPaintingNameAalborg;
 extern const NSString* kPaintingNameBurial;
 extern const NSString* kPaintingNameCapture;
@@ -56,7 +58,7 @@ extern const NSString* kPaintingNameSavior;
 extern const NSString* kPaintingNameSermon;
 extern const NSString* kPaintingNameShepherds;
 extern const NSString* kPaintingNameTemple;
-
+*/
 extern const CGRect kBlurFrame;
 
 extern const NSString* kDontateURLStr;

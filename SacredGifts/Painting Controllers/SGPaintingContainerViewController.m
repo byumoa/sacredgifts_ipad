@@ -25,6 +25,7 @@
 {
     SGPaintingViewController* toController = [self.storyboard instantiateViewControllerWithIdentifier:(NSString*)kControllerIDPaintingStr];
     toController.delegate = self;
+    toController.frameOverlayDelay = 0.25;
  
     int dir = animType == kAnimTypeSwipeLeft ? 1 : -1;
     

@@ -33,7 +33,7 @@ const int kPerspectivesButtonWidth = 161;
     //Main Painting
     _paintingNameStr = paintingStr;
     [self addMainPainting:_paintingNameStr];
-    [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(addTombstoneDelayed:) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:self.frameOverlayDelay target:self selector:@selector(addTombstoneDelayed:) userInfo:nil repeats:NO];
 }
 
 -(void)addTombstoneDelayed:(NSTimer *)timer
@@ -53,7 +53,7 @@ const int kPerspectivesButtonWidth = 161;
     if( sender.direction == UISwipeGestureRecognizerDirectionRight )
         swipeDir = (NSString*)kAnimTypeSwipeRight;
     
-    [self.delegate transitionFromController:self toPaintingNamed:(NSString*)kPaintingNameTemple fromButtonRect:CGRectZero withAnimType:swipeDir];
+    [self.delegate transitionFromController:self toPaintingNamed:@"temple" fromButtonRect:CGRectZero withAnimType:swipeDir];
 }
 
 -(void)addFooterButtonsForPainting:(NSString *)paintingNameStr
