@@ -207,6 +207,8 @@
 		615B953D17FDF41700B42466 /* SGSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615B953C17FDF41700B42466 /* SGSocialViewController.m */; };
 		615B954017FE279200B42466 /* SGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615B953F17FE279200B42466 /* SGWebViewController.m */; };
 		6180C75117F993A10062FB7D /* SGFingerPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6180C75017F993A10062FB7D /* SGFingerPaintView.m */; };
+		6181C34C17FE3BCF000AA2D7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6181C34A17FE3BCF000AA2D7 /* icon.png */; };
+		6181C34D17FE3BCF000AA2D7 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6181C34B17FE3BCF000AA2D7 /* icon@2x.png */; };
 		6186388B17F0C99C00F4A6BE /* SGContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186388A17F0C99C00F4A6BE /* SGContainerViewController.m */; };
 		6186A80017F196970047097F /* SGPaintingImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186A7FF17F196970047097F /* SGPaintingImageView.m */; };
 		6186A80317F197460047097F /* SGOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186A80217F197460047097F /* SGOverlayView.m */; };
@@ -541,6 +543,8 @@
 		615B953F17FE279200B42466 /* SGWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGWebViewController.m; sourceTree = "<group>"; };
 		6180C74F17F993A10062FB7D /* SGFingerPaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFingerPaintView.h; sourceTree = "<group>"; };
 		6180C75017F993A10062FB7D /* SGFingerPaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGFingerPaintView.m; sourceTree = "<group>"; };
+		6181C34A17FE3BCF000AA2D7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		6181C34B17FE3BCF000AA2D7 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		6186388917F0C99C00F4A6BE /* SGContainerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGContainerViewController.h; sourceTree = "<group>"; };
 		6186388A17F0C99C00F4A6BE /* SGContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGContainerViewController.m; sourceTree = "<group>"; };
 		6186A7FE17F196970047097F /* SGPaintingImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPaintingImageView.h; sourceTree = "<group>"; };
@@ -695,6 +699,8 @@
 		61008A7417ED03EF005E39CE = {
 			isa = PBXGroup;
 			children = (
+				6181C34A17FE3BCF000AA2D7 /* icon.png */,
+				6181C34B17FE3BCF000AA2D7 /* icon@2x.png */,
 				6109796B17F648BE005A7E14 /* Default-568h@2x.png */,
 				61C877CB17FAEDC600087C1E /* PaintingResources */,
 				61008ABA17ED058B005E39CE /* GeneralResources */,
@@ -1391,6 +1397,7 @@
 				612630A817EDEE3300AD35BE /* SG_Home_MeetArtistsBtn.png in Resources */,
 				6186A88017F241560047097F /* painting_thumb_gethsemane-on@2x.png in Resources */,
 				61008BFA17ED058C005E39CE /* SG_General_Share_thanks.png in Resources */,
+				6181C34D17FE3BCF000AA2D7 /* icon@2x.png in Resources */,
 				6186A88B17F241560047097F /* painting_thumb_resurrection-on.png in Resources */,
 				6186A88917F241560047097F /* painting_thumb_mocking.png in Resources */,
 				6186A89E17F241560047097F /* painting_thumb_shepherds@2x.png in Resources */,
@@ -1490,6 +1497,7 @@
 				6186A87217F241560047097F /* painting_thumb_cross@2x.png in Resources */,
 				6186A86817F241560047097F /* painting_thumb_cleansing-on@2x.png in Resources */,
 				6109797317F65EB6005A7E14 /* painting_thumb_aalborg-on.png in Resources */,
+				6181C34C17FE3BCF000AA2D7 /* icon.png in Resources */,
 				61008B7717ED058C005E39CE /* SG_Home_ExhibitionBtn.png in Resources */,
 				6186A88D17F241560047097F /* painting_thumb_resurrection.png in Resources */,
 				61008B9A17ED058C005E39CE /* SG_Home_ReservationBtn@2x.png in Resources */,

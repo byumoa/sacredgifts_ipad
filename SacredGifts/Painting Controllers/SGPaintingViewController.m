@@ -49,6 +49,8 @@ const int kPerspectivesButtonWidth = 161;
         NSLog(@"SwipedRight");
     else
         NSLog(@"SwipeLeft");
+    
+    //[self.delegate transitionFromController:self toPaintingNamed:(NSString*)kPaintingNameTemple fromButtonRect:CGRectZero withAnimType:kAnimTypeZoomIn];
 }
 
 -(void)addFooterButtonsForPainting:(NSString *)paintingNameStr

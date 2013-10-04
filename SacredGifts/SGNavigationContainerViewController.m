@@ -96,6 +96,7 @@
 #pragma mark Delegate
 -(UIViewController*)transitionFromController:(UIViewController *)fromController toControllerID:(const NSString *)toControllerID fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
 {
+    //Handle Back Button Alpha
     float backBtnAlpha = 1;
     if( [toControllerID isEqualToString: (NSString*)kControllerIDHomeStr] )
         backBtnAlpha = 0;
@@ -108,20 +109,28 @@
     SGContentViewController* toController = [self.storyboard instantiateViewControllerWithIdentifier:(NSString *)toControllerID];
     toController.delegate = self;
     
-    __weak typeof(self) weakSelf = self;
-    animTransitionBlock = ^(void){
-        //newC.view.frame = self.view.frame;
-        toController.view.alpha = 1;
-        [weakSelf.view bringSubviewToFront:weakSelf.headerView];
-        [weakSelf.view bringSubviewToFront:weakSelf.footerView];
-        weakSelf.footerView.alpha = ![toController.restorationIdentifier isEqualToString:(NSString*)kControllerIDPaintingContainerStr];
-        /*
-         CGRect f = self.view.frame;
-         oldC.view.frame = CGRectMake(f.origin.x - f.size.width/2,
-         f.origin.y - f.size.height/2,
-         f.size.width * 2, f.size.height*2);
-         */
-    };
+    BOOL isTransitionToPainting = [toController.restorationIdentifier isEqualToString:(NSString*)kControllerIDPaintingContainerStr];
+    if( NO )//isTransitionToPainting )
+    {
+        
+    }
+    else
+    {
+        __weak typeof(self) weakSelf = self;
+        animTransitionBlock = ^(void){
+            //newC.view.frame = self.view.frame;
+            toController.view.alpha = 1;
+            [weakSelf.view bringSubviewToFront:weakSelf.headerView];
+            [weakSelf.view bringSubviewToFront:weakSelf.footerView];
+            weakSelf.footerView.alpha = !isTransitionToPainting;
+            /*
+             CGRect f = self.view.frame;
+             oldC.view.frame = CGRectMake(f.origin.x - f.size.width/2,
+             f.origin.y - f.size.height/2,
+             f.size.width * 2, f.size.height*2);
+             */
+        };
+    }
     
     [self cycleFromViewController:fromController toViewController:toController fromButtonRect:frame falling:animType];
     

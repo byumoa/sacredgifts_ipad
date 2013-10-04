@@ -8,6 +8,8 @@
 
 const NSString* kAnimTypeZoomIn = @"kSG ZoomIn Anim";
 const NSString* kAnimTypeZoomOut = @"kSG ZoomOut Anim";
+const NSString* kAnimTypeSwipeRight = @"kSG SwipeRight Anim";
+const NSString* kAnimTypeSwipeLeft = @"kSG SwipeLeft Anim";
 
 const NSString* kControllerIDHomeStr = @"SacredGifts Home";
 const NSString* kControllerIDFindAPaintingStr = @"SacredGifts FindAPainting";
