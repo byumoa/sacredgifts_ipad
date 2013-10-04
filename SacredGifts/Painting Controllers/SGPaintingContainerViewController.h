@@ -12,6 +12,5 @@
 @interface SGPaintingContainerViewController : SGContainerViewController <SGContentControllerDelegate>
 @property NSString* paintingInfoStr;
 @property(strong, nonatomic) id<SGContentControllerDelegate> delegate;
-- (void) configWithInfo: (NSDictionary*)userInfo;
 
 @end

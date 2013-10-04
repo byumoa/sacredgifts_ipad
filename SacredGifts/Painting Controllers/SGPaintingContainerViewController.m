@@ -21,12 +21,6 @@
     toController.delegate = self;
 }
 
--(void)configWithInfo:(NSDictionary *)userInfo
-{
-    //Get config working now!
-    NSLog(@"");
-}
-
 -(void)contentController:(UIViewController *)contentController viewsForBlurredBacking:(NSArray*)views blurredImgName:(NSString *)blurredImgName
 {
     _allBlurredViews = [NSMutableArray new];
