@@ -381,15 +381,15 @@
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sg_home_label_bloch.png" id="6LV-Za-7nh">
                                 <rect key="frame" x="18" y="522" width="244" height="41"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sg_home_label_hofmann.png" id="VJ7-mL-pMe">
                                 <rect key="frame" x="18" y="153" width="244" height="41"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sg_home_label_schwartz.png" id="6WE-e3-Alr">
                                 <rect key="frame" x="442" y="153" width="244" height="41"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HkC-z7-AUY">
                                 <rect key="frame" x="563" y="184" width="123" height="164"/>
@@ -724,6 +724,7 @@
         <image name="SG_General_BackBtn.png" width="122" height="41"/>
         <image name="SG_General_ModuleButtonBar.png" width="768" height="70"/>
         <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
+        <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
         <image name="SG_General_Painting_ShareBtn.png" width="120" height="70"/>
         <image name="SG_General_ScanBtn-on.png" width="41" height="41"/>
         <image name="SG_General_ScanBtn.png" width="41" height="41"/>
@@ -731,9 +732,12 @@
         <image name="SG_Home_BlochBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_BlochBtn.png" width="768" height="205"/>
         <image name="SG_Home_DonateBtn-on.png" width="245" height="123"/>
+        <image name="SG_Home_DonateBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_DonateBtn.png" width="245" height="123"/>
         <image name="SG_Home_ExhibitionBtn-on.png" width="768" height="205"/>
+        <image name="SG_Home_ExhibitionBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_ExhibitionBtn.png" width="768" height="205"/>
+        <image name="SG_Home_FeedbackBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_FeedbackBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_FeedbackBtn.png" width="245" height="123"/>
         <image name="SG_Home_FilmBtn-on.png" width="768" height="205"/>
