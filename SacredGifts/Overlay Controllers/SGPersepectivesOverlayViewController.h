@@ -7,7 +7,17 @@
 //
 
 #import "SGOverlayViewController.h"
+typedef enum
+{
+    kPerspectiveOverlayTypeVideo,
+    kPerspectiveOverlayTypePanorama
+}PerspectiveOverlayType;
 
 @interface SGPersepectivesOverlayViewController : SGOverlayViewController
+{
+    NSString* _rootFolderPath;
+}
+
+- (void)configurePerspectiveOverlayWithPath: (NSString*)folderPath;
 
 @end

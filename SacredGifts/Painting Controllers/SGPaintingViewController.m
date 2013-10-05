@@ -7,6 +7,7 @@
 //
 
 #import "SGPaintingViewController.h"
+#import "SGPersepectivesOverlayViewController.h"
 
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
@@ -78,11 +79,15 @@ const int kPerspectivesButtonWidth = 161;
 
 -(void)addFooterButtonsForPainting:(NSString *)paintingNameStr
 {
-    NSArray* buttonTypeStrArr = [NSArray arrayWithObjects:kGiftsStr, kSummaryStr,kPerspectiveStr, kMusicStr, kChildrensStr, kDetailsStr, nil];
+    NSArray* buttonTypeStrArr = [NSArray arrayWithObjects:kGiftsStr, kSummaryStr, kPerspectiveStr, kMusicStr, kChildrensStr, kDetailsStr, nil];
     
     for( NSString* buttonTypeStr in buttonTypeStrArr)
     {
         NSString* overlayPath = [[NSBundle mainBundle] pathForResource:buttonTypeStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", paintingNameStr, buttonTypeStr]];
+        
+        //Handle different perspectives folder structure
+        if([buttonTypeStr isEqualToString:@"perspectives"])
+            overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_Btn1" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", paintingNameStr, buttonTypeStr]];
         
         if( overlayPath != nil)
         {
@@ -219,6 +224,9 @@ const int kPerspectivesButtonWidth = 161;
     
     //Configure new overlay viewController
     if( self.overlayController.moduleType == kModuleTypePerspective){
+        [self.overlayController addBackgroundImgWithImgName:@"SG_General_Module_Overlay.png"];
+        NSString* perspectivesPath = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", _paintingNameStr, @"perspectives"];
+        [((SGPersepectivesOverlayViewController*)self.overlayController) configurePerspectiveOverlayWithPath:perspectivesPath];
         
     }
     else if( self.overlayController.moduleType == kModuleTypeSocial ){
