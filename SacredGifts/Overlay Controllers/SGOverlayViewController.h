@@ -24,6 +24,7 @@
 @property(nonatomic, strong) UIImageView* bgImageView;
 @property(nonatomic) ModuleType moduleType;
 @property(nonatomic, weak) id<SGOverlayViewControllerDelegate> delegate;
+@property(nonatomic, strong) NSString* rootFolderPath;
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath;
 - (void)addBackgroundImgWithImgName: (NSString*)bgImgName;

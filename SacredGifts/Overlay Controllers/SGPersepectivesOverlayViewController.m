@@ -7,6 +7,7 @@
 //
 
 #import "SGPersepectivesOverlayViewController.h"
+#import "SGVideoOverlayViewController.h"
 
 @interface SGPersepectivesOverlayViewController ()
 - (UIButton*)buttonForPerspectiveNumber: (int)perspectiveIndex atPath: (NSString*)folderPath;
@@ -29,7 +30,7 @@
 
 -(void)configurePerspectiveOverlayWithPath:(NSString *)folderPath
 {
-    _rootFolderPath = folderPath;
+    self.rootFolderPath = folderPath;
     for( int i = 1; i <= 6; i++ )
     {
         NSString* buttonName = [NSString stringWithFormat:@"perspectives_Btn%i", i];
@@ -63,7 +64,8 @@
 
 -(void)pressedPerspectiveBtn:(UIButton *)sender
 {
-    NSString* btnFolderPath = [NSString stringWithFormat:@"%@perspectives_%i", _rootFolderPath, sender.tag];
+    NSString* btnFolderPath = [NSString stringWithFormat:@"%@perspectives_%i", self.rootFolderPath, sender.tag];
+    NSLog(@"pressedPerspectiveBtn, btnFolderPath: %@", btnFolderPath);
     NSString* btnPath = [[NSBundle mainBundle] pathForResource:@"panorama" ofType:@"png" inDirectory:btnFolderPath];
     
     if( btnPath )
@@ -86,8 +88,9 @@
     SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kVideoStr];
     //Dir: PaintingResources/consolator/perspectives/perspectives_3/
     NSString* folder = @"perspectives_3";
-    NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_video_overlay" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", _rootFolderPath, folder]];
+    NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_video_overlay" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", self.rootFolderPath, folder]];
     [overlay addBackgroundImgWithPath:overlayPath];
+    [((SGVideoOverlayViewController*)overlay) playPerspectiveMovieWithRootFolderPath:videoFolderPath];
 }
 
 @end

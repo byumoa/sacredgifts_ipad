@@ -204,6 +204,7 @@
 		612630AF17EDF27000AD35BE /* SG_Home_FindBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630AB17EDF27000AD35BE /* SG_Home_FindBtn@2x.png */; };
 		612630B017EDF27000AD35BE /* SG_Home_FindBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630AC17EDF27000AD35BE /* SG_Home_FindBtn-on@2x.png */; };
 		6152D13518004096003E8CB7 /* SGVideoOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6152D13418004096003E8CB7 /* SGVideoOverlayViewController.m */; };
+		6152D13718017C9D003E8CB7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6152D13618017C9D003E8CB7 /* MediaPlayer.framework */; };
 		615B941C17FBEF2F00B42466 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 615B941B17FBEF2F00B42466 /* Default.png */; };
 		615B953D17FDF41700B42466 /* SGSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615B953C17FDF41700B42466 /* SGSocialViewController.m */; };
 		615B954017FE279200B42466 /* SGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615B953F17FE279200B42466 /* SGWebViewController.m */; };
@@ -543,6 +544,7 @@
 		612630AC17EDF27000AD35BE /* SG_Home_FindBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_FindBtn-on@2x.png"; sourceTree = "<group>"; };
 		6152D13318004096003E8CB7 /* SGVideoOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGVideoOverlayViewController.h; path = "../Painting Controllers/SGVideoOverlayViewController.h"; sourceTree = "<group>"; };
 		6152D13418004096003E8CB7 /* SGVideoOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SGVideoOverlayViewController.m; path = "../Painting Controllers/SGVideoOverlayViewController.m"; sourceTree = "<group>"; };
+		6152D13618017C9D003E8CB7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		615B941B17FBEF2F00B42466 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		615B953B17FDF41700B42466 /* SGSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSocialViewController.h; sourceTree = "<group>"; };
 		615B953C17FDF41700B42466 /* SGSocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSocialViewController.m; sourceTree = "<group>"; };
@@ -681,6 +683,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6152D13718017C9D003E8CB7 /* MediaPlayer.framework in Frameworks */,
 				6186A8BE17F324930047097F /* SystemConfiguration.framework in Frameworks */,
 				6186A8BC17F3248A0047097F /* CoreVideo.framework in Frameworks */,
 				6186A8BA17F324820047097F /* CoreMedia.framework in Frameworks */,
@@ -734,6 +737,7 @@
 		61008A7F17ED03F0005E39CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				6152D13618017C9D003E8CB7 /* MediaPlayer.framework */,
 				6186A8BD17F324930047097F /* SystemConfiguration.framework */,
 				6186A8BB17F3248A0047097F /* CoreVideo.framework */,
 				6186A8B917F324820047097F /* CoreMedia.framework */,

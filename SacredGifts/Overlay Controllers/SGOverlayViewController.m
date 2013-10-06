@@ -13,6 +13,7 @@
 @end
 
 @implementation SGOverlayViewController
+@synthesize rootFolderPath = _rootFolderPath;
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath
 {
