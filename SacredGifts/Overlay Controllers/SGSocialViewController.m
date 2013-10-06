@@ -17,8 +17,8 @@
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
     if( self = [super initWithCoder:aDecoder]){
-        _centerPos = CGPointMake(384, 720);
-        self.moduleType = kModuleTypeSocial;
+        _centerPos = CGPointMake(384, 450);
+        self.moduleType = kModuleTypeVideo;
     }
     
     return self;

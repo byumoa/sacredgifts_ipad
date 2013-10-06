@@ -16,7 +16,8 @@ typedef enum
     kModuleTypeChildrens = 5,
     kModuleTypeSocial = 6,
     kModuleTypeGifts = 7,
-    kModuleTypeDetails = 8
+    kModuleTypeDetails = 8,
+    kModuleTypeVideo = 9
 }ModuleType;
 
 typedef enum
@@ -88,3 +89,4 @@ extern const NSString* kChildrensStr;
 extern const NSString* kDetailsStr;
 extern const NSString* kTombstoneStr;
 extern const NSString* kSocialStr;
+extern const NSString* kVideoStr;

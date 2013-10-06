@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 #import "SGConstants.h"
+@class SGOverlayViewController;
+
+@protocol SGOverlayViewControllerDelegate <NSObject>
+
+- (SGOverlayViewController*)overlay: (SGOverlayViewController*)overlay triggersNewOverlayName: (NSString*)overlayName;
+
+@end
 
 @interface SGOverlayViewController : UIViewController
 {
@@ -16,6 +23,7 @@
 }
 @property(nonatomic, strong) UIImageView* bgImageView;
 @property(nonatomic) ModuleType moduleType;
+@property(nonatomic, weak) id<SGOverlayViewControllerDelegate> delegate;
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath;
 - (void)addBackgroundImgWithImgName: (NSString*)bgImgName;

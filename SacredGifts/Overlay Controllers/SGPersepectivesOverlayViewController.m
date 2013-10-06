@@ -38,7 +38,7 @@
         if( buttonPath )
         {
             UIButton* button = [self buttonForPerspectiveNumber:i atPath:folderPath];
-            CGPoint center = CGPointMake(150 + 230 * ((i-1) % 3), 125 + 170 * ((i-1)/3));
+            CGPoint center = CGPointMake(155 + 230 * ((i-1) % 3), 125 + 170 * ((i-1)/3));
             button.center = center;
             [self.view addSubview:button];
         }
@@ -83,6 +83,7 @@
 -(void)loadVideoWithFolderPath:(NSString *)videoFolderPath
 {
     NSLog(@"Video: %@", videoFolderPath);
+    [self.delegate overlay:self triggersNewOverlayName:(NSString*)kVideoStr];
 }
 
 @end
