@@ -83,7 +83,11 @@
 -(void)loadVideoWithFolderPath:(NSString *)videoFolderPath
 {
     NSLog(@"Video: %@", videoFolderPath);
-    [self.delegate overlay:self triggersNewOverlayName:(NSString*)kVideoStr];
+    SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kVideoStr];
+    //Dir: PaintingResources/consolator/perspectives/perspectives_3/
+    NSString* folder = @"perspectives_3";
+    NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_video_overlay" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", _rootFolderPath, folder]];
+    [overlay addBackgroundImgWithPath:overlayPath];
 }
 
 @end

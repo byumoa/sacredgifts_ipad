@@ -1032,8 +1032,6 @@
 		6109796717F5F9B4005A7E14 /* Overlay Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				6152D13318004096003E8CB7 /* SGVideoOverlayViewController.h */,
-				6152D13418004096003E8CB7 /* SGVideoOverlayViewController.m */,
 				6180C74F17F993A10062FB7D /* SGFingerPaintView.h */,
 				6180C75017F993A10062FB7D /* SGFingerPaintView.m */,
 				6109796817F60D4A005A7E14 /* SGOverlayViewController.h */,
@@ -1054,6 +1052,8 @@
 				6109799017F75116005A7E14 /* SGPersepectivesOverlayViewController.m */,
 				615B953B17FDF41700B42466 /* SGSocialViewController.h */,
 				615B953C17FDF41700B42466 /* SGSocialViewController.m */,
+				6152D13318004096003E8CB7 /* SGVideoOverlayViewController.h */,
+				6152D13418004096003E8CB7 /* SGVideoOverlayViewController.m */,
 			);
 			path = "Overlay Controllers";
 			sourceTree = "<group>";

@@ -234,8 +234,7 @@ const int kPerspectivesButtonWidth = 161;
     }
     else if( self.overlayController.moduleType == kModuleTypeVideo )
     {
-        NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_video_overlay" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingStr, moduleStr]];
-        [self.overlayController addBackgroundImgWithPath:overlayPath];
+        //Configured in perspactives
     }
     else{
         NSString *overlayPath = [[NSBundle mainBundle] pathForResource:moduleStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingStr, moduleStr]];

@@ -18,7 +18,8 @@
 {
     if( self = [super initWithCoder:aDecoder])
     {
-        
+        _centerPos = CGPointMake(384, 500);
+        self.moduleType = kModuleTypeVideo;
     }
     
     return self;

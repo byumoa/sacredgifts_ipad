@@ -707,12 +707,6 @@
                     <view key="view" contentMode="scaleToFill" id="v9i-OL-lDl">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="temp_perspectives_video_overlay.png" id="i7g-2x-nwM">
-                                <rect key="frame" x="0.0" y="356" width="768" height="668"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -818,7 +812,6 @@
         <image name="sg_home_label_bloch.png" width="244" height="41"/>
         <image name="sg_home_label_hofmann.png" width="244" height="41"/>
         <image name="sg_home_label_schwartz.png" width="244" height="41"/>
-        <image name="temp_perspectives_video_overlay.png" width="768" height="668"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
