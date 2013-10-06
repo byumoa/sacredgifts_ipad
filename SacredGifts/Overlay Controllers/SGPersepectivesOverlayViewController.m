@@ -65,7 +65,7 @@
 -(void)pressedPerspectiveBtn:(UIButton *)sender
 {
     NSString* btnFolderPath = [NSString stringWithFormat:@"%@perspectives_%i", self.rootFolderPath, sender.tag];
-    NSLog(@"pressedPerspectiveBtn, btnFolderPath: %@", btnFolderPath);
+    
     NSString* btnPath = [[NSBundle mainBundle] pathForResource:@"panorama" ofType:@"png" inDirectory:btnFolderPath];
     
     if( btnPath )
@@ -86,9 +86,9 @@
 {
     NSLog(@"Video: %@", videoFolderPath);
     SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kVideoStr];
-    //Dir: PaintingResources/consolator/perspectives/perspectives_3/
     NSString* folder = @"perspectives_3";
-    NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_video_overlay" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", self.rootFolderPath, folder]];
+    //NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_video_overlay" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", self.rootFolderPath, folder]];
+    NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_video_overlay" ofType:@"png" inDirectory:videoFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
     [((SGVideoOverlayViewController*)overlay) playPerspectiveMovieWithRootFolderPath:videoFolderPath];
 }

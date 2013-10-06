@@ -33,6 +33,7 @@
     self.player = [[MPMoviePlayerController alloc] initWithContentURL:url];
     self.player.view.frame = CGRectMake(0, 45, 768, 432);
     self.player.movieSourceType = MPMovieSourceTypeFile;
+    self.player.controlStyle = MPMovieControlStyleNone;
     [self.view addSubview:self.player.view];
     [self.player prepareToPlay];
     [self.player play];
