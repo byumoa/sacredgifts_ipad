@@ -86,8 +86,7 @@
 {
     NSLog(@"Video: %@", videoFolderPath);
     SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kVideoStr];
-    NSString* folder = @"perspectives_3";
-    //NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_video_overlay" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", self.rootFolderPath, folder]];
+    
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_video_overlay" ofType:@"png" inDirectory:videoFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
     [((SGVideoOverlayViewController*)overlay) playPerspectiveMovieWithRootFolderPath:videoFolderPath];
