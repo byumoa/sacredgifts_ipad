@@ -28,12 +28,21 @@
 
 -(IBAction)pressedBack:(UIButton*)sender
 {
-    if( [self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDPaintingContainerStr])
-        _backViewControllerIDStr = (NSString*)kControllerIDFindAPaintingStr;
+    if( self.scanController )
+    {
+        [self.scanController.view removeFromSuperview];
+        self.scanController = nil;
+        self.footerView.alpha = _footerLastAlpha;
+    }
     else
-        _backViewControllerIDStr = (NSString*)kControllerIDHomeStr;
+    {
+        if( [self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDPaintingContainerStr])
+            _backViewControllerIDStr = (NSString*)kControllerIDFindAPaintingStr;
+        else
+            _backViewControllerIDStr = (NSString*)kControllerIDHomeStr;
     
-    [self transitionFromController:self.currentContentController toControllerID:_backViewControllerIDStr fromButtonRect:sender.frame withAnimType:kAnimTypeZoomOut];
+        [self transitionFromController:self.currentContentController toControllerID:_backViewControllerIDStr fromButtonRect:sender.frame withAnimType:kAnimTypeZoomOut];
+    }
 }
 
 #pragma mark webview
@@ -143,6 +152,23 @@
     _allBlurredViews = [NSMutableArray new];
     [_allBlurredViews addObject:self.headerView];
     [super contentController:contentController viewsForBlurredBacking:views blurredImgName:blurredImgName];
+}
+
+- (IBAction)pressedScan:(id)sender
+{
+    if( self.scanController )
+    {
+        [self.scanController.view removeFromSuperview];
+        self.scanController = nil;
+        self.footerView.alpha = _footerLastAlpha;
+    }
+    else
+    {
+        self.scanController = [self.storyboard instantiateViewControllerWithIdentifier:kScanStr];
+        [self.view insertSubview:self.scanController.view belowSubview:self.headerView];
+        _footerLastAlpha = self.footerView.alpha;
+        self.footerView.alpha = 0;
+    }
 }
 
 @end

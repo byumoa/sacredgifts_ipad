@@ -72,3 +72,4 @@ extern const NSString* kTombstoneStr;
 extern const NSString* kSocialStr;
 extern const NSString* kVideoStr;
 extern const NSString* kPanoramaStr;
+extern NSString* const kScanStr;

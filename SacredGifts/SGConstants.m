@@ -19,7 +19,7 @@ const NSString* kControllerIDPaintingContainerStr = @"SacredGifts PaintingContai
 const NSString* kControllerIDPaintingStr = @"SacredGifts Painting";
 
 const int kTotalPaintings = 19;
-const NSString* kPaintingNames[] = {
+NSString* const kPaintingNames[] = {
     @"aalborg",
     @"burial",
     @"capture",
@@ -70,3 +70,4 @@ const NSString* kTombstoneStr = @"tombstone";
 const NSString* kSocialStr = @"social";
 const NSString* kVideoStr = @"video";
 const NSString* kPanoramaStr = @"panorama";
+const NSString* kScanStr = @"scan";

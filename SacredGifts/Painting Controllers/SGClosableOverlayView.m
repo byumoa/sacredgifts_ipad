@@ -8,8 +8,8 @@
 
 #import "SGClosableOverlayView.h"
 
-const NSString* closeButtonImageNrm = @"SG_General_Module_CloseBtn";
-const NSString* closeButtonImageSel = @"SG_General_Module_CloseBtn-on";
+NSString* const closeButtonImageNrm = @"SG_General_Module_CloseBtn";
+NSString* const closeButtonImageSel = @"SG_General_Module_CloseBtn-on";
 
 @interface SGClosableOverlayView()
 - (void) addCloseButton;

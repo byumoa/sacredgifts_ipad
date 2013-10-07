@@ -43,5 +43,4 @@
     if( self.splash.alpha > 0 )
         [self fadeSplash:nil];
 }
-
 @end
