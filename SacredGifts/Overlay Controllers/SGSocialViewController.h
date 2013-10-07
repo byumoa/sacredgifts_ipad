@@ -9,5 +9,7 @@
 #import "SGOverlayViewController.h"
 
 @interface SGSocialViewController : SGOverlayViewController
+@property (weak, nonatomic) IBOutlet UIImageView *paintingThumbnail;
+- (IBAction)pressedSocialBtn:(id)sender;
 
 @end

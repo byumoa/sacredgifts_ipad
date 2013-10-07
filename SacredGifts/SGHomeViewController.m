@@ -8,7 +8,6 @@
 
 #import "SGHomeViewController.h"
 #import "SGConstants.h"
-#import "SGBlurManager.h"
 
 @interface SGHomeViewController ()
 - (IBAction)pressedBtn:(UIButton *)sender;

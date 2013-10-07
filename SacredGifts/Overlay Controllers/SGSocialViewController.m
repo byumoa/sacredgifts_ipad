@@ -24,4 +24,6 @@
     return self;
 }
 
+- (IBAction)pressedSocialBtn:(id)sender {
+}
 @end

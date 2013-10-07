@@ -211,6 +211,7 @@
 		615B954017FE279200B42466 /* SGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615B953F17FE279200B42466 /* SGWebViewController.m */; };
 		615E3E241802ED45008B05FB /* overlay__brackets.png in Resources */ = {isa = PBXBuildFile; fileRef = 615E3E231802ED45008B05FB /* overlay__brackets.png */; };
 		615E3E271802EF6C008B05FB /* SGScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615E3E261802EF6C008B05FB /* SGScanViewController.m */; };
+		615E3E2B18034988008B05FB /* social_mockup.png in Resources */ = {isa = PBXBuildFile; fileRef = 615E3E2A18034988008B05FB /* social_mockup.png */; };
 		6180C75117F993A10062FB7D /* SGFingerPaintView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6180C75017F993A10062FB7D /* SGFingerPaintView.m */; };
 		6181C34C17FE3BCF000AA2D7 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 6181C34A17FE3BCF000AA2D7 /* icon.png */; };
 		6181C34D17FE3BCF000AA2D7 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6181C34B17FE3BCF000AA2D7 /* icon@2x.png */; };
@@ -553,6 +554,7 @@
 		615E3E231802ED45008B05FB /* overlay__brackets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay__brackets.png; sourceTree = "<group>"; };
 		615E3E251802EF6C008B05FB /* SGScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGScanViewController.h; sourceTree = "<group>"; };
 		615E3E261802EF6C008B05FB /* SGScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGScanViewController.m; sourceTree = "<group>"; };
+		615E3E2A18034988008B05FB /* social_mockup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = social_mockup.png; sourceTree = "<group>"; };
 		6180C74F17F993A10062FB7D /* SGFingerPaintView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFingerPaintView.h; sourceTree = "<group>"; };
 		6180C75017F993A10062FB7D /* SGFingerPaintView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGFingerPaintView.m; sourceTree = "<group>"; };
 		6181C34A17FE3BCF000AA2D7 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -817,6 +819,7 @@
 		61008ABA17ED058B005E39CE /* GeneralResources */ = {
 			isa = PBXGroup;
 			children = (
+				615E3E2A18034988008B05FB /* social_mockup.png */,
 				6186A8BF17F324F00047097F /* AR Assets */,
 				610303C517F189E20060A83E /* Backgrounds */,
 				612630D417EE4FFD00AD35BE /* Thumbnails */,
@@ -1316,6 +1319,7 @@
 				61008BC817ED058C005E39CE /* SG_General_Painting_DetailMarkerBtn-on@2x.png in Resources */,
 				61008B8C17ED058C005E39CE /* SG_Home_LearnMoreBtn-on@2x.png in Resources */,
 				6186A89C17F241560047097F /* painting_thumb_shepherds-on@2x.png in Resources */,
+				615E3E2B18034988008B05FB /* social_mockup.png in Resources */,
 				6186A88517F241560047097F /* painting_thumb_healing.png in Resources */,
 				61008BA017ED058C005E39CE /* SG_Home_SchwartzBtn-on@2x.png in Resources */,
 				61008BF717ED058C005E39CE /* SG_General_Share_other@2x.png in Resources */,
