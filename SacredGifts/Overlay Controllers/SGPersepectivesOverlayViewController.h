@@ -14,9 +14,6 @@ typedef enum
 }PerspectiveOverlayType;
 
 @interface SGPersepectivesOverlayViewController : SGOverlayViewController
-{
-    
-}
 
 - (void)configurePerspectiveOverlayWithPath: (NSString*)folderPath;
 

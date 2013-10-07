@@ -79,12 +79,15 @@
 
 -(void)loadPanoramaWithFolderPath:(NSString *)panoFolderPath
 {
-    NSLog(@"Panorama: %@", panoFolderPath);
+    SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kPanoramaStr];
+    
+    NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"horup-1_f" ofType:@"jpg" inDirectory:panoFolderPath];
+    NSLog(@"loadPanoramaWithFolderPath: %@", overlayPath);
+    [overlay addBackgroundImgWithPath:overlayPath];
 }
 
 -(void)loadVideoWithFolderPath:(NSString *)videoFolderPath
 {
-    NSLog(@"Video: %@", videoFolderPath);
     SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kVideoStr];
     
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_video_overlay" ofType:@"png" inDirectory:videoFolderPath];

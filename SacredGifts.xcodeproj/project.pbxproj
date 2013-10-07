@@ -205,6 +205,7 @@
 		612630B017EDF27000AD35BE /* SG_Home_FindBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630AC17EDF27000AD35BE /* SG_Home_FindBtn-on@2x.png */; };
 		6152D13518004096003E8CB7 /* SGVideoOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6152D13418004096003E8CB7 /* SGVideoOverlayViewController.m */; };
 		6152D13718017C9D003E8CB7 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6152D13618017C9D003E8CB7 /* MediaPlayer.framework */; };
+		6152D13D1802D410003E8CB7 /* SGPanoramaOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6152D13C1802D410003E8CB7 /* SGPanoramaOverlayViewController.m */; };
 		615B941C17FBEF2F00B42466 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 615B941B17FBEF2F00B42466 /* Default.png */; };
 		615B953D17FDF41700B42466 /* SGSocialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615B953C17FDF41700B42466 /* SGSocialViewController.m */; };
 		615B954017FE279200B42466 /* SGWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 615B953F17FE279200B42466 /* SGWebViewController.m */; };
@@ -545,6 +546,8 @@
 		6152D13318004096003E8CB7 /* SGVideoOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SGVideoOverlayViewController.h; path = "../Painting Controllers/SGVideoOverlayViewController.h"; sourceTree = "<group>"; };
 		6152D13418004096003E8CB7 /* SGVideoOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SGVideoOverlayViewController.m; path = "../Painting Controllers/SGVideoOverlayViewController.m"; sourceTree = "<group>"; };
 		6152D13618017C9D003E8CB7 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		6152D13B1802D410003E8CB7 /* SGPanoramaOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPanoramaOverlayViewController.h; sourceTree = "<group>"; };
+		6152D13C1802D410003E8CB7 /* SGPanoramaOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPanoramaOverlayViewController.m; sourceTree = "<group>"; };
 		615B941B17FBEF2F00B42466 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		615B953B17FDF41700B42466 /* SGSocialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSocialViewController.h; sourceTree = "<group>"; };
 		615B953C17FDF41700B42466 /* SGSocialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSocialViewController.m; sourceTree = "<group>"; };
@@ -1058,6 +1061,8 @@
 				615B953C17FDF41700B42466 /* SGSocialViewController.m */,
 				6152D13318004096003E8CB7 /* SGVideoOverlayViewController.h */,
 				6152D13418004096003E8CB7 /* SGVideoOverlayViewController.m */,
+				6152D13B1802D410003E8CB7 /* SGPanoramaOverlayViewController.h */,
+				6152D13C1802D410003E8CB7 /* SGPanoramaOverlayViewController.m */,
 			);
 			path = "Overlay Controllers";
 			sourceTree = "<group>";
@@ -1582,6 +1587,7 @@
 				6191A73017F00444003755F9 /* SGPaintingViewController.m in Sources */,
 				6190A52017EDCBC900860B8F /* SGAboutTheExhibitionViewController.m in Sources */,
 				6186A80317F197460047097F /* SGOverlayView.m in Sources */,
+				6152D13D1802D410003E8CB7 /* SGPanoramaOverlayViewController.m in Sources */,
 				6190A51617ED3B9800860B8F /* SGContentViewController.m in Sources */,
 				6186A80617F197DC0047097F /* SGClosableOverlayView.m in Sources */,
 				615B953D17FDF41700B42466 /* SGSocialViewController.m in Sources */,

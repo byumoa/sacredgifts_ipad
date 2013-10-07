@@ -217,7 +217,10 @@ const int kPerspectivesButtonWidth = 161;
     self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:moduleStr];
     self.overlayController.delegate = self;
     //Transition new overlay on
-    [self.view insertSubview:self.overlayController.view belowSubview:self.footerView];
+    if( [moduleStr isEqualToString:(NSString*)kPanoramaStr] )
+        [self.view addSubview:self.overlayController.view];
+    else
+        [self.view insertSubview:self.overlayController.view belowSubview:self.footerView];
     self.overlayController.view.alpha = 0;
     [UIView animateWithDuration:0.25 animations:^{
         self.overlayController.view.alpha = 1;
@@ -234,7 +237,7 @@ const int kPerspectivesButtonWidth = 161;
     }
     else if( self.overlayController.moduleType == kModuleTypeVideo )
     {
-        //Configured in perspactives
+        //Configured in perspectives
     }
     else{
         NSString *overlayPath = [[NSBundle mainBundle] pathForResource:moduleStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingStr, moduleStr]];
@@ -295,6 +298,11 @@ const int kPerspectivesButtonWidth = 161;
 -(SGOverlayViewController *)overlay:(SGOverlayViewController *)overlay triggersNewOverlayName:(NSString *)overlayName
 {
     return [self addNewOverlayOfType:overlayName forPainting:_paintingNameStr];
+}
+
+-(void)closeOverlay:(SGOverlayViewController *)overlay
+{
+    [self addNewOverlayOfType:kPerspectiveStr forPainting:_paintingNameStr];
 }
 
 @end

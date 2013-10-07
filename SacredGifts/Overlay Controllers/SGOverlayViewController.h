@@ -13,6 +13,7 @@
 @protocol SGOverlayViewControllerDelegate <NSObject>
 
 - (SGOverlayViewController*)overlay: (SGOverlayViewController*)overlay triggersNewOverlayName: (NSString*)overlayName;
+- (void) closeOverlay: (SGOverlayViewController*)overlay;
 
 @end
 

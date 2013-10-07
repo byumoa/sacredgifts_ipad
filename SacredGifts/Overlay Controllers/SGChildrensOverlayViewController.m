@@ -39,8 +39,6 @@
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath
 {
     [super addBackgroundImgWithPath:bgImgPath];
-    //_fingerPaintView.maskThis = self.bgImageView;
-    //_fingerPaintView.originalImage = [self.bgImageView.image CGImage];
 }
 
 @end

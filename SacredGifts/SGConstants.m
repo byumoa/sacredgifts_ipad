@@ -69,3 +69,4 @@ const NSString* kChildrensStr = @"childrens";
 const NSString* kTombstoneStr = @"tombstone";
 const NSString* kSocialStr = @"social";
 const NSString* kVideoStr = @"video";
+const NSString* kPanoramaStr = @"panorama";

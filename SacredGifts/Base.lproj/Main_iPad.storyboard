@@ -700,6 +700,41 @@
             </objects>
             <point key="canvasLocation" x="2901" y="488"/>
         </scene>
+        <!--Panorama Overlay View Controller-->
+        <scene sceneID="w2W-Pc-s8Y">
+            <objects>
+                <viewController restorationIdentifier="panorama" storyboardIdentifier="panorama" id="zb2-l7-MYK" customClass="SGPanoramaOverlayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nRg-Hd-p9Q">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="horup-1_f.jpg" id="JOh-qL-M6h">
+                                <rect key="frame" x="-128" y="0.0" width="1024" height="1024"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="panorama.png" id="BID-nj-xIC">
+                                <rect key="frame" x="0.0" y="951" width="768" height="73"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zd1-M5-yD1">
+                                <rect key="frame" x="615" y="91" width="62" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="SG_General_Module_CloseBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="SG_General_Module_CloseBtn-on.png"/>
+                                <connections>
+                                    <action selector="pressedClose:" destination="zb2-l7-MYK" eventType="touchUpInside" id="jos-lv-4WH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nlk-JO-MzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3780" y="-77"/>
+        </scene>
         <!--Video Overlay View Controller-->
         <scene sceneID="Fs4-gJ-dle">
             <objects>
@@ -738,6 +773,8 @@
         <image name="SG_General_BackBtn-on.png" width="122" height="41"/>
         <image name="SG_General_BackBtn.png" width="122" height="41"/>
         <image name="SG_General_ModuleButtonBar.png" width="768" height="70"/>
+        <image name="SG_General_Module_CloseBtn-on.png" width="41" height="41"/>
+        <image name="SG_General_Module_CloseBtn.png" width="41" height="41"/>
         <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
         <image name="SG_General_Painting_ShareBtn.png" width="120" height="70"/>
         <image name="SG_General_ScanBtn-on.png" width="41" height="41"/>
@@ -767,6 +804,7 @@
         <image name="SG_Home_SchwartzBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_SchwartzBtn.png" width="768" height="205"/>
         <image name="SG_Home_SplashScreen.png" width="768" height="1024"/>
+        <image name="horup-1_f.jpg" width="1024" height="1024"/>
         <image name="painting_thumb_aalborg-on.png" width="123" height="164"/>
         <image name="painting_thumb_aalborg.png" width="123" height="164"/>
         <image name="painting_thumb_burial-on.png" width="123" height="164"/>
@@ -805,6 +843,7 @@
         <image name="painting_thumb_shepherds.png" width="123" height="164"/>
         <image name="painting_thumb_temple-on.png" width="123" height="164"/>
         <image name="painting_thumb_temple.png" width="123" height="164"/>
+        <image name="panorama.png" width="768" height="73"/>
         <image name="sg_home_bg-exhibition.png" width="804" height="1060"/>
         <image name="sg_home_bg-findpainting.png" width="804" height="1060"/>
         <image name="sg_home_bg-home.png" width="804" height="1060"/>

@@ -17,7 +17,8 @@ typedef enum
     kModuleTypeSocial = 6,
     kModuleTypeGifts = 7,
     kModuleTypeDetails = 8,
-    kModuleTypeVideo = 9
+    kModuleTypeVideo = 9,
+    kModuleTypePanorama = 10
 }ModuleType;
 
 typedef enum
@@ -40,27 +41,7 @@ extern const NSString* kControllerIDPaintingStr;
 
 extern const int kTotalPaintings;
 extern const NSString* kPaintingNames[];
-/*
-extern const NSString* kPaintingNameAalborg;
-extern const NSString* kPaintingNameBurial;
-extern const NSString* kPaintingNameCapture;
-extern const NSString* kPaintingNameChildren;
-extern const NSString* kPaintingNameCleansing;
-extern const NSString* kPaintingNameConsolator;
-extern const NSString* kPaintingNameCross;
-extern const NSString* kPaintingNameDenial;
-extern const NSString* kPaintingNameEmmaus;
-extern const NSString* kPaintingNameGarden;
-extern const NSString* kPaintingNameGethsemane;
-extern const NSString* kPaintingNameHealing;
-extern const NSString* kPaintingNameMocking;
-extern const NSString* kPaintingNameResurrection;
-extern const NSString* kPaintingNameRuler;
-extern const NSString* kPaintingNameSavior;
-extern const NSString* kPaintingNameSermon;
-extern const NSString* kPaintingNameShepherds;
-extern const NSString* kPaintingNameTemple;
-*/
+
 extern const CGRect kBlurFrame;
 
 extern const NSString* kDontateURLStr;
@@ -90,3 +71,4 @@ extern const NSString* kDetailsStr;
 extern const NSString* kTombstoneStr;
 extern const NSString* kSocialStr;
 extern const NSString* kVideoStr;
+extern const NSString* kPanoramaStr;
