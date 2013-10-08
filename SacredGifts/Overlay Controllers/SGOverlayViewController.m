@@ -32,6 +32,13 @@
     self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.bgImageView.image.size.width, self.bgImageView.image.size.height);
     [self.view insertSubview:self.bgImageView atIndex:0];
     self.view.center = _centerPos;
+    
+    //Place view 41px above footer bar
+    if( self.moduleType != kModuleTypeChildrens )
+    {
+        int yHeight = 1024 - 70 - 41 - self.view.frame.size.height/2;
+        self.view.center = CGPointMake(768/2, yHeight);
+    }
 }
 
 - (void)viewDidLoad
