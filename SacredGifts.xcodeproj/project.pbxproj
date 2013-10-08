@@ -118,7 +118,6 @@
 		61008BD217ED058C005E39CE /* SG_General_Painting_ModuleBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61008B2C17ED058B005E39CE /* SG_General_Painting_ModuleBtn-on@2x.png */; };
 		61008BD317ED058C005E39CE /* SG_General_Painting_ModuleBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 61008B2D17ED058B005E39CE /* SG_General_Painting_ModuleBtn.png */; };
 		61008BD417ED058C005E39CE /* SG_General_Painting_ModuleBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61008B2E17ED058B005E39CE /* SG_General_Painting_ModuleBtn@2x.png */; };
-		61008BD517ED058C005E39CE /* SG_General_Painting_MusicBtn copy.png in Resources */ = {isa = PBXBuildFile; fileRef = 61008B2F17ED058B005E39CE /* SG_General_Painting_MusicBtn copy.png */; };
 		61008BD617ED058C005E39CE /* SG_General_Painting_MusicBtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 61008B3017ED058B005E39CE /* SG_General_Painting_MusicBtn-on.png */; };
 		61008BD717ED058C005E39CE /* SG_General_Painting_MusicBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61008B3117ED058B005E39CE /* SG_General_Painting_MusicBtn-on@2x.png */; };
 		61008BD817ED058C005E39CE /* SG_General_Painting_MusicBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 61008B3217ED058B005E39CE /* SG_General_Painting_MusicBtn.png */; };
@@ -446,7 +445,6 @@
 		61008B2C17ED058B005E39CE /* SG_General_Painting_ModuleBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Painting_ModuleBtn-on@2x.png"; sourceTree = "<group>"; };
 		61008B2D17ED058B005E39CE /* SG_General_Painting_ModuleBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_General_Painting_ModuleBtn.png; sourceTree = "<group>"; };
 		61008B2E17ED058B005E39CE /* SG_General_Painting_ModuleBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Painting_ModuleBtn@2x.png"; sourceTree = "<group>"; };
-		61008B2F17ED058B005E39CE /* SG_General_Painting_MusicBtn copy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Painting_MusicBtn copy.png"; sourceTree = "<group>"; };
 		61008B3017ED058B005E39CE /* SG_General_Painting_MusicBtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Painting_MusicBtn-on.png"; sourceTree = "<group>"; };
 		61008B3117ED058B005E39CE /* SG_General_Painting_MusicBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Painting_MusicBtn-on@2x.png"; sourceTree = "<group>"; };
 		61008B3217ED058B005E39CE /* SG_General_Painting_MusicBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_General_Painting_MusicBtn.png; sourceTree = "<group>"; };
@@ -956,7 +954,6 @@
 				61008B2C17ED058B005E39CE /* SG_General_Painting_ModuleBtn-on@2x.png */,
 				61008B2D17ED058B005E39CE /* SG_General_Painting_ModuleBtn.png */,
 				61008B2E17ED058B005E39CE /* SG_General_Painting_ModuleBtn@2x.png */,
-				61008B2F17ED058B005E39CE /* SG_General_Painting_MusicBtn copy.png */,
 				61008B3017ED058B005E39CE /* SG_General_Painting_MusicBtn-on.png */,
 				61008B3117ED058B005E39CE /* SG_General_Painting_MusicBtn-on@2x.png */,
 				61008B3217ED058B005E39CE /* SG_General_Painting_MusicBtn.png */,
@@ -1283,7 +1280,6 @@
 				612630AE17EDF27000AD35BE /* SG_Home_FindBtn.png in Resources */,
 				61008BF317ED058C005E39CE /* SG_General_Share_fb@2x.png in Resources */,
 				61008BE917ED058C005E39CE /* SG_General_ScanBtn@2x.png in Resources */,
-				61008BD517ED058C005E39CE /* SG_General_Painting_MusicBtn copy.png in Resources */,
 				61008B7117ED058C005E39CE /* SG_Home_DonateBtn-on.png in Resources */,
 				61008BA817ED058C005E39CE /* SG_General_BackBtn@2x.png in Resources */,
 				61008B9C17ED058C005E39CE /* SG_Home_ScanPaintingBtn-on@2x.png in Resources */,
