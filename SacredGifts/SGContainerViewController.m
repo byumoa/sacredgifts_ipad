@@ -72,12 +72,13 @@
 
 -(void)contentController:(UIViewController *)contentController addBlurBackingForView:(UIView *)view
 {
+    UIView* blurBacking = [[SGBlurManager sharedManager] blurBackingForView:view];
+    if( [view isKindOfClass:[SGOverlayView class]])
+        ((SGOverlayView*)view).myBlurredBacking = blurBacking;
     
+    [self.currentContentController.view insertSubview:blurBacking belowSubview:view];
 }
 
--(void)contentController:(UIViewController *)contentController removeBlurBacking:(UIView *)view
-{
-    
-}
+-(void)contentController:(UIViewController *)contentController removeBlurBacking:(UIView *)view{}
 
 @end
