@@ -595,13 +595,13 @@
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1792" y="-195"/>
+            <point key="canvasLocation" x="1794" y="-182"/>
         </scene>
         <!--Tombstone Overlay View Controller-->
         <scene sceneID="Pf1-fy-jtR">
             <objects>
                 <viewController restorationIdentifier="tombstone" storyboardIdentifier="tombstone" id="nHH-xu-ogh" customClass="SGTombstoneOverlayViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="S2I-X6-tPC">
+                    <view key="view" contentMode="scaleToFill" id="S2I-X6-tPC" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="114"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -613,13 +613,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wS-qT-saf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2582" y="480"/>
+            <point key="canvasLocation" x="2560" y="437"/>
         </scene>
         <!--Summary Overlay View Controller-->
         <scene sceneID="e9N-v8-aZb">
             <objects>
                 <viewController restorationIdentifier="summary" storyboardIdentifier="summary" id="wQF-Fi-40D" customClass="SGSummaryOverlayViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="mRA-g8-ZvB">
+                    <view key="view" contentMode="scaleToFill" id="mRA-g8-ZvB" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="524"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -631,13 +631,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xNh-x6-hsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2621" y="122"/>
+            <point key="canvasLocation" x="2601" y="95"/>
         </scene>
         <!--Music Overlay View Controller-->
         <scene sceneID="f2i-UZ-Q7R">
             <objects>
                 <viewController restorationIdentifier="music" storyboardIdentifier="music" id="9nI-4S-Qna" customClass="SGMusicOverlayViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="VZr-XD-eeZ">
+                    <view key="view" contentMode="scaleToFill" id="VZr-XD-eeZ" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="400"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -655,7 +655,7 @@
         <scene sceneID="7kj-5c-EQf">
             <objects>
                 <viewController restorationIdentifier="childrens" storyboardIdentifier="childrens" id="R97-2Z-edN" customClass="SGChildrensOverlayViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="iW5-Ox-6f2">
+                    <view key="view" contentMode="scaleToFill" id="iW5-Ox-6f2" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="400"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -673,7 +673,7 @@
         <scene sceneID="HjJ-QA-JCS">
             <objects>
                 <viewController restorationIdentifier="gift" storyboardIdentifier="gift" id="mbo-aK-ZTE" customClass="SGGiftOverlayViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Foc-kY-8IB">
+                    <view key="view" contentMode="scaleToFill" id="Foc-kY-8IB" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="400"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -691,7 +691,7 @@
         <scene sceneID="noX-fo-s7z">
             <objects>
                 <viewController restorationIdentifier="details" storyboardIdentifier="details" id="OiJ-Kp-f7z" customClass="SGDetailsOverlayViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vig-Pv-Spu">
+                    <view key="view" contentMode="scaleToFill" id="vig-Pv-Spu" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="400"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -709,7 +709,7 @@
         <scene sceneID="DZE-8h-2cY">
             <objects>
                 <viewController restorationIdentifier="perspectives" storyboardIdentifier="perspectives" id="1dS-zG-iXX" customClass="SGPersepectivesOverlayViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Akh-Jk-sxB">
+                    <view key="view" contentMode="scaleToFill" id="Akh-Jk-sxB" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="400"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -762,7 +762,7 @@
         <scene sceneID="Fs4-gJ-dle">
             <objects>
                 <viewController restorationIdentifier="video" storyboardIdentifier="video" id="Vy2-fL-KCd" customClass="SGVideoOverlayViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="v9i-OL-lDl">
+                    <view key="view" contentMode="scaleToFill" id="v9i-OL-lDl" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -777,7 +777,7 @@
         <scene sceneID="aYW-CF-Y7g">
             <objects>
                 <viewController restorationIdentifier="social" storyboardIdentifier="social" id="n9h-Kx-tEQ" customClass="SGSocialViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Kvi-4e-csW">
+                    <view key="view" contentMode="scaleToFill" id="Kvi-4e-csW" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="236"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -854,7 +854,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6KJ-T6-uSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2563" y="429"/>
+            <point key="canvasLocation" x="2630" y="409"/>
         </scene>
     </scenes>
     <resources>
@@ -863,6 +863,7 @@
         <image name="SG_General_ModuleButtonBar.png" width="768" height="70"/>
         <image name="SG_General_Module_CloseBtn-on.png" width="41" height="41"/>
         <image name="SG_General_Module_CloseBtn.png" width="41" height="41"/>
+        <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
         <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
         <image name="SG_General_Painting_ShareBtn.png" width="120" height="70"/>
         <image name="SG_General_ScanBtn-on.png" width="41" height="41"/>
@@ -881,9 +882,12 @@
         <image name="SG_Home_BlochBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_BlochBtn.png" width="768" height="205"/>
         <image name="SG_Home_DonateBtn-on.png" width="245" height="123"/>
+        <image name="SG_Home_DonateBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_DonateBtn.png" width="245" height="123"/>
         <image name="SG_Home_ExhibitionBtn-on.png" width="768" height="205"/>
+        <image name="SG_Home_ExhibitionBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_ExhibitionBtn.png" width="768" height="205"/>
+        <image name="SG_Home_FeedbackBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_FeedbackBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_FeedbackBtn.png" width="245" height="123"/>
         <image name="SG_Home_FilmBtn-on.png" width="768" height="205"/>

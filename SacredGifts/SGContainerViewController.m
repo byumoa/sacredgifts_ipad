@@ -10,6 +10,7 @@
 #import "SGContentViewController.h"
 #import "SGBlurManager.h"
 #import "SGConstants.h"
+#import "SGOverlayView.h"
 
 @interface SGContainerViewController(BlurUtlities)
 
@@ -62,6 +63,9 @@
     
     for( UIView* blurredView in _allBlurredViews ){
         UIView* blurBacking = [[SGBlurManager sharedManager] blurBackingForView:blurredView];
+        if( [blurredView isKindOfClass:[SGOverlayView class]])
+            ((SGOverlayView*)blurredView).myBlurredBacking = blurBacking;
+
         [self.currentContentController.view insertSubview:blurBacking belowSubview:blurredView];
     }
 }
@@ -71,7 +75,7 @@
     
 }
 
--(void)contentController:(UIViewController *)contentController removeBlurBackingForView:(UIView *)view
+-(void)contentController:(UIViewController *)contentController removeBlurBacking:(UIView *)view
 {
     
 }

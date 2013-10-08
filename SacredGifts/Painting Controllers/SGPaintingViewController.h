@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "SGPaintingImageView.h"
-#import "SGClosableOverlayView.h"
 #import "SGContentControllerDelegate.h"
 #import "SGOverlayViewController.h"
 

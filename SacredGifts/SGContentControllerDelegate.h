@@ -14,7 +14,7 @@
 - (void)transitionFromController: (UIViewController*)fromController toPaintingNamed: (NSString*)paintingName fromButtonRect: (CGRect)frame withAnimType: (const NSString*)animType;
 - (void)contentController:(UIViewController *)contentController viewsForBlurredBacking:(NSArray*)views blurredImgName:(NSString*)blurredImgName;
 - (void)contentController:(UIViewController *)contentController viewsForBlurredBacking:(NSArray*)views blurredImgPath:(NSString*)blurredImgPath;
-- (void)contentController:(UIViewController*)contentController removeBlurBackingForView:(UIView*)view;
+- (void)contentController:(UIViewController*)contentController removeBlurBacking:(UIView*)view;
 - (void)contentController:(UIViewController*)contentController addBlurBackingForView:(UIView*)view;
 
 @end

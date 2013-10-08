@@ -30,7 +30,6 @@
 -(void)configureBGImage
 {
     self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.bgImageView.image.size.width, self.bgImageView.image.size.height);
-    //[self.view addSubview:self.bgImageView];
     [self.view insertSubview:self.bgImageView atIndex:0];
     self.view.center = _centerPos;
 }

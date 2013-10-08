@@ -8,6 +8,7 @@
 
 #import "SGPaintingViewController.h"
 #import "SGPersepectivesOverlayViewController.h"
+#import "SGOverlayView.h"
 
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
@@ -253,8 +254,11 @@ const int kPerspectivesButtonWidth = 161;
         SGOverlayViewController* exitingOverlay = self.overlayController;
         [UIView animateWithDuration:0.25 animations:^{
             exitingOverlay.view.alpha = 0;
+            ((SGOverlayView*)exitingOverlay.view).myBlurredBacking.alpha = 0;
         } completion:^(BOOL finished) {
             [exitingOverlay.view removeFromSuperview];
+            [((SGOverlayView*)exitingOverlay.view).myBlurredBacking removeFromSuperview];
+            ((SGOverlayView*)exitingOverlay.view).myBlurredBacking = nil;
         }];
     }
     self.overlayController = nil;
@@ -269,6 +273,7 @@ const int kPerspectivesButtonWidth = 161;
     [UIView animateWithDuration:0.25 animations:^{
         self.footerView.alpha = targetAlpha;
         self.overlayController.view.alpha = targetAlpha;
+        ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = targetAlpha;
     }];
 }
 
