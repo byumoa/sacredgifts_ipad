@@ -13,33 +13,31 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
 @implementation SGFingerPaintView
 @synthesize originalImage = _originalImage;
 
--(id)initWithCoder:(NSCoder *)aDecoder
+-(id)init
 {
-    if( self = [super initWithCoder:aDecoder])
+    if( self = [super init])
     {
-        _originalImage = [[UIImage imageNamed:@"childrens.png"] CGImage];
+        self.originalImage = [[UIImage imageNamed:@"childrens.png"] CGImage];
+        self.maskThis.opaque = NO;
+        self.maskThis.backgroundColor = [UIColor clearColor];
     }
     
     return self;
 }
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 -(CGImageRef)drawImageWithContext:(CGContextRef)context inRect:(CGRect)rect
 {
-    CGContextSetRGBStrokeColor(context, 0, 0, 0, 1);
+    CGContextSetRGBStrokeColor(context, 1, 0, 0, 1);
     CGContextSetLineWidth(context, 30);
     CGContextSetLineCap(context, kCGLineCapRound);
     CGContextSetLineJoin(context, kCGLineJoinRound);
     
     //Draw a line
     CGContextMoveToPoint(context, _firstTouchPt.x, _firstTouchPt.y);
-    
     for(NSValue* val in _allTouches)
         CGContextAddLineToPoint(context, [val CGPointValue].x, [val CGPointValue].y);
     
     CGContextStrokePath(context);
-    
     return CGBitmapContextCreateImage(context);
 }
 
@@ -47,8 +45,6 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
     
     // Retrieve the graphics context
     CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    //Get the drawing image
     CGImageRef maskImage = [self drawImageWithContext:context inRect:rect];
     
     // Get the mask from the image
@@ -60,22 +56,17 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
                                         ,  CGImageGetDataProvider(maskImage)
                                         , NULL
                                         , false);
-    
-    //make sure the images are not upside down
+
+    //Flip and Clip
     CGContextTranslateCTM(context, 0, self.bounds.size.height);
     CGContextScaleCTM(context, 1.0, -1.0);
-    
-    //Add clipping
     CGContextClipToMask(context, rect, mask);
     
-    CGImageRef maskedCGImage = CGImageCreateWithMask(_originalImage, mask);
+    CGImageRef maskedCGImage = CGImageCreateWithMask(self.originalImage, mask);
     self.maskThis.image = [UIImage imageWithCGImage:maskedCGImage];
     CGImageRelease(maskedCGImage);
-    
-    //Release the mask
+
     CGImageRelease(mask);
-    
-    //Release the maskImage
     CGImageRelease(maskImage);
 }
 

@@ -12,10 +12,9 @@
 {
     CGPoint _firstTouchPt;
     NSMutableArray* _allTouches;
-    //CGImageRef _originalImage;
 }
 @property (nonatomic, weak) IBOutlet UIImageView *maskThis;
-@property (nonatomic) CGImageRef originalImage;;
+@property (nonatomic) CGImageRef originalImage;
 
 - (CGImageRef)drawImageWithContext:(CGContextRef)context inRect:(CGRect)rect;
 
