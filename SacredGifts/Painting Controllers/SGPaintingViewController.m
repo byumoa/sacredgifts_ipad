@@ -224,11 +224,6 @@ const int kPerspectivesButtonWidth = 161;
     {
         [self.view insertSubview:self.overlayController.view belowSubview:self.footerView];
     }
-    self.overlayController.view.alpha = 0;
-
-    [UIView animateWithDuration:0.25 animations:^{
-        self.overlayController.view.alpha = 1;
-    }];
     
     //Configure new overlay viewController
     if( self.overlayController.moduleType == kModuleTypePerspective){
@@ -252,7 +247,9 @@ const int kPerspectivesButtonWidth = 161;
     {
         [self.delegate contentController:self addBlurBackingForView:self.overlayController.view];
         ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = 0;
+        self.overlayController.view.alpha = 0;
         [UIView animateWithDuration:0.25 animations:^{
+            self.overlayController.view.alpha = 1;
             ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = 1;
         }];
     }
