@@ -665,10 +665,6 @@
                                     <outlet property="maskThis" destination="NVc-gh-OBy" id="5Co-wz-tY0"/>
                                 </connections>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="childrensBW.png" id="yWw-as-V6c">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="childrens.png" id="NVc-gh-OBy">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -680,6 +676,9 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="fingerPaintView" destination="eEb-wI-XWd" id="ZIc-Zw-5Cf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPd-we-w8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -923,7 +922,6 @@
         <image name="SG_Home_SchwartzBtn.png" width="768" height="205"/>
         <image name="SG_Home_SplashScreen.png" width="768" height="1024"/>
         <image name="childrens.png" width="768" height="892"/>
-        <image name="childrensBW.png" width="768" height="892"/>
         <image name="horup-1_f.jpg" width="1024" height="1024"/>
         <image name="overlay__brackets.png" width="768" height="1024"/>
         <image name="painting_thumb_aalborg-on.png" width="123" height="164"/>
