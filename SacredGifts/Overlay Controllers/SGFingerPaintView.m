@@ -24,7 +24,7 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
 
 -(CGImageRef)drawImageWithContext:(CGContextRef)context inRect:(CGRect)rect
 {
-    CGContextSetRGBStrokeColor(context, 1, 0, 0, 1);
+    CGContextSetRGBStrokeColor(context, 0, 0, 0, 1);
     CGContextSetLineWidth(context, 30);
     CGContextSetLineCap(context, kCGLineCapRound);
     CGContextSetLineJoin(context, kCGLineJoinRound);

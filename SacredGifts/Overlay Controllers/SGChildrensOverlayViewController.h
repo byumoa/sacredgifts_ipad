@@ -10,6 +10,7 @@
 #import "SGFingerPaintView.h"
 
 @interface SGChildrensOverlayViewController : SGOverlayViewController
-@property(nonatomic, strong) IBOutlet SGFingerPaintView* fingerPaintView;
+@property(nonatomic, weak) IBOutlet SGFingerPaintView* fingerPaintView;
+@property(nonatomic, weak) IBOutlet UIImageView* maskedImageView;
 
 @end

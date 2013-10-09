@@ -30,6 +30,8 @@
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath
 {
     [super addBackgroundImgWithPath:bgImgPath];
+    [self.bgImageView removeFromSuperview];
+    [self.view insertSubview:self.bgImageView aboveSubview:self.fingerPaintView];
     [self.fingerPaintView removeFromSuperview];
     [self.view insertSubview:self.fingerPaintView atIndex:0];
 }
