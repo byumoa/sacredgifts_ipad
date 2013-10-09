@@ -25,15 +25,6 @@
 {
     [super viewDidLoad];
     self.view.frame = CGRectMake(0, 66, 768, 892);
-    
-    _fingerPaintView = [SGFingerPaintView new];
-    _fingerPaintView.frame = self.view.frame;
-    _fingerPaintView.userInteractionEnabled = YES;
-    _fingerPaintView.maskThis = self.bgImageView;
-    _fingerPaintView.backgroundColor = [UIColor clearColor];
-    self.bgImageView.userInteractionEnabled = NO;
-    //[self.view addSubview:_fingerPaintView];
-    [self.view insertSubview:_fingerPaintView belowSubview:self.bgImageView];
 }
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath

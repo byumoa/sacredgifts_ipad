@@ -315,7 +315,8 @@
 		6190A52017EDCBC900860B8F /* SGAboutTheExhibitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6190A51F17EDCBC900860B8F /* SGAboutTheExhibitionViewController.m */; };
 		6191A72D17F003F3003755F9 /* SGPaintingContainerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6191A72C17F003F3003755F9 /* SGPaintingContainerViewController.m */; };
 		6191A73017F00444003755F9 /* SGPaintingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6191A72F17F00444003755F9 /* SGPaintingViewController.m */; };
-		61B00D431804819300CC4CFC /* childrens.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B00D421804819300CC4CFC /* childrens.png */; };
+		61B00D431804819300CC4CFC /* childrensBW.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B00D421804819300CC4CFC /* childrensBW.png */; };
+		61B00D941804FB3C00CC4CFC /* childrens.png in Resources */ = {isa = PBXBuildFile; fileRef = 61B00D931804FB3C00CC4CFC /* childrens.png */; };
 		61C877CC17FAEDC600087C1E /* PaintingResources in Resources */ = {isa = PBXBuildFile; fileRef = 61C877CB17FAEDC600087C1E /* PaintingResources */; };
 /* End PBXBuildFile section */
 
@@ -671,7 +672,8 @@
 		6191A72C17F003F3003755F9 /* SGPaintingContainerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPaintingContainerViewController.m; sourceTree = "<group>"; };
 		6191A72E17F00444003755F9 /* SGPaintingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPaintingViewController.h; sourceTree = "<group>"; };
 		6191A72F17F00444003755F9 /* SGPaintingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPaintingViewController.m; sourceTree = "<group>"; };
-		61B00D421804819300CC4CFC /* childrens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = childrens.png; sourceTree = "<group>"; };
+		61B00D421804819300CC4CFC /* childrensBW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = childrensBW.png; sourceTree = "<group>"; };
+		61B00D931804FB3C00CC4CFC /* childrens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = childrens.png; sourceTree = "<group>"; };
 		61C877CB17FAEDC600087C1E /* PaintingResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PaintingResources; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -816,7 +818,8 @@
 		61008ABA17ED058B005E39CE /* GeneralResources */ = {
 			isa = PBXGroup;
 			children = (
-				61B00D421804819300CC4CFC /* childrens.png */,
+				61B00D421804819300CC4CFC /* childrensBW.png */,
+				61B00D931804FB3C00CC4CFC /* childrens.png */,
 				615E3E2A18034988008B05FB /* social_mockup.png */,
 				6186A8BF17F324F00047097F /* AR Assets */,
 				610303C517F189E20060A83E /* Backgrounds */,
@@ -1347,13 +1350,14 @@
 				61008BB917ED058C005E39CE /* SG_General_ModuleButtonBar.png in Resources */,
 				61008BCA17ED058C005E39CE /* SG_General_Painting_DetailMarkerBtn@2x.png in Resources */,
 				6186A8A217F241560047097F /* painting_thumb_temple@2x.png in Resources */,
+				61B00D941804FB3C00CC4CFC /* childrens.png in Resources */,
 				61008BAF17ED058C005E39CE /* SG_General_Module_CloseBtn.png in Resources */,
 				61C877CC17FAEDC600087C1E /* PaintingResources in Resources */,
 				6186A87117F241560047097F /* painting_thumb_cross.png in Resources */,
 				61008B7417ED058C005E39CE /* SG_Home_DonateBtn@2x.png in Resources */,
 				61008B9E17ED058C005E39CE /* SG_Home_ScanPaintingBtn@2x.png in Resources */,
 				61008BA217ED058C005E39CE /* SG_Home_SchwartzBtn@2x.png in Resources */,
-				61B00D431804819300CC4CFC /* childrens.png in Resources */,
+				61B00D431804819300CC4CFC /* childrensBW.png in Resources */,
 				6186A88417F241560047097F /* painting_thumb_healing-on@2x.png in Resources */,
 				61008A9717ED03F0005E39CE /* Main_iPad.storyboard in Resources */,
 				6186A89517F241560047097F /* painting_thumb_savior.png in Resources */,

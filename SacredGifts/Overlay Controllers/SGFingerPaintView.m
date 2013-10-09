@@ -13,13 +13,10 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
 @implementation SGFingerPaintView
 @synthesize originalImage = _originalImage;
 
--(id)init
+-(id)initWithCoder:(NSCoder *)aDecoder
 {
-    if( self = [super init])
-    {
+    if( self = [super initWithCoder:aDecoder]){
         self.originalImage = [[UIImage imageNamed:@"childrens.png"] CGImage];
-        self.maskThis.opaque = NO;
-        self.maskThis.backgroundColor = [UIColor clearColor];
     }
     
     return self;

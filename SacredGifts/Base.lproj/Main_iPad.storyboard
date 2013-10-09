@@ -654,8 +654,26 @@
             <objects>
                 <viewController restorationIdentifier="childrens" storyboardIdentifier="childrens" id="R97-2Z-edN" customClass="SGChildrensOverlayViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iW5-Ox-6f2" customClass="SGOverlayView">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="eEb-wI-XWd" customClass="SGFingerPaintView">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="maskThis" destination="NVc-gh-OBy" id="5Co-wz-tY0"/>
+                                </connections>
+                            </view>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="childrensBW.png" id="yWw-as-V6c">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="childrens.png" id="NVc-gh-OBy">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
@@ -665,7 +683,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPd-we-w8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2740" y="343"/>
+            <point key="canvasLocation" x="2730" y="-150"/>
         </scene>
         <!--Gift Overlay View Controller-->
         <scene sceneID="HjJ-QA-JCS">
@@ -862,6 +880,7 @@
         <image name="SG_General_Module_CloseBtn-on.png" width="41" height="41"/>
         <image name="SG_General_Module_CloseBtn.png" width="41" height="41"/>
         <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
+        <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
         <image name="SG_General_Painting_ShareBtn.png" width="120" height="70"/>
         <image name="SG_General_ScanBtn-on.png" width="41" height="41"/>
         <image name="SG_General_ScanBtn.png" width="41" height="41"/>
@@ -879,9 +898,12 @@
         <image name="SG_Home_BlochBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_BlochBtn.png" width="768" height="205"/>
         <image name="SG_Home_DonateBtn-on.png" width="245" height="123"/>
+        <image name="SG_Home_DonateBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_DonateBtn.png" width="245" height="123"/>
         <image name="SG_Home_ExhibitionBtn-on.png" width="768" height="205"/>
+        <image name="SG_Home_ExhibitionBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_ExhibitionBtn.png" width="768" height="205"/>
+        <image name="SG_Home_FeedbackBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_FeedbackBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_FeedbackBtn.png" width="245" height="123"/>
         <image name="SG_Home_FilmBtn-on.png" width="768" height="205"/>
@@ -900,6 +922,8 @@
         <image name="SG_Home_SchwartzBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_SchwartzBtn.png" width="768" height="205"/>
         <image name="SG_Home_SplashScreen.png" width="768" height="1024"/>
+        <image name="childrens.png" width="768" height="892"/>
+        <image name="childrensBW.png" width="768" height="892"/>
         <image name="horup-1_f.jpg" width="1024" height="1024"/>
         <image name="overlay__brackets.png" width="768" height="1024"/>
         <image name="painting_thumb_aalborg-on.png" width="123" height="164"/>
