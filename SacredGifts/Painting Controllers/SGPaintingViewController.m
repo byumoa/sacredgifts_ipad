@@ -227,7 +227,6 @@ const int kPerspectivesButtonWidth = 161;
     }
     
     //Configure new overlay viewController
-   
     switch (self.overlayController.moduleType) {
         case kModuleTypePerspective:{
             [self.overlayController addBackgroundImgWithImgName:@"SG_General_Module_Overlay.png"];
@@ -259,13 +258,14 @@ const int kPerspectivesButtonWidth = 161;
     if( ![moduleStr isEqualToString:(NSString*)kTombstoneStr] )
     {
         [self.delegate contentController:self addBlurBackingForView:self.overlayController.view];
-        ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = 0;
-        self.overlayController.view.alpha = 0;
-        [UIView animateWithDuration:0.25 animations:^{
-            self.overlayController.view.alpha = 1;
-            ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = 1;
-        }];
     }
+    
+    ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = 0;
+    self.overlayController.view.alpha = 0;
+    [UIView animateWithDuration:0.25 animations:^{
+        self.overlayController.view.alpha = 1;
+        ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = 1;
+    }];
     
     return self.overlayController;
 }
