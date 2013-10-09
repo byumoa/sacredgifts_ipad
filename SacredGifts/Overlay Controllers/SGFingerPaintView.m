@@ -16,7 +16,6 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
     if( self = [super initWithCoder:aDecoder]){
-        self.originalImage = [[UIImage imageNamed:@"childrens.png"] CGImage];
         _strokesArr = [NSMutableArray new];
     }
     

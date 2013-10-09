@@ -27,8 +27,10 @@
     self.view.frame = CGRectMake(0, 66, 768, 892);
 }
 
-- (void)addBackgroundImgWithPath: (NSString*)bgImgPath
+- (void)addBackgroundImgWithPath: (NSString*)bgImgPath forgroundImage:(UIImage *)foregroundImg
 {
+    self.fingerPaintView.originalImage = [foregroundImg CGImage];
+    
     [super addBackgroundImgWithPath:bgImgPath];
     [self.bgImageView removeFromSuperview];
     [self.view insertSubview:self.bgImageView aboveSubview:self.fingerPaintView];

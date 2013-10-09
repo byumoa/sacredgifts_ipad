@@ -13,4 +13,6 @@
 @property(nonatomic, weak) IBOutlet SGFingerPaintView* fingerPaintView;
 @property(nonatomic, weak) IBOutlet UIImageView* maskedImageView;
 
+- (void)addBackgroundImgWithPath: (NSString*)bgImgPath forgroundImage: (UIImage*)foregroundImg;
+
 @end

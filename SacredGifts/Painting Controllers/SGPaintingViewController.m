@@ -9,6 +9,7 @@
 #import "SGPaintingViewController.h"
 #import "SGPersepectivesOverlayViewController.h"
 #import "SGOverlayView.h"
+#import "SGChildrensOverlayViewController.h"
 
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
@@ -221,27 +222,38 @@ const int kPerspectivesButtonWidth = 161;
     //Transition new overlay on
     if( [moduleStr isEqualToString:(NSString*)kPanoramaStr] )
         [self.view addSubview:self.overlayController.view];
-    else
-    {
+    else{
         [self.view insertSubview:self.overlayController.view belowSubview:self.footerView];
     }
     
     //Configure new overlay viewController
-    if( self.overlayController.moduleType == kModuleTypePerspective){
-        [self.overlayController addBackgroundImgWithImgName:@"SG_General_Module_Overlay.png"];
-        NSString* perspectivesPath = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", _paintingNameStr, @"perspectives"];
-        [((SGPersepectivesOverlayViewController*)self.overlayController) configurePerspectiveOverlayWithPath:perspectivesPath];
-    }
-    else if( self.overlayController.moduleType == kModuleTypeSocial ){
-        [self.overlayController addBackgroundImgWithImgName:@"SG_General_Module_Overlay.png"];
-    }
-    else if( self.overlayController.moduleType == kModuleTypeVideo )
-    {
-        //Configured in perspectives
-    }
-    else{
-        NSString *overlayPath = [[NSBundle mainBundle] pathForResource:moduleStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingStr, moduleStr]];
-        [self.overlayController addBackgroundImgWithPath:overlayPath];
+   
+    switch (self.overlayController.moduleType) {
+        case kModuleTypePerspective:{
+            [self.overlayController addBackgroundImgWithImgName:@"SG_General_Module_Overlay.png"];
+            NSString* perspectivesPath = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", _paintingNameStr, @"perspectives"];
+            [((SGPersepectivesOverlayViewController*)self.overlayController) configurePerspectiveOverlayWithPath:perspectivesPath];
+        }
+            break;
+        case kModuleTypeSocial:{
+            [self.overlayController addBackgroundImgWithImgName:@"SG_General_Module_Overlay.png"];
+        }
+            break;
+        case kModuleTypeVideo:{
+            //Configured in perspectives
+        }
+            break;
+        case kModuleTypeChildrens:
+        {
+            NSString* paintingDir = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", _paintingNameStr, @"childrens"];
+            NSString* paintingPath = [[NSBundle mainBundle] pathForResource:@"childrens" ofType:@".png" inDirectory:paintingDir];
+            [((SGChildrensOverlayViewController*)self.overlayController) addBackgroundImgWithPath:paintingPath forgroundImage:self.paintingImageView.image];
+        }
+        default:{
+            NSString *overlayPath = [[NSBundle mainBundle] pathForResource:moduleStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingStr, moduleStr]];
+            [self.overlayController addBackgroundImgWithPath:overlayPath];
+        }
+            break;
     }
     
     if( ![moduleStr isEqualToString:(NSString*)kTombstoneStr] )
