@@ -38,6 +38,8 @@
     {
         if( [self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDPaintingContainerStr])
             _backViewControllerIDStr = (NSString*)kControllerIDFindAPaintingStr;
+        else if([self.currentContentController.restorationIdentifier isEqualToString:@"artist"])
+            _backViewControllerIDStr = (NSString*)kControllerIDMeetTheArtistsStr;
         else
             _backViewControllerIDStr = (NSString*)kControllerIDHomeStr;
     

@@ -17,6 +17,9 @@ const NSString* kControllerIDMeetTheArtistsStr = @"SacredGifts MeetTheArtists";
 const NSString* kControllerIDAboutTheExhibitionStr = @"SacredGifts AboutTheExhibition";
 const NSString* kControllerIDPaintingContainerStr = @"SacredGifts PaintingContainer";
 const NSString* kControllerIDPaintingStr = @"SacredGifts Painting";
+const NSString* kControllerIDBlochStr = @"bloch";
+const NSString* kControllerIDSchwartzStr = @"schwartz";
+const NSString* kControllerIDHofmantr = @"hofman";
 
 const int kTotalPaintings = 19;
 NSString* const kPaintingNames[] = {

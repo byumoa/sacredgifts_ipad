@@ -10,4 +10,6 @@
 
 @interface SGMeetTheArtistsViewController : SGContentViewController
 
+- (IBAction)pressedBtn:(UIButton *)sender;
+
 @end

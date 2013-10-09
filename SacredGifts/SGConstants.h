@@ -38,6 +38,9 @@ extern const NSString* kControllerIDMeetTheArtistsStr;
 extern const NSString* kControllerIDAboutTheExhibitionStr;
 extern const NSString* kControllerIDPaintingContainerStr;
 extern const NSString* kControllerIDPaintingStr;
+extern const NSString* kControllerIDBlochStr;
+extern const NSString* kControllerIDSchwartzStr;
+extern const NSString* kControllerIDHofmantr;
 
 extern const int kTotalPaintings;
 extern const NSString* kPaintingNames[];
