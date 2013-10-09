@@ -17,6 +17,7 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
 {
     if( self = [super initWithCoder:aDecoder]){
         self.originalImage = [[UIImage imageNamed:@"childrens.png"] CGImage];
+        _strokesArr = [NSMutableArray new];
     }
     
     return self;
@@ -30,9 +31,15 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
     CGContextSetLineJoin(context, kCGLineJoinRound);
     
     //Draw a line
-    CGContextMoveToPoint(context, _firstTouchPt.x, _firstTouchPt.y);
-    for(NSValue* val in _allTouches)
-        CGContextAddLineToPoint(context, [val CGPointValue].x, [val CGPointValue].y);
+    for( NSDictionary* dict in _strokesArr )
+    {
+        CGPoint firstPoint = ((NSValue*)[dict objectForKey:@"first point"]).CGPointValue;
+        CGContextMoveToPoint(context, firstPoint.x, firstPoint.y);
+        
+        NSArray* strokeTouches = (NSArray*)[dict objectForKey:@"stroke points"];
+        for(NSValue* val in strokeTouches)
+            CGContextAddLineToPoint(context, [val CGPointValue].x, [val CGPointValue].y);
+    }
     
     CGContextStrokePath(context);
     return CGBitmapContextCreateImage(context);
@@ -70,14 +77,20 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     _firstTouchPt = [[touches anyObject] locationInView:self];
-    _allTouches = [NSMutableArray new];
+    _strokeTouches = [NSMutableArray new];
+    
+    NSArray* objectsArr = [NSArray arrayWithObjects:[NSValue valueWithCGPoint:_firstTouchPt], _strokeTouches, nil];
+    NSArray* keysArr = [NSArray arrayWithObjects:@"first point", @"stroke points", nil];
+    
+    NSDictionary* strokeInfo = [NSDictionary dictionaryWithObjects:objectsArr forKeys:keysArr];
+    [_strokesArr addObject:strokeInfo];
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
     CGPoint point = [[touches anyObject] locationInView:self];
     NSValue* val = [NSValue valueWithCGPoint:point];
-    [_allTouches addObject:val];
+    [_strokeTouches addObject:val];
     [self setNeedsDisplay];
 }
 

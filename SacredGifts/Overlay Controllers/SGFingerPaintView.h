@@ -10,8 +10,9 @@
 
 @interface SGFingerPaintView : UIView
 {
+    NSMutableArray* _strokesArr;
     CGPoint _firstTouchPt;
-    NSMutableArray* _allTouches;
+    NSMutableArray* _strokeTouches;
 }
 @property (nonatomic, weak) IBOutlet UIImageView *maskThis;
 @property (nonatomic) CGImageRef originalImage;
