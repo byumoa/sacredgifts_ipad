@@ -59,6 +59,7 @@
     //Webview Close Button
     UIButton* closeBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     [closeBtn setTitle:@"DONE" forState:UIControlStateNormal];
+    closeBtn.titleLabel.font = [UIFont systemFontOfSize:30];
     closeBtn.frame = kWebviewBackBtnFrm;
     [closeBtn addTarget:self action:@selector(pressedWebViewBack:) forControlEvents:UIControlEventTouchUpInside];
     [_donateWebView addSubview:closeBtn];
