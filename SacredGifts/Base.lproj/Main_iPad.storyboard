@@ -33,8 +33,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view opaque="NO" contentMode="scaleToFill" id="Ksf-Tw-7Rg" userLabel="Header">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="SG_Home_SplashScreen.png" id="zKe-di-iZj">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <view opaque="NO" contentMode="scaleToFill" id="DjK-ES-X9r" userLabel="HeaderBlurDud">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="62"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view opaque="NO" contentMode="scaleToFill" id="Ksf-Tw-7Rg" userLabel="Header">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="80"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="SG_General_TopBar.png" id="ajQ-mo-DB2">
@@ -107,10 +116,6 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="SG_Home_SplashScreen.png" id="zKe-di-iZj">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -118,6 +123,7 @@
                     <connections>
                         <outlet property="backBtn" destination="ygj-IJ-KWP" id="xk2-By-WQu"/>
                         <outlet property="footerView" destination="vJA-Jz-DAr" id="vap-x7-JlY"/>
+                        <outlet property="headerBlurDecoy" destination="DjK-ES-X9r" id="vYX-w7-piD"/>
                         <outlet property="headerView" destination="Ksf-Tw-7Rg" id="ed3-ih-wMI"/>
                         <outlet property="splash" destination="zKe-di-iZj" id="aR0-Tl-6DU"/>
                     </connections>
@@ -712,7 +718,7 @@
                                     <outlet property="maskThis" destination="NVc-gh-OBy" id="5Co-wz-tY0"/>
                                 </connections>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="8BE4CAA1-4CE2-45AC-B664-E8F7CD3A4FDD" id="NVc-gh-OBy">
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="8968FB49-F618-4E62-8821-89C2A404E2E1" id="NVc-gh-OBy">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -969,7 +975,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="8BE4CAA1-4CE2-45AC-B664-E8F7CD3A4FDD" width="768" height="892">
+        <image name="8968FB49-F618-4E62-8821-89C2A404E2E1" width="768" height="892">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw

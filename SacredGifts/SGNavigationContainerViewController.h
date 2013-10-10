@@ -18,6 +18,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (weak, nonatomic) IBOutlet UIView *footerView;
+@property (weak, nonatomic) IBOutlet UIView *headerBlurDecoy;
 
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
 @property (strong, nonatomic) UIActivityIndicatorView* activityIndicator;

@@ -153,7 +153,7 @@
 -(void)contentController:(UIViewController *)contentController viewsForBlurredBacking:(NSArray*)views blurredImgName:(NSString *)blurredImgName
 {
     _allBlurredViews = [NSMutableArray new];
-    [_allBlurredViews addObject:self.headerView];
+    [_allBlurredViews addObject:self.headerBlurDecoy];
     [super contentController:contentController viewsForBlurredBacking:views blurredImgName:blurredImgName];
 }
 
