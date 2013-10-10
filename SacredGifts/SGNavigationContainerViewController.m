@@ -140,6 +140,15 @@
     
     [self cycleFromViewController:fromController toViewController:toController fromButtonRect:frame falling:animType];
     
+    if( [toController.restorationIdentifier isEqualToString:@"artist"] )
+        [UIView animateWithDuration:0.25 animations:^{
+            self.footerView.alpha = 0;
+        }];
+    else if( [toController.restorationIdentifier isEqualToString:(NSString*)kControllerIDFindAPaintingStr] )
+        [UIView animateWithDuration:0.25 animations:^{
+            self.footerView.alpha = 1;
+        }];
+    
     return toController;
 }
 
