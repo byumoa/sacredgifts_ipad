@@ -41,8 +41,8 @@
                                         <rect key="frame" x="0.0" y="0.0" width="768" height="62"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CYV-An-ov5">
-                                        <rect key="frame" x="709" y="20" width="41" height="41"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CYV-An-ov5">
+                                        <rect key="frame" x="694" y="20" width="75" height="56"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="SG_General_ScanBtn.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -53,8 +53,9 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ygj-IJ-KWP">
-                                        <rect key="frame" x="18" y="20" width="122" height="41"/>
+                                        <rect key="frame" x="0.0" y="20" width="140" height="56"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-1"/>
                                         <state key="normal" image="SG_General_BackBtn.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -62,6 +63,14 @@
                                         <connections>
                                             <action selector="pressedBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2D5-0f-vwG"/>
                                         </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2JX-8M-l3o">
+                                        <rect key="frame" x="284" y="20" width="200" height="56"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="SG_General_HomeBtn.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" image="SG_General_HomeBtn-on.png"/>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -703,7 +712,7 @@
                                     <outlet property="maskThis" destination="NVc-gh-OBy" id="5Co-wz-tY0"/>
                                 </connections>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="87EE05EB-94A1-45D5-B518-D1D5DF5613D9" id="NVc-gh-OBy">
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="8BE4CAA1-4CE2-45AC-B664-E8F7CD3A4FDD" id="NVc-gh-OBy">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -960,7 +969,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="87EE05EB-94A1-45D5-B518-D1D5DF5613D9" width="768" height="892">
+        <image name="8BE4CAA1-4CE2-45AC-B664-E8F7CD3A4FDD" width="768" height="892">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -46686,15 +46695,17 @@ KdpqACnabwAp2n4AKdqCACnaiQAp2pEAKdqeACnaowAp2qUAKdqnACnarAAp2rQAKdq3ACnavAAp2sQA
 KdrHACna2QAp2twAKdrhAAAAAAAABAEAAAAAAAAAQgAAAAAAAAAAAAAAAAAp2uM
 </mutableData>
         </image>
-        <image name="SG_General_BackBtn-on.png" width="122" height="41"/>
-        <image name="SG_General_BackBtn.png" width="122" height="41"/>
+        <image name="SG_General_BackBtn-on.png" width="140" height="56"/>
+        <image name="SG_General_BackBtn.png" width="140" height="56"/>
+        <image name="SG_General_HomeBtn-on.png" width="200" height="56"/>
+        <image name="SG_General_HomeBtn.png" width="200" height="56"/>
         <image name="SG_General_ModuleButtonBar.png" width="768" height="70"/>
         <image name="SG_General_Module_CloseBtn-on.png" width="41" height="41"/>
         <image name="SG_General_Module_CloseBtn.png" width="41" height="41"/>
         <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
         <image name="SG_General_Painting_ShareBtn.png" width="120" height="70"/>
-        <image name="SG_General_ScanBtn-on.png" width="41" height="41"/>
-        <image name="SG_General_ScanBtn.png" width="41" height="41"/>
+        <image name="SG_General_ScanBtn-on.png" width="75" height="56"/>
+        <image name="SG_General_ScanBtn.png" width="75" height="56"/>
         <image name="SG_General_Share_email-on.png" width="244" height="41"/>
         <image name="SG_General_Share_email.png" width="244" height="41"/>
         <image name="SG_General_Share_fb-on.png" width="244" height="41"/>
