@@ -879,6 +879,13 @@
                                     <action selector="pressedClose:" destination="zb2-l7-MYK" eventType="touchUpInside" id="jos-lv-4WH"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="IN PROCESS" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="fVP-KO-7GE">
+                                <rect key="frame" x="257" y="943" width="255" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <color key="textColor" red="0.843718497983871" green="0.944367439516129" blue="0.898405997983871" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.818390877016129" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>

@@ -65,7 +65,6 @@
 -(void)pressedPerspectiveBtn:(UIButton *)sender
 {
     NSString* btnFolderPath = [NSString stringWithFormat:@"%@perspectives_%i", self.rootFolderPath, sender.tag];
-    
     NSString* btnPath = [[NSBundle mainBundle] pathForResource:@"panorama" ofType:@"png" inDirectory:btnFolderPath];
     
     if( btnPath )
@@ -82,6 +81,7 @@
     SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kPanoramaStr];
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"pano_f" ofType:@"jpg" inDirectory:panoFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
+    overlay.rootFolderPath = panoFolderPath;
 }
 
 -(void)loadVideoWithFolderPath:(NSString *)videoFolderPath
