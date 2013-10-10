@@ -80,9 +80,7 @@
 -(void)loadPanoramaWithFolderPath:(NSString *)panoFolderPath
 {
     SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kPanoramaStr];
-    
-    NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"horup-1_f" ofType:@"jpg" inDirectory:panoFolderPath];
-    NSLog(@"loadPanoramaWithFolderPath: %@", overlayPath);
+    NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"pano_f" ofType:@"jpg" inDirectory:panoFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
 }
 

@@ -20,6 +20,7 @@ const NSString* kControllerIDPaintingStr = @"SacredGifts Painting";
 const NSString* kControllerIDBlochStr = @"bloch";
 const NSString* kControllerIDSchwartzStr = @"schwartz";
 const NSString* kControllerIDHofmantr = @"hofman";
+const NSString* kControllerIDPanoramaStr = @"panorama";
 
 const int kTotalPaintings = 19;
 NSString* const kPaintingNames[] = {
