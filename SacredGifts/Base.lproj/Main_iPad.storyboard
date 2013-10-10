@@ -244,7 +244,7 @@
                                 <rect key="frame" x="-18" y="-18" width="804" height="1060"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ohp-Ka-Rua">
+                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ohp-Ka-Rua">
                                 <rect key="frame" x="442" y="184" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_garden.png">
@@ -255,8 +255,8 @@
                                     <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="p4X-Zv-ka0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kl8-Lo-wAm">
-                                <rect key="frame" x="18" y="718" width="123" height="164"/>
+                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kl8-Lo-wAm">
+                                <rect key="frame" x="506" y="718" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_burial.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -266,8 +266,8 @@
                                     <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="ZlX-sS-peb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hIH-f3-cfg">
-                                <rect key="frame" x="140" y="348" width="123" height="164"/>
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hIH-f3-cfg">
+                                <rect key="frame" x="18" y="184" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_capture.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -277,8 +277,8 @@
                                     <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="yYb-DW-VqP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="06O-dG-EDb">
-                                <rect key="frame" x="384" y="550" width="123" height="164"/>
+                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="06O-dG-EDb">
+                                <rect key="frame" x="628" y="553" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_children.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -288,8 +288,8 @@
                                     <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="RbB-UO-iE1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Exb-14-wSK">
-                                <rect key="frame" x="139" y="553" width="123" height="164"/>
+                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Exb-14-wSK">
+                                <rect key="frame" x="140" y="718" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_cleansing.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -299,8 +299,8 @@
                                     <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="jlh-oc-LtY"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oBR-dk-Qk0">
-                                <rect key="frame" x="262" y="718" width="123" height="164"/>
+                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oBR-dk-Qk0">
+                                <rect key="frame" x="140" y="553" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_consolator.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -310,8 +310,8 @@
                                     <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="cw5-AY-HoD"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rK6-j0-QdI">
-                                <rect key="frame" x="506" y="550" width="123" height="164"/>
+                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="rK6-j0-QdI">
+                                <rect key="frame" x="384" y="718" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_cross.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -321,8 +321,8 @@
                                     <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="RW4-dd-JdK"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h00-UY-OqH">
-                                <rect key="frame" x="384" y="718" width="123" height="164"/>
+                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h00-UY-OqH">
+                                <rect key="frame" x="262" y="553" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_emmaus.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -332,8 +332,8 @@
                                     <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="XE0-ia-UvN"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="USZ-Eg-JcK">
-                                <rect key="frame" x="262" y="553" width="123" height="164"/>
+                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="USZ-Eg-JcK">
+                                <rect key="frame" x="262" y="718" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_denial.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -343,8 +343,8 @@
                                     <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="Igr-Kq-W4a"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LB6-f9-kdq">
-                                <rect key="frame" x="262" y="184" width="123" height="164"/>
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LB6-f9-kdq">
+                                <rect key="frame" x="18" y="348" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_gethsemane.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -354,8 +354,8 @@
                                     <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="cp7-2f-P4A"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lSe-Tt-saM">
-                                <rect key="frame" x="628" y="553" width="123" height="164"/>
+                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="lSe-Tt-saM">
+                                <rect key="frame" x="18" y="718" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_healing.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -365,8 +365,8 @@
                                     <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="kAx-uQ-g4T"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hJn-RF-pAO">
-                                <rect key="frame" x="628" y="718" width="123" height="164"/>
+                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="hJn-RF-pAO">
+                                <rect key="frame" x="18" y="553" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_mocking.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -377,7 +377,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WrI-dx-OTI">
-                                <rect key="frame" x="503" y="718" width="123" height="164"/>
+                                <rect key="frame" x="628" y="718" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_resurrection.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -387,8 +387,8 @@
                                     <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="Dzd-Ka-ta0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wnt-W7-PJz">
-                                <rect key="frame" x="139" y="184" width="123" height="164"/>
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Wnt-W7-PJz">
+                                <rect key="frame" x="262" y="184" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_ruler.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -398,8 +398,8 @@
                                     <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="g2T-Gv-in3"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wAJ-bc-iZp">
-                                <rect key="frame" x="18" y="348" width="123" height="164"/>
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wAJ-bc-iZp">
+                                <rect key="frame" x="140" y="348" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_savior.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -409,8 +409,8 @@
                                     <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="42G-5A-m26"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="88f-CB-IqD">
-                                <rect key="frame" x="18" y="553" width="123" height="164"/>
+                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="88f-CB-IqD">
+                                <rect key="frame" x="384" y="553" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_sermon.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -420,8 +420,8 @@
                                     <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="2V2-dF-Ggt"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UAw-00-yTn">
-                                <rect key="frame" x="139" y="718" width="123" height="164"/>
+                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UAw-00-yTn">
+                                <rect key="frame" x="503" y="553" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_shepherds.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -431,8 +431,8 @@
                                     <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="gAN-ev-wIx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="H6V-2V-auG">
-                                <rect key="frame" x="18" y="184" width="123" height="164"/>
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="H6V-2V-auG">
+                                <rect key="frame" x="140" y="184" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_temple.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -454,7 +454,7 @@
                                 <rect key="frame" x="442" y="153" width="244" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HkC-z7-AUY">
+                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HkC-z7-AUY">
                                 <rect key="frame" x="563" y="184" width="123" height="164"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="painting_thumb_aalborg.png">
@@ -721,7 +721,7 @@
                                     <outlet property="maskThis" destination="NVc-gh-OBy" id="5Co-wz-tY0"/>
                                 </connections>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="6F018BE1-29F1-4982-9C32-93FBF39B6CF3" id="NVc-gh-OBy">
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="3739E2EC-4407-4A9D-BB5B-E70C42FE5AEC" id="NVc-gh-OBy">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -978,7 +978,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="6F018BE1-29F1-4982-9C32-93FBF39B6CF3" width="768" height="892">
+        <image name="3739E2EC-4407-4A9D-BB5B-E70C42FE5AEC" width="768" height="892">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -46712,6 +46712,7 @@ KdrHACna2QAp2twAKdrhAAAAAAAABAEAAAAAAAAAQgAAAAAAAAAAAAAAAAAp2uM
         <image name="SG_General_Module_CloseBtn-on.png" width="41" height="41"/>
         <image name="SG_General_Module_CloseBtn.png" width="41" height="41"/>
         <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
+        <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
         <image name="SG_General_Painting_ShareBtn.png" width="120" height="70"/>
         <image name="SG_General_ScanBtn-on.png" width="75" height="56"/>
         <image name="SG_General_ScanBtn.png" width="75" height="56"/>
@@ -46729,9 +46730,12 @@ KdrHACna2QAp2twAKdrhAAAAAAAABAEAAAAAAAAAQgAAAAAAAAAAAAAAAAAp2uM
         <image name="SG_Home_BlochBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_BlochBtn.png" width="768" height="205"/>
         <image name="SG_Home_DonateBtn-on.png" width="245" height="123"/>
+        <image name="SG_Home_DonateBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_DonateBtn.png" width="245" height="123"/>
         <image name="SG_Home_ExhibitionBtn-on.png" width="768" height="205"/>
+        <image name="SG_Home_ExhibitionBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_ExhibitionBtn.png" width="768" height="205"/>
+        <image name="SG_Home_FeedbackBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_FeedbackBtn-on.png" width="245" height="123"/>
         <image name="SG_Home_FeedbackBtn.png" width="245" height="123"/>
         <image name="SG_Home_FilmBtn-on.png" width="768" height="205"/>
@@ -46750,6 +46754,8 @@ KdrHACna2QAp2twAKdrhAAAAAAAABAEAAAAAAAAAQgAAAAAAAAAAAAAAAAAp2uM
         <image name="SG_Home_SchwartzBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_SchwartzBtn.png" width="768" height="205"/>
         <image name="SG_Home_SplashScreen.png" width="768" height="1024"/>
+        <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
+        <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
         <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
         <image name="artists_pages_bloch_overlay.png" width="768" height="784"/>
         <image name="artists_pages_hofmann_overlay.png" width="769" height="959"/>

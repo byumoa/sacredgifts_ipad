@@ -23,25 +23,25 @@ const NSString* kControllerIDHofmantr = @"hofman";
 
 const int kTotalPaintings = 19;
 NSString* const kPaintingNames[] = {
-    @"aalborg",
-    @"burial",
     @"capture",
-    @"children",
-    @"cleansing",
-    @"consolator",
-    @"cross",
-    @"denial",
-    @"emmaus",
-    @"garden",
-    @"gethsemane",
-    @"healing",
-    @"mocking",
-    @"resurrection",
+    @"temple",
     @"ruler",
+    @"gethsemane",
     @"savior",
+    @"garden",
+    @"aalborg",
+    @"mocking",
+    @"consolator",
+    @"emmaus",
     @"sermon",
     @"shepherds",
-    @"temple"
+    @"children",
+    @"healing",
+    @"cleansing",
+    @"denial",
+    @"cross",
+    @"burial",
+    @"resurrection"
 };
 
 const NSString* kDontateURLStr = @"https://donate.ldsphilanthropies.org/TNHO3ajmoEyyUA7Sb5uKkg/G/5ZgVo9Qd8EmHpj8ZRnFhzg?cat=YjqfYR-gMES1sqWvh2cJ4g&cde1=795";
