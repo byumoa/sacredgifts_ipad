@@ -28,4 +28,5 @@
 - (IBAction)pressedBack:(UIButton*)sender;
 - (IBAction)pressedDonate:(UIButton *)sender;
 - (IBAction)pressedScan:(id)sender;
+- (IBAction)pressedHome:(id)sender;
 @end

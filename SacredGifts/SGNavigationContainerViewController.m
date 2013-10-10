@@ -174,4 +174,11 @@
     }
 }
 
+-(IBAction)pressedHome:(id)sender
+{
+    _backViewControllerIDStr = (NSString*)kControllerIDHomeStr;
+    
+    [self transitionFromController:self.currentContentController toControllerID:_backViewControllerIDStr fromButtonRect:((UIButton*)sender).frame withAnimType:kAnimTypeZoomOut];
+}
+
 @end
