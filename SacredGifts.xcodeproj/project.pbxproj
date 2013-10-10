@@ -208,6 +208,8 @@
 		61148CDE1806D74200326AC9 /* SG_General_Music_PlayPause@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61148CD21806D74200326AC9 /* SG_General_Music_PlayPause@2x.png */; };
 		61148CE01806D90600326AC9 /* MOCKUP_music.png in Resources */ = {isa = PBXBuildFile; fileRef = 61148CDF1806D90600326AC9 /* MOCKUP_music.png */; };
 		61148CE21806E4B100326AC9 /* songname.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61148CE11806E4B100326AC9 /* songname.mp3 */; };
+		61148CE51806F15C00326AC9 /* SGPanoramaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61148CE41806F15C00326AC9 /* SGPanoramaViewController.m */; };
+		61148CE71806F19A00326AC9 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61148CE61806F19A00326AC9 /* GLKit.framework */; };
 		612630A517EDEE3300AD35BE /* SG_Home_MeetArtistsBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630A117EDEE3300AD35BE /* SG_Home_MeetArtistsBtn@2x.png */; };
 		612630A617EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630A217EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on@2x.png */; };
 		612630A717EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 612630A317EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on.png */; };
@@ -574,6 +576,9 @@
 		61148CD21806D74200326AC9 /* SG_General_Music_PlayPause@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Music_PlayPause@2x.png"; sourceTree = "<group>"; };
 		61148CDF1806D90600326AC9 /* MOCKUP_music.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MOCKUP_music.png; sourceTree = "<group>"; };
 		61148CE11806E4B100326AC9 /* songname.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = songname.mp3; sourceTree = "<group>"; };
+		61148CE31806F15C00326AC9 /* SGPanoramaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPanoramaViewController.h; sourceTree = "<group>"; };
+		61148CE41806F15C00326AC9 /* SGPanoramaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPanoramaViewController.m; sourceTree = "<group>"; };
+		61148CE61806F19A00326AC9 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		612630A117EDEE3300AD35BE /* SG_Home_MeetArtistsBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_MeetArtistsBtn@2x.png"; sourceTree = "<group>"; };
 		612630A217EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_MeetArtistsBtn-on@2x.png"; sourceTree = "<group>"; };
 		612630A317EDEE3300AD35BE /* SG_Home_MeetArtistsBtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_MeetArtistsBtn-on.png"; sourceTree = "<group>"; };
@@ -741,6 +746,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61148CE71806F19A00326AC9 /* GLKit.framework in Frameworks */,
 				6186A8B817F3247B0047097F /* AVFoundation.framework in Frameworks */,
 				6152D13718017C9D003E8CB7 /* MediaPlayer.framework in Frameworks */,
 				6186A8BE17F324930047097F /* SystemConfiguration.framework in Frameworks */,
@@ -795,6 +801,7 @@
 		61008A7F17ED03F0005E39CE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61148CE61806F19A00326AC9 /* GLKit.framework */,
 				6152D13618017C9D003E8CB7 /* MediaPlayer.framework */,
 				6186A8BD17F324930047097F /* SystemConfiguration.framework */,
 				6186A8BB17F3248A0047097F /* CoreVideo.framework */,
@@ -847,6 +854,8 @@
 				619B16B01805CC1A00A51120 /* SGSchwartzViewController.m */,
 				619B16B21805CC2800A51120 /* SGHofmanViewController.h */,
 				619B16B31805CC2800A51120 /* SGHofmanViewController.m */,
+				61148CE31806F15C00326AC9 /* SGPanoramaViewController.h */,
+				61148CE41806F15C00326AC9 /* SGPanoramaViewController.m */,
 			);
 			path = SacredGifts;
 			sourceTree = "<group>";
@@ -1699,6 +1708,7 @@
 				6152D13518004096003E8CB7 /* SGVideoOverlayViewController.m in Sources */,
 				619B16AE1805CC0900A51120 /* SGBlochViewController.m in Sources */,
 				6109798217F74DFB005A7E14 /* SGSummaryOverlayViewController.m in Sources */,
+				61148CE51806F15C00326AC9 /* SGPanoramaViewController.m in Sources */,
 				6186388B17F0C99C00F4A6BE /* SGContainerViewController.m in Sources */,
 				6190A51D17EDCB7F00860B8F /* SGMeetTheArtistsViewController.m in Sources */,
 				6180C75117F993A10062FB7D /* SGFingerPaintView.m in Sources */,

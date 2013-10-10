@@ -722,10 +722,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="278"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="MOCKUP_music.png" id="Og6-2M-sWt">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="278"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="SG_General_Media_Playbar.png" id="g5H-MS-52i">
                                 <rect key="frame" x="100" y="221" width="635" height="9"/>
                                 <autoresizingMask key="autoresizingMask"/>
@@ -787,7 +783,7 @@
                                     <outlet property="maskThis" destination="NVc-gh-OBy" id="5Co-wz-tY0"/>
                                 </connections>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="8EAEB595-9380-42B4-A4B5-D703DE286E21" id="NVc-gh-OBy">
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="328C55E6-183B-4B26-83AE-9EB18F1BEBA6" id="NVc-gh-OBy">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -860,6 +856,22 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3q-g6-eVd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2901" y="488"/>
+        </scene>
+        <!--GLKit View Controller-->
+        <scene sceneID="OVI-so-eiV">
+            <objects>
+                <glkViewController restorationIdentifier="panorama" storyboardIdentifier="panorama" autoresizesArchivedViewToFullSize="NO" preferredFramesPerSecond="60" id="013-bG-M3y" customClass="SGPanoramaViewController" sceneMemberID="viewController">
+                    <glkView key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="nWJ-wy-01F">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <connections>
+                            <outlet property="delegate" destination="013-bG-M3y" id="hRJ-29-va6"/>
+                        </connections>
+                    </glkView>
+                </glkViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yd4-Jl-fQY" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1774" y="604"/>
         </scene>
         <!--Panorama Overlay View Controller-->
         <scene sceneID="w2W-Pc-s8Y">
@@ -1044,7 +1056,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="8EAEB595-9380-42B4-A4B5-D703DE286E21" width="768" height="892">
+        <image name="328C55E6-183B-4B26-83AE-9EB18F1BEBA6" width="768" height="892">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -46770,7 +46782,6 @@ KdpqACnabwAp2n4AKdqCACnaiQAp2pEAKdqeACnaowAp2qUAKdqnACnarAAp2rQAKdq3ACnavAAp2sQA
 KdrHACna2QAp2twAKdrhAAAAAAAABAEAAAAAAAAAQgAAAAAAAAAAAAAAAAAp2uM
 </mutableData>
         </image>
-        <image name="MOCKUP_music.png" width="768" height="278"/>
         <image name="SG_General_BackBtn-on.png" width="140" height="56"/>
         <image name="SG_General_BackBtn.png" width="140" height="56"/>
         <image name="SG_General_HomeBtn-on.png" width="200" height="56"/>
