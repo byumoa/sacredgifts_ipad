@@ -10,5 +10,6 @@
 
 @interface SGFindAPaintingViewController : SGContentViewController
 - (IBAction)touchedPainting:(UIButton *)sender;
+- (IBAction)touchedArtist:(id)sender;
 
 @end
