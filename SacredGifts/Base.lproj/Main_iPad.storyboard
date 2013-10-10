@@ -91,7 +91,7 @@
                                         <rect key="frame" x="-17" y="0.0" width="804" height="161"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
-                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="04I-Sx-mhY">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="04I-Sx-mhY">
                                         <rect key="frame" x="505" y="-2" width="245" height="124"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" backgroundImage="SG_Home_FeedbackBtn.png">
@@ -158,7 +158,7 @@
                                     <action selector="pressedBtn:" destination="rWn-Ap-S9g" eventType="touchUpInside" id="vXO-P5-50S"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="e1S-K6-Raj">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="e1S-K6-Raj">
                                 <rect key="frame" x="0.0" y="402" width="768" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="SG_Home_MeetArtistsBtn.png">
@@ -169,7 +169,7 @@
                                     <action selector="pressedBtn:" destination="rWn-Ap-S9g" eventType="touchUpInside" id="FL3-g7-soF"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kfF-Bv-6ev">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kfF-Bv-6ev">
                                 <rect key="frame" x="0.0" y="615" width="768" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="SG_Home_ExhibitionBtn.png">
@@ -187,6 +187,8 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outletCollection property="blurredViews" destination="kzm-On-8yx" id="HJE-Xv-tyf"/>
+                        <outletCollection property="blurredViews" destination="kfF-Bv-6ev" id="s5M-Jw-G1E"/>
+                        <outletCollection property="blurredViews" destination="e1S-K6-Raj" id="Z5g-2a-PsK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Luk-dA-5TZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -717,14 +719,48 @@
             <objects>
                 <viewController restorationIdentifier="music" storyboardIdentifier="music" id="9nI-4S-Qna" customClass="SGMusicOverlayViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VZr-XD-eeZ" customClass="SGOverlayView">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="400"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="278"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="MOCKUP_music.png" id="Og6-2M-sWt">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="278"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="SG_General_Media_Playbar.png" id="g5H-MS-52i">
+                                <rect key="frame" x="100" y="221" width="635" height="9"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="SG_General_Media_Playbar_Overlay.png" id="hXV-lf-BbQ">
+                                <rect key="frame" x="100" y="221" width="445" height="9"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="SG_General_Media_Playhead.png" id="7kB-eU-9AP">
+                                <rect key="frame" x="524" y="206" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Ey-Se-eNL">
+                                <rect key="frame" x="11" y="187" width="96" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="SG_General_Music_PlayPause.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="SG_General_Mu SG_General_Music_PlayPause sic_PlayPause.png"/>
+                                <connections>
+                                    <action selector="pressedPlayPause:" destination="9nI-4S-Qna" eventType="touchUpInside" id="liN-lD-u9a"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="playHead" destination="7kB-eU-9AP" id="RBv-ao-P6J"/>
+                        <outlet property="playOverlay" destination="hXV-lf-BbQ" id="TFr-nA-kf6"/>
+                        <outlet property="playPauseButton" destination="4Ey-Se-eNL" id="LA1-zZ-Ll9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mFU-g6-Ogu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -751,7 +787,7 @@
                                     <outlet property="maskThis" destination="NVc-gh-OBy" id="5Co-wz-tY0"/>
                                 </connections>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="096AABD7-BA63-41DF-93FB-430DA8A67B65" id="NVc-gh-OBy">
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="8EAEB595-9380-42B4-A4B5-D703DE286E21" id="NVc-gh-OBy">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
@@ -1008,7 +1044,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="096AABD7-BA63-41DF-93FB-430DA8A67B65" width="768" height="892">
+        <image name="8EAEB595-9380-42B4-A4B5-D703DE286E21" width="768" height="892">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGPj9YJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK4HCBMU
 GR4fIyQsLzI4O1UkbnVsbNUJCgsMDQ4PEBESVk5TU2l6ZVYkY2xhc3NcTlNJbWFnZUZsYWdzVk5TUmVw
@@ -46734,13 +46770,19 @@ KdpqACnabwAp2n4AKdqCACnaiQAp2pEAKdqeACnaowAp2qUAKdqnACnarAAp2rQAKdq3ACnavAAp2sQA
 KdrHACna2QAp2twAKdrhAAAAAAAABAEAAAAAAAAAQgAAAAAAAAAAAAAAAAAp2uM
 </mutableData>
         </image>
+        <image name="MOCKUP_music.png" width="768" height="278"/>
         <image name="SG_General_BackBtn-on.png" width="140" height="56"/>
         <image name="SG_General_BackBtn.png" width="140" height="56"/>
         <image name="SG_General_HomeBtn-on.png" width="200" height="56"/>
         <image name="SG_General_HomeBtn.png" width="200" height="56"/>
+        <image name="SG_General_Media_Playbar.png" width="387" height="9"/>
+        <image name="SG_General_Media_Playbar_Overlay.png" width="387" height="9"/>
+        <image name="SG_General_Media_Playhead.png" width="40" height="40"/>
         <image name="SG_General_ModuleButtonBar.png" width="768" height="70"/>
         <image name="SG_General_Module_CloseBtn-on.png" width="41" height="41"/>
         <image name="SG_General_Module_CloseBtn.png" width="41" height="41"/>
+        <image name="SG_General_Mu SG_General_Music_PlayPause sic_PlayPause.png" width="768" height="1024"/>
+        <image name="SG_General_Music_PlayPause.png" width="41" height="42"/>
         <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
         <image name="SG_General_Painting_ShareBtn.png" width="120" height="70"/>
         <image name="SG_General_ScanBtn-on.png" width="75" height="56"/>

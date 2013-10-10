@@ -81,8 +81,7 @@ const int kPerspectivesButtonWidth = 161;
 
 -(void)addFooterButtonsForPainting:(NSString *)paintingNameStr
 {
-    //NSArray* buttonTypeStrArr = [NSArray arrayWithObjects:kGiftsStr, kSummaryStr, kPerspectiveStr, kMusicStr, kChildrensStr, kDetailsStr, nil];
-    NSArray* buttonTypeStrArr = [NSArray arrayWithObjects:kSummaryStr, nil];
+    NSArray* buttonTypeStrArr = [NSArray arrayWithObjects:kGiftsStr, kSummaryStr, kPerspectiveStr, kMusicStr, kChildrensStr, kDetailsStr, nil];
     
     for( NSString* buttonTypeStr in buttonTypeStrArr)
     {
@@ -225,6 +224,8 @@ const int kPerspectivesButtonWidth = 161;
     else{
         [self.view insertSubview:self.overlayController.view belowSubview:self.footerView];
     }
+    
+    self.overlayController.rootFolderPath = [NSString stringWithFormat: @"%@/%@/%@", @"PaintingResources", _paintingNameStr, moduleStr];
     
     //Configure new overlay viewController
     switch (self.overlayController.moduleType) {
