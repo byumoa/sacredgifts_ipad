@@ -8,7 +8,7 @@
         <!--Scan View Controller-->
         <scene sceneID="4Tu-Wy-HdN">
             <objects>
-                <viewController restorationIdentifier="scan" storyboardIdentifier="scan" id="OqC-Tp-AZk" customClass="SGScanViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="old scan" storyboardIdentifier="old scan" id="OqC-Tp-AZk" customClass="SGScanViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9Ie-Ir-fVT">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -23,7 +23,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5tR-Ae-zLZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-857" y="-235"/>
+            <point key="canvasLocation" x="-957" y="949"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1040,6 +1040,22 @@
             </objects>
             <point key="canvasLocation" x="206" y="-28"/>
         </scene>
+        <!--Parent View Controller-->
+        <scene sceneID="9GC-qj-ULx">
+            <objects>
+                <viewController restorationIdentifier="scan" storyboardIdentifier="scan" id="lxg-Au-don" customClass="ARParentViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9J3-QE-f19">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2jm-0J-9uC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="faw-K1-Ad7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-117" y="1100"/>
+        </scene>
     </scenes>
     <resources>
         <image name="SG_General_BackBtn-on.png" width="140" height="56"/>
@@ -1054,6 +1070,7 @@
         <image name="SG_General_Module_CloseBtn.png" width="41" height="41"/>
         <image name="SG_General_Mu SG_General_Music_PlayPause sic_PlayPause.png" width="768" height="1024"/>
         <image name="SG_General_Music_PlayPause.png" width="41" height="42"/>
+        <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
         <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
         <image name="SG_General_Painting_ShareBtn.png" width="120" height="70"/>
         <image name="SG_General_ScanBtn-on.png" width="75" height="56"/>
@@ -1093,6 +1110,8 @@
         <image name="SG_Home_SchwartzBtn-on.png" width="768" height="205"/>
         <image name="SG_Home_SchwartzBtn.png" width="768" height="205"/>
         <image name="SG_Home_SplashScreen.png" width="768" height="1024"/>
+        <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
+        <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
         <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
         <image name="artists_pages_bloch_overlay.png" width="768" height="784"/>
         <image name="artists_pages_hofmann_overlay.png" width="769" height="959"/>
