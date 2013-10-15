@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<QCARConfig xsi:noNamespaceSchemaLocation="qcar_config.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <Tracking>
+        <ImageTarget name="mocking" size="805 963"/>
+        <ImageTarget name="resurrection" size="803 1070"/>
+        <ImageTarget name="cross" size="935 1137"/>
+        <ImageTarget name="gethsemane" size="956 1338"/>
+        <ImageTarget name="shepherds" size="1152 1255"/>
+        <ImageTarget name="garden" size="1028 1338"/>
+        <ImageTarget name="healing" size="922 1058"/>
+        <ImageTarget name="burial" size="899 1070"/>
+        <ImageTarget name="emmaus" size="827 1070"/>
+        <ImageTarget name="cleansing" size="922 1025"/>
+        <ImageTarget name="children" size="922 1070"/>
+        <ImageTarget name="ruler" size="1152 913"/>
+        <ImageTarget name="capture" size="1152 825"/>
+        <ImageTarget name="consolator" size="792 1070"/>
+        <ImageTarget name="savior" size="986 1338"/>
+        <ImageTarget name="aalborg" size="922 1070"/>
+        <ImageTarget name="denial" size="901 1070"/>
+        <ImageTarget name="sermon" size="922 1006"/>
+        <ImageTarget name="temple" size="1152 849"/>
+    </Tracking>
+</QCARConfig>

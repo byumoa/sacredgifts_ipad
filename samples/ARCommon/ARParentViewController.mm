@@ -21,6 +21,7 @@
     
     // Provide a list of targets we're expecting - the first in the list is the default
     [qUtils addTargetName:@"Stones & Chips" atPath:@"StonesAndChips.xml"];
+    //[qUtils addTargetName:@"Sacred Gifts" atPath:@"SacredGifts.xml"];
     [qUtils addTargetName:@"Tarmac" atPath:@"Tarmac.xml"];
     
     arViewRect = screenBounds;

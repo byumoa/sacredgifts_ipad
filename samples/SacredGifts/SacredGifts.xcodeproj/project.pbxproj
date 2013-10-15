@@ -24,6 +24,8 @@
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
+		614E3C9A180D8D9C002E875B /* SacredGifts.dat in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C98180D8D9C002E875B /* SacredGifts.dat */; };
+		614E3C9B180D8D9C002E875B /* SacredGifts.xml in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C99180D8D9C002E875B /* SacredGifts.xml */; };
 		61CD509B180C23B100D28921 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5099180C23B100D28921 /* Main_iPhone.storyboard */; };
 		61CD509C180C23B100D28921 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509A180C23B100D28921 /* Main_iPad.storyboard */; };
 		61CD50A0180C23D500D28921 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509D180C23D500D28921 /* icon.png */; };
@@ -31,8 +33,6 @@
 		61CD50A2180C23D500D28921 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509F180C23D500D28921 /* Default-568h@2x.png */; };
 		61CD50A4180C240400D28921 /* PaintingResources in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50A3180C240400D28921 /* PaintingResources */; };
 		61CD51CD180C242500D28921 /* overlay__brackets.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50A7180C242500D28921 /* overlay__brackets.png */; };
-		61CD51CE180C242500D28921 /* SacredGiftsPaintings.dat in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50A8180C242500D28921 /* SacredGiftsPaintings.dat */; };
-		61CD51CF180C242500D28921 /* SacredGiftsPaintings.xml in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50A9180C242500D28921 /* SacredGiftsPaintings.xml */; };
 		61CD51D0180C242500D28921 /* artists_pages_artists_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50AB180C242500D28921 /* artists_pages_artists_bg.png */; };
 		61CD51D1180C242500D28921 /* artists_pages_bloch_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50AC180C242500D28921 /* artists_pages_bloch_overlay.png */; };
 		61CD51D2180C242500D28921 /* artists_pages_bloch_overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50AD180C242500D28921 /* artists_pages_bloch_overlay@2x.png */; };
@@ -391,6 +391,8 @@
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		614E3C98180D8D9C002E875B /* SacredGifts.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = SacredGifts.dat; path = ImageTargets/assets/SacredGifts.dat; sourceTree = "<group>"; };
+		614E3C99180D8D9C002E875B /* SacredGifts.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = SacredGifts.xml; path = ImageTargets/assets/SacredGifts.xml; sourceTree = "<group>"; };
 		61CD5099180C23B100D28921 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		61CD509A180C23B100D28921 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		61CD509D180C23D500D28921 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -398,8 +400,6 @@
 		61CD509F180C23D500D28921 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		61CD50A3180C240400D28921 /* PaintingResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PaintingResources; sourceTree = "<group>"; };
 		61CD50A7180C242500D28921 /* overlay__brackets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay__brackets.png; sourceTree = "<group>"; };
-		61CD50A8180C242500D28921 /* SacredGiftsPaintings.dat */ = {isa = PBXFileReference; lastKnownFileType = file; path = SacredGiftsPaintings.dat; sourceTree = "<group>"; };
-		61CD50A9180C242500D28921 /* SacredGiftsPaintings.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = SacredGiftsPaintings.xml; sourceTree = "<group>"; };
 		61CD50AB180C242500D28921 /* artists_pages_artists_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = artists_pages_artists_bg.png; sourceTree = "<group>"; };
 		61CD50AC180C242500D28921 /* artists_pages_bloch_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = artists_pages_bloch_overlay.png; sourceTree = "<group>"; };
 		61CD50AD180C242500D28921 /* artists_pages_bloch_overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "artists_pages_bloch_overlay@2x.png"; sourceTree = "<group>"; };
@@ -795,6 +795,8 @@
 		158997C613290423004C3F7B /* assets */ = {
 			isa = PBXGroup;
 			children = (
+				614E3C98180D8D9C002E875B /* SacredGifts.dat */,
+				614E3C99180D8D9C002E875B /* SacredGifts.xml */,
 				76CEC81C146D45F7009E8098 /* StonesAndChips.dat */,
 				76CEC81D146D45F7009E8098 /* StonesAndChips.xml */,
 				76CEC81E146D45F7009E8098 /* Tarmac.dat */,
@@ -943,8 +945,6 @@
 			isa = PBXGroup;
 			children = (
 				61CD50A7180C242500D28921 /* overlay__brackets.png */,
-				61CD50A8180C242500D28921 /* SacredGiftsPaintings.dat */,
-				61CD50A9180C242500D28921 /* SacredGiftsPaintings.xml */,
 			);
 			path = "AR Assets";
 			sourceTree = "<group>";
@@ -1446,6 +1446,7 @@
 				61CD523B180C242500D28921 /* SG_General_HomeBtn-on.png in Resources */,
 				61CD525D180C242500D28921 /* SG_General_Painting_DetailOverlay.png in Resources */,
 				61CD5255180C242500D28921 /* SG_General_Painting_ContextBtn-on.png in Resources */,
+				76CEC821146D45F7009E8098 /* StonesAndChips.xml in Resources */,
 				61CD52A1180C242500D28921 /* painting_thumb_aalborg@2x.png in Resources */,
 				61CD520E180C242500D28921 /* SG_Home_LearnMoreBtn.png in Resources */,
 				61CD52A6180C242500D28921 /* painting_thumb_capture-on.png in Resources */,
@@ -1458,7 +1459,6 @@
 				61CD52A4180C242500D28921 /* painting_thumb_burial.png in Resources */,
 				61CD52D1180C242500D28921 /* painting_thumb_mocking@2x.png in Resources */,
 				61CD5259180C242500D28921 /* SG_General_Painting_DetailMarkerBtn-on.png in Resources */,
-				61CD51CF180C242500D28921 /* SacredGiftsPaintings.xml in Resources */,
 				61CD51EB180C242500D28921 /* sg_home_blochbtn@2x.png in Resources */,
 				61CD52C0180C242500D28921 /* painting_thumb_emmaus.png in Resources */,
 				61CD525B180C242500D28921 /* SG_General_Painting_DetailMarkerBtn.png in Resources */,
@@ -1485,7 +1485,6 @@
 				61CD527D180C242500D28921 /* SG_General_Painting_Summary@2x.png in Resources */,
 				61CD51DA180C242500D28921 /* sg_home_bg-exhibition@2x.png in Resources */,
 				61CD509C180C23B100D28921 /* Main_iPad.storyboard in Resources */,
-				76CEC821146D45F7009E8098 /* StonesAndChips.xml in Resources */,
 				61CD51FA180C242500D28921 /* sg_home_filmbtn.png in Resources */,
 				61CD521A180C242500D28921 /* SG_Home_PaintingListBtn.png in Resources */,
 				61CD51D4180C242500D28921 /* artists_pages_hofmann_overlay@2x.png in Resources */,
@@ -1629,6 +1628,7 @@
 				61CD52CC180C242500D28921 /* painting_thumb_healing.png in Resources */,
 				61CD524B180C242500D28921 /* SG_General_ModuleButtonBar.png in Resources */,
 				61CD5256180C242500D28921 /* SG_General_Painting_ContextBtn-on@2x.png in Resources */,
+				614E3C9A180D8D9C002E875B /* SacredGifts.dat in Resources */,
 				61CD51DE180C242500D28921 /* sg_home_bg-findpainting_blur.png in Resources */,
 				61CD5211180C242500D28921 /* sg_home_meetartistsbtn-on@2x.png in Resources */,
 				61CD523C180C242500D28921 /* SG_General_HomeBtn-on@2x.png in Resources */,
@@ -1682,7 +1682,6 @@
 				61CD524A180C242500D28921 /* SG_General_Module_Overlay_Schwartz@2x.png in Resources */,
 				61CD5237180C242500D28921 /* SG_General_BackBtn-on.png in Resources */,
 				61CD521E180C242500D28921 /* sg_home_reservationbtn.png in Resources */,
-				61CD51CE180C242500D28921 /* SacredGiftsPaintings.dat in Resources */,
 				61CD520F180C242500D28921 /* SG_Home_LearnMoreBtn@2x.png in Resources */,
 				61CD51D3180C242500D28921 /* artists_pages_hofmann_overlay.png in Resources */,
 				61CD5228180C242500D28921 /* SG_Home_SplashScreen.png in Resources */,
@@ -1723,6 +1722,7 @@
 				61CD52E5180C242500D28921 /* painting_thumb_shepherds@2x.png in Resources */,
 				61CD5263180C242500D28921 /* SG_General_Painting_GiftsBtn-on.png in Resources */,
 				61CD5262180C242500D28921 /* SG_General_Painting_DetailsBtn@2x.png in Resources */,
+				614E3C9B180D8D9C002E875B /* SacredGifts.xml in Resources */,
 				61CD525C180C242500D28921 /* SG_General_Painting_DetailMarkerBtn@2x.png in Resources */,
 				61CD52AD180C242500D28921 /* painting_thumb_children@2x.png in Resources */,
 				61CD52A3180C242500D28921 /* painting_thumb_burial-on@2x.png in Resources */,
