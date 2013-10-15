@@ -784,7 +784,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPd-we-w8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2730" y="-150"/>
+            <point key="canvasLocation" x="2717" y="-178"/>
         </scene>
         <!--Gift Overlay View Controller-->
         <scene sceneID="HjJ-QA-JCS">
@@ -970,7 +970,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6KJ-T6-uSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2630" y="409"/>
+            <point key="canvasLocation" x="2636" y="421"/>
         </scene>
         <!--Schwartz View Controller-->
         <scene sceneID="PKt-4M-xKP">
@@ -1051,7 +1051,6 @@
         <image name="SG_General_Mu SG_General_Music_PlayPause sic_PlayPause.png" width="768" height="1024"/>
         <image name="SG_General_Music_PlayPause.png" width="41" height="42"/>
         <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
-        <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
         <image name="SG_General_Painting_ShareBtn.png" width="120" height="70"/>
         <image name="SG_General_ScanBtn-on.png" width="75" height="56"/>
         <image name="SG_General_ScanBtn.png" width="75" height="56"/>
@@ -1074,8 +1073,6 @@
         <image name="SG_Home_FeedbackBtn.png" width="245" height="123"/>
         <image name="SG_Home_Footer_BG.png" width="804" height="161"/>
         <image name="SG_Home_SplashScreen.png" width="768" height="1024"/>
-        <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
-        <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
         <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
         <image name="artists_pages_bloch_overlay.png" width="768" height="784"/>
         <image name="artists_pages_hofmann_overlay.png" width="769" height="959"/>

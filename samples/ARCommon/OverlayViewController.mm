@@ -43,6 +43,12 @@ Qualcomm Confidential and Proprietary
     
     // Get the camera capabilities
     [OverlayViewController determineCameraCapabilities:&cameraCapabilities];
+    
+    UIImageView* bracketsImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"overlay__brackets.png"]];
+    CGPoint center = self.view.center;
+    center.y -= 20;
+    bracketsImgView.center = center;
+    [self.view addSubview:bracketsImgView];
 }
 
 
