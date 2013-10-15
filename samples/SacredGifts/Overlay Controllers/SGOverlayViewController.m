@@ -53,4 +53,30 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL) playAudioNamed: (NSString*)audioName;
+{
+    NSString *musicPath = [[NSBundle mainBundle] pathForResource:audioName ofType:@".mp3" inDirectory:self.rootFolderPath];
+    
+    if( musicPath )
+    {
+        NSURL *musicURL = [NSURL fileURLWithPath:musicPath];
+        [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryAmbient error: nil];
+    
+        NSError *activationError = nil;
+        [[AVAudioSession sharedInstance] setActive: YES error: &activationError];
+    
+        self.player = [[AVAudioPlayer alloc] initWithContentsOfURL: musicURL error: nil];
+        [self.player prepareToPlay];
+        [self.player setVolume: 1.0];
+        self.player.numberOfLoops = -1;
+        [self.player play];
+        
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 @end

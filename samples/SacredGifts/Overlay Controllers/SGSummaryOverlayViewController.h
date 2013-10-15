@@ -7,7 +7,10 @@
 //
 
 #import "SGOverlayViewController.h"
+#import <AVFoundation/AVFoundation.h>
 
 @interface SGSummaryOverlayViewController : SGOverlayViewController
+@property (strong, nonatomic) AVAudioPlayer* player;
+- (IBAction)pressedNarration:(UIButton *)sender;
 
 @end

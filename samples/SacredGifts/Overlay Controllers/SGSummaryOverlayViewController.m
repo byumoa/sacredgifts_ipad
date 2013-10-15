@@ -24,4 +24,12 @@
     return self;
 }
 
+- (IBAction)pressedNarration:(UIButton *)sender
+{
+    if( ![self playAudioNamed:@"narration"])
+    {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Missing asset" message:@"narration.mp3 has not been added for this overlay" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+    }
+}
 @end

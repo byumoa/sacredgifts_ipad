@@ -26,6 +26,10 @@
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
 		614E3C9A180D8D9C002E875B /* SacredGifts.dat in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C98180D8D9C002E875B /* SacredGifts.dat */; };
 		614E3C9B180D8D9C002E875B /* SacredGifts.xml in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C99180D8D9C002E875B /* SacredGifts.xml */; };
+		614E3CA0180DF631002E875B /* speaker_btns__narration_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C9C180DF631002E875B /* speaker_btns__narration_btn.png */; };
+		614E3CA1180DF631002E875B /* speaker_btns__narration_btn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C9D180DF631002E875B /* speaker_btns__narration_btn-on.png */; };
+		614E3CA2180DF631002E875B /* speaker_btns__narration_btn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C9E180DF631002E875B /* speaker_btns__narration_btn-on@2x.png */; };
+		614E3CA3180DF631002E875B /* speaker_btns__narration_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C9F180DF631002E875B /* speaker_btns__narration_btn@2x.png */; };
 		61CD509B180C23B100D28921 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5099180C23B100D28921 /* Main_iPhone.storyboard */; };
 		61CD509C180C23B100D28921 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509A180C23B100D28921 /* Main_iPad.storyboard */; };
 		61CD50A0180C23D500D28921 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509D180C23D500D28921 /* icon.png */; };
@@ -393,6 +397,10 @@
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		614E3C98180D8D9C002E875B /* SacredGifts.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = SacredGifts.dat; path = ImageTargets/assets/SacredGifts.dat; sourceTree = "<group>"; };
 		614E3C99180D8D9C002E875B /* SacredGifts.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = SacredGifts.xml; path = ImageTargets/assets/SacredGifts.xml; sourceTree = "<group>"; };
+		614E3C9C180DF631002E875B /* speaker_btns__narration_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_btns__narration_btn.png; sourceTree = "<group>"; };
+		614E3C9D180DF631002E875B /* speaker_btns__narration_btn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speaker_btns__narration_btn-on.png"; sourceTree = "<group>"; };
+		614E3C9E180DF631002E875B /* speaker_btns__narration_btn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speaker_btns__narration_btn-on@2x.png"; sourceTree = "<group>"; };
+		614E3C9F180DF631002E875B /* speaker_btns__narration_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speaker_btns__narration_btn@2x.png"; sourceTree = "<group>"; };
 		61CD5099180C23B100D28921 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		61CD509A180C23B100D28921 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		61CD509D180C23D500D28921 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -1083,6 +1091,10 @@
 		61CD5115180C242500D28921 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				614E3C9C180DF631002E875B /* speaker_btns__narration_btn.png */,
+				614E3C9D180DF631002E875B /* speaker_btns__narration_btn-on.png */,
+				614E3C9E180DF631002E875B /* speaker_btns__narration_btn-on@2x.png */,
+				614E3C9F180DF631002E875B /* speaker_btns__narration_btn@2x.png */,
 				61CD5116180C242500D28921 /* SG_General_BackBtn-on.png */,
 				61CD5117180C242500D28921 /* SG_General_BackBtn-on@2x.png */,
 				61CD5118180C242500D28921 /* SG_General_BackBtn.png */,
@@ -1529,6 +1541,8 @@
 				61CD5260180C242500D28921 /* SG_General_Painting_DetailsBtn-on@2x.png in Resources */,
 				61CD52E0180C242500D28921 /* painting_thumb_sermon.png in Resources */,
 				61CD51FC180C242500D28921 /* sg_home_findbtn-on.png in Resources */,
+				614E3CA2180DF631002E875B /* speaker_btns__narration_btn-on@2x.png in Resources */,
+				614E3CA1180DF631002E875B /* speaker_btns__narration_btn-on.png in Resources */,
 				61CD51F1180C242500D28921 /* sg_home_exhibitionbtn-on@2x.png in Resources */,
 				61CD5214180C242500D28921 /* sg_home_originsbtn-on.png in Resources */,
 				61CD5283180C242500D28921 /* SG_General_ScanBtn-on@2x.png in Resources */,
@@ -1548,6 +1562,7 @@
 				61CD51FF180C242500D28921 /* sg_home_findbtn@2x.png in Resources */,
 				61CD5206180C242500D28921 /* sg_home_label_bloch.png in Resources */,
 				61CD509B180C23B100D28921 /* Main_iPhone.storyboard in Resources */,
+				614E3CA3180DF631002E875B /* speaker_btns__narration_btn@2x.png in Resources */,
 				61CD5290180C242500D28921 /* SG_General_Share_other-on.png in Resources */,
 				61CD52DA180C242500D28921 /* painting_thumb_savior-on.png in Resources */,
 				61CD52E3180C242500D28921 /* painting_thumb_shepherds-on@2x.png in Resources */,
@@ -1675,6 +1690,7 @@
 				61CD52CE180C242500D28921 /* painting_thumb_mocking-on.png in Resources */,
 				61CD5236180C242500D28921 /* SG_General_Music_PlayPause@2x.png in Resources */,
 				61CD526A180C242500D28921 /* SG_General_Painting_ModuleBtn@2x.png in Resources */,
+				614E3CA0180DF631002E875B /* speaker_btns__narration_btn.png in Resources */,
 				61CD5268180C242500D28921 /* SG_General_Painting_ModuleBtn-on@2x.png in Resources */,
 				61CD52B9180C242500D28921 /* painting_thumb_cross@2x.png in Resources */,
 				61CD5213180C242500D28921 /* sg_home_meetartistsbtn@2x.png in Resources */,

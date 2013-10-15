@@ -9,7 +9,7 @@
 #import "SGMusicOverlayViewController.h"
 
 @interface SGMusicOverlayViewController ()
-- (void) playMusicFromBeginning;
+
 @end
 
 @implementation SGMusicOverlayViewController
@@ -27,30 +27,9 @@
 -(void)addBackgroundImgWithPath:(NSString *)bgImgPath
 {
     [super addBackgroundImgWithPath:bgImgPath];
-    [self playMusicFromBeginning];
+    [self playAudioNamed:@"music"];
 }
 
 - (IBAction)pressedPlayPause:(id)sender{}
 
--(void)playMusicFromBeginning
-{
-    NSString *musicPath = [[NSBundle mainBundle] pathForResource:@"music" ofType:@".mp3" inDirectory:self.rootFolderPath];
-    
-    NSURL *musicURL = [NSURL fileURLWithPath:musicPath];
-
-    //[[AVAudioSession sharedInstance] setDelegate: self];
-    [[AVAudioSession sharedInstance] setCategory: AVAudioSessionCategoryAmbient error: nil];
-    
-    // Activates the audio session.
-    
-    NSError *activationError = nil;
-    [[AVAudioSession sharedInstance] setActive: YES error: &activationError];
-    
-    self.player = [[AVAudioPlayer alloc] initWithContentsOfURL: musicURL error: nil];
-    [self.player prepareToPlay];
-    [self.player setVolume: 1.0];
-    self.player.numberOfLoops = -1;
-    //[player setDelegate: self];
-    [self.player play];
-}
 @end
