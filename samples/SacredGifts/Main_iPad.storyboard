@@ -1109,6 +1109,29 @@
             </objects>
             <point key="canvasLocation" x="-117" y="1100"/>
         </scene>
+        <!--Persepectives Overlay View Controller-->
+        <scene sceneID="Eht-xz-8cn">
+            <objects>
+                <viewController restorationIdentifier="MatrixMatch" storyboardIdentifier="MatrixMatch" id="cMe-XC-vSe" customClass="SGPersepectivesOverlayViewController" sceneMemberID="viewController">
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="frv-Kb-uEq">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Matrix Match" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="b7H-eU-mq2">
+                                <rect key="frame" x="89" y="388" width="591" height="248"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="100"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.49735383064516125" green="1" blue="1" alpha="0.54000000000000004" colorSpace="calibratedRGB"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tee-jl-olm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="557" y="1439"/>
+        </scene>
     </scenes>
     <resources>
         <image name="SG_General_BackBtn-on.png" width="140" height="56"/>

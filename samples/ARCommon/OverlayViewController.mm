@@ -10,6 +10,7 @@ Qualcomm Confidential and Proprietary
 #import "OverlayViewController.h"
 #import "OverlayView.h"
 #import "QCARutils.h"
+#import "SGPerspectiveMatchViewController.h"
 
 @interface OverlayViewController (PrivateMethods)
 + (void) determineCameraCapabilities:(struct tagCameraCapabilities *) pCapabilities;
@@ -28,7 +29,15 @@ Qualcomm Confidential and Proprietary
     return self;
 }
 
-
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main_iPad"
+                                                            bundle: nil];
+    self.perspectiveMatchViewController = [mainStoryboard instantiateViewControllerWithIdentifier:@"MatrixMatch"];
+    [self.view addSubview:self.perspectiveMatchViewController.view];
+}
 
 
 - (void) loadView

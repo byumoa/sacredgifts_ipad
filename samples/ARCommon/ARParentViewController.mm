@@ -8,6 +8,7 @@
 #import "ARViewController.h"
 #import "OverlayViewController.h"
 #import "QCARutils.h"
+#import "EAGLView.h"
 
 @implementation ARParentViewController
 
@@ -21,8 +22,9 @@
     
     // Provide a list of targets we're expecting - the first in the list is the default
     [qUtils addTargetName:@"Stones & Chips" atPath:@"StonesAndChips.xml"];
-    //[qUtils addTargetName:@"Sacred Gifts" atPath:@"SacredGifts.xml"];
     [qUtils addTargetName:@"Tarmac" atPath:@"Tarmac.xml"];
+    
+    //[qUtils addTargetName:@"Sacred Gifts" atPath:@"SacredGifts.xml"];
     
     arViewRect = screenBounds;
 }
@@ -75,7 +77,6 @@
     overlayViewController = [[OverlayViewController alloc] init];
     [parentView addSubview: overlayViewController.view];
     
-    
     [self addChildViewController:arViewController];
     [self addChildViewController:overlayViewController];
     [self.view addSubview:parentView];
@@ -104,6 +105,10 @@
     
     NSLog(@"ARParentVC: viewDidAppear");
 //    [arViewController viewDidAppear:animated];
+    
+    //Setting EAGLView Delegate
+    //perspectiveMatchVC is null here
+    ((EAGLView*)arViewController.arView).delegate = overlayViewController.perspectiveMatchViewController;
 }
 
 

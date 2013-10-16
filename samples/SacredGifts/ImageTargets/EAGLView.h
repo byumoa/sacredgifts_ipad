@@ -5,6 +5,7 @@
  ==============================================================================*/
 
 #import "AR_EAGLView.h"
+#import "SGARMatrixDelegate.h"
 // This class wraps the CAEAGLLayer from CoreAnimation into a convenient UIView
 // subclass.  The view content is basically an EAGL surface you render your
 // OpenGL scene into.  Note that setting the view non-opaque will only work if
@@ -12,5 +13,6 @@
 @interface EAGLView : AR_EAGLView
 {
 }
+@property (nonatomic, weak) id<SGARMatrixDelegate> delegate;
 
 @end

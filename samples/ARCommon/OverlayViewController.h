@@ -6,6 +6,7 @@
 
 
 #import <UIKit/UIKit.h>
+#import "SGPerspectiveMatchViewController.h"
 
 @class QCARutils;
 
@@ -31,6 +32,7 @@
     
     QCARutils *qUtils;
 }
+@property (nonatomic, weak) SGPerspectiveMatchViewController* perspectiveMatchViewController;
 
 - (void) handleViewRotation:(UIInterfaceOrientation)interfaceOrientation;
 - (void) showOverlay;

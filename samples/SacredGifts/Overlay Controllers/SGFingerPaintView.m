@@ -48,6 +48,9 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
     
     // Retrieve the graphics context
     CGContextRef context = UIGraphicsGetCurrentContext();
+    //UIGraphicsBeginImageContextWithOptions(<#CGSize size#>, <#BOOL opaque#>, <#CGFloat scale#>)
+        //Use it as a stack
+    //UIGraphicsEndImageContext();
     CGImageRef maskImage = [self drawImageWithContext:context inRect:rect];
     
     // Get the mask from the image

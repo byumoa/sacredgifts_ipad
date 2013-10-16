@@ -32,6 +32,7 @@
 		614E3CA3180DF631002E875B /* speaker_btns__narration_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C9F180DF631002E875B /* speaker_btns__narration_btn@2x.png */; };
 		614E3CA6180E4AC1002E875B /* SGArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614E3CA5180E4AC1002E875B /* SGArtistViewController.m */; };
 		614E3CA8180EA0FB002E875B /* schwartz_bio_audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 614E3CA7180EA0FB002E875B /* schwartz_bio_audio.mp3 */; };
+		614E3CF9180EBF0B002E875B /* SGPerspectiveMatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614E3CF8180EBF0B002E875B /* SGPerspectiveMatchViewController.m */; };
 		61CD509B180C23B100D28921 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5099180C23B100D28921 /* Main_iPhone.storyboard */; };
 		61CD509C180C23B100D28921 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509A180C23B100D28921 /* Main_iPad.storyboard */; };
 		61CD50A0180C23D500D28921 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509D180C23D500D28921 /* icon.png */; };
@@ -406,6 +407,9 @@
 		614E3CA4180E4AC1002E875B /* SGArtistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGArtistViewController.h; sourceTree = "<group>"; };
 		614E3CA5180E4AC1002E875B /* SGArtistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGArtistViewController.m; sourceTree = "<group>"; };
 		614E3CA7180EA0FB002E875B /* schwartz_bio_audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = schwartz_bio_audio.mp3; sourceTree = "<group>"; };
+		614E3CF7180EBF0B002E875B /* SGPerspectiveMatchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGPerspectiveMatchViewController.h; sourceTree = "<group>"; };
+		614E3CF8180EBF0B002E875B /* SGPerspectiveMatchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGPerspectiveMatchViewController.m; sourceTree = "<group>"; };
+		614E3CFA180ECB81002E875B /* SGARMatrixDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGARMatrixDelegate.h; sourceTree = "<group>"; };
 		61CD5099180C23B100D28921 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		61CD509A180C23B100D28921 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		61CD509D180C23D500D28921 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -847,6 +851,8 @@
 				61CD5336180C256700D28921 /* SGWebViewController.m */,
 				61CD5337180C256700D28921 /* SGScanViewController.h */,
 				61CD5338180C256700D28921 /* SGScanViewController.m */,
+				614E3CA4180E4AC1002E875B /* SGArtistViewController.h */,
+				614E3CA5180E4AC1002E875B /* SGArtistViewController.m */,
 				61CD5339180C256700D28921 /* SGBlochViewController.h */,
 				61CD533A180C256700D28921 /* SGBlochViewController.m */,
 				61CD533B180C256700D28921 /* SGSchwartzViewController.h */,
@@ -861,10 +867,11 @@
 				76F3A47F144849D600180E08 /* ARCommon */,
 				15A1584C135C9CF800C6B482 /* EAGLView.h */,
 				1588319613605ABF0082B874 /* EAGLView.mm */,
+				614E3CF7180EBF0B002E875B /* SGPerspectiveMatchViewController.h */,
+				614E3CF8180EBF0B002E875B /* SGPerspectiveMatchViewController.m */,
+				614E3CFA180ECB81002E875B /* SGARMatrixDelegate.h */,
 				15A15855135C9CF800C6B482 /* Teapot.h */,
 				15A15860135C9D0700C6B482 /* Supporting Files */,
-				614E3CA4180E4AC1002E875B /* SGArtistViewController.h */,
-				614E3CA5180E4AC1002E875B /* SGArtistViewController.m */,
 			);
 			name = SacredGifts;
 			sourceTree = "<group>";
@@ -1772,6 +1779,7 @@
 				61CD5343180C256700D28921 /* SGMeetTheArtistsViewController.m in Sources */,
 				15A1585E135C9CF800C6B482 /* ShaderUtils.cpp in Sources */,
 				61CD5304180C24FD00D28921 /* SGDetailsOverlayViewController.m in Sources */,
+				614E3CF9180EBF0B002E875B /* SGPerspectiveMatchViewController.m in Sources */,
 				61CD5340180C256700D28921 /* SGViewController.m in Sources */,
 				15A1585F135C9CF800C6B482 /* Texture.mm in Sources */,
 				61CD5309180C24FD00D28921 /* SGOverlayViewController.m in Sources */,

@@ -196,6 +196,8 @@ namespace {
     }
 #endif
     
+    [self.delegate arMatrixReporter:self matrixUpdated:345];
+    
     QCAR::Renderer::getInstance().end();
     [self presentFramebuffer];
 }
