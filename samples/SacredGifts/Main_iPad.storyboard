@@ -195,6 +195,17 @@
                                         <rect key="frame" x="0.0" y="96" width="769" height="959"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ckk-2L-XRd">
+                                        <rect key="frame" x="668" y="126" width="71" height="71"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="speaker_btns__narration_btn.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" image="speaker_btns__narration_btn-on.png"/>
+                                        <connections>
+                                            <action selector="pressedNarration:" destination="jBG-xU-cwl" eventType="touchUpInside" id="0TR-6r-mZh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -1014,6 +1025,17 @@
                                         <rect key="frame" x="0.0" y="96" width="768" height="845"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="d6d-Wx-beA">
+                                        <rect key="frame" x="668" y="126" width="71" height="71"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="speaker_btns__narration_btn.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" image="speaker_btns__narration_btn-on.png"/>
+                                        <connections>
+                                            <action selector="pressedNarration:" destination="vkt-vk-LdG" eventType="touchUpInside" id="6Vy-ah-Cyx"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -1047,6 +1069,17 @@
                                         <rect key="frame" x="0.0" y="96" width="768" height="784"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h94-0a-9Ax">
+                                        <rect key="frame" x="668" y="126" width="71" height="71"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="speaker_btns__narration_btn.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" image="speaker_btns__narration_btn-on.png"/>
+                                        <connections>
+                                            <action selector="pressedNarration:" destination="kwW-sc-41B" eventType="touchUpInside" id="hTf-Cw-yle"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -1091,7 +1124,6 @@
         <image name="SG_General_Mu SG_General_Music_PlayPause sic_PlayPause.png" width="768" height="1024"/>
         <image name="SG_General_Music_PlayPause.png" width="41" height="42"/>
         <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
-        <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
         <image name="SG_General_Painting_ShareBtn.png" width="120" height="70"/>
         <image name="SG_General_ScanBtn-on.png" width="75" height="56"/>
         <image name="SG_General_ScanBtn.png" width="75" height="56"/>
@@ -1114,8 +1146,6 @@
         <image name="SG_Home_FeedbackBtn.png" width="245" height="123"/>
         <image name="SG_Home_Footer_BG.png" width="804" height="161"/>
         <image name="SG_Home_SplashScreen.png" width="768" height="1024"/>
-        <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
-        <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
         <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
         <image name="artists_pages_bloch_overlay.png" width="768" height="784"/>
         <image name="artists_pages_hofmann_overlay.png" width="769" height="959"/>
@@ -1183,7 +1213,6 @@
         <image name="sg_home_schwartzbtn-on.png" width="768" height="205"/>
         <image name="sg_home_schwartzbtn.png" width="768" height="205"/>
         <image name="speaker_btns__narration_btn-on.png" width="71" height="71"/>
-        <image name="speaker_btns__narration_btn.png" width="71" height="71"/>
         <image name="speaker_btns__narration_btn.png" width="71" height="71"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

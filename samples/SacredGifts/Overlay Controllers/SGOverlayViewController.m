@@ -56,7 +56,7 @@
 - (BOOL) playAudioNamed: (NSString*)audioName;
 {
     NSString *musicPath = [[NSBundle mainBundle] pathForResource:audioName ofType:@".mp3" inDirectory:self.rootFolderPath];
-    
+    NSLog(@"musicPath: %@", musicPath);
     if( musicPath )
     {
         NSURL *musicURL = [NSURL fileURLWithPath:musicPath];
