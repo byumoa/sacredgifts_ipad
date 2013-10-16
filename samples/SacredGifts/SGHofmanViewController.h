@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 Wells Fargo. All rights reserved.
 //
 
-#import "SGContentViewController.h"
+#import "SGArtistViewController.h"
 
-@interface SGHofmanViewController : SGContentViewController
+@interface SGHofmanViewController : SGArtistViewController
 
 @end

@@ -30,6 +30,7 @@
 		614E3CA1180DF631002E875B /* speaker_btns__narration_btn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C9D180DF631002E875B /* speaker_btns__narration_btn-on.png */; };
 		614E3CA2180DF631002E875B /* speaker_btns__narration_btn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C9E180DF631002E875B /* speaker_btns__narration_btn-on@2x.png */; };
 		614E3CA3180DF631002E875B /* speaker_btns__narration_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C9F180DF631002E875B /* speaker_btns__narration_btn@2x.png */; };
+		614E3CA6180E4AC1002E875B /* SGArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614E3CA5180E4AC1002E875B /* SGArtistViewController.m */; };
 		61CD509B180C23B100D28921 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5099180C23B100D28921 /* Main_iPhone.storyboard */; };
 		61CD509C180C23B100D28921 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509A180C23B100D28921 /* Main_iPad.storyboard */; };
 		61CD50A0180C23D500D28921 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509D180C23D500D28921 /* icon.png */; };
@@ -401,6 +402,8 @@
 		614E3C9D180DF631002E875B /* speaker_btns__narration_btn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speaker_btns__narration_btn-on.png"; sourceTree = "<group>"; };
 		614E3C9E180DF631002E875B /* speaker_btns__narration_btn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speaker_btns__narration_btn-on@2x.png"; sourceTree = "<group>"; };
 		614E3C9F180DF631002E875B /* speaker_btns__narration_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "speaker_btns__narration_btn@2x.png"; sourceTree = "<group>"; };
+		614E3CA4180E4AC1002E875B /* SGArtistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGArtistViewController.h; sourceTree = "<group>"; };
+		614E3CA5180E4AC1002E875B /* SGArtistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGArtistViewController.m; sourceTree = "<group>"; };
 		61CD5099180C23B100D28921 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		61CD509A180C23B100D28921 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		61CD509D180C23D500D28921 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -858,6 +861,8 @@
 				1588319613605ABF0082B874 /* EAGLView.mm */,
 				15A15855135C9CF800C6B482 /* Teapot.h */,
 				15A15860135C9D0700C6B482 /* Supporting Files */,
+				614E3CA4180E4AC1002E875B /* SGArtistViewController.h */,
+				614E3CA5180E4AC1002E875B /* SGArtistViewController.m */,
 			);
 			name = SacredGifts;
 			sourceTree = "<group>";
@@ -1792,6 +1797,7 @@
 				61CD530E180C24FD00D28921 /* SGTombstoneOverlayViewController.m in Sources */,
 				61CD5318180C250800D28921 /* SGPaintingContainerViewController.m in Sources */,
 				61CD5324180C253400D28921 /* SGNavigationContainerViewController.mm in Sources */,
+				614E3CA6180E4AC1002E875B /* SGArtistViewController.m in Sources */,
 				76A847F81446011E0064F347 /* ARParentViewController.mm in Sources */,
 				61CD5346180C256700D28921 /* SGWebViewController.m in Sources */,
 				76A847F91446011E0064F347 /* ARViewController.mm in Sources */,
