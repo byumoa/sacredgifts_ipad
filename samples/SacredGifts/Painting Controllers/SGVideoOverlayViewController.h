@@ -10,6 +10,6 @@
 #import <MediaPlayer/MediaPlayer.h>
 
 @interface SGVideoOverlayViewController : SGOverlayViewController
-@property(nonatomic, strong) MPMoviePlayerController *player;
+@property(nonatomic, strong) MPMoviePlayerController *moviePlayer;
 -(void)playPerspectiveMovieWithRootFolderPath: (NSString*)rootFoolderPath;
 @end

@@ -30,13 +30,13 @@
     self.rootFolderPath = rootFoolderPath;
     NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"perspectives_video" ofType:@"mov" inDirectory:self.rootFolderPath];
     NSURL* url = [NSURL fileURLWithPath:moviePath];
-    self.player = [[MPMoviePlayerController alloc] initWithContentURL:url];
-    self.player.view.frame = CGRectMake(0, 45, 768, 432);
-    self.player.movieSourceType = MPMovieSourceTypeFile;
-    self.player.controlStyle = MPMovieControlStyleNone;
-    [self.view addSubview:self.player.view];
-    [self.player prepareToPlay];
-    [self.player play];
+    self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
+    self.moviePlayer.view.frame = CGRectMake(0, 45, 768, 432);
+    self.moviePlayer.movieSourceType = MPMovieSourceTypeFile;
+    self.moviePlayer.controlStyle = MPMovieControlStyleNone;
+    [self.view addSubview:self.moviePlayer.view];
+    [self.moviePlayer prepareToPlay];
+    [self.moviePlayer play];
 }
 
 @end
