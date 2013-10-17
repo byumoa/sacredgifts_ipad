@@ -81,7 +81,8 @@ const int kPerspectivesButtonWidth = 161;
 
 -(void)addFooterButtonsForPainting:(NSString *)paintingNameStr
 {
-    NSArray* buttonTypeStrArr = [NSArray arrayWithObjects: kSummaryStr, kGiftsStr, kPerspectiveStr, kMusicStr, kChildrensStr, kDetailsStr, nil];
+    //NSArray* buttonTypeStrArr = [NSArray arrayWithObjects: kSummaryStr, kGiftsStr, kPerspectiveStr, kMusicStr, kChildrensStr, kDetailsStr, nil];
+    NSArray* buttonTypeStrArr = [NSArray arrayWithObjects: kSummaryStr, nil];
     
     for( NSString* buttonTypeStr in buttonTypeStrArr)
     {
