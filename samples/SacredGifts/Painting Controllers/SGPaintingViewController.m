@@ -10,6 +10,7 @@
 #import "SGPersepectivesOverlayViewController.h"
 #import "SGOverlayView.h"
 #import "SGChildrensOverlayViewController.h"
+#import "SGNarrationManager.h"
 
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
@@ -285,6 +286,8 @@ const int kPerspectivesButtonWidth = 161;
         }];
     }
     self.overlayController = nil;
+    SGNarrationManager* narrationManager = [SGNarrationManager sharedManager];
+    [narrationManager pauseAudio];
 }
 
 -(void)paintingTapped:(SGPaintingImageView *)paintingView
