@@ -728,7 +728,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xNh-x6-hsV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2595" y="75"/>
+            <point key="canvasLocation" x="2583" y="80"/>
         </scene>
         <!--Music Overlay View Controller-->
         <scene sceneID="f2i-UZ-Q7R">
@@ -758,7 +758,7 @@
                                 </state>
                                 <state key="selected" image="SG_General_Mu SG_General_Music_PlayPause sic_PlayPause.png"/>
                                 <connections>
-                                    <action selector="pressedPlayPause:" destination="9nI-4S-Qna" eventType="touchUpInside" id="liN-lD-u9a"/>
+                                    <action selector="pressedPlayPause:" destination="9nI-4S-Qna" eventType="touchUpInside" id="Q3O-BK-czg"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -776,7 +776,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mFU-g6-Ogu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2676" y="294"/>
+            <point key="canvasLocation" x="2754" y="480"/>
         </scene>
         <!--Childrens Overlay View Controller-->
         <scene sceneID="7kj-5c-EQf">
@@ -817,7 +817,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPd-we-w8O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2717" y="-178"/>
+            <point key="canvasLocation" x="2696" y="-188"/>
         </scene>
         <!--Gift Overlay View Controller-->
         <scene sceneID="HjJ-QA-JCS">
@@ -835,7 +835,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9y-RY-da3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2800" y="389"/>
+            <point key="canvasLocation" x="2811" y="410"/>
         </scene>
         <!--Details Overlay View Controller-->
         <scene sceneID="noX-fo-s7z">
@@ -853,7 +853,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HAF-Eg-Whv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2863" y="434"/>
+            <point key="canvasLocation" x="2871" y="459"/>
         </scene>
         <!--Persepectives Overlay View Controller-->
         <scene sceneID="DZE-8h-2cY">
@@ -871,7 +871,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3q-g6-eVd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2901" y="488"/>
+            <point key="canvasLocation" x="2914" y="519"/>
         </scene>
         <!--Panorama Overlay View Controller-->
         <scene sceneID="w2W-Pc-s8Y">
@@ -1003,7 +1003,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6KJ-T6-uSc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2636" y="421"/>
+            <point key="canvasLocation" x="2631" y="420"/>
         </scene>
         <!--Schwartz View Controller-->
         <scene sceneID="PKt-4M-xKP">

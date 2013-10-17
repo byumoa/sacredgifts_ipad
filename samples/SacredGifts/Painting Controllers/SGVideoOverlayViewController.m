@@ -13,7 +13,7 @@
 @end
 
 @implementation SGVideoOverlayViewController
-@synthesize player = _player;
+
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
     if( self = [super initWithCoder:aDecoder])

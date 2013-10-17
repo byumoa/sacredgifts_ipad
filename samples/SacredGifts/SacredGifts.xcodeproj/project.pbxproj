@@ -32,6 +32,9 @@
 		614E3CA3180DF631002E875B /* speaker_btns__narration_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C9F180DF631002E875B /* speaker_btns__narration_btn@2x.png */; };
 		614E3CA6180E4AC1002E875B /* SGArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614E3CA5180E4AC1002E875B /* SGArtistViewController.m */; };
 		614E3CA8180EA0FB002E875B /* schwartz_bio_audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 614E3CA7180EA0FB002E875B /* schwartz_bio_audio.mp3 */; };
+		61865DC9180F5145004CE494 /* SGMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61865DC8180F5145004CE494 /* SGMusicManager.m */; };
+		61865DCC180F515E004CE494 /* SGNarrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61865DCB180F515E004CE494 /* SGNarrationManager.m */; };
+		61865DCF180F5A90004CE494 /* SGAbstractAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61865DCE180F5A90004CE494 /* SGAbstractAudioManager.m */; };
 		61CD509B180C23B100D28921 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5099180C23B100D28921 /* Main_iPhone.storyboard */; };
 		61CD509C180C23B100D28921 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509A180C23B100D28921 /* Main_iPad.storyboard */; };
 		61CD50A0180C23D500D28921 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509D180C23D500D28921 /* icon.png */; };
@@ -406,6 +409,12 @@
 		614E3CA4180E4AC1002E875B /* SGArtistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGArtistViewController.h; sourceTree = "<group>"; };
 		614E3CA5180E4AC1002E875B /* SGArtistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGArtistViewController.m; sourceTree = "<group>"; };
 		614E3CA7180EA0FB002E875B /* schwartz_bio_audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = schwartz_bio_audio.mp3; sourceTree = "<group>"; };
+		61865DC7180F5145004CE494 /* SGMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMusicManager.h; sourceTree = "<group>"; };
+		61865DC8180F5145004CE494 /* SGMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMusicManager.m; sourceTree = "<group>"; };
+		61865DCA180F515E004CE494 /* SGNarrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGNarrationManager.h; sourceTree = "<group>"; };
+		61865DCB180F515E004CE494 /* SGNarrationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGNarrationManager.m; sourceTree = "<group>"; };
+		61865DCD180F5A90004CE494 /* SGAbstractAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAbstractAudioManager.h; sourceTree = "<group>"; };
+		61865DCE180F5A90004CE494 /* SGAbstractAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAbstractAudioManager.m; sourceTree = "<group>"; };
 		61CD5099180C23B100D28921 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		61CD509A180C23B100D28921 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		61CD509D180C23D500D28921 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
@@ -824,6 +833,7 @@
 		15A15847135C9CD700C6B482 /* SacredGifts */ = {
 			isa = PBXGroup;
 			children = (
+				61865DC3180F511A004CE494 /* AudioManagers */,
 				15A15850135C9CF800C6B482 /* ImageTargetsAppDelegate.h */,
 				150D1CCA1385551A0007C72E /* ImageTargetsAppDelegate.mm */,
 				61CD531C180C252400D28921 /* SGNavigationvControllers */,
@@ -937,6 +947,19 @@
 				1599F810134360DE0073DAB2 /* Security.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61865DC3180F511A004CE494 /* AudioManagers */ = {
+			isa = PBXGroup;
+			children = (
+				61865DC7180F5145004CE494 /* SGMusicManager.h */,
+				61865DC8180F5145004CE494 /* SGMusicManager.m */,
+				61865DCA180F515E004CE494 /* SGNarrationManager.h */,
+				61865DCB180F515E004CE494 /* SGNarrationManager.m */,
+				61865DCD180F5A90004CE494 /* SGAbstractAudioManager.h */,
+				61865DCE180F5A90004CE494 /* SGAbstractAudioManager.m */,
+			);
+			path = AudioManagers;
 			sourceTree = "<group>";
 		};
 		61CD50A5180C242500D28921 /* GeneralResources */ = {
@@ -1765,6 +1788,7 @@
 			files = (
 				61CD530C180C24FD00D28921 /* SGSocialViewController.m in Sources */,
 				15A1585D135C9CF800C6B482 /* main.m in Sources */,
+				61865DCC180F515E004CE494 /* SGNarrationManager.m in Sources */,
 				61CD5347180C256700D28921 /* SGScanViewController.m in Sources */,
 				61CD5319180C250800D28921 /* SGPaintingImageView.m in Sources */,
 				61CD5349180C256700D28921 /* SGSchwartzViewController.m in Sources */,
@@ -1780,6 +1804,7 @@
 				61CD5307180C24FD00D28921 /* SGMusicOverlayViewController.m in Sources */,
 				61CD530D180C24FD00D28921 /* SGSummaryOverlayViewController.m in Sources */,
 				61CD531A180C250800D28921 /* SGPaintingViewController.m in Sources */,
+				61865DCF180F5A90004CE494 /* SGAbstractAudioManager.m in Sources */,
 				1588319713605ABF0082B874 /* EAGLView.mm in Sources */,
 				61CD5345180C256700D28921 /* SGBlurManager.m in Sources */,
 				61CD5306180C24FD00D28921 /* SGGiftOverlayViewController.m in Sources */,
@@ -1800,6 +1825,7 @@
 				61CD530A180C24FD00D28921 /* SGPanoramaOverlayViewController.m in Sources */,
 				61CD530E180C24FD00D28921 /* SGTombstoneOverlayViewController.m in Sources */,
 				61CD5318180C250800D28921 /* SGPaintingContainerViewController.m in Sources */,
+				61865DC9180F5145004CE494 /* SGMusicManager.m in Sources */,
 				61CD5324180C253400D28921 /* SGNavigationContainerViewController.mm in Sources */,
 				614E3CA6180E4AC1002E875B /* SGArtistViewController.m in Sources */,
 				76A847F81446011E0064F347 /* ARParentViewController.mm in Sources */,

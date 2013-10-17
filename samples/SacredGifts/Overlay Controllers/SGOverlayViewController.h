@@ -8,7 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "SGConstants.h"
-#import <AVFoundation/AVFoundation.h>
 
 @class SGOverlayViewController;
 
@@ -28,10 +27,8 @@
 @property(nonatomic) ModuleType moduleType;
 @property(nonatomic, weak) id<SGOverlayViewControllerDelegate> delegate;
 @property(nonatomic, strong) NSString* rootFolderPath;
-@property (strong, nonatomic) AVAudioPlayer* player;
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath;
 - (void)addBackgroundImgWithImgName: (NSString*)bgImgName;
-- (BOOL) playAudioNamed: (NSString*)audioName;
 
 @end

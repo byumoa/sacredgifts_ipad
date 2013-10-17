@@ -7,6 +7,7 @@
 //
 
 #import "SGMusicOverlayViewController.h"
+#import "SGMusicManager.h"
 
 @interface SGMusicOverlayViewController ()
 
@@ -27,9 +28,23 @@
 -(void)addBackgroundImgWithPath:(NSString *)bgImgPath
 {
     [super addBackgroundImgWithPath:bgImgPath];
-    [self playAudioNamed:@"music"];
 }
 
-- (IBAction)pressedPlayPause:(id)sender{}
+- (IBAction)pressedPlayPauseMusic:(id)sender
+{
+    NSString *musicPath = [[NSBundle mainBundle] pathForResource:@"music" ofType:@".mp3" inDirectory:self.rootFolderPath];
+    
+    if( musicPath )
+    {
+        SGMusicManager* musicManager = [SGMusicManager sharedManager];
+        [musicManager playAudioWithPath:musicPath];
+        //        ((UIButton*)sender). musicManager.player.isPlaying
+    }
+    else
+    {
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Missing Asset" message:@"music.pm3 has not been added for this overlay" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
+    }
+}
 
 @end

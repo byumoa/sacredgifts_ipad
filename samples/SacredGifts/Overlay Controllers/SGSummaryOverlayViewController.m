@@ -7,6 +7,7 @@
 //
 
 #import "SGSummaryOverlayViewController.h"
+#import "SGNarrationManager.h"
 
 @interface SGSummaryOverlayViewController ()
 
@@ -26,10 +27,15 @@
 
 - (IBAction)pressedNarration:(UIButton *)sender
 {
-    if( ![self playAudioNamed:@"narration"])
+    /*
+    NSString *audioPath = [NSString stringWithFormat:@"%@,%@.mp3", [[NSBundle mainBundle] resourcePath], @"narration"];
+    
+    SGNarrationManager* narrationManager = [SGNarrationManager sharedManager];
+    if( ![narrationManager playAudioWithPath:audioPath])
     {
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Missing asset" message:@"narration.mp3 has not been added for this overlay" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
     }
+     */
 }
 @end
