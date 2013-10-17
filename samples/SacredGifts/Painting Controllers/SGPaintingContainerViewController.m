@@ -9,6 +9,7 @@
 #import "SGPaintingContainerViewController.h"
 #import "SGPaintingViewController.h"
 #import "SGConstants.h"
+#import "SGMusicManager.h"
 
 @implementation SGPaintingContainerViewController
 
@@ -23,6 +24,9 @@
 
 -(void)transitionFromController:(UIViewController *)fromController toPaintingNamed:(NSString *)paintingName fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
 {
+    SGMusicManager* musicManager = [SGMusicManager sharedManager];
+    [musicManager pauseAudio];
+    
     SGPaintingViewController* toController = [self.storyboard instantiateViewControllerWithIdentifier:(NSString*)kControllerIDPaintingStr];
     toController.delegate = self;
     toController.frameOverlayDelay = 0.5;

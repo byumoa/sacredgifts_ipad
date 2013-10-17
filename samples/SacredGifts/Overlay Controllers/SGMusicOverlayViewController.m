@@ -28,17 +28,25 @@
 -(void)addBackgroundImgWithPath:(NSString *)bgImgPath
 {
     [super addBackgroundImgWithPath:bgImgPath];
+    
+    SGMusicManager* musicManager = [SGMusicManager sharedManager];
+    if( !musicManager.player.isPlaying )
+        [self pressedPlayPause:nil];
 }
 
-- (IBAction)pressedPlayPauseMusic:(id)sender
+- (IBAction)pressedPlayPause:(id)sender
 {
     NSString *musicPath = [[NSBundle mainBundle] pathForResource:@"music" ofType:@".mp3" inDirectory:self.rootFolderPath];
     
     if( musicPath )
     {
         SGMusicManager* musicManager = [SGMusicManager sharedManager];
-        [musicManager playAudioWithPath:musicPath];
-        //        ((UIButton*)sender). musicManager.player.isPlaying
+        if( musicManager.player.isPlaying )
+            [musicManager pauseAudio];
+        else
+            [musicManager playAudioWithPath:musicPath];
+        
+        ((UIButton*)sender).selected = musicManager.player.isPlaying;
     }
     else
     {
