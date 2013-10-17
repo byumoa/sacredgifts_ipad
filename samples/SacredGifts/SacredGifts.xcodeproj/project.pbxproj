@@ -17,8 +17,6 @@
 		15A15845135C9CBB00C6B482 /* TextureTeapotBlue.png in Resources */ = {isa = PBXBuildFile; fileRef = 15A15841135C9CBB00C6B482 /* TextureTeapotBlue.png */; };
 		15A15846135C9CBB00C6B482 /* TextureTeapotBrass.png in Resources */ = {isa = PBXBuildFile; fileRef = 15A15842135C9CBB00C6B482 /* TextureTeapotBrass.png */; };
 		15A1585D135C9CF800C6B482 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15A15852135C9CF800C6B482 /* main.m */; };
-		15A1585E135C9CF800C6B482 /* ShaderUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 15A15853135C9CF800C6B482 /* ShaderUtils.cpp */; };
-		15A1585F135C9CF800C6B482 /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 15A15857135C9CF800C6B482 /* Texture.mm */; };
 		15BE5EA01353659900ABDA09 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15BE5E9F1353659900ABDA09 /* SystemConfiguration.framework */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -35,11 +33,18 @@
 		61865DC9180F5145004CE494 /* SGMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61865DC8180F5145004CE494 /* SGMusicManager.m */; };
 		61865DCC180F515E004CE494 /* SGNarrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61865DCB180F515E004CE494 /* SGNarrationManager.m */; };
 		61865DCF180F5A90004CE494 /* SGAbstractAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61865DCE180F5A90004CE494 /* SGAbstractAudioManager.m */; };
+		6186729618100E7900DED0D4 /* AR_EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6186728418100E7900DED0D4 /* AR_EAGLView.mm */; };
+		6186729718100E7900DED0D4 /* ARParentViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6186728618100E7900DED0D4 /* ARParentViewController.mm */; };
+		6186729818100E7900DED0D4 /* ARViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6186728818100E7900DED0D4 /* ARViewController.mm */; };
+		6186729918100E7900DED0D4 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186728A18100E7900DED0D4 /* OverlayView.m */; };
+		6186729A18100E7900DED0D4 /* OverlayViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6186728C18100E7900DED0D4 /* OverlayViewController.mm */; };
+		6186729B18100E7900DED0D4 /* QCARutils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6186728E18100E7900DED0D4 /* QCARutils.mm */; };
+		6186729C18100E7900DED0D4 /* Shader.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 6186729018100E7900DED0D4 /* Shader.fsh */; };
+		6186729D18100E7900DED0D4 /* Shader.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 6186729118100E7900DED0D4 /* Shader.vsh */; };
+		6186729E18100E7900DED0D4 /* ShaderUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6186729218100E7900DED0D4 /* ShaderUtils.cpp */; };
+		6186729F18100E7900DED0D4 /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6186729518100E7900DED0D4 /* Texture.mm */; };
 		61CD509B180C23B100D28921 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5099180C23B100D28921 /* Main_iPhone.storyboard */; };
 		61CD509C180C23B100D28921 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509A180C23B100D28921 /* Main_iPad.storyboard */; };
-		61CD50A0180C23D500D28921 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509D180C23D500D28921 /* icon.png */; };
-		61CD50A1180C23D500D28921 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509E180C23D500D28921 /* icon@2x.png */; };
-		61CD50A2180C23D500D28921 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509F180C23D500D28921 /* Default-568h@2x.png */; };
 		61CD50A4180C240400D28921 /* PaintingResources in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50A3180C240400D28921 /* PaintingResources */; };
 		61CD51CD180C242500D28921 /* overlay__brackets.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50A7180C242500D28921 /* overlay__brackets.png */; };
 		61CD51D0180C242500D28921 /* artists_pages_artists_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50AB180C242500D28921 /* artists_pages_artists_bg.png */; };
@@ -246,8 +251,6 @@
 		61CD5299180C242500D28921 /* SG_General_Share_tw-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5179180C242500D28921 /* SG_General_Share_tw-on@2x.png */; };
 		61CD529A180C242500D28921 /* SG_General_Share_tw.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD517A180C242500D28921 /* SG_General_Share_tw.png */; };
 		61CD529B180C242500D28921 /* SG_General_Share_tw@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD517B180C242500D28921 /* SG_General_Share_tw@2x.png */; };
-		61CD529C180C242500D28921 /* social_mockup.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD517C180C242500D28921 /* social_mockup.png */; };
-		61CD529D180C242500D28921 /* songname.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 61CD517D180C242500D28921 /* songname.mp3 */; };
 		61CD529E180C242500D28921 /* painting_thumb_aalborg-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5181180C242500D28921 /* painting_thumb_aalborg-on.png */; };
 		61CD529F180C242500D28921 /* painting_thumb_aalborg-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5182180C242500D28921 /* painting_thumb_aalborg-on@2x.png */; };
 		61CD52A0180C242500D28921 /* painting_thumb_aalborg.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5183180C242500D28921 /* painting_thumb_aalborg.png */; };
@@ -358,17 +361,11 @@
 		61CD534C180C2C1B00D28921 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61CD534B180C2C1B00D28921 /* Images.xcassets */; };
 		61CD534E180C2C3000D28921 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CD534D180C2C3000D28921 /* GLKit.framework */; };
 		61CD5350180C3E9400D28921 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CD534F180C3E9400D28921 /* MediaPlayer.framework */; };
-		764AEB3B1447052D002F0880 /* AR_EAGLView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 764AEB3A1447052D002F0880 /* AR_EAGLView.mm */; };
-		76582E01143233500051860A /* QCARutils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 76582E00143233500051860A /* QCARutils.mm */; };
 		7695D9D414D2F49B0013AD95 /* TextureTeapotRed.png in Resources */ = {isa = PBXBuildFile; fileRef = 7695D9D314D2F49B0013AD95 /* TextureTeapotRed.png */; };
-		76A847F81446011E0064F347 /* ARParentViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 76A847F51446011E0064F347 /* ARParentViewController.mm */; };
-		76A847F91446011E0064F347 /* ARViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 76A847F71446011E0064F347 /* ARViewController.mm */; };
 		76CEC820146D45F7009E8098 /* StonesAndChips.dat in Resources */ = {isa = PBXBuildFile; fileRef = 76CEC81C146D45F7009E8098 /* StonesAndChips.dat */; };
 		76CEC821146D45F7009E8098 /* StonesAndChips.xml in Resources */ = {isa = PBXBuildFile; fileRef = 76CEC81D146D45F7009E8098 /* StonesAndChips.xml */; };
 		76CEC822146D45F7009E8098 /* Tarmac.dat in Resources */ = {isa = PBXBuildFile; fileRef = 76CEC81E146D45F7009E8098 /* Tarmac.dat */; };
 		76CEC823146D45F7009E8098 /* Tarmac.xml in Resources */ = {isa = PBXBuildFile; fileRef = 76CEC81F146D45F7009E8098 /* Tarmac.xml */; };
-		76F0DD70142A0B80000663EF /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F0DD6D142A0B80000663EF /* OverlayView.m */; };
-		76F0DD71142A0B80000663EF /* OverlayViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 76F0DD6F142A0B80000663EF /* OverlayViewController.mm */; };
 		CCCB51C6140FB9E6005A9272 /* libQCAR.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CCCB51B8140FB9E6005A9272 /* libQCAR.a */; };
 /* End PBXBuildFile section */
 
@@ -380,8 +377,6 @@
 		15899805132907BC004C3F7B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		1589985213290C40004C3F7B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		1599F810134360DE0073DAB2 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		15A1583A135C9C9200C6B482 /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader.fsh; path = ../ARCommon/Shaders/Shader.fsh; sourceTree = "<group>"; };
-		15A1583B135C9C9200C6B482 /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; name = Shader.vsh; path = ../ARCommon/Shaders/Shader.vsh; sourceTree = "<group>"; };
 		15A15841135C9CBB00C6B482 /* TextureTeapotBlue.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TextureTeapotBlue.png; path = ImageTargets/assets/TextureTeapotBlue.png; sourceTree = "<group>"; };
 		15A15842135C9CBB00C6B482 /* TextureTeapotBrass.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TextureTeapotBrass.png; path = ImageTargets/assets/TextureTeapotBrass.png; sourceTree = "<group>"; };
 		15A1584C135C9CF800C6B482 /* EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EAGLView.h; path = ImageTargets/EAGLView.h; sourceTree = "<group>"; };
@@ -389,11 +384,7 @@
 		15A1584F135C9CF800C6B482 /* SacredGifts-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "SacredGifts-Info.plist"; path = "ImageTargets/SacredGifts-Info.plist"; sourceTree = "<group>"; };
 		15A15850135C9CF800C6B482 /* ImageTargetsAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ImageTargetsAppDelegate.h; path = ImageTargets/ImageTargetsAppDelegate.h; sourceTree = "<group>"; };
 		15A15852135C9CF800C6B482 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ImageTargets/main.m; sourceTree = "<group>"; };
-		15A15853135C9CF800C6B482 /* ShaderUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = ShaderUtils.cpp; path = ../ARCommon/ShaderUtils.cpp; sourceTree = "<group>"; };
-		15A15854135C9CF800C6B482 /* ShaderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShaderUtils.h; path = ../ARCommon/ShaderUtils.h; sourceTree = "<group>"; };
 		15A15855135C9CF800C6B482 /* Teapot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Teapot.h; path = ImageTargets/Teapot.h; sourceTree = "<group>"; };
-		15A15856135C9CF800C6B482 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Texture.h; path = ../ARCommon/Texture.h; sourceTree = "<group>"; };
-		15A15857135C9CF800C6B482 /* Texture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = Texture.mm; path = ../ARCommon/Texture.mm; sourceTree = "<group>"; };
 		15BE5E9F1353659900ABDA09 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* SacredGifts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SacredGifts.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -415,11 +406,26 @@
 		61865DCB180F515E004CE494 /* SGNarrationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGNarrationManager.m; sourceTree = "<group>"; };
 		61865DCD180F5A90004CE494 /* SGAbstractAudioManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAbstractAudioManager.h; sourceTree = "<group>"; };
 		61865DCE180F5A90004CE494 /* SGAbstractAudioManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAbstractAudioManager.m; sourceTree = "<group>"; };
+		6186728318100E7900DED0D4 /* AR_EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AR_EAGLView.h; sourceTree = "<group>"; };
+		6186728418100E7900DED0D4 /* AR_EAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = AR_EAGLView.mm; sourceTree = "<group>"; };
+		6186728518100E7900DED0D4 /* ARParentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARParentViewController.h; sourceTree = "<group>"; };
+		6186728618100E7900DED0D4 /* ARParentViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ARParentViewController.mm; sourceTree = "<group>"; };
+		6186728718100E7900DED0D4 /* ARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ARViewController.h; sourceTree = "<group>"; };
+		6186728818100E7900DED0D4 /* ARViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ARViewController.mm; sourceTree = "<group>"; };
+		6186728918100E7900DED0D4 /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
+		6186728A18100E7900DED0D4 /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
+		6186728B18100E7900DED0D4 /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverlayViewController.h; sourceTree = "<group>"; };
+		6186728C18100E7900DED0D4 /* OverlayViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OverlayViewController.mm; sourceTree = "<group>"; };
+		6186728D18100E7900DED0D4 /* QCARutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QCARutils.h; sourceTree = "<group>"; };
+		6186728E18100E7900DED0D4 /* QCARutils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QCARutils.mm; sourceTree = "<group>"; };
+		6186729018100E7900DED0D4 /* Shader.fsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.fsh; sourceTree = "<group>"; };
+		6186729118100E7900DED0D4 /* Shader.vsh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.glsl; path = Shader.vsh; sourceTree = "<group>"; };
+		6186729218100E7900DED0D4 /* ShaderUtils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ShaderUtils.cpp; sourceTree = "<group>"; };
+		6186729318100E7900DED0D4 /* ShaderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderUtils.h; sourceTree = "<group>"; };
+		6186729418100E7900DED0D4 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		6186729518100E7900DED0D4 /* Texture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Texture.mm; sourceTree = "<group>"; };
 		61CD5099180C23B100D28921 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		61CD509A180C23B100D28921 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
-		61CD509D180C23D500D28921 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		61CD509E180C23D500D28921 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
-		61CD509F180C23D500D28921 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		61CD50A3180C240400D28921 /* PaintingResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PaintingResources; sourceTree = "<group>"; };
 		61CD50A7180C242500D28921 /* overlay__brackets.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay__brackets.png; sourceTree = "<group>"; };
 		61CD50AB180C242500D28921 /* artists_pages_artists_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = artists_pages_artists_bg.png; sourceTree = "<group>"; };
@@ -626,8 +632,6 @@
 		61CD5179180C242500D28921 /* SG_General_Share_tw-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Share_tw-on@2x.png"; sourceTree = "<group>"; };
 		61CD517A180C242500D28921 /* SG_General_Share_tw.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_General_Share_tw.png; sourceTree = "<group>"; };
 		61CD517B180C242500D28921 /* SG_General_Share_tw@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Share_tw@2x.png"; sourceTree = "<group>"; };
-		61CD517C180C242500D28921 /* social_mockup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = social_mockup.png; sourceTree = "<group>"; };
-		61CD517D180C242500D28921 /* songname.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = songname.mp3; sourceTree = "<group>"; };
 		61CD5181180C242500D28921 /* painting_thumb_aalborg-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "painting_thumb_aalborg-on.png"; sourceTree = "<group>"; };
 		61CD5182180C242500D28921 /* painting_thumb_aalborg-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "painting_thumb_aalborg-on@2x.png"; sourceTree = "<group>"; };
 		61CD5183180C242500D28921 /* painting_thumb_aalborg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = painting_thumb_aalborg.png; sourceTree = "<group>"; };
@@ -770,23 +774,11 @@
 		61CD534B180C2C1B00D28921 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ImageTargets/Images.xcassets; sourceTree = "<group>"; };
 		61CD534D180C2C3000D28921 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		61CD534F180C3E9400D28921 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		764AEB391447052D002F0880 /* AR_EAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AR_EAGLView.h; path = ../ARCommon/AR_EAGLView.h; sourceTree = "<group>"; };
-		764AEB3A1447052D002F0880 /* AR_EAGLView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AR_EAGLView.mm; path = ../ARCommon/AR_EAGLView.mm; sourceTree = "<group>"; };
-		76582DFF143233500051860A /* QCARutils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QCARutils.h; path = ../ARCommon/QCARutils.h; sourceTree = "<group>"; };
-		76582E00143233500051860A /* QCARutils.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = QCARutils.mm; path = ../ARCommon/QCARutils.mm; sourceTree = "<group>"; };
 		7695D9D314D2F49B0013AD95 /* TextureTeapotRed.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = TextureTeapotRed.png; path = ImageTargets/assets/TextureTeapotRed.png; sourceTree = "<group>"; };
-		76A847F41446011E0064F347 /* ARParentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARParentViewController.h; path = ../ARCommon/ARParentViewController.h; sourceTree = "<group>"; };
-		76A847F51446011E0064F347 /* ARParentViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ARParentViewController.mm; path = ../ARCommon/ARParentViewController.mm; sourceTree = "<group>"; };
-		76A847F61446011E0064F347 /* ARViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ARViewController.h; path = ../ARCommon/ARViewController.h; sourceTree = "<group>"; };
-		76A847F71446011E0064F347 /* ARViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ARViewController.mm; path = ../ARCommon/ARViewController.mm; sourceTree = "<group>"; };
 		76CEC81C146D45F7009E8098 /* StonesAndChips.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = StonesAndChips.dat; path = ImageTargets/assets/StonesAndChips.dat; sourceTree = "<group>"; };
 		76CEC81D146D45F7009E8098 /* StonesAndChips.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = StonesAndChips.xml; path = ImageTargets/assets/StonesAndChips.xml; sourceTree = "<group>"; };
 		76CEC81E146D45F7009E8098 /* Tarmac.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = Tarmac.dat; path = ImageTargets/assets/Tarmac.dat; sourceTree = "<group>"; };
 		76CEC81F146D45F7009E8098 /* Tarmac.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = Tarmac.xml; path = ImageTargets/assets/Tarmac.xml; sourceTree = "<group>"; };
-		76F0DD6C142A0B80000663EF /* OverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverlayView.h; path = ../ARCommon/OverlayView.h; sourceTree = "<group>"; };
-		76F0DD6D142A0B80000663EF /* OverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OverlayView.m; path = ../ARCommon/OverlayView.m; sourceTree = "<group>"; };
-		76F0DD6E142A0B80000663EF /* OverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverlayViewController.h; path = ../ARCommon/OverlayViewController.h; sourceTree = "<group>"; };
-		76F0DD6F142A0B80000663EF /* OverlayViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = OverlayViewController.mm; path = ../ARCommon/OverlayViewController.mm; sourceTree = "<group>"; };
 		CCCB51B8140FB9E6005A9272 /* libQCAR.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libQCAR.a; path = ../../build/lib/arm/libQCAR.a; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
@@ -857,24 +849,21 @@
 				61CD5336180C256700D28921 /* SGWebViewController.m */,
 				61CD5337180C256700D28921 /* SGScanViewController.h */,
 				61CD5338180C256700D28921 /* SGScanViewController.m */,
+				614E3CA4180E4AC1002E875B /* SGArtistViewController.h */,
+				614E3CA5180E4AC1002E875B /* SGArtistViewController.m */,
 				61CD5339180C256700D28921 /* SGBlochViewController.h */,
 				61CD533A180C256700D28921 /* SGBlochViewController.m */,
 				61CD533B180C256700D28921 /* SGSchwartzViewController.h */,
 				61CD533C180C256700D28921 /* SGSchwartzViewController.m */,
 				61CD533D180C256700D28921 /* SGHofmanViewController.h */,
 				61CD533E180C256700D28921 /* SGHofmanViewController.m */,
-				61CD509D180C23D500D28921 /* icon.png */,
-				61CD509E180C23D500D28921 /* icon@2x.png */,
-				61CD509F180C23D500D28921 /* Default-568h@2x.png */,
 				61CD5099180C23B100D28921 /* Main_iPhone.storyboard */,
 				61CD509A180C23B100D28921 /* Main_iPad.storyboard */,
-				76F3A47F144849D600180E08 /* ARCommon */,
+				6186728218100E7900DED0D4 /* ARCommon */,
 				15A1584C135C9CF800C6B482 /* EAGLView.h */,
 				1588319613605ABF0082B874 /* EAGLView.mm */,
 				15A15855135C9CF800C6B482 /* Teapot.h */,
 				15A15860135C9D0700C6B482 /* Supporting Files */,
-				614E3CA4180E4AC1002E875B /* SGArtistViewController.h */,
-				614E3CA5180E4AC1002E875B /* SGArtistViewController.m */,
 			);
 			name = SacredGifts;
 			sourceTree = "<group>";
@@ -895,15 +884,6 @@
 				1D6058910D05DD3D006BFB54 /* SacredGifts.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		2514C27610084DB600A42282 /* Shaders */ = {
-			isa = PBXGroup;
-			children = (
-				15A1583A135C9C9200C6B482 /* Shader.fsh */,
-				15A1583B135C9C9200C6B482 /* Shader.vsh */,
-			);
-			name = Shaders;
 			sourceTree = "<group>";
 		};
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
@@ -962,6 +942,40 @@
 			path = AudioManagers;
 			sourceTree = "<group>";
 		};
+		6186728218100E7900DED0D4 /* ARCommon */ = {
+			isa = PBXGroup;
+			children = (
+				6186728318100E7900DED0D4 /* AR_EAGLView.h */,
+				6186728418100E7900DED0D4 /* AR_EAGLView.mm */,
+				6186728518100E7900DED0D4 /* ARParentViewController.h */,
+				6186728618100E7900DED0D4 /* ARParentViewController.mm */,
+				6186728718100E7900DED0D4 /* ARViewController.h */,
+				6186728818100E7900DED0D4 /* ARViewController.mm */,
+				6186728918100E7900DED0D4 /* OverlayView.h */,
+				6186728A18100E7900DED0D4 /* OverlayView.m */,
+				6186728B18100E7900DED0D4 /* OverlayViewController.h */,
+				6186728C18100E7900DED0D4 /* OverlayViewController.mm */,
+				6186728D18100E7900DED0D4 /* QCARutils.h */,
+				6186728E18100E7900DED0D4 /* QCARutils.mm */,
+				6186728F18100E7900DED0D4 /* Shaders */,
+				6186729218100E7900DED0D4 /* ShaderUtils.cpp */,
+				6186729318100E7900DED0D4 /* ShaderUtils.h */,
+				6186729418100E7900DED0D4 /* Texture.h */,
+				6186729518100E7900DED0D4 /* Texture.mm */,
+			);
+			name = ARCommon;
+			path = ../ARCommon;
+			sourceTree = "<group>";
+		};
+		6186728F18100E7900DED0D4 /* Shaders */ = {
+			isa = PBXGroup;
+			children = (
+				6186729018100E7900DED0D4 /* Shader.fsh */,
+				6186729118100E7900DED0D4 /* Shader.vsh */,
+			);
+			path = Shaders;
+			sourceTree = "<group>";
+		};
 		61CD50A5180C242500D28921 /* GeneralResources */ = {
 			isa = PBXGroup;
 			children = (
@@ -972,9 +986,6 @@
 				61CD5107180C242500D28921 /* MediaControls */,
 				61CD5115180C242500D28921 /* Navigation */,
 				61CD5167180C242500D28921 /* Social */,
-				61CD517C180C242500D28921 /* social_mockup.png */,
-				61CD517D180C242500D28921 /* songname.mp3 */,
-				61CD517E180C242500D28921 /* Temp_Placeholder */,
 				61CD5180180C242500D28921 /* Thumbnails */,
 			);
 			path = GeneralResources;
@@ -1238,21 +1249,6 @@
 			path = Social;
 			sourceTree = "<group>";
 		};
-		61CD517E180C242500D28921 /* Temp_Placeholder */ = {
-			isa = PBXGroup;
-			children = (
-				61CD517F180C242500D28921 /* Patterns */,
-			);
-			path = Temp_Placeholder;
-			sourceTree = "<group>";
-		};
-		61CD517F180C242500D28921 /* Patterns */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Patterns;
-			sourceTree = "<group>";
-		};
 		61CD5180180C242500D28921 /* Thumbnails */ = {
 			isa = PBXGroup;
 			children = (
@@ -1396,30 +1392,6 @@
 			path = SGNavigationvControllers;
 			sourceTree = "<group>";
 		};
-		76F3A47F144849D600180E08 /* ARCommon */ = {
-			isa = PBXGroup;
-			children = (
-				76A847F41446011E0064F347 /* ARParentViewController.h */,
-				76A847F51446011E0064F347 /* ARParentViewController.mm */,
-				76A847F61446011E0064F347 /* ARViewController.h */,
-				76A847F71446011E0064F347 /* ARViewController.mm */,
-				764AEB391447052D002F0880 /* AR_EAGLView.h */,
-				764AEB3A1447052D002F0880 /* AR_EAGLView.mm */,
-				76F0DD6E142A0B80000663EF /* OverlayViewController.h */,
-				76F0DD6F142A0B80000663EF /* OverlayViewController.mm */,
-				76F0DD6C142A0B80000663EF /* OverlayView.h */,
-				76F0DD6D142A0B80000663EF /* OverlayView.m */,
-				76582DFF143233500051860A /* QCARutils.h */,
-				76582E00143233500051860A /* QCARutils.mm */,
-				15A15853135C9CF800C6B482 /* ShaderUtils.cpp */,
-				15A15854135C9CF800C6B482 /* ShaderUtils.h */,
-				15A15856135C9CF800C6B482 /* Texture.h */,
-				15A15857135C9CF800C6B482 /* Texture.mm */,
-				2514C27610084DB600A42282 /* Shaders */,
-			);
-			name = ARCommon;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1548,7 +1520,6 @@
 				61CD51E5180C242500D28921 /* sg_home_bg-metal.png in Resources */,
 				61CD52DC180C242500D28921 /* painting_thumb_savior.png in Resources */,
 				61CD52D2180C242500D28921 /* painting_thumb_resurrection-on.png in Resources */,
-				61CD50A2180C23D500D28921 /* Default-568h@2x.png in Resources */,
 				61CD523D180C242500D28921 /* SG_General_HomeBtn.png in Resources */,
 				61CD528B180C242500D28921 /* SG_General_Share_email@2x.png in Resources */,
 				61CD52A8180C242500D28921 /* painting_thumb_capture.png in Resources */,
@@ -1603,7 +1574,6 @@
 				61CD51E2180C242500D28921 /* sg_home_bg-meetartists.png in Resources */,
 				61CD52B8180C242500D28921 /* painting_thumb_cross.png in Resources */,
 				61CD52B5180C242500D28921 /* painting_thumb_consolator@2x.png in Resources */,
-				61CD50A0180C23D500D28921 /* icon.png in Resources */,
 				61CD527F180C242500D28921 /* SG_General_Painting_SummaryBtn-on@2x.png in Resources */,
 				61CD51F0180C242500D28921 /* sg_home_exhibitionbtn-on.png in Resources */,
 				61CD52AB180C242500D28921 /* painting_thumb_children-on@2x.png in Resources */,
@@ -1671,7 +1641,6 @@
 				61CD51F6180C242500D28921 /* sg_home_feedbackbtn.png in Resources */,
 				61CD5247180C242500D28921 /* SG_General_Module_Overlay_Hofmann.png in Resources */,
 				61CD51F5180C242500D28921 /* sg_home_feedbackbtn-on@2x.png in Resources */,
-				61CD529C180C242500D28921 /* social_mockup.png in Resources */,
 				61CD52CC180C242500D28921 /* painting_thumb_healing.png in Resources */,
 				61CD524B180C242500D28921 /* SG_General_ModuleButtonBar.png in Resources */,
 				61CD5256180C242500D28921 /* SG_General_Painting_ContextBtn-on@2x.png in Resources */,
@@ -1712,7 +1681,6 @@
 				61CD529F180C242500D28921 /* painting_thumb_aalborg-on@2x.png in Resources */,
 				61CD5245180C242500D28921 /* SG_General_Module_Overlay_Bloch.png in Resources */,
 				61CD52CB180C242500D28921 /* painting_thumb_healing-on@2x.png in Resources */,
-				61CD529D180C242500D28921 /* songname.mp3 in Resources */,
 				61CD5223180C242500D28921 /* SG_Home_ScanPaintingBtn@2x.png in Resources */,
 				61CD51E0180C242500D28921 /* sg_home_bg-home@2x.png in Resources */,
 				61CD51E3180C242500D28921 /* sg_home_bg-meetartists@2x.png in Resources */,
@@ -1743,7 +1711,6 @@
 				61CD5227180C242500D28921 /* sg_home_schwartzbtn@2x.png in Resources */,
 				61CD52B4180C242500D28921 /* painting_thumb_consolator.png in Resources */,
 				61CD5276180C242500D28921 /* SG_General_Painting_PerspectivesBtn@2x.png in Resources */,
-				61CD50A1180C23D500D28921 /* icon@2x.png in Resources */,
 				61CD51D8180C242500D28921 /* paintings_text@2x.png in Resources */,
 				61CD52A0180C242500D28921 /* painting_thumb_aalborg.png in Resources */,
 				61CD5295180C242500D28921 /* SG_General_Share_thanks-on@2x.png in Resources */,
@@ -1794,44 +1761,46 @@
 				61CD5349180C256700D28921 /* SGSchwartzViewController.m in Sources */,
 				61CD5308180C24FD00D28921 /* SGOverlayView.m in Sources */,
 				61CD5343180C256700D28921 /* SGMeetTheArtistsViewController.m in Sources */,
-				15A1585E135C9CF800C6B482 /* ShaderUtils.cpp in Sources */,
 				61CD5304180C24FD00D28921 /* SGDetailsOverlayViewController.m in Sources */,
+				6186729C18100E7900DED0D4 /* Shader.fsh in Sources */,
 				61CD5340180C256700D28921 /* SGViewController.m in Sources */,
-				15A1585F135C9CF800C6B482 /* Texture.mm in Sources */,
 				61CD5309180C24FD00D28921 /* SGOverlayViewController.m in Sources */,
 				61CD530B180C24FD00D28921 /* SGPersepectivesOverlayViewController.m in Sources */,
 				61CD5305180C24FD00D28921 /* SGFingerPaintView.m in Sources */,
+				6186729D18100E7900DED0D4 /* Shader.vsh in Sources */,
 				61CD5307180C24FD00D28921 /* SGMusicOverlayViewController.m in Sources */,
 				61CD530D180C24FD00D28921 /* SGSummaryOverlayViewController.m in Sources */,
 				61CD531A180C250800D28921 /* SGPaintingViewController.m in Sources */,
+				6186729B18100E7900DED0D4 /* QCARutils.mm in Sources */,
 				61865DCF180F5A90004CE494 /* SGAbstractAudioManager.m in Sources */,
 				1588319713605ABF0082B874 /* EAGLView.mm in Sources */,
+				6186729618100E7900DED0D4 /* AR_EAGLView.mm in Sources */,
 				61CD5345180C256700D28921 /* SGBlurManager.m in Sources */,
 				61CD5306180C24FD00D28921 /* SGGiftOverlayViewController.m in Sources */,
+				6186729E18100E7900DED0D4 /* ShaderUtils.cpp in Sources */,
 				61CD5348180C256700D28921 /* SGBlochViewController.m in Sources */,
 				61CD534A180C256700D28921 /* SGHofmanViewController.m in Sources */,
 				150D1CCB1385551A0007C72E /* ImageTargetsAppDelegate.mm in Sources */,
 				61CD5342180C256700D28921 /* SGHomeViewController.m in Sources */,
-				76F0DD70142A0B80000663EF /* OverlayView.m in Sources */,
 				61CD5325180C253400D28921 /* SGContentViewController.m in Sources */,
-				76F0DD71142A0B80000663EF /* OverlayViewController.mm in Sources */,
 				61CD531B180C250800D28921 /* SGVideoOverlayViewController.m in Sources */,
 				61CD5344180C256700D28921 /* SGAboutTheExhibitionViewController.m in Sources */,
 				61CD5326180C253400D28921 /* SGContainerViewController.m in Sources */,
-				76582E01143233500051860A /* QCARutils.mm in Sources */,
+				6186729718100E7900DED0D4 /* ARParentViewController.mm in Sources */,
 				61CD5303180C24FD00D28921 /* SGChildrensOverlayViewController.m in Sources */,
+				6186729F18100E7900DED0D4 /* Texture.mm in Sources */,
 				61CD5341180C256700D28921 /* SGFindAPaintingViewController.m in Sources */,
 				61CD533F180C256700D28921 /* SGConstants.m in Sources */,
+				6186729818100E7900DED0D4 /* ARViewController.mm in Sources */,
 				61CD530A180C24FD00D28921 /* SGPanoramaOverlayViewController.m in Sources */,
+				6186729A18100E7900DED0D4 /* OverlayViewController.mm in Sources */,
 				61CD530E180C24FD00D28921 /* SGTombstoneOverlayViewController.m in Sources */,
 				61CD5318180C250800D28921 /* SGPaintingContainerViewController.m in Sources */,
+				6186729918100E7900DED0D4 /* OverlayView.m in Sources */,
 				61865DC9180F5145004CE494 /* SGMusicManager.m in Sources */,
 				61CD5324180C253400D28921 /* SGNavigationContainerViewController.mm in Sources */,
 				614E3CA6180E4AC1002E875B /* SGArtistViewController.m in Sources */,
-				76A847F81446011E0064F347 /* ARParentViewController.mm in Sources */,
 				61CD5346180C256700D28921 /* SGWebViewController.m in Sources */,
-				76A847F91446011E0064F347 /* ARViewController.mm in Sources */,
-				764AEB3B1447052D002F0880 /* AR_EAGLView.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

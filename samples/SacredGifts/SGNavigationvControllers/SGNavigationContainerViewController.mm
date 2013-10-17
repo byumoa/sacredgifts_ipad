@@ -50,6 +50,7 @@
 #pragma mark webview
 - (IBAction)pressedDonate:(UIButton *)sender
 {
+    /*
     //Create Webview
     _donateWebView = [UIWebView new];
     _donateWebView.frame = self.view.frame;
@@ -70,6 +71,8 @@
     [UIView animateWithDuration:0.25 animations:^{
         _donateWebView.alpha = 1;
     }];
+     */
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: (NSString*)kDontateURLStr]];
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
