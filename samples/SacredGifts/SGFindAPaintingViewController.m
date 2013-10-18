@@ -42,6 +42,6 @@ const int kArtistBlochTag = 3;
             targetID = (NSString*)kControllerIDBlochStr;
             break;
     }
-    [self.delegate transitionFromController:self toControllerID:targetID fromButtonRect:CGRectZero withAnimType:kAnimTypeZoomIn];
+    //[self.delegate transitionFromController:self toControllerID:targetID fromButtonRect:CGRectZero withAnimType:kAnimTypeZoomIn];
 }
 @end
