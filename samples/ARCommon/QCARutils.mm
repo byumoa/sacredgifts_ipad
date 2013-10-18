@@ -1,5 +1,5 @@
 /*==============================================================================
- Copyright (c) 2012 QUALCOMM Austria Research Center GmbH.
+ Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
  All Rights Reserved.
  Qualcomm Confidential and Proprietary
  ==============================================================================*/
@@ -7,7 +7,6 @@
 #import "QCARutils.h"
 #import <QCAR/QCAR.h>
 #import <QCAR/QCAR_iOS.h>
-#import <QCAR/CameraDevice.h>
 #import <QCAR/Renderer.h>
 #import <QCAR/Tracker.h>
 #import <QCAR/TrackerManager.h>
@@ -17,24 +16,20 @@
 
 static NSString* const DatasetErrorTitle = @"Dataset Error";
 
-@interface QCARutils(){
-    BOOL QCARinited;
-}
+@interface QCARutils()
 - (void)updateApplicationStatus:(status)newStatus;
 - (void)bumpAppStatus;
-- (void)initApplication;
 - (void)initQCAR;
 - (int)initTracker;
-- (void)initApplicationAR;
 - (void)loadTracker;
 - (void)startCamera;
 - (void)stopCamera;
-- (void)postInitQCAR;
 - (void)configureVideoBackground;
-- (void)restoreCameraSettings;
+- (void)cameraDidStart;
+- (void)cameraDidStop;
 @end
 
-static QCARutils *qUtils = nil; // singleton class
+QCARutils *qUtils = nil; // singleton class
 
 #pragma mark --- Class interface for DataSet list ---
 @implementation DataSetItem
@@ -47,11 +42,18 @@ static QCARutils *qUtils = nil; // singleton class
 {
     self = [super init];
     if (self) {
-        name = theName;
-        path = thePath;
+        name = [theName copy]; // copy retains
+        path = [thePath copy]; // copy retains
         dataSet = nil;
     }
     return self;    
+}
+
+- (void)dealloc
+{
+    [name release];
+    [path release];
+    [super dealloc];
 }
 
 @end
@@ -71,12 +73,15 @@ static QCARutils *qUtils = nil; // singleton class
 
 @synthesize targetType;
 @synthesize viewport;
-
 @synthesize projectionMatrix;
 
 @synthesize videoStreamStarted;
 
-@synthesize cameraTorchOn, cameraContinuousAFOn;
+@synthesize noOfCameras, activeCamera, cameraTorchOn, cameraContinuousAFOn;
+
+@synthesize isVisualSearchOn,vsAutoControlEnabled, orientationChanged;
+
+@synthesize orientation;
 
 // initialise QCARutils
 - (id) init
@@ -95,7 +100,10 @@ static QCARutils *qUtils = nil; // singleton class
         cameraTorchOn = NO;
         cameraContinuousAFOn = YES;
         videoStreamStarted = NO;
-        QCARinited = NO;
+        // Select the camera to open, set this to QCAR::CameraDevice::CAMERA_FRONT 
+        // to activate the front camera instead.
+        activeCamera = QCAR::CameraDevice::CAMERA_BACK;
+        noOfCameras = 1;
     }
     
     return self;
@@ -115,6 +123,10 @@ static QCARutils *qUtils = nil; // singleton class
 
 
 // discard resources
+- (void)dealloc {
+    targetsList = nil;
+    [super dealloc];
+}
 
 
 - (void) addTargetName:(NSString *)theName atPath:(NSString *)thePath
@@ -122,6 +134,7 @@ static QCARutils *qUtils = nil; // singleton class
     DataSetItem *dataSet = [[DataSetItem alloc] initWithName:theName andPath:thePath];
     if (dataSet != nil)
         [targetsList addObject:dataSet];
+    [dataSet release];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
@@ -163,12 +176,21 @@ static QCARutils *qUtils = nil; // singleton class
 
 - (void)cameraTriggerAF
 {
+    [self performSelector:@selector(cameraPerformAF) withObject:nil afterDelay:.4];
+}
+
+- (void)cameraPerformAF
+{
     if (true == QCAR::CameraDevice::getInstance().setFocusMode(QCAR::CameraDevice::FOCUS_MODE_TRIGGERAUTO))
     {
         cameraContinuousAFOn = NO;
     }
 }
 
+- (void)cameraCancelAF
+{
+    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(cameraPerformAF) object:nil];
+}
 
 #pragma mark --- external control of QCAR ---
 
@@ -197,33 +219,27 @@ static QCARutils *qUtils = nil; // singleton class
     NSLog(@"QCARutils onDestroy()");
     
     // Deinitialise QCAR SDK
-    if (appStatus != APPSTATUS_UNINITED){
-        // For some reason DataSets remain in memory even after QCAR::deinit() was called. Let's unload them manually
-        int counter = 0;
-        for (DataSetItem *aDataSet in targetsList)
-            if ([self unloadDataSet:aDataSet.dataSet]) counter++;
-        if (counter == [targetsList count])
-            NSLog(@"DataSets unloaded successfully");
-        else
-            NSLog(@"Error unloading DataSets");
-        
-        // Let's deinit tracker
-        QCAR::TrackerManager& trackerManager = QCAR::TrackerManager::getInstance();
-        BOOL result = NO;
-        if (targetType != TYPE_FRAMEMARKERS)
-            result = trackerManager.deinitTracker(QCAR::Tracker::IMAGE_TRACKER);
-        else
-            result = trackerManager.deinitTracker(QCAR::Tracker::MARKER_TRACKER);
-        
-        if (result)
-            NSLog(@"Tracker deinited successfully");
-        else
-            NSLog(@"Error deiniting tracker");
-        
-        // Let's keep the qUtils alive, but targetsList must be released anyway;
-        targetsList = [NSMutableArray array];
+    if (appStatus != APPSTATUS_UNINITED)
+    {
+        // deactivate the dataset and unload any pre-loaded datasets
+        [self deactivateDataSet:currentDataSet];
 
+        if (targetType != TYPE_FRAMEMARKERS)
+        {
+            // Unload all the requested datasets
+            for (DataSetItem *aDataSet in targetsList)
+            {
+                if (aDataSet.dataSet != nil)
+                {
+                    [self unloadDataSet:aDataSet.dataSet];
+                    aDataSet.dataSet = nil;
+                }
+            }
+        }
+        
+        QCAR::deinit();
     }
+    
     appStatus = APPSTATUS_UNINITED;
 }
 
@@ -313,6 +329,7 @@ static QCARutils *qUtils = nil; // singleton class
             case APPSTATUS_INITED:
                 NSLog(@"APPSTATUS_INITED");
                 // Tasks for after QCAR inited but before camera starts running
+                QCAR::onResume(); // ensure it's called first time in
                 [self postInitQCAR];
                 
                 [self updateApplicationStatus:APPSTATUS_CAMERA_RUNNING];
@@ -323,12 +340,14 @@ static QCARutils *qUtils = nil; // singleton class
                 // Start the camera and tracking
                 [self startCamera];
                 videoStreamStarted = YES;
+                [self cameraDidStart];
                 break;
                 
             case APPSTATUS_CAMERA_STOPPED:
                 NSLog(@"APPSTATUS_CAMERA_STOPPED");
                 // Stop the camera and tracking
                 [self stopCamera];
+                [self cameraDidStop];
                 break;
                 
             default:
@@ -342,9 +361,18 @@ static QCARutils *qUtils = nil; // singleton class
         UIAlertView* alert;
         const char *msgDevice = "Failed to initialize QCAR because this device is not supported.";
         const char *msgDefault = "Application initialisation failed.";
+        const char* msgNoNetwork = "Failed to initialize Visual Search because the device has no network connection.";
+        const char* msgNoService = "Failed to initialize Visual Search because the service is not available.";
+
         const char *msg = msgDefault;
         
         switch (errorCode) {
+            case QCAR_ERRCODE_NO_NETWORK_CONNECTION:
+                msg = msgNoNetwork;
+                break;
+            case QCAR_ERRCODE_NO_SERVICE_AVAILABLE:
+                msg = msgNoService;
+                break;
             case QCAR::INIT_DEVICE_NOT_SUPPORTED:
                 msg = msgDevice;
                 break;
@@ -355,13 +383,13 @@ static QCARutils *qUtils = nil; // singleton class
             case QCAR_ERRCODE_ACTIVATE_DATASET:
             case QCAR_ERRCODE_DEACTIVATE_DATASET:
             default:
-                msg = msgDefault;
                 break;
         }
         
         alert = [[UIAlertView alloc] initWithTitle:@"Error" message:[NSString stringWithUTF8String:msg] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         
         [alert show];
+        [alert release];
     }
 }
 
@@ -379,8 +407,7 @@ static QCARutils *qUtils = nil; // singleton class
 - (void)initApplication
 {
     // Inform QCAR that the drawing surface has been created
-    if (!QCARinited)
-        QCAR::onSurfaceCreated();
+    QCAR::onSurfaceCreated();
     
     // Invoke optional application initialisation in the delegate class
     if ((delegate != nil) && [delegate respondsToSelector:@selector(initApplication)])
@@ -393,27 +420,25 @@ static QCARutils *qUtils = nil; // singleton class
 - (void)initQCAR
 {
     // Background thread must have its own autorelease pool
-    @autoreleasepool {
-        NSLog(@"initing !!!!!");
-        QCAR::setInitParameters(QCARFlags);
-        if (!QCARinited)
-        {
-            // QCAR::init() will return positive numbers up to 100 as it progresses towards success
-            // and negative numbers for error indicators
-            NSInteger initSuccess = 0;
-            do {
-                initSuccess = QCAR::init();
-            } while (0 <= initSuccess && 100 > initSuccess);
-            
-            if (initSuccess != 100) {
-                appStatus = APPSTATUS_ERROR;
-                errorCode = initSuccess;
-            }
-            QCARinited = YES;
-        }
-        // Continue execution on the main thread
-        [self performSelectorOnMainThread:@selector(bumpAppStatus) withObject:nil waitUntilDone:NO];
+    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+    QCAR::setInitParameters(QCARFlags);
+    
+    // QCAR::init() will return positive numbers up to 100 as it progresses towards success
+    // and negative numbers for error indicators
+    NSInteger initSuccess = 0;
+    do {
+        initSuccess = QCAR::init();
+    } while (0 <= initSuccess && 100 > initSuccess);
+    
+    if (initSuccess != 100) {
+        appStatus = APPSTATUS_ERROR;
+        errorCode = initSuccess;
     }    
+
+    // Continue execution on the main thread
+    [self performSelectorOnMainThread:@selector(bumpAppStatus) withObject:nil waitUntilDone:NO];
+    
+    [pool release];    
 } 
 
 
@@ -428,7 +453,7 @@ static QCARutils *qUtils = nil; // singleton class
 
 
 //////////////////////////////////////////////////////////////////////////////////
-// Initialise the tracker [performed on a main thread]
+// Initialise the tracker [performed on a background thread]
 - (int)initTracker
 {
     int res = 0;
@@ -504,43 +529,43 @@ static QCARutils *qUtils = nil; // singleton class
 - (void)loadTracker
 {
     // Background thread must have its own autorelease pool
-    @autoreleasepool {
-        BOOL haveLoadedOneDataSet = NO;
-        
-        if (targetType != TYPE_FRAMEMARKERS)
+    NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
+    BOOL haveLoadedOneDataSet = NO;
+    
+    if (targetType != TYPE_FRAMEMARKERS)
+    {
+        // Load all the requested datasets
+        for (DataSetItem *aDataSet in targetsList)
         {
-            // Load all the requested datasets
-            for (DataSetItem *aDataSet in targetsList)
+            if (aDataSet.path != nil)
             {
-                if (aDataSet.path != nil)
+                aDataSet.dataSet = [self loadDataSet:aDataSet.path];
+                if (haveLoadedOneDataSet == NO)
                 {
-                    aDataSet.dataSet = [self loadDataSet:aDataSet.path];
-                    if (haveLoadedOneDataSet == NO)
+                    if (aDataSet.dataSet != nil)
                     {
-                        if (aDataSet.dataSet != nil)
-                        {
-                            // activate the first one in the list
-                            [self activateDataSet:aDataSet.dataSet];
-                            haveLoadedOneDataSet = YES;
-                        }
+                        // activate the first one in the list
+                        [self activateDataSet:aDataSet.dataSet];
+                        haveLoadedOneDataSet = YES;
                     }
                 }
             }
-            
-            // Check that we've loaded at least one target
-            if (!haveLoadedOneDataSet)
-            {
-                NSLog(@"QCARutils: Failed to load any target");
-                appStatus = APPSTATUS_ERROR;
-                errorCode = QCAR_ERRCODE_LOAD_TARGET;
-            }
         }
-
-        // Continue execution on the main thread
-        if (appStatus != APPSTATUS_ERROR)
-            [self performSelectorOnMainThread:@selector(bumpAppStatus) withObject:nil waitUntilDone:NO];
-    
+        
+        // Check that we've loaded at least one target
+        if (!haveLoadedOneDataSet)
+        {
+            NSLog(@"QCARutils: Failed to load any target");
+            appStatus = APPSTATUS_ERROR;
+            errorCode = QCAR_ERRCODE_LOAD_TARGET;
+        }
     }
+
+    // Continue execution on the main thread
+    if (appStatus != APPSTATUS_ERROR)
+        [self performSelectorOnMainThread:@selector(bumpAppStatus) withObject:nil waitUntilDone:NO];
+    
+    [pool release];
 }
 
 
@@ -549,7 +574,7 @@ static QCARutils *qUtils = nil; // singleton class
 - (void)startCamera
 {
     // Initialise the camera
-    if (QCAR::CameraDevice::getInstance().init()) {
+    if (QCAR::CameraDevice::getInstance().init(activeCamera)) {
         // Configure video background
         [self configureVideoBackground];
         
@@ -568,7 +593,7 @@ static QCARutils *qUtils = nil; // singleton class
             
             // Cache the projection matrix:
             const QCAR::CameraCalibration& cameraCalibration = QCAR::CameraDevice::getInstance().getCameraCalibration();
-            projectionMatrix = QCAR::Tool::getProjectionGL(cameraCalibration, 2.0f, 2000.0f);
+            projectionMatrix = QCAR::Tool::getProjectionGL(cameraCalibration, 2.0f, 2500.0f);
         }
         
         // Restore camera settings
@@ -591,8 +616,8 @@ static QCARutils *qUtils = nil; // singleton class
     
     QCAR::CameraDevice::getInstance().stop();
     QCAR::CameraDevice::getInstance().deinit();
-    NSLog(@"Camera stopped and deinited");
 }
+
 
 
 ////////////////////////////////////////////////////////////////////////////////
@@ -609,6 +634,28 @@ static QCARutils *qUtils = nil; // singleton class
     // let the delegate handle this if wanted
     if ((delegate != nil) && [delegate respondsToSelector:@selector(postInitQCAR)])
         [delegate performSelectorOnMainThread:@selector(postInitQCAR) withObject:nil waitUntilDone:YES];
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Perform actions following the camera starting
+- (void)cameraDidStart
+{
+    // Inform the delegate
+    if ((delegate != nil) && [delegate respondsToSelector:@selector(cameraDidStart)]) {
+        [delegate performSelectorOnMainThread:@selector(cameraDidStart) withObject:nil waitUntilDone:YES];
+    }
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Perform actions following the camera stopping
+- (void)cameraDidStop
+{
+    // Inform the delegate
+    if ((delegate != nil) && [delegate respondsToSelector:@selector(cameraDidStop)]) {
+        [delegate performSelectorOnMainThread:@selector(cameraDidStop) withObject:nil waitUntilDone:YES];
+    }
 }
 
 
@@ -744,7 +791,6 @@ static QCARutils *qUtils = nil; // singleton class
         {
             // Load the data set from the App Bundle
             // If the DataSet were in the Documents folder we'd use STORAGE_ABSOLUTE and the full path
-
             if (!theDataSet->load([dataSetPath cStringUsingEncoding:NSASCIIStringEncoding], QCAR::DataSet::STORAGE_APPRESOURCE))
             {
                 msg = msgFailedToLoad;
@@ -765,6 +811,7 @@ static QCARutils *qUtils = nil; // singleton class
         UIAlertView* alert = [[UIAlertView alloc] initWithTitle:DatasetErrorTitle message:nsMsg delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
         NSLog(@"%@", nsMsg);
         [alert show];
+        [alert release];
     }
     
     return theDataSet;
@@ -865,7 +912,47 @@ static QCARutils *qUtils = nil; // singleton class
     // Deactivate the data set prior to reconfiguration:
     it->activateDataSet(currentDataSet);    
 }
+#pragma mark --- Data management ---
+////////////////////////////////////////////////////////////////////////////////
+-(NSMutableArray*) loadTextures:(NSArray*) textureList
+{
+    
+    int nErr = noErr;
+    int nTextures = [textureList count];
+    NSMutableArray* textures = [[NSMutableArray array] retain];
+    
+    @try {
+        for (int i = 0; i < nTextures; ++i) {
+            Texture* tex = [[[Texture alloc] init] autorelease];
+            NSString* file = [textureList objectAtIndex:i];
+            
+            nErr = [tex loadImage:file] == YES ? noErr : 1;
+            [textures addObject:tex];
+            
+            if (noErr != nErr) {
+                break;
+            }
+        }
+    }
+    @catch (NSException* e) {
+        NSLog(@"NSMutableArray addObject exception");
+    }
+    
+    assert([textures count] == nTextures);
+    if ([textures count] != nTextures) {
+        NSLog(@"All the required textures are not loaded");
+    }
+    
+    return textures;
+    
+}
 
+- (Texture *) createTexture:(NSString*)fileName
+{
+    Texture* tex = [[[Texture alloc] init] autorelease];
+    [tex loadImage:fileName];
+    return tex;
+}
 
 #pragma mark --- target utilities ---
 ////////////////////////////////////////////////////////////////////////////////
@@ -939,10 +1026,6 @@ static QCARutils *qUtils = nil; // singleton class
 
 - (QCAR::ImageTarget *) getImageTarget:(int)itemNo
 {
-    QCAR::ImageTracker* it;
-    it = reinterpret_cast<QCAR::ImageTracker*>(
-            QCAR::TrackerManager::getInstance().getTracker(QCAR::Tracker::IMAGE_TRACKER));
-    
     assert(currentDataSet->getNumTrackables() > 0);
     
     if (currentDataSet->getNumTrackables() > itemNo)

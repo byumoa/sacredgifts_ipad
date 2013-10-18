@@ -1,5 +1,5 @@
 /*==============================================================================
- Copyright (c) 2012 QUALCOMM Austria Research Center GmbH.
+ Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
  All Rights Reserved.
  Qualcomm Confidential and Proprietary
  ==============================================================================*/
@@ -24,7 +24,7 @@
     unsigned int numIndices;
     const unsigned short *indices;
     
-    Texture *__weak texture;
+    Texture *texture;
 }
 
 @property (nonatomic) unsigned int numVertices;
@@ -35,7 +35,7 @@
 @property (nonatomic) unsigned int numIndices;
 @property (nonatomic) const unsigned short *indices;
 
-@property (nonatomic, weak) Texture *texture;
+@property (nonatomic, assign) Texture *texture;
 
 @end
 
@@ -72,18 +72,24 @@
     BOOL renderingInited;
     
 #ifndef USE_OPENGL1
+    // *** Note, OpenGL ES 1.x is supported only in the ImageTargets sample ***
     // OpenGL 2 data
     GLuint shaderProgramID;
     GLint vertexHandle;
     GLint normalHandle;
     GLint textureCoordHandle;
     GLint mvpMatrixHandle;
+    GLint texSampler2DHandle;
 #endif
 }
 
-@property (nonatomic, strong) NSMutableArray *textureList;
+@property (nonatomic, retain) NSMutableArray *textureList;
 
 - (void) useTextures:(NSMutableArray *)theTextures;
+
+// OpenGL ES clean up when going into the background
+- (void)finishOpenGLESCommands;
+- (void)freeOpenGLESResources;
 
 // for overriding in the EAGLView subclass
 - (void)setFramebuffer;

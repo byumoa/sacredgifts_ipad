@@ -1,5 +1,5 @@
 /*==============================================================================
- Copyright (c) 2012 QUALCOMM Austria Research Center GmbH.
+ Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
  All Rights Reserved.
  Qualcomm Confidential and Proprietary
  ==============================================================================*/
@@ -7,6 +7,7 @@
 
 #include <math.h>
 #include <stdio.h>
+#include <string.h>
 #include "ShaderUtils.h"
 
 
@@ -150,12 +151,22 @@ namespace ShaderUtils
     
     // Initialise a shader
     int
-    initShader(GLenum nShaderType, const char* pszSource)
+    initShader(GLenum nShaderType, const char* pszSource, const char* pszDefs)
     {
         GLuint shader = glCreateShader(nShaderType);
         
         if (shader) {
-            glShaderSource(shader, 1, &pszSource, NULL);
+            if(pszDefs == NULL)
+            {
+                glShaderSource(shader, 1, &pszSource, NULL);
+            }
+            else
+            {   
+                const char* finalShader[2] = {pszDefs,pszSource};
+                GLint finalShaderSizes[2] = {strlen(pszDefs), strlen(pszSource)};
+                glShaderSource(shader, 2, finalShader, finalShaderSizes);
+            }
+            
             glCompileShader(shader);
             GLint compiled = 0;
             glGetShaderiv(shader, GL_COMPILE_STATUS, &compiled);
@@ -179,11 +190,15 @@ namespace ShaderUtils
     
     // Create a shader program
     int
-    createProgramFromBuffer(const char* pszVertexSource, const char* pszFragmentSource)
+    createProgramFromBuffer(const char* pszVertexSource,
+                            const char* pszFragmentSource,
+                            const char* pszVertexShaderDefs,
+                            const char* pszFragmentShaderDefs)
+
     {
         GLuint program = 0;
-        GLuint vertexShader = initShader(GL_VERTEX_SHADER, pszVertexSource);
-        GLuint fragmentShader = initShader(GL_FRAGMENT_SHADER, pszFragmentSource);
+        GLuint vertexShader = initShader(GL_VERTEX_SHADER, pszVertexSource, pszVertexShaderDefs);
+        GLuint fragmentShader = initShader(GL_FRAGMENT_SHADER, pszFragmentSource, pszFragmentShaderDefs);
         
         if (vertexShader && fragmentShader) {
             program = glCreateProgram();
