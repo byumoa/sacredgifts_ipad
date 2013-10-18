@@ -740,15 +740,11 @@
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="SG_General_Media_Playbar.png" id="g5H-MS-52i">
                                 <rect key="frame" x="100" y="221" width="635" height="9"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="SG_General_Media_Playbar_Overlay.png" id="hXV-lf-BbQ">
                                 <rect key="frame" x="100" y="221" width="445" height="9"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="SG_General_Media_Playhead.png" id="7kB-eU-9AP">
-                                <rect key="frame" x="524" y="206" width="40" height="40"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Ey-Se-eNL">
                                 <rect key="frame" x="11" y="187" width="96" height="77"/>
@@ -769,7 +765,6 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="playHead" destination="7kB-eU-9AP" id="RBv-ao-P6J"/>
                         <outlet property="playOverlay" destination="hXV-lf-BbQ" id="TFr-nA-kf6"/>
                         <outlet property="playPauseButton" destination="4Ey-Se-eNL" id="LA1-zZ-Ll9"/>
                     </connections>
@@ -1117,7 +1112,6 @@
         <image name="SG_General_HomeBtn.png" width="200" height="56"/>
         <image name="SG_General_Media_Playbar.png" width="387" height="9"/>
         <image name="SG_General_Media_Playbar_Overlay.png" width="387" height="9"/>
-        <image name="SG_General_Media_Playhead.png" width="40" height="40"/>
         <image name="SG_General_ModuleButtonBar.png" width="768" height="70"/>
         <image name="SG_General_Module_CloseBtn-on.png" width="41" height="41"/>
         <image name="SG_General_Module_CloseBtn.png" width="41" height="41"/>

@@ -7,9 +7,13 @@
 //
 
 #import "SGOverlayViewController.h"
+@class SGMusicManager;
 
 @interface SGMusicOverlayViewController : SGOverlayViewController
-@property (weak, nonatomic) IBOutlet UIImageView *playHead;
+{
+    NSTimer* _progressTimer;
+    SGMusicManager* _musicManager;
+}
 @property (weak, nonatomic) IBOutlet UIImageView *playOverlay;
 @property (weak, nonatomic) IBOutlet UIButton *playPauseButton;
 

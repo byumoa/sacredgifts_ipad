@@ -11,6 +11,8 @@
 
 @interface SGMusicOverlayViewController ()
 
+- (void) updateProgressBar: (NSTimer*)timer;
+
 @end
 
 @implementation SGMusicOverlayViewController
@@ -23,6 +25,22 @@
     }
     
     return self;
+}
+
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    _progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateProgressBar:) userInfo:nil repeats:YES];
+}
+
+-(void)updateProgressBar:(NSTimer*)timer
+{
+    float progressLength = _musicManager.player.currentTime / _musicManager.player.duration * 635.0;
+    CGRect frame = self.playOverlay.frame;
+    frame.size.width = progressLength;
+    
+    self.playOverlay.frame = frame;
 }
 
 -(void)addBackgroundImgWithPath:(NSString *)bgImgPath
@@ -40,13 +58,13 @@
     
     if( musicPath )
     {
-        SGMusicManager* musicManager = [SGMusicManager sharedManager];
-        if( musicManager.player.isPlaying )
-            [musicManager pauseAudio];
+        _musicManager = [SGMusicManager sharedManager];
+        if( _musicManager.player.isPlaying )
+            [_musicManager pauseAudio];
         else
-            [musicManager playAudioWithPath:musicPath];
+            [_musicManager playAudioWithPath:musicPath];
         
-        ((UIButton*)sender).selected = musicManager.player.isPlaying;
+        ((UIButton*)sender).selected = _musicManager.player.isPlaying;
     }
     else
     {
