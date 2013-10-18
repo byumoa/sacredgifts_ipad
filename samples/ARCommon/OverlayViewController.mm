@@ -1,5 +1,5 @@
 /*==============================================================================
-Copyright (c) 2012 QUALCOMM Austria Research Center GmbH.
+Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
 Qualcomm Confidential and Proprietary
 ==============================================================================*/
@@ -29,6 +29,10 @@ Qualcomm Confidential and Proprietary
 }
 
 
+- (void)dealloc {
+    [optionsOverlayView release];
+    [super dealloc];
+}
 
 
 - (void) loadView
@@ -40,15 +44,6 @@ Qualcomm Confidential and Proprietary
     // We're going to let the parent VC handle all interactions so disable any UI
     // Further on, we'll also implement a touch pass-through
     self.view.userInteractionEnabled = NO;
-    
-    // Get the camera capabilities
-    [OverlayViewController determineCameraCapabilities:&cameraCapabilities];
-    
-    UIImageView* bracketsImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"overlay__brackets.png"]];
-    CGPoint center = self.view.center;
-    center.y -= 20;
-    bracketsImgView.center = center;
-    [self.view addSubview:bracketsImgView];
 }
 
 
@@ -76,63 +71,81 @@ Qualcomm Confidential and Proprietary
 }
 
 
-// pop-up is invoked by parent VC
-- (void) showOverlay
+- (void) populateActionSheet
 {
-    // Show camera control action sheet
-    mainOptionsAS = [[UIActionSheet alloc] initWithTitle:nil
-                                                  delegate:self
-                                         cancelButtonTitle:nil
-                                    destructiveButtonTitle:nil
-                                         otherButtonTitles:nil];
-    
-    // add torch and focus control buttons if supported by the device
-    torchIx = -1;
-    autofocusIx = -1;
-    autofocusContIx = -1;
-    int count = 0;
-    
-    if (YES == cameraCapabilities.torch)
+    // add flash control button if supported by the device
+    if (MENU_OPTION_WANTED == flashIx && YES == cameraCapabilities.torch)
     {
         // set button text according to the current mode (toggle)
-        BOOL torchMode = [qUtils cameraTorchOn];
-        NSString *text = YES == torchMode ? @"Torch off" : @"Torch on";
-        torchIx = [mainOptionsAS addButtonWithTitle:text];
-        ++count;
+        BOOL flashMode = [qUtils cameraTorchOn];
+        NSString *text = YES == flashMode ? @"Flash off" : @"Flash on";
+        flashIx = [mainOptionsAS addButtonWithTitle:text];
     }
     
-    if (YES == cameraCapabilities.autofocus)
-    {
-        autofocusIx = [mainOptionsAS addButtonWithTitle:@"Autofocus"];
-        ++count;
-    }
-    
-    if (YES == cameraCapabilities.autofocusContinuous)
+    // add focus control button if supported by the device
+    if (MENU_OPTION_WANTED == autofocusContIx && YES == cameraCapabilities.autofocusContinuous)
     {
         // set button text according to the current mode (toggle)
         BOOL contAFMode = [qUtils cameraContinuousAFOn];
-        NSString *text = YES == contAFMode ? @"Continuous autofocus off" : @"Continuous autofocus on";
+        NSString *text = YES == contAFMode ? @"Auto focus off" : @"Auto focus on";
         autofocusContIx = [mainOptionsAS addButtonWithTitle:text];
-        ++count;
+    }
+    
+    // add single-shot focus control button if supported by the device
+    if (MENU_OPTION_WANTED == autofocusSingleIx && YES == cameraCapabilities.autofocus)
+    {
+        autofocusSingleIx = [mainOptionsAS addButtonWithTitle:@"Focus"];
     }
     
     // add 'select target' if there is more than one target
-    selectTargetIx = -1;
-    if (qUtils.targetsList && [qUtils.targetsList count] > 1)
+    if (MENU_OPTION_WANTED == selectTargetIx && qUtils.targetsList && [qUtils.targetsList count] > 1)
     {
-        selectTargetIx = [mainOptionsAS addButtonWithTitle:@"Select Target"];
-        ++count;
+        NSInteger targetToShow = (selectedTarget + 1) % [qUtils.targetsList count];
+        DataSetItem *targetEntry = [qUtils.targetsList objectAtIndex:targetToShow];
+        NSString *text = [NSString stringWithFormat:@"Switch to %@", targetEntry.name];
+        selectTargetIx = [mainOptionsAS addButtonWithTitle:text];
     }
     
-    NSInteger cancelIx = [mainOptionsAS addButtonWithTitle:@"Cancel"];
-    [mainOptionsAS setCancelButtonIndex:cancelIx];
     
-    if (0 < count)
+    // The cancel button is added in showOverlay rather than here.  This enables
+    // a subclass to call [super populateActionSheet either before or after adding
+    // its own items
+}
+
+
+// pop-up is invoked by parent VC
+- (void) showOverlay
+{
+    // Get the camera capabilities
+    [OverlayViewController determineCameraCapabilities:&cameraCapabilities];
+    
+    // Show camera control action sheet
+    mainOptionsAS = [[[UIActionSheet alloc] initWithTitle:nil
+                                                  delegate:self
+                                         cancelButtonTitle:nil
+                                    destructiveButtonTitle:nil
+                                         otherButtonTitles:nil] autorelease];
+    
+    // Specify standard menu options... a subclass can alter these settings
+    // in populateActionSheet
+    autofocusContIx = MENU_OPTION_WANTED;
+    autofocusSingleIx = MENU_OPTION_UNWANTED;
+    selectTargetIx = MENU_OPTION_WANTED;
+    flashIx = MENU_OPTION_UNWANTED;
+    
+    // Call myself to populate the menu.  May be overridden.
+    [self populateActionSheet];
+ 
+    // Only show the menu if we ended up with something in it
+    if ([mainOptionsAS numberOfButtons] > 0)
     {
+        // Add a cancel button (this is only shown by iOS in the Phone idiom)
+        [mainOptionsAS setCancelButtonIndex:[mainOptionsAS addButtonWithTitle:@"Cancel"]];
         self.view.userInteractionEnabled = YES;
         [mainOptionsAS showInView:self.view];
     }
 }
+
 
 // check to see if any content would be shown in showOverlay
 + (BOOL) doesOverlayHaveContent
@@ -142,115 +155,72 @@ Qualcomm Confidential and Proprietary
     struct tagCameraCapabilities capabilities;
     [OverlayViewController determineCameraCapabilities:&capabilities];
     
-    if (YES == capabilities.torch)
-        ++count;
-    
-    if (YES == capabilities.autofocus)
-        ++count;
-    
     if (YES == capabilities.autofocusContinuous)
         ++count;
     
     if ([QCARutils getInstance].targetsList && [[QCARutils getInstance].targetsList count] > 1)
         ++count;
     
+    
     return (count > 0);
 }
-
-
-// The user chose to select a target
-- (void) targetSelectInView:(UIView *)theView
-{
-    targetOptionsAS = [[UIActionSheet alloc] initWithTitle:@"Select Target"
-                                                  delegate:self
-                                         cancelButtonTitle:nil
-                                    destructiveButtonTitle:nil
-                                         otherButtonTitles:nil];
-    
-    for (int i=0;i<[qUtils.targetsList count];i++)
-    {
-        DataSetItem *targetEntry = [qUtils.targetsList objectAtIndex:i];
-        NSString *text = [(selectedTarget == i) ? @"* " : @"" stringByAppendingString:targetEntry.name];
-        [targetOptionsAS addButtonWithTitle:text];
-    }
-    
-    NSInteger cancelIx = [targetOptionsAS addButtonWithTitle:@"Cancel"];
-    [targetOptionsAS setCancelButtonIndex:cancelIx];
-        
-    [targetOptionsAS showInView:theView];
-}
-
 
 
 // UIActionSheetDelegate event handlers
 
 - (void) mainOptionClickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (buttonIndex == selectTargetIx)
+    if (flashIx == buttonIndex)
     {
-        // Select targets from here
-        [self targetSelectInView:self.view];
+        BOOL newFlashMode = ![qUtils cameraTorchOn];
+        [qUtils cameraSetTorchMode:newFlashMode];
     }
-    else
+    else if (selectTargetIx == buttonIndex)
     {
-        if (torchIx == buttonIndex)
-        {
-            // toggle camera torch mode
-            BOOL newTorchMode = ![qUtils cameraTorchOn];
-            [qUtils cameraSetTorchMode:newTorchMode];
-        }
-        else if (autofocusContIx == buttonIndex)
-        {
-            // toggle camera continuous autofocus mode
-            BOOL newContAFMode = ![qUtils cameraContinuousAFOn];
-            [qUtils cameraSetContinuousAFMode:newContAFMode];
-        }
-        else if (autofocusIx == buttonIndex)
-        {
-            // trigger camera autofocus
-            [qUtils cameraTriggerAF];
-        }
-        
-        self.view.userInteractionEnabled = NO;
-    }
-}
-
-- (void) targetOptionClickedButtonAtIndex:(NSInteger)buttonIndex
-{
-    if ((buttonIndex < [qUtils.targetsList count]) && (buttonIndex != selectedTarget))
-    {
-        selectedTarget = buttonIndex;
-        
+        selectedTarget = (selectedTarget + 1) % [qUtils.targetsList count];        
         DataSetItem *targetEntry = [qUtils.targetsList objectAtIndex:selectedTarget];
         [qUtils activateDataSet:targetEntry.dataSet];
     }
-    
+    else if (autofocusContIx == buttonIndex)
+    {
+        // toggle camera continuous autofocus mode
+        BOOL newContAFMode = ![qUtils cameraContinuousAFOn];
+        [qUtils cameraSetContinuousAFMode:newContAFMode];
+    }
+    else if (autofocusSingleIx == buttonIndex)
+    {
+        [qUtils cameraPerformAF];
+    }
+        
     self.view.userInteractionEnabled = NO;
-}
+ }
 
 
 - (void) actionSheet:(UIActionSheet*)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
-    if (actionSheet == mainOptionsAS)
-        [self mainOptionClickedButtonAtIndex:buttonIndex];
-    else if (actionSheet == targetOptionsAS)
-        [self targetOptionClickedButtonAtIndex:buttonIndex];
+    [self mainOptionClickedButtonAtIndex:buttonIndex];
 }
 
 
 + (void) determineCameraCapabilities:(struct tagCameraCapabilities *) pCapabilities
 {
-    // Determine whether the back camera supports torch and autofocus
+    // Determine whether the cameras support torch and autofocus
     NSArray* cameraArray = [AVCaptureDevice devicesWithMediaType:AVMediaTypeVideo];
+    qUtils.noOfCameras = [cameraArray count];
+    AVCaptureDevicePosition cameraPosition = AVCaptureDevicePositionBack;
+    
+    if (QCAR::CameraDevice::CAMERA_FRONT == qUtils.activeCamera)
+    {
+        cameraPosition = AVCaptureDevicePositionFront;
+    }
     
     for (AVCaptureDevice* camera in cameraArray)
     {
-        if (AVCaptureDevicePositionBack == [camera position])
+        if (cameraPosition == [camera position])
         {
             pCapabilities->autofocus = [camera isFocusModeSupported:AVCaptureFocusModeAutoFocus];
             pCapabilities->autofocusContinuous = [camera isFocusModeSupported:AVCaptureFocusModeContinuousAutoFocus];
             pCapabilities->torch = [camera isTorchModeSupported:AVCaptureTorchModeOn];
-            NSLog(@"autofocus: %d, autofocusContinuous: %d, torch %d", pCapabilities->autofocus, pCapabilities->autofocusContinuous, pCapabilities->torch);
         }
     }
 }

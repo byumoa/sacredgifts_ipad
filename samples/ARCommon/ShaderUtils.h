@@ -1,5 +1,5 @@
 /*==============================================================================
- Copyright (c) 2012 QUALCOMM Austria Research Center GmbH.
+ Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
  All Rights Reserved.
  Qualcomm Confidential and Proprietary
  ==============================================================================*/
@@ -25,30 +25,32 @@ namespace ShaderUtils
     
     // Set the rotation components of a 4x4 matrix
     void setRotationMatrix(float angle, float x, float y, float z, 
-                                  float *nMatrix);
+                           float *nMatrix);
     
     // Set the translation components of a 4x4 matrix
     void translatePoseMatrix(float x, float y, float z,
-                                    float* nMatrix = NULL);
+                             float* nMatrix = NULL);
     
     // Apply a rotation
     void rotatePoseMatrix(float angle, float x, float y, float z, 
-                                 float* nMatrix = NULL);
+                          float* nMatrix = NULL);
     
     // Apply a scaling transformation
     void scalePoseMatrix(float x, float y, float z, 
-                                float* nMatrix = NULL);
+                         float* nMatrix = NULL);
     
     // Multiply the two matrices A and B and write the result to C
     void multiplyMatrix(float *matrixA, float *matrixB, 
-                               float *matrixC);
+                        float *matrixC);
     
     // Initialise a shader
-    int initShader(GLenum nShaderType, const char* pszSource);
+    int initShader(GLenum nShaderType, const char* pszSource, const char* pszDefs = NULL);
     
     // Create a shader program
     int createProgramFromBuffer(const char* pszVertexSource,
-                                       const char* pszFragmentSource);
+                                const char* pszFragmentSource,
+                                const char* pszVertexShaderDefs = NULL,
+                                const char* pszFragmentShaderDefs = NULL);
     
     void setOrthoMatrix(float nLeft, float nRight, float nBottom, float nTop,
                         float nNear, float nFar, float *nProjMatrix);

@@ -1,5 +1,5 @@
 /*==============================================================================
- Copyright (c) 2012 QUALCOMM Austria Research Center GmbH.
+ Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
  All Rights Reserved.
  Qualcomm Confidential and Proprietary
  ==============================================================================*/
@@ -8,10 +8,11 @@
 #import "AR_EAGLView.h"
 #import "Texture.h"
 #import <QCAR/QCAR.h>
-
+#import <QCAR/VideoBackgroundConfig.h>
 #import "QCARutils.h"
 
 #ifndef USE_OPENGL1
+// *** Note, OpenGL ES 1.x is supported only in the ImageTargets sample ***
 #import "ShaderUtils.h"
 #define MAKESTRING(x) #x
 #import "Shaders/Shader.fsh"
@@ -113,12 +114,36 @@
 
 - (void)dealloc
 {
-    NSLog(@"EAGLView: dealloc");
-    [self deinitRendering];
     [self deleteFramebuffer];
-
+    
     // Tear down context
-    [EAGLContext setCurrentContext:nil];
+    if ([EAGLContext currentContext] == context) {
+        [EAGLContext setCurrentContext:nil];
+    }
+    
+    [context release];
+    [objects3D release];
+    [textureList release];
+    [super dealloc];
+}
+
+- (void)finishOpenGLESCommands
+{
+    // Called in response to applicationWillResignActive.  The ARViewController
+    // stops the render loop, and we now make sure all OpenGL ES commands
+    // complete before we (potentially) go into the background
+    if (context) {
+        [EAGLContext setCurrentContext:context];
+        glFinish();
+    }
+}
+
+- (void)freeOpenGLESResources
+{
+    // Called in response to applicationDidEnterBackground.  Free easily
+    // recreated OpenGL ES resources
+    [self deleteFramebuffer];
+    glFinish();
 }
 
 
@@ -314,6 +339,7 @@
         obj3D.texture = [textures objectAtIndex:i];
 
         [objects3D addObject:obj3D];
+        [obj3D release];
     }
 }
 
@@ -331,6 +357,7 @@
         normalHandle = glGetAttribLocation(shaderProgramID, "vertexNormal");
         textureCoordHandle = glGetAttribLocation(shaderProgramID, "vertexTexCoord");
         mvpMatrixHandle = glGetUniformLocation(shaderProgramID, "modelViewProjectionMatrix");
+        texSampler2DHandle  = glGetUniformLocation(shaderProgramID,"texSampler2D");
     }
     else {
         NSLog(@"Could not initialise augmentation shader");
@@ -371,24 +398,6 @@
     renderingInited = YES;
 }
 
-- (void)deinitRendering
-{
-    if (!renderingInited)
-        return;
-    
-    NSLog(@"EAGLView: deinitRendering");
-    
-    // Delete textures
-    GLuint *textureIDs = new GLuint [[textures count]];
-    for (int i = 0; i < [textures count]; ++i) {
-        Texture *texture = [textures objectAtIndex:i];
-        textureIDs[i] = texture.textureID;
-    }
-    glDeleteTextures([textures count], textureIDs);
-    delete [] textureIDs;
-    
-    renderingInited = NO;
-}
 
 ////////////////////////////////////////////////////////////////////////////////
 // Draw the current frame using OpenGL
@@ -420,7 +429,15 @@
     }
     
     glEnable(GL_DEPTH_TEST);
+    // We must detect if background reflection is active and adjust the culling direction. 
+    // If the reflection is active, this means the pose matrix has been reflected as well,
+    // therefore standard counter clockwise face culling will result in "inside out" models. 
     glEnable(GL_CULL_FACE);
+    glCullFace(GL_BACK);
+    if(QCAR::Renderer::getInstance().getVideoBackgroundConfig().mReflection == QCAR::VIDEO_BACKGROUND_REFLECTION_ON)
+        glFrontFace(GL_CW);  //Front camera
+    else
+        glFrontFace(GL_CCW);   //Back camera
     
     for (int i = 0; i < state.getNumActiveTrackables(); ++i) {        
         // Render using the appropriate version of OpenGL

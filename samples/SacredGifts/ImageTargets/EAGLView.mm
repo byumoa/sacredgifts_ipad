@@ -77,8 +77,8 @@ namespace {
 {
     // These two calls to setHint tell QCAR to split work over multiple
     // frames.  Depending on your requirements you can opt to omit these.
-    QCAR::setHint(QCAR::HINT_IMAGE_TARGET_MULTI_FRAME_ENABLED, 1);
-    QCAR::setHint(QCAR::HINT_IMAGE_TARGET_MILLISECONDS_PER_MULTI_FRAME, 25);
+    //QCAR::setHint(QCAR::HINT_IMAGE_TARGET_MULTI_FRAME_ENABLED, 1);
+    //QCAR::setHint(QCAR::HINT_IMAGE_TARGET_MILLISECONDS_PER_MULTI_FRAME, 25);
     
     // Here we could also make a QCAR::setHint call to set the maximum
     // number of simultaneous targets                
@@ -117,16 +117,17 @@ namespace {
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_CULL_FACE);
     
-    for (int i = 0; i < state.getNumActiveTrackables(); ++i) {
+    for (int i = 0; i < state.getNumTrackables(); ++i) {
         // Get the trackable
-        const QCAR::Trackable* trackable = state.getActiveTrackable(i);
-        QCAR::Matrix44F modelViewMatrix = QCAR::Tool::convertPose2GLMatrix(trackable->getPose());
+        const QCAR::TrackableResult* result = state.getTrackableResult(i);
+        const QCAR::Trackable& trackable = result->getTrackable();
+        QCAR::Matrix44F modelViewMatrix = QCAR::Tool::convertPose2GLMatrix(result->getPose());
         
         // Choose the texture based on the target name
         int targetIndex = 0; // "stones"
-        if (!strcmp(trackable->getName(), "chips"))
+        if (!strcmp(trackable.getName(), "chips"))
             targetIndex = 1;
-        else if (!strcmp(trackable->getName(), "tarmac"))
+        else if (!strcmp(trackable.getName(), "tarmac"))
             targetIndex = 2;
         
         Object3D *obj3D = [objects3D objectAtIndex:targetIndex];

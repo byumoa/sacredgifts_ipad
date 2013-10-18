@@ -1,5 +1,5 @@
 /*==============================================================================
- Copyright (c) 2012 QUALCOMM Austria Research Center GmbH.
+ Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
  All Rights Reserved.
  Qualcomm Confidential and Proprietary
  ==============================================================================*/
@@ -12,7 +12,6 @@
 #import "Texture.h"
 
 @interface ARViewController ()
-- (int)loadTextures:(NSArray *)textureList;
 - (void) unloadViewData;
 - (void) handleARViewRotation:(UIInterfaceOrientation)interfaceOrientation;
 @end
@@ -33,8 +32,8 @@
 
 - (void)dealloc
 {
-    NSLog(@"ARVC: dealloc");
     [self unloadViewData];
+    [super dealloc];
 }
 
 
@@ -46,6 +45,7 @@
     // Release the textures array
     if (textures != nil)
     {
+        [textures release];
         textures = nil;
     }
     
@@ -53,17 +53,14 @@
     
     if (arView != nil)
     {
+        [arView release];
         arView = nil;
     }
     
     if (parentView != nil)
     {
+        [parentView release];
         parentView = nil;
-    }
-    
-    if (qUtils != nil)
-    {
-        qUtils = nil;
     }
 }
 
@@ -97,7 +94,7 @@
     
     // load the list of textures requested by the view, and tell it about them
     if (textures == nil)
-        [self loadTextures:arView.textureList];
+        textures=[qUtils loadTextures:arView.textureList];
     [arView useTextures:textures];
    
     // set the view size for initialisation, and go do it...
@@ -108,8 +105,6 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
-    
     NSLog(@"ARVC: viewWillAppear");
 }
 
@@ -117,8 +112,6 @@
 {
     // resume here as in viewWillAppear the view hasn't always been stitched into the hierarchy
     // which means QCAR won't find our EAGLView
-    [super viewDidAppear:animated];
-    
     NSLog(@"ARVC: viewDidAppear");
     if (arVisible == NO)
         [qUtils resumeAR];
@@ -128,11 +121,12 @@
 
 - (void)viewDidDisappear:(BOOL)animated
 {
-    [super viewDidDisappear:animated];
-    
     NSLog(@"ARVC: viewDidDisappear");
     if (arVisible == YES)
         [qUtils pauseAR];
+    
+    // Be a good OpenGL ES citizen: ensure all commands have finished executing
+    [arView finishOpenGLESCommands];
     
     arVisible = NO;
 }
@@ -141,6 +135,8 @@
 - (void)viewDidUnload
 {
     NSLog(@"ARVC: viewDidUnload");
+    
+    [super viewDidUnload];
     
     [self unloadViewData];
 }
@@ -188,39 +184,10 @@
 }
 
 
-#pragma mark --- Data management ---
-////////////////////////////////////////////////////////////////////////////////
-// Load the textures for use by OpenGL
-- (int)loadTextures:(NSArray *)textureList
+// Free any OpenGL ES resources that are easily recreated when the app resumes
+- (void)freeOpenGLESResources
 {
-    int nErr = noErr;
-    int nTextures = [textureList count];
-    textures = [NSMutableArray array];
-    
-    @try {
-        for (int i = 0; i < nTextures; ++i) {
-            Texture* tex = [[Texture alloc] init];
-            NSString* file = [textureList objectAtIndex:i];
-            
-            nErr = [tex loadImage:file] == YES ? noErr : 1;
-            [textures addObject:tex];
-            
-            if (noErr != nErr) {
-                break;
-            }
-        }
-    }
-    @catch (NSException* e) {
-        NSLog(@"NSMutableArray addObject exception");
-    }
-    
-    assert([textures count] == nTextures);
-    if ([textures count] != nTextures) {
-        nErr = 1;
-    }
-    
-    return nErr;
+    [arView freeOpenGLESResources];
 }
-
 
 @end
