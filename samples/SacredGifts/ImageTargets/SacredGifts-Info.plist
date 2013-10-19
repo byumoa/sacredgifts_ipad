@@ -11,13 +11,9 @@
 	<key>CFBundleExecutable</key>
 	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleIconFile</key>
-	<string>icon_vuforia_57x57.png</string>
+	<string></string>
 	<key>CFBundleIconFiles</key>
-	<array>
-		<string>icon_vuforia_57x57.png</string>
-		<string>icon_vuforia_114x114.png</string>
-		<string>icon_vuforia_72x72.png</string>
-	</array>
+	<array/>
 	<key>CFBundleIcons</key>
 	<dict/>
 	<key>CFBundleIcons~ipad</key>
@@ -40,8 +36,6 @@
 	<string>1.0</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>NSMainNibFile</key>
-	<string>Main_iPhone</string>
 	<key>UIMainStoryboardFile~ipad</key>
 	<string>Main_iPad</string>
 	<key>UIStatusBarHidden</key>
