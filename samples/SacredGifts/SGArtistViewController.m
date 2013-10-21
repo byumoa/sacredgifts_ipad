@@ -7,6 +7,7 @@
 //
 
 #import "SGArtistViewController.h"
+#import "SGConstants.h"
 
 @interface SGArtistViewController()
 
@@ -38,6 +39,8 @@
 - (IBAction)pressedPainting:(UIButton *)sender
 {
     NSLog(@"pressedPainting: %i", sender.tag);
+    NSString* paintingName = (NSString*)kPaintingNames[sender.tag-1];
+    [self.delegate transitionFromController:self toPaintingNamed:paintingName fromButtonRect:sender.frame withAnimType:kAnimTypeZoomIn];
 }
 
 @end
