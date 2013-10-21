@@ -16,6 +16,8 @@
     if( self = [super initWithCoder:aDecoder]){
         _centerPos = CGPointMake(384, 512);
         self.moduleType = kModuleTypeChildrens;
+        
+        NSLog(@"SGChilds initWithCoder: %@", aDecoder);
     }
     
     return self;
@@ -25,11 +27,15 @@
 {
     [super viewDidLoad];
     self.view.frame = CGRectMake(0, 66, 768, 892);
+    NSLog(@"SGChilds viewDidLoad");
 }
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath forgroundImage:(UIImage *)foregroundImg
 {
+    NSLog(@"SGChilds addBackgroundImgWithPath");
+    
     self.fingerPaintView.originalImage = [foregroundImg CGImage];
+    self.fingerPaintView.originalImage = [UIImage image]
     
     [super addBackgroundImgWithPath:bgImgPath];
     [self.bgImageView removeFromSuperview];
