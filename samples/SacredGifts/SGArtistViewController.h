@@ -15,5 +15,6 @@
 @property (nonatomic, weak) IBOutlet UIScrollView* scrollView;
 
 - (IBAction)pressedNarration:(UIButton *)sender;
+- (IBAction)pressedPainting:(UIButton *)sender;
 
 @end

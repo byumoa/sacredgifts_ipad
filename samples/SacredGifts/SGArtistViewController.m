@@ -35,4 +35,9 @@
     return YES;
 }
 
+- (IBAction)pressedPainting:(UIButton *)sender
+{
+    NSLog(@"pressedPainting: %i", sender.tag);
+}
+
 @end
