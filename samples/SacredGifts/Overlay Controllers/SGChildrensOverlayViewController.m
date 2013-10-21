@@ -35,7 +35,7 @@
     NSLog(@"SGChilds addBackgroundImgWithPath");
     
     self.fingerPaintView.originalImage = [foregroundImg CGImage];
-    self.fingerPaintView.originalImage = [UIImage image]
+    //self.fingerPaintView.originalImage = [UIImage image]
     
     [super addBackgroundImgWithPath:bgImgPath];
     [self.bgImageView removeFromSuperview];
