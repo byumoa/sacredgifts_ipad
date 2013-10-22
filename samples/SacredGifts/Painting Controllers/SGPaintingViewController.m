@@ -11,6 +11,7 @@
 #import "SGOverlayView.h"
 #import "SGChildrensOverlayViewController.h"
 #import "SGNarrationManager.h"
+#import "SGGiftOverlayViewController.h"
 
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
@@ -242,6 +243,10 @@ const int kPerspectivesButtonWidth = 161;
             break;
         case kModuleTypeVideo:{
             //Configured in perspectives
+        }
+            break;
+        case kModuleTypeGifts:{
+            [((SGGiftOverlayViewController*)self.overlayController) configureGifts];
         }
             break;
         case kModuleTypeChildrens:

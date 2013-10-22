@@ -7,7 +7,10 @@
 //
 
 #import "SGOverlayViewController.h"
+#import <MediaPlayer/MediaPlayer.h>
 
 @interface SGGiftOverlayViewController : SGOverlayViewController
+@property(nonatomic, strong) MPMoviePlayerController *moviePlayer;
+- (void)configureGifts;
 
 @end
