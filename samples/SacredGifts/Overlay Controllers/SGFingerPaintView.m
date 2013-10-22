@@ -17,7 +17,6 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
 {
     if( self = [super initWithCoder:aDecoder]){
         _strokesArr = [NSMutableArray new];
-        NSLog(@"SGFingers initWithCoder");
     }
     
     return self;
@@ -29,7 +28,6 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
     CGContextSetLineWidth(context, 30);
     CGContextSetLineCap(context, kCGLineCapRound);
     CGContextSetLineJoin(context, kCGLineJoinRound);
-    NSLog(@"SGFingers drawImageWithContext");
     
     //Draw a line
     for( NSDictionary* dict in _strokesArr )
@@ -48,8 +46,6 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
 
 - (void)drawRect:(CGRect)rect {
     
-    NSLog(@"SGFingers drawRect");
-    
     // Retrieve the graphics context
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGImageRef maskImage = [self drawImageWithContext:context inRect:rect];
@@ -63,7 +59,7 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
                                         ,  CGImageGetDataProvider(maskImage)
                                         , NULL
                                         , false);
-
+    
     //Flip and Clip
     CGContextTranslateCTM(context, 0, self.bounds.size.height);
     CGContextScaleCTM(context, 1.0, -1.0);
@@ -72,7 +68,7 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
     CGImageRef maskedCGImage = CGImageCreateWithMask(self.originalImage, mask);
     self.maskThis.image = [UIImage imageWithCGImage:maskedCGImage];
     CGImageRelease(maskedCGImage);
-
+    
     CGImageRelease(mask);
     CGImageRelease(maskImage);
 }
@@ -87,8 +83,6 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
     
     NSDictionary* strokeInfo = [NSDictionary dictionaryWithObjects:objectsArr forKeys:keysArr];
     [_strokesArr addObject:strokeInfo];
-    
-    NSLog(@"SGFingers touchesBegan");
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -97,7 +91,7 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
     NSValue* val = [NSValue valueWithCGPoint:point];
     [_strokeTouches addObject:val];
     [self setNeedsDisplay];
-    NSLog(@"SGFingers touchesMoved");
 }
 
 @end
+
