@@ -9,8 +9,6 @@
 #import "SGPaintingContainerViewController.h"
 #import "SGPaintingViewController.h"
 #import "SGConstants.h"
-#import "SGMusicManager.h"
-#import "SGNarrationManager.h"
 
 @implementation SGPaintingContainerViewController
 
@@ -25,10 +23,7 @@
 
 -(void)transitionFromController:(UIViewController *)fromController toPaintingNamed:(NSString *)paintingName fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
 {
-    SGMusicManager* musicManager = [SGMusicManager sharedManager];
-    [musicManager pauseAudio];
-    SGNarrationManager* narrationManager = [SGNarrationManager sharedManager];
-    [narrationManager pauseAudio];
+    [self stopAudio];
     
     SGPaintingViewController* toController = [self.storyboard instantiateViewControllerWithIdentifier:(NSString*)kControllerIDPaintingStr];
     toController.delegate = self;

@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SGContentControllerDelegate.h"
+
 @class SGContentViewController;
 
 @interface SGContainerViewController : UIViewController<SGContentControllerDelegate>{
@@ -19,5 +20,6 @@
 #pragma mark Navigation
 - (void)displayContentController:(UIViewController *)content;
 - (void)cycleFromViewController: (UIViewController*)oldC toViewController: (UIViewController*)newC fromButtonRect:(CGRect)frame falling:(const NSString *)animType;
+- (void)stopAudio;
 
 @end

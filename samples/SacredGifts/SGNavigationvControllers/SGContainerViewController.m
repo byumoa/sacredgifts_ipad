@@ -11,6 +11,8 @@
 #import "SGBlurManager.h"
 #import "SGConstants.h"
 #import "SGOverlayView.h"
+#import "SGMusicManager.h"
+#import "SGNarrationManager.h"
 
 @interface SGContainerViewController(BlurUtlities)
 
@@ -21,6 +23,14 @@
 @end
 
 @implementation SGContainerViewController
+
+-(void)stopAudio
+{
+    SGMusicManager* musicManager = [SGMusicManager sharedManager];
+    [musicManager pauseAudio];
+    SGNarrationManager* narrationManager = [SGNarrationManager sharedManager];
+    [narrationManager pauseAudio];
+}
 
 #pragma mark Navigation
 -(void)displayContentController:(UIViewController *)content

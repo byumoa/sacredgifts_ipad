@@ -44,6 +44,8 @@
             _backViewControllerIDStr = (NSString*)kControllerIDHomeStr;
     
         [self transitionFromController:self.currentContentController toControllerID:_backViewControllerIDStr fromButtonRect:sender.frame withAnimType:kAnimTypeZoomOut];
+        
+        [self stopAudio];
     }
 }
 

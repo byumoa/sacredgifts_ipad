@@ -341,6 +341,7 @@ const int kPerspectivesButtonWidth = 161;
     return [self addNewOverlayOfType:overlayName forPainting:_paintingNameStr];
 }
 
+//Close suboverlay
 -(void)closeOverlay:(SGOverlayViewController *)overlay
 {
     [self addNewOverlayOfType:(NSString*)kPerspectiveStr forPainting:_paintingNameStr];
