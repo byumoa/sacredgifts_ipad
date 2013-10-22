@@ -284,6 +284,11 @@ const int kPerspectivesButtonWidth = 161;
         [UIView animateWithDuration:0.25 animations:^{
             exitingOverlay.view.alpha = 0;
             ((SGOverlayView*)exitingOverlay.view).myBlurredBacking.alpha = 0;
+            if( [exitingOverlay respondsToSelector:@selector(moviePlayer)])
+            {
+                MPMoviePlayerController* moviePlayer = [exitingOverlay performSelector:@selector(moviePlayer)];
+                [moviePlayer stop];
+            }
         } completion:^(BOOL finished) {
             [exitingOverlay.view removeFromSuperview];
             [((SGOverlayView*)exitingOverlay.view).myBlurredBacking removeFromSuperview];

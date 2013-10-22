@@ -29,8 +29,6 @@
 
 - (void)configureGifts
 {
-    NSLog(@"self.rootFolderPath: %@", self.rootFolderPath);
-    
     NSString* videoPath = [[NSBundle mainBundle] pathForResource:@"gift" ofType:@".mp4" inDirectory:self.rootFolderPath];
     NSString* audioPath = [[NSBundle mainBundle] pathForResource:@"gift" ofType:@".mp3" inDirectory:self.rootFolderPath];
     
