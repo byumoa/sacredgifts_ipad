@@ -31,6 +31,8 @@
 		614E3CA3180DF631002E875B /* speaker_btns__narration_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C9F180DF631002E875B /* speaker_btns__narration_btn@2x.png */; };
 		614E3CA6180E4AC1002E875B /* SGArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614E3CA5180E4AC1002E875B /* SGArtistViewController.m */; };
 		614E3CA8180EA0FB002E875B /* schwartz_bio_audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 614E3CA7180EA0FB002E875B /* schwartz_bio_audio.mp3 */; };
+		6154DD3E1815FF4800D03E9D /* childrens.png in Resources */ = {isa = PBXBuildFile; fileRef = 6154DD3D1815FF4800D03E9D /* childrens.png */; };
+		6154DD401815FF7700D03E9D /* MainPainting.png in Resources */ = {isa = PBXBuildFile; fileRef = 6154DD3F1815FF7700D03E9D /* MainPainting.png */; };
 		61865DC9180F5145004CE494 /* SGMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61865DC8180F5145004CE494 /* SGMusicManager.m */; };
 		61865DCC180F515E004CE494 /* SGNarrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61865DCB180F515E004CE494 /* SGNarrationManager.m */; };
 		61865DCF180F5A90004CE494 /* SGAbstractAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61865DCE180F5A90004CE494 /* SGAbstractAudioManager.m */; };
@@ -402,6 +404,8 @@
 		614E3CA4180E4AC1002E875B /* SGArtistViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGArtistViewController.h; sourceTree = "<group>"; };
 		614E3CA5180E4AC1002E875B /* SGArtistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGArtistViewController.m; sourceTree = "<group>"; };
 		614E3CA7180EA0FB002E875B /* schwartz_bio_audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = schwartz_bio_audio.mp3; sourceTree = "<group>"; };
+		6154DD3D1815FF4800D03E9D /* childrens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = childrens.png; sourceTree = "<group>"; };
+		6154DD3F1815FF7700D03E9D /* MainPainting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainPainting.png; sourceTree = "<group>"; };
 		61865DC7180F5145004CE494 /* SGMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMusicManager.h; sourceTree = "<group>"; };
 		61865DC8180F5145004CE494 /* SGMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMusicManager.m; sourceTree = "<group>"; };
 		61865DCA180F515E004CE494 /* SGNarrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGNarrationManager.h; sourceTree = "<group>"; };
@@ -983,6 +987,8 @@
 		61CD50A5180C242500D28921 /* GeneralResources */ = {
 			isa = PBXGroup;
 			children = (
+				6154DD3F1815FF7700D03E9D /* MainPainting.png */,
+				6154DD3D1815FF4800D03E9D /* childrens.png */,
 				61CD50A6180C242500D28921 /* AR Assets */,
 				61CD50AA180C242500D28921 /* artists */,
 				61CD50B4180C242500D28921 /* Backgrounds */,
@@ -1506,6 +1512,7 @@
 				61CD51DA180C242500D28921 /* sg_home_bg-exhibition@2x.png in Resources */,
 				61CD509C180C23B100D28921 /* Main_iPad.storyboard in Resources */,
 				61CD51FA180C242500D28921 /* sg_home_filmbtn.png in Resources */,
+				6154DD401815FF7700D03E9D /* MainPainting.png in Resources */,
 				61CD521A180C242500D28921 /* SG_Home_PaintingListBtn.png in Resources */,
 				61CD51D4180C242500D28921 /* artists_pages_hofmann_overlay@2x.png in Resources */,
 				61CD5258180C242500D28921 /* SG_General_Painting_ContextBtn@2x.png in Resources */,
@@ -1516,6 +1523,7 @@
 				61CD52C2180C242500D28921 /* painting_thumb_garden-on.png in Resources */,
 				61CD52BB180C242500D28921 /* painting_thumb_denial-on@2x.png in Resources */,
 				61CD52E4180C242500D28921 /* painting_thumb_shepherds.png in Resources */,
+				6154DD3E1815FF4800D03E9D /* childrens.png in Resources */,
 				61CD5234180C242500D28921 /* SG_General_Music_PlayPause-on@2x.png in Resources */,
 				61CD5226180C242500D28921 /* sg_home_schwartzbtn.png in Resources */,
 				61CD5271180C242500D28921 /* SG_General_Painting_PanoramaBtn.png in Resources */,
