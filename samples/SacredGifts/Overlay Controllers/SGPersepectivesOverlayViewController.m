@@ -8,7 +8,7 @@
 
 #import "SGPersepectivesOverlayViewController.h"
 #import "SGVideoOverlayViewController.h"
-#import "SGTombstoneOverlayViewController.h"
+#import "SGAudioViewController.h"
 
 @interface SGPersepectivesOverlayViewController ()
 - (UIButton*)buttonForPerspectiveNumber: (int)perspectiveIndex atPath: (NSString*)folderPath;
@@ -102,11 +102,11 @@
 -(void)loadAudioWithFolderPath:(NSString *)audioFolderPath
 {
     /*
-    SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kMusicStr];
+    SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kAudioStr];
     
-    NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_video_overlay" ofType:@"png" inDirectory:videoFolderPath];
+    NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:audioFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
-    [((SGVideoOverlayViewController*)overlay) playPerspectiveMovieWithRootFolderPath:videoFolderPath];*/
+     */
 }
 
 -(void)loadTextWithFolderPath:(NSString *)textFolderPath

@@ -27,6 +27,18 @@ const CGPoint kEndPt = {-656, 512};
 
 -(void)tempPanoStrafing
 {
+    [UIView animateWithDuration:6 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        self.bgImageView.center = kEndPt;
+    } completion:nil];
+    
+    NSString* fileStr = [[NSBundle mainBundle] pathForResource:_panoImgArr[1] ofType:@"jpg" inDirectory:self.rootFolderPath];
+    UIImageView* nextImageView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:fileStr]];
+    [self.view insertSubview:nextImageView aboveSubview:self.bgImageView];
+    nextImageView.center = kStartPt;
+    [UIView animateWithDuration:6 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
+        nextImageView.center = kEndPt;
+    } completion:nil];
+    
     if( !_isAniamting )
         [self animateNextImageOn];
 }
@@ -60,8 +72,8 @@ const CGPoint kEndPt = {-656, 512};
 -(void)addBackgroundImgWithPath:(NSString *)bgImgPath
 {
     [super addBackgroundImgWithPath:bgImgPath];
-    [self tempPanoStrafing];
     self.view.center = self.view.superview.center;
+    [self tempPanoStrafing];
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder

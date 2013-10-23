@@ -47,6 +47,7 @@
 		6186729E18100E7900DED0D4 /* ShaderUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6186729218100E7900DED0D4 /* ShaderUtils.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6186729F18100E7900DED0D4 /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6186729518100E7900DED0D4 /* Texture.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		618B35CF1817FF3100EEC12E /* SGTextOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B35CE1817FF3100EEC12E /* SGTextOverlayViewController.m */; };
+		618B35D21818083900EEC12E /* SGAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B35D11818083900EEC12E /* SGAudioViewController.m */; };
 		61CD509B180C23B100D28921 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5099180C23B100D28921 /* Main_iPhone.storyboard */; };
 		61CD509C180C23B100D28921 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509A180C23B100D28921 /* Main_iPad.storyboard */; };
 		61CD50A4180C240400D28921 /* PaintingResources in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50A3180C240400D28921 /* PaintingResources */; };
@@ -427,6 +428,8 @@
 		6186729518100E7900DED0D4 /* Texture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Texture.mm; sourceTree = "<group>"; };
 		618B35CD1817FF3100EEC12E /* SGTextOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTextOverlayViewController.h; sourceTree = "<group>"; };
 		618B35CE1817FF3100EEC12E /* SGTextOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTextOverlayViewController.m; sourceTree = "<group>"; };
+		618B35D01818083900EEC12E /* SGAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAudioViewController.h; sourceTree = "<group>"; };
+		618B35D11818083900EEC12E /* SGAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAudioViewController.m; sourceTree = "<group>"; };
 		61CD5099180C23B100D28921 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		61CD509A180C23B100D28921 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		61CD50A3180C240400D28921 /* PaintingResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PaintingResources; sourceTree = "<group>"; };
@@ -1356,6 +1359,8 @@
 				61CD5302180C24FD00D28921 /* SGTombstoneOverlayViewController.m */,
 				618B35CD1817FF3100EEC12E /* SGTextOverlayViewController.h */,
 				618B35CE1817FF3100EEC12E /* SGTextOverlayViewController.m */,
+				618B35D01818083900EEC12E /* SGAudioViewController.h */,
+				618B35D11818083900EEC12E /* SGAudioViewController.m */,
 			);
 			path = "Overlay Controllers";
 			sourceTree = "<group>";
@@ -1747,6 +1752,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				61CD530C180C24FD00D28921 /* SGSocialViewController.m in Sources */,
+				618B35D21818083900EEC12E /* SGAudioViewController.m in Sources */,
 				15A1585D135C9CF800C6B482 /* main.m in Sources */,
 				618B35CF1817FF3100EEC12E /* SGTextOverlayViewController.m in Sources */,
 				61865DCC180F515E004CE494 /* SGNarrationManager.m in Sources */,
