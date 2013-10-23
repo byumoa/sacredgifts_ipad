@@ -18,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *playPauseButton;
 
 - (IBAction)pressedPlayPause:(id)sender;
+- (void)configureAudioWithPath: (NSString*)rootFolderPath;
 
 @end

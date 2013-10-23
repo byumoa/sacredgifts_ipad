@@ -12,6 +12,7 @@
 #import "SGChildrensOverlayViewController.h"
 #import "SGNarrationManager.h"
 #import "SGGiftOverlayViewController.h"
+#import "SGAudioViewController.h"
 
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
@@ -245,6 +246,11 @@ const int kPerspectivesButtonWidth = 161;
             break;
         case kModuleTypeVideo:{
             //Configured in perspectives
+        }
+            break;
+        case kModuleTypeAudio:{
+            NSString* perspectivesPath = [NSString stringWithFormat: @"PaintingResources/%@/perspectives/perspectives_%i", _paintingNameStr, 1];
+            [((SGAudioViewController*)self.overlayController) configureAudioWithPath:perspectivesPath];
         }
             break;
         case kModuleTypeGifts:{

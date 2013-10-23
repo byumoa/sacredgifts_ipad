@@ -101,12 +101,10 @@
 
 -(void)loadAudioWithFolderPath:(NSString *)audioFolderPath
 {
-    /*
     SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kAudioStr];
     
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:audioFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
-     */
 }
 
 -(void)loadTextWithFolderPath:(NSString *)textFolderPath

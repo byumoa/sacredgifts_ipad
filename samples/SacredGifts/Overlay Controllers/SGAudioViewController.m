@@ -45,15 +45,24 @@
 -(void)addBackgroundImgWithPath:(NSString *)bgImgPath
 {
     [super addBackgroundImgWithPath:bgImgPath];
+}
+
+-(void)configureAudioWithPath:(NSString *)rootFolderPath
+{
+    self.rootFolderPath = rootFolderPath;
     
     SGMusicManager* musicManager = [SGMusicManager sharedManager];
     if( !musicManager.player.isPlaying )
         [self pressedPlayPause:nil];
+
 }
 
 - (IBAction)pressedPlayPause:(id)sender
 {
+#warning self.rootFolderPath set to: PaintingResources/savior/audio
     NSString *musicPath = [[NSBundle mainBundle] pathForResource:@"audio" ofType:@".mp3" inDirectory:self.rootFolderPath];
+    NSLog(@"self.rootFolderPath: %@", self.rootFolderPath);
+#warning self.rootFolderPath should be: PaintingResources/savior/perspectives/perspectives_2
     
     if( musicPath )
     {
