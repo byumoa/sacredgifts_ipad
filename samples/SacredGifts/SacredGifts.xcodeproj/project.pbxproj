@@ -46,6 +46,7 @@
 		6186729D18100E7900DED0D4 /* Shader.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 6186729118100E7900DED0D4 /* Shader.vsh */; };
 		6186729E18100E7900DED0D4 /* ShaderUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6186729218100E7900DED0D4 /* ShaderUtils.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6186729F18100E7900DED0D4 /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6186729518100E7900DED0D4 /* Texture.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		618B35CF1817FF3100EEC12E /* SGTextOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B35CE1817FF3100EEC12E /* SGTextOverlayViewController.m */; };
 		61CD509B180C23B100D28921 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5099180C23B100D28921 /* Main_iPhone.storyboard */; };
 		61CD509C180C23B100D28921 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509A180C23B100D28921 /* Main_iPad.storyboard */; };
 		61CD50A4180C240400D28921 /* PaintingResources in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50A3180C240400D28921 /* PaintingResources */; };
@@ -167,12 +168,6 @@
 		61CD5242180C242500D28921 /* SG_General_Module_CloseBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5121180C242500D28921 /* SG_General_Module_CloseBtn@2x.png */; };
 		61CD5243180C242500D28921 /* SG_General_Module_Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5122180C242500D28921 /* SG_General_Module_Overlay.png */; };
 		61CD5244180C242500D28921 /* SG_General_Module_Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5123180C242500D28921 /* SG_General_Module_Overlay@2x.png */; };
-		61CD5245180C242500D28921 /* SG_General_Module_Overlay_Bloch.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5124180C242500D28921 /* SG_General_Module_Overlay_Bloch.png */; };
-		61CD5246180C242500D28921 /* SG_General_Module_Overlay_Bloch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5125180C242500D28921 /* SG_General_Module_Overlay_Bloch@2x.png */; };
-		61CD5247180C242500D28921 /* SG_General_Module_Overlay_Hofmann.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5126180C242500D28921 /* SG_General_Module_Overlay_Hofmann.png */; };
-		61CD5248180C242500D28921 /* SG_General_Module_Overlay_Hofmann@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5127180C242500D28921 /* SG_General_Module_Overlay_Hofmann@2x.png */; };
-		61CD5249180C242500D28921 /* SG_General_Module_Overlay_Schwartz.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5128180C242500D28921 /* SG_General_Module_Overlay_Schwartz.png */; };
-		61CD524A180C242500D28921 /* SG_General_Module_Overlay_Schwartz@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5129180C242500D28921 /* SG_General_Module_Overlay_Schwartz@2x.png */; };
 		61CD524B180C242500D28921 /* SG_General_ModuleButtonBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD512A180C242500D28921 /* SG_General_ModuleButtonBar.png */; };
 		61CD524C180C242500D28921 /* SG_General_ModuleButtonBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD512B180C242500D28921 /* SG_General_ModuleButtonBar@2x.png */; };
 		61CD524D180C242500D28921 /* SG_General_Painting_ChildrensBtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD512C180C242500D28921 /* SG_General_Painting_ChildrensBtn-on.png */; };
@@ -430,6 +425,8 @@
 		6186729318100E7900DED0D4 /* ShaderUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShaderUtils.h; sourceTree = "<group>"; };
 		6186729418100E7900DED0D4 /* Texture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
 		6186729518100E7900DED0D4 /* Texture.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Texture.mm; sourceTree = "<group>"; };
+		618B35CD1817FF3100EEC12E /* SGTextOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTextOverlayViewController.h; sourceTree = "<group>"; };
+		618B35CE1817FF3100EEC12E /* SGTextOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTextOverlayViewController.m; sourceTree = "<group>"; };
 		61CD5099180C23B100D28921 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		61CD509A180C23B100D28921 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		61CD50A3180C240400D28921 /* PaintingResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PaintingResources; sourceTree = "<group>"; };
@@ -551,12 +548,6 @@
 		61CD5121180C242500D28921 /* SG_General_Module_CloseBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Module_CloseBtn@2x.png"; sourceTree = "<group>"; };
 		61CD5122180C242500D28921 /* SG_General_Module_Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_General_Module_Overlay.png; sourceTree = "<group>"; };
 		61CD5123180C242500D28921 /* SG_General_Module_Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Module_Overlay@2x.png"; sourceTree = "<group>"; };
-		61CD5124180C242500D28921 /* SG_General_Module_Overlay_Bloch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_General_Module_Overlay_Bloch.png; sourceTree = "<group>"; };
-		61CD5125180C242500D28921 /* SG_General_Module_Overlay_Bloch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Module_Overlay_Bloch@2x.png"; sourceTree = "<group>"; };
-		61CD5126180C242500D28921 /* SG_General_Module_Overlay_Hofmann.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_General_Module_Overlay_Hofmann.png; sourceTree = "<group>"; };
-		61CD5127180C242500D28921 /* SG_General_Module_Overlay_Hofmann@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Module_Overlay_Hofmann@2x.png"; sourceTree = "<group>"; };
-		61CD5128180C242500D28921 /* SG_General_Module_Overlay_Schwartz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_General_Module_Overlay_Schwartz.png; sourceTree = "<group>"; };
-		61CD5129180C242500D28921 /* SG_General_Module_Overlay_Schwartz@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Module_Overlay_Schwartz@2x.png"; sourceTree = "<group>"; };
 		61CD512A180C242500D28921 /* SG_General_ModuleButtonBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_General_ModuleButtonBar.png; sourceTree = "<group>"; };
 		61CD512B180C242500D28921 /* SG_General_ModuleButtonBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_ModuleButtonBar@2x.png"; sourceTree = "<group>"; };
 		61CD512C180C242500D28921 /* SG_General_Painting_ChildrensBtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Painting_ChildrensBtn-on.png"; sourceTree = "<group>"; };
@@ -1161,12 +1152,6 @@
 				61CD5121180C242500D28921 /* SG_General_Module_CloseBtn@2x.png */,
 				61CD5122180C242500D28921 /* SG_General_Module_Overlay.png */,
 				61CD5123180C242500D28921 /* SG_General_Module_Overlay@2x.png */,
-				61CD5124180C242500D28921 /* SG_General_Module_Overlay_Bloch.png */,
-				61CD5125180C242500D28921 /* SG_General_Module_Overlay_Bloch@2x.png */,
-				61CD5126180C242500D28921 /* SG_General_Module_Overlay_Hofmann.png */,
-				61CD5127180C242500D28921 /* SG_General_Module_Overlay_Hofmann@2x.png */,
-				61CD5128180C242500D28921 /* SG_General_Module_Overlay_Schwartz.png */,
-				61CD5129180C242500D28921 /* SG_General_Module_Overlay_Schwartz@2x.png */,
 				61CD512A180C242500D28921 /* SG_General_ModuleButtonBar.png */,
 				61CD512B180C242500D28921 /* SG_General_ModuleButtonBar@2x.png */,
 				61CD512C180C242500D28921 /* SG_General_Painting_ChildrensBtn-on.png */,
@@ -1369,6 +1354,8 @@
 				61CD5300180C24FD00D28921 /* SGSummaryOverlayViewController.m */,
 				61CD5301180C24FD00D28921 /* SGTombstoneOverlayViewController.h */,
 				61CD5302180C24FD00D28921 /* SGTombstoneOverlayViewController.m */,
+				618B35CD1817FF3100EEC12E /* SGTextOverlayViewController.h */,
+				618B35CE1817FF3100EEC12E /* SGTextOverlayViewController.m */,
 			);
 			path = "Overlay Controllers";
 			sourceTree = "<group>";
@@ -1566,7 +1553,6 @@
 				61CD52C7180C242500D28921 /* painting_thumb_gethsemane-on@2x.png in Resources */,
 				61CD52CF180C242500D28921 /* painting_thumb_mocking-on@2x.png in Resources */,
 				61CD52C8180C242500D28921 /* painting_thumb_gethsemane.png in Resources */,
-				61CD5248180C242500D28921 /* SG_General_Module_Overlay_Hofmann@2x.png in Resources */,
 				61CD5272180C242500D28921 /* SG_General_Painting_PanoramaBtn@2x.png in Resources */,
 				61CD522E180C242500D28921 /* SG_General_Media_Playbar_Overlay@2x.png in Resources */,
 				61CD5242180C242500D28921 /* SG_General_Module_CloseBtn@2x.png in Resources */,
@@ -1651,7 +1637,6 @@
 				61CD5294180C242500D28921 /* SG_General_Share_thanks-on.png in Resources */,
 				61CD51FD180C242500D28921 /* sg_home_findbtn-on@2x.png in Resources */,
 				61CD51F6180C242500D28921 /* sg_home_feedbackbtn.png in Resources */,
-				61CD5247180C242500D28921 /* SG_General_Module_Overlay_Hofmann.png in Resources */,
 				61CD51F5180C242500D28921 /* sg_home_feedbackbtn-on@2x.png in Resources */,
 				61CD52CC180C242500D28921 /* painting_thumb_healing.png in Resources */,
 				61CD524B180C242500D28921 /* SG_General_ModuleButtonBar.png in Resources */,
@@ -1691,7 +1676,6 @@
 				61CD5239180C242500D28921 /* SG_General_BackBtn.png in Resources */,
 				61CD525F180C242500D28921 /* SG_General_Painting_DetailsBtn-on.png in Resources */,
 				61CD529F180C242500D28921 /* painting_thumb_aalborg-on@2x.png in Resources */,
-				61CD5245180C242500D28921 /* SG_General_Module_Overlay_Bloch.png in Resources */,
 				61CD52CB180C242500D28921 /* painting_thumb_healing-on@2x.png in Resources */,
 				61CD5223180C242500D28921 /* SG_Home_ScanPaintingBtn@2x.png in Resources */,
 				61CD51E0180C242500D28921 /* sg_home_bg-home@2x.png in Resources */,
@@ -1707,15 +1691,12 @@
 				61CD52B9180C242500D28921 /* painting_thumb_cross@2x.png in Resources */,
 				61CD5213180C242500D28921 /* sg_home_meetartistsbtn@2x.png in Resources */,
 				61CD52B6180C242500D28921 /* painting_thumb_cross-on.png in Resources */,
-				61CD524A180C242500D28921 /* SG_General_Module_Overlay_Schwartz@2x.png in Resources */,
 				61CD5237180C242500D28921 /* SG_General_BackBtn-on.png in Resources */,
 				61CD521E180C242500D28921 /* sg_home_reservationbtn.png in Resources */,
 				61CD520F180C242500D28921 /* SG_Home_LearnMoreBtn@2x.png in Resources */,
 				61CD51D3180C242500D28921 /* artists_pages_hofmann_overlay.png in Resources */,
 				61CD5228180C242500D28921 /* SG_Home_SplashScreen.png in Resources */,
-				61CD5249180C242500D28921 /* SG_General_Module_Overlay_Schwartz.png in Resources */,
 				7695D9D414D2F49B0013AD95 /* TextureTeapotRed.png in Resources */,
-				61CD5246180C242500D28921 /* SG_General_Module_Overlay_Bloch@2x.png in Resources */,
 				61CD52E8180C242500D28921 /* painting_thumb_temple.png in Resources */,
 				61CD5208180C242500D28921 /* sg_home_label_hofmann.png in Resources */,
 				61CD52BA180C242500D28921 /* painting_thumb_denial-on.png in Resources */,
@@ -1767,6 +1748,7 @@
 			files = (
 				61CD530C180C24FD00D28921 /* SGSocialViewController.m in Sources */,
 				15A1585D135C9CF800C6B482 /* main.m in Sources */,
+				618B35CF1817FF3100EEC12E /* SGTextOverlayViewController.m in Sources */,
 				61865DCC180F515E004CE494 /* SGNarrationManager.m in Sources */,
 				61CD5347180C256700D28921 /* SGScanViewController.m in Sources */,
 				61CD5319180C250800D28921 /* SGPaintingImageView.m in Sources */,

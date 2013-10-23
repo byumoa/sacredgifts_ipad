@@ -996,7 +996,7 @@
                     <view key="view" contentMode="scaleToFill" id="v9i-OL-lDl" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
@@ -1367,6 +1367,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faw-K1-Ad7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-138" y="1284"/>
+        </scene>
+        <!--Text Overlay View Controller-->
+        <scene sceneID="QJq-bj-8aB">
+            <objects>
+                <viewController restorationIdentifier="text" storyboardIdentifier="text" id="Dqd-Cv-NFI" customClass="SGTextOverlayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wXd-DP-4pW" customClass="SGOverlayView">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="114"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BZN-Rw-lzi" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2486" y="378"/>
         </scene>
     </scenes>
     <resources>

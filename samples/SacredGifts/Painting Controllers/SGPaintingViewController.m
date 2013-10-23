@@ -130,7 +130,8 @@ const int kPerspectivesButtonWidth = 161;
         case kModuleTypePerspective:    return (NSString*)kPerspectiveStr;  break;
         case kModuleTypeSocial:         return (NSString*)kSocialStr;       break;
         case kModuleTypeSummary:        return (NSString*)kSummaryStr;      break;
-        case kModuleTypeTombstone:      return (NSString*)kTombstoneStr;    break;
+        case kModuleTypeTombstone:      return (NSString*)kTextStr;         break;
+        case kModuleTypeText:           return (NSString*)kTombstoneStr;    break;
         case kModuleTypeNone:           default:                            break;
     }
     

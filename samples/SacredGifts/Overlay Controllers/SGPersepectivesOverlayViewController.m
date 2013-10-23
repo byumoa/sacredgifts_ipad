@@ -8,12 +8,15 @@
 
 #import "SGPersepectivesOverlayViewController.h"
 #import "SGVideoOverlayViewController.h"
+#import "SGTombstoneOverlayViewController.h"
 
 @interface SGPersepectivesOverlayViewController ()
 - (UIButton*)buttonForPerspectiveNumber: (int)perspectiveIndex atPath: (NSString*)folderPath;
 - (void)pressedPerspectiveBtn: (UIButton*)sender;
 - (void)loadPanoramaWithFolderPath: (NSString*)panoFolderPath;
 - (void)loadVideoWithFolderPath: (NSString*)videoFolderPath;
+- (void)loadAudioWithFolderPath: (NSString*)audioFolderPath;
+- (void)loadTextWithFolderPath: (NSString*)textFolderPath;
 @end
 
 @implementation SGPersepectivesOverlayViewController
@@ -65,15 +68,18 @@
 -(void)pressedPerspectiveBtn:(UIButton *)sender
 {
     NSString* btnFolderPath = [NSString stringWithFormat:@"%@perspectives_%i", self.rootFolderPath, sender.tag];
-    NSString* btnPath = [[NSBundle mainBundle] pathForResource:@"panorama" ofType:@"png" inDirectory:btnFolderPath];
+    NSString* panoPath = [[NSBundle mainBundle] pathForResource:@"panorama" ofType:@"png" inDirectory:btnFolderPath];
+    NSString* videoPath = [[NSBundle mainBundle] pathForResource:@"video" ofType:@"mp4" inDirectory:btnFolderPath];
+    NSString* audioPath = [[NSBundle mainBundle] pathForResource:@"audio" ofType:@"mp3" inDirectory:btnFolderPath];
     
-    if( btnPath )
+    if( panoPath )
         [self loadPanoramaWithFolderPath:btnFolderPath];
-    else{
-        btnPath = [[NSBundle mainBundle] pathForResource:@"perspectives_video" ofType:@"mov" inDirectory:btnFolderPath];
-        if( btnPath )
-            [self loadVideoWithFolderPath:btnFolderPath];
-    }
+    else if( videoPath )
+        [self loadVideoWithFolderPath:btnFolderPath];
+    else if( audioPath )
+        [self loadAudioWithFolderPath:btnFolderPath];
+    else
+        [self loadTextWithFolderPath:btnFolderPath];
 }
 
 -(void)loadPanoramaWithFolderPath:(NSString *)panoFolderPath
@@ -88,9 +94,26 @@
 {
     SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kVideoStr];
     
-    NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_video_overlay" ofType:@"png" inDirectory:videoFolderPath];
+    NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:videoFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
     [((SGVideoOverlayViewController*)overlay) playPerspectiveMovieWithRootFolderPath:videoFolderPath];
+}
+
+-(void)loadAudioWithFolderPath:(NSString *)audioFolderPath
+{
+    /*
+    SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kMusicStr];
+    
+    NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_video_overlay" ofType:@"png" inDirectory:videoFolderPath];
+    [overlay addBackgroundImgWithPath:overlayPath];
+    [((SGVideoOverlayViewController*)overlay) playPerspectiveMovieWithRootFolderPath:videoFolderPath];*/
+}
+
+-(void)loadTextWithFolderPath:(NSString *)textFolderPath
+{
+    SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kTextStr];
+    NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:textFolderPath];
+    [overlay addBackgroundImgWithPath:overlayPath];
 }
 
 @end

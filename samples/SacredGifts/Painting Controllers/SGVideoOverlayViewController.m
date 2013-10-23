@@ -28,7 +28,7 @@
 -(void)playPerspectiveMovieWithRootFolderPath: (NSString*)rootFoolderPath
 {
     self.rootFolderPath = rootFoolderPath;
-    NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"video" ofType:@"mov" inDirectory:self.rootFolderPath];
+    NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"video" ofType:@"mp4" inDirectory:self.rootFolderPath];
     NSURL* url = [NSURL fileURLWithPath:moviePath];
     self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
     self.moviePlayer.view.frame = CGRectMake(0, 45, 768, 432);
