@@ -24,6 +24,8 @@
 -(void)transitionFromController:(UIViewController *)fromController toPaintingNamed:(NSString *)paintingName fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
 {
     [self stopAudio];
+    if( [fromController respondsToSelector:@selector(removeCurrentOverlay)] )
+        [fromController performSelector:@selector(removeCurrentOverlay)];
     
     SGPaintingViewController* toController = [self.storyboard instantiateViewControllerWithIdentifier:(NSString*)kControllerIDPaintingStr];
     toController.delegate = self;

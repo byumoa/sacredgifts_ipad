@@ -908,7 +908,7 @@
                     <view key="view" contentMode="scaleToFill" id="Foc-kY-8IB" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="400"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="calibratedRGB"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
@@ -1382,6 +1382,7 @@
         <image name="SG_General_Music_PlayPause-on.png" width="42" height="42"/>
         <image name="SG_General_Music_PlayPause.png" width="41" height="42"/>
         <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
+        <image name="SG_General_Painting_ShareBtn-on.png" width="120" height="70"/>
         <image name="SG_General_Painting_ShareBtn.png" width="120" height="70"/>
         <image name="SG_General_ScanBtn-on.png" width="75" height="56"/>
         <image name="SG_General_ScanBtn.png" width="75" height="56"/>
@@ -1404,47 +1405,89 @@
         <image name="SG_Home_Footer_BG.png" width="804" height="161"/>
         <image name="SG_Home_SplashScreen.png" width="768" height="1024"/>
         <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
+        <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
+        <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
         <image name="artists_pages_bloch_overlay.png" width="768" height="784"/>
         <image name="artists_pages_hofmann_overlay.png" width="769" height="959"/>
         <image name="artists_pages_schwartz_overlay.png" width="768" height="845"/>
         <image name="painting_thumb_aalborg-on.png" width="123" height="164"/>
+        <image name="painting_thumb_aalborg-on.png" width="123" height="164"/>
+        <image name="painting_thumb_aalborg.png" width="123" height="164"/>
         <image name="painting_thumb_aalborg.png" width="123" height="164"/>
         <image name="painting_thumb_burial-on.png" width="123" height="164"/>
+        <image name="painting_thumb_burial-on.png" width="123" height="164"/>
+        <image name="painting_thumb_burial.png" width="123" height="164"/>
         <image name="painting_thumb_burial.png" width="123" height="164"/>
         <image name="painting_thumb_capture-on.png" width="123" height="164"/>
+        <image name="painting_thumb_capture-on.png" width="123" height="164"/>
+        <image name="painting_thumb_capture.png" width="123" height="164"/>
         <image name="painting_thumb_capture.png" width="123" height="164"/>
         <image name="painting_thumb_children-on.png" width="123" height="164"/>
+        <image name="painting_thumb_children-on.png" width="123" height="164"/>
+        <image name="painting_thumb_children.png" width="123" height="164"/>
         <image name="painting_thumb_children.png" width="123" height="164"/>
         <image name="painting_thumb_cleansing-on.png" width="123" height="164"/>
+        <image name="painting_thumb_cleansing-on.png" width="123" height="164"/>
+        <image name="painting_thumb_cleansing.png" width="123" height="164"/>
         <image name="painting_thumb_cleansing.png" width="123" height="164"/>
         <image name="painting_thumb_consolator-on.png" width="123" height="164"/>
+        <image name="painting_thumb_consolator-on.png" width="123" height="164"/>
+        <image name="painting_thumb_consolator.png" width="123" height="164"/>
         <image name="painting_thumb_consolator.png" width="123" height="164"/>
         <image name="painting_thumb_cross-on.png" width="123" height="164"/>
+        <image name="painting_thumb_cross-on.png" width="123" height="164"/>
+        <image name="painting_thumb_cross.png" width="123" height="164"/>
         <image name="painting_thumb_cross.png" width="123" height="164"/>
         <image name="painting_thumb_denial-on.png" width="123" height="164"/>
+        <image name="painting_thumb_denial-on.png" width="123" height="164"/>
+        <image name="painting_thumb_denial.png" width="123" height="164"/>
         <image name="painting_thumb_denial.png" width="123" height="164"/>
         <image name="painting_thumb_emmaus-on.png" width="123" height="164"/>
+        <image name="painting_thumb_emmaus-on.png" width="123" height="164"/>
+        <image name="painting_thumb_emmaus.png" width="123" height="164"/>
         <image name="painting_thumb_emmaus.png" width="123" height="164"/>
         <image name="painting_thumb_garden-on.png" width="123" height="164"/>
+        <image name="painting_thumb_garden-on.png" width="123" height="164"/>
+        <image name="painting_thumb_garden.png" width="123" height="164"/>
         <image name="painting_thumb_garden.png" width="123" height="164"/>
         <image name="painting_thumb_gethsemane-on.png" width="123" height="164"/>
+        <image name="painting_thumb_gethsemane-on.png" width="123" height="164"/>
+        <image name="painting_thumb_gethsemane.png" width="123" height="164"/>
         <image name="painting_thumb_gethsemane.png" width="123" height="164"/>
         <image name="painting_thumb_healing-on.png" width="123" height="164"/>
+        <image name="painting_thumb_healing-on.png" width="123" height="164"/>
+        <image name="painting_thumb_healing.png" width="123" height="164"/>
         <image name="painting_thumb_healing.png" width="123" height="164"/>
         <image name="painting_thumb_mocking-on.png" width="123" height="164"/>
+        <image name="painting_thumb_mocking-on.png" width="123" height="164"/>
+        <image name="painting_thumb_mocking.png" width="123" height="164"/>
         <image name="painting_thumb_mocking.png" width="123" height="164"/>
         <image name="painting_thumb_resurrection-on.png" width="123" height="164"/>
+        <image name="painting_thumb_resurrection-on.png" width="123" height="164"/>
+        <image name="painting_thumb_resurrection.png" width="123" height="164"/>
         <image name="painting_thumb_resurrection.png" width="123" height="164"/>
         <image name="painting_thumb_ruler-on.png" width="123" height="164"/>
+        <image name="painting_thumb_ruler-on.png" width="123" height="164"/>
+        <image name="painting_thumb_ruler.png" width="123" height="164"/>
         <image name="painting_thumb_ruler.png" width="123" height="164"/>
         <image name="painting_thumb_savior-on.png" width="123" height="164"/>
+        <image name="painting_thumb_savior-on.png" width="123" height="164"/>
+        <image name="painting_thumb_savior.png" width="123" height="164"/>
         <image name="painting_thumb_savior.png" width="123" height="164"/>
         <image name="painting_thumb_sermon-on.png" width="123" height="164"/>
+        <image name="painting_thumb_sermon-on.png" width="123" height="164"/>
+        <image name="painting_thumb_sermon.png" width="123" height="164"/>
         <image name="painting_thumb_sermon.png" width="123" height="164"/>
         <image name="painting_thumb_shepherds-on.png" width="123" height="164"/>
+        <image name="painting_thumb_shepherds-on.png" width="123" height="164"/>
+        <image name="painting_thumb_shepherds.png" width="123" height="164"/>
         <image name="painting_thumb_shepherds.png" width="123" height="164"/>
         <image name="painting_thumb_temple-on.png" width="123" height="164"/>
+        <image name="painting_thumb_temple-on.png" width="123" height="164"/>
         <image name="painting_thumb_temple.png" width="123" height="164"/>
+        <image name="painting_thumb_temple.png" width="123" height="164"/>
+        <image name="paintings_text.png" width="101" height="41"/>
+        <image name="paintings_text.png" width="101" height="41"/>
         <image name="paintings_text.png" width="101" height="41"/>
         <image name="sg_home_bg-exhibition.png" width="804" height="1060"/>
         <image name="sg_home_bg-findpainting.png" width="804" height="1060"/>
@@ -1472,6 +1515,13 @@
         <image name="sg_home_schwartzbtn-on.png" width="768" height="205"/>
         <image name="sg_home_schwartzbtn.png" width="768" height="205"/>
         <image name="speaker_btns__narration_btn-on.png" width="71" height="71"/>
+        <image name="speaker_btns__narration_btn-on.png" width="71" height="71"/>
+        <image name="speaker_btns__narration_btn-on.png" width="71" height="71"/>
+        <image name="speaker_btns__narration_btn-on.png" width="71" height="71"/>
+        <image name="speaker_btns__narration_btn.png" width="71" height="71"/>
+        <image name="speaker_btns__narration_btn.png" width="71" height="71"/>
+        <image name="speaker_btns__narration_btn.png" width="71" height="71"/>
+        <image name="speaker_btns__narration_btn.png" width="71" height="71"/>
         <image name="speaker_btns__narration_btn.png" width="71" height="71"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

@@ -246,6 +246,9 @@ const int kPerspectivesButtonWidth = 161;
         }
             break;
         case kModuleTypeGifts:{
+            NSString* overlayDir = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", _paintingNameStr, @"gift"];
+            NSString* overlayPath = [[NSBundle mainBundle] pathForResource:@"gift" ofType:@".png" inDirectory:overlayDir];
+            [self.overlayController addBackgroundImgWithPath:overlayPath];
             [((SGGiftOverlayViewController*)self.overlayController) configureGifts];
         }
             break;
