@@ -1392,19 +1392,19 @@
                 <viewController restorationIdentifier="audio" storyboardIdentifier="audio" id="dhc-Li-d9a" customClass="SGAudioViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5G7-pf-Gvg" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="278"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="SG_General_Media_Playbar.png" id="M97-QK-A5V">
                                 <rect key="frame" x="100" y="221" width="635" height="9"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="SG_General_Media_Playbar_Overlay.png" id="jmm-CE-Jad">
-                                <rect key="frame" x="100" y="221" width="445" height="9"/>
+                                <rect key="frame" x="100" y="221" width="0.0" height="9"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eYk-zX-kjK">
                                 <rect key="frame" x="11" y="187" width="96" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="SG_General_Music_PlayPause-on.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>

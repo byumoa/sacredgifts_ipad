@@ -5,11 +5,10 @@
 //  Created by Ontario on 10/23/13.
 //
 //
-
-#import "SGOverlayViewController.h"
+#import "SGSecondaryOverlayViewController.h"
 #import "SGMusicManager.h"
 
-@interface SGAudioViewController : SGOverlayViewController
+@interface SGAudioViewController : SGSecondaryOverlayViewController
 {
     NSTimer* _progressTimer;
     SGMusicManager* _musicManager;

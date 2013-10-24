@@ -35,9 +35,9 @@
 
 -(void)updateProgressBar:(NSTimer*)timer
 {
-    float progressLength = _musicManager.player.currentTime / _musicManager.player.duration * 635.0;
     CGRect frame = self.playOverlay.frame;
-    frame.size.width = progressLength;
+    if( _musicManager.player.duration > 0 )
+        frame.size.width = _musicManager.player.currentTime / _musicManager.player.duration * 635.0;
     
     self.playOverlay.frame = frame;
 }
@@ -53,16 +53,14 @@
     
     SGMusicManager* musicManager = [SGMusicManager sharedManager];
     if( !musicManager.player.isPlaying )
-        [self pressedPlayPause:nil];
+       [self pressedPlayPause:nil];
 
 }
 
 - (IBAction)pressedPlayPause:(id)sender
 {
-#warning self.rootFolderPath set to: PaintingResources/savior/audio
     NSString *musicPath = [[NSBundle mainBundle] pathForResource:@"audio" ofType:@".mp3" inDirectory:self.rootFolderPath];
     NSLog(@"self.rootFolderPath: %@", self.rootFolderPath);
-#warning self.rootFolderPath should be: PaintingResources/savior/perspectives/perspectives_2
     
     if( musicPath )
     {

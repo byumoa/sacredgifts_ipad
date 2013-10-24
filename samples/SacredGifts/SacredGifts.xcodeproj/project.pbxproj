@@ -23,6 +23,7 @@
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
 		6118B58A18117B6400FB8337 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6118B58918117B6400FB8337 /* CoreMotion.framework */; };
+		61267B7D1819333F00A52CC5 /* SGSecondaryOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61267B7C1819333F00A52CC5 /* SGSecondaryOverlayViewController.m */; };
 		614E3C9A180D8D9C002E875B /* SacredGifts.dat in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C98180D8D9C002E875B /* SacredGifts.dat */; };
 		614E3C9B180D8D9C002E875B /* SacredGifts.xml in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C99180D8D9C002E875B /* SacredGifts.xml */; };
 		614E3CA0180DF631002E875B /* speaker_btns__narration_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C9C180DF631002E875B /* speaker_btns__narration_btn.png */; };
@@ -42,8 +43,6 @@
 		6186729918100E7900DED0D4 /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6186728A18100E7900DED0D4 /* OverlayView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6186729A18100E7900DED0D4 /* OverlayViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6186728C18100E7900DED0D4 /* OverlayViewController.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6186729B18100E7900DED0D4 /* QCARutils.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6186728E18100E7900DED0D4 /* QCARutils.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		6186729C18100E7900DED0D4 /* Shader.fsh in Sources */ = {isa = PBXBuildFile; fileRef = 6186729018100E7900DED0D4 /* Shader.fsh */; };
-		6186729D18100E7900DED0D4 /* Shader.vsh in Sources */ = {isa = PBXBuildFile; fileRef = 6186729118100E7900DED0D4 /* Shader.vsh */; };
 		6186729E18100E7900DED0D4 /* ShaderUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6186729218100E7900DED0D4 /* ShaderUtils.cpp */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6186729F18100E7900DED0D4 /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6186729518100E7900DED0D4 /* Texture.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		618B35CF1817FF3100EEC12E /* SGTextOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B35CE1817FF3100EEC12E /* SGTextOverlayViewController.m */; };
@@ -391,6 +390,8 @@
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		6118B58918117B6400FB8337 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		61267B7B1819333F00A52CC5 /* SGSecondaryOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSecondaryOverlayViewController.h; sourceTree = "<group>"; };
+		61267B7C1819333F00A52CC5 /* SGSecondaryOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSecondaryOverlayViewController.m; sourceTree = "<group>"; };
 		614E3C98180D8D9C002E875B /* SacredGifts.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = SacredGifts.dat; path = ImageTargets/assets/SacredGifts.dat; sourceTree = "<group>"; };
 		614E3C99180D8D9C002E875B /* SacredGifts.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = SacredGifts.xml; path = ImageTargets/assets/SacredGifts.xml; sourceTree = "<group>"; };
 		614E3C9C180DF631002E875B /* speaker_btns__narration_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_btns__narration_btn.png; sourceTree = "<group>"; };
@@ -826,6 +827,7 @@
 		15A15847135C9CD700C6B482 /* SacredGifts */ = {
 			isa = PBXGroup;
 			children = (
+				61267B7A181932CD00A52CC5 /* Secondary Overlays */,
 				61865DC3180F511A004CE494 /* AudioManagers */,
 				15A15850135C9CF800C6B482 /* ImageTargetsAppDelegate.h */,
 				150D1CCA1385551A0007C72E /* ImageTargetsAppDelegate.mm */,
@@ -929,6 +931,15 @@
 				1599F810134360DE0073DAB2 /* Security.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		61267B7A181932CD00A52CC5 /* Secondary Overlays */ = {
+			isa = PBXGroup;
+			children = (
+				61267B7B1819333F00A52CC5 /* SGSecondaryOverlayViewController.h */,
+				61267B7C1819333F00A52CC5 /* SGSecondaryOverlayViewController.m */,
+			);
+			path = "Secondary Overlays";
 			sourceTree = "<group>";
 		};
 		61865DC3180F511A004CE494 /* AudioManagers */ = {
@@ -1762,12 +1773,10 @@
 				61CD5308180C24FD00D28921 /* SGOverlayView.m in Sources */,
 				61CD5343180C256700D28921 /* SGMeetTheArtistsViewController.m in Sources */,
 				61CD5304180C24FD00D28921 /* SGDetailsOverlayViewController.m in Sources */,
-				6186729C18100E7900DED0D4 /* Shader.fsh in Sources */,
 				61CD5340180C256700D28921 /* SGViewController.m in Sources */,
 				61CD5309180C24FD00D28921 /* SGOverlayViewController.m in Sources */,
 				61CD530B180C24FD00D28921 /* SGPersepectivesOverlayViewController.m in Sources */,
 				61CD5305180C24FD00D28921 /* SGFingerPaintView.m in Sources */,
-				6186729D18100E7900DED0D4 /* Shader.vsh in Sources */,
 				61CD5307180C24FD00D28921 /* SGMusicOverlayViewController.m in Sources */,
 				61CD530D180C24FD00D28921 /* SGSummaryOverlayViewController.m in Sources */,
 				61CD531A180C250800D28921 /* SGPaintingViewController.m in Sources */,
@@ -1796,6 +1805,7 @@
 				6186729A18100E7900DED0D4 /* OverlayViewController.mm in Sources */,
 				61CD530E180C24FD00D28921 /* SGTombstoneOverlayViewController.m in Sources */,
 				61CD5318180C250800D28921 /* SGPaintingContainerViewController.m in Sources */,
+				61267B7D1819333F00A52CC5 /* SGSecondaryOverlayViewController.m in Sources */,
 				6186729918100E7900DED0D4 /* OverlayView.m in Sources */,
 				61865DC9180F5145004CE494 /* SGMusicManager.m in Sources */,
 				61CD5324180C253400D28921 /* SGNavigationContainerViewController.mm in Sources */,
