@@ -10,6 +10,12 @@
 
 const CGRect kEllipseBox = {10, 10, 500, 500};
 
+@interface SGFingerPaintView()
+
+- (void)updateLoop: (NSTimer*)timer;
+
+@end
+
 @implementation SGFingerPaintView
 @synthesize originalImage = _originalImage;
 
@@ -17,9 +23,15 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
 {
     if( self = [super initWithCoder:aDecoder]){
         _strokesArr = [NSMutableArray new];
+        [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateLoop:) userInfo:nil repeats:YES];
     }
     
     return self;
+}
+
+-(void)updateLoop:(NSTimer *)timer
+{
+    [self setNeedsDisplay];
 }
 
 -(CGImageRef)drawImageWithContext:(CGContextRef)context inRect:(CGRect)rect
@@ -46,6 +58,7 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
 
 - (void)drawRect:(CGRect)rect {
     
+    if( _strokesArr.count == 0 ) return;
     // Retrieve the graphics context
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGImageRef maskImage = [self drawImageWithContext:context inRect:rect];
@@ -66,7 +79,21 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
     CGContextClipToMask(context, rect, mask);
     
     CGImageRef maskedCGImage = CGImageCreateWithMask(self.originalImage, mask);
-    self.maskThis.image = [UIImage imageWithCGImage:maskedCGImage];
+    //CGImageRef maskedCGImage = CGImageCreateWithMask(self.originalImage, mask);
+    //self.maskThis.image = [UIImage imageWithCGImage:maskedCGImage];
+    /*
+    __block UIImage* newImg;
+    dispatch_queue_t myQueue = dispatch_queue_create("Update Image",NULL);
+    dispatch_async(myQueue, ^{
+        // Perform long running process
+        newImg = [UIImage imageWithCGImage:maskedCGImage];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            // Update the UI
+            self.maskThis.image = newImg;
+            
+        });
+    });
+    */
     CGImageRelease(maskedCGImage);
     
     CGImageRelease(mask);
@@ -90,7 +117,7 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
     CGPoint point = [[touches anyObject] locationInView:self];
     NSValue* val = [NSValue valueWithCGPoint:point];
     [_strokeTouches addObject:val];
-    [self setNeedsDisplay];
+    //[self setNeedsDisplay];
 }
 
 @end

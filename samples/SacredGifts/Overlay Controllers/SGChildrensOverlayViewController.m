@@ -41,7 +41,8 @@
     [self.bgImageView removeFromSuperview];
     [self.view insertSubview:self.bgImageView aboveSubview:self.fingerPaintView];
     [self.fingerPaintView removeFromSuperview];
-    [self.view insertSubview:self.fingerPaintView atIndex:0];
+    //[self.view insertSubview:self.fingerPaintView atIndex:0];
+    [self.view addSubview:self.fingerPaintView];
 }
 
 @end
