@@ -22,8 +22,10 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
 @property (strong, nonatomic) UIActivityIndicatorView* activityIndicator;
-
 @property (strong, nonatomic) SGScanViewController* scanController;
+
+- (void)startPanoWithPath: (NSString*)path;
+- (void)stopPano;
 
 - (IBAction)pressedBack:(UIButton*)sender;
 - (IBAction)pressedDonate:(UIButton *)sender;

@@ -7,73 +7,25 @@
 //
 
 #import "SGPanoramaOverlayViewController.h"
+#import "SGEAGLView.h"
 
 const CGPoint kStartPt = {1392, 512};
 const CGPoint kMidPt = {368, 512};
 const CGPoint kEndPt = {-656, 512};
 
 @interface SGPanoramaOverlayViewController()
-{
-    NSArray* _panoImgArr;
-    BOOL _isAniamting;
-    int _currentImgIndex;
-    UIImageView* _currentImageView;
-}
-- (void)tempPanoStrafing;
-- (void)animateNextImageOn;
+
 @end
 
 @implementation SGPanoramaOverlayViewController
 
--(void)tempPanoStrafing
-{
-    [UIView animateWithDuration:6 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-        self.bgImageView.center = kEndPt;
-    } completion:nil];
-    
-    NSString* fileStr = [[NSBundle mainBundle] pathForResource:_panoImgArr[1] ofType:@"jpg" inDirectory:self.rootFolderPath];
-    UIImageView* nextImageView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:fileStr]];
-    [self.view insertSubview:nextImageView aboveSubview:self.bgImageView];
-    nextImageView.center = kStartPt;
-    [UIView animateWithDuration:6 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-        nextImageView.center = kEndPt;
-    } completion:nil];
-    
-    if( !_isAniamting )
-        [self animateNextImageOn];
-}
-
--(void)animateNextImageOn
-{
-    _currentImgIndex = (_currentImgIndex + 1) % _panoImgArr.count;
-    
-    NSString* fileStr = [[NSBundle mainBundle] pathForResource:_panoImgArr[_currentImgIndex] ofType:@"jpg" inDirectory:self.rootFolderPath];
-    
-    UIImageView* nextImageView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:fileStr]];
-    [self.view insertSubview:nextImageView aboveSubview:self.bgImageView];
-    nextImageView.center = kStartPt;
-    
-    [UIView animateWithDuration:6 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-        if( !_isAniamting )
-        {
-            
-        }
-        nextImageView.center = kMidPt;
-        _currentImageView.center = kEndPt;
-    } completion:^(BOOL finished) {
-        [_currentImageView removeFromSuperview];
-        _currentImageView = nextImageView;
-        [self animateNextImageOn];
-    }];
-
-    _isAniamting = YES;
-}
-
 -(void)addBackgroundImgWithPath:(NSString *)bgImgPath
 {
     [super addBackgroundImgWithPath:bgImgPath];
+    self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.bgImageView.image.size.width, self.bgImageView.image.size.height);
     self.view.center = self.view.superview.center;
-    [self tempPanoStrafing];
+    [self.bgImageView removeFromSuperview];
+    [((SGEAGLView*)self.view) startPano:0];
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder
@@ -81,8 +33,6 @@ const CGPoint kEndPt = {-656, 512};
     if( self = [super initWithCoder:aDecoder]){
         _centerPos = CGPointMake(384, 512);
         self.moduleType = kModuleTypePanorama;
-        
-        _panoImgArr = [NSArray arrayWithObjects:@"pano_f", @"pano_r", @"pano_b", @"pano_l", nil];
     }
     
     return self;

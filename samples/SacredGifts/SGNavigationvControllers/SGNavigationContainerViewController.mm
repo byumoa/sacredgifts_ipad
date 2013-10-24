@@ -52,28 +52,6 @@
 #pragma mark webview
 - (IBAction)pressedDonate:(UIButton *)sender
 {
-    /*
-    //Create Webview
-    _donateWebView = [UIWebView new];
-    _donateWebView.frame = self.view.frame;
-    [_donateWebView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:(NSString*)kDontateURLStr]]];
-    _donateWebView.delegate = self;
-    
-    //Webview Close Button
-    UIButton* closeBtn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-    [closeBtn setTitle:@"DONE" forState:UIControlStateNormal];
-    closeBtn.titleLabel.font = [UIFont systemFontOfSize:30];
-    closeBtn.frame = kWebviewBackBtnFrm;
-    [closeBtn addTarget:self action:@selector(pressedWebViewBack:) forControlEvents:UIControlEventTouchUpInside];
-    [_donateWebView addSubview:closeBtn];
-    
-    //Webview Transition On
-    _donateWebView.alpha = 0;
-    [self.view addSubview:_donateWebView];
-    [UIView animateWithDuration:0.25 animations:^{
-        _donateWebView.alpha = 1;
-    }];
-     */
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString: (NSString*)kDontateURLStr]];
 }
 
@@ -193,6 +171,16 @@
     _backViewControllerIDStr = (NSString*)kControllerIDHomeStr;
     
     [self transitionFromController:self.currentContentController toControllerID:_backViewControllerIDStr fromButtonRect:((UIButton*)sender).frame withAnimType:kAnimTypeZoomOut];
+}
+
+- (void)startPanoWithPath: (NSString*)path
+{
+    
+}
+
+- (void)stopPano
+{
+    
 }
 
 @end

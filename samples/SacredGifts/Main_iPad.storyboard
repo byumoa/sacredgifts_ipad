@@ -966,7 +966,7 @@
         <scene sceneID="w2W-Pc-s8Y">
             <objects>
                 <viewController restorationIdentifier="panorama" storyboardIdentifier="panorama" id="zb2-l7-MYK" customClass="SGPanoramaOverlayViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nRg-Hd-p9Q" customClass="SGOverlayView">
+                    <view key="view" contentMode="scaleToFill" id="nRg-Hd-p9Q" customClass="SGEAGLView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>

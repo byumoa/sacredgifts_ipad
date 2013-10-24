@@ -31,8 +31,6 @@
         homeC.delegate = self;
     
         [self displayContentController:homeC];
-        
-        NSLog(@"self.splashArtists");
         [UIView animateWithDuration:1 animations:^{
             self.splashArtists.alpha = 1;
         }];

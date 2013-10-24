@@ -38,6 +38,13 @@
 		614E3CA8180EA0FB002E875B /* schwartz_bio_audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 614E3CA7180EA0FB002E875B /* schwartz_bio_audio.mp3 */; };
 		6154DD3E1815FF4800D03E9D /* childrens.png in Resources */ = {isa = PBXBuildFile; fileRef = 6154DD3D1815FF4800D03E9D /* childrens.png */; };
 		6154DD401815FF7700D03E9D /* MainPainting.png in Resources */ = {isa = PBXBuildFile; fileRef = 6154DD3F1815FF7700D03E9D /* MainPainting.png */; };
+		6165AA741819C95400857DBD /* SGEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6165AA721819C95400857DBD /* SGEAGLView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6165AA7C1819E82A00857DBD /* chamber-1_b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6165AA761819E82A00857DBD /* chamber-1_b.jpg */; };
+		6165AA7D1819E82A00857DBD /* chamber-1_d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6165AA771819E82A00857DBD /* chamber-1_d.jpg */; };
+		6165AA7E1819E82A00857DBD /* chamber-1_f.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6165AA781819E82A00857DBD /* chamber-1_f.jpg */; };
+		6165AA7F1819E82A00857DBD /* chamber-1_l.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6165AA791819E82A00857DBD /* chamber-1_l.jpg */; };
+		6165AA801819E82A00857DBD /* chamber-1_r.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6165AA7A1819E82A00857DBD /* chamber-1_r.jpg */; };
+		6165AA811819E82A00857DBD /* chamber-1_u.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6165AA7B1819E82A00857DBD /* chamber-1_u.jpg */; };
 		61865DC9180F5145004CE494 /* SGMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61865DC8180F5145004CE494 /* SGMusicManager.m */; };
 		61865DCC180F515E004CE494 /* SGNarrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61865DCB180F515E004CE494 /* SGNarrationManager.m */; };
 		61865DCF180F5A90004CE494 /* SGAbstractAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61865DCE180F5A90004CE494 /* SGAbstractAudioManager.m */; };
@@ -411,6 +418,14 @@
 		614E3CA7180EA0FB002E875B /* schwartz_bio_audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = schwartz_bio_audio.mp3; sourceTree = "<group>"; };
 		6154DD3D1815FF4800D03E9D /* childrens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = childrens.png; sourceTree = "<group>"; };
 		6154DD3F1815FF7700D03E9D /* MainPainting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainPainting.png; sourceTree = "<group>"; };
+		6165AA721819C95400857DBD /* SGEAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGEAGLView.m; sourceTree = "<group>"; };
+		6165AA731819C95400857DBD /* SGEAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGEAGLView.h; sourceTree = "<group>"; };
+		6165AA761819E82A00857DBD /* chamber-1_b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chamber-1_b.jpg"; sourceTree = "<group>"; };
+		6165AA771819E82A00857DBD /* chamber-1_d.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chamber-1_d.jpg"; sourceTree = "<group>"; };
+		6165AA781819E82A00857DBD /* chamber-1_f.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chamber-1_f.jpg"; sourceTree = "<group>"; };
+		6165AA791819E82A00857DBD /* chamber-1_l.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chamber-1_l.jpg"; sourceTree = "<group>"; };
+		6165AA7A1819E82A00857DBD /* chamber-1_r.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chamber-1_r.jpg"; sourceTree = "<group>"; };
+		6165AA7B1819E82A00857DBD /* chamber-1_u.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chamber-1_u.jpg"; sourceTree = "<group>"; };
 		61865DC7180F5145004CE494 /* SGMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMusicManager.h; sourceTree = "<group>"; };
 		61865DC8180F5145004CE494 /* SGMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMusicManager.m; sourceTree = "<group>"; };
 		61865DCA180F515E004CE494 /* SGNarrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGNarrationManager.h; sourceTree = "<group>"; };
@@ -835,6 +850,8 @@
 		15A15847135C9CD700C6B482 /* SacredGifts */ = {
 			isa = PBXGroup;
 			children = (
+				6165AA731819C95400857DBD /* SGEAGLView.h */,
+				6165AA721819C95400857DBD /* SGEAGLView.m */,
 				61267B7A181932CD00A52CC5 /* Secondary Overlays */,
 				61865DC3180F511A004CE494 /* AudioManagers */,
 				15A15850135C9CF800C6B482 /* ImageTargetsAppDelegate.h */,
@@ -950,6 +967,19 @@
 			path = "Secondary Overlays";
 			sourceTree = "<group>";
 		};
+		6165AA751819E82A00857DBD /* chamber-1 */ = {
+			isa = PBXGroup;
+			children = (
+				6165AA761819E82A00857DBD /* chamber-1_b.jpg */,
+				6165AA771819E82A00857DBD /* chamber-1_d.jpg */,
+				6165AA781819E82A00857DBD /* chamber-1_f.jpg */,
+				6165AA791819E82A00857DBD /* chamber-1_l.jpg */,
+				6165AA7A1819E82A00857DBD /* chamber-1_r.jpg */,
+				6165AA7B1819E82A00857DBD /* chamber-1_u.jpg */,
+			);
+			path = "chamber-1";
+			sourceTree = "<group>";
+		};
 		61865DC3180F511A004CE494 /* AudioManagers */ = {
 			isa = PBXGroup;
 			children = (
@@ -1000,6 +1030,7 @@
 		61CD50A5180C242500D28921 /* GeneralResources */ = {
 			isa = PBXGroup;
 			children = (
+				6165AA751819E82A00857DBD /* chamber-1 */,
 				6154DD3F1815FF7700D03E9D /* MainPainting.png */,
 				6154DD3D1815FF4800D03E9D /* childrens.png */,
 				61CD50A6180C242500D28921 /* AR Assets */,
@@ -1552,6 +1583,7 @@
 				61CD52A8180C242500D28921 /* painting_thumb_capture.png in Resources */,
 				61CD52E9180C242500D28921 /* painting_thumb_temple@2x.png in Resources */,
 				61CD51D0180C242500D28921 /* artists_pages_artists_bg.png in Resources */,
+				6165AA7C1819E82A00857DBD /* chamber-1_b.jpg in Resources */,
 				61267B831819667B00A52CC5 /* splash_artists@2x.png in Resources */,
 				61CD52BF180C242500D28921 /* painting_thumb_emmaus-on@2x.png in Resources */,
 				61CD52BC180C242500D28921 /* painting_thumb_denial.png in Resources */,
@@ -1623,6 +1655,7 @@
 				61CD5261180C242500D28921 /* SG_General_Painting_DetailsBtn.png in Resources */,
 				61CD522C180C242500D28921 /* SG_General_Media_Playbar@2x.png in Resources */,
 				61CD5218180C242500D28921 /* SG_Home_PaintingListBtn-on.png in Resources */,
+				6165AA7D1819E82A00857DBD /* chamber-1_d.jpg in Resources */,
 				61CD5241180C242500D28921 /* SG_General_Module_CloseBtn.png in Resources */,
 				61CD5269180C242500D28921 /* SG_General_Painting_ModuleBtn.png in Resources */,
 				61CD5270180C242500D28921 /* SG_General_Painting_PanoramaBtn-on@2x.png in Resources */,
@@ -1684,6 +1717,7 @@
 				61CD5289180C242500D28921 /* SG_General_Share_email-on@2x.png in Resources */,
 				61CD526D180C242500D28921 /* SG_General_Painting_MusicBtn.png in Resources */,
 				61CD5291180C242500D28921 /* SG_General_Share_other-on@2x.png in Resources */,
+				6165AA7E1819E82A00857DBD /* chamber-1_f.jpg in Resources */,
 				61CD5216180C242500D28921 /* sg_home_originsbtn.png in Resources */,
 				76CEC822146D45F7009E8098 /* Tarmac.dat in Resources */,
 				61CD51EC180C242500D28921 /* sg_home_donatebtn-on.png in Resources */,
@@ -1725,6 +1759,7 @@
 				61CD52B6180C242500D28921 /* painting_thumb_cross-on.png in Resources */,
 				61CD5237180C242500D28921 /* SG_General_BackBtn-on.png in Resources */,
 				61CD521E180C242500D28921 /* sg_home_reservationbtn.png in Resources */,
+				6165AA811819E82A00857DBD /* chamber-1_u.jpg in Resources */,
 				61CD520F180C242500D28921 /* SG_Home_LearnMoreBtn@2x.png in Resources */,
 				61CD51D3180C242500D28921 /* artists_pages_hofmann_overlay.png in Resources */,
 				61CD5228180C242500D28921 /* SG_Home_SplashScreen.png in Resources */,
@@ -1732,6 +1767,7 @@
 				61CD52E8180C242500D28921 /* painting_thumb_temple.png in Resources */,
 				61CD5208180C242500D28921 /* sg_home_label_hofmann.png in Resources */,
 				61CD52BA180C242500D28921 /* painting_thumb_denial-on.png in Resources */,
+				6165AA7F1819E82A00857DBD /* chamber-1_l.jpg in Resources */,
 				61CD528F180C242500D28921 /* SG_General_Share_fb@2x.png in Resources */,
 				61CD5227180C242500D28921 /* sg_home_schwartzbtn@2x.png in Resources */,
 				61CD52B4180C242500D28921 /* painting_thumb_consolator.png in Resources */,
@@ -1752,6 +1788,7 @@
 				61CD51F2180C242500D28921 /* sg_home_exhibitionbtn.png in Resources */,
 				61CD5229180C242500D28921 /* SG_Home_SplashScreen@2x.png in Resources */,
 				61CD5204180C242500D28921 /* sg_home_hoffmanbtn.png in Resources */,
+				6165AA801819E82A00857DBD /* chamber-1_r.jpg in Resources */,
 				61CD5273180C242500D28921 /* SG_General_Painting_PerspectivesBtn-on.png in Resources */,
 				61CD521C180C242500D28921 /* sg_home_reservationbtn-on.png in Resources */,
 				61CD52B0180C242500D28921 /* painting_thumb_cleansing.png in Resources */,
@@ -1811,6 +1848,7 @@
 				61CD531B180C250800D28921 /* SGVideoOverlayViewController.m in Sources */,
 				61CD5344180C256700D28921 /* SGAboutTheExhibitionViewController.m in Sources */,
 				61CD5326180C253400D28921 /* SGContainerViewController.m in Sources */,
+				6165AA741819C95400857DBD /* SGEAGLView.m in Sources */,
 				6186729718100E7900DED0D4 /* ARParentViewController.mm in Sources */,
 				61CD5303180C24FD00D28921 /* SGChildrensOverlayViewController.m in Sources */,
 				6186729F18100E7900DED0D4 /* Texture.mm in Sources */,
