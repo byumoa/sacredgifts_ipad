@@ -20,7 +20,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
-      "filename" : "Default-1.png",
+      "filename" : "SG_Home_SplashScreen.png",
       "scale" : "1x"
     },
     {
@@ -35,6 +35,7 @@
       "idiom" : "ipad",
       "extent" : "full-screen",
       "minimum-system-version" : "7.0",
+      "filename" : "SG_Home_SplashScreen@2x.png",
       "scale" : "2x"
     },
     {

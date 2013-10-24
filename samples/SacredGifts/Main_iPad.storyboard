@@ -67,27 +67,25 @@
                                 <rect key="frame" x="0.0" y="883" width="768" height="141"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="SG_Home_Footer_BG.png" id="oeb-dd-xiC">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sg_home_footer_bg.png" id="oeb-dd-xiC">
                                         <rect key="frame" x="-17" y="0.0" width="804" height="161"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="04I-Sx-mhY">
-                                        <rect key="frame" x="505" y="-2" width="245" height="124"/>
+                                        <rect key="frame" x="505" y="-2" width="245" height="123"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="SG_Home_FeedbackBtn.png">
+                                        <state key="normal" image="sg_home_feedbackbtn.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="selected" backgroundImage="SG_Home_FeedbackBtn-on.png"/>
-                                        <state key="highlighted" backgroundImage="SG_Home_FeedbackBtn-on.png"/>
+                                        <state key="highlighted" image="sg_home_feedbackbtn-on.png"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="g8j-P1-QfM">
-                                        <rect key="frame" x="17" y="-2" width="245" height="124"/>
+                                        <rect key="frame" x="17" y="-2" width="245" height="123"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="SG_Home_DonateBtn.png">
+                                        <state key="normal" image="sg_home_donatebtn.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="selected" backgroundImage="SG_Home_DonateBtn-on.png"/>
-                                        <state key="highlighted" backgroundImage="SG_Home_DonateBtn-on.png"/>
+                                        <state key="highlighted" image="sg_home_donatebtn-on.png"/>
                                         <connections>
                                             <action selector="pressedDonate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pqA-AX-Crj"/>
                                         </connections>
@@ -97,6 +95,14 @@
                             </view>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="SG_Home_SplashScreen.png" id="zKe-di-iZj">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" image="splash_artists.png" id="Ca2-br-Pv0">
+                                <rect key="frame" x="456" y="721" width="312" height="303"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" image="splash_donors.png" id="mre-GN-Ojo">
+                                <rect key="frame" x="0.0" y="629" width="768" height="395"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -109,6 +115,8 @@
                         <outlet property="headerBlurDecoy" destination="DjK-ES-X9r" id="vYX-w7-piD"/>
                         <outlet property="headerView" destination="Ksf-Tw-7Rg" id="ed3-ih-wMI"/>
                         <outlet property="splash" destination="zKe-di-iZj" id="aR0-Tl-6DU"/>
+                        <outlet property="splashArtists" destination="Ca2-br-Pv0" id="fFf-AW-LuC"/>
+                        <outlet property="splashDonors" destination="mre-GN-Ojo" id="XRe-gC-A40"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -155,7 +163,6 @@
                                 <state key="normal" image="sg_home_exhibitionbtn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
-                                <state key="selected" backgroundImage="SG_Home_ExhibitionBtn-on.png"/>
                                 <state key="highlighted" image="sg_home_exhibitionbtn-on.png"/>
                                 <connections>
                                     <action selector="pressedBtn:" destination="rWn-Ap-S9g" eventType="touchUpInside" id="IeN-vl-706"/>
@@ -506,19 +513,8 @@
                                             <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="Dzd-Ka-ta0"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="88f-CB-IqD">
-                                        <rect key="frame" x="363" y="0.0" width="123" height="164"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="painting_thumb_sermon.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <state key="highlighted" image="painting_thumb_sermon-on.png"/>
-                                        <connections>
-                                            <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="2V2-dF-Ggt"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UAw-00-yTn">
-                                        <rect key="frame" x="484" y="0.0" width="123" height="164"/>
+                                        <rect key="frame" x="363" y="0.0" width="123" height="164"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="painting_thumb_shepherds.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -537,6 +533,17 @@
                                         <state key="highlighted" image="painting_thumb_denial-on.png"/>
                                         <connections>
                                             <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="Igr-Kq-W4a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="88f-CB-IqD">
+                                        <rect key="frame" x="484" y="0.0" width="123" height="164"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="painting_thumb_sermon.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" image="painting_thumb_sermon-on.png"/>
+                                        <connections>
+                                            <action selector="touchedPainting:" destination="S3D-aX-bvd" eventType="touchUpInside" id="2V2-dF-Ggt"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -1457,12 +1464,6 @@
         <image name="SG_General_Share_tw-on.png" width="244" height="41"/>
         <image name="SG_General_Share_tw.png" width="244" height="41"/>
         <image name="SG_General_TopBar.png" width="768" height="62"/>
-        <image name="SG_Home_DonateBtn-on.png" width="245" height="123"/>
-        <image name="SG_Home_DonateBtn.png" width="245" height="123"/>
-        <image name="SG_Home_ExhibitionBtn-on.png" width="768" height="205"/>
-        <image name="SG_Home_FeedbackBtn-on.png" width="245" height="123"/>
-        <image name="SG_Home_FeedbackBtn.png" width="245" height="123"/>
-        <image name="SG_Home_Footer_BG.png" width="804" height="161"/>
         <image name="SG_Home_SplashScreen.png" width="768" height="1024"/>
         <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
         <image name="artists_pages_bloch_overlay.png" width="768" height="784"/>
@@ -1513,12 +1514,17 @@
         <image name="sg_home_bg-meetartists.png" width="804" height="1060"/>
         <image name="sg_home_blochbtn-on.png" width="768" height="205"/>
         <image name="sg_home_blochbtn.png" width="768" height="205"/>
+        <image name="sg_home_donatebtn-on.png" width="245" height="123"/>
+        <image name="sg_home_donatebtn.png" width="245" height="123"/>
         <image name="sg_home_exhibitionbtn-on.png" width="768" height="205"/>
         <image name="sg_home_exhibitionbtn.png" width="768" height="205"/>
+        <image name="sg_home_feedbackbtn-on.png" width="245" height="123"/>
+        <image name="sg_home_feedbackbtn.png" width="245" height="123"/>
         <image name="sg_home_filmbtn-on.png" width="768" height="205"/>
         <image name="sg_home_filmbtn.png" width="768" height="205"/>
         <image name="sg_home_findbtn-on.png" width="768" height="205"/>
         <image name="sg_home_findbtn.png" width="768" height="205"/>
+        <image name="sg_home_footer_bg.png" width="804" height="161"/>
         <image name="sg_home_hoffmanbtn-on.png" width="768" height="205"/>
         <image name="sg_home_hoffmanbtn.png" width="768" height="205"/>
         <image name="sg_home_label_bloch.png" width="244" height="41"/>
@@ -1534,6 +1540,8 @@
         <image name="sg_home_schwartzbtn.png" width="768" height="205"/>
         <image name="speaker_btns__narration_btn-on.png" width="71" height="71"/>
         <image name="speaker_btns__narration_btn.png" width="71" height="71"/>
+        <image name="splash_artists.png" width="312" height="303"/>
+        <image name="splash_donors.png" width="768" height="395"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
