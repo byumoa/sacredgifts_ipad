@@ -108,6 +108,7 @@
     
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:audioFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
+    [((SGAudioViewController*)overlay) configureAudioWithPath:audioFolderPath];
 }
 
 -(void)loadTextWithFolderPath:(NSString *)textFolderPath

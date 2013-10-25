@@ -6,12 +6,12 @@
 //
 //
 #import "SGSecondaryOverlayViewController.h"
-#import "SGMusicManager.h"
+#import "SGNarrationManager.h"
 
 @interface SGAudioViewController : SGSecondaryOverlayViewController
 {
     NSTimer* _progressTimer;
-    SGMusicManager* _musicManager;
+    SGNarrationManager* _narrationManager;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *playOverlay;
 @property (weak, nonatomic) IBOutlet UIButton *playPauseButton;

@@ -36,8 +36,8 @@
 -(void)updateProgressBar:(NSTimer*)timer
 {
     CGRect frame = self.playOverlay.frame;
-    if( _musicManager.player.duration > 0 )
-        frame.size.width = _musicManager.player.currentTime / _musicManager.player.duration * 635.0;
+    if( _narrationManager.player.duration > 0 )
+        frame.size.width = _narrationManager.player.currentTime / _narrationManager.player.duration * 635.0;
     
     self.playOverlay.frame = frame;
 }
@@ -51,26 +51,27 @@
 {
     self.rootFolderPath = rootFolderPath;
     
-    SGMusicManager* musicManager = [SGMusicManager sharedManager];
-    if( !musicManager.player.isPlaying )
+    SGNarrationManager* narrationManager = [SGNarrationManager sharedManager];
+    if( !narrationManager.player.isPlaying )
        [self pressedPlayPause:nil];
 
 }
 
 - (IBAction)pressedPlayPause:(id)sender
 {
-    NSString *musicPath = [[NSBundle mainBundle] pathForResource:@"audio" ofType:@".mp3" inDirectory:self.rootFolderPath];
+    NSLog(@"self.rootFolderPath: %@", self.rootFolderPath);
+    NSString *narrationPath = [[NSBundle mainBundle] pathForResource:@"audio" ofType:@".mp3" inDirectory:self.rootFolderPath];
     NSLog(@"self.rootFolderPath: %@", self.rootFolderPath);
     
-    if( musicPath )
+    if( narrationPath )
     {
-        _musicManager = [SGMusicManager sharedManager];
-        if( _musicManager.player.isPlaying )
-            [_musicManager pauseAudio];
+        _narrationManager = [SGNarrationManager sharedManager];
+        if( _narrationManager.player.isPlaying )
+            [_narrationManager pauseAudio];
         else
-            [_musicManager playAudioWithPath:musicPath];
+            [_narrationManager playAudioWithPath:narrationPath];
         
-        ((UIButton*)sender).selected = _musicManager.player.isPlaying;
+        ((UIButton*)sender).selected = _narrationManager.player.isPlaying;
     }
     else
     {
