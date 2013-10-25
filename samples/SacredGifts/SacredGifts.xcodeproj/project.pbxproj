@@ -37,7 +37,6 @@
 		614E3CA6180E4AC1002E875B /* SGArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614E3CA5180E4AC1002E875B /* SGArtistViewController.m */; };
 		614E3CA8180EA0FB002E875B /* schwartz_bio_audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 614E3CA7180EA0FB002E875B /* schwartz_bio_audio.mp3 */; };
 		6154DD3E1815FF4800D03E9D /* childrens.png in Resources */ = {isa = PBXBuildFile; fileRef = 6154DD3D1815FF4800D03E9D /* childrens.png */; };
-		6154DD401815FF7700D03E9D /* MainPainting.png in Resources */ = {isa = PBXBuildFile; fileRef = 6154DD3F1815FF7700D03E9D /* MainPainting.png */; };
 		6165AA741819C95400857DBD /* SGEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6165AA721819C95400857DBD /* SGEAGLView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6165AA7C1819E82A00857DBD /* chamber-1_b.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6165AA761819E82A00857DBD /* chamber-1_b.jpg */; };
 		6165AA7D1819E82A00857DBD /* chamber-1_d.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6165AA771819E82A00857DBD /* chamber-1_d.jpg */; };
@@ -417,7 +416,6 @@
 		614E3CA5180E4AC1002E875B /* SGArtistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGArtistViewController.m; sourceTree = "<group>"; };
 		614E3CA7180EA0FB002E875B /* schwartz_bio_audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = schwartz_bio_audio.mp3; sourceTree = "<group>"; };
 		6154DD3D1815FF4800D03E9D /* childrens.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = childrens.png; sourceTree = "<group>"; };
-		6154DD3F1815FF7700D03E9D /* MainPainting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MainPainting.png; sourceTree = "<group>"; };
 		6165AA721819C95400857DBD /* SGEAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGEAGLView.m; sourceTree = "<group>"; };
 		6165AA731819C95400857DBD /* SGEAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGEAGLView.h; sourceTree = "<group>"; };
 		6165AA761819E82A00857DBD /* chamber-1_b.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chamber-1_b.jpg"; sourceTree = "<group>"; };
@@ -1031,7 +1029,6 @@
 			isa = PBXGroup;
 			children = (
 				6165AA751819E82A00857DBD /* chamber-1 */,
-				6154DD3F1815FF7700D03E9D /* MainPainting.png */,
 				6154DD3D1815FF4800D03E9D /* childrens.png */,
 				61CD50A6180C242500D28921 /* AR Assets */,
 				61CD50AA180C242500D28921 /* artists */,
@@ -1558,7 +1555,6 @@
 				61CD51DA180C242500D28921 /* sg_home_bg-exhibition@2x.png in Resources */,
 				61CD509C180C23B100D28921 /* Main_iPad.storyboard in Resources */,
 				61CD51FA180C242500D28921 /* sg_home_filmbtn.png in Resources */,
-				6154DD401815FF7700D03E9D /* MainPainting.png in Resources */,
 				61CD521A180C242500D28921 /* SG_Home_PaintingListBtn.png in Resources */,
 				61CD51D4180C242500D28921 /* artists_pages_hofmann_overlay@2x.png in Resources */,
 				61CD5258180C242500D28921 /* SG_General_Painting_ContextBtn@2x.png in Resources */,

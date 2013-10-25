@@ -8,6 +8,10 @@
 
 #import "SGChildrensOverlayViewController.h"
 
+@interface SGChildrensOverlayViewController()
+- (void)placeButtons;
+@end
+
 @implementation SGChildrensOverlayViewController
 @synthesize fingerPaintView = _fingerPaintView;
 
@@ -16,8 +20,6 @@
     if( self = [super initWithCoder:aDecoder]){
         _centerPos = CGPointMake(384, 512);
         self.moduleType = kModuleTypeChildrens;
-        
-        NSLog(@"SGChilds initWithCoder: %@", aDecoder);
     }
     
     return self;
@@ -27,22 +29,35 @@
 {
     [super viewDidLoad];
     self.view.frame = CGRectMake(0, 66, 768, 892);
-    NSLog(@"SGChilds viewDidLoad");
 }
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath forgroundImage:(UIImage *)foregroundImg
 {
-    NSLog(@"SGChilds addBackgroundImgWithPath");
-    
     self.fingerPaintView.originalImage = [foregroundImg CGImage];
-    self.fingerPaintView.originalImage = [[UIImage imageNamed:@"MainPainting.png"] CGImage];
     
     [super addBackgroundImgWithPath:bgImgPath];
-    [self.bgImageView removeFromSuperview];
-    [self.view insertSubview:self.bgImageView aboveSubview:self.fingerPaintView];
-    [self.fingerPaintView removeFromSuperview];
-    //[self.view insertSubview:self.fingerPaintView atIndex:0];
-    [self.view addSubview:self.fingerPaintView];
+    [self.view bringSubviewToFront:self.bgImageView];
+    [self.view sendSubviewToBack:self.fingerPaintView];
+    
+    //TEMP
+    self.bgImageView.image = foregroundImg;
+    CGPoint center = self.bgImageView.center;
+    CGRect frame = self.bgImageView.frame;
+    frame.size = foregroundImg.size;
+    self.bgImageView.contentMode = UIViewContentModeCenter;
+    frame.size.width += 300;
+    self.bgImageView.frame = frame;
+    self.bgImageView.center = center;
+    
+    [self placeButtons];
+}
+
+-(void)placeButtons
+{
+    for( int i = 0; i < 6; i++ )
+    {
+        
+    }
 }
 
 @end
