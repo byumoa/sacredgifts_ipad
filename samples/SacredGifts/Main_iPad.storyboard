@@ -965,7 +965,34 @@
         <!--Panorama Overlay View Controller-->
         <scene sceneID="w2W-Pc-s8Y">
             <objects>
-                <viewController restorationIdentifier="panorama" storyboardIdentifier="panorama" id="zb2-l7-MYK" customClass="SGPanoramaOverlayViewController" sceneMemberID="viewController"/>
+                <viewController restorationIdentifier="panorama" storyboardIdentifier="panorama" id="zb2-l7-MYK" customClass="SGPanoramaOverlayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nRg-Hd-p9Q" customClass="SGEAGLView">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="leV-Fj-L5c">
+                                <rect key="frame" x="0.0" y="938" width="768" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zd1-M5-yD1">
+                                <rect key="frame" x="615" y="91" width="62" height="60"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="SG_General_Module_CloseBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="SG_General_Module_CloseBtn-on.png"/>
+                                <connections>
+                                    <action selector="pressedClose:" destination="zb2-l7-MYK" eventType="touchUpInside" id="jos-lv-4WH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.818390877016129" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <connections>
+                        <outlet property="infoStripImgView" destination="leV-Fj-L5c" id="irF-4O-2Uk"/>
+                    </connections>
+                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlk-JO-MzZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3780" y="-77"/>
@@ -1421,6 +1448,8 @@
         <image name="SG_General_Media_Playbar_Overlay.png" width="387" height="9"/>
         <image name="SG_General_Media_Playbar_Overlay.png" width="387" height="9"/>
         <image name="SG_General_ModuleButtonBar.png" width="768" height="70"/>
+        <image name="SG_General_Module_CloseBtn-on.png" width="41" height="41"/>
+        <image name="SG_General_Module_CloseBtn.png" width="41" height="41"/>
         <image name="SG_General_Music_PlayPause-on.png" width="42" height="42"/>
         <image name="SG_General_Music_PlayPause-on.png" width="42" height="42"/>
         <image name="SG_General_Music_PlayPause.png" width="41" height="42"/>

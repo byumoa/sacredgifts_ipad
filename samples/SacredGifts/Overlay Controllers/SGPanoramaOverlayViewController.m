@@ -46,5 +46,8 @@ const CGPoint kEndPt = {-656, 512};
 -(void)startPanoWithPath: (NSString*)panoFolder
 {
     [((SGEAGLView*)self.view) startPanoWithPath:panoFolder];
+    NSString* infoImgStr = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:panoFolder];
+    NSLog(@"infoImgStr: %@", infoImgStr);
+    self.infoStripImgView.image = [UIImage imageWithContentsOfFile:infoImgStr];
 }
 @end

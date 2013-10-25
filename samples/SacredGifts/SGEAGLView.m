@@ -358,7 +358,6 @@ const GLshort spriteTexcoords[] = {
 						momentumX += 1;
 				}
 				else
-					
 					momentumX = 0;
 				
 				if( abs(momentumY) > 2 )
@@ -606,7 +605,6 @@ const GLshort spriteTexcoords[] = {
 			if( zooming )
 				break;
 			
-			NSLog(@"SGEAGLView touchesEnded case 1");
 			UITouch *touch = [[allTouches allObjects] objectAtIndex:0];
 			CGPoint location = [touch locationInView:self];
 			momentumX = (lastX - location.x);
@@ -614,7 +612,6 @@ const GLshort spriteTexcoords[] = {
 			momentumOn = YES;
 		} break;
 		case 2: {
-			NSLog(@"SGEAGLView touchesEnded case 2");
 			zooming = NO;
 		} break;
 	}
