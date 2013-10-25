@@ -16,7 +16,7 @@ typedef enum
     kModuleTypeChildrens = 5,
     kModuleTypeSocial = 6,
     kModuleTypeGifts = 7,
-    kModuleTypeDetails = 8,
+    kModuleTypeHighlights = 8,
     kModuleTypeVideo = 9,
     kModuleTypePanorama = 10,
     kModuleTypeText = 11,
@@ -56,8 +56,8 @@ extern const NSString* kPaintingResourcesStr;
 
 extern const NSString* kModuleBtnSummaryImageNrm;
 extern const NSString* kModuleBtnSummaryImageSel;
-extern const NSString* kModuleBtnDetailsImageNrm;
-extern const NSString* kModuleBtnDetailsImageSel;
+extern const NSString* kModuleBtnHighlightsImageNrm;
+extern const NSString* kModuleBtnHighlightsImageSel;
 extern const NSString* kModuleBtnMusicImageNrm;
 extern const NSString* kModuleBtnMusicImageSel;
 extern const NSString* kModuleBtnChildrensImageNrm;
@@ -72,7 +72,7 @@ extern const NSString* kPerspectiveStr;
 extern const NSString* kGiftsStr;
 extern const NSString* kMusicStr;
 extern const NSString* kChildrensStr;
-extern const NSString* kDetailsStr;
+extern const NSString* kHighlightsStr;
 extern const NSString* kTombstoneStr;
 extern const NSString* kSocialStr;
 extern const NSString* kVideoStr;

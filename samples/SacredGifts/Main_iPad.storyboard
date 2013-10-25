@@ -926,24 +926,6 @@
             </objects>
             <point key="canvasLocation" x="2811" y="410"/>
         </scene>
-        <!--Details Overlay View Controller-->
-        <scene sceneID="noX-fo-s7z">
-            <objects>
-                <viewController restorationIdentifier="details" storyboardIdentifier="details" id="OiJ-Kp-f7z" customClass="SGDetailsOverlayViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="vig-Pv-Spu" customClass="SGOverlayView">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="400"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </view>
-                    <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HAF-Eg-Whv" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2871" y="459"/>
-        </scene>
         <!--Persepectives Overlay View Controller-->
         <scene sceneID="DZE-8h-2cY">
             <objects>
@@ -1435,7 +1417,25 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Syu-gM-nxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2960" y="698"/>
+            <point key="canvasLocation" x="2951" y="1133"/>
+        </scene>
+        <!--Highlights View Controller-->
+        <scene sceneID="qg0-Ty-BHF">
+            <objects>
+                <viewController restorationIdentifier="highlights" storyboardIdentifier="highlights" id="Zfx-9u-qPD" customClass="SGHighlightsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="V3c-v8-ibk" customClass="SGOverlayView">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="400"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cfa-h9-hsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2971" y="580"/>
         </scene>
     </scenes>
     <resources>

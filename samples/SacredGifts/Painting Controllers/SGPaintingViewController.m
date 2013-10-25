@@ -13,6 +13,7 @@
 #import "SGNarrationManager.h"
 #import "SGGiftOverlayViewController.h"
 #import "SGAudioViewController.h"
+#import "SGHighlightsViewController.h"
 
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
@@ -84,15 +85,19 @@ const int kPerspectivesButtonWidth = 161;
 
 -(void)addFooterButtonsForPainting:(NSString *)paintingNameStr
 {
-    NSArray* buttonTypeStrArr = [NSArray arrayWithObjects: kSummaryStr, kPerspectiveStr, kGiftsStr, kChildrensStr, kDetailsStr, kMusicStr, nil];
+    NSArray* buttonTypeStrArr = [NSArray arrayWithObjects: kSummaryStr, kPerspectiveStr, kGiftsStr, /*kChildrensStr,*/ kHighlightsStr, kMusicStr, nil];
     
     for( NSString* buttonTypeStr in buttonTypeStrArr)
     {
-        NSString* overlayPath = [[NSBundle mainBundle] pathForResource:buttonTypeStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", paintingNameStr, buttonTypeStr]];
+        NSString* overlayDirectory = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", paintingNameStr, buttonTypeStr];
+        
+        NSString* overlayPath = [[NSBundle mainBundle] pathForResource:buttonTypeStr ofType:@"png" inDirectory:overlayDirectory];
         
         //Handle different perspectives folder structure
         if([buttonTypeStr isEqualToString:@"perspectives"])
-            overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_Btn1" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", paintingNameStr, buttonTypeStr]];
+            overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_Btn1" ofType:@"png" inDirectory:overlayDirectory];
+        else if([buttonTypeStr isEqualToString:@"highlights"])
+            overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:[NSString stringWithFormat:@"%@/%@", overlayDirectory, @"highlights_1"]];
         
         if( overlayPath != nil)
         {
@@ -118,6 +123,8 @@ const int kPerspectivesButtonWidth = 161;
         return kModuleTypePerspective;
     else if( [moduleStr isEqualToString: (NSString*)kMusicStr] )
         return kModuleTypeMusic;
+    else if( [moduleStr isEqualToString: (NSString*)kHighlightsStr] )
+        return kModuleTypeHighlights;
     else return kModuleTypeGifts;
 }
 
@@ -125,7 +132,7 @@ const int kPerspectivesButtonWidth = 161;
 {
     switch (moduleType) {
         case kModuleTypeChildrens:      return (NSString*)kChildrensStr;    break;
-        case kModuleTypeDetails:        return (NSString*)kDetailsStr;      break;
+        case kModuleTypeHighlights:     return (NSString*)kHighlightsStr;   break;
         case kModuleTypeGifts:          return (NSString*)kGiftsStr;        break;
         case kModuleTypeMusic:          return (NSString*)kMusicStr;        break;
         case kModuleTypePerspective:    return (NSString*)kPerspectiveStr;  break;
@@ -133,7 +140,7 @@ const int kPerspectivesButtonWidth = 161;
         case kModuleTypeSummary:        return (NSString*)kSummaryStr;      break;
         case kModuleTypeTombstone:      return (NSString*)kTombstoneStr;    break;
         case kModuleTypeText:           return (NSString*)kTextStr;         break;
-        case kModuleTypeAudio:          return (NSString*)kAudioStr;         break;
+        case kModuleTypeAudio:          return (NSString*)kAudioStr;        break;
         case kModuleTypeNone:           default:                            break;
     }
     
@@ -175,9 +182,9 @@ const int kPerspectivesButtonWidth = 161;
             btnImgStrNrm = (NSString*)kModuleBtnGiftsImageNrm;
             btnImgStrHil = (NSString*)kModuleBtnGiftsImageSel;
             break;
-        case kModuleTypeDetails:
-            btnImgStrNrm = (NSString*)kModuleBtnDetailsImageNrm;
-            btnImgStrHil = (NSString*)kModuleBtnDetailsImageSel;
+        case kModuleTypeHighlights:
+            btnImgStrNrm = (NSString*)kModuleBtnHighlightsImageNrm;
+            btnImgStrHil = (NSString*)kModuleBtnHighlightsImageSel;
             break;
         default:
             break;
@@ -267,6 +274,12 @@ const int kPerspectivesButtonWidth = 161;
             [((SGChildrensOverlayViewController*)self.overlayController) addBackgroundImgWithPath:paintingPath forgroundImage:self.paintingImageView.image];
         }
             break;
+        case kModuleTypeHighlights:
+        {
+            NSString* paintingDir = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", _paintingNameStr, @"highlights"];
+            [((SGHighlightsViewController*)self.overlayController) configureWithPath:<#(NSString *)#>]
+        }
+            break;
         default:{
             NSString *overlayPath = [[NSBundle mainBundle] pathForResource:moduleStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingStr, moduleStr]];
             [self.overlayController addBackgroundImgWithPath:overlayPath];
@@ -274,10 +287,17 @@ const int kPerspectivesButtonWidth = 161;
             break;
     }
     
-    if( ![moduleStr isEqualToString:(NSString*)kTombstoneStr] )
+    /*
+    if( ![moduleStr isEqualToString:(NSString*)kTombstoneStr]  )
     {
         [self.delegate contentController:self addBlurBackingForView:self.overlayController.view];
     }
+     */
+    if( self.overlayController.moduleType != kModuleTypeTombstone &&
+        self.overlayController.moduleType != kModuleTypePanorama  &&
+        self.overlayController.moduleType != kModuleTypeHighlights &&
+        self.overlayController.moduleType != kModuleTypeChildrens )
+        [self.delegate contentController:self addBlurBackingForView:self.overlayController.view];
     
     ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = 0;
     self.overlayController.view.alpha = 0;

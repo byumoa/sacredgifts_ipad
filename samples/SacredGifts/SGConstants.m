@@ -61,14 +61,14 @@ const NSString* kModuleBtnPerspectiveImageNrm = @"SG_General_Painting_Perspectiv
 const NSString* kModuleBtnPerspectiveImageSel = @"SG_General_Painting_PerspectivesBtn-on";
 const NSString* kModuleBtnGiftsImageNrm = @"SG_General_Painting_GiftsBtn";
 const NSString* kModuleBtnGiftsImageSel = @"SG_General_Painting_GiftsBtn-on";
-const NSString* kModuleBtnDetailsImageNrm = @"SG_General_Painting_DetailsBtn";
-const NSString* kModuleBtnDetailsImageSel = @"SG_General_Painting_DetailsBtn-on";
+const NSString* kModuleBtnHighlightsImageNrm = @"SG_General_Painting_DetailsBtn";
+const NSString* kModuleBtnHighlightsImageSel = @"SG_General_Painting_DetailsBtn-on";
 
 const NSString* kSummaryStr = @"summary";
 const NSString* kPerspectiveStr = @"perspectives";
 const NSString* kGiftsStr = @"gift";
 const NSString* kMusicStr = @"music";
-const NSString* kDetailsStr = @"details";
+const NSString* kHighlightsStr = @"highlights";
 const NSString* kChildrensStr = @"childrens";
 const NSString* kTombstoneStr = @"tombstone";
 const NSString* kSocialStr = @"social";
