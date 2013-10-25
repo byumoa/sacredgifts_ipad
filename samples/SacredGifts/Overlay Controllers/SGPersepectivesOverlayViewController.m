@@ -10,6 +10,7 @@
 #import "SGVideoOverlayViewController.h"
 #import "SGAudioViewController.h"
 #import "SGEAGLView.h"
+#import "SGPanoramaOverlayViewController.h"
 
 @interface SGPersepectivesOverlayViewController ()
 - (UIButton*)buttonForPerspectiveNumber: (int)perspectiveIndex atPath: (NSString*)folderPath;
@@ -89,6 +90,7 @@
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"pano_f" ofType:@"jpg" inDirectory:panoFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
     overlay.rootFolderPath = panoFolderPath;
+    [((SGPanoramaOverlayViewController*)overlay) startPanoWithPath:panoFolderPath];
 }
 
 -(void)loadVideoWithFolderPath:(NSString *)videoFolderPath

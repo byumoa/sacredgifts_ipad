@@ -25,7 +25,6 @@ const CGPoint kEndPt = {-656, 512};
     self.view.frame = CGRectMake(self.view.frame.origin.x, self.view.frame.origin.y, self.bgImageView.image.size.width, self.bgImageView.image.size.height);
     self.view.center = self.view.superview.center;
     [self.bgImageView removeFromSuperview];
-    [((SGEAGLView*)self.view) startPano:0];
 }
 
 -(id)initWithCoder:(NSCoder *)aDecoder
@@ -41,5 +40,11 @@ const CGPoint kEndPt = {-656, 512};
 - (IBAction)pressedClose:(id)sender
 {
     [self.delegate closeOverlay:self];
+    [((SGEAGLView*)self.view) stopPano];
+}
+
+-(void)startPanoWithPath: (NSString*)panoFolder
+{
+    [((SGEAGLView*)self.view) startPanoWithPath:panoFolder];
 }
 @end

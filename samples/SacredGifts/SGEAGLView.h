@@ -94,7 +94,6 @@ extern const NSString* panoNames[25];
 	float lastX, lastY;
 	float rotX, rotY;
 	
-	int currentPano;
 	float initialDistance;
 	float finalDistance;
 	float verticalStop;
@@ -106,10 +105,10 @@ extern const NSString* panoNames[25];
 }
 
 - (float)distanceBetweenTwoPoints: (CGPoint)fromPoint toPoint: (CGPoint)toPoint;
-- (void) createSkyboxWithName;
+- (void) createSkyboxWithPath: (NSString*)path;
 - (void) setFOV: (float)FOV;
 - (void) dismissPano;
-- (void) startPano: (int) panoIndex;
+- (void) startPanoWithPath: (NSString*) panoPath;
 - (void) stopPano;
 - (void) destroyTextures;
 - (void) createFadeIn;

@@ -10,5 +10,6 @@
 
 @interface SGPanoramaOverlayViewController : SGOverlayViewController
 - (IBAction)pressedClose:(id)sender;
+-(void)startPanoWithPath: (NSString*)panoFolder;
 
 @end

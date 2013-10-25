@@ -56,7 +56,7 @@
 
 #define DEGREES_TO_RADIANS(__ANGLE__) ((__ANGLE__) / 180.0 * M_PI)
 
-const NSString* panoNames[] = { @"chamber-1", @"frederiksborgcastle-1", @"frederiksborgcastle-2", @"holbaek-1", @"holbaek-2", @"horup-1", @"horup-2", @"landskrona-1", @"landskrona-2", @"landskrona-3", @"landskrona-4", @"loderup-1", @"loderup-2", @"odense-1", @"odense-2", @"odense-3", @"odense-4", @"ordrup-1", @"ordrup-2", @"ordrup-3", @"stjakobs-1", @"stjakobs-2", @"stJakobs-3", @"ugerlose-1", @"ugerlose-2" };
+const NSString* panoSufixxes[] = { @"_b", @"_d", @"_f", @"_l", @"_r", @"_u", nil };
 
 @interface SGEAGLView (SGEAGLViewPrivate)
 
@@ -122,12 +122,6 @@ const NSString* panoNames[] = { @"chamber-1", @"frederiksborgcastle-1", @"freder
 		momentumOn = NO;
 		momentumX = momentumY = 0.0;
 		zoomAmount = 0.0;
-		
-		UIButton* exitButton = [UIButton buttonWithType:UIButtonTypeCustom];
-		[exitButton addTarget:self action:@selector(dismissPano) forControlEvents:UIControlEventTouchUpInside];
-		exitButton.frame = CGRectMake(728.0, 0.0, 40.0, 40.0);
-		[exitButton setImage:[UIImage imageNamed: @"buttonClose.png"] forState:UIControlStateNormal];
-		[self addSubview:exitButton];
 		
 		[self setupView];
 		[self drawView];
@@ -205,11 +199,10 @@ const NSString* panoNames[] = { @"chamber-1", @"frederiksborgcastle-1", @"freder
 	}
 }
 
-- (void) startPano: (int) panoIndex
+- (void) startPanoWithPath:(NSString *)panoPath
 {
 	[self createFadeIn];
-	currentPano = panoIndex;
-	[self createSkyboxWithName];
+	[self createSkyboxWithPath:panoPath];
 	[self startAnimation];
 }
 
@@ -456,7 +449,7 @@ const GLshort spriteTexcoords[] = {
 	glDeleteTextures(1, &spriteBottom);
 }
 
-- (void) createSkyboxWithName
+- (void) createSkyboxWithPath:(NSString *)path
 {
 	CGImageRef spriteImage;
 	CGContextRef spriteContext;
@@ -469,28 +462,11 @@ const GLshort spriteTexcoords[] = {
 	{
 		NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
 		// Creates a Core Graphics image from an image file
-		switch( i )
-		{
-			case 0:
-				spriteImage = [UIImage imageNamed:[NSString stringWithFormat: @"%@_b.jpg", panoNames[currentPano]]].CGImage;
-				break;
-			case 1:
-				spriteImage = [UIImage imageNamed:[NSString stringWithFormat: @"%@_d.jpg", panoNames[currentPano]]].CGImage;
-				break;
-			case 2:
-				spriteImage = [UIImage imageNamed:[NSString stringWithFormat: @"%@_f.jpg", panoNames[currentPano]]].CGImage;
-				break;
-			case 3:
-				spriteImage = [UIImage imageNamed:[NSString stringWithFormat: @"%@_l.jpg", panoNames[currentPano]]].CGImage;
-				break;
-			case 4:
-				spriteImage = [UIImage imageNamed:[NSString stringWithFormat: @"%@_r.jpg", panoNames[currentPano]]].CGImage;
-				break;
-			case 5:
-				spriteImage = [UIImage imageNamed:[NSString stringWithFormat: @"%@_u.jpg", panoNames[currentPano]]].CGImage;
-				break;
-		}
-		NSLog(@"panoNames[currentPano]: %@", panoNames[currentPano]);
+        NSString* imageName = [NSString stringWithFormat:@"pano%@", panoSufixxes[i]];
+        NSString* imgPath = [[NSBundle mainBundle] pathForResource:imageName ofType:@"jpg" inDirectory:path];
+        
+		//spriteImage = [UIImage imageNamed:[NSString stringWithFormat: @"%@_b.jpg", panoNames[currentPano]]].CGImage;
+        spriteImage = [UIImage imageWithContentsOfFile:imgPath].CGImage;
 		// Get the width and height of the image
 		width = CGImageGetWidth(spriteImage);
 		height = CGImageGetHeight(spriteImage);
