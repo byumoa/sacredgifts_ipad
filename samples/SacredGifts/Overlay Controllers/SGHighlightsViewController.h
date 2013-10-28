@@ -11,5 +11,7 @@
 @interface SGHighlightsViewController : SGOverlayViewController
 
 -(void)configureWithPath:(NSString *)folderPath;
+-(UIButton *)buttonForHighlightIndex:(int)highlightIndex;
+-(void)pressedHighlightBtn:(UIButton *)sender;
 
 @end

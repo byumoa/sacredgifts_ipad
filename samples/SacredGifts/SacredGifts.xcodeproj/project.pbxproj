@@ -45,6 +45,10 @@
 		6165AA801819E82A00857DBD /* chamber-1_r.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6165AA7A1819E82A00857DBD /* chamber-1_r.jpg */; };
 		6165AA811819E82A00857DBD /* chamber-1_u.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 6165AA7B1819E82A00857DBD /* chamber-1_u.jpg */; };
 		618645A7181AD11E00195384 /* SGHighlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618645A6181AD11E00195384 /* SGHighlightsViewController.m */; };
+		618645AC181AEEB700195384 /* childrens_btn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 618645A8181AEEB700195384 /* childrens_btn-on.png */; };
+		618645AD181AEEB700195384 /* childrens_btn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 618645A9181AEEB700195384 /* childrens_btn-on@2x.png */; };
+		618645AE181AEEB700195384 /* childrens_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 618645AA181AEEB700195384 /* childrens_btn.png */; };
+		618645AF181AEEB700195384 /* childrens_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 618645AB181AEEB700195384 /* childrens_btn@2x.png */; };
 		61865DC9180F5145004CE494 /* SGMusicManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61865DC8180F5145004CE494 /* SGMusicManager.m */; };
 		61865DCC180F515E004CE494 /* SGNarrationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61865DCB180F515E004CE494 /* SGNarrationManager.m */; };
 		61865DCF180F5A90004CE494 /* SGAbstractAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61865DCE180F5A90004CE494 /* SGAbstractAudioManager.m */; };
@@ -426,6 +430,10 @@
 		6165AA7B1819E82A00857DBD /* chamber-1_u.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "chamber-1_u.jpg"; sourceTree = "<group>"; };
 		618645A5181AD11E00195384 /* SGHighlightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHighlightsViewController.h; sourceTree = "<group>"; };
 		618645A6181AD11E00195384 /* SGHighlightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHighlightsViewController.m; sourceTree = "<group>"; };
+		618645A8181AEEB700195384 /* childrens_btn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "childrens_btn-on.png"; sourceTree = "<group>"; };
+		618645A9181AEEB700195384 /* childrens_btn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "childrens_btn-on@2x.png"; sourceTree = "<group>"; };
+		618645AA181AEEB700195384 /* childrens_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = childrens_btn.png; sourceTree = "<group>"; };
+		618645AB181AEEB700195384 /* childrens_btn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "childrens_btn@2x.png"; sourceTree = "<group>"; };
 		61865DC7180F5145004CE494 /* SGMusicManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMusicManager.h; sourceTree = "<group>"; };
 		61865DC8180F5145004CE494 /* SGMusicManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMusicManager.m; sourceTree = "<group>"; };
 		61865DCA180F515E004CE494 /* SGNarrationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGNarrationManager.h; sourceTree = "<group>"; };
@@ -1188,6 +1196,10 @@
 		61CD5115180C242500D28921 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				618645A8181AEEB700195384 /* childrens_btn-on.png */,
+				618645A9181AEEB700195384 /* childrens_btn-on@2x.png */,
+				618645AA181AEEB700195384 /* childrens_btn.png */,
+				618645AB181AEEB700195384 /* childrens_btn@2x.png */,
 				614E3C9C180DF631002E875B /* speaker_btns__narration_btn.png */,
 				614E3C9D180DF631002E875B /* speaker_btns__narration_btn-on.png */,
 				614E3C9E180DF631002E875B /* speaker_btns__narration_btn-on@2x.png */,
@@ -1701,6 +1713,7 @@
 				61CD52CC180C242500D28921 /* painting_thumb_healing.png in Resources */,
 				61CD524B180C242500D28921 /* SG_General_ModuleButtonBar.png in Resources */,
 				61CD5256180C242500D28921 /* SG_General_Painting_ContextBtn-on@2x.png in Resources */,
+				618645AF181AEEB700195384 /* childrens_btn@2x.png in Resources */,
 				614E3C9A180D8D9C002E875B /* SacredGifts.dat in Resources */,
 				61CD51DE180C242500D28921 /* sg_home_bg-findpainting_blur.png in Resources */,
 				61CD5211180C242500D28921 /* sg_home_meetartistsbtn-on@2x.png in Resources */,
@@ -1776,6 +1789,8 @@
 				61CD527A180C242500D28921 /* SG_General_Painting_ShareBtn@2x.png in Resources */,
 				61CD52D3180C242500D28921 /* painting_thumb_resurrection-on@2x.png in Resources */,
 				61CD52AC180C242500D28921 /* painting_thumb_children.png in Resources */,
+				618645AE181AEEB700195384 /* childrens_btn.png in Resources */,
+				618645AD181AEEB700195384 /* childrens_btn-on@2x.png in Resources */,
 				61CD5222180C242500D28921 /* SG_Home_ScanPaintingBtn.png in Resources */,
 				61CD51D7180C242500D28921 /* paintings_text.png in Resources */,
 				61CD51D9180C242500D28921 /* sg_home_bg-exhibition.png in Resources */,
@@ -1786,6 +1801,7 @@
 				61CD5204180C242500D28921 /* sg_home_hoffmanbtn.png in Resources */,
 				6165AA801819E82A00857DBD /* chamber-1_r.jpg in Resources */,
 				61CD5273180C242500D28921 /* SG_General_Painting_PerspectivesBtn-on.png in Resources */,
+				618645AC181AEEB700195384 /* childrens_btn-on.png in Resources */,
 				61CD521C180C242500D28921 /* sg_home_reservationbtn-on.png in Resources */,
 				61CD52B0180C242500D28921 /* painting_thumb_cleansing.png in Resources */,
 				61CD51D1180C242500D28921 /* artists_pages_bloch_overlay.png in Resources */,

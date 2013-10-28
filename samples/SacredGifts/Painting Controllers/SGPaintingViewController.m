@@ -276,8 +276,7 @@ const int kPerspectivesButtonWidth = 161;
             break;
         case kModuleTypeHighlights:
         {
-            NSString* paintingDir = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", _paintingNameStr, @"highlights"];
-            [((SGHighlightsViewController*)self.overlayController) configureWithPath:<#(NSString *)#>]
+            [((SGHighlightsViewController*)self.overlayController) configureWithPath:self.overlayController.rootFolderPath];
         }
             break;
         default:{
@@ -287,12 +286,6 @@ const int kPerspectivesButtonWidth = 161;
             break;
     }
     
-    /*
-    if( ![moduleStr isEqualToString:(NSString*)kTombstoneStr]  )
-    {
-        [self.delegate contentController:self addBlurBackingForView:self.overlayController.view];
-    }
-     */
     if( self.overlayController.moduleType != kModuleTypeTombstone &&
         self.overlayController.moduleType != kModuleTypePanorama  &&
         self.overlayController.moduleType != kModuleTypeHighlights &&
