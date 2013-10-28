@@ -185,7 +185,7 @@
         <!--Hofman View Controller-->
         <scene sceneID="Vj2-LF-bd6">
             <objects>
-                <viewController restorationIdentifier="artist" storyboardIdentifier="hofman" id="jBG-xU-cwl" customClass="SGHofmanViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="hofman" storyboardIdentifier="hofman" id="jBG-xU-cwl" customClass="SGHofmanViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Xia-wn-nqc">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -1080,7 +1080,7 @@
         <!--Schwartz View Controller-->
         <scene sceneID="PKt-4M-xKP">
             <objects>
-                <viewController restorationIdentifier="artist" storyboardIdentifier="schwartz" id="vkt-vk-LdG" customClass="SGSchwartzViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="schwartz" storyboardIdentifier="schwartz" id="vkt-vk-LdG" customClass="SGSchwartzViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KB8-Rl-OOd">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1158,7 +1158,7 @@
         <!--Bloch View Controller-->
         <scene sceneID="xxs-WI-hnk">
             <objects>
-                <viewController restorationIdentifier="artist" storyboardIdentifier="bloch" id="kwW-sc-41B" customClass="SGBlochViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="bloch" storyboardIdentifier="bloch" id="kwW-sc-41B" customClass="SGBlochViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YPJ-Jy-GnP">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

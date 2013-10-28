@@ -36,7 +36,7 @@
         }];
 
         _donorsTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(fadeInDonors:) userInfo:nil repeats:NO];
-        _splashTimer = [NSTimer scheduledTimerWithTimeInterval:7 target:self selector:@selector(fadeSplash:) userInfo:nil repeats:NO];
+        _splashTimer = [NSTimer scheduledTimerWithTimeInterval:9 target:self selector:@selector(fadeSplash:) userInfo:nil repeats:NO];
     }
 }
 

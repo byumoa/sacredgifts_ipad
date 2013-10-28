@@ -11,7 +11,7 @@
 
 @interface SGNavigationContainerViewController : SGContainerViewController <UIWebViewDelegate>
 {
-    NSString* _backViewControllerIDStr;
+    NSString* _backViewControllerIDStr, *_beforePaintingViewControllerIDStr;
     UIWebView* _donateWebView;
     int _footerLastAlpha;
 }

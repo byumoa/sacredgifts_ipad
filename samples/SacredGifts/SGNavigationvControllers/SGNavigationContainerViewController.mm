@@ -37,9 +37,14 @@
     else
     {
         if( [self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDPaintingContainerStr])
-            _backViewControllerIDStr = (NSString*)kControllerIDFindAPaintingStr;
-        else if([self.currentContentController.restorationIdentifier isEqualToString:@"artist"])
+        {
+            _backViewControllerIDStr = _beforePaintingViewControllerIDStr;
+        }
+        else if(   [self.currentContentController.restorationIdentifier isEqualToString:@"bloch"]
+                || [self.currentContentController.restorationIdentifier isEqualToString:@"hofman"]
+                || [self.currentContentController.restorationIdentifier isEqualToString:@"schwartz"])
             _backViewControllerIDStr = (NSString*)kControllerIDMeetTheArtistsStr;
+
         else
             _backViewControllerIDStr = (NSString*)kControllerIDHomeStr;
     
@@ -113,17 +118,13 @@
         [weakSelf.view bringSubviewToFront:weakSelf.headerView];
         [weakSelf.view bringSubviewToFront:weakSelf.footerView];
         weakSelf.footerView.alpha = !isTransitionToPainting;
-        /*
-         CGRect f = self.view.frame;
-         oldC.view.frame = CGRectMake(f.origin.x - f.size.width/2,
-         f.origin.y - f.size.height/2,
-         f.size.width * 2, f.size.height*2);
-         */
         };
     
     [self cycleFromViewController:fromController toViewController:toController fromButtonRect:frame falling:animType];
     
-    if( [toController.restorationIdentifier isEqualToString:@"artist"] )
+    if( [self.currentContentController.restorationIdentifier isEqualToString:@"bloch"]
+       || [self.currentContentController.restorationIdentifier isEqualToString:@"hofman"]
+       || [self.currentContentController.restorationIdentifier isEqualToString:@"schwartz"] )
         [UIView animateWithDuration:0.25 animations:^{
             self.footerView.alpha = 0;
         }];
@@ -138,6 +139,8 @@
 -(void)transitionFromController:(UIViewController *)fromController toPaintingNamed:(NSString *)paintingName fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
 {
     SGPaintingContainerViewController* paintingContainer = (SGPaintingContainerViewController*)[self transitionFromController:fromController toControllerID:kControllerIDPaintingContainerStr fromButtonRect:frame withAnimType:animType];
+    
+    _beforePaintingViewControllerIDStr = fromController.restorationIdentifier;
     
     [(SGPaintingViewController*)paintingContainer.currentContentController configWithPaintingName:paintingName];
 }
