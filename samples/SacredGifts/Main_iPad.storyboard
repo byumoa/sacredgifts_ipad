@@ -791,7 +791,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7wS-qT-saf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2560" y="437"/>
+            <point key="canvasLocation" x="2528" y="437"/>
         </scene>
         <!--Summary Overlay View Controller-->
         <scene sceneID="e9N-v8-aZb">
@@ -804,9 +804,10 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="GbN-bJ-tu2">
                                 <rect key="frame" x="677" y="20" width="71" height="71"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="speaker_btns__narration_btn.png" backgroundImage="speaker_btns__narration_btn.png">
+                                <state key="normal" image="speaker_btns__narration_btn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <state key="selected" image="speaker_btns__narration_btn-on.png"/>
                                 <state key="highlighted" image="speaker_btns__narration_btn-on.png"/>
                                 <connections>
                                     <action selector="pressedNarration:" destination="wQF-Fi-40D" eventType="touchUpInside" id="UMX-rL-S4P"/>
@@ -837,7 +838,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="SG_General_Media_Playbar_Overlay.png" id="hXV-lf-BbQ">
-                                <rect key="frame" x="100" y="221" width="445" height="9"/>
+                                <rect key="frame" x="100" y="221" width="0.0" height="9"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Ey-Se-eNL">
@@ -924,7 +925,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N9y-RY-da3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2811" y="410"/>
+            <point key="canvasLocation" x="2819" y="414"/>
         </scene>
         <!--Persepectives Overlay View Controller-->
         <scene sceneID="DZE-8h-2cY">
@@ -942,7 +943,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B3q-g6-eVd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2914" y="519"/>
+            <point key="canvasLocation" x="2889" y="488"/>
         </scene>
         <!--Panorama Overlay View Controller-->
         <scene sceneID="w2W-Pc-s8Y">
@@ -1435,7 +1436,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cfa-h9-hsc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2971" y="580"/>
+            <point key="canvasLocation" x="2959" y="554"/>
         </scene>
     </scenes>
     <resources>

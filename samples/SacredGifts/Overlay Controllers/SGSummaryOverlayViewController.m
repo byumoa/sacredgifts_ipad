@@ -28,16 +28,15 @@
 - (IBAction)pressedNarration:(UIButton *)sender
 {
     NSString *audioPath = [[NSBundle mainBundle] pathForResource:@"narration" ofType:@".mp3" inDirectory:self.rootFolderPath];
+    sender.selected = !sender.selected;
     
     SGNarrationManager* narrationManager = [SGNarrationManager sharedManager];
     if( audioPath )
     {
-        [narrationManager playAudioWithPath:audioPath];
-    }
-    else
-    {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Missing asset" message:@"narration.mp3 has not been added for this overlay" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [alert show];
+        if( sender.selected )
+            [narrationManager playAudioWithPath:audioPath];
+        else
+            [narrationManager pauseAudio];
     }
 }
 @end
