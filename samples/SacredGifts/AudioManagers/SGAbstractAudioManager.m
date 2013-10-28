@@ -30,6 +30,7 @@
             [[AVAudioSession sharedInstance] setActive: YES error: &activationError];
         
             self.player = [[AVAudioPlayer alloc] initWithContentsOfURL: audioURL error: nil];
+            self.player.delegate = self;
             [self.player prepareToPlay];
             [self.player setVolume: 1.0];
             self.player.numberOfLoops = 0;
@@ -41,6 +42,11 @@
 -(void)pauseAudio
 {
     [self.player pause];
+}
+
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    
 }
 
 @end

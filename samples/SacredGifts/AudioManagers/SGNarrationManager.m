@@ -7,6 +7,7 @@
 //
 
 #import "SGNarrationManager.h"
+#import "SGMusicManager.h"
 
 @implementation SGNarrationManager
 
@@ -20,6 +21,24 @@
     });
     
     return  sharedNarrationManager;
+}
+
+-(void)playAudioWithPath:(NSString *)audioPath
+{
+    [super playAudioWithPath:audioPath];
+    [SGMusicManager dropVolume];
+}
+
+-(void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag
+{
+    [super audioPlayerDidFinishPlaying:player successfully:flag];
+    [SGMusicManager bumpUpVolume];
+}
+
+-(void)pauseAudio
+{
+    [super pauseAudio];
+    [SGMusicManager bumpUpVolume];
 }
 
 @end

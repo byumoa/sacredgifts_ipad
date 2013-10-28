@@ -22,4 +22,14 @@
     return  sharedMusicManager;
 }
 
++(void)dropVolume
+{
+    ((SGMusicManager*)[SGMusicManager sharedManager]).player.volume = 0.5;
+}
+
++(void)bumpUpVolume
+{
+    ((SGMusicManager*)[SGMusicManager sharedManager]).player.volume = 1.0;
+}
+
 @end

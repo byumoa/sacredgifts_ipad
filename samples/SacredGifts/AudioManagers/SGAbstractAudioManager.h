@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <AVFoundation/AVFoundation.h>
 
-@interface SGAbstractAudioManager : NSObject
+@interface SGAbstractAudioManager : NSObject <AVAudioPlayerDelegate>
 {
     NSString* _currentAudioPath;
 }

@@ -11,5 +11,7 @@
 @interface SGMusicManager : SGAbstractAudioManager
 
 + (id)sharedManager;
++ (void)dropVolume;
++ (void)bumpUpVolume;
 
 @end
