@@ -11,5 +11,7 @@
 
 @interface SGVideoOverlayViewController : SGOverlayViewController
 @property(nonatomic, strong) MPMoviePlayerController *moviePlayer;
+@property (weak, nonatomic) IBOutlet UIImageView *freezeFrame;
+- (IBAction)pressedPlayPause:(UIButton *)sender;
 -(void)playPerspectiveMovieWithRootFolderPath: (NSString*)rootFoolderPath;
 @end

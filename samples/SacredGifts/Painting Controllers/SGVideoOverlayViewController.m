@@ -25,18 +25,30 @@
     return self;
 }
 
+- (IBAction)pressedPlayPause:(UIButton *)sender
+{
+    [self.moviePlayer prepareToPlay];
+    [self.moviePlayer play];
+    [UIView animateWithDuration:0.25 animations:^{
+        self.freezeFrame.alpha = 0;
+    }];
+}
+
 -(void)playPerspectiveMovieWithRootFolderPath: (NSString*)rootFoolderPath
 {
     self.rootFolderPath = rootFoolderPath;
+    NSString* freeFramePath = [[NSBundle mainBundle] pathForResource:@"poster" ofType:@"png" inDirectory:self.rootFolderPath];
+    self.freezeFrame.image = [UIImage imageWithContentsOfFile:freeFramePath];
+    self.freezeFrame.frame = CGRectMake(0, 45, 768, 432);
+    
     NSString* moviePath = [[NSBundle mainBundle] pathForResource:@"video" ofType:@"mp4" inDirectory:self.rootFolderPath];
     NSURL* url = [NSURL fileURLWithPath:moviePath];
     self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
-    self.moviePlayer.view.frame = CGRectMake(0, 45, 768, 432);
+
     self.moviePlayer.movieSourceType = MPMovieSourceTypeFile;
     self.moviePlayer.controlStyle = MPMovieControlStyleNone;
-    [self.view addSubview:self.moviePlayer.view];
-    [self.moviePlayer prepareToPlay];
-    [self.moviePlayer play];
+    self.moviePlayer.view.frame = self.freezeFrame.frame;
+    [self.view insertSubview:self.moviePlayer.view belowSubview:self.freezeFrame];
 }
 
 @end

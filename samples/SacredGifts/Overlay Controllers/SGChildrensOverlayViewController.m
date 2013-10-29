@@ -38,26 +38,6 @@
     [super addBackgroundImgWithPath:bgImgPath];
     [self.view bringSubviewToFront:self.bgImageView];
     [self.view sendSubviewToBack:self.fingerPaintView];
-    
-    //TEMP
-    self.bgImageView.image = foregroundImg;
-    CGPoint center = self.bgImageView.center;
-    CGRect frame = self.bgImageView.frame;
-    frame.size = foregroundImg.size;
-    self.bgImageView.contentMode = UIViewContentModeCenter;
-    frame.size.width += 300;
-    self.bgImageView.frame = frame;
-    self.bgImageView.center = center;
-    
-    [self placeButtons];
-}
-
--(void)placeButtons
-{
-    for( int i = 0; i < 6; i++ )
-    {
-        
-    }
 }
 
 @end

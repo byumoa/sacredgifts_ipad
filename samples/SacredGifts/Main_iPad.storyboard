@@ -986,10 +986,30 @@
                 <viewController restorationIdentifier="video" storyboardIdentifier="video" id="Vy2-fL-KCd" customClass="SGVideoOverlayViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="v9i-OL-lDl" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="VH0-LL-KwJ">
+                                <rect key="frame" x="0.0" y="45" width="768" height="432"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="62E-CR-Mk7">
+                                <rect key="frame" x="0.0" y="45" width="768" height="432"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedPlayPause:" destination="Vy2-fL-KCd" eventType="touchUpInside" id="WIi-Aa-jCS"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="freezeFrame" destination="VH0-LL-KwJ" id="Mgi-k7-z9Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQu-iu-iIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
