@@ -114,6 +114,7 @@
 -(void)loadTextWithFolderPath:(NSString *)textFolderPath
 {
     SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kTextStr];
+    
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:textFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
 }
