@@ -244,9 +244,11 @@ const int kPerspectivesButtonWidth = 161;
     //Configure new overlay viewController
     switch (self.overlayController.moduleType) {
         case kModuleTypePerspective:{
-            [self.overlayController addBackgroundImgWithImgName:@"SG_General_Module_Overlay.png"];
             NSString* perspectivesPath = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", _paintingNameStr, @"perspectives"];
-            [((SGPersepectivesOverlayViewController*)self.overlayController) configurePerspectiveOverlayWithPath:perspectivesPath];
+            int totalBtns = [((SGPersepectivesOverlayViewController*)self.overlayController) configurePerspectiveOverlayWithPath:perspectivesPath];
+            
+            NSString* overlayImageStr = totalBtns < 4 ? @"SG_General_Module_OverlayHalf.png" : @"SG_General_Module_Overlay.png";
+            [self.overlayController addBackgroundImgWithImgName:overlayImageStr];
         }
             break;
         case kModuleTypeSocial:{

@@ -33,7 +33,7 @@
     return self;
 }
 
--(void)configurePerspectiveOverlayWithPath:(NSString *)folderPath
+-(int)configurePerspectiveOverlayWithPath:(NSString *)folderPath
 {
     self.rootFolderPath = folderPath;
     for( int i = 1; i <= 6; i++ )
@@ -49,8 +49,10 @@
             [self.view addSubview:button];
         }
         else
-            break;
+            return i-1;
     }
+    
+    return 0;
 }
 
 -(UIButton *)buttonForPerspectiveNumber:(int)perspectiveIndex atPath:(NSString *)folderPath
