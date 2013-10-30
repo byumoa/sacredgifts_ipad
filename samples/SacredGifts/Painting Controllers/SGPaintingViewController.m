@@ -33,6 +33,7 @@ const int kPerspectivesButtonWidth = 161;
 - (void)removeCurrentOverlay;
 - (void)addTombstoneDelayed: (NSTimer*)timer;
 - (int)calcCurrentPaintingIndex;
+- (void)deselectAllModuleBtns;
 @end
 
 @implementation SGPaintingViewController
@@ -48,10 +49,8 @@ const int kPerspectivesButtonWidth = 161;
 -(int)calcCurrentPaintingIndex
 {
     for( int i = 0; i < kTotalPaintings; i++ )
-    {
         if( [_paintingNameStr isEqualToString:(NSString*)kPaintingNames[i]])
             return i;
-    }
     
     return 0;
 }
@@ -212,14 +211,17 @@ const int kPerspectivesButtonWidth = 161;
     else
     {
         [self addNewOverlayOfType:[self getStringForModule:moduleType] forPainting:_paintingNameStr];
-        
-        SEL setSelectedSelector = sel_registerName("setSelected:");
-        for( UIView *subview in self.footerView.subviews ){
-            if( [subview respondsToSelector:setSelectedSelector])
-                ((UIButton*)subview).selected = NO;
-        }
+        [self deselectAllModuleBtns];
         sender.selected = YES;
     }
+}
+
+-(void)deselectAllModuleBtns
+{
+    SEL setSelectedSelector = sel_registerName("setSelected:");
+    for( UIView *subview in self.footerView.subviews )
+        if( [subview respondsToSelector:setSelectedSelector])
+            ((UIButton*)subview).selected = NO;
 }
 
 -(SGOverlayViewController*)addNewOverlayOfType:(NSString*)moduleStr forPainting:(NSString *)paintingStr
@@ -369,7 +371,9 @@ const int kPerspectivesButtonWidth = 161;
 //Close suboverlay
 -(void)closeOverlay:(SGOverlayViewController *)overlay
 {
-    [self addNewOverlayOfType:(NSString*)kPerspectiveStr forPainting:_paintingNameStr];
+    //[self addNewOverlayOfType:(NSString*)kPerspectiveStr forPainting:_paintingNameStr];
+    [self removeCurrentOverlay];
+    [self deselectAllModuleBtns];
 }
 
 @end

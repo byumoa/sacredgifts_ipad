@@ -10,6 +10,7 @@
 
 @interface SGOverlayViewController ()
 - (void)configureBGImage;
+- (UIButton*)createCloseButton;
 @end
 
 @implementation SGOverlayViewController
@@ -33,12 +34,16 @@
     [self.view insertSubview:self.bgImageView atIndex:0];
     self.view.center = _centerPos;
     
-    //Place view 41px above footer bar
+    //Position view 41px above footer bar
     if( self.moduleType != kModuleTypeChildrens )
     {
         int yHeight = 1024 - 70 - 41 - self.view.frame.size.height/2;
         self.view.center = CGPointMake(768/2, yHeight);
     }
+    
+    //Position close btn in top right corner
+    if( self.closeButton )
+    self.closeButton.center = CGPointMake(self.view.frame.size.width - 15, 15);
 }
 
 - (void)viewDidLoad
@@ -46,8 +51,12 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.closeButton = [self createCloseButton];
-    [self.view addSubview:self.closeButton];
+    if( self.moduleType != kModuleTypePanorama &&
+        self.moduleType != kModuleTypeHighlights )
+    {
+        self.closeButton = [self createCloseButton];
+        [self.view addSubview:self.closeButton];
+    }
 }
 
 -(UIButton *)createCloseButton
@@ -55,6 +64,12 @@
     UIButton* closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
     UIImage* closeBtnNrmImg = [UIImage imageNamed:@"SG_General_Module_CloseBtn.png"];
     UIImage* closeBtnHilImg = [UIImage imageNamed:@"SG_General_Module_CloseBtn-on.png"];
+    
+    CGRect f = closeButton.frame;
+    f.size = closeBtnNrmImg.size;
+    f.size.width += 20;
+    f.size.height += 20;
+    closeButton.frame = f;
     
     [closeButton setImage:closeBtnNrmImg forState:UIControlStateNormal];
     [closeButton setImage:closeBtnHilImg forState:UIControlStateHighlighted];
@@ -66,6 +81,6 @@
 
 -(void)pressedClose:(UIButton *)sender
 {
-    NSLog(@"pressedClose");
+    [self.delegate closeOverlay:self];
 }
 @end
