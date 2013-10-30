@@ -45,12 +45,27 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.closeButton = [self createCloseButton];
+    [self.view addSubview:self.closeButton];
 }
 
-- (void)didReceiveMemoryWarning
+-(UIButton *)createCloseButton
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    UIButton* closeButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage* closeBtnNrmImg = [UIImage imageNamed:@"SG_General_Module_CloseBtn.png"];
+    UIImage* closeBtnHilImg = [UIImage imageNamed:@"SG_General_Module_CloseBtn-on.png"];
+    
+    [closeButton setImage:closeBtnNrmImg forState:UIControlStateNormal];
+    [closeButton setImage:closeBtnHilImg forState:UIControlStateHighlighted];
+    
+    [closeButton addTarget:self action:@selector(pressedClose:) forControlEvents:UIControlEventTouchUpInside];
+    
+    return closeButton;
 }
 
+-(void)pressedClose:(UIButton *)sender
+{
+    NSLog(@"pressedClose");
+}
 @end
