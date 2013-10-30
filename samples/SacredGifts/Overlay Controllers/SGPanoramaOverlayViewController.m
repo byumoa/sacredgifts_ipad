@@ -39,8 +39,9 @@ const CGPoint kEndPt = {-656, 512};
 
 - (IBAction)pressedClose:(id)sender
 {
-    [self.delegate closeOverlay:self];
+    NSLog(@"SGPanoramaOverlayViewController pressedClose");
     [((SGEAGLView*)self.view) stopPano];
+    [super pressedClose:sender];
 }
 
 -(void)startPanoWithPath: (NSString*)panoFolder
