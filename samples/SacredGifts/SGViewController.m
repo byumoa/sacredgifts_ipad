@@ -62,7 +62,7 @@
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if( self.splashDonors.alpha == 0)
+    if( self.splash.alpha == 1 && self.splashDonors.alpha == 0 )
         [self fadeInDonors:nil];
     else if( self.splash.alpha > 0 )
         [self fadeSplash:nil];
