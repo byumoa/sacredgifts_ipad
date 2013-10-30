@@ -146,7 +146,7 @@
                                     <action selector="pressedBtn:" destination="rWn-Ap-S9g" eventType="touchUpInside" id="vXO-P5-50S"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="e1S-K6-Raj">
+                            <button hidden="YES" opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="e1S-K6-Raj">
                                 <rect key="frame" x="0.0" y="402" width="768" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="sg_home_meetartistsbtn.png">
@@ -157,7 +157,7 @@
                                     <action selector="pressedBtn:" destination="rWn-Ap-S9g" eventType="touchUpInside" id="FL3-g7-soF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kfF-Bv-6ev">
+                            <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="kfF-Bv-6ev">
                                 <rect key="frame" x="0.0" y="615" width="768" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="sg_home_exhibitionbtn.png">
@@ -174,8 +174,6 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outletCollection property="blurredViews" destination="kzm-On-8yx" id="HJE-Xv-tyf"/>
-                        <outletCollection property="blurredViews" destination="kfF-Bv-6ev" id="s5M-Jw-G1E"/>
-                        <outletCollection property="blurredViews" destination="e1S-K6-Raj" id="Z5g-2a-PsK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Luk-dA-5TZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -954,7 +952,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="leV-Fj-L5c">
-                                <rect key="frame" x="0.0" y="938" width="768" height="42"/>
+                                <rect key="frame" x="0.0" y="963" width="768" height="61"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
@@ -973,6 +971,7 @@
                         <color key="backgroundColor" red="1" green="0.818390877016129" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
+                        <outlet property="closeButton" destination="zd1-M5-yD1" id="Gmn-jg-kp1"/>
                         <outlet property="infoStripImgView" destination="leV-Fj-L5c" id="irF-4O-2Uk"/>
                     </connections>
                 </viewController>

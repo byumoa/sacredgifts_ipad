@@ -47,7 +47,9 @@ const CGPoint kEndPt = {-656, 512};
 {
     [((SGEAGLView*)self.view) startPanoWithPath:panoFolder];
     NSString* infoImgStr = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:panoFolder];
-    NSLog(@"infoImgStr: %@", infoImgStr);
     self.infoStripImgView.image = [UIImage imageWithContentsOfFile:infoImgStr];
+    [self.closeButton removeFromSuperview];
+    [self.infoStripImgView addSubview:self.closeButton];
+    self.closeButton.center = CGPointMake(self.infoStripImgView.frame.size.width - 15, 15);
 }
 @end

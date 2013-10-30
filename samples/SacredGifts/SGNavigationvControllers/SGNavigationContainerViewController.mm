@@ -176,14 +176,4 @@
     [self transitionFromController:self.currentContentController toControllerID:_backViewControllerIDStr fromButtonRect:((UIButton*)sender).frame withAnimType:kAnimTypeZoomOut];
 }
 
-- (void)startPanoWithPath: (NSString*)path
-{
-    
-}
-
-- (void)stopPano
-{
-    
-}
-
 @end

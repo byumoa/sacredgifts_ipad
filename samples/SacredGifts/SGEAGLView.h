@@ -107,7 +107,6 @@ extern const NSString* panoNames[25];
 - (float)distanceBetweenTwoPoints: (CGPoint)fromPoint toPoint: (CGPoint)toPoint;
 - (void) createSkyboxWithPath: (NSString*)path;
 - (void) setFOV: (float)FOV;
-- (void) dismissPano;
 - (void) startPanoWithPath: (NSString*) panoPath;
 - (void) stopPano;
 - (void) destroyTextures;

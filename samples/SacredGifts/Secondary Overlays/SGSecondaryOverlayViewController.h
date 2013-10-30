@@ -12,5 +12,5 @@
 #import "SGOverlayViewController.h"
 
 @interface SGSecondaryOverlayViewController : SGOverlayViewController
-@property (nonatomic) ModuleType returnToModuleType;
+@property (nonatomic) NSString* returnToModuleStr;
 @end

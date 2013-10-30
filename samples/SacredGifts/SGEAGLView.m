@@ -114,25 +114,15 @@ const NSString* panoSufixxes[] = { @"_b", @"_d", @"_f", @"_l", @"_r", @"_u", nil
 		if ([currSysVer compare:reqSysVer options:NSNumericSearch] != NSOrderedAscending)
 			displayLinkSupported = TRUE;
 		
-		scene = 0;
-		
-		rotX = 0; rotY = 0;
-		lastX = 0; lastY = 0;
 		verticalStop = 800.0;
-		momentumOn = NO;
-		momentumX = momentumY = 0.0;
-		zoomAmount = 0.0;
+		momentumOn = YES;
+		momentumX = -37.0;
 		
 		[self setupView];
 		[self drawView];
 	}
 	
 	return self;
-}
-
-- (void) dismissPano
-{
-	
 }
 
 - (void)layoutSubviews
@@ -350,22 +340,22 @@ const GLshort spriteTexcoords[] = {
 		case 0:
 			if( momentumOn )
 			{
-				if( abs(momentumX) > 2 )
+				if( abs(momentumX) > 1.5 )
 				{
 					if( momentumX > 0 )
-						momentumX -= 1;
+						momentumX -= 0.75;
 					else
-						momentumX += 1;
+						momentumX += 0.75;
 				}
 				else
 					momentumX = 0;
 				
-				if( abs(momentumY) > 2 )
+				if( abs(momentumY) > 1.5 )
 				{
 					if( momentumY > 0 )
-						momentumY -= 1;
+						momentumY -= 0.75;
 					else
-						momentumY += 1;
+						momentumY += 0.75;
 				}
 				else
 					momentumY = 0;

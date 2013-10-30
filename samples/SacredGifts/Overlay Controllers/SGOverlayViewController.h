@@ -27,7 +27,7 @@
 @property(nonatomic) ModuleType moduleType;
 @property(nonatomic, weak) id<SGOverlayViewControllerDelegate> delegate;
 @property(nonatomic, strong) NSString* rootFolderPath;
-@property(nonatomic, strong) UIButton* closeButton;
+@property(nonatomic, strong) IBOutlet UIButton* closeButton;
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath;
 - (void)addBackgroundImgWithImgName: (NSString*)bgImgName;
