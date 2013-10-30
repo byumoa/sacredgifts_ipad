@@ -8,6 +8,7 @@
 
 #import "SGArtistViewController.h"
 #import "SGConstants.h"
+#import "SGNarrationManager.h"
 
 @interface SGArtistViewController()
 
@@ -31,7 +32,8 @@
 
 - (BOOL) playAudioNamed: (NSString*)audioName;
 {
-    //NSString *musicPath = [NSString stringWithFormat:@"%@,%@.mp3", [[NSBundle mainBundle] resourcePath], audioName];
+    NSString *narrationPath = [NSString stringWithFormat:@"%@,%@.mp3", [[NSBundle mainBundle] resourcePath], audioName];
+    //[[SGNarrationManager sharedManager] playAudioNamed:narrationPath];
     
     return YES;
 }
