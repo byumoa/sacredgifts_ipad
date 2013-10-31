@@ -9,7 +9,7 @@
 #import "SGChildrensOverlayViewController.h"
 
 @interface SGChildrensOverlayViewController()
-- (void)placeButtons;
+
 @end
 
 @implementation SGChildrensOverlayViewController
@@ -38,6 +38,7 @@
     [super addBackgroundImgWithPath:bgImgPath];
     [self.view bringSubviewToFront:self.bgImageView];
     [self.view sendSubviewToBack:self.fingerPaintView];
+    [self.view bringSubviewToFront:self.maskedImageView];
 }
 
 @end

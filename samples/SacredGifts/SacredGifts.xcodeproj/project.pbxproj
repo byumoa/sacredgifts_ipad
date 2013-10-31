@@ -52,6 +52,7 @@
 		61072A1A182138B400E8D7A2 /* perspectives_sermon_red_square@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61072A02182138B400E8D7A2 /* perspectives_sermon_red_square@2x.png */; };
 		61072A1D1821ABE500E8D7A2 /* SG_General_Module_OverlayHalf.png in Resources */ = {isa = PBXBuildFile; fileRef = 61072A1B1821ABE500E8D7A2 /* SG_General_Module_OverlayHalf.png */; };
 		61072A1E1821ABE500E8D7A2 /* SG_General_Module_OverlayHalf@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61072A1C1821ABE500E8D7A2 /* SG_General_Module_OverlayHalf@2x.png */; };
+		61072A201821E4F800E8D7A2 /* TempMainPainting.png in Resources */ = {isa = PBXBuildFile; fileRef = 61072A1F1821E4F800E8D7A2 /* TempMainPainting.png */; };
 		6118B58A18117B6400FB8337 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6118B58918117B6400FB8337 /* CoreMotion.framework */; };
 		61267B7D1819333F00A52CC5 /* SGSecondaryOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61267B7C1819333F00A52CC5 /* SGSecondaryOverlayViewController.m */; };
 		61267B821819667B00A52CC5 /* splash_artists.png in Resources */ = {isa = PBXBuildFile; fileRef = 61267B7E1819667B00A52CC5 /* splash_artists.png */; };
@@ -455,6 +456,7 @@
 		61072A02182138B400E8D7A2 /* perspectives_sermon_red_square@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "perspectives_sermon_red_square@2x.png"; sourceTree = "<group>"; };
 		61072A1B1821ABE500E8D7A2 /* SG_General_Module_OverlayHalf.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_General_Module_OverlayHalf.png; sourceTree = "<group>"; };
 		61072A1C1821ABE500E8D7A2 /* SG_General_Module_OverlayHalf@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_Module_OverlayHalf@2x.png"; sourceTree = "<group>"; };
+		61072A1F1821E4F800E8D7A2 /* TempMainPainting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = TempMainPainting.png; sourceTree = "<group>"; };
 		6118B58918117B6400FB8337 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		61267B7B1819333F00A52CC5 /* SGSecondaryOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSecondaryOverlayViewController.h; sourceTree = "<group>"; };
 		61267B7C1819333F00A52CC5 /* SGSecondaryOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSecondaryOverlayViewController.m; sourceTree = "<group>"; };
@@ -1066,6 +1068,7 @@
 		61CD50A5180C242500D28921 /* GeneralResources */ = {
 			isa = PBXGroup;
 			children = (
+				61072A1F1821E4F800E8D7A2 /* TempMainPainting.png */,
 				6154DD3D1815FF4800D03E9D /* childrens.png */,
 				61CD50A6180C242500D28921 /* AR Assets */,
 				61CD50AA180C242500D28921 /* artists */,
@@ -1838,6 +1841,7 @@
 				61CD526A180C242500D28921 /* SG_General_Painting_ModuleBtn@2x.png in Resources */,
 				614E3CA0180DF631002E875B /* speaker_btns__narration_btn.png in Resources */,
 				61CD5268180C242500D28921 /* SG_General_Painting_ModuleBtn-on@2x.png in Resources */,
+				61072A201821E4F800E8D7A2 /* TempMainPainting.png in Resources */,
 				61072A0A182138B400E8D7A2 /* perspectives_sermon_circle_black@2x.png in Resources */,
 				61CD52B9180C242500D28921 /* painting_thumb_cross@2x.png in Resources */,
 				61CD5213180C242500D28921 /* sg_home_meetartistsbtn@2x.png in Resources */,

@@ -876,22 +876,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view userInteractionEnabled="NO" contentMode="scaleToFill" id="bKF-LZ-NxH">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1025"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <view contentMode="scaleToFill" id="eEb-wI-XWd" customClass="SGFingerPaintView">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
-                                    <outlet property="maskThis" destination="NVc-gh-OBy" id="5Co-wz-tY0"/>
+                                    <outlet property="maskThis" destination="KHu-Rl-FJa" id="x3u-gJ-Ets"/>
                                 </connections>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" id="NVc-gh-OBy">
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" id="KHu-Rl-FJa">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
-                                <autoresizingMask key="autoresizingMask"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -902,7 +897,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="fingerPaintView" destination="eEb-wI-XWd" id="ZIc-Zw-5Cf"/>
-                        <outlet property="maskedImageView" destination="NVc-gh-OBy" id="hfl-PE-jT0"/>
+                        <outlet property="maskedImageView" destination="KHu-Rl-FJa" id="ksG-iK-EHq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPd-we-w8O" userLabel="First Responder" sceneMemberID="firstResponder"/>

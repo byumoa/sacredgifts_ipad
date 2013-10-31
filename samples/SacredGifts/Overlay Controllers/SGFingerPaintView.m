@@ -11,9 +11,9 @@
 const CGRect kEllipseBox = {10, 10, 500, 500};
 
 @interface SGFingerPaintView()
-
-- (void)updateLoop: (NSTimer*)timer;
-
+{
+    size_t _imageWidth;
+}
 @end
 
 @implementation SGFingerPaintView
@@ -23,15 +23,11 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
 {
     if( self = [super initWithCoder:aDecoder]){
         _strokesArr = [NSMutableArray new];
-        [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateLoop:) userInfo:nil repeats:YES];
+        
+        _imageWidth = CGImageGetWidth(self.originalImage);
     }
     
     return self;
-}
-
--(void)updateLoop:(NSTimer *)timer
-{
-    [self setNeedsDisplay];
 }
 
 -(CGImageRef)drawImageWithContext:(CGContextRef)context inRect:(CGRect)rect
@@ -64,12 +60,12 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
     CGImageRef maskImage = [self drawImageWithContext:context inRect:rect];
     
     // Get the mask from the image
-    CGImageRef mask = CGImageMaskCreate(CGImageGetWidth(maskImage)
+    CGImageRef mask = CGImageMaskCreate(  CGImageGetWidth(maskImage)
                                         , CGImageGetHeight(maskImage)
                                         , CGImageGetBitsPerComponent(maskImage)
                                         , CGImageGetBitsPerPixel(maskImage)
                                         , CGImageGetBytesPerRow(maskImage)
-                                        ,  CGImageGetDataProvider(maskImage)
+                                        , CGImageGetDataProvider(maskImage)
                                         , NULL
                                         , false);
     
@@ -79,23 +75,10 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
     CGContextClipToMask(context, rect, mask);
     
     CGImageRef maskedCGImage = CGImageCreateWithMask(self.originalImage, mask);
-    //CGImageRef maskedCGImage = CGImageCreateWithMask(self.originalImage, mask);
     //self.maskThis.image = [UIImage imageWithCGImage:maskedCGImage];
-    /*
-    __block UIImage* newImg;
-    dispatch_queue_t myQueue = dispatch_queue_create("Update Image",NULL);
-    dispatch_async(myQueue, ^{
-        // Perform long running process
-        newImg = [UIImage imageWithCGImage:maskedCGImage];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            // Update the UI
-            self.maskThis.image = newImg;
-            
-        });
-    });
-    */
+    //self.maskThis.layer.contents = (__bridge id)maskedCGImage;
+    //self.maskThis.layer.mask
     CGImageRelease(maskedCGImage);
-    
     CGImageRelease(mask);
     CGImageRelease(maskImage);
 }
@@ -117,7 +100,7 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
     CGPoint point = [[touches anyObject] locationInView:self];
     NSValue* val = [NSValue valueWithCGPoint:point];
     [_strokeTouches addObject:val];
-    //[self setNeedsDisplay];
+    [self setNeedsDisplay];
 }
 
 @end
