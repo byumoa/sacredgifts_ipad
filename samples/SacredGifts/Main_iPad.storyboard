@@ -876,18 +876,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="eEb-wI-XWd" customClass="SGFingerPaintView">
+                            <view opaque="NO" contentMode="center" id="mDA-F7-Mhn" customClass="ScratchableView">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <outlet property="maskThis" destination="KHu-Rl-FJa" id="x3u-gJ-Ets"/>
-                                </connections>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" id="KHu-Rl-FJa">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
@@ -896,8 +889,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="fingerPaintView" destination="eEb-wI-XWd" id="ZIc-Zw-5Cf"/>
-                        <outlet property="maskedImageView" destination="KHu-Rl-FJa" id="ksG-iK-EHq"/>
+                        <outlet property="scratchableView" destination="mDA-F7-Mhn" id="AnA-i0-nLO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sPd-we-w8O" userLabel="First Responder" sceneMemberID="firstResponder"/>

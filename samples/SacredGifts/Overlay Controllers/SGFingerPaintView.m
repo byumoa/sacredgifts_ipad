@@ -32,7 +32,9 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
 
 -(CGImageRef)drawImageWithContext:(CGContextRef)context inRect:(CGRect)rect
 {
-    CGContextSetRGBStrokeColor(context, 0, 0, 0, 1);
+    CGContextClearRect(context, rect);
+    
+    CGContextSetRGBStrokeColor(context, 0, 0, 0, 1.0);
     CGContextSetLineWidth(context, 30);
     CGContextSetLineCap(context, kCGLineCapRound);
     CGContextSetLineJoin(context, kCGLineJoinRound);
@@ -75,9 +77,11 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
     CGContextClipToMask(context, rect, mask);
     
     CGImageRef maskedCGImage = CGImageCreateWithMask(self.originalImage, mask);
-    //self.maskThis.image = [UIImage imageWithCGImage:maskedCGImage];
     //self.maskThis.layer.contents = (__bridge id)maskedCGImage;
-    //self.maskThis.layer.mask
+    //self.maskThis.layer.mask = [CALayer new];
+    //self.maskThis.layer.mask.contents = (__bridge id)mask;
+    //self.maskThis.layer.masksToBounds = YES;
+    CGContextDrawImage(context, rect, maskedCGImage);
     CGImageRelease(maskedCGImage);
     CGImageRelease(mask);
     CGImageRelease(maskImage);

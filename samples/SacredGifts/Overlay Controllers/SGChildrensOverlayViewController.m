@@ -7,13 +7,13 @@
 //
 
 #import "SGChildrensOverlayViewController.h"
+#import "ScratchableView.h"
 
 @interface SGChildrensOverlayViewController()
 
 @end
 
 @implementation SGChildrensOverlayViewController
-@synthesize fingerPaintView = _fingerPaintView;
 
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
@@ -33,12 +33,7 @@
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath forgroundImage:(UIImage *)foregroundImg
 {
-    self.fingerPaintView.originalImage = [foregroundImg CGImage];
-    
-    [super addBackgroundImgWithPath:bgImgPath];
-    [self.view bringSubviewToFront:self.bgImageView];
-    [self.view sendSubviewToBack:self.fingerPaintView];
-    [self.view bringSubviewToFront:self.maskedImageView];
+    [self.scratchableView configWithGreyscaleOverlay:bgImgPath]; 
 }
 
 @end

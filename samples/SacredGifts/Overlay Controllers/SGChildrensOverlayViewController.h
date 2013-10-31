@@ -9,11 +9,11 @@
 #import "SGOverlayViewController.h"
 #import "SGFingerPaintView.h"
 #import "SGSecondaryOverlayViewController.h"
+@class ScratchableView;
 
 @interface SGChildrensOverlayViewController : SGOverlayViewController
-@property(nonatomic, weak) IBOutlet SGFingerPaintView* fingerPaintView;
-@property(nonatomic, weak) IBOutlet UIImageView* maskedImageView;
 @property(nonatomic, strong) SGSecondaryOverlayViewController* currentSubOverlay;
+@property(nonatomic, weak) IBOutlet ScratchableView* scratchableView;
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath forgroundImage: (UIImage*)foregroundImg;
 
