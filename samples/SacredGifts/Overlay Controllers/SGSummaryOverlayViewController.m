@@ -9,7 +9,21 @@
 #import "SGSummaryOverlayViewController.h"
 #import "SGNarrationManager.h"
 
+const NSString* kSummarySpeakerBtnNrmStr = @"speaker_btns__narration_btn.png";
+const NSString* kSummarySpeakerBtnHilStr = @"speaker_btns__narration_btn-on.png";
+const NSString* kSummaryPlayBtnNrlStr = @"summary_play_btn.png";
+const NSString* kSummaryPlayBtnHilStr = @"summary_play_btn.png";
+const NSString* kSummaryPauseBtnNrmStr = @"summary_pause_btn.png";
+const NSString* kSummaryPauseBtnHilStr = @"summary_pause_btn.png";
+
 @interface SGSummaryOverlayViewController ()
+{
+    BOOL _narrationIsActive;
+}
+
+- (void)setupSpeakerBtnPlay;
+- (void)setupSpeakerBtnPause;
+- (void)setupSpeakerBtnInctive;
 
 @end
 
@@ -39,4 +53,20 @@
             [narrationManager pauseAudio];
     }
 }
+
+-(void)setupSpeakerBtnPlay
+{
+    sel
+}
+
+-(void)setupSpeakerBtnPause
+{
+    
+}
+
+-(void)setupSpeakerBtnInctive
+{
+    
+}
+
 @end

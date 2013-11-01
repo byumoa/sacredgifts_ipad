@@ -331,15 +331,20 @@ const int kPerspectivesButtonWidth = 161;
 
 -(void)paintingTapped:(SGPaintingImageView *)paintingView
 {
-    float targetAlpha = 1;
-    if( self.footerView.alpha == 1 )
-        targetAlpha = 0;
+    if( self.overlayController )
+        [self removeCurrentOverlay];
+    else
+    {
+        float targetAlpha = 1;
+        if( self.footerView.alpha == 1 )
+            targetAlpha = 0;
     
-    [UIView animateWithDuration:0.25 animations:^{
-        self.footerView.alpha = targetAlpha;
-        self.overlayController.view.alpha = targetAlpha;
-        ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = targetAlpha;
-    }];
+        [UIView animateWithDuration:0.25 animations:^{
+            self.footerView.alpha = targetAlpha;
+            self.overlayController.view.alpha = targetAlpha;
+            ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = targetAlpha;
+        }];
+    }
 }
 
 -(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
@@ -373,7 +378,6 @@ const int kPerspectivesButtonWidth = 161;
 //Close suboverlay
 -(void)closeOverlay:(SGOverlayViewController *)overlay
 {
-    //[self addNewOverlayOfType:(NSString*)kPerspectiveStr forPainting:_paintingNameStr];
     [self removeCurrentOverlay];
     [self deselectAllModuleBtns];
 }

@@ -90,12 +90,6 @@
 	}
 }
 
--(void)removeFromSuperview
-{
-    [super removeFromSuperview];
-    NSLog(@"ScratchableView removeFromSuperview");
-}
-
 - (void) renderLineFromPoint:(CGPoint)start toPoint:(CGPoint)end
 {
 	CGContextMoveToPoint(alphaPixels, start.x, start.y);

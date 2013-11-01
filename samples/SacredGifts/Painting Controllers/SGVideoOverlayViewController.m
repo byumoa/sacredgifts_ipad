@@ -9,7 +9,7 @@
 #import "SGVideoOverlayViewController.h"
 
 @interface SGVideoOverlayViewController ()
-
+- (void) playbackFinished: (NSNotification*)notification;
 @end
 
 @implementation SGVideoOverlayViewController
@@ -49,6 +49,22 @@
     self.moviePlayer.controlStyle = MPMovieControlStyleNone;
     self.moviePlayer.view.frame = self.freezeFrame.frame;
     [self.view insertSubview:self.moviePlayer.view belowSubview:self.freezeFrame];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbackFinished:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.moviePlayer];
+}
+
+-(void)playbackFinished:(NSNotification *)notification
+{
+    NSLog(@"playbackFinished notification");
+    [UIView animateWithDuration:0.25 animations:^{
+        self.freezeFrame.alpha = 1;
+    }];
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end
