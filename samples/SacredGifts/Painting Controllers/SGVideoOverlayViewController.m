@@ -25,13 +25,36 @@
     return self;
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    _progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(updateProgressBar:) userInfo:nil repeats:YES];
+}
+
+-(void)updateProgressBar:(NSTimer*)timer
+{
+    CGRect frame = self.playOverlay.frame;
+    if( self.moviePlayer.duration > 0 )
+        frame.size.width = self.moviePlayer.currentPlaybackTime / self.moviePlayer.duration * 635.0;
+    
+    self.playOverlay.frame = frame;
+}
+
 - (IBAction)pressedPlayPause:(UIButton *)sender
 {
-    [self.moviePlayer prepareToPlay];
-    [self.moviePlayer play];
-    [UIView animateWithDuration:0.25 animations:^{
-        self.freezeFrame.alpha = 0;
-    }];
+    if( self.moviePlayer.playbackState  == MPMoviePlaybackStatePlaying )
+        [self.moviePlayer pause];
+    else
+    {
+        [self.moviePlayer prepareToPlay];
+        [self.moviePlayer play];
+        [UIView animateWithDuration:0.25 animations:^{
+            self.freezeFrame.alpha = 0;
+        }];
+    }
+    
+    ((UIButton*)sender).selected = (self.moviePlayer.playbackState == MPMoviePlaybackStatePlaying);
 }
 
 -(void)playPerspectiveMovieWithRootFolderPath: (NSString*)rootFoolderPath

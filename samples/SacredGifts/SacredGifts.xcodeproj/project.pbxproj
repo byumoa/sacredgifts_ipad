@@ -23,7 +23,7 @@
 		28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD14FF0DC6FC520079059D /* OpenGLES.framework */; };
 		28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28FD15070DC6FC5B0079059D /* QuartzCore.framework */; };
 		610729E718212EA400E8D7A2 /* Bloch Bio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 610729E318212EA400E8D7A2 /* Bloch Bio.mp3 */; };
-		610729E818212EA400E8D7A2 /* Hoffman Bio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 610729E418212EA400E8D7A2 /* Hoffman Bio.mp3 */; };
+		610729E818212EA400E8D7A2 /* Hofman Bio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 610729E418212EA400E8D7A2 /* Hofman Bio.mp3 */; };
 		610729E918212EA400E8D7A2 /* Schwartz Bio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 610729E518212EA400E8D7A2 /* Schwartz Bio.mp3 */; };
 		610729EA18212EA400E8D7A2 /* The Art Academies.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 610729E618212EA400E8D7A2 /* The Art Academies.mp3 */; };
 		61072A03182138B400E8D7A2 /* perspectives_sermon_all_shapes_together.png in Resources */ = {isa = PBXBuildFile; fileRef = 610729EB182138B400E8D7A2 /* perspectives_sermon_all_shapes_together.png */; };
@@ -432,7 +432,7 @@
 		28FD14FF0DC6FC520079059D /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		28FD15070DC6FC5B0079059D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		610729E318212EA400E8D7A2 /* Bloch Bio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Bloch Bio.mp3"; sourceTree = "<group>"; };
-		610729E418212EA400E8D7A2 /* Hoffman Bio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Hoffman Bio.mp3"; sourceTree = "<group>"; };
+		610729E418212EA400E8D7A2 /* Hofman Bio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Hofman Bio.mp3"; sourceTree = "<group>"; };
 		610729E518212EA400E8D7A2 /* Schwartz Bio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Schwartz Bio.mp3"; sourceTree = "<group>"; };
 		610729E618212EA400E8D7A2 /* The Art Academies.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "The Art Academies.mp3"; sourceTree = "<group>"; };
 		610729EB182138B400E8D7A2 /* perspectives_sermon_all_shapes_together.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perspectives_sermon_all_shapes_together.png; sourceTree = "<group>"; };
@@ -1129,7 +1129,7 @@
 			isa = PBXGroup;
 			children = (
 				610729E318212EA400E8D7A2 /* Bloch Bio.mp3 */,
-				610729E418212EA400E8D7A2 /* Hoffman Bio.mp3 */,
+				610729E418212EA400E8D7A2 /* Hofman Bio.mp3 */,
 				610729E518212EA400E8D7A2 /* Schwartz Bio.mp3 */,
 				610729E618212EA400E8D7A2 /* The Art Academies.mp3 */,
 				61CD50AB180C242500D28921 /* artists_pages_artists_bg.png */,
@@ -1658,7 +1658,7 @@
 				61072A0F182138B400E8D7A2 /* perspectives_sermon_circle_light_blue.png in Resources */,
 				61CD522B180C242500D28921 /* SG_General_Media_Playbar.png in Resources */,
 				61CD52DB180C242500D28921 /* painting_thumb_savior-on@2x.png in Resources */,
-				610729E818212EA400E8D7A2 /* Hoffman Bio.mp3 in Resources */,
+				610729E818212EA400E8D7A2 /* Hofman Bio.mp3 in Resources */,
 				61CD5293180C242500D28921 /* SG_General_Share_other@2x.png in Resources */,
 				61CD52C2180C242500D28921 /* painting_thumb_garden-on.png in Resources */,
 				61072A19182138B400E8D7A2 /* perspectives_sermon_red_square.png in Resources */,

@@ -39,7 +39,7 @@
     }
 }
 
--(void)pauseAudio
+- (void)pauseAudio
 {
     [self.player pause];
 }

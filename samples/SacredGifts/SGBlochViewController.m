@@ -21,4 +21,11 @@
     _scrollContentSize = CGSizeMake(768, 1300);
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    _narrationStr = @"Bloch Bio.mp3";
+}
+
 @end

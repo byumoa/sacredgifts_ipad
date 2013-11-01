@@ -21,4 +21,11 @@
     _scrollContentSize = CGSizeMake(768, 1200);
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    _narrationStr = @"Schwartz Bio.mp3";
+}
+
 @end

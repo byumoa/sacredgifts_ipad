@@ -25,24 +25,32 @@
     self.scrollView.contentSize = _scrollContentSize;
 }
 
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [SGNarrationManager pause];
+}
+
 - (IBAction)pressedNarration:(UIButton *)sender
 {
-    [self playAudioNamed:@"schwartz_bio_audio"];
+    [self playAudioNamed:_narrationStr];
 }
 
 - (BOOL) playAudioNamed: (NSString*)audioName;
 {
     NSString *narrationPath = [NSString stringWithFormat:@"%@,%@.mp3", [[NSBundle mainBundle] resourcePath], audioName];
-    //[[SGNarrationManager sharedManager] playAudioNamed:narrationPath];
+    [[SGNarrationManager sharedManager] playAudioNamed:narrationPath];
     
     return YES;
 }
 
 - (IBAction)pressedPainting:(UIButton *)sender
 {
-    NSLog(@"pressedPainting: %i", sender.tag);
     NSString* paintingName = (NSString*)kPaintingNames[sender.tag-1];
     [self.delegate transitionFromController:self toPaintingNamed:paintingName fromButtonRect:sender.frame withAnimType:kAnimTypeZoomIn];
 }
+
+
 
 @end

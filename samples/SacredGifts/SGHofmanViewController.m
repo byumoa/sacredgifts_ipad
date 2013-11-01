@@ -21,4 +21,11 @@
     _scrollContentSize = CGSizeMake(768, 1500);
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    _narrationStr = @"Hofman Bio.mp3";
+}
+
 @end

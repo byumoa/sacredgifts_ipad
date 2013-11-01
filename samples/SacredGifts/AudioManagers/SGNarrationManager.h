@@ -11,5 +11,6 @@
 @interface SGNarrationManager : SGAbstractAudioManager
 
 + (id)sharedManager;
++ (void)pause;
 
 @end

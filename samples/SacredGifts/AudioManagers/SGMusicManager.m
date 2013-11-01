@@ -24,7 +24,7 @@
 
 +(void)dropVolume
 {
-    ((SGMusicManager*)[SGMusicManager sharedManager]).player.volume = 0.35;
+    ((SGMusicManager*)[SGMusicManager sharedManager]).player.volume = 0.1;
 }
 
 +(void)bumpUpVolume

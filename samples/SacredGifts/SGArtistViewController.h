@@ -11,6 +11,7 @@
 @interface SGArtistViewController : SGContentViewController
 {
     CGSize _scrollContentSize;
+    NSString* _narrationStr;
 }
 @property (nonatomic, weak) IBOutlet UIScrollView* scrollView;
 

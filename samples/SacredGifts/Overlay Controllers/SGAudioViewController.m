@@ -30,7 +30,7 @@
 {
     [super viewDidLoad];
     
-    _progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateProgressBar:) userInfo:nil repeats:YES];
+    _progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(updateProgressBar:) userInfo:nil repeats:YES];
 }
 
 -(void)updateProgressBar:(NSTimer*)timer
@@ -50,18 +50,11 @@
 -(void)configureAudioWithPath:(NSString *)rootFolderPath
 {
     self.rootFolderPath = rootFolderPath;
-    
-    SGNarrationManager* narrationManager = [SGNarrationManager sharedManager];
-    if( !narrationManager.player.isPlaying )
-       [self pressedPlayPause:nil];
-
 }
 
 - (IBAction)pressedPlayPause:(id)sender
 {
-    NSLog(@"self.rootFolderPath: %@", self.rootFolderPath);
     NSString *narrationPath = [[NSBundle mainBundle] pathForResource:@"audio" ofType:@".mp3" inDirectory:self.rootFolderPath];
-    NSLog(@"self.rootFolderPath: %@", self.rootFolderPath);
     
     if( narrationPath )
     {

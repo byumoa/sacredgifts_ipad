@@ -20,7 +20,7 @@
         sharedNarrationManager = [self new];
     });
     
-    return  sharedNarrationManager;
+    return sharedNarrationManager;
 }
 
 -(void)playAudioWithPath:(NSString *)audioPath
@@ -39,6 +39,11 @@
 {
     [super pauseAudio];
     [SGMusicManager bumpUpVolume];
+}
+
++ (void)pause
+{
+    [[SGNarrationManager sharedManager] pauseAudio];
 }
 
 @end
