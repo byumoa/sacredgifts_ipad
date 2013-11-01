@@ -90,13 +90,18 @@
 	}
 }
 
+-(void)removeFromSuperview
+{
+    [super removeFromSuperview];
+    NSLog(@"ScratchableView removeFromSuperview");
+}
 
 - (void) renderLineFromPoint:(CGPoint)start toPoint:(CGPoint)end
 {
 	CGContextMoveToPoint(alphaPixels, start.x, start.y);
 	CGContextAddLineToPoint(alphaPixels, end.x, end.y);
 	CGContextStrokePath(alphaPixels);
-    CGRect rect = CGRectMake(start.x-100, start.y-100, 200, 200);
+    //CGRect rect = CGRectMake(start.x-100, start.y-100, 200, 200);
 	//[self setNeedsDisplayInRect:rect];
     [self setNeedsDisplay];
 }
