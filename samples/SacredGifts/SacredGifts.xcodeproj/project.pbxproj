@@ -86,6 +86,8 @@
 		614C00FE18241D7000333698 /* shepherds.png in Resources */ = {isa = PBXBuildFile; fileRef = 614C00E918241D7000333698 /* shepherds.png */; };
 		614C00FF18241D7000333698 /* temple-ny.png in Resources */ = {isa = PBXBuildFile; fileRef = 614C00EA18241D7000333698 /* temple-ny.png */; };
 		614C010018241D7000333698 /* temple.png in Resources */ = {isa = PBXBuildFile; fileRef = 614C00EB18241D7000333698 /* temple.png */; };
+		614C01021824247600333698 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 614C01011824247600333698 /* Social.framework */; };
+		614C01041824247D00333698 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 614C01031824247D00333698 /* MessageUI.framework */; };
 		614E3C9A180D8D9C002E875B /* SacredGifts.dat in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C98180D8D9C002E875B /* SacredGifts.dat */; };
 		614E3C9B180D8D9C002E875B /* SacredGifts.xml in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C99180D8D9C002E875B /* SacredGifts.xml */; };
 		614E3CA0180DF631002E875B /* speaker_btns__narration_btn.png in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C9C180DF631002E875B /* speaker_btns__narration_btn.png */; };
@@ -518,6 +520,8 @@
 		614C00E918241D7000333698 /* shepherds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shepherds.png; sourceTree = "<group>"; };
 		614C00EA18241D7000333698 /* temple-ny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "temple-ny.png"; sourceTree = "<group>"; };
 		614C00EB18241D7000333698 /* temple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = temple.png; sourceTree = "<group>"; };
+		614C01011824247600333698 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		614C01031824247D00333698 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		614E3C98180D8D9C002E875B /* SacredGifts.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = SacredGifts.dat; path = ImageTargets/assets/SacredGifts.dat; sourceTree = "<group>"; };
 		614E3C99180D8D9C002E875B /* SacredGifts.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = SacredGifts.xml; path = ImageTargets/assets/SacredGifts.xml; sourceTree = "<group>"; };
 		614E3C9C180DF631002E875B /* speaker_btns__narration_btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = speaker_btns__narration_btn.png; sourceTree = "<group>"; };
@@ -916,6 +920,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				614C01041824247D00333698 /* MessageUI.framework in Frameworks */,
+				614C01021824247600333698 /* Social.framework in Frameworks */,
 				6118B58A18117B6400FB8337 /* CoreMotion.framework in Frameworks */,
 				61CD5350180C3E9400D28921 /* MediaPlayer.framework in Frameworks */,
 				61CD534E180C2C3000D28921 /* GLKit.framework in Frameworks */,
@@ -1044,6 +1050,8 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				614C01031824247D00333698 /* MessageUI.framework */,
+				614C01011824247600333698 /* Social.framework */,
 				6118B58918117B6400FB8337 /* CoreMotion.framework */,
 				61CD534F180C3E9400D28921 /* MediaPlayer.framework */,
 				61CD534D180C2C3000D28921 /* GLKit.framework */,

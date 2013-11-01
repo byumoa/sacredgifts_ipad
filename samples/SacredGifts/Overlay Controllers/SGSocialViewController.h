@@ -7,9 +7,18 @@
 //
 
 #import "SGOverlayViewController.h"
+#import <MessageUI/MessageUI.h>
 
-@interface SGSocialViewController : SGOverlayViewController
+typedef enum
+{
+    SocialMediaTypeFacebook = 1,
+    SocialMediaTypeTwitter = 2,
+    SocialMediaTypeEmail = 3
+}SocialMediaType;
+
+@interface SGSocialViewController : SGOverlayViewController<MFMailComposeViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *paintingThumbnail;
+
 - (IBAction)pressedSocialBtn:(id)sender;
 
 @end
