@@ -56,7 +56,7 @@ const NSString* kSummaryPauseBtnHilStr = @"summary_pause_btn.png";
 
 -(void)setupSpeakerBtnPlay
 {
-    sel
+    
 }
 
 -(void)setupSpeakerBtnPause
