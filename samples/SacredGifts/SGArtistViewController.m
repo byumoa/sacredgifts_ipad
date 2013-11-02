@@ -39,8 +39,8 @@
 
 - (BOOL) playAudioNamed: (NSString*)audioName;
 {
-    NSString *narrationPath = [NSString stringWithFormat:@"%@,%@.mp3", [[NSBundle mainBundle] resourcePath], audioName];
-    [[SGNarrationManager sharedManager] playAudioNamed:narrationPath];
+    NSString *narrationPath = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], audioName];
+    [[SGNarrationManager sharedManager] playAudioWithPath:narrationPath];
     
     return YES;
 }

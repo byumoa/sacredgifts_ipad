@@ -17,6 +17,7 @@ typedef enum
 }SocialMediaType;
 
 @interface SGSocialViewController : SGOverlayViewController<MFMailComposeViewControllerDelegate>
+@property (nonatomic, strong) NSString* paintingName;
 @property (weak, nonatomic) IBOutlet UIImageView *paintingThumbnail;
 
 - (IBAction)pressedSocialBtn:(id)sender;

@@ -25,7 +25,7 @@ NSString* const kShareInitialText = @"Enjoying Sacred Gifts at the MOA";
 
 - (IBAction)pressedSocialBtn:(id)sender
 {
-    UIImage* thumbnail;
+    UIImage* thumbnail = [UIImage imageNamed:self.paintingName];
     
     switch (((UIButton*)sender).tag)
     {

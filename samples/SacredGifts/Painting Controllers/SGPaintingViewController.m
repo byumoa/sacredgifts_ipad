@@ -14,6 +14,7 @@
 #import "SGGiftOverlayViewController.h"
 #import "SGAudioViewController.h"
 #import "SGHighlightsViewController.h"
+#import "SGSocialViewController.h"
 
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
@@ -253,6 +254,7 @@ const int kPerspectivesButtonWidth = 161;
             break;
         case kModuleTypeSocial:{
             [self.overlayController addBackgroundImgWithImgName:@"SG_General_Module_Overlay.png"];
+            ((SGSocialViewController*)self.overlayController).paintingName = _paintingNameStr;
         }
             break;
         case kModuleTypeVideo:{
@@ -332,7 +334,10 @@ const int kPerspectivesButtonWidth = 161;
 -(void)paintingTapped:(SGPaintingImageView *)paintingView
 {
     if( self.overlayController )
+    {
         [self removeCurrentOverlay];
+        [self deselectAllModuleBtns];
+    }
     else
     {
         float targetAlpha = 1;

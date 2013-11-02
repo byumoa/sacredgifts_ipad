@@ -987,22 +987,28 @@
                                 <state key="normal">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="pressedPlayPause:" destination="Vy2-fL-KCd" eventType="touchUpInside" id="3uO-dg-6ap"/>
+                                </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="SG_General_Media_Playbar.png" id="kMj-l1-heC">
-                                <rect key="frame" x="100" y="967" width="635" height="9"/>
+                                <rect key="frame" x="98" y="961" width="635" height="9"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="SG_General_Media_Playbar_Overlay.png" id="EX2-Ku-XJK">
-                                <rect key="frame" x="100" y="967" width="2" height="9"/>
+                                <rect key="frame" x="98" y="961" width="0.0" height="9"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="pR6-73-u8v">
-                                <rect key="frame" x="11" y="933" width="96" height="77"/>
+                                <rect key="frame" x="9" y="927" width="96" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="SG_General_Music_PlayPause.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" image="SG_General_Music_PlayPause-on.png"/>
+                                <connections>
+                                    <action selector="pressedPlayPause:" destination="Vy2-fL-KCd" eventType="touchUpInside" id="mvX-kI-Nlo"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -1010,6 +1016,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="freezeFrame" destination="VH0-LL-KwJ" id="Mgi-k7-z9Y"/>
+                        <outlet property="playOverlay" destination="EX2-Ku-XJK" id="9pH-iJ-z0q"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQu-iu-iIX" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1411,7 +1418,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="SG_General_Media_Playbar_Overlay.png" id="jmm-CE-Jad">
-                                <rect key="frame" x="100" y="221" width="2" height="9"/>
+                                <rect key="frame" x="100" y="221" width="0.0" height="9"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="eYk-zX-kjK">
@@ -1439,7 +1446,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Syu-gM-nxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2951" y="1133"/>
+            <point key="canvasLocation" x="3028" y="789"/>
         </scene>
         <!--Highlights View Controller-->
         <scene sceneID="qg0-Ty-BHF">

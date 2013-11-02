@@ -64,7 +64,7 @@
         else
             [_narrationManager playAudioWithPath:narrationPath];
         
-        ((UIButton*)sender).selected = _narrationManager.player.isPlaying;
+        ((UIButton*)sender).selected = !_narrationManager.player.isPlaying;
     }
     else
     {

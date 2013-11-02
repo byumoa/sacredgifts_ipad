@@ -54,7 +54,7 @@
         }];
     }
     
-    ((UIButton*)sender).selected = (self.moviePlayer.playbackState == MPMoviePlaybackStatePlaying);
+    ((UIButton*)sender).selected = (self.moviePlayer.playbackState != MPMoviePlaybackStatePlaying);
 }
 
 -(void)playPerspectiveMovieWithRootFolderPath: (NSString*)rootFoolderPath
@@ -82,6 +82,8 @@
     [UIView animateWithDuration:0.25 animations:^{
         self.freezeFrame.alpha = 1;
     }];
+    
+    self.playPauseButton.selected = (self.moviePlayer.playbackState != MPMoviePlaybackStatePlaying);
 }
 
 -(void)viewWillDisappear:(BOOL)animated
