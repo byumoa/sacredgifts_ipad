@@ -10,6 +10,7 @@
 #import <Social/Social.h>
 
 NSString* const kShareInitialText = @"Enjoying Sacred Gifts at the MOA";
+int const kOverlayHeight = 236;
 
 @implementation SGSocialViewController
 
@@ -31,24 +32,24 @@ NSString* const kShareInitialText = @"Enjoying Sacred Gifts at the MOA";
     {
         case SocialMediaTypeFacebook:
         {
-            if( [SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
-            {
+            //if( [SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook])
+            //{
                 SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
                 [socialSheet setInitialText:(NSString*)kShareInitialText];
                 [socialSheet addImage:thumbnail];
                 [self presentViewController:socialSheet animated:YES completion:^{}];
-            }
+            //}
         }
             break;
         case SocialMediaTypeTwitter:
         {
-            if( [SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
-            {
+            //if( [SLComposeViewController isAvailableForServiceType:SLServiceTypeTwitter])
+            //{
                 SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
                 [socialSheet setInitialText:(NSString*)kShareInitialText];
                 [socialSheet addImage:thumbnail];
                 [self presentViewController:socialSheet animated:YES completion:^{}];
-            }
+            //}
         }
             break;
         case SocialMediaTypeEmail:
@@ -70,5 +71,13 @@ NSString* const kShareInitialText = @"Enjoying Sacred Gifts at the MOA";
 -(void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error
 {
     [self dismissViewControllerAnimated:YES completion:^{}];
+}
+
+-(void)addBackgroundImgWithImgName:(NSString *)bgImgName
+{
+    [super addBackgroundImgWithImgName:bgImgName];
+    self.paintingThumbnail.image = [UIImage imageNamed:self.paintingName];
+    CGRect frame = self.view.frame;
+    frame.size.height = kOverlayHeight;
 }
 @end

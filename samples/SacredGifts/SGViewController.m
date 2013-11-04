@@ -44,7 +44,7 @@
 {
     [_donorsTimer invalidate];
     
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.25 animations:^{
         self.splashDonors.alpha = 1;
     }];
 }
@@ -53,7 +53,7 @@
 {
     [_splashTimer invalidate];
     
-    [UIView animateWithDuration:0.5 animations:^{
+    [UIView animateWithDuration:0.25 animations:^{
         self.splash.alpha = 0;
         self.splashArtists.alpha = 0;
         self.splashDonors.alpha = 0;

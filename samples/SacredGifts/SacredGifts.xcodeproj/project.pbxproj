@@ -178,10 +178,6 @@
 		61CD5209180C242500D28921 /* sg_home_label_hofmann@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50E6180C242500D28921 /* sg_home_label_hofmann@2x.png */; };
 		61CD520A180C242500D28921 /* sg_home_label_schwartz.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50E7180C242500D28921 /* sg_home_label_schwartz.png */; };
 		61CD520B180C242500D28921 /* sg_home_label_schwartz@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50E8180C242500D28921 /* sg_home_label_schwartz@2x.png */; };
-		61CD520C180C242500D28921 /* SG_Home_LearnMoreBtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50E9180C242500D28921 /* SG_Home_LearnMoreBtn-on.png */; };
-		61CD520D180C242500D28921 /* SG_Home_LearnMoreBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50EA180C242500D28921 /* SG_Home_LearnMoreBtn-on@2x.png */; };
-		61CD520E180C242500D28921 /* SG_Home_LearnMoreBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50EB180C242500D28921 /* SG_Home_LearnMoreBtn.png */; };
-		61CD520F180C242500D28921 /* SG_Home_LearnMoreBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50EC180C242500D28921 /* SG_Home_LearnMoreBtn@2x.png */; };
 		61CD5210180C242500D28921 /* sg_home_meetartistsbtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50ED180C242500D28921 /* sg_home_meetartistsbtn-on.png */; };
 		61CD5211180C242500D28921 /* sg_home_meetartistsbtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50EE180C242500D28921 /* sg_home_meetartistsbtn-on@2x.png */; };
 		61CD5212180C242500D28921 /* sg_home_meetartistsbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50EF180C242500D28921 /* sg_home_meetartistsbtn.png */; };
@@ -190,18 +186,10 @@
 		61CD5215180C242500D28921 /* sg_home_originsbtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50F2180C242500D28921 /* sg_home_originsbtn-on@2x.png */; };
 		61CD5216180C242500D28921 /* sg_home_originsbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50F3180C242500D28921 /* sg_home_originsbtn.png */; };
 		61CD5217180C242500D28921 /* sg_home_originsbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50F4180C242500D28921 /* sg_home_originsbtn@2x.png */; };
-		61CD5218180C242500D28921 /* SG_Home_PaintingListBtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50F5180C242500D28921 /* SG_Home_PaintingListBtn-on.png */; };
-		61CD5219180C242500D28921 /* SG_Home_PaintingListBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50F6180C242500D28921 /* SG_Home_PaintingListBtn-on@2x.png */; };
-		61CD521A180C242500D28921 /* SG_Home_PaintingListBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50F7180C242500D28921 /* SG_Home_PaintingListBtn.png */; };
-		61CD521B180C242500D28921 /* SG_Home_PaintingListBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50F8180C242500D28921 /* SG_Home_PaintingListBtn@2x.png */; };
 		61CD521C180C242500D28921 /* sg_home_reservationbtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50F9180C242500D28921 /* sg_home_reservationbtn-on.png */; };
 		61CD521D180C242500D28921 /* sg_home_reservationbtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50FA180C242500D28921 /* sg_home_reservationbtn-on@2x.png */; };
 		61CD521E180C242500D28921 /* sg_home_reservationbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50FB180C242500D28921 /* sg_home_reservationbtn.png */; };
 		61CD521F180C242500D28921 /* sg_home_reservationbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50FC180C242500D28921 /* sg_home_reservationbtn@2x.png */; };
-		61CD5220180C242500D28921 /* SG_Home_ScanPaintingBtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50FD180C242500D28921 /* SG_Home_ScanPaintingBtn-on.png */; };
-		61CD5221180C242500D28921 /* SG_Home_ScanPaintingBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50FE180C242500D28921 /* SG_Home_ScanPaintingBtn-on@2x.png */; };
-		61CD5222180C242500D28921 /* SG_Home_ScanPaintingBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50FF180C242500D28921 /* SG_Home_ScanPaintingBtn.png */; };
-		61CD5223180C242500D28921 /* SG_Home_ScanPaintingBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5100180C242500D28921 /* SG_Home_ScanPaintingBtn@2x.png */; };
 		61CD5224180C242500D28921 /* sg_home_schwartzbtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5101180C242500D28921 /* sg_home_schwartzbtn-on.png */; };
 		61CD5225180C242500D28921 /* sg_home_schwartzbtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5102180C242500D28921 /* sg_home_schwartzbtn-on@2x.png */; };
 		61CD5226180C242500D28921 /* sg_home_schwartzbtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5103180C242500D28921 /* sg_home_schwartzbtn.png */; };
@@ -630,10 +618,6 @@
 		61CD50E6180C242500D28921 /* sg_home_label_hofmann@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_label_hofmann@2x.png"; sourceTree = "<group>"; };
 		61CD50E7180C242500D28921 /* sg_home_label_schwartz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sg_home_label_schwartz.png; sourceTree = "<group>"; };
 		61CD50E8180C242500D28921 /* sg_home_label_schwartz@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_label_schwartz@2x.png"; sourceTree = "<group>"; };
-		61CD50E9180C242500D28921 /* SG_Home_LearnMoreBtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_LearnMoreBtn-on.png"; sourceTree = "<group>"; };
-		61CD50EA180C242500D28921 /* SG_Home_LearnMoreBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_LearnMoreBtn-on@2x.png"; sourceTree = "<group>"; };
-		61CD50EB180C242500D28921 /* SG_Home_LearnMoreBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_Home_LearnMoreBtn.png; sourceTree = "<group>"; };
-		61CD50EC180C242500D28921 /* SG_Home_LearnMoreBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_LearnMoreBtn@2x.png"; sourceTree = "<group>"; };
 		61CD50ED180C242500D28921 /* sg_home_meetartistsbtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_meetartistsbtn-on.png"; sourceTree = "<group>"; };
 		61CD50EE180C242500D28921 /* sg_home_meetartistsbtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_meetartistsbtn-on@2x.png"; sourceTree = "<group>"; };
 		61CD50EF180C242500D28921 /* sg_home_meetartistsbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sg_home_meetartistsbtn.png; sourceTree = "<group>"; };
@@ -642,18 +626,10 @@
 		61CD50F2180C242500D28921 /* sg_home_originsbtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_originsbtn-on@2x.png"; sourceTree = "<group>"; };
 		61CD50F3180C242500D28921 /* sg_home_originsbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sg_home_originsbtn.png; sourceTree = "<group>"; };
 		61CD50F4180C242500D28921 /* sg_home_originsbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_originsbtn@2x.png"; sourceTree = "<group>"; };
-		61CD50F5180C242500D28921 /* SG_Home_PaintingListBtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_PaintingListBtn-on.png"; sourceTree = "<group>"; };
-		61CD50F6180C242500D28921 /* SG_Home_PaintingListBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_PaintingListBtn-on@2x.png"; sourceTree = "<group>"; };
-		61CD50F7180C242500D28921 /* SG_Home_PaintingListBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_Home_PaintingListBtn.png; sourceTree = "<group>"; };
-		61CD50F8180C242500D28921 /* SG_Home_PaintingListBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_PaintingListBtn@2x.png"; sourceTree = "<group>"; };
 		61CD50F9180C242500D28921 /* sg_home_reservationbtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_reservationbtn-on.png"; sourceTree = "<group>"; };
 		61CD50FA180C242500D28921 /* sg_home_reservationbtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_reservationbtn-on@2x.png"; sourceTree = "<group>"; };
 		61CD50FB180C242500D28921 /* sg_home_reservationbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sg_home_reservationbtn.png; sourceTree = "<group>"; };
 		61CD50FC180C242500D28921 /* sg_home_reservationbtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_reservationbtn@2x.png"; sourceTree = "<group>"; };
-		61CD50FD180C242500D28921 /* SG_Home_ScanPaintingBtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_ScanPaintingBtn-on.png"; sourceTree = "<group>"; };
-		61CD50FE180C242500D28921 /* SG_Home_ScanPaintingBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_ScanPaintingBtn-on@2x.png"; sourceTree = "<group>"; };
-		61CD50FF180C242500D28921 /* SG_Home_ScanPaintingBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_Home_ScanPaintingBtn.png; sourceTree = "<group>"; };
-		61CD5100180C242500D28921 /* SG_Home_ScanPaintingBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_ScanPaintingBtn@2x.png"; sourceTree = "<group>"; };
 		61CD5101180C242500D28921 /* sg_home_schwartzbtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_schwartzbtn-on.png"; sourceTree = "<group>"; };
 		61CD5102180C242500D28921 /* sg_home_schwartzbtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_schwartzbtn-on@2x.png"; sourceTree = "<group>"; };
 		61CD5103180C242500D28921 /* sg_home_schwartzbtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sg_home_schwartzbtn.png; sourceTree = "<group>"; };
@@ -1289,10 +1265,6 @@
 				61CD50E6180C242500D28921 /* sg_home_label_hofmann@2x.png */,
 				61CD50E7180C242500D28921 /* sg_home_label_schwartz.png */,
 				61CD50E8180C242500D28921 /* sg_home_label_schwartz@2x.png */,
-				61CD50E9180C242500D28921 /* SG_Home_LearnMoreBtn-on.png */,
-				61CD50EA180C242500D28921 /* SG_Home_LearnMoreBtn-on@2x.png */,
-				61CD50EB180C242500D28921 /* SG_Home_LearnMoreBtn.png */,
-				61CD50EC180C242500D28921 /* SG_Home_LearnMoreBtn@2x.png */,
 				61CD50ED180C242500D28921 /* sg_home_meetartistsbtn-on.png */,
 				61CD50EE180C242500D28921 /* sg_home_meetartistsbtn-on@2x.png */,
 				61CD50EF180C242500D28921 /* sg_home_meetartistsbtn.png */,
@@ -1301,18 +1273,10 @@
 				61CD50F2180C242500D28921 /* sg_home_originsbtn-on@2x.png */,
 				61CD50F3180C242500D28921 /* sg_home_originsbtn.png */,
 				61CD50F4180C242500D28921 /* sg_home_originsbtn@2x.png */,
-				61CD50F5180C242500D28921 /* SG_Home_PaintingListBtn-on.png */,
-				61CD50F6180C242500D28921 /* SG_Home_PaintingListBtn-on@2x.png */,
-				61CD50F7180C242500D28921 /* SG_Home_PaintingListBtn.png */,
-				61CD50F8180C242500D28921 /* SG_Home_PaintingListBtn@2x.png */,
 				61CD50F9180C242500D28921 /* sg_home_reservationbtn-on.png */,
 				61CD50FA180C242500D28921 /* sg_home_reservationbtn-on@2x.png */,
 				61CD50FB180C242500D28921 /* sg_home_reservationbtn.png */,
 				61CD50FC180C242500D28921 /* sg_home_reservationbtn@2x.png */,
-				61CD50FD180C242500D28921 /* SG_Home_ScanPaintingBtn-on.png */,
-				61CD50FE180C242500D28921 /* SG_Home_ScanPaintingBtn-on@2x.png */,
-				61CD50FF180C242500D28921 /* SG_Home_ScanPaintingBtn.png */,
-				61CD5100180C242500D28921 /* SG_Home_ScanPaintingBtn@2x.png */,
 				61CD5101180C242500D28921 /* sg_home_schwartzbtn-on.png */,
 				61CD5102180C242500D28921 /* sg_home_schwartzbtn-on@2x.png */,
 				61CD5103180C242500D28921 /* sg_home_schwartzbtn.png */,
@@ -1685,7 +1649,6 @@
 				61CD5255180C242500D28921 /* SG_General_Painting_ContextBtn-on.png in Resources */,
 				76CEC821146D45F7009E8098 /* StonesAndChips.xml in Resources */,
 				61CD52A1180C242500D28921 /* painting_thumb_aalborg@2x.png in Resources */,
-				61CD520E180C242500D28921 /* SG_Home_LearnMoreBtn.png in Resources */,
 				61CD52A6180C242500D28921 /* painting_thumb_capture-on.png in Resources */,
 				61CD524E180C242500D28921 /* SG_General_Painting_ChildrensBtn-on@2x.png in Resources */,
 				61072A09182138B400E8D7A2 /* perspectives_sermon_circle_black.png in Resources */,
@@ -1731,7 +1694,6 @@
 				61CD51DA180C242500D28921 /* sg_home_bg-exhibition@2x.png in Resources */,
 				61CD509C180C23B100D28921 /* Main_iPad.storyboard in Resources */,
 				61CD51FA180C242500D28921 /* sg_home_filmbtn.png in Resources */,
-				61CD521A180C242500D28921 /* SG_Home_PaintingListBtn.png in Resources */,
 				61CD51D4180C242500D28921 /* artists_pages_hofmann_overlay@2x.png in Resources */,
 				61CD5258180C242500D28921 /* SG_General_Painting_ContextBtn@2x.png in Resources */,
 				61CD5205180C242500D28921 /* sg_home_hoffmanbtn@2x.png in Resources */,
@@ -1793,7 +1755,6 @@
 				61267B821819667B00A52CC5 /* splash_artists.png in Resources */,
 				61CD5214180C242500D28921 /* sg_home_originsbtn-on.png in Resources */,
 				61CD5283180C242500D28921 /* SG_General_ScanBtn-on@2x.png in Resources */,
-				61CD520C180C242500D28921 /* SG_Home_LearnMoreBtn-on.png in Resources */,
 				61CD5209180C242500D28921 /* sg_home_label_hofmann@2x.png in Resources */,
 				61CD52C7180C242500D28921 /* painting_thumb_gethsemane-on@2x.png in Resources */,
 				61CD52CF180C242500D28921 /* painting_thumb_mocking-on@2x.png in Resources */,
@@ -1803,7 +1764,6 @@
 				61CD5242180C242500D28921 /* SG_General_Module_CloseBtn@2x.png in Resources */,
 				61CD524D180C242500D28921 /* SG_General_Painting_ChildrensBtn-on.png in Resources */,
 				61CD52D6180C242500D28921 /* painting_thumb_ruler-on.png in Resources */,
-				61CD521B180C242500D28921 /* SG_Home_PaintingListBtn@2x.png in Resources */,
 				61CD52C1180C242500D28921 /* painting_thumb_emmaus@2x.png in Resources */,
 				61CD51FF180C242500D28921 /* sg_home_findbtn@2x.png in Resources */,
 				61CD5206180C242500D28921 /* sg_home_label_bloch.png in Resources */,
@@ -1841,7 +1801,6 @@
 				61CD5261180C242500D28921 /* SG_General_Painting_DetailsBtn.png in Resources */,
 				614C00EC18241D7000333698 /* aalborg.png in Resources */,
 				61CD522C180C242500D28921 /* SG_General_Media_Playbar@2x.png in Resources */,
-				61CD5218180C242500D28921 /* SG_Home_PaintingListBtn-on.png in Resources */,
 				61CD5241180C242500D28921 /* SG_General_Module_CloseBtn.png in Resources */,
 				61CD5269180C242500D28921 /* SG_General_Painting_ModuleBtn.png in Resources */,
 				614C00FA18241D7000333698 /* resurrection.png in Resources */,
@@ -1872,7 +1831,6 @@
 				61CD51D2180C242500D28921 /* artists_pages_bloch_overlay@2x.png in Resources */,
 				61CD5267180C242500D28921 /* SG_General_Painting_ModuleBtn-on.png in Resources */,
 				61CD51FB180C242500D28921 /* sg_home_filmbtn@2x.png in Resources */,
-				61CD5221180C242500D28921 /* SG_Home_ScanPaintingBtn-on@2x.png in Resources */,
 				614C00FF18241D7000333698 /* temple-ny.png in Resources */,
 				61072A03182138B400E8D7A2 /* perspectives_sermon_all_shapes_together.png in Resources */,
 				61CD52C4180C242500D28921 /* painting_thumb_garden.png in Resources */,
@@ -1893,7 +1851,6 @@
 				61CD526F180C242500D28921 /* SG_General_Painting_PanoramaBtn-on.png in Resources */,
 				61CD534C180C2C1B00D28921 /* Images.xcassets in Resources */,
 				61CD52D5180C242500D28921 /* painting_thumb_resurrection@2x.png in Resources */,
-				61CD5220180C242500D28921 /* SG_Home_ScanPaintingBtn-on.png in Resources */,
 				61CD52B2180C242500D28921 /* painting_thumb_consolator-on.png in Resources */,
 				61CD522F180C242500D28921 /* SG_General_Media_Playhead-on.png in Resources */,
 				61CD5292180C242500D28921 /* SG_General_Share_other.png in Resources */,
@@ -1926,7 +1883,6 @@
 				61CD51EC180C242500D28921 /* sg_home_donatebtn-on.png in Resources */,
 				61CD5235180C242500D28921 /* SG_General_Music_PlayPause.png in Resources */,
 				61CD52D4180C242500D28921 /* painting_thumb_resurrection.png in Resources */,
-				61CD520D180C242500D28921 /* SG_Home_LearnMoreBtn-on@2x.png in Resources */,
 				61072A231822657500E8D7A2 /* castle_thumb@2x.png in Resources */,
 				61CD5284180C242500D28921 /* SG_General_ScanBtn.png in Resources */,
 				76CEC823146D45F7009E8098 /* Tarmac.xml in Resources */,
@@ -1949,7 +1905,6 @@
 				61072A08182138B400E8D7A2 /* perspectives_sermon_center_dot@2x.png in Resources */,
 				61CD529F180C242500D28921 /* painting_thumb_aalborg-on@2x.png in Resources */,
 				61CD52CB180C242500D28921 /* painting_thumb_healing-on@2x.png in Resources */,
-				61CD5223180C242500D28921 /* SG_Home_ScanPaintingBtn@2x.png in Resources */,
 				61CD51E0180C242500D28921 /* sg_home_bg-home@2x.png in Resources */,
 				61CD51E3180C242500D28921 /* sg_home_bg-meetartists@2x.png in Resources */,
 				61CD51D5180C242500D28921 /* artists_pages_schwartz_overlay.png in Resources */,
@@ -1967,7 +1922,6 @@
 				61CD52B6180C242500D28921 /* painting_thumb_cross-on.png in Resources */,
 				61CD5237180C242500D28921 /* SG_General_BackBtn-on.png in Resources */,
 				61CD521E180C242500D28921 /* sg_home_reservationbtn.png in Resources */,
-				61CD520F180C242500D28921 /* SG_Home_LearnMoreBtn@2x.png in Resources */,
 				61CD51D3180C242500D28921 /* artists_pages_hofmann_overlay.png in Resources */,
 				61CD5228180C242500D28921 /* SG_Home_SplashScreen.png in Resources */,
 				7695D9D414D2F49B0013AD95 /* TextureTeapotRed.png in Resources */,
@@ -1991,7 +1945,6 @@
 				618645AE181AEEB700195384 /* childrens_btn.png in Resources */,
 				61072A06182138B400E8D7A2 /* perspectives_sermon_center_circle_orange@2x.png in Resources */,
 				618645AD181AEEB700195384 /* childrens_btn-on@2x.png in Resources */,
-				61CD5222180C242500D28921 /* SG_Home_ScanPaintingBtn.png in Resources */,
 				614C00F418241D7000333698 /* denial.png in Resources */,
 				61072A04182138B400E8D7A2 /* perspectives_sermon_all_shapes_together@2x.png in Resources */,
 				61072A0B182138B400E8D7A2 /* perspectives_sermon_circle_dark_blue.png in Resources */,
@@ -2020,7 +1973,6 @@
 				61CD525C180C242500D28921 /* SG_General_Painting_DetailMarkerBtn@2x.png in Resources */,
 				61CD52AD180C242500D28921 /* painting_thumb_children@2x.png in Resources */,
 				61CD52A3180C242500D28921 /* painting_thumb_burial-on@2x.png in Resources */,
-				61CD5219180C242500D28921 /* SG_Home_PaintingListBtn-on@2x.png in Resources */,
 				61CD5264180C242500D28921 /* SG_General_Painting_GiftsBtn-on@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

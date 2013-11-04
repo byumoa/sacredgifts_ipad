@@ -235,7 +235,10 @@ const int kPerspectivesButtonWidth = 161;
     self.overlayController.delegate = self;
     //Transition new overlay on
     if( [moduleStr isEqualToString:(NSString*)kPanoramaStr] )
+    {
         [self.view addSubview:self.overlayController.view];
+        
+    }
     else{
         [self.view insertSubview:self.overlayController.view belowSubview:self.footerView];
     }
@@ -253,12 +256,12 @@ const int kPerspectivesButtonWidth = 161;
         }
             break;
         case kModuleTypeSocial:{
-            [self.overlayController addBackgroundImgWithImgName:@"SG_General_Module_Overlay.png"];
             ((SGSocialViewController*)self.overlayController).paintingName = _paintingNameStr;
+            [self.overlayController addBackgroundImgWithImgName:@"SG_General_Module_Overlay.png"];
         }
             break;
         case kModuleTypeVideo:{
-            //Configured in perspectives
+            
         }
             break;
         case kModuleTypeAudio:{
