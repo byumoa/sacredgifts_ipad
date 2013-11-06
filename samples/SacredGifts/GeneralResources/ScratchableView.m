@@ -13,7 +13,7 @@
 
 - (void)configWithGreyscaleOverlay: (NSString*)path
 {
-    scratchable = [UIImage imageWithContentsOfFile:path].CGImage;
+    scratchable = CGImageCreateCopy([UIImage imageWithContentsOfFile:path].CGImage);
     width = CGImageGetWidth(scratchable);
     height = CGImageGetHeight(scratchable);
     
@@ -47,12 +47,6 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-    /*
-    CGRect cropRect = rect;
-    cropRect.origin.y = self.frame.size.height - rect.origin.y;
-    CGImageRef cropped = CGImageCreateWithImageInRect(scratched, cropRect);
-	CGContextDrawImage(UIGraphicsGetCurrentContext(), rect, cropped);
-    */
     CGContextDrawImage(UIGraphicsGetCurrentContext(), rect, scratched);
 }
 
@@ -77,6 +71,8 @@
 	
 	// Render the stroke
 	[self renderLineFromPoint:previousLocation toPoint:location];
+    
+    [self.nextResponder touchesMoved:touches withEvent:event];
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
@@ -95,8 +91,6 @@
 	CGContextMoveToPoint(alphaPixels, start.x, start.y);
 	CGContextAddLineToPoint(alphaPixels, end.x, end.y);
 	CGContextStrokePath(alphaPixels);
-    //CGRect rect = CGRectMake(start.x-100, start.y-100, 200, 200);
-	//[self setNeedsDisplayInRect:rect];
     [self setNeedsDisplay];
 }
 

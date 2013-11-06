@@ -10,4 +10,9 @@
 
 @implementation SGOverlayView
 
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self.nextResponder touchesMoved:touches withEvent:event];
+}
+
 @end

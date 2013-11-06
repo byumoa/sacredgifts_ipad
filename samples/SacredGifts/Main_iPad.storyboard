@@ -93,7 +93,7 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="SG_Home_SplashScreen.png" id="zKe-di-iZj">
+                            <imageView opaque="NO" clipsSubviews="YES" contentMode="center" image="SG_Home_SplashScreen.png" id="zKe-di-iZj">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>

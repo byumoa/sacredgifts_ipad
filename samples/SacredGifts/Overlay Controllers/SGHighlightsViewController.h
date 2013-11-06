@@ -6,12 +6,8 @@
 //
 //
 
-#import "SGMediaSelectionViewController.h"
+#import "SGButtonOnPaintingViewController.h"
 
-@interface SGHighlightsViewController : SGMediaSelectionViewController
-
--(void)configureWithPath:(NSString *)folderPath;
--(UIButton *)buttonForHighlightIndex:(int)highlightIndex;
--(void)pressedHighlightBtn:(UIButton *)sender;
+@interface SGHighlightsViewController : SGButtonOnPaintingViewController
 
 @end

@@ -296,6 +296,7 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
             NSString* paintingDir = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", _paintingNameStr, @"childrens"];
             NSString* paintingPath = [[NSBundle mainBundle] pathForResource:@"childrens" ofType:@".png" inDirectory:paintingDir];
             [((SGChildrensOverlayViewController*)self.overlayController) addBackgroundImgWithPath:paintingPath forgroundImage:self.paintingImageView.image];
+            [((SGChildrensOverlayViewController*)self.overlayController) configureWithPath:self.overlayController.rootFolderPath];
         }
             break;
         case kModuleTypeHighlights:

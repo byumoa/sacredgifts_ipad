@@ -32,6 +32,7 @@
 		610554ED18285D600030CCC3 /* sg_temple_btn_later@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 610554E518285D600030CCC3 /* sg_temple_btn_later@2x.png */; };
 		610554F0182A56D60030CCC3 /* SGNarrationOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610554EF182A56D60030CCC3 /* SGNarrationOverlayViewController.m */; };
 		610554F3182A60CD0030CCC3 /* SGMediaSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610554F2182A60CD0030CCC3 /* SGMediaSelectionViewController.m */; };
+		610554F6182A782C0030CCC3 /* SGButtonOnPaintingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610554F5182A782C0030CCC3 /* SGButtonOnPaintingViewController.m */; };
 		610729E718212EA400E8D7A2 /* Bloch Bio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 610729E318212EA400E8D7A2 /* Bloch Bio.mp3 */; };
 		610729E818212EA400E8D7A2 /* Hofman Bio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 610729E418212EA400E8D7A2 /* Hofman Bio.mp3 */; };
 		610729E918212EA400E8D7A2 /* Schwartz Bio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 610729E518212EA400E8D7A2 /* Schwartz Bio.mp3 */; };
@@ -461,6 +462,8 @@
 		610554EF182A56D60030CCC3 /* SGNarrationOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGNarrationOverlayViewController.m; sourceTree = "<group>"; };
 		610554F1182A60CD0030CCC3 /* SGMediaSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGMediaSelectionViewController.h; sourceTree = "<group>"; };
 		610554F2182A60CD0030CCC3 /* SGMediaSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGMediaSelectionViewController.m; sourceTree = "<group>"; };
+		610554F4182A782C0030CCC3 /* SGButtonOnPaintingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGButtonOnPaintingViewController.h; sourceTree = "<group>"; };
+		610554F5182A782C0030CCC3 /* SGButtonOnPaintingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGButtonOnPaintingViewController.m; sourceTree = "<group>"; };
 		610729E318212EA400E8D7A2 /* Bloch Bio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Bloch Bio.mp3"; sourceTree = "<group>"; };
 		610729E418212EA400E8D7A2 /* Hofman Bio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Hofman Bio.mp3"; sourceTree = "<group>"; };
 		610729E518212EA400E8D7A2 /* Schwartz Bio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Schwartz Bio.mp3"; sourceTree = "<group>"; };
@@ -1576,6 +1579,8 @@
 				610554EF182A56D60030CCC3 /* SGNarrationOverlayViewController.m */,
 				610554F1182A60CD0030CCC3 /* SGMediaSelectionViewController.h */,
 				610554F2182A60CD0030CCC3 /* SGMediaSelectionViewController.m */,
+				610554F4182A782C0030CCC3 /* SGButtonOnPaintingViewController.h */,
+				610554F5182A782C0030CCC3 /* SGButtonOnPaintingViewController.m */,
 			);
 			path = "Overlay Controllers";
 			sourceTree = "<group>";
@@ -2038,6 +2043,7 @@
 				61CD530B180C24FD00D28921 /* SGPersepectivesOverlayViewController.m in Sources */,
 				61CD5305180C24FD00D28921 /* SGFingerPaintView.m in Sources */,
 				61CD5307180C24FD00D28921 /* SGMusicOverlayViewController.m in Sources */,
+				610554F6182A782C0030CCC3 /* SGButtonOnPaintingViewController.m in Sources */,
 				61CD530D180C24FD00D28921 /* SGSummaryOverlayViewController.m in Sources */,
 				61CD531A180C250800D28921 /* SGPaintingViewController.m in Sources */,
 				6186729B18100E7900DED0D4 /* QCARutils.mm in Sources */,

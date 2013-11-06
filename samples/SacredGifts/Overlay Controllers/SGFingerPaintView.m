@@ -77,10 +77,6 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
     CGContextClipToMask(context, rect, mask);
     
     CGImageRef maskedCGImage = CGImageCreateWithMask(self.originalImage, mask);
-    //self.maskThis.layer.contents = (__bridge id)maskedCGImage;
-    //self.maskThis.layer.mask = [CALayer new];
-    //self.maskThis.layer.mask.contents = (__bridge id)mask;
-    //self.maskThis.layer.masksToBounds = YES;
     CGContextDrawImage(context, rect, maskedCGImage);
     CGImageRelease(maskedCGImage);
     CGImageRelease(mask);

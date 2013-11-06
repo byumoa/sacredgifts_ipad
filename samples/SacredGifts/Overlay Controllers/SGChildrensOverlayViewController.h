@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Wells Fargo. All rights reserved.
 //
 
-#import "SGMediaSelectionViewController.h"
+#import "SGButtonOnPaintingViewController.h"
 #import "SGFingerPaintView.h"
 @class ScratchableView;
 
-@interface SGChildrensOverlayViewController : SGMediaSelectionViewController
+@interface SGChildrensOverlayViewController : SGButtonOnPaintingViewController
 @property(nonatomic, strong) SGOverlayViewController* currentSubOverlay;
 @property(nonatomic, weak) IBOutlet ScratchableView* scratchableView;
 
