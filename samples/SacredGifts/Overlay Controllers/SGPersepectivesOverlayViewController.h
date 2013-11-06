@@ -6,14 +6,14 @@
 //  Copyright (c) 2013 Wells Fargo. All rights reserved.
 //
 
-#import "SGOverlayViewController.h"
+#import "SGMediaSelectionViewController.h"
 typedef enum
 {
     kPerspectiveOverlayTypeVideo,
     kPerspectiveOverlayTypePanorama
 }PerspectiveOverlayType;
 
-@interface SGPersepectivesOverlayViewController : SGOverlayViewController
+@interface SGPersepectivesOverlayViewController : SGMediaSelectionViewController
 
 - (int)configurePerspectiveOverlayWithPath: (NSString*)folderPath;
 

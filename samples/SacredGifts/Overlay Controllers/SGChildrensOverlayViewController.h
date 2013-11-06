@@ -6,13 +6,12 @@
 //  Copyright (c) 2013 Wells Fargo. All rights reserved.
 //
 
-#import "SGOverlayViewController.h"
+#import "SGMediaSelectionViewController.h"
 #import "SGFingerPaintView.h"
-#import "SGSecondaryOverlayViewController.h"
 @class ScratchableView;
 
-@interface SGChildrensOverlayViewController : SGOverlayViewController
-@property(nonatomic, strong) SGSecondaryOverlayViewController* currentSubOverlay;
+@interface SGChildrensOverlayViewController : SGMediaSelectionViewController
+@property(nonatomic, strong) SGOverlayViewController* currentSubOverlay;
 @property(nonatomic, weak) IBOutlet ScratchableView* scratchableView;
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath forgroundImage: (UIImage*)foregroundImg;

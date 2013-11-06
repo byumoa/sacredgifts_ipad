@@ -6,9 +6,9 @@
 //
 //
 
-#import "SGOverlayViewController.h"
+#import "SGMediaSelectionViewController.h"
 
-@interface SGHighlightsViewController : SGOverlayViewController
+@interface SGHighlightsViewController : SGMediaSelectionViewController
 
 -(void)configureWithPath:(NSString *)folderPath;
 -(UIButton *)buttonForHighlightIndex:(int)highlightIndex;
