@@ -23,6 +23,9 @@ const int kGeneralButtonWidth = 120;
 const int kSummaryButtonWidth = 128;
 const int kPerspectivesButtonWidth = 161;
 
+NSString* const kPaintingNameTemple = @"temple";
+NSString* const kPaintingNameTempleNY = @"temple-ny";
+
 @interface SGPaintingViewController (PrivateAPIs)
 - (void) addMainPainting:(NSString*)paintingName;
 - (void) addFooterButtonsForPainting: (NSString*)paintingNameStr;
@@ -37,6 +40,10 @@ const int kPerspectivesButtonWidth = 161;
 - (void)deselectAllModuleBtns;
 @end
 
+@interface SGPaintingViewController (TempleAlternatives)
+- (void)addTempleButtons;
+@end
+
 @implementation SGPaintingViewController
 -(void)configWithPaintingName:(NSString *)paintingStr;
 {
@@ -45,6 +52,14 @@ const int kPerspectivesButtonWidth = 161;
     [self addMainPainting:_paintingNameStr];
     [NSTimer scheduledTimerWithTimeInterval:self.frameOverlayDelay target:self selector:@selector(addTombstoneDelayed:) userInfo:nil repeats:NO];
     self.currentPaintingIndex = [self calcCurrentPaintingIndex];
+    
+    if( [paintingStr isEqualToString:kPaintingNameTemple] || [paintingStr isEqualToString:kPaintingNameTempleNY])
+        [self addTempleButtons];
+}
+
+-(void)addTempleButtons
+{
+    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
 }
 
 -(int)calcCurrentPaintingIndex
