@@ -35,7 +35,7 @@
     CGContextFillRect(alphaPixels, self.frame);
 		
     CGContextSetStrokeColorWithColor(alphaPixels, [UIColor whiteColor].CGColor);
-    CGContextSetLineWidth(alphaPixels, 40.0);
+    CGContextSetLineWidth(alphaPixels, 70.0);
     CGContextSetLineCap(alphaPixels, kCGLineCapRound);
     CGContextSetLineJoin(alphaPixels, kCGLineJoinRound);
 		

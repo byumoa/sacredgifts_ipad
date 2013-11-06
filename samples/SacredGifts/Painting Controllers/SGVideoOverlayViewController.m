@@ -78,7 +78,6 @@
 
 -(void)playbackFinished:(NSNotification *)notification
 {
-    NSLog(@"playbackFinished notification");
     [UIView animateWithDuration:0.25 animations:^{
         self.freezeFrame.alpha = 1;
     }];

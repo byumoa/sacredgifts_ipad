@@ -70,7 +70,6 @@
 		61072A2C1822658400E8D7A2 /* summary_play_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61072A281822658400E8D7A2 /* summary_play_btn@2x.png */; };
 		61072A2F1822794A00E8D7A2 /* ScratchableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 61072A2E1822794A00E8D7A2 /* ScratchableView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6118B58A18117B6400FB8337 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6118B58918117B6400FB8337 /* CoreMotion.framework */; };
-		61267B7D1819333F00A52CC5 /* SGSecondaryOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61267B7C1819333F00A52CC5 /* SGSecondaryOverlayViewController.m */; };
 		61267B821819667B00A52CC5 /* splash_artists.png in Resources */ = {isa = PBXBuildFile; fileRef = 61267B7E1819667B00A52CC5 /* splash_artists.png */; };
 		61267B831819667B00A52CC5 /* splash_artists@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61267B7F1819667B00A52CC5 /* splash_artists@2x.png */; };
 		61267B841819667B00A52CC5 /* splash_donors.png in Resources */ = {isa = PBXBuildFile; fileRef = 61267B801819667B00A52CC5 /* splash_donors.png */; };
@@ -501,8 +500,6 @@
 		61072A2D1822794A00E8D7A2 /* ScratchableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScratchableView.h; sourceTree = "<group>"; };
 		61072A2E1822794A00E8D7A2 /* ScratchableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScratchableView.m; sourceTree = "<group>"; };
 		6118B58918117B6400FB8337 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
-		61267B7B1819333F00A52CC5 /* SGSecondaryOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSecondaryOverlayViewController.h; sourceTree = "<group>"; };
-		61267B7C1819333F00A52CC5 /* SGSecondaryOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSecondaryOverlayViewController.m; sourceTree = "<group>"; };
 		61267B7E1819667B00A52CC5 /* splash_artists.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_artists.png; sourceTree = "<group>"; };
 		61267B7F1819667B00A52CC5 /* splash_artists@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_artists@2x.png"; sourceTree = "<group>"; };
 		61267B801819667B00A52CC5 /* splash_donors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_donors.png; sourceTree = "<group>"; };
@@ -1082,8 +1079,6 @@
 		61267B7A181932CD00A52CC5 /* Secondary Overlays */ = {
 			isa = PBXGroup;
 			children = (
-				61267B7B1819333F00A52CC5 /* SGSecondaryOverlayViewController.h */,
-				61267B7C1819333F00A52CC5 /* SGSecondaryOverlayViewController.m */,
 			);
 			path = "Secondary Overlays";
 			sourceTree = "<group>";
@@ -2072,7 +2067,6 @@
 				6186729A18100E7900DED0D4 /* OverlayViewController.mm in Sources */,
 				61CD530E180C24FD00D28921 /* SGTombstoneOverlayViewController.m in Sources */,
 				61CD5318180C250800D28921 /* SGPaintingContainerViewController.m in Sources */,
-				61267B7D1819333F00A52CC5 /* SGSecondaryOverlayViewController.m in Sources */,
 				6186729918100E7900DED0D4 /* OverlayView.m in Sources */,
 				61865DC9180F5145004CE494 /* SGMusicManager.m in Sources */,
 				61CD5324180C253400D28921 /* SGNavigationContainerViewController.mm in Sources */,
