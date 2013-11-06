@@ -1405,10 +1405,10 @@
             </objects>
             <point key="canvasLocation" x="2486" y="378"/>
         </scene>
-        <!--Audio View Controller-->
+        <!--Narration Overlay View Controller-->
         <scene sceneID="7cd-eu-E8V">
             <objects>
-                <viewController restorationIdentifier="audio" storyboardIdentifier="audio" id="dhc-Li-d9a" customClass="SGAudioViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="narration" storyboardIdentifier="narration" id="dhc-Li-d9a" customClass="SGNarrationOverlayViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5G7-pf-Gvg" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="278"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>

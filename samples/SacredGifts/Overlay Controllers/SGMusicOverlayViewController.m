@@ -66,11 +66,6 @@
         
         ((UIButton*)sender).selected = _musicManager.player.isPlaying;
     }
-    else
-    {
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Missing Asset" message:@"music.pm3 has not been added for this overlay" delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-        [alert show];
-    }
 }
 
 @end

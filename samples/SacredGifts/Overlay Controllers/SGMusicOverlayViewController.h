@@ -6,17 +6,12 @@
 //  Copyright (c) 2013 Wells Fargo. All rights reserved.
 //
 
-#import "SGOverlayViewController.h"
+#import "SGAudioViewController.h"
 @class SGMusicManager;
 
-@interface SGMusicOverlayViewController : SGOverlayViewController
+@interface SGMusicOverlayViewController : SGAudioViewController
 {
-    NSTimer* _progressTimer;
     SGMusicManager* _musicManager;
 }
-@property (weak, nonatomic) IBOutlet UIImageView *playOverlay;
-@property (weak, nonatomic) IBOutlet UIButton *playPauseButton;
-
-- (IBAction)pressedPlayPause:(id)sender;
 
 @end

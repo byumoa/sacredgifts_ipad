@@ -9,7 +9,7 @@
 #import "SGHighlightsViewController.h"
 #import "SGPanoramaOverlayViewController.h"
 #import "SGVideoOverlayViewController.h"
-#import "SGAudioViewController.h"
+#import "SGNarrationOverlayViewController.h"
 
 @interface SGHighlightsViewController ()
 - (void)loadPanoramaWithFolderPath: (NSString*)panoFolderPath;
@@ -104,11 +104,11 @@
 
 -(void)loadAudioWithFolderPath:(NSString *)audioFolderPath
 {
-    SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kAudioStr];
+    SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kNarrationStr];
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:audioFolderPath];
     NSLog(@"loadAudioWithFolderPath: %@", audioFolderPath);
     [overlay addBackgroundImgWithPath:overlayPath];
-    [((SGAudioViewController*)overlay) configureAudioWithPath:audioFolderPath];
+    [((SGNarrationOverlayViewController*)overlay) configureAudioWithPath:audioFolderPath];
 }
 
 -(void)loadTextWithFolderPath:(NSString *)textFolderPath

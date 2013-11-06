@@ -12,7 +12,7 @@
 #import "SGChildrensOverlayViewController.h"
 #import "SGNarrationManager.h"
 #import "SGGiftOverlayViewController.h"
-#import "SGAudioViewController.h"
+#import "SGNarrationOverlayViewController.h"
 #import "SGHighlightsViewController.h"
 #import "SGSocialViewController.h"
 
@@ -59,7 +59,7 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
 
 -(void)addTempleButtons
 {
-    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+    //UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
 }
 
 -(int)calcCurrentPaintingIndex
@@ -155,7 +155,7 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
         case kModuleTypeSummary:        return (NSString*)kSummaryStr;      break;
         case kModuleTypeTombstone:      return (NSString*)kTombstoneStr;    break;
         case kModuleTypeText:           return (NSString*)kTextStr;         break;
-        case kModuleTypeAudio:          return (NSString*)kAudioStr;        break;
+        case kModuleTypeNarration:          return (NSString*)kNarrationStr;        break;
         case kModuleTypeNone:           default:                            break;
     }
     
@@ -279,9 +279,9 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
             
         }
             break;
-        case kModuleTypeAudio:{
+        case kModuleTypeNarration:{
             NSString* perspectivesPath = [NSString stringWithFormat: @"PaintingResources/%@/perspectives/perspectives_%i", _paintingNameStr, 1];
-            [((SGAudioViewController*)self.overlayController) configureAudioWithPath:perspectivesPath];
+            [((SGNarrationOverlayViewController*)self.overlayController) configureAudioWithPath:perspectivesPath];
         }
             break;
         case kModuleTypeGifts:{

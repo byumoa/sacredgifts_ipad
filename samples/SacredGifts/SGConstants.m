@@ -76,4 +76,4 @@ const NSString* kVideoStr = @"video";
 const NSString* kPanoramaStr = @"panorama";
 const NSString* kScanStr = @"scan";
 const NSString* kTextStr = @"text";
-const NSString* kAudioStr = @"audio";
+const NSString* kNarrationStr = @"narration";

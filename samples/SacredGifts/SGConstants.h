@@ -20,7 +20,7 @@ typedef enum
     kModuleTypeVideo = 9,
     kModuleTypePanorama = 10,
     kModuleTypeText = 11,
-    kModuleTypeAudio = 12
+    kModuleTypeNarration = 12
 }ModuleType;
 
 typedef enum
@@ -79,4 +79,4 @@ extern const NSString* kVideoStr;
 extern const NSString* kPanoramaStr;
 extern NSString* const kScanStr;
 extern NSString* const kTextStr;
-extern NSString* const kAudioStr;
+extern NSString* const kNarrationStr;

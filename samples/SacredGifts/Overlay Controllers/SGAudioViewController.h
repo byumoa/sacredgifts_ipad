@@ -5,13 +5,13 @@
 //  Created by Ontario on 10/23/13.
 //
 //
-#import "SGSecondaryOverlayViewController.h"
-#import "SGNarrationManager.h"
+#import "SGOverlayViewController.h"
+@class SGAbstractAudioManager;
 
-@interface SGAudioViewController : SGSecondaryOverlayViewController
+@interface SGAudioViewController : SGOverlayViewController
 {
     NSTimer* _progressTimer;
-    SGNarrationManager* _narrationManager;
+    SGAbstractAudioManager* _audioManager;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *playOverlay;
 @property (weak, nonatomic) IBOutlet UIButton *playPauseButton;

@@ -30,6 +30,7 @@
 		610554EB18285D600030CCC3 /* sg_temple_btn_later-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 610554E318285D600030CCC3 /* sg_temple_btn_later-on@2x.png */; };
 		610554EC18285D600030CCC3 /* sg_temple_btn_later.png in Resources */ = {isa = PBXBuildFile; fileRef = 610554E418285D600030CCC3 /* sg_temple_btn_later.png */; };
 		610554ED18285D600030CCC3 /* sg_temple_btn_later@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 610554E518285D600030CCC3 /* sg_temple_btn_later@2x.png */; };
+		610554F0182A56D60030CCC3 /* SGNarrationOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 610554EF182A56D60030CCC3 /* SGNarrationOverlayViewController.m */; };
 		610729E718212EA400E8D7A2 /* Bloch Bio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 610729E318212EA400E8D7A2 /* Bloch Bio.mp3 */; };
 		610729E818212EA400E8D7A2 /* Hofman Bio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 610729E418212EA400E8D7A2 /* Hofman Bio.mp3 */; };
 		610729E918212EA400E8D7A2 /* Schwartz Bio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 610729E518212EA400E8D7A2 /* Schwartz Bio.mp3 */; };
@@ -147,8 +148,6 @@
 		61CD51E2180C242500D28921 /* sg_home_bg-meetartists.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50BE180C242500D28921 /* sg_home_bg-meetartists.png */; };
 		61CD51E3180C242500D28921 /* sg_home_bg-meetartists@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50BF180C242500D28921 /* sg_home_bg-meetartists@2x.png */; };
 		61CD51E4180C242500D28921 /* sg_home_bg-meetartists_blur.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50C0180C242500D28921 /* sg_home_bg-meetartists_blur.png */; };
-		61CD51E5180C242500D28921 /* sg_home_bg-metal.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50C1180C242500D28921 /* sg_home_bg-metal.png */; };
-		61CD51E6180C242500D28921 /* sg_home_bg-metal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50C2180C242500D28921 /* sg_home_bg-metal@2x.png */; };
 		61CD51E7180C242500D28921 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50C4180C242500D28921 /* Default.png */; };
 		61CD51E8180C242500D28921 /* sg_home_blochbtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50C5180C242500D28921 /* sg_home_blochbtn-on.png */; };
 		61CD51E9180C242500D28921 /* sg_home_blochbtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50C6180C242500D28921 /* sg_home_blochbtn-on@2x.png */; };
@@ -458,6 +457,8 @@
 		610554E318285D600030CCC3 /* sg_temple_btn_later-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_temple_btn_later-on@2x.png"; sourceTree = "<group>"; };
 		610554E418285D600030CCC3 /* sg_temple_btn_later.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sg_temple_btn_later.png; sourceTree = "<group>"; };
 		610554E518285D600030CCC3 /* sg_temple_btn_later@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_temple_btn_later@2x.png"; sourceTree = "<group>"; };
+		610554EE182A56D60030CCC3 /* SGNarrationOverlayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGNarrationOverlayViewController.h; sourceTree = "<group>"; };
+		610554EF182A56D60030CCC3 /* SGNarrationOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGNarrationOverlayViewController.m; sourceTree = "<group>"; };
 		610729E318212EA400E8D7A2 /* Bloch Bio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Bloch Bio.mp3"; sourceTree = "<group>"; };
 		610729E418212EA400E8D7A2 /* Hofman Bio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Hofman Bio.mp3"; sourceTree = "<group>"; };
 		610729E518212EA400E8D7A2 /* Schwartz Bio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Schwartz Bio.mp3"; sourceTree = "<group>"; };
@@ -595,8 +596,6 @@
 		61CD50BE180C242500D28921 /* sg_home_bg-meetartists.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_bg-meetartists.png"; sourceTree = "<group>"; };
 		61CD50BF180C242500D28921 /* sg_home_bg-meetartists@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_bg-meetartists@2x.png"; sourceTree = "<group>"; };
 		61CD50C0180C242500D28921 /* sg_home_bg-meetartists_blur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_bg-meetartists_blur.png"; sourceTree = "<group>"; };
-		61CD50C1180C242500D28921 /* sg_home_bg-metal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_bg-metal.png"; sourceTree = "<group>"; };
-		61CD50C2180C242500D28921 /* sg_home_bg-metal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_bg-metal@2x.png"; sourceTree = "<group>"; };
 		61CD50C4180C242500D28921 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		61CD50C5180C242500D28921 /* sg_home_blochbtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_blochbtn-on.png"; sourceTree = "<group>"; };
 		61CD50C6180C242500D28921 /* sg_home_blochbtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_blochbtn-on@2x.png"; sourceTree = "<group>"; };
@@ -1246,8 +1245,6 @@
 				61CD50BE180C242500D28921 /* sg_home_bg-meetartists.png */,
 				61CD50BF180C242500D28921 /* sg_home_bg-meetartists@2x.png */,
 				61CD50C0180C242500D28921 /* sg_home_bg-meetartists_blur.png */,
-				61CD50C1180C242500D28921 /* sg_home_bg-metal.png */,
-				61CD50C2180C242500D28921 /* sg_home_bg-metal@2x.png */,
 			);
 			path = Backgrounds;
 			sourceTree = "<group>";
@@ -1577,6 +1574,8 @@
 				618B35D11818083900EEC12E /* SGAudioViewController.m */,
 				618645A5181AD11E00195384 /* SGHighlightsViewController.h */,
 				618645A6181AD11E00195384 /* SGHighlightsViewController.m */,
+				610554EE182A56D60030CCC3 /* SGNarrationOverlayViewController.h */,
+				610554EF182A56D60030CCC3 /* SGNarrationOverlayViewController.m */,
 			);
 			path = "Overlay Controllers";
 			sourceTree = "<group>";
@@ -1747,7 +1746,6 @@
 				61CD5271180C242500D28921 /* SG_General_Painting_PanoramaBtn.png in Resources */,
 				61CD52CD180C242500D28921 /* painting_thumb_healing@2x.png in Resources */,
 				61CD524C180C242500D28921 /* SG_General_ModuleButtonBar@2x.png in Resources */,
-				61CD51E5180C242500D28921 /* sg_home_bg-metal.png in Resources */,
 				61CD52DC180C242500D28921 /* painting_thumb_savior.png in Resources */,
 				61CD52D2180C242500D28921 /* painting_thumb_resurrection-on.png in Resources */,
 				61CD523D180C242500D28921 /* SG_General_HomeBtn.png in Resources */,
@@ -1885,7 +1883,6 @@
 				61CD51E7180C242500D28921 /* Default.png in Resources */,
 				61072A11182138B400E8D7A2 /* perspectives_sermon_cross_hairs.png in Resources */,
 				61CD51F3180C242500D28921 /* sg_home_exhibitionbtn@2x.png in Resources */,
-				61CD51E6180C242500D28921 /* sg_home_bg-metal@2x.png in Resources */,
 				61CD526F180C242500D28921 /* SG_General_Painting_PanoramaBtn-on.png in Resources */,
 				610554E918285D600030CCC3 /* sg_temple_btn_1880@2x.png in Resources */,
 				61CD534C180C2C1B00D28921 /* Images.xcassets in Resources */,
@@ -2074,6 +2071,7 @@
 				61865DC9180F5145004CE494 /* SGMusicManager.m in Sources */,
 				61CD5324180C253400D28921 /* SGNavigationContainerViewController.mm in Sources */,
 				614E3CA6180E4AC1002E875B /* SGArtistViewController.m in Sources */,
+				610554F0182A56D60030CCC3 /* SGNarrationOverlayViewController.m in Sources */,
 				61CD5346180C256700D28921 /* SGWebViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
