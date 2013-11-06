@@ -317,6 +317,9 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
         self.overlayController.moduleType != kModuleTypeChildrens )
         [self.delegate contentController:self addBlurBackingForView:self.overlayController.view];
     
+    //Overlay frame size is CGSizeZero
+    ((SGOverlayView*)self.overlayController.view).myBlurredBacking.frame = self.overlayController.view.frame;
+
     ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = 0;
     self.overlayController.view.alpha = 0;
     [UIView animateWithDuration:0.25 animations:^{
