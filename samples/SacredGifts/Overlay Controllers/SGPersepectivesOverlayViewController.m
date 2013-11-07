@@ -32,7 +32,7 @@
     {
         NSString* buttonName = [NSString stringWithFormat:@"perspectives_Btn%i", i];
         NSString* buttonPath = [[NSBundle mainBundle] pathForResource:buttonName ofType:@"png" inDirectory:folderPath];
-     
+        NSLog(@"buttonName: %@, buttonPath: %@", buttonName, buttonPath);
         if( buttonPath )
         {
             UIButton* button = [self buttonForPerspectiveNumber:i atPath:folderPath];
