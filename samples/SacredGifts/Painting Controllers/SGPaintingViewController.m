@@ -155,7 +155,7 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
         case kModuleTypeSummary:        return (NSString*)kSummaryStr;      break;
         case kModuleTypeTombstone:      return (NSString*)kTombstoneStr;    break;
         case kModuleTypeText:           return (NSString*)kTextStr;         break;
-        case kModuleTypeNarration:          return (NSString*)kNarrationStr;        break;
+        case kModuleTypeNarration:      return (NSString*)kNarrationStr;    break;
         case kModuleTypeNone:           default:                            break;
     }
     
@@ -318,7 +318,8 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
         [self.delegate contentController:self addBlurBackingForView:self.overlayController.view];
     
     //Overlay frame size is CGSizeZero
-    ((SGOverlayView*)self.overlayController.view).myBlurredBacking.frame = self.overlayController.view.frame;
+    CGRect frame = self.overlayController.view.frame;
+    ((SGOverlayView*)self.overlayController.view).myBlurredBacking.frame = frame;
 
     ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = 0;
     self.overlayController.view.alpha = 0;

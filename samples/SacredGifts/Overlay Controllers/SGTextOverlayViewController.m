@@ -8,9 +8,9 @@
 
 #import "SGTextOverlayViewController.h"
 
-@interface SGTextOverlayViewController ()
-
-@end
+//Y-Pos = screenHeight - footerHeight - buffer - overlayHeight
+//Height = 1024 - 70 - 41 - 183
+const CGRect kTextFrame = {0, 730, 768, 183};
 
 @implementation SGTextOverlayViewController
 
@@ -22,6 +22,18 @@
     }
     
     return self;
+}
+
+-(void)viewDidLoad{
+    [super viewDidLoad];
+    
+    self.view.frame = kTextFrame;
+}
+
+-(void)addBackgroundImgWithPath:(NSString *)bgImgPath
+{
+    [super addBackgroundImgWithPath:bgImgPath];
+    self.view.frame = kTextFrame;
 }
 
 @end

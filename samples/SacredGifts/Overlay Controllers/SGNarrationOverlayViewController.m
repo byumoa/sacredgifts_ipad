@@ -8,10 +8,12 @@
 
 #import "SGNarrationOverlayViewController.h"
 
+//Y-Pos = screenHeight - footerHeight - buffer - overlayHeight
+//Height = 1024 - 70 - 41 - 200
+const CGRect kNarrationFrame = {0, 713, 768, 200};
+
 @interface SGNarrationOverlayViewController ()
-
 - (void) updateProgressBar: (NSTimer*)timer;
-
 @end
 
 @implementation SGNarrationOverlayViewController
@@ -20,7 +22,7 @@
 {
     if( self = [super initWithCoder:aDecoder]){
         _centerPos = CGPointMake(384, 700);
-        self.moduleType = kModuleTypeMusic;
+        self.moduleType = kModuleTypeNarration;
     }
     
     return self;
@@ -31,6 +33,7 @@
     [super viewDidLoad];
     
     _progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(updateProgressBar:) userInfo:nil repeats:YES];
+    self.view.frame = kNarrationFrame;
 }
 
 -(void)updateProgressBar:(NSTimer*)timer

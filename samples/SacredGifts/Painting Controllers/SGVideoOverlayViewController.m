@@ -8,6 +8,10 @@
 
 #import "SGVideoOverlayViewController.h"
 
+//Y-Pos = screenHeight - footerHeight - buffer - overlayHeight
+//Height = 1024 - 70 - 41 - 688
+const CGRect kVideoFrame = {0, 225, 768, 688};
+
 @interface SGVideoOverlayViewController ()
 - (void) playbackFinished: (NSNotification*)notification;
 @end
@@ -30,6 +34,7 @@
     [super viewDidLoad];
     
     _progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(updateProgressBar:) userInfo:nil repeats:YES];
+    self.view.frame = kVideoFrame;
 }
 
 -(void)updateProgressBar:(NSTimer*)timer
