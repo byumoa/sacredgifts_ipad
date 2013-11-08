@@ -13,7 +13,7 @@ NSString* const kEmailAutofill = @"Enjoying the painting by %@ while using the S
 NSString* const kTwitterAutofill = @"Viewing this painting while using the @BYUmoa’s #sacredgifts app.";
 NSString* const kFacebookAutofill = @"Viewing this painting by %@ and feeling grateful while using the #sacredgifts app from the BYU Museum of Art.";
 
-NSString* const kAppStoreURL = @"http://appstore.com/sacredgifts";
+NSString* const kAppStoreURL = @"https://itunes.apple.com/us/app/sacred-gifts-brigham-young/id723165787?ls=1&mt=8";
 int const kOverlayHeight = 236;
 
 @interface SGSocialViewController()
@@ -55,7 +55,6 @@ int const kOverlayHeight = 236;
             SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
             [socialSheet setInitialText:autofillStr];
             [socialSheet addImage:thumbnail];
-            //[socialSheet addURL:[NSURL URLWithString:@"http://sacredgifts.byu.edu"]];
             [socialSheet addURL:[NSURL URLWithString:kAppStoreURL]];
             [self presentViewController:socialSheet animated:YES completion:^{}];
         }
