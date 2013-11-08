@@ -213,8 +213,12 @@
                                             <action selector="pressedNarration:" destination="jBG-xU-cwl" eventType="touchUpInside" id="0TR-6r-mZh"/>
                                         </connections>
                                     </button>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="paintings_text.png" id="5go-9w-FRe">
+                                        <rect key="frame" x="36" y="1065" width="101" height="41"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
                                     <view contentMode="scaleToFill" id="hTd-IF-HXc" userLabel="Hofmanns">
-                                        <rect key="frame" x="36" y="1074" width="367" height="328"/>
+                                        <rect key="frame" x="36" y="1104" width="712" height="328"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Rnv-27-bXA">
@@ -229,7 +233,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Zra-ZP-XZ4">
-                                                <rect key="frame" x="0.0" y="164" width="123" height="164"/>
+                                                <rect key="frame" x="366" y="0.0" width="123" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="painting_thumb_gethsemane.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -251,7 +255,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="bFt-3g-oUd">
-                                                <rect key="frame" x="122" y="164" width="123" height="164"/>
+                                                <rect key="frame" x="488" y="0.0" width="123" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="painting_thumb_savior.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -275,10 +279,6 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                     </view>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="paintings_text.png" id="5go-9w-FRe">
-                                        <rect key="frame" x="36" y="1035" width="101" height="41"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -1138,11 +1138,11 @@
                                         </connections>
                                     </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="paintings_text.png" id="gRv-M4-hVO">
-                                        <rect key="frame" x="39" y="920" width="101" height="41"/>
+                                        <rect key="frame" x="39" y="950" width="101" height="41"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" id="kP7-fI-MZr" userLabel="Schwartzs">
-                                        <rect key="frame" x="39" y="955" width="244" height="164"/>
+                                        <rect key="frame" x="39" y="985" width="244" height="164"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="q0p-IR-86n">
@@ -1216,11 +1216,11 @@
                                         </connections>
                                     </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="paintings_text.png" id="Cwj-zO-f5Q">
-                                        <rect key="frame" x="33" y="856" width="101" height="41"/>
+                                        <rect key="frame" x="33" y="886" width="101" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" id="fmS-Dv-eTN" userLabel="Blochs">
-                                        <rect key="frame" x="32" y="840" width="728" height="379"/>
+                                        <rect key="frame" x="32" y="870" width="728" height="379"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4rE-gX-Tw0">

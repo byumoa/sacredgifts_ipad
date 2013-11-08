@@ -18,7 +18,7 @@
 {
     [super loadView];
     
-    _scrollContentSize = CGSizeMake(768, 1500);
+    _scrollContentSize = CGSizeMake(768, 1320);
 }
 
 -(void)viewDidLoad
