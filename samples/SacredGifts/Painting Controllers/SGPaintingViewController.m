@@ -265,7 +265,7 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
         case kModuleTypePerspective:{
             NSString* perspectivesPath = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", _paintingNameStr, @"perspectives"];
             int totalBtns = [((SGPersepectivesOverlayViewController*)self.overlayController) configurePerspectiveOverlayWithPath:perspectivesPath];
-            NSLog(@"totalBtns: %i", totalBtns);
+            
             NSString* overlayImageStr = totalBtns < 4 ? @"SG_General_Module_OverlayHalf.png" : @"SG_General_Module_Overlay.png";
             [self.overlayController addBackgroundImgWithImgName:overlayImageStr];
         }

@@ -1391,7 +1391,7 @@
         <scene sceneID="QJq-bj-8aB">
             <objects>
                 <viewController restorationIdentifier="text" storyboardIdentifier="text" id="Dqd-Cv-NFI" customClass="SGTextOverlayViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="wXd-DP-4pW" customClass="SGOverlayView">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="wXd-DP-4pW" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="114"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>

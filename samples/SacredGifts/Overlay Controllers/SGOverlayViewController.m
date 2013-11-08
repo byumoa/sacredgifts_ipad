@@ -18,8 +18,16 @@
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath
 {
-    self.bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:bgImgPath]];
+    UIImage* bgImage = [UIImage imageWithContentsOfFile:bgImgPath];
+    self.bgImageView = [[UIImageView alloc] initWithImage:bgImage];
+    
     [self configureBGImage];
+    
+    CGRect f = self.bgImageView.frame;
+    CGRect frame = self.view.frame;
+    frame.size = f.size;
+    self.view.frame = frame;
+    
 }
 
 -(void)addBackgroundImgWithImgName:(NSString *)bgImgName

@@ -30,15 +30,13 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    _progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.5 target:self selector:@selector(updateProgressBar:) userInfo:nil repeats:YES];
 }
 
 -(void)updateProgressBar:(NSTimer*)timer
 {
-    float progressLength = _musicManager.player.currentTime / _musicManager.player.duration * 635.0;
     CGRect frame = self.playOverlay.frame;
-    frame.size.width = progressLength;
+    if( _musicManager.player.duration > 0 )
+        frame.size.width = _musicManager.player.currentTime / _musicManager.player.duration * 635.0;
     
     self.playOverlay.frame = frame;
 }
@@ -47,8 +45,8 @@
 {
     [super addBackgroundImgWithPath:bgImgPath];
     
-    SGMusicManager* musicManager = [SGMusicManager sharedManager];
-    if( !musicManager.player.isPlaying )
+    _musicManager = [SGMusicManager sharedManager];
+    if( !_musicManager.player.isPlaying )
         [self pressedPlayPause:nil];
 }
 
@@ -66,6 +64,13 @@
         
         ((UIButton*)sender).selected = _musicManager.player.isPlaying;
     }
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [_progressTimer invalidate];
 }
 
 @end

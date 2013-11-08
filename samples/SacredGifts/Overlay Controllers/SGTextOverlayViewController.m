@@ -9,7 +9,7 @@
 #import "SGTextOverlayViewController.h"
 
 //Y-Pos = screenHeight - footerHeight - buffer - overlayHeight
-//Height = 1024 - 70 - 41 - 183
+//Needs to be variable
 const CGRect kTextFrame = {0, 730, 768, 183};
 
 @implementation SGTextOverlayViewController
