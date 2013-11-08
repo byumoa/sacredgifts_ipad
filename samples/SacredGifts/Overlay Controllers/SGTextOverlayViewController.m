@@ -27,13 +27,13 @@ const CGRect kTextFrame = {0, 730, 768, 183};
 -(void)viewDidLoad{
     [super viewDidLoad];
     
-    self.view.frame = kTextFrame;
+    //self.view.frame = kTextFrame;
 }
 
 -(void)addBackgroundImgWithPath:(NSString *)bgImgPath
 {
     [super addBackgroundImgWithPath:bgImgPath];
-    self.view.frame = kTextFrame;
+    //self.view.frame = kTextFrame;
 }
 
 @end

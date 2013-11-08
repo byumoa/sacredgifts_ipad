@@ -55,6 +55,7 @@ int const kOverlayHeight = 236;
             SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
             [socialSheet setInitialText:autofillStr];
             [socialSheet addImage:thumbnail];
+            //[socialSheet addURL:[NSURL URLWithString:@"http://sacredgifts.byu.edu"]];
             [socialSheet addURL:[NSURL URLWithString:kAppStoreURL]];
             [self presentViewController:socialSheet animated:YES completion:^{}];
         }

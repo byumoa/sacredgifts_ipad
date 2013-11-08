@@ -143,6 +143,8 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
         return kModuleTypeHighlights;
     else if( [moduleStr isEqualToString: (NSString*)kTombstoneStr] )
         return kModuleTypeTombstone;
+    else if( [moduleStr isEqualToString:(NSString *)kSocialStr])
+        return kModuleTypeSocial;
     else return kModuleTypeGifts;
 }
 
