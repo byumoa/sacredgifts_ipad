@@ -32,7 +32,6 @@ const CGRect kNarrationFrame = {0, 713, 768, 200};
 {
     [super viewDidLoad];
     
-    _progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(updateProgressBar:) userInfo:nil repeats:YES];
     self.view.frame = kNarrationFrame;
 }
 

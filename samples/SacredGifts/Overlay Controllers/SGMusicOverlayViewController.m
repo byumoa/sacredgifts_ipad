@@ -10,9 +10,7 @@
 #import "SGMusicManager.h"
 
 @interface SGMusicOverlayViewController ()
-
 - (void) updateProgressBar: (NSTimer*)timer;
-
 @end
 
 @implementation SGMusicOverlayViewController
@@ -46,8 +44,8 @@
     [super addBackgroundImgWithPath:bgImgPath];
     
     _musicManager = [SGMusicManager sharedManager];
-    if( !_musicManager.player.isPlaying )
-        [self pressedPlayPause:nil];
+    [self updateProgressBar:nil];
+    self.playPauseButton.selected = _musicManager.player.isPlaying;
 }
 
 - (IBAction)pressedPlayPause:(id)sender
