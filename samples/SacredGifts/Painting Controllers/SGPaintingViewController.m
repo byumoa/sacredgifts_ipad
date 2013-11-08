@@ -15,6 +15,7 @@
 #import "SGNarrationOverlayViewController.h"
 #import "SGHighlightsViewController.h"
 #import "SGSocialViewController.h"
+#import "SGVideoOverlayViewController.h"
 
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
@@ -140,6 +141,8 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
         return kModuleTypeMusic;
     else if( [moduleStr isEqualToString: (NSString*)kHighlightsStr] )
         return kModuleTypeHighlights;
+    else if( [moduleStr isEqualToString: (NSString*)kTombstoneStr] )
+        return kModuleTypeTombstone;
     else return kModuleTypeGifts;
 }
 
@@ -245,23 +248,22 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
     //Transition current overlay off
     [self removeCurrentOverlay];
     
-    //Create new overlay veiwController
-    self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:moduleStr];
-    self.overlayController.delegate = self;
-    //Transition new overlay on
-    if( [moduleStr isEqualToString:(NSString*)kPanoramaStr] )
+    if( ![moduleStr isEqualToString:kGiftsStr])
     {
-        [self.view addSubview:self.overlayController.view];
-        
-    }
-    else{
-        [self.view insertSubview:self.overlayController.view belowSubview:self.footerView];
-    }
+        //Create new overlay veiwController
+        self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:moduleStr];
+        self.overlayController.delegate = self;
+        //Transition new overlay on
+        if( [moduleStr isEqualToString:(NSString*)kPanoramaStr] )
+            [self.view addSubview:self.overlayController.view];
+        else
+            [self.view insertSubview:self.overlayController.view belowSubview:self.footerView];
     
-    self.overlayController.rootFolderPath = [NSString stringWithFormat: @"%@/%@/%@", @"PaintingResources", _paintingNameStr, moduleStr];
+        self.overlayController.rootFolderPath = [NSString stringWithFormat: @"%@/%@/%@", @"PaintingResources", _paintingNameStr, moduleStr];
+    }
     
     //Configure new overlay viewController
-    switch (self.overlayController.moduleType) {
+    switch ([self getModuleTypeForStr:moduleStr]) {
         case kModuleTypePerspective:{
             NSString* perspectivesPath = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", _paintingNameStr, @"perspectives"];
             int totalBtns = [((SGPersepectivesOverlayViewController*)self.overlayController) configurePerspectiveOverlayWithPath:perspectivesPath];
@@ -284,11 +286,39 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
             [((SGNarrationOverlayViewController*)self.overlayController) configureAudioWithPath:perspectivesPath];
         }
             break;
-        case kModuleTypeGifts:{
+        case kModuleTypeGifts:
+        {
             NSString* overlayDir = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", _paintingNameStr, @"gift"];
-            NSString* overlayPath = [[NSBundle mainBundle] pathForResource:@"gift" ofType:@".png" inDirectory:overlayDir];
-            [self.overlayController addBackgroundImgWithPath:overlayPath];
-            [((SGGiftOverlayViewController*)self.overlayController) configureGifts];
+            NSString* overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@".png" inDirectory:overlayDir];
+            NSString* videoPath = [[NSBundle mainBundle] pathForResource:@"video" ofType:@"mp4" inDirectory:overlayDir];
+            NSString* audioPath = [[NSBundle mainBundle] pathForResource:@"audio" ofType:@"mp3" inDirectory:overlayDir];
+            
+            if( videoPath )
+            {
+                self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:kVideoStr];
+                self.overlayController.delegate = self;
+                self.overlayController.rootFolderPath = overlayDir;
+                [self.view insertSubview:self.overlayController.view belowSubview:self.footerView];
+                [self.overlayController addBackgroundImgWithPath:overlayPath];
+                [((SGVideoOverlayViewController*)self.overlayController) playPerspectiveMovieWithRootFolderPath:overlayDir];
+            }      
+            else if( audioPath )
+            {
+                self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:kNarrationStr];
+                self.overlayController.delegate = self;
+                self.overlayController.rootFolderPath = overlayDir;
+                [self.view insertSubview:self.overlayController.view belowSubview:self.footerView];
+                [self.overlayController addBackgroundImgWithPath:overlayPath];
+                [((SGNarrationOverlayViewController*)self.overlayController) configureAudioWithPath:overlayDir];
+            }
+            else
+            {
+                self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:kTextStr];
+                self.overlayController.delegate = self;
+                self.overlayController.rootFolderPath = overlayDir;
+                [self.view insertSubview:self.overlayController.view belowSubview:self.footerView];
+                [self.overlayController addBackgroundImgWithPath:overlayPath];
+            }
         }
             break;
         case kModuleTypeChildrens:

@@ -66,13 +66,13 @@ const NSString* kModuleBtnHighlightsImageSel = @"SG_General_Painting_DetailsBtn-
 
 const NSString* kSummaryStr = @"summary";
 const NSString* kPerspectiveStr = @"perspectives";
-const NSString* kGiftsStr = @"gift";
+NSString* const kGiftsStr = @"gift";
 const NSString* kMusicStr = @"music";
 const NSString* kHighlightsStr = @"highlights";
 const NSString* kChildrensStr = @"childrens";
 const NSString* kTombstoneStr = @"tombstone";
 const NSString* kSocialStr = @"social";
-const NSString* kVideoStr = @"video";
+NSString* const kVideoStr = @"video";
 const NSString* kPanoramaStr = @"panorama";
 const NSString* kScanStr = @"scan";
 const NSString* kTextStr = @"text";

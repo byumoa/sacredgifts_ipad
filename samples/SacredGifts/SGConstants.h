@@ -69,13 +69,13 @@ extern const NSString* kModuleBtnGiftsImageSel;
 
 extern const NSString* kSummaryStr;
 extern const NSString* kPerspectiveStr;
-extern const NSString* kGiftsStr;
+extern NSString* const kGiftsStr;
 extern const NSString* kMusicStr;
 extern const NSString* kChildrensStr;
 extern const NSString* kHighlightsStr;
 extern const NSString* kTombstoneStr;
 extern const NSString* kSocialStr;
-extern const NSString* kVideoStr;
+extern NSString* const kVideoStr;
 extern const NSString* kPanoramaStr;
 extern NSString* const kScanStr;
 extern NSString* const kTextStr;
