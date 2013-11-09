@@ -122,6 +122,10 @@
     
     [self cycleFromViewController:fromController toViewController:toController fromButtonRect:frame falling:animType];
     
+    //NEW
+    if (!isTransitionToPainting)
+        self.headerView.backgroundColor = [UIColor clearColor];
+
     [UIView animateWithDuration:0.25 animations:^{
         if( [self.currentContentController.restorationIdentifier isEqualToString:@"bloch"]
            || [self.currentContentController.restorationIdentifier isEqualToString:@"hofman"]
@@ -130,10 +134,8 @@
         else if( [toController.restorationIdentifier isEqualToString:(NSString*)kControllerIDFindAPaintingStr] )
                 self.footerView.alpha = 1;
         
-        if (!isTransitionToPainting) {
-            self.headerView.backgroundColor = [UIColor clearColor];
+        if (!isTransitionToPainting)
             self.headerBGImgView.alpha = 1;
-        }
         
         if ([toController.restorationIdentifier isEqualToString:(NSString*)kPanoramaStr])
             self.headerView.alpha = 0;
@@ -152,9 +154,9 @@
     
     [(SGPaintingViewController*)paintingContainer.currentContentController configWithPaintingName:paintingName];
     
+    self.headerBGImgView.alpha = 0;
     [UIView animateWithDuration:0.25 animations:^{
         self.headerView.backgroundColor = [UIColor blackColor];
-        self.headerBGImgView.alpha = 0;
     }];
 }
 
