@@ -122,16 +122,24 @@
     
     [self cycleFromViewController:fromController toViewController:toController fromButtonRect:frame falling:animType];
     
-    if( [self.currentContentController.restorationIdentifier isEqualToString:@"bloch"]
-       || [self.currentContentController.restorationIdentifier isEqualToString:@"hofman"]
-       || [self.currentContentController.restorationIdentifier isEqualToString:@"schwartz"] )
-        [UIView animateWithDuration:0.25 animations:^{
-            self.footerView.alpha = 0;
-        }];
-    else if( [toController.restorationIdentifier isEqualToString:(NSString*)kControllerIDFindAPaintingStr] )
-        [UIView animateWithDuration:0.25 animations:^{
-            self.footerView.alpha = 1;
-        }];
+    [UIView animateWithDuration:0.25 animations:^{
+        if( [self.currentContentController.restorationIdentifier isEqualToString:@"bloch"]
+           || [self.currentContentController.restorationIdentifier isEqualToString:@"hofman"]
+           || [self.currentContentController.restorationIdentifier isEqualToString:@"schwartz"] )
+                self.footerView.alpha = 0;
+        else if( [toController.restorationIdentifier isEqualToString:(NSString*)kControllerIDFindAPaintingStr] )
+                self.footerView.alpha = 1;
+        
+        if (!isTransitionToPainting) {
+            self.headerView.backgroundColor = [UIColor clearColor];
+            self.headerBGImgView.alpha = 1;
+        }
+        
+        if ([toController.restorationIdentifier isEqualToString:(NSString*)kPanoramaStr])
+            self.headerView.alpha = 0;
+        else
+            self.headerView.alpha = 1;
+    }];
     
     return toController;
 }
@@ -143,6 +151,11 @@
     _beforePaintingViewControllerIDStr = fromController.restorationIdentifier;
     
     [(SGPaintingViewController*)paintingContainer.currentContentController configWithPaintingName:paintingName];
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        self.headerView.backgroundColor = [UIColor blackColor];
+        self.headerBGImgView.alpha = 0;
+    }];
 }
 
 -(void)contentController:(UIViewController *)contentController viewsForBlurredBacking:(NSArray*)views blurredImgName:(NSString *)blurredImgName

@@ -112,6 +112,7 @@
                     <connections>
                         <outlet property="backBtn" destination="ygj-IJ-KWP" id="xk2-By-WQu"/>
                         <outlet property="footerView" destination="vJA-Jz-DAr" id="vap-x7-JlY"/>
+                        <outlet property="headerBGImgView" destination="ajQ-mo-DB2" id="mG0-Sn-7vS"/>
                         <outlet property="headerBlurDecoy" destination="DjK-ES-X9r" id="vYX-w7-piD"/>
                         <outlet property="headerView" destination="Ksf-Tw-7Rg" id="ed3-ih-wMI"/>
                         <outlet property="splash" destination="zKe-di-iZj" id="aR0-Tl-6DU"/>
