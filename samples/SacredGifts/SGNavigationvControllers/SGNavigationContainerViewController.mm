@@ -129,7 +129,8 @@
     [UIView animateWithDuration:0.25 animations:^{
         if( [self.currentContentController.restorationIdentifier isEqualToString:@"bloch"]
            || [self.currentContentController.restorationIdentifier isEqualToString:@"hofman"]
-           || [self.currentContentController.restorationIdentifier isEqualToString:@"schwartz"] )
+           || [self.currentContentController.restorationIdentifier isEqualToString:@"schwartz"]
+           || [self.currentContentController.restorationIdentifier isEqualToString:@"SacredGifts StoryOfTheExhibition"])
                 self.footerView.alpha = 0;
         else if( [toController.restorationIdentifier isEqualToString:(NSString*)kControllerIDFindAPaintingStr] )
                 self.footerView.alpha = 1;

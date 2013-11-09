@@ -122,6 +122,13 @@
 		6186729F18100E7900DED0D4 /* Texture.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6186729518100E7900DED0D4 /* Texture.mm */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		618B35CF1817FF3100EEC12E /* SGTextOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B35CE1817FF3100EEC12E /* SGTextOverlayViewController.m */; };
 		618B35D21818083900EEC12E /* SGAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B35D11818083900EEC12E /* SGAudioViewController.m */; };
+		61A668ED182EEB2200AC749E /* exhibition_credit_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A668E7182EEB2200AC749E /* exhibition_credit_overlay.png */; };
+		61A668EE182EEB2200AC749E /* exhibition_credit_overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A668E8182EEB2200AC749E /* exhibition_credit_overlay@2x.png */; };
+		61A668EF182EEB2200AC749E /* exhibition_donors_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A668E9182EEB2200AC749E /* exhibition_donors_overlay.png */; };
+		61A668F0182EEB2200AC749E /* exhibition_donors_overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A668EA182EEB2200AC749E /* exhibition_donors_overlay@2x.png */; };
+		61A668F1182EEB2200AC749E /* exhibition_story_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A668EB182EEB2200AC749E /* exhibition_story_overlay.png */; };
+		61A668F2182EEB2200AC749E /* exhibition_story_overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A668EC182EEB2200AC749E /* exhibition_story_overlay@2x.png */; };
+		61A668F5182EECE300AC749E /* SGStoryOfTheExhibitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A668F4182EECE300AC749E /* SGStoryOfTheExhibitionViewController.m */; };
 		61CD509B180C23B100D28921 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5099180C23B100D28921 /* Main_iPhone.storyboard */; };
 		61CD509C180C23B100D28921 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509A180C23B100D28921 /* Main_iPad.storyboard */; };
 		61CD50A4180C240400D28921 /* PaintingResources in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50A3180C240400D28921 /* PaintingResources */; };
@@ -550,6 +557,14 @@
 		618B35CE1817FF3100EEC12E /* SGTextOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTextOverlayViewController.m; sourceTree = "<group>"; };
 		618B35D01818083900EEC12E /* SGAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAudioViewController.h; sourceTree = "<group>"; };
 		618B35D11818083900EEC12E /* SGAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAudioViewController.m; sourceTree = "<group>"; };
+		61A668E7182EEB2200AC749E /* exhibition_credit_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exhibition_credit_overlay.png; sourceTree = "<group>"; };
+		61A668E8182EEB2200AC749E /* exhibition_credit_overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exhibition_credit_overlay@2x.png"; sourceTree = "<group>"; };
+		61A668E9182EEB2200AC749E /* exhibition_donors_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exhibition_donors_overlay.png; sourceTree = "<group>"; };
+		61A668EA182EEB2200AC749E /* exhibition_donors_overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exhibition_donors_overlay@2x.png"; sourceTree = "<group>"; };
+		61A668EB182EEB2200AC749E /* exhibition_story_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exhibition_story_overlay.png; sourceTree = "<group>"; };
+		61A668EC182EEB2200AC749E /* exhibition_story_overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exhibition_story_overlay@2x.png"; sourceTree = "<group>"; };
+		61A668F3182EECE300AC749E /* SGStoryOfTheExhibitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGStoryOfTheExhibitionViewController.h; sourceTree = "<group>"; };
+		61A668F4182EECE300AC749E /* SGStoryOfTheExhibitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGStoryOfTheExhibitionViewController.m; sourceTree = "<group>"; };
 		61CD5099180C23B100D28921 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		61CD509A180C23B100D28921 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		61CD50A3180C240400D28921 /* PaintingResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PaintingResources; sourceTree = "<group>"; };
@@ -932,6 +947,8 @@
 				61CD5330180C256700D28921 /* SGMeetTheArtistsViewController.m */,
 				61CD5331180C256700D28921 /* SGAboutTheExhibitionViewController.h */,
 				61CD5332180C256700D28921 /* SGAboutTheExhibitionViewController.m */,
+				61A668F3182EECE300AC749E /* SGStoryOfTheExhibitionViewController.h */,
+				61A668F4182EECE300AC749E /* SGStoryOfTheExhibitionViewController.m */,
 				61CD5333180C256700D28921 /* SGBlurManager.h */,
 				61CD5334180C256700D28921 /* SGBlurManager.m */,
 				61CD5335180C256700D28921 /* SGWebViewController.h */,
@@ -1117,9 +1134,23 @@
 			path = Shaders;
 			sourceTree = "<group>";
 		};
+		61A668E6182EEB2200AC749E /* storyoftheexhibitionpage */ = {
+			isa = PBXGroup;
+			children = (
+				61A668E7182EEB2200AC749E /* exhibition_credit_overlay.png */,
+				61A668E8182EEB2200AC749E /* exhibition_credit_overlay@2x.png */,
+				61A668E9182EEB2200AC749E /* exhibition_donors_overlay.png */,
+				61A668EA182EEB2200AC749E /* exhibition_donors_overlay@2x.png */,
+				61A668EB182EEB2200AC749E /* exhibition_story_overlay.png */,
+				61A668EC182EEB2200AC749E /* exhibition_story_overlay@2x.png */,
+			);
+			path = storyoftheexhibitionpage;
+			sourceTree = "<group>";
+		};
 		61CD50A5180C242500D28921 /* GeneralResources */ = {
 			isa = PBXGroup;
 			children = (
+				61A668E6182EEB2200AC749E /* storyoftheexhibitionpage */,
 				614C00D618241D7000333698 /* sharing */,
 				61072A2D1822794A00E8D7A2 /* ScratchableView.h */,
 				61072A2E1822794A00E8D7A2 /* ScratchableView.m */,
@@ -1719,6 +1750,7 @@
 				61CD5283180C242500D28921 /* SG_General_ScanBtn-on@2x.png in Resources */,
 				61CD5209180C242500D28921 /* sg_home_label_hofmann@2x.png in Resources */,
 				61CD52C7180C242500D28921 /* painting_thumb_gethsemane-on@2x.png in Resources */,
+				61A668ED182EEB2200AC749E /* exhibition_credit_overlay.png in Resources */,
 				61CD52CF180C242500D28921 /* painting_thumb_mocking-on@2x.png in Resources */,
 				61CD52C8180C242500D28921 /* painting_thumb_gethsemane.png in Resources */,
 				61CD522E180C242500D28921 /* SG_General_Media_Playbar_Overlay@2x.png in Resources */,
@@ -1745,6 +1777,7 @@
 				61CD51F0180C242500D28921 /* sg_home_exhibitionbtn-on.png in Resources */,
 				61CD52AB180C242500D28921 /* painting_thumb_children-on@2x.png in Resources */,
 				61072A0E182138B400E8D7A2 /* perspectives_sermon_circle_dark_green@2x.png in Resources */,
+				61A668F1182EEB2200AC749E /* exhibition_story_overlay.png in Resources */,
 				61CD52BD180C242500D28921 /* painting_thumb_denial@2x.png in Resources */,
 				61CD528A180C242500D28921 /* SG_General_Share_email.png in Resources */,
 				61CD5286180C242500D28921 /* SG_General_TopBar.png in Resources */,
@@ -1859,12 +1892,15 @@
 				61CD5274180C242500D28921 /* SG_General_Painting_PerspectivesBtn-on@2x.png in Resources */,
 				61CD5239180C242500D28921 /* SG_General_BackBtn.png in Resources */,
 				61CD525F180C242500D28921 /* SG_General_Painting_DetailsBtn-on.png in Resources */,
+				61A668EE182EEB2200AC749E /* exhibition_credit_overlay@2x.png in Resources */,
 				61072A08182138B400E8D7A2 /* perspectives_sermon_center_dot@2x.png in Resources */,
 				61CD529F180C242500D28921 /* painting_thumb_aalborg-on@2x.png in Resources */,
 				61CD52CB180C242500D28921 /* painting_thumb_healing-on@2x.png in Resources */,
 				61CD51E0180C242500D28921 /* sg_home_bg-home@2x.png in Resources */,
 				61CD51E3180C242500D28921 /* sg_home_bg-meetartists@2x.png in Resources */,
 				61CD51D5180C242500D28921 /* artists_pages_schwartz_overlay.png in Resources */,
+				61A668F2182EEB2200AC749E /* exhibition_story_overlay@2x.png in Resources */,
+				61A668EF182EEB2200AC749E /* exhibition_donors_overlay.png in Resources */,
 				61CD520A180C242500D28921 /* sg_home_label_schwartz.png in Resources */,
 				61CD5225180C242500D28921 /* sg_home_schwartzbtn-on@2x.png in Resources */,
 				61CD52CE180C242500D28921 /* painting_thumb_mocking-on.png in Resources */,
@@ -1887,6 +1923,7 @@
 				61CD52B4180C242500D28921 /* painting_thumb_consolator.png in Resources */,
 				61CD5276180C242500D28921 /* SG_General_Painting_PerspectivesBtn@2x.png in Resources */,
 				61CD51D8180C242500D28921 /* paintings_text@2x.png in Resources */,
+				61A668F0182EEB2200AC749E /* exhibition_donors_overlay@2x.png in Resources */,
 				61CD52A0180C242500D28921 /* painting_thumb_aalborg.png in Resources */,
 				61CD5295180C242500D28921 /* SG_General_Share_thanks-on@2x.png in Resources */,
 				61CD5202180C242500D28921 /* sg_home_hoffmanbtn-on.png in Resources */,
@@ -1960,6 +1997,7 @@
 				61CD531A180C250800D28921 /* SGPaintingViewController.m in Sources */,
 				6186729B18100E7900DED0D4 /* QCARutils.mm in Sources */,
 				61865DCF180F5A90004CE494 /* SGAbstractAudioManager.m in Sources */,
+				61A668F5182EECE300AC749E /* SGStoryOfTheExhibitionViewController.m in Sources */,
 				1588319713605ABF0082B874 /* EAGLView.mm in Sources */,
 				6186729618100E7900DED0D4 /* AR_EAGLView.mm in Sources */,
 				61CD5345180C256700D28921 /* SGBlurManager.m in Sources */,

@@ -159,6 +159,14 @@
     [self.childOverlay.view removeFromSuperview];
     self.childOverlay = nil;
     [self prepareForMediaEnd];
+    
+    MPMoviePlayerController* moviePlayer = [overlay performSelector:@selector(moviePlayer)];
+    [moviePlayer stop];
+}
+
+-(SGOverlayViewController *)overlay:(SGOverlayViewController *)overlay triggersNewOverlayName:(NSString *)overlayName
+{
+    return nil;
 }
 
 @end

@@ -10,4 +10,6 @@
 
 @interface SGAboutTheExhibitionViewController : SGContentViewController
 
+- (IBAction)pressedBtn:(UIButton *)sender;
+
 @end
