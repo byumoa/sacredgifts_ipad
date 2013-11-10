@@ -1028,6 +1028,7 @@
                     <connections>
                         <outlet property="freezeFrame" destination="VH0-LL-KwJ" id="Mgi-k7-z9Y"/>
                         <outlet property="playOverlay" destination="EX2-Ku-XJK" id="9pH-iJ-z0q"/>
+                        <outlet property="playPauseButton" destination="pR6-73-u8v" id="Ua4-QQ-wBC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQu-iu-iIX" userLabel="First Responder" sceneMemberID="firstResponder"/>

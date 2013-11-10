@@ -59,7 +59,7 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
         }];
     }
     
-    ((UIButton*)sender).selected = (self.moviePlayer.playbackState != MPMoviePlaybackStatePlaying);
+    self.playPauseButton.selected = (self.moviePlayer.playbackState != MPMoviePlaybackStatePlaying);
 }
 
 -(void)playPerspectiveMovieWithRootFolderPath: (NSString*)rootFoolderPath
