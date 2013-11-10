@@ -274,8 +274,9 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
             int totalBtns = [((SGPersepectivesOverlayViewController*)self.overlayController) configurePerspectiveOverlayWithPath:perspectivesPath];
             
             NSString* overlayImageStr = totalBtns < 4 ? @"SG_General_Module_OverlayHalf_%@.png" : @"SG_General_Module_Overlay_%@.png";
+            if( totalBtns >= 4 )
+                ((SGMediaSelectionViewController*)self.overlayController).extendePlacement = YES;
             overlayImageStr = [NSString stringWithFormat:overlayImageStr, ((NSString*)[SGConvenienceFunctionsManager artistForPainting:_paintingNameStr abbreviated:YES]).capitalizedString];
-            NSLog(@"overlayImageStr: %@", overlayImageStr);
             [self.overlayController addBackgroundImgWithImgName:overlayImageStr];
         }
             break;

@@ -13,7 +13,7 @@
 #import "SGOverlayView.h"
 #import "SGBlurManager.h"
 
-//const CGPoint kChildVideoCenter = {768/2, -200};
+const int kIncreasedOffset = 260;
 
 @interface SGMediaSelectionViewController()
 - (SGOverlayViewController*)addChildOverlay: (NSString*)moduleStr;
@@ -40,7 +40,7 @@
     [overlay addBackgroundImgWithPath:overlayPath];
     [((SGVideoOverlayViewController*)overlay) playPerspectiveMovieWithRootFolderPath:videoFolderPath];
     UIView* blurredBacking = [self addBlurredBackingForChildView];
-    CGPoint center = CGPointMake(768/2, (1024 - overlay.view.frame.size.height - self.view.frame.origin.y)/2 + 45);
+    CGPoint center = CGPointMake(768/2, - 80 + (self.extendePlacement ? kIncreasedOffset : 0));
     self.childOverlay.view.center = center;
     blurredBacking.center = center;
 }
