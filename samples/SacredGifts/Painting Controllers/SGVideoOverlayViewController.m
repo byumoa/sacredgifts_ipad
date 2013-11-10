@@ -94,6 +94,7 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
 {
     [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
+    [_progressTimer invalidate];
 }
 
 @end

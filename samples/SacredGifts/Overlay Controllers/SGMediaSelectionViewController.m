@@ -62,7 +62,7 @@ const int kIncreasedOffset = 260;
 
 -(SGOverlayViewController*)addChildOverlay:(NSString *)moduleStr
 {
-    NSString* paintingNameStr = @"consolator";
+    NSString* paintingNameStr = @"";
     
     //Create new overlay veiwController
     self.childOverlay = [self.storyboard instantiateViewControllerWithIdentifier:moduleStr];
