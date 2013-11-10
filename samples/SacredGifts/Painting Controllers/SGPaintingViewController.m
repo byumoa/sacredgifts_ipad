@@ -16,6 +16,7 @@
 #import "SGHighlightsViewController.h"
 #import "SGSocialViewController.h"
 #import "SGVideoOverlayViewController.h"
+#import "SGConvenienceFunctionsManager.h"
 
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
@@ -272,7 +273,9 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
             NSString* perspectivesPath = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", _paintingNameStr, @"perspectives"];
             int totalBtns = [((SGPersepectivesOverlayViewController*)self.overlayController) configurePerspectiveOverlayWithPath:perspectivesPath];
             
-            NSString* overlayImageStr = totalBtns < 4 ? @"SG_General_Module_OverlayHalf.png" : @"SG_General_Module_Overlay.png";
+            NSString* overlayImageStr = totalBtns < 4 ? @"SG_General_Module_OverlayHalf_%@.png" : @"SG_General_Module_Overlay_%@.png";
+            overlayImageStr = [NSString stringWithFormat:overlayImageStr, ((NSString*)[SGConvenienceFunctionsManager artistForPainting:_paintingNameStr abbreviated:YES]).capitalizedString];
+            NSLog(@"overlayImageStr: %@", overlayImageStr);
             [self.overlayController addBackgroundImgWithImgName:overlayImageStr];
         }
             break;
