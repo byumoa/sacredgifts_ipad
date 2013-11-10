@@ -13,7 +13,9 @@
 #import "SGOverlayView.h"
 #import "SGBlurManager.h"
 
-const int kIncreasedOffset = 260;
+const int kVideoStartPositionY = -80;
+const int kIncreasedVideoOffset = 260;
+const int kAudioStartPositionY = 160;
 
 @interface SGMediaSelectionViewController()
 - (SGOverlayViewController*)addChildOverlay: (NSString*)moduleStr;
@@ -39,18 +41,25 @@ const int kIncreasedOffset = 260;
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:videoFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
     [((SGVideoOverlayViewController*)overlay) playPerspectiveMovieWithRootFolderPath:videoFolderPath];
+    
     UIView* blurredBacking = [self addBlurredBackingForChildView];
-    CGPoint center = CGPointMake(768/2, - 80 + (self.extendePlacement ? kIncreasedOffset : 0));
+    CGPoint center = CGPointMake(768/2, kVideoStartPositionY + (self.extendePlacement ? kIncreasedVideoOffset : 0));
     self.childOverlay.view.center = center;
     blurredBacking.center = center;
 }
 
 -(void)loadAudioWithFolderPath:(NSString *)audioFolderPath
 {
-    SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kNarrationStr];
+    SGOverlayViewController* overlay = [self addChildOverlay:kNarrationStr];
+    overlay.delegate = self;
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:audioFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
     [((SGNarrationOverlayViewController*)overlay) configureAudioWithPath:audioFolderPath];
+    
+    UIView* blurredBacking = [self addBlurredBackingForChildView];
+    CGPoint center = CGPointMake(768/2, kAudioStartPositionY);
+    self.childOverlay.view.center = center;
+    blurredBacking.center = center;
 }
 
 -(void)loadTextWithFolderPath:(NSString *)textFolderPath
@@ -160,8 +169,13 @@ const int kIncreasedOffset = 260;
     self.childOverlay = nil;
     [self prepareForMediaEnd];
     
-    MPMoviePlayerController* moviePlayer = [overlay performSelector:@selector(moviePlayer)];
-    [moviePlayer stop];
+    if( [overlay respondsToSelector:@selector(moviePlayer)] )
+    {
+        MPMoviePlayerController* moviePlayer = [overlay performSelector:@selector(moviePlayer)];
+        [moviePlayer stop];
+    }
+    
+    [[SGNarrationManager sharedManager] pauseAudio];
 }
 
 -(SGOverlayViewController *)overlay:(SGOverlayViewController *)overlay triggersNewOverlayName:(NSString *)overlayName
