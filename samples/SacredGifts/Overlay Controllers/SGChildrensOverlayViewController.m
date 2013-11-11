@@ -9,6 +9,8 @@
 #import "SGChildrensOverlayViewController.h"
 #import "ScratchableView.h"
 #import "SGConvenienceFunctionsManager.h"
+#import "SGPanoramaOverlayViewController.h"
+#import "SGOverlayView.h"
 
 const float kTriggerDistance = 80;
 NSString* const kArtistInstructionStr = @"childrens_%@_prompt.png";
@@ -40,6 +42,20 @@ NSString* const kArtistInstructionStr = @"childrens_%@_prompt.png";
     
     _buttonNrmImgStr = @"childrens_btn.png";
     _buttonHilImgStr = @"childrens_btn-on.png";
+}
+
+-(void)pressedHighlightBtn:(UIButton *)sender
+{
+    [super pressedHighlightBtn:sender];
+    
+    if( ![self.childOverlay isKindOfClass:[SGPanoramaOverlayViewController class]] )
+    {
+        CGPoint center = self.childOverlay.view.center;
+        center.y -= 45;
+        self.childOverlay.view.center = center;
+        
+        ((SGOverlayView*)self.childOverlay.view).myBlurredBacking.center = center;
+    }
 }
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath forgroundImage:(UIImage *)foregroundImg
