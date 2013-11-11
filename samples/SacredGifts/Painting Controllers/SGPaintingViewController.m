@@ -306,7 +306,7 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
             NSString* overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@".png" inDirectory:overlayDir];
             NSString* videoPath = [[NSBundle mainBundle] pathForResource:@"video" ofType:@"mp4" inDirectory:overlayDir];
             NSString* audioPath = [[NSBundle mainBundle] pathForResource:@"audio" ofType:@"mp3" inDirectory:overlayDir];
-            NSLog(@"gift videoPath: %@", videoPath);
+
             if( videoPath )
             {
                 self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:kVideoStr];
