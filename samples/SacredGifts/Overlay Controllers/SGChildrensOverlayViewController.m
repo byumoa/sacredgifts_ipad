@@ -9,11 +9,12 @@
 #import "SGChildrensOverlayViewController.h"
 #import "ScratchableView.h"
 
-const float kTriggerDistance = 40;
+const float kTriggerDistance = 80;
 
 @interface SGChildrensOverlayViewController()
 
 - (float) calcDistanceBetween: (CGPoint)pt1 and: (CGPoint)pt2;
+- (void)animateButtonOn:(UIButton*)button;
 
 @end
 
@@ -34,6 +35,9 @@ const float kTriggerDistance = 40;
 {
     [super viewDidLoad];
     self.view.frame = CGRectMake(0, 66, 768, 892);
+    
+    _buttonNrmImgStr = @"childrens_btn.png";
+    _buttonHilImgStr = @"childrens_btn-on.png";
 }
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath forgroundImage:(UIImage *)foregroundImg
@@ -54,16 +58,44 @@ const float kTriggerDistance = 40;
     
     for( UIButton* button in _buttons )
     {
-        if( [self calcDistanceBetween:touchLoc and:button.center] < kTriggerDistance )
-            [UIView animateWithDuration:0.25 animations:^{
-                button.alpha = 1;
-            }];
+        if( [self calcDistanceBetween:touchLoc and:button.center] < kTriggerDistance && button.alpha < 1 )
+            [self animateButtonOn:button];
     }
+}
+
+-(void)animateButtonOn:(UIButton *)button
+{
+    CGRect frame = button.frame;
+    CGPoint center = button.center;
+    
+    CGRect startFrame = frame;
+    startFrame.size.width *= 0.25;
+    startFrame.size.height *= 0.25;
+    CGRect bounceFrame = frame;
+    bounceFrame.size.width *= 2.0;
+    bounceFrame.size.height *= 2.0;
+    
+    button.frame = startFrame;
+    button.center = center;
+    [UIView animateWithDuration:0.5 animations:^{
+        button.alpha = 1;
+        button.frame = bounceFrame;
+        button.center = center;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.25 animations:^{
+            button.frame = frame;
+            button.center = center;
+        }];
+    }];
 }
 
 -(float)calcDistanceBetween:(CGPoint)pt1 and:(CGPoint)pt2
 {
     return sqrtf((pt1.x-pt2.x)*(pt1.x-pt2.x) + (pt1.y-pt2.y)*(pt1.y-pt2.y));
 }
+
+-(void)prepareForMediaStart{}
+
+-(void)prepareForMediaEnd{}
 
 @end

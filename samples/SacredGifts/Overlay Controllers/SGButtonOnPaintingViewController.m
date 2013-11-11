@@ -35,11 +35,19 @@
     }
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    _buttonNrmImgStr = @"sg_general_painting_detailmarkerbtn.png";
+    _buttonHilImgStr = @"sg_general_painting_detailmarkerbtn-on.png";
+}
+
 -(UIButton *)buttonForHighlightIndex:(int)highlightIndex
 {
     UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIImage* normalBtnImg = [UIImage imageNamed:@"sg_general_painting_detailmarkerbtn.png"];
-    UIImage* highlightBtnImg = [UIImage imageNamed:@"sg_general_painting_detailmarkerbtn-on.png"];
+    UIImage* normalBtnImg = [UIImage imageNamed:_buttonNrmImgStr];
+    UIImage* highlightBtnImg = [UIImage imageNamed:_buttonHilImgStr];
     [button setImage:normalBtnImg forState:UIControlStateNormal];
     [button setImage:highlightBtnImg forState:UIControlStateHighlighted];
     

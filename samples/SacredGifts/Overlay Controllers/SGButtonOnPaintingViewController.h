@@ -12,6 +12,8 @@
 {
     NSString* _moduleTypeStr;
     NSMutableArray* _buttons;
+    NSString* _buttonNrmImgStr;
+    NSString* _buttonHilImgStr;
 }
 
 -(void)configureWithPath:(NSString *)folderPath;
