@@ -69,26 +69,24 @@ const int kTextStartPositionY = 102;
 
 -(SGOverlayViewController*)addChildOverlay:(NSString *)moduleStr
 {
-    NSString* paintingNameStr = @"";
-    
     //Create new overlay veiwController
     self.childOverlay = [self.storyboard instantiateViewControllerWithIdentifier:moduleStr];
     self.childOverlay.delegate = self;
     [self.view addSubview:self.childOverlay.view];
         
-    self.childOverlay.rootFolderPath = [NSString stringWithFormat: @"%@/%@/%@", @"PaintingResources", paintingNameStr, moduleStr];
+    self.childOverlay.rootFolderPath = [NSString stringWithFormat: @"%@/%@/%@", @"PaintingResources", self.paintingName, moduleStr];
 
     //Configure new overlay viewController
     switch ([self getModuleTypeForStr:moduleStr]) {
         case kModuleTypeVideo:
             break;
         case kModuleTypeNarration:{
-            NSString* audioPath = [NSString stringWithFormat: @"PaintingResources/%@/perspectives/perspectives_%i", paintingNameStr, 1];
+            NSString* audioPath = [NSString stringWithFormat: @"PaintingResources/%@/perspectives/perspectives_%i", self.paintingName, 1];
             [((SGNarrationOverlayViewController*)self.childOverlay) configureAudioWithPath:audioPath];
         }
             break;
         default:{
-            NSString *overlayPath = [[NSBundle mainBundle] pathForResource:moduleStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingNameStr, moduleStr]];
+            NSString *overlayPath = [[NSBundle mainBundle] pathForResource:moduleStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, self.paintingName, moduleStr]];
             [self.childOverlay addBackgroundImgWithPath:overlayPath];
         }
             break;
@@ -190,6 +188,7 @@ const int kTextStartPositionY = 102;
     return nil;
 }
 
+-(void)turnOnChrome{}
 -(void)dismissChrome{}
 
 @end

@@ -890,6 +890,12 @@
                             <view opaque="NO" contentMode="center" id="mDA-F7-Mhn" customClass="ScratchableView">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="892"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="center" image="childrens_bloch_prompt.png" id="f1V-uC-RwT">
+                                        <rect key="frame" x="-28" y="844" width="825" height="48"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -900,6 +906,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
+                        <outlet property="instructionPrompt" destination="f1V-uC-RwT" id="wOr-6c-TAk"/>
                         <outlet property="scratchableView" destination="mDA-F7-Mhn" id="AnA-i0-nLO"/>
                     </connections>
                 </viewController>
@@ -1552,6 +1559,7 @@
         <image name="artists_pages_bloch_overlay.png" width="768" height="784"/>
         <image name="artists_pages_hofmann_overlay.png" width="769" height="959"/>
         <image name="artists_pages_schwartz_overlay.png" width="768" height="845"/>
+        <image name="childrens_bloch_prompt.png" width="825" height="48"/>
         <image name="exhibition_credit_overlay.png" width="769" height="733"/>
         <image name="exhibition_donors_overlay.png" width="769" height="471"/>
         <image name="exhibition_story_overlay.png" width="769" height="463"/>

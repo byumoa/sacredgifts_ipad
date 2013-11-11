@@ -11,6 +11,7 @@
 @interface SGMediaSelectionViewController : SGOverlayViewController <SGOverlayViewControllerDelegate>
 @property( nonatomic, strong ) SGOverlayViewController *childOverlay;
 @property (nonatomic) BOOL extendePlacement;
+@property (nonatomic, strong) NSString* paintingName;
 
 - (void)loadPanoramaWithFolderPath: (NSString*)panoFolderPath;
 - (void)loadVideoWithFolderPath: (NSString*)videoFolderPath;

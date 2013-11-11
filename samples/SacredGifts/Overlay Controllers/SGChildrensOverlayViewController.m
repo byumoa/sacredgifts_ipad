@@ -8,8 +8,10 @@
 
 #import "SGChildrensOverlayViewController.h"
 #import "ScratchableView.h"
+#import "SGConvenienceFunctionsManager.h"
 
 const float kTriggerDistance = 80;
+NSString* const kArtistInstructionStr = @"childrens_%@_prompt.png";
 
 @interface SGChildrensOverlayViewController()
 
@@ -50,6 +52,10 @@ const float kTriggerDistance = 80;
     [super configureWithPath:folderPath];
     for( UIButton* button in _buttons )
         button.alpha = 0;
+    
+    NSString* artistName = [SGConvenienceFunctionsManager artistForPainting:self.paintingName abbreviated:YES];
+    NSString* promptImgStr = [NSString stringWithFormat:kArtistInstructionStr, artistName];
+    self.instructionPrompt.image = [UIImage imageNamed:promptImgStr];
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
