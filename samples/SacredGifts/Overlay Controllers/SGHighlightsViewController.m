@@ -77,7 +77,16 @@
         self.childOverlay.view.center = center;
         
         ((SGOverlayView*)self.childOverlay.view).myBlurredBacking.center = center;
+        NSLog(@"self.childOverlay.rootFolderPath: %@", self.childOverlay.rootFolderPath);
     }
+}
+
+-(void)prepareForMediaStart
+{
+    NSString* detailImgPath = [[NSBundle mainBundle] pathForResource:@"highlight" ofType:@"png" inDirectory:self.childOverlay.rootFolderPath];
+    UIImageView* highlightImgView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:detailImgPath]];
+    [self.view addSubview:highlightImgView];
+    highlightImgView.center = self.view.center;
 }
 
 -(void)prepareForMediaEnd

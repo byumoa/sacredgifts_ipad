@@ -63,7 +63,8 @@ const int kTextStartPositionY = 102;
     SGOverlayViewController* overlay = [self addChildOverlay:kTextStr];
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:textFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
-    
+ 
+    self.rootFolderPath = textFolderPath;
     [self positionViews];
 }
 
