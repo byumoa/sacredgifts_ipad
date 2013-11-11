@@ -22,70 +22,49 @@ const int kTextStartPositionY = 102;
 - (SGOverlayViewController*)addChildOverlay: (NSString*)moduleStr;
 - (ModuleType)getModuleTypeForStr: (NSString*)moduleStr;
 - (UIView*)addBlurredBackingForChildView;
+- (void)positionViews;
 @end
 
 @implementation SGMediaSelectionViewController
 
 -(void)loadPanoramaWithFolderPath:(NSString *)panoFolderPath
 {
-    SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kPanoramaStr];
+    SGOverlayViewController* overlay = [self addChildOverlay:(NSString*)kPanoramaStr];
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"pano_f" ofType:@"jpg" inDirectory:panoFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
-    overlay.rootFolderPath = panoFolderPath;
     [((SGPanoramaOverlayViewController*)overlay) startPanoWithPath:panoFolderPath];
+    
+    overlay.view.frame = [self.view convertRect:CGRectMake(0, 0, 768, 1024) fromView:self.view.superview];
+    [self.delegate dismissChrome];
 }
 
 -(void)loadVideoWithFolderPath:(NSString *)videoFolderPath
 {
     SGOverlayViewController* overlay = [self addChildOverlay:kVideoStr];
-    overlay.delegate = self;
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:videoFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
     [((SGVideoOverlayViewController*)overlay) playPerspectiveMovieWithRootFolderPath:videoFolderPath];
     
-    UIView* blurredBacking = [self addBlurredBackingForChildView];
-    CGPoint center = CGPointMake(768/2, kVideoStartPositionY + (self.extendePlacement ? kIncreasedVideoOffset : 0));
-    self.childOverlay.view.center = center;
-    blurredBacking.center = center;
+    [self positionViews];
 }
 
 -(void)loadAudioWithFolderPath:(NSString *)audioFolderPath
 {
     SGOverlayViewController* overlay = [self addChildOverlay:kNarrationStr];
-    overlay.delegate = self;
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:audioFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
     [((SGNarrationOverlayViewController*)overlay) configureAudioWithPath:audioFolderPath];
     
-    UIView* blurredBacking = [self addBlurredBackingForChildView];
-    CGPoint center = CGPointMake(768/2, kAudioStartPositionY);
-    self.childOverlay.view.center = center;
-    blurredBacking.center = center;
+    [self positionViews];
 }
 
 -(void)loadTextWithFolderPath:(NSString *)textFolderPath
 {
     SGOverlayViewController* overlay = [self addChildOverlay:kTextStr];
-    overlay.delegate = self;
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:textFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
     
-    UIView* blurredBacking = [self addBlurredBackingForChildView];
-    
-    //Calc offset is 102
-    //Text height: 320
-    //Persp height: 262
-    //Try: textHeight - perspectiveHeight + 44
-    //CGPoint center = CGPointMake(768/2, 102);
-    //self.childOverlay.view.center = center;
-    //blurredBacking.center = center;
-    
-    //Persp Pos.y + Persp.height - overlay.height
-    
-    CGRect frame = self.childOverlay.view.frame;
-    frame.origin.y = self.view.frame.size.height - self.childOverlay.view.frame.size.height;
-    self.childOverlay.view.frame = frame;
-    blurredBacking.frame = frame;
+    [self positionViews];
 }
 
 -(SGOverlayViewController*)addChildOverlay:(NSString *)moduleStr
@@ -94,7 +73,7 @@ const int kTextStartPositionY = 102;
     
     //Create new overlay veiwController
     self.childOverlay = [self.storyboard instantiateViewControllerWithIdentifier:moduleStr];
-    //self.childOverlay.delegate = self;
+    self.childOverlay.delegate = self;
     [self.view addSubview:self.childOverlay.view];
         
     self.childOverlay.rootFolderPath = [NSString stringWithFormat: @"%@/%@/%@", @"PaintingResources", paintingNameStr, moduleStr];
@@ -115,10 +94,18 @@ const int kTextStartPositionY = 102;
             break;
     }
     
-    
     [self prepareForMediaStart];
     
     return self.childOverlay;
+}
+
+-(void)positionViews
+{
+    UIView* blurredBacking = [self addBlurredBackingForChildView];
+    CGRect frame = self.childOverlay.view.frame;
+    frame.origin.y = self.view.frame.size.height - self.childOverlay.view.frame.size.height;
+    self.childOverlay.view.frame = frame;
+    blurredBacking.frame = frame;
 }
 
 -(UIView*)addBlurredBackingForChildView
@@ -195,11 +182,14 @@ const int kTextStartPositionY = 102;
     }
     
     [[SGNarrationManager sharedManager] pauseAudio];
+    [self.delegate turnOnChrome];
 }
 
 -(SGOverlayViewController *)overlay:(SGOverlayViewController *)overlay triggersNewOverlayName:(NSString *)overlayName
 {
     return nil;
 }
+
+-(void)dismissChrome{}
 
 @end

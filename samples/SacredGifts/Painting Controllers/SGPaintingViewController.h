@@ -22,6 +22,7 @@
 @property (strong, nonatomic) SGOverlayViewController* overlayController;
 @property (weak, nonatomic) id<SGContentControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIView *footerView;
+@property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (nonatomic) float frameOverlayDelay;
 @property (nonatomic) int currentPaintingIndex;
 

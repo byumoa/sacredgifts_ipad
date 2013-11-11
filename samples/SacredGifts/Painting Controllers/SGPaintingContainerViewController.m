@@ -47,6 +47,7 @@
     
     [self cycleFromViewController:(UIViewController*)self.currentContentController toViewController:toController fromButtonRect:CGRectZero falling:kAnimTypeZoomIn];
     [toController configWithPaintingName:paintingName];
+    ((SGPaintingViewController*)toController).headerView = ((SGPaintingViewController*)fromController).headerView;
 }
 
 -(void)contentController:(UIViewController *)contentController viewsForBlurredBacking:(NSArray*)views blurredImgName:(NSString *)blurredImgName

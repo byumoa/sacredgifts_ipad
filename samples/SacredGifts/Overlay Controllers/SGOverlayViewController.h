@@ -15,6 +15,8 @@
 
 - (SGOverlayViewController*)overlay: (SGOverlayViewController*)overlay triggersNewOverlayName: (NSString*)overlayName;
 - (void) closeOverlay: (SGOverlayViewController*)overlay;
+- (void) dismissChrome;
+- (void) turnOnChrome;
 
 @end
 

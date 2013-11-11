@@ -154,6 +154,7 @@
     _beforePaintingViewControllerIDStr = fromController.restorationIdentifier;
     
     [(SGPaintingViewController*)paintingContainer.currentContentController configWithPaintingName:paintingName];
+    ((SGPaintingViewController*)paintingContainer.currentContentController).headerView = self.headerView;
     
     self.headerBGImgView.alpha = 0;
     [UIView animateWithDuration:0.25 animations:^{
@@ -175,6 +176,7 @@
         [self.scanController.view removeFromSuperview];
         self.scanController = nil;
         self.footerView.alpha = _footerLastAlpha;
+        self.headerView.alpha = 1;
     }
     else
     {
@@ -182,13 +184,13 @@
         [self.view insertSubview:self.scanController.view belowSubview:self.headerView];
         _footerLastAlpha = self.footerView.alpha;
         self.footerView.alpha = 0;
+        self.headerView.alpha = 0;
     }
 }
 
 -(IBAction)pressedHome:(id)sender
 {
     _backViewControllerIDStr = (NSString*)kControllerIDHomeStr;
-    
     [self transitionFromController:self.currentContentController toControllerID:_backViewControllerIDStr fromButtonRect:((UIButton*)sender).frame withAnimType:kAnimTypeZoomOut];
 }
 

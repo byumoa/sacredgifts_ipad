@@ -448,4 +448,16 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
     [self deselectAllModuleBtns];
 }
 
+-(void)dismissChrome
+{
+    self.footerView.alpha = 0;
+    self.headerView.alpha = 0;
+}
+
+-(void)turnOnChrome
+{
+    self.footerView.alpha = 1;
+    self.headerView.alpha = 1;
+}
+
 @end

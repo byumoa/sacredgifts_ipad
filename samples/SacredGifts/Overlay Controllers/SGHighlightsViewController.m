@@ -7,6 +7,7 @@
 //
 
 #import "SGHighlightsViewController.h"
+#import "SGPanoramaOverlayViewController.h"
 
 @implementation SGHighlightsViewController
 
@@ -19,6 +20,18 @@
     }
     
     return self;
+}
+
+-(void)pressedHighlightBtn:(UIButton *)sender
+{
+    [super pressedHighlightBtn:sender];
+    
+    if( ![self.childOverlay isKindOfClass:[SGPanoramaOverlayViewController class]] )
+    {
+        CGPoint center = self.childOverlay.view.center;
+        center.y -= 111;
+        self.childOverlay.view.center = center;
+    }
 }
 
 @end
