@@ -8,6 +8,13 @@
 
 #import "SGHighlightsViewController.h"
 #import "SGPanoramaOverlayViewController.h"
+#import "SGOverlayView.h"
+
+@interface SGHighlightsViewController()
+
+- (void)animateButtonsOn;
+
+@end
 
 @implementation SGHighlightsViewController
 
@@ -22,6 +29,43 @@
     return self;
 }
 
+-(void)configureWithPath:(NSString *)folderPath
+{
+    [super configureWithPath:folderPath];
+    
+    [self animateButtonsOn];
+}
+
+-(void)animateButtonsOn
+{
+    for( int i = 0; i < _buttons.count; i++ )
+    {
+        UIButton* button = _buttons[i];
+        
+        CGRect frame = button.frame;
+        CGPoint center = button.center;
+        
+        CGRect startFrame = frame;
+        startFrame.size.width *= 0.9;
+        startFrame.size.height *= 0.9;
+        CGRect bounceFrame = frame;
+        bounceFrame.size.width *= 1.1;
+        bounceFrame.size.height *= 1.1;
+        
+        button.frame = startFrame;
+        button.center = center;
+        [UIView animateWithDuration:0.4 delay:i*0.1 options:Nil animations:^{
+            button.frame = bounceFrame;
+            button.center = center;
+        } completion:^(BOOL finished) {
+            [UIView animateWithDuration:0.2 animations:^{
+                button.frame = frame;
+                button.center = center;
+            }];
+        }];
+    }
+}
+
 -(void)pressedHighlightBtn:(UIButton *)sender
 {
     [super pressedHighlightBtn:sender];
@@ -31,7 +75,15 @@
         CGPoint center = self.childOverlay.view.center;
         center.y -= 111;
         self.childOverlay.view.center = center;
+        
+        ((SGOverlayView*)self.childOverlay.view).myBlurredBacking.center = center;
     }
+}
+
+-(void)prepareForMediaEnd
+{
+    [super prepareForMediaEnd];
+    [self animateButtonsOn];
 }
 
 @end

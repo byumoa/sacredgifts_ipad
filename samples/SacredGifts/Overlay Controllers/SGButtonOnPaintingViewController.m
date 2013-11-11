@@ -24,7 +24,9 @@
         {
             NSDictionary* buttonDict = [NSDictionary dictionaryWithContentsOfFile:buttonConfigPath];
             UIButton* button = [self buttonForHighlightIndex:i];
-            button.center = CGPointMake([[buttonDict objectForKey:@"xPos"] intValue], [[buttonDict objectForKey:@"yPos"] intValue]);
+            CGPoint center = CGPointMake([[buttonDict objectForKey:@"xPos"] intValue], [[buttonDict objectForKey:@"yPos"] intValue]);
+            button.center = center;
+            
             [self.view addSubview:button];
             [_buttons addObject:button];
         }
@@ -36,8 +38,8 @@
 -(UIButton *)buttonForHighlightIndex:(int)highlightIndex
 {
     UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
-    UIImage* normalBtnImg = [UIImage imageNamed:@"childrens_btn.png"];
-    UIImage* highlightBtnImg = [UIImage imageNamed:@"childrens_btn-on.png"];
+    UIImage* normalBtnImg = [UIImage imageNamed:@"sg_general_painting_detailmarkerbtn.png"];
+    UIImage* highlightBtnImg = [UIImage imageNamed:@"sg_general_painting_detailmarkerbtn-on.png"];
     [button setImage:normalBtnImg forState:UIControlStateNormal];
     [button setImage:highlightBtnImg forState:UIControlStateHighlighted];
     
@@ -64,6 +66,5 @@
     else
         [self loadTextWithFolderPath:btnFolderPath];
 }
-
 
 @end
