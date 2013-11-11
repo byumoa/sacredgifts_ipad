@@ -42,10 +42,6 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
 - (void)deselectAllModuleBtns;
 @end
 
-@interface SGPaintingViewController (TempleAlternatives)
-- (void)addTempleButtons;
-@end
-
 @implementation SGPaintingViewController
 -(void)configWithPaintingName:(NSString *)paintingStr;
 {
@@ -56,12 +52,22 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
     self.currentPaintingIndex = [self calcCurrentPaintingIndex];
     
     if( [paintingStr isEqualToString:kPaintingNameTemple] || [paintingStr isEqualToString:kPaintingNameTempleNY])
-        [self addTempleButtons];
+    {
+        self.templeButtonsView.hidden = NO;
+        
+        self.templeBtn1880.selected = [paintingStr isEqualToString:kPaintingNameTemple];
+        self.templeBtnLater.selected = [paintingStr isEqualToString:kPaintingNameTempleNY];
+    }
+    else
+        self.templeButtonsView.hidden = YES;
 }
 
--(void)addTempleButtons
+- (IBAction)pressedTempleToggle:(id)sender
 {
-    //UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+    if( ((UIButton*)sender).tag == 0 && [_paintingNameStr isEqualToString:kPaintingNameTempleNY])
+        [self.delegate transitionFromController:self toPaintingNamed:kPaintingNameTemple fromButtonRect:((UIButton*)sender).frame withAnimType:kAnimTypeZoomIn];
+    else if( ((UIButton*)sender).tag == 1 && [_paintingNameStr isEqualToString:kPaintingNameTemple])
+        [self.delegate transitionFromController:self toPaintingNamed:kPaintingNameTempleNY fromButtonRect:((UIButton*)sender).frame withAnimType:kAnimTypeZoomIn];
 }
 
 -(int)calcCurrentPaintingIndex

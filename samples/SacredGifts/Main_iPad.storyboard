@@ -740,6 +740,39 @@
                                     <outletCollection property="gestureRecognizers" destination="ZV3-Kv-dqN" appends="YES" id="nSd-f1-aqO"/>
                                 </connections>
                             </imageView>
+                            <view hidden="YES" contentMode="scaleToFill" id="bc8-CD-nQS" userLabel="Temple Buttons View">
+                                <rect key="frame" x="230" y="132" width="309" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7eN-k3-BOD">
+                                        <rect key="frame" x="0.0" y="0.0" width="151" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" image="sg_temple_btn_1880.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="sg_temple_btn_1880-on.png"/>
+                                        <state key="highlighted" image="sg_temple_btn_1880-on.png"/>
+                                        <connections>
+                                            <action selector="pressedTempleToggle:" destination="4y1-Fu-WWq" eventType="touchUpInside" id="Fd1-rO-tmz"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="8Dl-fj-9gZ">
+                                        <rect key="frame" x="159" y="0.0" width="150" height="48"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <state key="normal" image="sg_temple_btn_later.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="selected" image="sg_temple_btn_later-on.png"/>
+                                        <state key="highlighted" image="sg_temple_btn_later-on.png"/>
+                                        <connections>
+                                            <action selector="pressedTempleToggle:" destination="4y1-Fu-WWq" eventType="touchUpInside" id="KY9-yN-yKb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                             <view contentMode="scaleToFill" id="qR1-fw-PT0" userLabel="FooterView">
                                 <rect key="frame" x="0.0" y="954" width="768" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -770,6 +803,9 @@
                     <connections>
                         <outlet property="footerView" destination="qR1-fw-PT0" id="qe0-Bk-vWI"/>
                         <outlet property="paintingImageView" destination="VdB-kg-beo" id="iKZ-SE-Oxe"/>
+                        <outlet property="templeBtn1880" destination="7eN-k3-BOD" id="Pqx-Xu-4Gj"/>
+                        <outlet property="templeBtnLater" destination="8Dl-fj-9gZ" id="srv-qE-HVJ"/>
+                        <outlet property="templeButtonsView" destination="bc8-CD-nQS" id="ULP-zU-0Cr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ObG-bp-XU0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1538,8 +1574,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="SG_General_BackBtn-on.png" width="140" height="56"/>
-        <image name="SG_General_BackBtn.png" width="140" height="56"/>
+        <image name="SG_General_BackBtn-on.png" width="122" height="41"/>
+        <image name="SG_General_BackBtn.png" width="122" height="41"/>
         <image name="SG_General_HomeBtn-on.png" width="200" height="56"/>
         <image name="SG_General_HomeBtn.png" width="200" height="56"/>
         <image name="SG_General_Media_Playbar.png" width="387" height="9"/>
@@ -1551,8 +1587,8 @@
         <image name="SG_General_Music_PlayPause.png" width="41" height="42"/>
         <image name="SG_General_Painting_ShareBtn-on.png" width="100" height="70"/>
         <image name="SG_General_Painting_ShareBtn.png" width="100" height="70"/>
-        <image name="SG_General_ScanBtn-on.png" width="75" height="56"/>
-        <image name="SG_General_ScanBtn.png" width="75" height="56"/>
+        <image name="SG_General_ScanBtn-on.png" width="41" height="41"/>
+        <image name="SG_General_ScanBtn.png" width="41" height="41"/>
         <image name="SG_General_Share_email-on.png" width="244" height="41"/>
         <image name="SG_General_Share_email.png" width="244" height="41"/>
         <image name="SG_General_Share_fb-on.png" width="244" height="41"/>
@@ -1643,6 +1679,10 @@
         <image name="sg_home_reservationbtn.png" width="768" height="205"/>
         <image name="sg_home_schwartzbtn-on.png" width="768" height="205"/>
         <image name="sg_home_schwartzbtn.png" width="768" height="205"/>
+        <image name="sg_temple_btn_1880-on.png" width="151" height="48"/>
+        <image name="sg_temple_btn_1880.png" width="151" height="48"/>
+        <image name="sg_temple_btn_later-on.png" width="150" height="48"/>
+        <image name="sg_temple_btn_later.png" width="150" height="48"/>
         <image name="speaker_btns__narration_btn-on.png" width="71" height="71"/>
         <image name="speaker_btns__narration_btn.png" width="71" height="71"/>
         <image name="splash_artists.png" width="312" height="303"/>

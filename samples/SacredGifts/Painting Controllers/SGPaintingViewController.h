@@ -25,9 +25,13 @@
 @property (weak, nonatomic) IBOutlet UIView *headerView;
 @property (nonatomic) float frameOverlayDelay;
 @property (nonatomic) int currentPaintingIndex;
+@property (weak, nonatomic) IBOutlet UIView *templeButtonsView;
+@property (weak, nonatomic) IBOutlet UIButton *templeBtn1880;
+@property (weak, nonatomic) IBOutlet UIButton *templeBtnLater;
 
 -(void)configWithPaintingName:(NSString *)paintingStr;
 
 - (IBAction)swipeRecognized:(UISwipeGestureRecognizer *)sender;
+- (IBAction)pressedTempleToggle:(id)sender;
 
 @end
