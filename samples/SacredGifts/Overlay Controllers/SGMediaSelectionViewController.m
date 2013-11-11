@@ -16,6 +16,7 @@
 const int kVideoStartPositionY = -80;
 const int kIncreasedVideoOffset = 260;
 const int kAudioStartPositionY = 160;
+const int kTextStartPositionY = 102;
 
 @interface SGMediaSelectionViewController()
 - (SGOverlayViewController*)addChildOverlay: (NSString*)moduleStr;
@@ -64,9 +65,27 @@ const int kAudioStartPositionY = 160;
 
 -(void)loadTextWithFolderPath:(NSString *)textFolderPath
 {
-    SGOverlayViewController* overlay = [self.delegate overlay:self triggersNewOverlayName:(NSString*)kTextStr];
+    SGOverlayViewController* overlay = [self addChildOverlay:kTextStr];
+    overlay.delegate = self;
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:textFolderPath];
     [overlay addBackgroundImgWithPath:overlayPath];
+    
+    UIView* blurredBacking = [self addBlurredBackingForChildView];
+    
+    //Calc offset is 102
+    //Text height: 320
+    //Persp height: 262
+    //Try: textHeight - perspectiveHeight + 44
+    //CGPoint center = CGPointMake(768/2, 102);
+    //self.childOverlay.view.center = center;
+    //blurredBacking.center = center;
+    
+    //Persp Pos.y + Persp.height - overlay.height
+    
+    CGRect frame = self.childOverlay.view.frame;
+    frame.origin.y = self.view.frame.size.height - self.childOverlay.view.frame.size.height;
+    self.childOverlay.view.frame = frame;
+    blurredBacking.frame = frame;
 }
 
 -(SGOverlayViewController*)addChildOverlay:(NSString *)moduleStr
