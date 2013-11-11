@@ -9,5 +9,6 @@
 #import "SGArtistViewController.h"
 
 @interface SGBlochViewController : SGArtistViewController
+- (IBAction)pressedCastle:(UIButton *)sender;
 
 @end

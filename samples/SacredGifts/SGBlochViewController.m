@@ -7,6 +7,7 @@
 //
 
 #import "SGBlochViewController.h"
+#import "SGConstants.h"
 
 @interface SGBlochViewController ()
 
@@ -28,4 +29,8 @@
     _narrationStr = @"Bloch Bio.mp3";
 }
 
+- (IBAction)pressedCastle:(UIButton *)sender
+{
+    [self.delegate transitionFromController:self toPaintingNamed:@"castle" fromButtonRect:sender.frame withAnimType:kAnimTypeZoomIn];
+}
 @end
