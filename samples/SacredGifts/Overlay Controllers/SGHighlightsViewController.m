@@ -9,6 +9,7 @@
 #import "SGHighlightsViewController.h"
 #import "SGPanoramaOverlayViewController.h"
 #import "SGOverlayView.h"
+#import "SGBlurManager.h"
 
 @interface SGHighlightsViewController()
 
@@ -80,6 +81,17 @@
     UIImageView *highlightImgView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:highlightImgPath]];
     [self.currentHighlightView addSubview:highlightImgView];
     highlightImgView.center = self.currentHighlightView.center;
+    
+    //Accessing BlurManager
+    SGBlurManager* blurManager = [SGBlurManager sharedManager];
+    NSString* highlightBlurImgPath = [[NSBundle mainBundle] pathForResource:@"highlight-blur" ofType:@"png" inDirectory:btnFolderPath];
+    [blurManager setBlurImageWithPath:highlightBlurImgPath];
+    UIView* blurBacking = [blurManager blurBackingForView:self.childOverlay.view];
+    [self.currentHighlightView addSubview:blurBacking];
+    //blurBacking.center = [self.currentHighlightView convertPoint:self.childOverlay.view.center toView:self.view];
+    CGRect frame = self.childOverlay.view.frame;
+    frame.origin.y -= 131;
+    blurBacking.frame = frame;
     
      self.currentHighlightView.alpha = 0;
     [UIView animateWithDuration:0.25 animations:^{
