@@ -134,12 +134,17 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
         {
             ModuleType moduleType = [self getModuleTypeForStr:buttonTypeStr];
             UIButton* overlayBtn = [self footerBtnForTag:moduleType];
-            int offset = kGeneralButtonWidth;
-            if( moduleType == kModuleTypePerspective )      offset = kPerspectivesButtonWidth;
-            else if( moduleType == kSummaryButtonWidth )    offset = kSummaryButtonWidth;
-            _currentFooterBtnX += offset;
-            overlayBtn.center = CGPointMake(_currentFooterBtnX, kFooterBtnY);
+            //int offset = kGeneralButtonWidth;
+            //if( moduleType == kModuleTypePerspective )      offset = kPerspectivesButtonWidth;
+            //else if( moduleType == kSummaryButtonWidth )    offset = kSummaryButtonWidth;
+            //_currentFooterBtnX += offset;
+            //overlayBtn.center = CGPointMake(_currentFooterBtnX, kFooterBtnY);
+            //overlayBtn.center = CGPointMake(_currentFooterBtnX, kFooterBtnY);
+            CGRect frame = overlayBtn.frame;
+            frame.origin.x = _currentFooterBtnX;
+            overlayBtn.frame = frame;
             [self.footerView addSubview:overlayBtn];
+            _currentFooterBtnX += overlayBtn.frame.size.width;
         }
     }
 }
