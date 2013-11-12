@@ -110,8 +110,8 @@
     BOOL isTransitionToPainting = [toController.restorationIdentifier isEqualToString:(NSString*)kControllerIDPaintingContainerStr];
 
     __weak typeof(self) weakSelf = self;
-    animTransitionBlock = ^(void){
-        //newC.view.frame = self.view.frame;
+    animTransitionBlock = ^(void)
+    {
         toController.view.alpha = 1;
         [weakSelf.view bringSubviewToFront:weakSelf.headerView];
         [weakSelf.view bringSubviewToFront:weakSelf.footerView];
@@ -120,9 +120,11 @@
     
     [self cycleFromViewController:fromController toViewController:toController fromButtonRect:frame falling:animType];
     
-    //NEW
     if (!isTransitionToPainting)
+    {
         self.headerView.backgroundColor = [UIColor clearColor];
+        self.headerBlurDecoy.backgroundColor = [UIColor clearColor];
+    }
 
     [UIView animateWithDuration:0.25 animations:^{
         if( [self.currentContentController.restorationIdentifier isEqualToString:@"bloch"]
@@ -137,9 +139,15 @@
             self.headerBGImgView.alpha = 1;
         
         if ([toController.restorationIdentifier isEqualToString:(NSString*)kPanoramaStr])
+        {
             self.headerView.alpha = 0;
+            self.headerBlurDecoy.alpha = 0;
+        }
         else
+        {
             self.headerView.alpha = 1;
+            self.headerBlurDecoy.alpha = 1;
+        }
     }];
     
     return toController;
@@ -156,7 +164,8 @@
     
     self.headerBGImgView.alpha = 0;
     [UIView animateWithDuration:0.25 animations:^{
-        self.headerView.backgroundColor = [UIColor blackColor];
+        //self.headerView.backgroundColor = [UIColor blackColor];
+        self.headerBlurDecoy.backgroundColor = [UIColor blackColor];
     }];
 }
 
@@ -175,6 +184,7 @@
         self.scanController = nil;
         self.footerView.alpha = _footerLastAlpha;
         self.headerView.alpha = 1;
+        self.headerBlurDecoy.alpha = 1;
     }
     else
     {
@@ -183,6 +193,7 @@
         _footerLastAlpha = self.footerView.alpha;
         self.footerView.alpha = 0;
         self.headerView.alpha = 0;
+        self.headerBlurDecoy.alpha = 0;
     }
 }
 
