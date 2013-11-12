@@ -349,6 +349,9 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
             NSString* paintingPath = [[NSBundle mainBundle] pathForResource:@"childrens" ofType:@".png" inDirectory:paintingDir];
             [((SGChildrensOverlayViewController*)self.overlayController) addBackgroundImgWithPath:paintingPath forgroundImage:self.paintingImageView.image];
             [((SGChildrensOverlayViewController*)self.overlayController) configureWithPath:self.overlayController.rootFolderPath];
+            [UIView animateWithDuration:0.25 animations:^{
+                self.templeButtonsView.alpha = 0;
+            }];
         }
             break;
         case kModuleTypeHighlights:
@@ -404,6 +407,13 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
     self.overlayController = nil;
     SGNarrationManager* narrationManager = [SGNarrationManager sharedManager];
     [narrationManager pauseAudio];
+    
+    if ([_paintingNameStr isEqualToString:kPaintingNameTemple] ||
+        [_paintingNameStr isEqualToString:kPaintingNameTempleNY]) {
+        [UIView animateWithDuration:0.25 animations:^{
+            self.templeButtonsView.alpha = 1;
+        }];
+    }
 }
 
 -(void)paintingTapped:(SGPaintingImageView *)paintingView
