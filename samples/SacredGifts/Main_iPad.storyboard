@@ -1582,6 +1582,7 @@
                     <connections>
                         <outlet property="playOverlay" destination="jmm-CE-Jad" id="Gox-47-NiH"/>
                         <outlet property="playPauseButton" destination="eYk-zX-kjK" id="XWh-m1-JyR"/>
+                        <outlet property="playUnderlay" destination="M97-QK-A5V" id="GLa-lz-akl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Syu-gM-nxb" userLabel="First Responder" sceneMemberID="firstResponder"/>

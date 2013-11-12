@@ -89,11 +89,12 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
     _currentFooterBtnX = -kGeneralButtonWidth / 2;
     [self addFooterButtonsForPainting:_paintingNameStr];
     self.overlayController.closeButton.hidden = YES;
+    _tombstoneShown = YES;
 }
 
 - (IBAction)swipeRecognized:(UISwipeGestureRecognizer *)sender
 {
-    if( self.overlayController == nil ) return;
+    if( !_tombstoneShown ) return;
     
     NSString* swipeDir = (NSString*)kAnimTypeSwipeLeft;
     int nextPaintingIndex = self.currentPaintingIndex + 1;

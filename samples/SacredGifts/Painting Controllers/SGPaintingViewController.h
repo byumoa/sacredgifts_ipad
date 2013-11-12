@@ -16,6 +16,7 @@
     CGRect _lastPortraitFrame;
     NSString* _paintingNameStr;
     int _currentFooterBtnX;
+    BOOL _tombstoneShown;
 }
 
 @property (weak, nonatomic) IBOutlet SGPaintingImageView *paintingImageView;

@@ -14,6 +14,7 @@
     SGAbstractAudioManager* _audioManager;
 }
 @property (weak, nonatomic) IBOutlet UIImageView *playOverlay;
+@property (weak, nonatomic) IBOutlet UIImageView *playUnderlay;
 @property (weak, nonatomic) IBOutlet UIButton *playPauseButton;
 
 - (IBAction)pressedPlayPause:(id)sender;

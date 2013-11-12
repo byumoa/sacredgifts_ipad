@@ -14,6 +14,4 @@
     SGNarrationManager* _narrationManager;
 }
 
-- (void)configureAudioWithPath: (NSString*)rootFolderPath;
-
 @end
