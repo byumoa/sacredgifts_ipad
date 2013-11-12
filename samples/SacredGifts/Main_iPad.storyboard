@@ -862,6 +862,14 @@
                                     <action selector="pressedNarration:" destination="wQF-Fi-40D" eventType="touchUpInside" id="UMX-rL-S4P"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="UWd-vM-cfg">
+                                <rect key="frame" x="0.0" y="483" width="768" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="SG_General_painting-castleBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="SG_General_painting-castleBtn-on.png"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
@@ -1258,7 +1266,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="artists_pages_bloch_overlay.png" id="nYs-UR-Zbq">
-                                        <rect key="frame" x="0.0" y="96" width="768" height="784"/>
+                                        <rect key="frame" x="0.0" y="96" width="768" height="782"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="h94-0a-9Ax">
@@ -1277,11 +1285,11 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <view contentMode="scaleToFill" id="fmS-Dv-eTN" userLabel="Blochs">
-                                        <rect key="frame" x="32" y="870" width="728" height="379"/>
+                                        <rect key="frame" x="32" y="878" width="728" height="371"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4rE-gX-Tw0">
-                                                <rect key="frame" x="605" y="50" width="123" height="164"/>
+                                                <rect key="frame" x="605" y="42" width="123" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="painting_thumb_children.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1292,7 +1300,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9Ok-qq-YRa">
-                                                <rect key="frame" x="121" y="50" width="123" height="164"/>
+                                                <rect key="frame" x="121" y="42" width="123" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="painting_thumb_consolator.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1303,7 +1311,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VgE-n8-lBL">
-                                                <rect key="frame" x="242" y="50" width="123" height="164"/>
+                                                <rect key="frame" x="242" y="42" width="123" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="painting_thumb_emmaus.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1314,7 +1322,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CXk-sc-rL2">
-                                                <rect key="frame" x="0.0" y="50" width="123" height="164"/>
+                                                <rect key="frame" x="0.0" y="42" width="123" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="painting_thumb_mocking.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1325,7 +1333,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Q5t-Dw-caX">
-                                                <rect key="frame" x="363" y="50" width="123" height="164"/>
+                                                <rect key="frame" x="363" y="42" width="123" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="painting_thumb_sermon.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1336,7 +1344,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="I4s-0m-mxE">
-                                                <rect key="frame" x="484" y="50" width="123" height="164"/>
+                                                <rect key="frame" x="484" y="42" width="123" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="painting_thumb_shepherds.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1347,7 +1355,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4Qt-oK-whw">
-                                                <rect key="frame" x="484" y="215" width="123" height="164"/>
+                                                <rect key="frame" x="484" y="207" width="123" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="painting_thumb_burial.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1358,7 +1366,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="D4q-N1-Dgy">
-                                                <rect key="frame" x="121" y="215" width="123" height="164"/>
+                                                <rect key="frame" x="121" y="207" width="123" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="painting_thumb_cleansing.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1369,7 +1377,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="frW-Ki-udA">
-                                                <rect key="frame" x="363" y="215" width="123" height="164"/>
+                                                <rect key="frame" x="363" y="207" width="123" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="painting_thumb_cross.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1380,7 +1388,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="g7r-MV-q82">
-                                                <rect key="frame" x="0.0" y="215" width="123" height="164"/>
+                                                <rect key="frame" x="0.0" y="207" width="123" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="painting_thumb_healing.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1391,7 +1399,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="19" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="DD6-yI-1OJ">
-                                                <rect key="frame" x="605" y="215" width="123" height="164"/>
+                                                <rect key="frame" x="605" y="207" width="123" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="painting_thumb_resurrection.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1402,7 +1410,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="EKE-Qk-rvJ">
-                                                <rect key="frame" x="242" y="215" width="123" height="164"/>
+                                                <rect key="frame" x="242" y="207" width="123" height="164"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" image="painting_thumb_denial.png">
                                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1416,7 +1424,7 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="saU-vB-di2">
-                                        <rect key="frame" x="601" y="147" width="58" height="30"/>
+                                        <rect key="frame" x="586" y="147" width="58" height="30"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" title="CASTLE">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1655,12 +1663,23 @@
         <image name="SG_General_HomeBtn-on.png" width="200" height="56"/>
         <image name="SG_General_HomeBtn.png" width="200" height="56"/>
         <image name="SG_General_Media_Playbar.png" width="387" height="9"/>
+        <image name="SG_General_Media_Playbar.png" width="387" height="9"/>
+        <image name="SG_General_Media_Playbar.png" width="387" height="9"/>
+        <image name="SG_General_Media_Playbar_Overlay.png" width="387" height="9"/>
+        <image name="SG_General_Media_Playbar_Overlay.png" width="387" height="9"/>
         <image name="SG_General_Media_Playbar_Overlay.png" width="387" height="9"/>
         <image name="SG_General_ModuleButtonBar.png" width="768" height="70"/>
         <image name="SG_General_Module_CloseBtn-on.png" width="41" height="41"/>
+        <image name="SG_General_Module_CloseBtn-on.png" width="41" height="41"/>
+        <image name="SG_General_Module_CloseBtn.png" width="41" height="41"/>
         <image name="SG_General_Module_CloseBtn.png" width="41" height="41"/>
         <image name="SG_General_Music_PlayPause-on.png" width="42" height="42"/>
+        <image name="SG_General_Music_PlayPause-on.png" width="42" height="42"/>
+        <image name="SG_General_Music_PlayPause-on.png" width="42" height="42"/>
         <image name="SG_General_Music_PlayPause.png" width="41" height="42"/>
+        <image name="SG_General_Music_PlayPause.png" width="41" height="42"/>
+        <image name="SG_General_Music_PlayPause.png" width="41" height="42"/>
+        <image name="SG_General_Painting_ShareBtn-on.png" width="100" height="70"/>
         <image name="SG_General_Painting_ShareBtn-on.png" width="100" height="70"/>
         <image name="SG_General_Painting_ShareBtn.png" width="100" height="70"/>
         <image name="SG_General_ScanBtn-on.png" width="41" height="41"/>
@@ -1677,10 +1696,14 @@
         <image name="SG_General_Share_tw.png" width="244" height="41"/>
         <image name="SG_General_TopBar.png" width="768" height="62"/>
         <image name="SG_General_header_thanks.png" width="200" height="41"/>
+        <image name="SG_General_painting-castleBtn-on.png" width="768" height="41"/>
+        <image name="SG_General_painting-castleBtn.png" width="768" height="41"/>
         <image name="SG_General_window_closeBtn-on.png" width="102" height="70"/>
         <image name="SG_General_window_closeBtn.png" width="102" height="70"/>
         <image name="SG_Home_SplashScreen.png" width="768" height="1024"/>
         <image name="aalborg.png" width="800" height="400"/>
+        <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
+        <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
         <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
         <image name="artists_pages_bloch_overlay.png" width="768" height="784"/>
         <image name="artists_pages_hofmann_overlay.png" width="769" height="959"/>
@@ -1690,43 +1713,83 @@
         <image name="exhibition_donors_overlay.png" width="769" height="471"/>
         <image name="exhibition_story_overlay.png" width="769" height="463"/>
         <image name="painting_thumb_aalborg-on.png" width="123" height="164"/>
+        <image name="painting_thumb_aalborg-on.png" width="123" height="164"/>
+        <image name="painting_thumb_aalborg.png" width="123" height="164"/>
         <image name="painting_thumb_aalborg.png" width="123" height="164"/>
         <image name="painting_thumb_burial-on.png" width="123" height="164"/>
+        <image name="painting_thumb_burial-on.png" width="123" height="164"/>
+        <image name="painting_thumb_burial.png" width="123" height="164"/>
         <image name="painting_thumb_burial.png" width="123" height="164"/>
         <image name="painting_thumb_capture-on.png" width="123" height="164"/>
+        <image name="painting_thumb_capture-on.png" width="123" height="164"/>
+        <image name="painting_thumb_capture.png" width="123" height="164"/>
         <image name="painting_thumb_capture.png" width="123" height="164"/>
         <image name="painting_thumb_children-on.png" width="123" height="164"/>
+        <image name="painting_thumb_children-on.png" width="123" height="164"/>
+        <image name="painting_thumb_children.png" width="123" height="164"/>
         <image name="painting_thumb_children.png" width="123" height="164"/>
         <image name="painting_thumb_cleansing-on.png" width="123" height="164"/>
+        <image name="painting_thumb_cleansing-on.png" width="123" height="164"/>
+        <image name="painting_thumb_cleansing.png" width="123" height="164"/>
         <image name="painting_thumb_cleansing.png" width="123" height="164"/>
         <image name="painting_thumb_consolator-on.png" width="123" height="164"/>
+        <image name="painting_thumb_consolator-on.png" width="123" height="164"/>
+        <image name="painting_thumb_consolator.png" width="123" height="164"/>
         <image name="painting_thumb_consolator.png" width="123" height="164"/>
         <image name="painting_thumb_cross-on.png" width="123" height="164"/>
+        <image name="painting_thumb_cross-on.png" width="123" height="164"/>
+        <image name="painting_thumb_cross.png" width="123" height="164"/>
         <image name="painting_thumb_cross.png" width="123" height="164"/>
         <image name="painting_thumb_denial-on.png" width="123" height="164"/>
+        <image name="painting_thumb_denial-on.png" width="123" height="164"/>
+        <image name="painting_thumb_denial.png" width="123" height="164"/>
         <image name="painting_thumb_denial.png" width="123" height="164"/>
         <image name="painting_thumb_emmaus-on.png" width="123" height="164"/>
+        <image name="painting_thumb_emmaus-on.png" width="123" height="164"/>
+        <image name="painting_thumb_emmaus.png" width="123" height="164"/>
         <image name="painting_thumb_emmaus.png" width="123" height="164"/>
         <image name="painting_thumb_garden-on.png" width="123" height="164"/>
+        <image name="painting_thumb_garden-on.png" width="123" height="164"/>
+        <image name="painting_thumb_garden.png" width="123" height="164"/>
         <image name="painting_thumb_garden.png" width="123" height="164"/>
         <image name="painting_thumb_gethsemane-on.png" width="123" height="164"/>
+        <image name="painting_thumb_gethsemane-on.png" width="123" height="164"/>
+        <image name="painting_thumb_gethsemane.png" width="123" height="164"/>
         <image name="painting_thumb_gethsemane.png" width="123" height="164"/>
         <image name="painting_thumb_healing-on.png" width="123" height="164"/>
+        <image name="painting_thumb_healing-on.png" width="123" height="164"/>
+        <image name="painting_thumb_healing.png" width="123" height="164"/>
         <image name="painting_thumb_healing.png" width="123" height="164"/>
         <image name="painting_thumb_mocking-on.png" width="123" height="164"/>
+        <image name="painting_thumb_mocking-on.png" width="123" height="164"/>
+        <image name="painting_thumb_mocking.png" width="123" height="164"/>
         <image name="painting_thumb_mocking.png" width="123" height="164"/>
         <image name="painting_thumb_resurrection-on.png" width="123" height="164"/>
+        <image name="painting_thumb_resurrection-on.png" width="123" height="164"/>
+        <image name="painting_thumb_resurrection.png" width="123" height="164"/>
         <image name="painting_thumb_resurrection.png" width="123" height="164"/>
         <image name="painting_thumb_ruler-on.png" width="123" height="164"/>
+        <image name="painting_thumb_ruler-on.png" width="123" height="164"/>
+        <image name="painting_thumb_ruler.png" width="123" height="164"/>
         <image name="painting_thumb_ruler.png" width="123" height="164"/>
         <image name="painting_thumb_savior-on.png" width="123" height="164"/>
+        <image name="painting_thumb_savior-on.png" width="123" height="164"/>
+        <image name="painting_thumb_savior.png" width="123" height="164"/>
         <image name="painting_thumb_savior.png" width="123" height="164"/>
         <image name="painting_thumb_sermon-on.png" width="123" height="164"/>
+        <image name="painting_thumb_sermon-on.png" width="123" height="164"/>
+        <image name="painting_thumb_sermon.png" width="123" height="164"/>
         <image name="painting_thumb_sermon.png" width="123" height="164"/>
         <image name="painting_thumb_shepherds-on.png" width="123" height="164"/>
+        <image name="painting_thumb_shepherds-on.png" width="123" height="164"/>
+        <image name="painting_thumb_shepherds.png" width="123" height="164"/>
         <image name="painting_thumb_shepherds.png" width="123" height="164"/>
         <image name="painting_thumb_temple-on.png" width="123" height="164"/>
+        <image name="painting_thumb_temple-on.png" width="123" height="164"/>
         <image name="painting_thumb_temple.png" width="123" height="164"/>
+        <image name="painting_thumb_temple.png" width="123" height="164"/>
+        <image name="paintings_text.png" width="101" height="41"/>
+        <image name="paintings_text.png" width="101" height="41"/>
         <image name="paintings_text.png" width="101" height="41"/>
         <image name="sg_home_bg-exhibition.png" width="804" height="1060"/>
         <image name="sg_home_bg-findpainting.png" width="804" height="1060"/>
@@ -1760,10 +1823,19 @@
         <image name="sg_home_schwartzbtn-on.png" width="768" height="205"/>
         <image name="sg_home_schwartzbtn.png" width="768" height="205"/>
         <image name="sg_temple_btn_1880-on.png" width="151" height="48"/>
+        <image name="sg_temple_btn_1880-on.png" width="151" height="48"/>
         <image name="sg_temple_btn_1880.png" width="151" height="48"/>
+        <image name="sg_temple_btn_later-on.png" width="150" height="48"/>
         <image name="sg_temple_btn_later-on.png" width="150" height="48"/>
         <image name="sg_temple_btn_later.png" width="150" height="48"/>
         <image name="speaker_btns__narration_btn-on.png" width="71" height="71"/>
+        <image name="speaker_btns__narration_btn-on.png" width="71" height="71"/>
+        <image name="speaker_btns__narration_btn-on.png" width="71" height="71"/>
+        <image name="speaker_btns__narration_btn-on.png" width="71" height="71"/>
+        <image name="speaker_btns__narration_btn-on.png" width="71" height="71"/>
+        <image name="speaker_btns__narration_btn.png" width="71" height="71"/>
+        <image name="speaker_btns__narration_btn.png" width="71" height="71"/>
+        <image name="speaker_btns__narration_btn.png" width="71" height="71"/>
         <image name="speaker_btns__narration_btn.png" width="71" height="71"/>
         <image name="splash_artists.png" width="312" height="303"/>
         <image name="splash_donors.png" width="768" height="395"/>

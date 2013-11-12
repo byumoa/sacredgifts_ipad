@@ -86,7 +86,7 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
     NSString *blurredPaintingPath = [[NSBundle mainBundle] pathForResource:@"MainPainting Blurred" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, _paintingNameStr]];
     [self.delegate contentController:self viewsForBlurredBacking:blurredViews blurredImgPath:blurredPaintingPath];
     
-    _currentFooterBtnX = -kGeneralButtonWidth / 2;
+    _currentFooterBtnX = 0;
     [self addFooterButtonsForPainting:_paintingNameStr];
     self.overlayController.closeButton.hidden = YES;
     _tombstoneShown = YES;
@@ -134,12 +134,6 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
         {
             ModuleType moduleType = [self getModuleTypeForStr:buttonTypeStr];
             UIButton* overlayBtn = [self footerBtnForTag:moduleType];
-            //int offset = kGeneralButtonWidth;
-            //if( moduleType == kModuleTypePerspective )      offset = kPerspectivesButtonWidth;
-            //else if( moduleType == kSummaryButtonWidth )    offset = kSummaryButtonWidth;
-            //_currentFooterBtnX += offset;
-            //overlayBtn.center = CGPointMake(_currentFooterBtnX, kFooterBtnY);
-            //overlayBtn.center = CGPointMake(_currentFooterBtnX, kFooterBtnY);
             CGRect frame = overlayBtn.frame;
             frame.origin.x = _currentFooterBtnX;
             overlayBtn.frame = frame;
