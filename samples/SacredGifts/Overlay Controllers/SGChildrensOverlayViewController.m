@@ -116,8 +116,16 @@ NSString* const kArtistInstructionStr = @"childrens_%@_prompt.png";
     return sqrtf((pt1.x-pt2.x)*(pt1.x-pt2.x) + (pt1.y-pt2.y)*(pt1.y-pt2.y));
 }
 
--(void)prepareForMediaStart{}
+-(void)prepareForMediaStart
+{
+    for( UIButton* button in _buttons )
+        button.hidden = YES;
+}
 
--(void)prepareForMediaEnd{}
+-(void)prepareForMediaEnd
+{
+    for( UIButton* button in _buttons )
+        button.hidden = NO;
+}
 
 @end

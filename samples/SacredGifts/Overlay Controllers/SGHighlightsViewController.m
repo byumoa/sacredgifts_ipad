@@ -83,6 +83,11 @@
 
 -(void)prepareForMediaStart
 {
+    [UIView animateWithDuration:0.25 animations:^{
+        for( UIButton* button in _buttons )
+            button.alpha = 0;
+    }];
+    
     NSString* detailImgPath = [[NSBundle mainBundle] pathForResource:@"highlight" ofType:@"png" inDirectory:self.childOverlay.rootFolderPath];
     UIImageView* highlightImgView = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:detailImgPath]];
     [self.view addSubview:highlightImgView];
