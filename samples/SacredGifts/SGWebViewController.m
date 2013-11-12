@@ -8,31 +8,54 @@
 
 #import "SGWebViewController.h"
 
-@interface SGWebViewController ()
+NSString* const kThanksURLStr = @"http://sacredgifts.byu.edu/say-thank-you/?inapp=true";
+NSString* const kTicketsURLStr = @"http://sacredgifts.byu.edu/tickets/?inapp=true";
+NSString* const kFeedbackURLStr = @"https://byu.qualtrics.com/SE/?SID=SV_2ivOxPx1IY5WUw5";
 
-@end
+NSString* const kThanksImgStr = @"SG_General_header_thanks.png";
+NSString* const kTicketsImgStr = @"SG_General_header_reserve.png";
+NSString* const kFeedbackImgStr = @"SG_General_header_feedback.png";
 
 @implementation SGWebViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+-(void)configureWebpageFor:(WebpageType)webpageType
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+    NSString* urlStr = @"";
+    NSString* headerImgStr = @"";
+    
+    switch (webpageType) {
+        case webPageTypeThanks:
+            urlStr = kThanksURLStr;
+            headerImgStr = kThanksImgStr;
+            break;
+        case webpageTypeFeedback:
+            urlStr = kFeedbackURLStr;
+            headerImgStr = kFeedbackImgStr;
+            break;
+        case webPageTypeTickets:
+            urlStr = kTicketsURLStr;
+            headerImgStr = kTicketsImgStr;
+            break;
+        default:
+            break;
     }
-    return self;
+    
+    self.webHeaderImgView.image = [UIImage imageNamed:headerImgStr];
+    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
 }
 
-- (void)viewDidLoad
+-(void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    [super viewDidLoad];
-	// Do any additional setup after loading the view.
+    [self.activityIndicator stopAnimating];
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)pressedClose:(UIButton *)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    
 }
 
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)erro{
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:@"We could not reach the internet at this time" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+}
 @end

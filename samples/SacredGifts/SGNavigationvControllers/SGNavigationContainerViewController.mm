@@ -10,6 +10,7 @@
 #import "SGPaintingContainerViewController.h"
 #import "SGContentViewController.h"
 #import "SGPaintingViewController.h"
+#import "SGWebViewController.h"
 
 @interface SGNavigationContainerViewController ()
 - (void)pressedWebViewBack: (id)sender;
@@ -62,7 +63,8 @@
 
 -(void)pressedFeedback:(UIButton *)sender
 {
-    
+    SGWebViewController* webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"web"];
+    [webViewController configureWebpageFor:webpageTypeFeedback];
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
@@ -70,17 +72,7 @@
     [self.activityIndicator stopAnimating];
 }
 
--(void)webViewDidStartLoad:(UIWebView *)webView
-{
-    self.activityIndicator = [UIActivityIndicatorView new];
-    self.activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyleGray;
-    self.activityIndicator.hidesWhenStopped = YES;
-    [self.activityIndicator startAnimating];
-    self.activityIndicator.center = CGPointMake(webView.frame.size.width/2, webView.frame.size.height/2);
-    [webView addSubview:self.activityIndicator];
-}
-
--(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)erro{
+-(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     [self dismissWebview];
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:@"We could not reach the internet at this time" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];

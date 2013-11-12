@@ -8,6 +8,17 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SGWebViewController : UIViewController
+typedef enum
+{
+    webPageTypeThanks,
+    webPageTypeTickets,
+    webpageTypeFeedback
+}WebpageType;
 
+@interface SGWebViewController : UIViewController <UIWebViewDelegate>
+@property (weak, nonatomic) IBOutlet UIImageView *webHeaderImgView;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
+- (IBAction)pressedClose:(UIButton *)sender;
+- (void)configureWebpageFor: (WebpageType)webpageType;
 @end
