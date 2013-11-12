@@ -51,7 +51,7 @@
     
     //Position close btn in top right corner
     if( self.closeButton )
-    self.closeButton.center = CGPointMake(self.view.frame.size.width - 15, 15);
+    self.closeButton.center = CGPointMake(self.view.frame.size.width - 20, 20);
 }
 
 - (void)viewDidLoad

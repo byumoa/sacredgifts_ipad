@@ -88,6 +88,7 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
     
     _currentFooterBtnX = -kGeneralButtonWidth / 2;
     [self addFooterButtonsForPainting:_paintingNameStr];
+    self.overlayController.closeButton.hidden = YES;
 }
 
 - (IBAction)swipeRecognized:(UISwipeGestureRecognizer *)sender

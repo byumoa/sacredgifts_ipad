@@ -73,6 +73,10 @@
 		61267B831819667B00A52CC5 /* splash_artists@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61267B7F1819667B00A52CC5 /* splash_artists@2x.png */; };
 		61267B841819667B00A52CC5 /* splash_donors.png in Resources */ = {isa = PBXBuildFile; fileRef = 61267B801819667B00A52CC5 /* splash_donors.png */; };
 		61267B851819667B00A52CC5 /* splash_donors@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61267B811819667B00A52CC5 /* splash_donors@2x.png */; };
+		613292E218325C9E00551F09 /* SG_General_painting-castleBtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 613292DE18325C9E00551F09 /* SG_General_painting-castleBtn-on.png */; };
+		613292E318325C9E00551F09 /* SG_General_painting-castleBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 613292DF18325C9E00551F09 /* SG_General_painting-castleBtn-on@2x.png */; };
+		613292E418325C9E00551F09 /* SG_General_painting-castleBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 613292E018325C9E00551F09 /* SG_General_painting-castleBtn.png */; };
+		613292E518325C9E00551F09 /* SG_General_painting-castleBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 613292E118325C9E00551F09 /* SG_General_painting-castleBtn@2x.png */; };
 		614C01021824247600333698 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 614C01011824247600333698 /* Social.framework */; };
 		614C01041824247D00333698 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 614C01031824247D00333698 /* MessageUI.framework */; };
 		614E3C9A180D8D9C002E875B /* SacredGifts.dat in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C98180D8D9C002E875B /* SacredGifts.dat */; };
@@ -529,6 +533,10 @@
 		61267B7F1819667B00A52CC5 /* splash_artists@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_artists@2x.png"; sourceTree = "<group>"; };
 		61267B801819667B00A52CC5 /* splash_donors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_donors.png; sourceTree = "<group>"; };
 		61267B811819667B00A52CC5 /* splash_donors@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_donors@2x.png"; sourceTree = "<group>"; };
+		613292DE18325C9E00551F09 /* SG_General_painting-castleBtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-on.png"; sourceTree = "<group>"; };
+		613292DF18325C9E00551F09 /* SG_General_painting-castleBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-on@2x.png"; sourceTree = "<group>"; };
+		613292E018325C9E00551F09 /* SG_General_painting-castleBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn.png"; sourceTree = "<group>"; };
+		613292E118325C9E00551F09 /* SG_General_painting-castleBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn@2x.png"; sourceTree = "<group>"; };
 		614C01011824247600333698 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		614C01031824247D00333698 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		614E3C98180D8D9C002E875B /* SacredGifts.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = SacredGifts.dat; path = ImageTargets/assets/SacredGifts.dat; sourceTree = "<group>"; };
@@ -1422,6 +1430,10 @@
 		61CD5115180C242500D28921 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				613292DE18325C9E00551F09 /* SG_General_painting-castleBtn-on.png */,
+				613292DF18325C9E00551F09 /* SG_General_painting-castleBtn-on@2x.png */,
+				613292E018325C9E00551F09 /* SG_General_painting-castleBtn.png */,
+				613292E118325C9E00551F09 /* SG_General_painting-castleBtn@2x.png */,
 				61735B2E183233EE0000D837 /* SG_General_header_feedback.png */,
 				61735B2F183233EE0000D837 /* SG_General_header_feedback@2x.png */,
 				61735B30183233EE0000D837 /* SG_General_header_reserve.png */,
@@ -1882,6 +1894,7 @@
 				61CD5212180C242500D28921 /* sg_home_meetartistsbtn.png in Resources */,
 				61CD520B180C242500D28921 /* sg_home_label_schwartz@2x.png in Resources */,
 				610729E918212EA400E8D7A2 /* Schwartz Bio.mp3 in Resources */,
+				613292E218325C9E00551F09 /* SG_General_painting-castleBtn-on.png in Resources */,
 				61CD52D0180C242500D28921 /* painting_thumb_mocking.png in Resources */,
 				61CD52D8180C242500D28921 /* painting_thumb_ruler.png in Resources */,
 				61CD522D180C242500D28921 /* SG_General_Media_Playbar_Overlay.png in Resources */,
@@ -1989,6 +2002,7 @@
 				61CD52C4180C242500D28921 /* painting_thumb_garden.png in Resources */,
 				61CD5201180C242500D28921 /* sg_home_footer_bg@2x.png in Resources */,
 				61CD52BE180C242500D28921 /* painting_thumb_emmaus-on.png in Resources */,
+				613292E318325C9E00551F09 /* SG_General_painting-castleBtn-on@2x.png in Resources */,
 				61CD52A5180C242500D28921 /* painting_thumb_burial@2x.png in Resources */,
 				61CD5279180C242500D28921 /* SG_General_Painting_ShareBtn.png in Resources */,
 				61CD52E2180C242500D28921 /* painting_thumb_shepherds-on.png in Resources */,
@@ -2023,6 +2037,7 @@
 				61735B4F183249A30000D837 /* aalborg.png in Resources */,
 				61CD51DE180C242500D28921 /* sg_home_bg-findpainting_blur.png in Resources */,
 				61CD5211180C242500D28921 /* sg_home_meetartistsbtn-on@2x.png in Resources */,
+				613292E418325C9E00551F09 /* SG_General_painting-castleBtn.png in Resources */,
 				61735B55183249A30000D837 /* consolator.png in Resources */,
 				61CD523C180C242500D28921 /* SG_General_HomeBtn-on@2x.png in Resources */,
 				61CD5240180C242500D28921 /* SG_General_Module_CloseBtn-on@2x.png in Resources */,
@@ -2062,6 +2077,7 @@
 				61CD525F180C242500D28921 /* SG_General_Painting_DetailsBtn-on.png in Resources */,
 				61A668EE182EEB2200AC749E /* exhibition_credit_overlay@2x.png in Resources */,
 				61072A08182138B400E8D7A2 /* perspectives_sermon_center_dot@2x.png in Resources */,
+				613292E518325C9E00551F09 /* SG_General_painting-castleBtn@2x.png in Resources */,
 				61CD529F180C242500D28921 /* painting_thumb_aalborg-on@2x.png in Resources */,
 				61CD52CB180C242500D28921 /* painting_thumb_healing-on@2x.png in Resources */,
 				61F73CC51830FDF200D13F7C /* childrens_schwartz_prompt.png in Resources */,
