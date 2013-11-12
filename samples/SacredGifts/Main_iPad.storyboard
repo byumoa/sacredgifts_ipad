@@ -1454,13 +1454,25 @@
             </objects>
             <point key="canvasLocation" x="-138" y="1284"/>
         </scene>
-        <!--View Controller-->
+        <!--Web View Controller-->
         <scene sceneID="DFb-82-qrc">
             <objects>
-                <viewController id="KHn-YW-mRs" sceneMemberID="viewController">
+                <viewController restorationIdentifier="web" storyboardIdentifier="web" id="KHn-YW-mRs" customClass="SGWebViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Le8-43-FpC">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="koA-RZ-kc3">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="vkD-Go-1QN">
+                                <rect key="frame" x="0.0" y="954" width="768" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>

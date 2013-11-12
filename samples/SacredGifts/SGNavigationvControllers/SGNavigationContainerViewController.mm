@@ -87,7 +87,7 @@
 }
 
 -(void)pressedWebViewBack:(id)sender{
-    [self dismissWebview];
+    //[self dismissWebview];
 }
 
 -(void)dismissWebview{

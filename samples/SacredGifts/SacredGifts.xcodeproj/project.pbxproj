@@ -104,6 +104,16 @@
 		614E3CA3180DF631002E875B /* speaker_btns__narration_btn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C9F180DF631002E875B /* speaker_btns__narration_btn@2x.png */; };
 		614E3CA6180E4AC1002E875B /* SGArtistViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 614E3CA5180E4AC1002E875B /* SGArtistViewController.m */; };
 		6165AA741819C95400857DBD /* SGEAGLView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6165AA721819C95400857DBD /* SGEAGLView.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		61735B2A183233D90000D837 /* SG_General_window_closeBtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B26183233D90000D837 /* SG_General_window_closeBtn-on.png */; };
+		61735B2B183233D90000D837 /* SG_General_window_closeBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B27183233D90000D837 /* SG_General_window_closeBtn-on@2x.png */; };
+		61735B2C183233D90000D837 /* SG_General_window_closeBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B28183233D90000D837 /* SG_General_window_closeBtn.png */; };
+		61735B2D183233D90000D837 /* SG_General_window_closeBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B29183233D90000D837 /* SG_General_window_closeBtn@2x.png */; };
+		61735B34183233EE0000D837 /* SG_General_header_feedback.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B2E183233EE0000D837 /* SG_General_header_feedback.png */; };
+		61735B35183233EE0000D837 /* SG_General_header_feedback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B2F183233EE0000D837 /* SG_General_header_feedback@2x.png */; };
+		61735B36183233EE0000D837 /* SG_General_header_reserve.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B30183233EE0000D837 /* SG_General_header_reserve.png */; };
+		61735B37183233EE0000D837 /* SG_General_header_reserve@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B31183233EE0000D837 /* SG_General_header_reserve@2x.png */; };
+		61735B38183233EE0000D837 /* SG_General_header_thanks.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B32183233EE0000D837 /* SG_General_header_thanks.png */; };
+		61735B39183233EE0000D837 /* SG_General_header_thanks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B33183233EE0000D837 /* SG_General_header_thanks@2x.png */; };
 		618645A7181AD11E00195384 /* SGHighlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618645A6181AD11E00195384 /* SGHighlightsViewController.m */; };
 		618645AC181AEEB700195384 /* childrens_btn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 618645A8181AEEB700195384 /* childrens_btn-on.png */; };
 		618645AD181AEEB700195384 /* childrens_btn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 618645A9181AEEB700195384 /* childrens_btn-on@2x.png */; };
@@ -550,6 +560,16 @@
 		614E3CA5180E4AC1002E875B /* SGArtistViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGArtistViewController.m; sourceTree = "<group>"; };
 		6165AA721819C95400857DBD /* SGEAGLView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGEAGLView.m; sourceTree = "<group>"; };
 		6165AA731819C95400857DBD /* SGEAGLView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGEAGLView.h; sourceTree = "<group>"; };
+		61735B26183233D90000D837 /* SG_General_window_closeBtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_window_closeBtn-on.png"; sourceTree = "<group>"; };
+		61735B27183233D90000D837 /* SG_General_window_closeBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_window_closeBtn-on@2x.png"; sourceTree = "<group>"; };
+		61735B28183233D90000D837 /* SG_General_window_closeBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_General_window_closeBtn.png; sourceTree = "<group>"; };
+		61735B29183233D90000D837 /* SG_General_window_closeBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_window_closeBtn@2x.png"; sourceTree = "<group>"; };
+		61735B2E183233EE0000D837 /* SG_General_header_feedback.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_General_header_feedback.png; sourceTree = "<group>"; };
+		61735B2F183233EE0000D837 /* SG_General_header_feedback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_header_feedback@2x.png"; sourceTree = "<group>"; };
+		61735B30183233EE0000D837 /* SG_General_header_reserve.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_General_header_reserve.png; sourceTree = "<group>"; };
+		61735B31183233EE0000D837 /* SG_General_header_reserve@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_header_reserve@2x.png"; sourceTree = "<group>"; };
+		61735B32183233EE0000D837 /* SG_General_header_thanks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_General_header_thanks.png; sourceTree = "<group>"; };
+		61735B33183233EE0000D837 /* SG_General_header_thanks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_header_thanks@2x.png"; sourceTree = "<group>"; };
 		618645A5181AD11E00195384 /* SGHighlightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHighlightsViewController.h; sourceTree = "<group>"; };
 		618645A6181AD11E00195384 /* SGHighlightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHighlightsViewController.m; sourceTree = "<group>"; };
 		618645A8181AEEB700195384 /* childrens_btn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "childrens_btn-on.png"; sourceTree = "<group>"; };
@@ -1398,6 +1418,16 @@
 		61CD5115180C242500D28921 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				61735B2E183233EE0000D837 /* SG_General_header_feedback.png */,
+				61735B2F183233EE0000D837 /* SG_General_header_feedback@2x.png */,
+				61735B30183233EE0000D837 /* SG_General_header_reserve.png */,
+				61735B31183233EE0000D837 /* SG_General_header_reserve@2x.png */,
+				61735B32183233EE0000D837 /* SG_General_header_thanks.png */,
+				61735B33183233EE0000D837 /* SG_General_header_thanks@2x.png */,
+				61735B26183233D90000D837 /* SG_General_window_closeBtn-on.png */,
+				61735B27183233D90000D837 /* SG_General_window_closeBtn-on@2x.png */,
+				61735B28183233D90000D837 /* SG_General_window_closeBtn.png */,
+				61735B29183233D90000D837 /* SG_General_window_closeBtn@2x.png */,
 				618713D21830E592005BC973 /* detailbuttons */,
 				610554DD18285D600030CCC3 /* buttons_temple */,
 				618713AC182F0956005BC973 /* SG_General_Module_Overlay_Hofmann.png */,
@@ -1733,7 +1763,9 @@
 				61CD51FE180C242500D28921 /* sg_home_findbtn.png in Resources */,
 				15A15845135C9CBB00C6B482 /* TextureTeapotBlue.png in Resources */,
 				61CD529A180C242500D28921 /* SG_General_Share_tw.png in Resources */,
+				61735B2D183233D90000D837 /* SG_General_window_closeBtn@2x.png in Resources */,
 				61CD51F9180C242500D28921 /* sg_home_filmbtn-on@2x.png in Resources */,
+				61735B2B183233D90000D837 /* SG_General_window_closeBtn-on@2x.png in Resources */,
 				61CD5232180C242500D28921 /* SG_General_Media_Playhead@2x.png in Resources */,
 				61CD52E7180C242500D28921 /* painting_thumb_temple-on@2x.png in Resources */,
 				15A15846135C9CBB00C6B482 /* TextureTeapotBrass.png in Resources */,
@@ -1823,6 +1855,7 @@
 				61072A12182138B400E8D7A2 /* perspectives_sermon_cross_hairs@2x.png in Resources */,
 				61CD52E9180C242500D28921 /* painting_thumb_temple@2x.png in Resources */,
 				614C00F618241D7000333698 /* garden.png in Resources */,
+				61735B2C183233D90000D837 /* SG_General_window_closeBtn.png in Resources */,
 				61072A0D182138B400E8D7A2 /* perspectives_sermon_circle_dark_green.png in Resources */,
 				614C00F218241D7000333698 /* consolator.png in Resources */,
 				610554EC18285D600030CCC3 /* sg_temple_btn_later.png in Resources */,
@@ -1846,6 +1879,7 @@
 				61CD529B180C242500D28921 /* SG_General_Share_tw@2x.png in Resources */,
 				61CD5260180C242500D28921 /* SG_General_Painting_DetailsBtn-on@2x.png in Resources */,
 				61CD52E0180C242500D28921 /* painting_thumb_sermon.png in Resources */,
+				61735B39183233EE0000D837 /* SG_General_header_thanks@2x.png in Resources */,
 				61CD51FC180C242500D28921 /* sg_home_findbtn-on.png in Resources */,
 				614E3CA2180DF631002E875B /* speaker_btns__narration_btn-on@2x.png in Resources */,
 				614E3CA1180DF631002E875B /* speaker_btns__narration_btn-on.png in Resources */,
@@ -1894,8 +1928,10 @@
 				61CD52A2180C242500D28921 /* painting_thumb_burial-on.png in Resources */,
 				61CD5224180C242500D28921 /* sg_home_schwartzbtn-on.png in Resources */,
 				61CD523F180C242500D28921 /* SG_General_Module_CloseBtn-on.png in Resources */,
+				61735B36183233EE0000D837 /* SG_General_header_reserve.png in Resources */,
 				61072A16182138B400E8D7A2 /* perspectives_sermon_large_blue_circle@2x.png in Resources */,
 				61CD5215180C242500D28921 /* sg_home_originsbtn-on@2x.png in Resources */,
+				61735B35183233EE0000D837 /* SG_General_header_feedback@2x.png in Resources */,
 				61CD527E180C242500D28921 /* SG_General_Painting_SummaryBtn-on.png in Resources */,
 				61CD52B7180C242500D28921 /* painting_thumb_cross-on@2x.png in Resources */,
 				61CD5296180C242500D28921 /* SG_General_Share_thanks.png in Resources */,
@@ -1957,6 +1993,7 @@
 				618713C4182F10AA005BC973 /* SG_General_Module_OverlayHalf_Hofmann@2x.png in Resources */,
 				618713D81830E592005BC973 /* sg_general_painting_detailmarkerbtn-on@2x.png in Resources */,
 				61CD51F3180C242500D28921 /* sg_home_exhibitionbtn@2x.png in Resources */,
+				61735B2A183233D90000D837 /* SG_General_window_closeBtn-on.png in Resources */,
 				610554E918285D600030CCC3 /* sg_temple_btn_1880@2x.png in Resources */,
 				61CD534C180C2C1B00D28921 /* Images.xcassets in Resources */,
 				61CD52D5180C242500D28921 /* painting_thumb_resurrection@2x.png in Resources */,
@@ -2034,6 +2071,7 @@
 				61CD5213180C242500D28921 /* sg_home_meetartistsbtn@2x.png in Resources */,
 				61CD52B6180C242500D28921 /* painting_thumb_cross-on.png in Resources */,
 				61CD5237180C242500D28921 /* SG_General_BackBtn-on.png in Resources */,
+				61735B34183233EE0000D837 /* SG_General_header_feedback.png in Resources */,
 				61CD521E180C242500D28921 /* sg_home_reservationbtn.png in Resources */,
 				61CD51D3180C242500D28921 /* artists_pages_hofmann_overlay.png in Resources */,
 				61CD5228180C242500D28921 /* SG_Home_SplashScreen.png in Resources */,
@@ -2057,6 +2095,7 @@
 				61CD52D3180C242500D28921 /* painting_thumb_resurrection-on@2x.png in Resources */,
 				61CD52AC180C242500D28921 /* painting_thumb_children.png in Resources */,
 				61072A07182138B400E8D7A2 /* perspectives_sermon_center_dot.png in Resources */,
+				61735B37183233EE0000D837 /* SG_General_header_reserve@2x.png in Resources */,
 				618645AE181AEEB700195384 /* childrens_btn.png in Resources */,
 				61072A06182138B400E8D7A2 /* perspectives_sermon_center_circle_orange@2x.png in Resources */,
 				618645AD181AEEB700195384 /* childrens_btn-on@2x.png in Resources */,
@@ -2087,6 +2126,7 @@
 				61CD5262180C242500D28921 /* SG_General_Painting_DetailsBtn@2x.png in Resources */,
 				614E3C9B180D8D9C002E875B /* SacredGifts.xml in Resources */,
 				61CD525C180C242500D28921 /* SG_General_Painting_DetailMarkerBtn@2x.png in Resources */,
+				61735B38183233EE0000D837 /* SG_General_header_thanks.png in Resources */,
 				61CD52AD180C242500D28921 /* painting_thumb_children@2x.png in Resources */,
 				61CD52A3180C242500D28921 /* painting_thumb_burial-on@2x.png in Resources */,
 				61CD5264180C242500D28921 /* SG_General_Painting_GiftsBtn-on@2x.png in Resources */,
