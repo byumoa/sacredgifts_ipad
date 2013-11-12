@@ -41,10 +41,12 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
 -(void)updateProgressBar:(NSTimer*)timer
 {
     CGRect frame = self.playOverlay.frame;
-    if( self.moviePlayer.duration > 0 )
+    if( self.moviePlayer.duration > 0 && self.moviePlayer )
         frame.size.width = self.moviePlayer.currentPlaybackTime / self.moviePlayer.duration * 635.0;
     
-    self.playOverlay.frame = frame;
+    //NSLog(@"frame: (%.0f, %.0f, %.0f, %.0f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
+    if( !isnan(frame.size.width) && !isnan(frame.size.height))
+        self.playOverlay.frame = frame;
 }
 
 - (IBAction)pressedPlayPause:(UIButton *)sender
@@ -101,6 +103,11 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
     [super viewWillDisappear:animated];
     [[NSNotificationCenter defaultCenter] removeObserver:self];
     [_progressTimer invalidate];
+}
+
+-(void)pressedClose:(UIButton *)sender
+{
+    [super pressedClose:sender];
 }
 
 @end
