@@ -64,7 +64,7 @@ const NSString* kSummaryPauseBtnHilStr = @"summary_pause_btn.png";
 
 - (IBAction)pressedCastle:(id)sender
 {
-    
+    // [self.delegate transitionFromController:self toPaintingNamed:@"castle" fromButtonRect:((UIButton*)sender).frame withAnimType:kAnimTypeZoomIn];
 }
 
 -(void)setupSpeakerBtnPlay

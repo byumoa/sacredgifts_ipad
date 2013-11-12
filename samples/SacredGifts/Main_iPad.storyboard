@@ -862,7 +862,7 @@
                                     <action selector="pressedNarration:" destination="wQF-Fi-40D" eventType="touchUpInside" id="UMX-rL-S4P"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VmQ-5f-g1Z">
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="VmQ-5f-g1Z">
                                 <rect key="frame" x="66" y="479" width="250" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="SG_General_painting-castleBtn-Bloch.png">
@@ -1430,12 +1430,12 @@
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="saU-vB-di2">
-                                        <rect key="frame" x="10" y="872" width="768" height="41"/>
+                                        <rect key="frame" x="0.0" y="879" width="319" height="42"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="SG_General_painting-castleBtn.png">
+                                        <state key="normal" image="SG_General_painting-castleBtn-Bloch.png">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
-                                        <state key="highlighted" image="SG_General_painting-castleBtn-on.png"/>
+                                        <state key="highlighted" image="SG_General_painting-castleBtn-Bloch-on.png"/>
                                         <connections>
                                             <action selector="pressedCastle:" destination="kwW-sc-41B" eventType="touchUpInside" id="OFz-S9-eHe"/>
                                         </connections>
@@ -1711,9 +1711,9 @@
         <image name="SG_General_TopBar.png" width="768" height="62"/>
         <image name="SG_General_header_thanks.png" width="200" height="41"/>
         <image name="SG_General_painting-castleBtn-Bloch-on.png" width="250" height="42"/>
+        <image name="SG_General_painting-castleBtn-Bloch-on.png" width="250" height="42"/>
         <image name="SG_General_painting-castleBtn-Bloch.png" width="250" height="42"/>
-        <image name="SG_General_painting-castleBtn-on.png" width="768" height="41"/>
-        <image name="SG_General_painting-castleBtn.png" width="768" height="41"/>
+        <image name="SG_General_painting-castleBtn-Bloch.png" width="250" height="42"/>
         <image name="SG_General_window_closeBtn-on.png" width="102" height="70"/>
         <image name="SG_General_window_closeBtn.png" width="102" height="70"/>
         <image name="SG_Home_SplashScreen.png" width="768" height="1024"/>
