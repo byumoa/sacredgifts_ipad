@@ -9,5 +9,5 @@
 #import "SGButtonOnPaintingViewController.h"
 
 @interface SGHighlightsViewController : SGButtonOnPaintingViewController
-
+@property (nonatomic, strong) UIImageView* currentHighlight;
 @end

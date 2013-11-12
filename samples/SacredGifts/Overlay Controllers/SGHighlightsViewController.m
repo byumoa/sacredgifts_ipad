@@ -69,6 +69,17 @@
 -(void)pressedHighlightBtn:(UIButton *)sender
 {
     [super pressedHighlightBtn:sender];
+
+    NSString* btnFolderPath = [NSString stringWithFormat:@"%@/%@_%i", self.rootFolderPath, _moduleTypeStr, sender.tag];
+    NSString* highlightImgPath = [[NSBundle mainBundle] pathForResource:@"highlight" ofType:@"png" inDirectory:btnFolderPath];
+    
+    self.currentHighlight = [[UIImageView alloc] initWithImage:[UIImage imageWithContentsOfFile:highlightImgPath]];
+    [self.view insertSubview:self.currentHighlight belowSubview:((SGOverlayView*)self.childOverlay.view).myBlurredBacking];
+    self.currentHighlight.center = self.view.center;
+    self.currentHighlight.alpha = 0;
+    [UIView animateWithDuration:0.25 animations:^{
+        self.currentHighlight.alpha = 1;
+    }];
     
     if( ![self.childOverlay isKindOfClass:[SGPanoramaOverlayViewController class]] )
     {
@@ -77,7 +88,6 @@
         self.childOverlay.view.center = center;
         
         ((SGOverlayView*)self.childOverlay.view).myBlurredBacking.center = center;
-        NSLog(@"self.childOverlay.rootFolderPath: %@", self.childOverlay.rootFolderPath);
     }
 }
 
@@ -98,6 +108,11 @@
 {
     [super prepareForMediaEnd];
     [self animateButtonsOn];
+    [UIView animateWithDuration:0.25 animations:^{
+        self.currentHighlight.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self.currentHighlight removeFromSuperview];
+    }];
 }
 
 @end
