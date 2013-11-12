@@ -93,6 +93,8 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
 
 - (IBAction)swipeRecognized:(UISwipeGestureRecognizer *)sender
 {
+    if( self.overlayController == nil ) return;
+    
     NSString* swipeDir = (NSString*)kAnimTypeSwipeLeft;
     int nextPaintingIndex = self.currentPaintingIndex + 1;
     if( sender.direction == UISwipeGestureRecognizerDirectionRight )
