@@ -292,7 +292,7 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
             break;
         case kModuleTypeSocial:{
             ((SGSocialViewController*)self.overlayController).paintingName = _paintingNameStr;
-            [self.overlayController addBackgroundImgWithImgName:@"SG_General_Module_Overlay.png"];
+            [self.overlayController addBackgroundImgWithImgName:@"SG_Social_Module_Overlay.png"];
         }
             break;
         case kModuleTypeVideo:{

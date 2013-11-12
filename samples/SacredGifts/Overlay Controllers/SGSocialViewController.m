@@ -8,6 +8,7 @@
 
 #import "SGSocialViewController.h"
 #import <Social/Social.h>
+#import "SGWebViewController.h"
 
 NSString* const kEmailAutofill = @"Enjoying the painting by %@ while using the Sacred Gifts app from the BYU Museum of Art. %@";
 NSString* const kTwitterAutofill = @"Viewing this painting while using the @BYUmoa’s #sacredgifts app.";
@@ -80,6 +81,13 @@ int const kOverlayHeight = 236;
             [self presentViewController:mailController animated:YES completion:^{}];
             NSData *myData = UIImageJPEGRepresentation(thumbnail, 1.0);
             [mailController addAttachmentData:myData mimeType:@"image/png" fileName:@"Thumbnail.png"];
+        }
+            break;
+        case 4:
+        {
+            SGWebViewController* webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"web"];
+            [self presentViewController:webViewController animated:YES completion:nil];
+            [webViewController configureWebpageFor:webPageTypeThanks];
         }
             break;
         default:

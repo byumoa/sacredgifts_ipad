@@ -51,7 +51,7 @@ NSString* const kFeedbackImgStr = @"SG_General_header_feedback.png";
 
 - (IBAction)pressedClose:(UIButton *)sender
 {
-    
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)erro{

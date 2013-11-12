@@ -64,6 +64,7 @@
 -(void)pressedFeedback:(UIButton *)sender
 {
     SGWebViewController* webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"web"];
+    [self presentViewController:webViewController animated:YES completion:nil];
     [webViewController configureWebpageFor:webpageTypeFeedback];
 }
 
