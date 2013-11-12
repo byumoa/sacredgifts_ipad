@@ -34,7 +34,10 @@
 
 - (IBAction)pressedNarration:(UIButton *)sender
 {
-    [self playAudioNamed:_narrationStr];
+    if(((SGNarrationManager*)[SGNarrationManager sharedManager]).player.isPlaying)
+        [SGNarrationManager pause];
+    else
+        [self playAudioNamed:_narrationStr];
 }
 
 - (BOOL) playAudioNamed: (NSString*)audioName;
