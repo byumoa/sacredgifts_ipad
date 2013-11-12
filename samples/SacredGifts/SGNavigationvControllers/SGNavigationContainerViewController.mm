@@ -45,7 +45,8 @@
                 || [self.currentContentController.restorationIdentifier isEqualToString:@"hofman"]
                 || [self.currentContentController.restorationIdentifier isEqualToString:@"schwartz"])
             _backViewControllerIDStr = (NSString*)kControllerIDMeetTheArtistsStr;
-
+        else if ([self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDStoryOfTheExhibitionStr])
+            _backViewControllerIDStr = (NSString*)kControllerIDAboutTheExhibitionStr;
         else
             _backViewControllerIDStr = (NSString*)kControllerIDHomeStr;
     

@@ -28,20 +28,18 @@ const int kNavigationReservations = 456;
     switch (sender.tag) {
         case kNavigationDestinationStoryOfTheExhibition:
             toControllerIDStr = (NSString*)kControllerIDStoryOfTheExhibitionStr;
+            [self.delegate transitionFromController:self toControllerID:toControllerIDStr fromButtonRect:sender.frame withAnimType:kAnimTypeZoomIn];
             break;
         case kNavigationReservations:
         {
             SGWebViewController* webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"web"];
             [self presentViewController:webViewController animated:YES completion:nil];
-            [webViewController configureWebpageFor:webpageTypeFeedback];
+            [webViewController configureWebpageFor:webPageTypeTickets];
         }
             break;
         default:
             break;
     }
-    
-    NSLog(@"%i: %@", sender.tag, toControllerIDStr);
-    [self.delegate transitionFromController:self toControllerID:toControllerIDStr fromButtonRect:sender.frame withAnimType:kAnimTypeZoomIn];
 }
 
 @end
