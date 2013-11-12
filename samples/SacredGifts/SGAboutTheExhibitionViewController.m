@@ -8,8 +8,10 @@
 
 #import "SGAboutTheExhibitionViewController.h"
 #import "SGConstants.h"
+#import "SGWebViewController.h"
 
 const int kNavigationDestinationStoryOfTheExhibition = 9324;
+const int kNavigationReservations = 456;
 
 @implementation SGAboutTheExhibitionViewController
 
@@ -27,7 +29,13 @@ const int kNavigationDestinationStoryOfTheExhibition = 9324;
         case kNavigationDestinationStoryOfTheExhibition:
             toControllerIDStr = (NSString*)kControllerIDStoryOfTheExhibitionStr;
             break;
-            
+        case kNavigationReservations:
+        {
+            SGWebViewController* webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"web"];
+            [self presentViewController:webViewController animated:YES completion:nil];
+            [webViewController configureWebpageFor:webpageTypeFeedback];
+        }
+            break;
         default:
             break;
     }
