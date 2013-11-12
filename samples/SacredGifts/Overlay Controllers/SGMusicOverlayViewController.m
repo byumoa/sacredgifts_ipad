@@ -9,6 +9,7 @@
 #import "SGMusicOverlayViewController.h"
 #import "SGMusicManager.h"
 
+
 @interface SGMusicOverlayViewController ()
 - (void) updateProgressBar: (NSTimer*)timer;
 @end

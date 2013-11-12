@@ -7,6 +7,7 @@
 //
 
 #import "SGVideoOverlayViewController.h"
+#import "SGMusicManager.h"
 
 //Y-Pos = screenHeight - footerHeight - buffer - overlayHeight
 //Height = 1024 - 70 - 41 - 688
@@ -49,11 +50,15 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
 - (IBAction)pressedPlayPause:(UIButton *)sender
 {
     if( self.moviePlayer.playbackState  == MPMoviePlaybackStatePlaying )
+    {
         [self.moviePlayer pause];
+        [SGMusicManager bumpUpVolume];
+    }
     else
     {
         [self.moviePlayer prepareToPlay];
         [self.moviePlayer play];
+        [SGMusicManager dropVolume];
         [UIView animateWithDuration:0.25 animations:^{
             self.freezeFrame.alpha = 0;
         }];
@@ -88,6 +93,7 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
     }];
     
     self.playPauseButton.selected = (self.moviePlayer.playbackState != MPMoviePlaybackStatePlaying);
+    [SGMusicManager bumpUpVolume];
 }
 
 -(void)viewWillDisappear:(BOOL)animated

@@ -8,8 +8,6 @@
 
 #import "SGNarrationOverlayViewController.h"
 
-//Y-Pos = screenHeight - footerHeight - buffer - overlayHeight
-//Height = 1024 - 70 - 41 - 200
 const CGRect kNarrationFrame = {0, 713, 768, 200};
 
 @interface SGNarrationOverlayViewController ()
@@ -47,13 +45,17 @@ const CGRect kNarrationFrame = {0, 713, 768, 200};
 -(void)addBackgroundImgWithPath:(NSString *)bgImgPath
 {
     [super addBackgroundImgWithPath:bgImgPath];
+    
+    _narrationManager = [SGNarrationManager sharedManager];
+    [self updateProgressBar:nil];
+    self.playPauseButton.selected = _narrationManager.player.isPlaying;
 }
-
+/*
 -(void)configureAudioWithPath:(NSString *)rootFolderPath
 {
     self.rootFolderPath = rootFolderPath;
 }
-
+*/
 - (IBAction)pressedPlayPause:(id)sender
 {
     NSString *narrationPath = [[NSBundle mainBundle] pathForResource:@"audio" ofType:@".mp3" inDirectory:self.rootFolderPath];
@@ -68,6 +70,13 @@ const CGRect kNarrationFrame = {0, 713, 768, 200};
         
         ((UIButton*)sender).selected = !_narrationManager.player.isPlaying;
     }
+}
+
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    [_progressTimer invalidate];
 }
 
 @end
