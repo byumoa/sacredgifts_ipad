@@ -12,6 +12,7 @@
 @interface SGSummaryOverlayViewController : SGOverlayViewController
 @property (strong, nonatomic) AVAudioPlayer* player;
 @property (nonatomic, weak) IBOutlet UIButton* narrationBtn;
+@property (nonatomic, weak) IBOutlet UIButton* castleBtn;
 - (IBAction)pressedNarration:(UIButton *)sender;
-
+- (IBAction)pressedCastle:(id)sender;
 @end

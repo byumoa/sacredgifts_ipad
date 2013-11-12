@@ -442,6 +442,10 @@
 		61CD534C180C2C1B00D28921 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61CD534B180C2C1B00D28921 /* Images.xcassets */; };
 		61CD534E180C2C3000D28921 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CD534D180C2C3000D28921 /* GLKit.framework */; };
 		61CD5350180C3E9400D28921 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CD534F180C3E9400D28921 /* MediaPlayer.framework */; };
+		61E5430B1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E543071832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on.png */; };
+		61E5430C1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E543081832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png */; };
+		61E5430D1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E543091832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png */; };
+		61E5430E1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E5430A1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch@2x.png */; };
 		61F73CC11830FDF200D13F7C /* childrens_bloch_prompt.png in Resources */ = {isa = PBXBuildFile; fileRef = 61F73CBB1830FDF200D13F7C /* childrens_bloch_prompt.png */; };
 		61F73CC21830FDF200D13F7C /* childrens_bloch_prompt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61F73CBC1830FDF200D13F7C /* childrens_bloch_prompt@2x.png */; };
 		61F73CC31830FDF200D13F7C /* childrens_hofmann_prompt.png in Resources */ = {isa = PBXBuildFile; fileRef = 61F73CBD1830FDF200D13F7C /* childrens_hofmann_prompt.png */; };
@@ -953,6 +957,10 @@
 		61CD534B180C2C1B00D28921 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ImageTargets/Images.xcassets; sourceTree = "<group>"; };
 		61CD534D180C2C3000D28921 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		61CD534F180C3E9400D28921 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		61E543071832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch-on.png"; sourceTree = "<group>"; };
+		61E543081832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch-on@2x.png"; sourceTree = "<group>"; };
+		61E543091832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch.png"; sourceTree = "<group>"; };
+		61E5430A1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch@2x.png"; sourceTree = "<group>"; };
 		61F73CBB1830FDF200D13F7C /* childrens_bloch_prompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = childrens_bloch_prompt.png; sourceTree = "<group>"; };
 		61F73CBC1830FDF200D13F7C /* childrens_bloch_prompt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "childrens_bloch_prompt@2x.png"; sourceTree = "<group>"; };
 		61F73CBD1830FDF200D13F7C /* childrens_hofmann_prompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = childrens_hofmann_prompt.png; sourceTree = "<group>"; };
@@ -1430,6 +1438,10 @@
 		61CD5115180C242500D28921 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
+				61E543071832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on.png */,
+				61E543081832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png */,
+				61E543091832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png */,
+				61E5430A1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch@2x.png */,
 				613292DE18325C9E00551F09 /* SG_General_painting-castleBtn-on.png */,
 				613292DF18325C9E00551F09 /* SG_General_painting-castleBtn-on@2x.png */,
 				613292E018325C9E00551F09 /* SG_General_painting-castleBtn.png */,
@@ -1863,6 +1875,7 @@
 				61CD52C2180C242500D28921 /* painting_thumb_garden-on.png in Resources */,
 				61072A19182138B400E8D7A2 /* perspectives_sermon_red_square.png in Resources */,
 				61CD52BB180C242500D28921 /* painting_thumb_denial-on@2x.png in Resources */,
+				61E5430C1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png in Resources */,
 				61CD52E4180C242500D28921 /* painting_thumb_shepherds.png in Resources */,
 				61072A2B1822658400E8D7A2 /* summary_play_btn.png in Resources */,
 				61CD5234180C242500D28921 /* SG_General_Music_PlayPause-on@2x.png in Resources */,
@@ -1871,6 +1884,7 @@
 				61CD52CD180C242500D28921 /* painting_thumb_healing@2x.png in Resources */,
 				61CD524C180C242500D28921 /* SG_General_ModuleButtonBar@2x.png in Resources */,
 				61CD52DC180C242500D28921 /* painting_thumb_savior.png in Resources */,
+				61E5430B1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on.png in Resources */,
 				61CD52D2180C242500D28921 /* painting_thumb_resurrection-on.png in Resources */,
 				61CD523D180C242500D28921 /* SG_General_HomeBtn.png in Resources */,
 				61CD528B180C242500D28921 /* SG_General_Share_email@2x.png in Resources */,
@@ -2086,6 +2100,7 @@
 				61CD51D5180C242500D28921 /* artists_pages_schwartz_overlay.png in Resources */,
 				61A668F2182EEB2200AC749E /* exhibition_story_overlay@2x.png in Resources */,
 				61735B58183249A30000D837 /* emmaus.png in Resources */,
+				61E5430E1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch@2x.png in Resources */,
 				61A668EF182EEB2200AC749E /* exhibition_donors_overlay.png in Resources */,
 				61CD520A180C242500D28921 /* sg_home_label_schwartz.png in Resources */,
 				61CD5225180C242500D28921 /* sg_home_schwartzbtn-on@2x.png in Resources */,
@@ -2125,6 +2140,7 @@
 				61072A07182138B400E8D7A2 /* perspectives_sermon_center_dot.png in Resources */,
 				61735B37183233EE0000D837 /* SG_General_header_reserve@2x.png in Resources */,
 				61735B5A183249A30000D837 /* gethsemane.png in Resources */,
+				61E5430D1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png in Resources */,
 				61735B53183249A30000D837 /* children.png in Resources */,
 				618645AE181AEEB700195384 /* childrens_btn.png in Resources */,
 				61072A06182138B400E8D7A2 /* perspectives_sermon_center_circle_orange@2x.png in Resources */,

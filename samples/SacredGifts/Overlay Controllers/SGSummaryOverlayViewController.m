@@ -8,6 +8,7 @@
 
 #import "SGSummaryOverlayViewController.h"
 #import "SGNarrationManager.h"
+#import "SGConvenienceFunctionsManager.h"
 
 const NSString* kSummarySpeakerBtnNrmStr = @"speaker_btns__narration_btn.png";
 const NSString* kSummarySpeakerBtnHilStr = @"speaker_btns__narration_btn-on.png";
@@ -39,6 +40,13 @@ const NSString* kSummaryPauseBtnHilStr = @"summary_pause_btn.png";
     return self;
 }
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    //BOOL isBlochPainting = [SGConvenienceFunctionsManager artistForPainting: abbreviated:<#(BOOL)#>]
+}
+
 - (IBAction)pressedNarration:(UIButton *)sender
 {
     NSString *audioPath = [[NSBundle mainBundle] pathForResource:@"narration" ofType:@".mp3" inDirectory:self.rootFolderPath];
@@ -52,6 +60,11 @@ const NSString* kSummaryPauseBtnHilStr = @"summary_pause_btn.png";
         else
             [narrationManager pauseAudio];
     }
+}
+
+- (IBAction)pressedCastle:(id)sender
+{
+    
 }
 
 -(void)setupSpeakerBtnPlay
