@@ -12,7 +12,7 @@
 @interface SGNavigationContainerViewController : SGContainerViewController <UIWebViewDelegate>
 {
     NSString* _backViewControllerIDStr, *_beforePaintingViewControllerIDStr;
-    UIWebView* _donateWebView;
+    UIWebView* _webView;
     int _footerLastAlpha;
 }
 
@@ -27,6 +27,7 @@
 
 - (IBAction)pressedBack:(UIButton*)sender;
 - (IBAction)pressedDonate:(UIButton *)sender;
+- (IBAction)pressedFeedback:(UIButton *)sender;
 - (IBAction)pressedScan:(id)sender;
 - (IBAction)pressedHome:(id)sender;
 @end

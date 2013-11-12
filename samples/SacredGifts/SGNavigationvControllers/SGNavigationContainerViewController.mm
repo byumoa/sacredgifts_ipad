@@ -60,6 +60,11 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString: (NSString*)kDontateURLStr]];
 }
 
+-(void)pressedFeedback:(UIButton *)sender
+{
+    
+}
+
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
     [self.activityIndicator stopAnimating];
@@ -87,9 +92,9 @@
 
 -(void)dismissWebview{
     [UIView animateWithDuration:0.25 animations:^{
-        _donateWebView.alpha = 0;
+        _webView.alpha = 0;
     } completion:^(BOOL finished) {
-        [_donateWebView removeFromSuperview];
+        [_webView removeFromSuperview];
     }];
 }
 

@@ -88,7 +88,6 @@
     [blurManager setBlurImageWithPath:highlightBlurImgPath];
     UIView* blurBacking = [blurManager blurBackingForView:self.childOverlay.view];
     [self.currentHighlightView addSubview:blurBacking];
-    //blurBacking.center = [self.currentHighlightView convertPoint:self.childOverlay.view.center toView:self.view];
     CGRect frame = self.childOverlay.view.frame;
     frame.origin.y -= 131;
     blurBacking.frame = frame;
