@@ -117,10 +117,14 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
         NSString* overlayPath = [[NSBundle mainBundle] pathForResource:buttonTypeStr ofType:@"png" inDirectory:overlayDirectory];
         
         //Handle different perspectives folder structure
-        if([buttonTypeStr isEqualToString:@"perspectives"])
+        if([buttonTypeStr isEqualToString:kPerspectiveStr])
             overlayPath = [[NSBundle mainBundle] pathForResource:@"perspectives_Btn1" ofType:@"png" inDirectory:overlayDirectory];
-        else if([buttonTypeStr isEqualToString:@"highlights"])
+        else if([buttonTypeStr isEqualToString:kHighlightsStr])
             overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:[NSString stringWithFormat:@"%@/%@", overlayDirectory, @"highlights_1"]];
+        else if([buttonTypeStr isEqualToString:kGiftsStr])
+        {
+            overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:overlayDirectory];
+        }
         
         if( overlayPath != nil)
         {
