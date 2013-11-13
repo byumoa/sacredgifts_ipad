@@ -46,7 +46,7 @@ NSString* const kPaintingNames[] = {
     @"resurrection"
 };
 
-const NSString* kDontateURLStr = @"https://donate.ldsphilanthropies.org/TNHO3ajmoEyyUA7Sb5uKkg/G/5ZgVo9Qd8EmHpj8ZRnFhzg?cat=YjqfYR-gMES1sqWvh2cJ4g&cde1=795";
+const NSString* kDontateURLStr = @"https://donate.byu.edu/TNHO3ajmoEyyUA7Sb5uKkg/P/LlGZnojZCEC0r8dLhBjk2w?cat=0&ReturnUrl=sacredgifts%3A%2F%2F%3Fsender%3Dldsp";
 const CGRect kWebviewBackBtnFrm = {10, 10, 100, 60 };
 const CGRect kBlurFrame = {-18, -18, 804, 1060};
 
