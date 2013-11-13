@@ -89,7 +89,13 @@
     UIView* blurBacking = [blurManager blurBackingForView:self.childOverlay.view];
     [self.currentHighlightView addSubview:blurBacking];
     CGRect frame = self.childOverlay.view.frame;
-    frame.origin.y -= 131;
+    
+    if ([[UIScreen mainScreen] respondsToSelector:@selector(displayLinkWithTarget:selector:)] &&
+        ([UIScreen mainScreen].scale == 2.0)) {
+        frame.origin.y -= 111;
+    } else {
+        frame.origin.y -= 131;
+    }
     blurBacking.frame = frame;
     
      self.currentHighlightView.alpha = 0;
