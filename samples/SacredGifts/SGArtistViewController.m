@@ -38,6 +38,8 @@
         [SGNarrationManager pause];
     else
         [self playAudioNamed:_narrationStr];
+    
+    sender.selected = ((SGNarrationManager*)[SGNarrationManager sharedManager]).player.isPlaying;
 }
 
 - (BOOL) playAudioNamed: (NSString*)audioName;
