@@ -191,7 +191,7 @@
         <scene sceneID="Vj2-LF-bd6">
             <objects>
                 <viewController restorationIdentifier="hofman" storyboardIdentifier="hofman" id="jBG-xU-cwl" customClass="SGHofmanViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Xia-wn-nqc">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="Xia-wn-nqc">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -200,8 +200,8 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="zcQ-lH-V0e">
-                                <rect key="frame" x="0.0" y="42" width="768" height="961"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="62" width="768" height="962"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="artists_pages_hofmann_overlay.png" id="IcZ-cK-MCb">
                                         <rect key="frame" x="0.0" y="96" width="769" height="959"/>
@@ -1181,17 +1181,17 @@
         <scene sceneID="PKt-4M-xKP">
             <objects>
                 <viewController restorationIdentifier="schwartz" storyboardIdentifier="schwartz" id="vkt-vk-LdG" customClass="SGSchwartzViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KB8-Rl-OOd">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="KB8-Rl-OOd">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="artists_pages_artists_bg.png" id="Ld5-MX-NYR">
                                 <rect key="frame" x="0.0" y="-1" width="769" height="1025"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="Ekf-vs-Rsn">
-                                <rect key="frame" x="0.0" y="42" width="768" height="961"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="0.0" y="62" width="768" height="962"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="artists_pages_schwartz_overlay.png" id="7nQ-4B-Qa3">
                                         <rect key="frame" x="0.0" y="96" width="768" height="845"/>
@@ -1246,7 +1246,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="scrollView" destination="Ekf-vs-Rsn" id="7Xa-SQ-pGA"/>
                     </connections>
@@ -1268,7 +1267,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="ycS-7P-AwM">
-                                <rect key="frame" x="0.0" y="62" width="768" height="961"/>
+                                <rect key="frame" x="0.0" y="62" width="768" height="962"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="artists_pages_bloch_overlay.png" id="nYs-UR-Zbq">
