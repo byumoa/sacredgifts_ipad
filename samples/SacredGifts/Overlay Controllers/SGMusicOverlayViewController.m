@@ -35,10 +35,8 @@
 {
     CGRect frame = self.playOverlay.frame;
     frame.origin = CGPointMake(100, 221);
-    NSLog(@"Music frame: (%.0f, %.0f, %.0f, %.0f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
     if( _musicManager.player.duration > 0 )
         frame.size.width = _musicManager.player.currentTime / _musicManager.player.duration * 635.0;
-    NSLog(@"    Music frame: (%.0f, %.0f, %.0f, %.0f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
     self.playOverlay.frame = frame;
 }
 
