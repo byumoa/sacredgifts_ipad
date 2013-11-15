@@ -9,5 +9,6 @@
 #import "SGContentViewController.h"
 
 @interface SGParallaxBGViewController : SGContentViewController
+@property (weak, nonatomic) IBOutlet UIImageView* background;
 
 @end

@@ -8,10 +8,6 @@
 
 #import "SGParallaxBGViewController.h"
 
-@interface SGParallaxBGViewController ()
-
-@end
-
 @implementation SGParallaxBGViewController
 
 
