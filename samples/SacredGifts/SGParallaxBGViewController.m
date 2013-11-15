@@ -38,9 +38,9 @@ const float kWall = 0.25;
     _motionManager.deviceMotionUpdateInterval = kUpdateFrequency;
 }
 
--(void)viewDidAppear:(BOOL)animated
+-(void)viewDidLoad
 {
-    [super viewDidAppear:animated];
+    [super viewDidLoad];
     [self startParallaxing];
 }
 
