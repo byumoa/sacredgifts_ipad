@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Wells Fargo. All rights reserved.
 //
 
-#import "SGContentViewController.h"
+#import "SGParallaxBGViewController.h"
 
-@interface SGFindAPaintingViewController : SGContentViewController
+@interface SGFindAPaintingViewController : SGParallaxBGViewController
 - (IBAction)touchedPainting:(UIButton *)sender;
 - (IBAction)touchedArtist:(id)sender;
 
