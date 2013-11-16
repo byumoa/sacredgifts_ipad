@@ -9,7 +9,7 @@
 #import "SGContainerViewController.h"
 #import "SGScanViewController.h"
 
-@interface SGNavigationContainerViewController : SGContainerViewController <UIWebViewDelegate>
+@interface SGNavigationContainerViewController : SGContainerViewController <UIWebViewDelegate, UIAlertViewDelegate>
 {
     NSString* _backViewControllerIDStr, *_beforePaintingViewControllerIDStr;
     UIWebView* _webView;

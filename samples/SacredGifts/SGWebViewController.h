@@ -15,7 +15,7 @@ typedef enum
     webpageTypeFeedback
 }WebpageType;
 
-@interface SGWebViewController : UIViewController <UIWebViewDelegate>
+@interface SGWebViewController : UIViewController <UIWebViewDelegate, UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *webHeaderImgView;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;

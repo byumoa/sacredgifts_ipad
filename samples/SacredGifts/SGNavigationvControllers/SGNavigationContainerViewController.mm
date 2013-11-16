@@ -23,8 +23,6 @@
 {
     [super viewDidLoad];
     _backViewControllerIDStr = (NSString*)kControllerIDHomeStr;
-    self.backBtn.alpha = 0.0;
-    self.backBtn.enabled = NO;
 }
 
 -(IBAction)pressedBack:(UIButton*)sender
@@ -47,6 +45,8 @@
             _backViewControllerIDStr = (NSString*)kControllerIDMeetTheArtistsStr;
         else if ([self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDStoryOfTheExhibitionStr])
             _backViewControllerIDStr = (NSString*)kControllerIDAboutTheExhibitionStr;
+        else if ([self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDHomeStr])
+            NSLog(@"Pressed Back on HOME");
         else
             _backViewControllerIDStr = (NSString*)kControllerIDHomeStr;
     
@@ -76,8 +76,13 @@
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     [self dismissWebview];
-    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:@"We could not reach the internet at this time" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:@"We could not reach the internet at this time" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
+}
+
+-(void)alertViewCancel:(UIAlertView *)alertView
+{
+    [self dismissWebview];
 }
 
 -(void)pressedWebViewBack:(id)sender{
@@ -97,8 +102,6 @@
 {
     //Handle Back Button Alpha
     float backBtnAlpha = 1;
-    if( [toControllerID isEqualToString: (NSString*)kControllerIDHomeStr] )
-        backBtnAlpha = 0;
     self.backBtn.enabled = backBtnAlpha == 1;
     
     [UIView animateWithDuration:0.25 animations:^{
