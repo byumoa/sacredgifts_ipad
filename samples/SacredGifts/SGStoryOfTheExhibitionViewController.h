@@ -6,9 +6,9 @@
 //
 //
 
-#import "SGParallaxBGViewController.h"
+#import "SGContentViewController.h"
 
-@interface SGStoryOfTheExhibitionViewController : SGParallaxBGViewController
+@interface SGStoryOfTheExhibitionViewController : SGContentViewController
 {
     CGSize _scrollContentSize;
 }

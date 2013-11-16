@@ -13,7 +13,6 @@
 #import "SGOverlayView.h"
 #import "SGMusicManager.h"
 #import "SGNarrationManager.h"
-#import "SGParallaxBGViewController.h"
 
 @interface SGContainerViewController(BlurUtlities)
 
@@ -78,6 +77,7 @@
             ((SGOverlayView*)blurredView).myBlurredBacking = blurBacking;
 
         [self.currentContentController.view insertSubview:blurBacking belowSubview:blurredView];
+        [self.currentContentController.parallaxViews addObject:blurBacking.subviews[0]];
     }
 }
 
@@ -88,7 +88,7 @@
         ((SGOverlayView*)view).myBlurredBacking = blurBacking;
     
     [self.currentContentController.view insertSubview:blurBacking belowSubview:view];
-    [((SGParallaxBGViewController*)self.currentContentController).parallaxViews addObject:blurBacking.subviews[0]];
+    [self.currentContentController.parallaxViews addObject:blurBacking.subviews[0]];
 }
 
 -(void)contentController:(UIViewController *)contentController removeBlurBacking:(UIView *)view{}

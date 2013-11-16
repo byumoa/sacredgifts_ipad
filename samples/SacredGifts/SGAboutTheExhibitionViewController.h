@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 Wells Fargo. All rights reserved.
 //
 
-#import "SGParallaxBGViewController.h"
+#import "SGContentViewController.h"
 
-@interface SGAboutTheExhibitionViewController : SGParallaxBGViewController
+@interface SGAboutTheExhibitionViewController : SGContentViewController
 
 - (IBAction)pressedBtn:(UIButton *)sender;
 

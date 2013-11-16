@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Wells Fargo. All rights reserved.
 //
 
-#import "SGParallaxBGViewController.h"
+#import "SGContentViewController.h"
 
 typedef enum
 {
@@ -16,6 +16,6 @@ typedef enum
     kNavigationDestinationAboutTheExhibition = 3
 }NavigationDestination;
 
-@interface SGHomeViewController : SGParallaxBGViewController
+@interface SGHomeViewController : SGContentViewController
 
 @end

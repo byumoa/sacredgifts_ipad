@@ -159,7 +159,6 @@
 		618713DA1830E592005BC973 /* sg_general_painting_detailmarkerbtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 618713D61830E592005BC973 /* sg_general_painting_detailmarkerbtn@2x.png */; };
 		618B35CF1817FF3100EEC12E /* SGTextOverlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B35CE1817FF3100EEC12E /* SGTextOverlayViewController.m */; };
 		618B35D21818083900EEC12E /* SGAudioViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B35D11818083900EEC12E /* SGAudioViewController.m */; };
-		618B4C5F18369F2100A594BC /* SGParallaxBGViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618B4C5E18369F2100A594BC /* SGParallaxBGViewController.m */; };
 		61A668ED182EEB2200AC749E /* exhibition_credit_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A668E7182EEB2200AC749E /* exhibition_credit_overlay.png */; };
 		61A668EE182EEB2200AC749E /* exhibition_credit_overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A668E8182EEB2200AC749E /* exhibition_credit_overlay@2x.png */; };
 		61A668EF182EEB2200AC749E /* exhibition_donors_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A668E9182EEB2200AC749E /* exhibition_donors_overlay.png */; };
@@ -643,8 +642,6 @@
 		618B35CE1817FF3100EEC12E /* SGTextOverlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTextOverlayViewController.m; sourceTree = "<group>"; };
 		618B35D01818083900EEC12E /* SGAudioViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAudioViewController.h; sourceTree = "<group>"; };
 		618B35D11818083900EEC12E /* SGAudioViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAudioViewController.m; sourceTree = "<group>"; };
-		618B4C5D18369F2100A594BC /* SGParallaxBGViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGParallaxBGViewController.h; sourceTree = "<group>"; };
-		618B4C5E18369F2100A594BC /* SGParallaxBGViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGParallaxBGViewController.m; sourceTree = "<group>"; };
 		61A668E7182EEB2200AC749E /* exhibition_credit_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exhibition_credit_overlay.png; sourceTree = "<group>"; };
 		61A668E8182EEB2200AC749E /* exhibition_credit_overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exhibition_credit_overlay@2x.png"; sourceTree = "<group>"; };
 		61A668E9182EEB2200AC749E /* exhibition_donors_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = exhibition_donors_overlay.png; sourceTree = "<group>"; };
@@ -1070,8 +1067,6 @@
 				15A15860135C9D0700C6B482 /* Supporting Files */,
 				618713B6182F0B6C005BC973 /* SGConvenienceFunctionsManager.h */,
 				618713B7182F0B6C005BC973 /* SGConvenienceFunctionsManager.m */,
-				618B4C5D18369F2100A594BC /* SGParallaxBGViewController.h */,
-				618B4C5E18369F2100A594BC /* SGParallaxBGViewController.m */,
 			);
 			name = SacredGifts;
 			sourceTree = "<group>";
@@ -2220,7 +2215,6 @@
 				6186729E18100E7900DED0D4 /* ShaderUtils.cpp in Sources */,
 				61CD5348180C256700D28921 /* SGBlochViewController.m in Sources */,
 				61CD534A180C256700D28921 /* SGHofmanViewController.m in Sources */,
-				618B4C5F18369F2100A594BC /* SGParallaxBGViewController.m in Sources */,
 				150D1CCB1385551A0007C72E /* ImageTargetsAppDelegate.mm in Sources */,
 				61CD5342180C256700D28921 /* SGHomeViewController.m in Sources */,
 				61CD5325180C253400D28921 /* SGContentViewController.m in Sources */,

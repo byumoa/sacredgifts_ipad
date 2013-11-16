@@ -6,9 +6,9 @@
 //
 //
 
-#import "SGParallaxBGViewController.h"
+#import "SGContentViewController.h"
 
-@interface SGArtistViewController : SGParallaxBGViewController
+@interface SGArtistViewController : SGContentViewController
 {
     CGSize _scrollContentSize;
     NSString* _narrationStr;

@@ -8,14 +8,21 @@
 
 #import <UIKit/UIKit.h>
 #import "SGContentControllerDelegate.h"
+#import <CoreMotion/CoreMotion.h>
 
 @interface SGContentViewController : UIViewController
 {
     NSString* _blurImageName;
+    CMMotionManager *_motionManager;
 }
 
 @property(strong, nonatomic) id<SGContentControllerDelegate> delegate;
-
 @property (strong, nonatomic) IBOutletCollection(UIButton) NSArray *blurredViews;
+
+@property (weak, nonatomic) IBOutlet UIImageView* background;
+@property (strong, nonatomic) IBOutlet NSMutableArray* parallaxViews;
+
+- (void)startParallaxing;
+- (void)stopParallaxing;
 
 @end
