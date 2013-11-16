@@ -14,4 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIImageView *splashArtists;
 @property (weak, nonatomic) IBOutlet UIImageView *splashDonors;
 
+- (void)resetSplash;
+
 @end

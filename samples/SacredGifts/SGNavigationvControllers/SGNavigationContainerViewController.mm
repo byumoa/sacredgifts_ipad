@@ -45,8 +45,6 @@
             _backViewControllerIDStr = (NSString*)kControllerIDMeetTheArtistsStr;
         else if ([self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDStoryOfTheExhibitionStr])
             _backViewControllerIDStr = (NSString*)kControllerIDAboutTheExhibitionStr;
-        else if ([self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDHomeStr])
-            NSLog(@"Pressed Back on HOME");
         else
             _backViewControllerIDStr = (NSString*)kControllerIDHomeStr;
     

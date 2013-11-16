@@ -31,13 +31,32 @@
         homeC.delegate = self;
     
         [self displayContentController:homeC];
-        [UIView animateWithDuration:1 animations:^{
-            self.splashArtists.alpha = 1;
-        }];
-
-        _donorsTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(fadeInDonors:) userInfo:nil repeats:NO];
-        _splashTimer = [NSTimer scheduledTimerWithTimeInterval:63 target:self selector:@selector(fadeSplash:) userInfo:nil repeats:NO];
+        [self resetSplash];
     }
+}
+
+-(void)pressedBack:(UIButton *)sender
+{
+    if( [self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDHomeStr])
+        [self resetSplash];
+    else
+        [super pressedBack:sender];
+}
+
+-(void)resetSplash
+{
+    NSLog(@"resetSplash self.splashArtists: %@", self.splashArtists);
+    [self.view bringSubviewToFront:_splash];
+    [self.view bringSubviewToFront:_splashArtists];
+    [self.view bringSubviewToFront:_splashDonors];
+    _splash.alpha = 1;
+    
+    [UIView animateWithDuration:1 animations:^{
+        self.splashArtists.alpha = 1;
+    }];
+    
+    _donorsTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(fadeInDonors:) userInfo:nil repeats:NO];
+    _splashTimer = [NSTimer scheduledTimerWithTimeInterval:63 target:self selector:@selector(fadeSplash:) userInfo:nil repeats:NO];
 }
 
 -(void)fadeInDonors:(NSTimer *)timer
