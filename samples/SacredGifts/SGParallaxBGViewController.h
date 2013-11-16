@@ -14,6 +14,7 @@
     CMMotionManager *_motionManager;
 }
 @property (weak, nonatomic) IBOutlet UIImageView* background;
+@property (strong, nonatomic) IBOutlet NSMutableArray* parallaxViews;
 
 - (void)startParallaxing;
 - (void)stopParallaxing;

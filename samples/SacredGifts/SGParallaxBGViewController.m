@@ -27,6 +27,7 @@ const float kWall = 0.25;
     if( self = [super initWithCoder:aDecoder])
     {
         [self setupMotionManager];
+        self.parallaxViews = [NSMutableArray new];
     }
     
     return self;
@@ -73,11 +74,15 @@ const float kWall = 0.25;
     if( attitude.y > kWall ) attitude.y = kWall;
     else if( attitude.y < -kWall ) attitude.y = -kWall;
     
-    float x = attitude.x * kBackgroundDepth;
+    float x = 0;//attitude.x * kBackgroundDepth;
     float y = attitude.y * kBackgroundDepth;
+    
+    NSLog(@"self.parallaxViews: %@", self.parallaxViews);
     
     [UIView animateWithDuration:kUpdateFrequency animations:^{
         self.background.transform = CGAffineTransformTranslate(CGAffineTransformIdentity, kOffsetMultiplier * y, kOffsetMultiplier * x);
+        for (UIImageView* blurredBacking in self.parallaxViews)
+            blurredBacking.transform = CGAffineTransformTranslate(CGAffineTransformIdentity, kOffsetMultiplier * y, kOffsetMultiplier * x);
     }];
 }
 
