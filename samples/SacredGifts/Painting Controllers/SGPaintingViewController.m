@@ -48,6 +48,11 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
     //Main Painting
     _paintingNameStr = paintingStr;
     [self addMainPainting:_paintingNameStr];
+    if( chromeHidden )
+    {
+        self.headerView.alpha = 0;
+        self.footerView.alpha = 0;
+    }
     [NSTimer scheduledTimerWithTimeInterval:self.frameOverlayDelay target:self selector:@selector(addTombstoneDelayed:) userInfo:nil repeats:NO];
     self.currentPaintingIndex = [self calcCurrentPaintingIndex];
     
@@ -81,19 +86,37 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
 
 -(void)addTombstoneDelayed:(NSTimer *)timer
 {
-    [self addNewOverlayOfType:(NSString*)kTombstoneStr forPainting:_paintingNameStr];
-    NSArray* blurredViews = [NSArray arrayWithObject:self.overlayController.view];
-    NSString *blurredPaintingPath = [[NSBundle mainBundle] pathForResource:@"MainPainting Blurred" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, _paintingNameStr]];
-    [self.delegate contentController:self viewsForBlurredBacking:blurredViews blurredImgPath:blurredPaintingPath];
+    _tombstoneShown = YES;
+    
+    if( !chromeHidden )
+    {
+        [self addNewOverlayOfType:(NSString*)kTombstoneStr forPainting:_paintingNameStr];
+        NSArray* blurredViews = [NSArray arrayWithObject:self.overlayController.view];
+        NSString *blurredPaintingPath = [[NSBundle mainBundle] pathForResource:@"MainPainting Blurred" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, _paintingNameStr]];
+        [self.delegate contentController:self viewsForBlurredBacking:blurredViews blurredImgPath:blurredPaintingPath];
+    }
     
     _currentFooterBtnX = 0;
     [self addFooterButtonsForPainting:_paintingNameStr];
     self.overlayController.closeButton.hidden = YES;
-    _tombstoneShown = YES;
+}
+
+static BOOL chromeHidden = NO;
+
++ (BOOL)chromeHidden
+{
+    return chromeHidden;
+}
+
++ (void)setChromeHidden:(BOOL)val
+{
+    chromeHidden = val;
 }
 
 - (IBAction)swipeRecognized:(UISwipeGestureRecognizer *)sender
 {
+    NSLog(@"swipeRecognized");
+    
     if( !_tombstoneShown ) return;
     
     NSString* swipeDir = (NSString*)kAnimTypeSwipeLeft;
@@ -431,6 +454,8 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
         else
             [self addTombstoneDelayed:0];
     
+        chromeHidden = (self.footerView.alpha == 1);
+        
         [UIView animateWithDuration:0.25 animations:^{
             self.footerView.alpha = targetAlpha;
             self.overlayController.view.alpha = targetAlpha;

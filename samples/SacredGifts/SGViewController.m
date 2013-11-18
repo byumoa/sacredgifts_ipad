@@ -45,7 +45,6 @@
 
 -(void)resetSplash
 {
-    NSLog(@"resetSplash self.splashArtists: %@", self.splashArtists);
     [self.view bringSubviewToFront:_splash];
     [self.view bringSubviewToFront:_splashArtists];
     [self.view bringSubviewToFront:_splashDonors];

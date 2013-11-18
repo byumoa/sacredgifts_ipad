@@ -35,4 +35,7 @@
 - (IBAction)swipeRecognized:(UISwipeGestureRecognizer *)sender;
 - (IBAction)pressedTempleToggle:(id)sender;
 
++ (BOOL)chromeHidden;
++ (void)setChromeHidden: (BOOL)val;
+
 @end
