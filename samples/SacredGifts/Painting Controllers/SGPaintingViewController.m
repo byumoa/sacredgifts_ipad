@@ -428,6 +428,8 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
         float targetAlpha = 1;
         if( self.footerView.alpha == 1 )
             targetAlpha = 0;
+        else
+            [self addTombstoneDelayed:0];
     
         [UIView animateWithDuration:0.25 animations:^{
             self.footerView.alpha = targetAlpha;
