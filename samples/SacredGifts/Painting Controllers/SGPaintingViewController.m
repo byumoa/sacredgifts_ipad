@@ -434,6 +434,8 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
         [UIView animateWithDuration:0.25 animations:^{
             self.footerView.alpha = targetAlpha;
             self.overlayController.view.alpha = targetAlpha;
+            self.headerView.alpha = targetAlpha;
+            
             ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = targetAlpha;
         }];
     }
