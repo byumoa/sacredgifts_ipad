@@ -446,6 +446,8 @@
 		61E5430C1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E543081832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png */; };
 		61E5430D1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E543091832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png */; };
 		61E5430E1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E5430A1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch@2x.png */; };
+		61E850E7183AC98D00D6EB08 /* SG_Home_SplashLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E850E5183AC98D00D6EB08 /* SG_Home_SplashLogo.png */; };
+		61E850E8183AC98D00D6EB08 /* SG_Home_SplashLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E850E6183AC98D00D6EB08 /* SG_Home_SplashLogo@2x.png */; };
 		61F73CC11830FDF200D13F7C /* childrens_bloch_prompt.png in Resources */ = {isa = PBXBuildFile; fileRef = 61F73CBB1830FDF200D13F7C /* childrens_bloch_prompt.png */; };
 		61F73CC21830FDF200D13F7C /* childrens_bloch_prompt@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61F73CBC1830FDF200D13F7C /* childrens_bloch_prompt@2x.png */; };
 		61F73CC31830FDF200D13F7C /* childrens_hofmann_prompt.png in Resources */ = {isa = PBXBuildFile; fileRef = 61F73CBD1830FDF200D13F7C /* childrens_hofmann_prompt.png */; };
@@ -961,6 +963,8 @@
 		61E543081832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch-on@2x.png"; sourceTree = "<group>"; };
 		61E543091832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch.png"; sourceTree = "<group>"; };
 		61E5430A1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch@2x.png"; sourceTree = "<group>"; };
+		61E850E5183AC98D00D6EB08 /* SG_Home_SplashLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_Home_SplashLogo.png; sourceTree = "<group>"; };
+		61E850E6183AC98D00D6EB08 /* SG_Home_SplashLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_SplashLogo@2x.png"; sourceTree = "<group>"; };
 		61F73CBB1830FDF200D13F7C /* childrens_bloch_prompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = childrens_bloch_prompt.png; sourceTree = "<group>"; };
 		61F73CBC1830FDF200D13F7C /* childrens_bloch_prompt@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "childrens_bloch_prompt@2x.png"; sourceTree = "<group>"; };
 		61F73CBD1830FDF200D13F7C /* childrens_hofmann_prompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = childrens_hofmann_prompt.png; sourceTree = "<group>"; };
@@ -1349,6 +1353,8 @@
 		61CD50C3180C242500D28921 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				61E850E5183AC98D00D6EB08 /* SG_Home_SplashLogo.png */,
+				61E850E6183AC98D00D6EB08 /* SG_Home_SplashLogo@2x.png */,
 				61267B7E1819667B00A52CC5 /* splash_artists.png */,
 				61267B7F1819667B00A52CC5 /* splash_artists@2x.png */,
 				61267B801819667B00A52CC5 /* splash_donors.png */,
@@ -1818,6 +1824,7 @@
 				61CD523B180C242500D28921 /* SG_General_HomeBtn-on.png in Resources */,
 				76CEC821146D45F7009E8098 /* StonesAndChips.xml in Resources */,
 				61CD52A1180C242500D28921 /* painting_thumb_aalborg@2x.png in Resources */,
+				61E850E7183AC98D00D6EB08 /* SG_Home_SplashLogo.png in Resources */,
 				618713B3182F0956005BC973 /* SG_General_Module_Overlay_Schwartz.png in Resources */,
 				61CD52A6180C242500D28921 /* painting_thumb_capture-on.png in Resources */,
 				61CD524E180C242500D28921 /* SG_General_Painting_ChildrensBtn-on@2x.png in Resources */,
@@ -1951,6 +1958,7 @@
 				61CD5203180C242500D28921 /* sg_home_hoffmanbtn-on@2x.png in Resources */,
 				61CD523A180C242500D28921 /* SG_General_BackBtn@2x.png in Resources */,
 				618713C8182F10AA005BC973 /* SG_General_Module_OverlayHalf@2x.png in Resources */,
+				61E850E8183AC98D00D6EB08 /* SG_Home_SplashLogo@2x.png in Resources */,
 				61735B51183249A30000D837 /* capture.png in Resources */,
 				61CD51E2180C242500D28921 /* sg_home_bg-meetartists.png in Resources */,
 				61CD52B8180C242500D28921 /* painting_thumb_cross.png in Resources */,

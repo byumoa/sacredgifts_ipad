@@ -11,6 +11,7 @@
 
 @interface SGViewController : SGNavigationContainerViewController
 @property (weak, nonatomic) IBOutlet UIImageView *splash;
+@property (weak, nonatomic) IBOutlet UIImageView *splashLogo;
 @property (weak, nonatomic) IBOutlet UIImageView *splashArtists;
 @property (weak, nonatomic) IBOutlet UIImageView *splashDonors;
 

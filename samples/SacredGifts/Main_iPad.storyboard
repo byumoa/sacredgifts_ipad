@@ -96,16 +96,20 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
-                            <imageView opaque="NO" clipsSubviews="YES" contentMode="center" image="SG_Home_SplashScreen.png" id="zKe-di-iZj">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="center" image="splash_donors.png" id="mre-GN-Ojo">
+                                <rect key="frame" x="0.0" y="629" width="768" height="395"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="center" image="splash_artists.png" id="Ca2-br-Pv0">
                                 <rect key="frame" x="456" y="721" width="312" height="303"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="center" image="splash_donors.png" id="mre-GN-Ojo">
-                                <rect key="frame" x="0.0" y="629" width="768" height="395"/>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="SG_Home_SplashLogo.png" id="Grd-WE-hAn">
+                                <rect key="frame" x="0.0" y="720" width="768" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" contentMode="center" image="SG_Home_SplashScreen.png" id="zKe-di-iZj">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                         </subviews>
@@ -121,6 +125,7 @@
                         <outlet property="splash" destination="zKe-di-iZj" id="aR0-Tl-6DU"/>
                         <outlet property="splashArtists" destination="Ca2-br-Pv0" id="fFf-AW-LuC"/>
                         <outlet property="splashDonors" destination="mre-GN-Ojo" id="XRe-gC-A40"/>
+                        <outlet property="splashLogo" destination="Grd-WE-hAn" id="cfi-Hu-50c"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -1715,6 +1720,7 @@
         <image name="SG_General_painting-castleBtn-Bloch.png" width="250" height="42"/>
         <image name="SG_General_window_closeBtn-on.png" width="102" height="70"/>
         <image name="SG_General_window_closeBtn.png" width="102" height="70"/>
+        <image name="SG_Home_SplashLogo.png" width="768" height="240"/>
         <image name="SG_Home_SplashScreen.png" width="768" height="1024"/>
         <image name="aalborg.png" width="800" height="410"/>
         <image name="artists_pages_artists_bg.png" width="769" height="1025"/>

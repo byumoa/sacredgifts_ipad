@@ -115,8 +115,6 @@ static BOOL chromeHidden = NO;
 
 - (IBAction)swipeRecognized:(UISwipeGestureRecognizer *)sender
 {
-    NSLog(@"swipeRecognized");
-    
     if( !_tombstoneShown ) return;
     
     NSString* swipeDir = (NSString*)kAnimTypeSwipeLeft;
