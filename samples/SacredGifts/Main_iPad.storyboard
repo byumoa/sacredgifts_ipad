@@ -1194,7 +1194,7 @@
         <scene sceneID="PKt-4M-xKP">
             <objects>
                 <viewController restorationIdentifier="schwartz" storyboardIdentifier="schwartz" id="vkt-vk-LdG" customClass="SGSchwartzViewController" sceneMemberID="viewController">
-                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="KB8-Rl-OOd">
+                    <view key="view" autoresizesSubviews="NO" tag="1" contentMode="scaleToFill" id="KB8-Rl-OOd">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -1273,7 +1273,7 @@
         <scene sceneID="xxs-WI-hnk">
             <objects>
                 <viewController restorationIdentifier="bloch" storyboardIdentifier="bloch" id="kwW-sc-41B" customClass="SGBlochViewController" sceneMemberID="viewController">
-                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="YPJ-Jy-GnP">
+                    <view key="view" autoresizesSubviews="NO" tag="2" contentMode="scaleToFill" id="YPJ-Jy-GnP">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>

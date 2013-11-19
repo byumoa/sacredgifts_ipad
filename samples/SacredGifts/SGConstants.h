@@ -47,6 +47,7 @@ extern const NSString* kControllerIDHofmantr;
 
 extern const int kTotalPaintings;
 extern const NSString* kPaintingNames[];
+extern const NSString* kArtistNames[];
 
 extern const CGRect kBlurFrame;
 

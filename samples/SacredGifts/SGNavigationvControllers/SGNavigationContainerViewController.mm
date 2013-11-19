@@ -110,6 +110,11 @@
     toController.delegate = self;
     
     BOOL isTransitionToPainting = [toController.restorationIdentifier isEqualToString:(NSString*)kControllerIDPaintingContainerStr];
+    BOOL isTransitionToArtist = NO;
+    if( [toController.restorationIdentifier isEqualToString:(NSString*)kArtistNames[0]]
+       ||[toController.restorationIdentifier isEqualToString:(NSString*)kArtistNames[1]]
+       ||[toController.restorationIdentifier isEqualToString:(NSString*)kArtistNames[2]])
+        isTransitionToArtist = YES;
 
     __weak typeof(self) weakSelf = self;
     animTransitionBlock = ^(void)
@@ -117,8 +122,8 @@
         toController.view.alpha = 1;
         [weakSelf.view bringSubviewToFront:weakSelf.headerView];
         [weakSelf.view bringSubviewToFront:weakSelf.footerView];
-        weakSelf.footerView.alpha = !isTransitionToPainting;
-        };
+        weakSelf.footerView.alpha = !(isTransitionToPainting||isTransitionToArtist);
+    };
     
     [self cycleFromViewController:fromController toViewController:toController fromButtonRect:frame falling:animType];
     
@@ -166,7 +171,6 @@
     
     self.headerBGImgView.alpha = 0;
     [UIView animateWithDuration:0.25 animations:^{
-        //self.headerView.backgroundColor = [UIColor blackColor];
         self.headerBlurDecoy.backgroundColor = [UIColor blackColor];
     }];
 }

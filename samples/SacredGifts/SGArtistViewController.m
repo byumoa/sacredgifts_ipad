@@ -13,6 +13,7 @@
 @interface SGArtistViewController()
 
 - (BOOL) playAudioNamed: (NSString*)audioName;
+- (void) swipeRecognized: (UISwipeGestureRecognizer*)swipeRecognizer;
 
 @end
 
@@ -23,6 +24,33 @@
     [super viewDidLoad];
     
     self.scrollView.contentSize = _scrollContentSize;
+    UISwipeGestureRecognizer* swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRecognized:)];
+    swipeRecognizer.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:swipeRecognizer];
+    
+    swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipeRecognized:)];
+    swipeRecognizer.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipeRecognizer];
+}
+
+-(void)swipeRecognized:(UISwipeGestureRecognizer *)swipeRecognizer
+{
+    int direction = 1;
+    NSString* swipeDir = (NSString*)kAnimTypeSwipeRight;
+    
+    if( swipeRecognizer.direction == UISwipeGestureRecognizerDirectionLeft )
+    {
+        direction = -1;
+        swipeDir = (NSString*)kAnimTypeSwipeLeft;
+    }
+    
+    int nextArtistIndex = self.view.tag + direction;
+    if( nextArtistIndex < 0 )
+        nextArtistIndex += 3;
+    nextArtistIndex %= 3;
+    
+    NSString* nextArtistName = (NSString*)kArtistNames[nextArtistIndex];
+    [self.delegate transitionFromController:self toControllerID:nextArtistName fromButtonRect:CGRectZero withAnimType:swipeDir];
 }
 
 -(void)viewWillDisappear:(BOOL)animated
