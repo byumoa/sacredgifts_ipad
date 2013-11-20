@@ -543,6 +543,7 @@
 		613292DF18325C9E00551F09 /* SG_General_painting-castleBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-on@2x.png"; sourceTree = "<group>"; };
 		613292E018325C9E00551F09 /* SG_General_painting-castleBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn.png"; sourceTree = "<group>"; };
 		613292E118325C9E00551F09 /* SG_General_painting-castleBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn@2x.png"; sourceTree = "<group>"; };
+		6141D35E183CFE1800739369 /* SGQCARDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGQCARDelegate.h; sourceTree = "<group>"; };
 		614C01011824247600333698 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		614C01031824247D00333698 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		614E3C98180D8D9C002E875B /* SacredGifts.dat */ = {isa = PBXFileReference; lastKnownFileType = file; name = SacredGifts.dat; path = ImageTargets/assets/SacredGifts.dat; sourceTree = "<group>"; };
@@ -1025,6 +1026,7 @@
 		15A15847135C9CD700C6B482 /* SacredGifts */ = {
 			isa = PBXGroup;
 			children = (
+				6141D35E183CFE1800739369 /* SGQCARDelegate.h */,
 				6165AA731819C95400857DBD /* SGEAGLView.h */,
 				6165AA721819C95400857DBD /* SGEAGLView.m */,
 				61267B7A181932CD00A52CC5 /* Secondary Overlays */,

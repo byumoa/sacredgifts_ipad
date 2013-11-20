@@ -12,18 +12,20 @@
 @implementation ARParentViewController
 
 @synthesize arViewRect;
+@synthesize arViewController = arViewController;
 
 // initialisation functions set up size of managed view
-- (id)initWithWindow:(UIWindow*)window
+//- (id)initWithWindow:(UIWindow*)window
+-(id)initWithCoder:(NSCoder *)aDecoder
 {
-    self = [super init];
+    self = [super initWithCoder:aDecoder];
     
     if (self) {
         // Custom initialization
         arViewRect.size = [[UIScreen mainScreen] bounds].size;
         arViewRect.origin.x = arViewRect.origin.y = 0;
-        appWindow = window;
-        [appWindow retain];
+        //appWindow = window;
+        //[appWindow retain];
     }
     
     return self;

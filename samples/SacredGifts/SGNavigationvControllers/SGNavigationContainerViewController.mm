@@ -11,6 +11,9 @@
 #import "SGContentViewController.h"
 #import "SGPaintingViewController.h"
 #import "SGWebViewController.h"
+#import "ARParentViewController.h"
+#import "ARViewController.h"
+#import "EAGLView.h"
 
 @interface SGNavigationContainerViewController ()
 - (void)pressedWebViewBack: (id)sender;
@@ -200,7 +203,21 @@
         self.footerView.alpha = 0;
         self.headerView.alpha = 0;
         self.headerBlurDecoy.alpha = 0;
+        //set EAGLView delegate
+        ((ARViewController*)((ARParentViewController*)self.scanController).arViewController).arView.delegate = self;
     }
+}
+
+-(void)scannedPainting:(NSString *)paintingName
+{
+    NSLog(@"SGNavigationContainerViewController scannedPainting: %@", paintingName);
+    [self transitionFromController:self.currentContentController toPaintingNamed:paintingName fromButtonRect:CGRectZero withAnimType:kAnimTypeZoomIn];
+    
+    [self.scanController.view removeFromSuperview];
+    self.scanController = nil;
+    self.footerView.alpha = _footerLastAlpha;
+    self.headerView.alpha = 1;
+    self.headerBlurDecoy.alpha = 1;
 }
 
 -(IBAction)pressedHome:(id)sender

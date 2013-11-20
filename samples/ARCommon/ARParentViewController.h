@@ -21,8 +21,9 @@
 }
 
 @property (nonatomic) CGRect arViewRect;
+@property (nonatomic, retain) ARViewController* arViewController;
 
-- (id)initWithWindow:(UIWindow*)window;
+//- (id)initWithWindow:(UIWindow*)window;
 - (void)createParentViewAndSplashContinuation;
 - (void)endSplash:(NSTimer*)theTimer;
 - (void)updateSplashScreenImageForLandscape;

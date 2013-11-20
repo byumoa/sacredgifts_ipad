@@ -81,6 +81,9 @@
 // this is the application entry point
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    QCARutils* qUtils = [QCARutils getInstance];
+    [qUtils addTargetName:@"SacredGifts" atPath:@"SacredGifts.xml"];
+    
     return YES;
 }
 

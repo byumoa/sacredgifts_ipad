@@ -8,8 +8,9 @@
 
 #import "SGContainerViewController.h"
 #import "SGScanViewController.h"
+#import "SGQCARDelegate.h"
 
-@interface SGNavigationContainerViewController : SGContainerViewController <UIWebViewDelegate, UIAlertViewDelegate>
+@interface SGNavigationContainerViewController : SGContainerViewController <UIWebViewDelegate, UIAlertViewDelegate, SGQCARDelegate>
 {
     NSString* _backViewControllerIDStr, *_beforePaintingViewControllerIDStr;
     UIWebView* _webView;

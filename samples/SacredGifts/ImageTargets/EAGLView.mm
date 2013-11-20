@@ -120,15 +120,15 @@ namespace {
     for (int i = 0; i < state.getNumTrackables(); ++i) {
         // Get the trackable
         const QCAR::TrackableResult* result = state.getTrackableResult(i);
-        const QCAR::Trackable& trackable = result->getTrackable();
+        if(!result)break;
+        
+        //const QCAR::Trackable& trackable = result->getTrackable();
         QCAR::Matrix44F modelViewMatrix = QCAR::Tool::convertPose2GLMatrix(result->getPose());
+        NSString* trackableName = [NSString stringWithFormat:@"%s", result->getTrackable().getName()];
+        [self.delegate scannedPainting:trackableName];
         
         // Choose the texture based on the target name
         int targetIndex = 0; // "stones"
-        if (!strcmp(trackable.getName(), "chips"))
-            targetIndex = 1;
-        else if (!strcmp(trackable.getName(), "tarmac"))
-            targetIndex = 2;
         
         Object3D *obj3D = [objects3D objectAtIndex:targetIndex];
         
@@ -173,7 +173,7 @@ namespace {
             glActiveTexture(GL_TEXTURE0);
             glBindTexture(GL_TEXTURE_2D, [obj3D.texture textureID]);
             glUniformMatrix4fv(mvpMatrixHandle, 1, GL_FALSE, (const GLfloat*)&modelViewProjection.data[0]);
-            glDrawElements(GL_TRIANGLES, obj3D.numIndices, GL_UNSIGNED_SHORT, (const GLvoid*)obj3D.indices);
+            //glDrawElements(GL_TRIANGLES, obj3D.numIndices, GL_UNSIGNED_SHORT, (const GLvoid*)obj3D.indices);
             
             ShaderUtils::checkGlError("EAGLView renderFrameQCAR");
         }
