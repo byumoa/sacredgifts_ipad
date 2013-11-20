@@ -125,7 +125,9 @@ namespace {
         //const QCAR::Trackable& trackable = result->getTrackable();
         QCAR::Matrix44F modelViewMatrix = QCAR::Tool::convertPose2GLMatrix(result->getPose());
         NSString* trackableName = [NSString stringWithFormat:@"%s", result->getTrackable().getName()];
+        if( _transitioned )break;
         [self.delegate scannedPainting:trackableName];
+        _transitioned = YES;
         
         // Choose the texture based on the target name
         int targetIndex = 0; // "stones"

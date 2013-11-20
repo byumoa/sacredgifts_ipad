@@ -12,6 +12,7 @@
 // the EAGL surface has an alpha channel.
 @interface EAGLView : AR_EAGLView
 {
+    BOOL _transitioned;
 }
 
 @property (nonatomic, retain) id<SGQCARDelegate> delegate;
