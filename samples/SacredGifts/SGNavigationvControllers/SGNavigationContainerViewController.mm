@@ -148,13 +148,11 @@
         if (!isTransitionToPainting)
             self.headerBGImgView.alpha = 1;
         
-        if ([toController.restorationIdentifier isEqualToString:(NSString*)kPanoramaStr])
-        {
+        if ([toController.restorationIdentifier isEqualToString:(NSString*)kPanoramaStr]){
             self.headerView.alpha = 0;
             self.headerBlurDecoy.alpha = 0;
         }
-        else
-        {
+        else{
             self.headerView.alpha = 1;
             self.headerBlurDecoy.alpha = 1;
         }
@@ -173,6 +171,7 @@
     ((SGPaintingViewController*)paintingContainer.currentContentController).headerView = self.headerView;
     
     self.headerBGImgView.alpha = 0;
+    self.footerView.alpha = 0;
     [UIView animateWithDuration:0.25 animations:^{
         self.headerBlurDecoy.backgroundColor = [UIColor blackColor];
     }];
@@ -210,7 +209,6 @@
 
 -(void)scannedPainting:(NSString *)paintingName
 {
-    NSLog(@"SGNavigationContainerViewController scannedPainting: %@", paintingName);
     [self transitionFromController:self.currentContentController toPaintingNamed:paintingName fromButtonRect:CGRectZero withAnimType:kAnimTypeZoomIn];
     
     [self.scanController.view removeFromSuperview];

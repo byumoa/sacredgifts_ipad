@@ -53,7 +53,9 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
         self.headerView.alpha = 0;
         self.footerView.alpha = 0;
     }
+    //Not called from AR, why?
     [NSTimer scheduledTimerWithTimeInterval:self.frameOverlayDelay target:self selector:@selector(addTombstoneDelayed:) userInfo:nil repeats:NO];
+    //[self addTombstoneDelayed:nil];
     self.currentPaintingIndex = [self calcCurrentPaintingIndex];
     
     if( [paintingStr isEqualToString:kPaintingNameTemple] || [paintingStr isEqualToString:kPaintingNameTempleNY])

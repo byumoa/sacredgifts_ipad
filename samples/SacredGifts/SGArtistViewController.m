@@ -70,7 +70,7 @@
     sender.selected = ((SGNarrationManager*)[SGNarrationManager sharedManager]).player.isPlaying;
 }
 
-- (BOOL) playAudioNamed: (NSString*)audioName;
+- (BOOL)playAudioNamed: (NSString*)audioName;
 {
     NSString *narrationPath = [NSString stringWithFormat:@"%@/%@", [[NSBundle mainBundle] resourcePath], audioName];
     [[SGNarrationManager sharedManager] playAudioWithPath:narrationPath];
