@@ -1,24 +1,28 @@
-<?xml version="1.0"?>
-<QCARConfig xsi:noNamespaceSchemaLocation="qcar_config.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-    <Tracking>
-        <ImageTarget name="mocking" size="805 963"/>
-        <ImageTarget name="resurrection" size="803 1070"/>
-        <ImageTarget name="cross" size="935 1137"/>
-        <ImageTarget name="gethsemane" size="956 1338"/>
-        <ImageTarget name="shepherds" size="1152 1255"/>
-        <ImageTarget name="garden" size="1028 1338"/>
-        <ImageTarget name="healing" size="922 1058"/>
-        <ImageTarget name="burial" size="899 1070"/>
-        <ImageTarget name="emmaus" size="827 1070"/>
-        <ImageTarget name="cleansing" size="922 1025"/>
-        <ImageTarget name="children" size="922 1070"/>
-        <ImageTarget name="ruler" size="1152 913"/>
-        <ImageTarget name="capture" size="1152 825"/>
-        <ImageTarget name="consolator" size="792 1070"/>
-        <ImageTarget name="savior" size="986 1338"/>
-        <ImageTarget name="aalborg" size="922 1070"/>
-        <ImageTarget name="denial" size="901 1070"/>
-        <ImageTarget name="sermon" size="922 1006"/>
-        <ImageTarget name="temple" size="1152 849"/>
-    </Tracking>
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="resurrection" size="803.000000 1070.666626" />
+    <ImageTarget name="mocking" size="805.000000 1045.174927" />
+    <ImageTarget name="cross" size="935.000000 1137.817139" />
+    <ImageTarget name="gethsemane" size="956.000000 1311.926147" />
+    <ImageTarget name="shepherds" size="1152.000000 1254.000000" />
+    <ImageTarget name="garden" size="1028.000000 1338.198242" />
+    <ImageTarget name="temple" size="1152.000000 850.500000" />
+    <ImageTarget name="healing" size="922.000000 1070.864624" />
+    <ImageTarget name="burial" size="899.000000 1044.151001" />
+    <ImageTarget name="emmaus" size="827.000000 731.529236" />
+    <ImageTarget name="cleansing" size="922.000000 1025.244751" />
+    <ImageTarget name="children" size="922.000000 1070.864624" />
+    <ImageTarget name="ruler" size="1152.000000 901.500000" />
+    <ImageTarget name="savior" size="986.000000 1338.678833" />
+    <ImageTarget name="consolator" size="792.000000 1072.024292" />
+    <ImageTarget name="capture" size="1152.000000 825.000000" />
+    <ImageTarget name="denial" size="901.000000 1071.589355" />
+    <ImageTarget name="aalborg" size="922.000000 2310.531982" />
+    <ImageTarget name="sermon" size="922.000000 1006.036438" />
+    <ImageTarget name="aalborg5" size="1.000000 2.408000" />
+    <ImageTarget name="aalborg4" size="1.000000 2.406000" />
+    <ImageTarget name="alborg3" size="1.000000 2.298000" />
+    <ImageTarget name="aalborg2" size="1.000000 2.310000" />
+  </Tracking>
 </QCARConfig>
