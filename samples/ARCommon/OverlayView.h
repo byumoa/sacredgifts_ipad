@@ -11,6 +11,7 @@ Qualcomm Confidential and Proprietary
 // OverlayView is used to display UI objects over another view
 @interface OverlayView : UIView {
     // No data members required
+    
 }
 
 @end

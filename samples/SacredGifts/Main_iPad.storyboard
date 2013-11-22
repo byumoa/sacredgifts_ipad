@@ -1483,7 +1483,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="faw-K1-Ad7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-138" y="1284"/>
+            <point key="canvasLocation" x="-498" y="1284"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="DFb-82-qrc">
@@ -1716,14 +1716,14 @@
         <image name="SG_General_Share_tw.png" width="244" height="41"/>
         <image name="SG_General_TopBar.png" width="768" height="62"/>
         <image name="SG_General_header_thanks.png" width="200" height="41"/>
-        <image name="SG_General_painting-castleBtn-Bloch-on.png" width="250" height="42"/>
-        <image name="SG_General_painting-castleBtn-Bloch.png" width="250" height="42"/>
+        <image name="SG_General_painting-castleBtn-Bloch-on.png" width="250" height="41"/>
+        <image name="SG_General_painting-castleBtn-Bloch.png" width="250" height="41"/>
         <image name="SG_General_window_closeBtn-on.png" width="102" height="70"/>
         <image name="SG_General_window_closeBtn.png" width="102" height="70"/>
         <image name="SG_Home_SplashLogo.png" width="768" height="240"/>
         <image name="SG_Home_SplashScreen.png" width="768" height="1024"/>
         <image name="aalborg.png" width="800" height="410"/>
-        <image name="artists_pages_artists_bg.png" width="769" height="1025"/>
+        <image name="artists_pages_artists_bg.png" width="804" height="1060"/>
         <image name="artists_pages_bloch_overlay.png" width="768" height="844"/>
         <image name="artists_pages_hofmann_overlay.png" width="769" height="959"/>
         <image name="artists_pages_schwartz_overlay.png" width="768" height="845"/>
