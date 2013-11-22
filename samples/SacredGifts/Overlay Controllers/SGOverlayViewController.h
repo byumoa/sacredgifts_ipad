@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SGConstants.h"
+#import "SGAnalyticsManager.h"
 
 @class SGOverlayViewController;
 

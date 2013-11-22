@@ -44,7 +44,6 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
     if( self.moviePlayer.duration > 0 && self.moviePlayer )
         frame.size.width = self.moviePlayer.currentPlaybackTime / self.moviePlayer.duration * 635.0;
     
-    //NSLog(@"frame: (%.0f, %.0f, %.0f, %.0f", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
     if( !isnan(frame.size.width) && !isnan(frame.size.height))
         self.playOverlay.frame = frame;
 }
@@ -58,6 +57,7 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
     }
     else
     {
+        //[SGAnalyticsManager startTimedEvent:<#(NSString *)#> category:<#(NSString *)#> data:<#(NSString *)#>]
         [self.moviePlayer prepareToPlay];
         [self.moviePlayer play];
         [SGMusicManager dropVolume];
