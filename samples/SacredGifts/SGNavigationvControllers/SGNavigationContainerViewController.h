@@ -7,7 +7,7 @@
 //
 
 #import "SGContainerViewController.h"
-#import "SGScanViewController.h"
+#import "ARParentViewController.h"
 #import "SGQCARDelegate.h"
 
 @interface SGNavigationContainerViewController : SGContainerViewController <UIWebViewDelegate, UIAlertViewDelegate, SGQCARDelegate>
@@ -24,7 +24,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
 @property (strong, nonatomic) UIActivityIndicatorView* activityIndicator;
-@property (strong, nonatomic) SGScanViewController* scanController;
+@property (strong, nonatomic) ARParentViewController* scanController;
 
 - (IBAction)pressedBack:(UIButton*)sender;
 - (IBAction)pressedDonate:(UIButton *)sender;

@@ -45,7 +45,7 @@ Qualcomm Confidential and Proprietary
     // Further on, we'll also implement a touch pass-through
     self.view.userInteractionEnabled = NO;
     
-    //[self.view addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"overlay__brackets.png"]]];
+    // [self.view addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"overlay__brackets.png"]]];
 }
 
 
