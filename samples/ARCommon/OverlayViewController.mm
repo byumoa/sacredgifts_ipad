@@ -23,6 +23,8 @@ Qualcomm Confidential and Proprietary
     {
         selectedTarget = 0;
         qUtils = [QCARutils getInstance];
+        UIImageView* brackets = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"overlay__brackets.png"]];
+        [self.view addSubview:brackets];
     }
         
     return self;
@@ -44,8 +46,6 @@ Qualcomm Confidential and Proprietary
     // We're going to let the parent VC handle all interactions so disable any UI
     // Further on, we'll also implement a touch pass-through
     self.view.userInteractionEnabled = NO;
-    
-    // [self.view addSubview:[[UIImageView alloc] initWithImage:[UIImage imageNamed:@"overlay__brackets.png"]]];
 }
 
 
