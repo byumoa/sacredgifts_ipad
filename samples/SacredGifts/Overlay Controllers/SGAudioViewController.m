@@ -37,6 +37,7 @@
 -(void)updateProgressBar:(NSTimer*)timer
 {
     CGRect frame = self.playOverlay.frame;
+    
     if( _audioManager.player.duration > 0 )
         frame.size.width = _audioManager.player.currentTime / _audioManager.player.duration * 635.0;
     

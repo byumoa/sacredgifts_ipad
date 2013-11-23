@@ -36,7 +36,6 @@ Qualcomm Confidential and Proprietary
     [super dealloc];
 }
 
-
 - (void) loadView
 {
     CGRect screenBounds = [[UIScreen mainScreen] bounds];
