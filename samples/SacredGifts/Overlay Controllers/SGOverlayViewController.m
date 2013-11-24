@@ -7,6 +7,7 @@
 //
 
 #import "SGOverlayViewController.h"
+#import "SGConvenienceFunctionsManager.h"
 
 @interface SGOverlayViewController ()
 - (void)configureBGImage;
@@ -52,6 +53,8 @@
     //Position close btn in top right corner
     if( self.closeButton )
     self.closeButton.center = CGPointMake(self.view.frame.size.width - 20, 20);
+    
+    self.screenName = [NSString stringWithFormat:@"%@: %@", self.paintingName, [SGConvenienceFunctionsManager getStringForModule:self.moduleType]];
 }
 
 - (void)viewDidLoad

@@ -39,4 +39,23 @@
     return abbreviate ? @"bloch" : @"Carl Bloch";
 }
 
++ (NSString *)getStringForModule:(ModuleType)moduleType
+{
+    switch (moduleType) {
+        case kModuleTypeChildrens:      return (NSString*)kChildrensStr;    break;
+        case kModuleTypeHighlights:     return (NSString*)kHighlightsStr;   break;
+        case kModuleTypeGifts:          return (NSString*)kGiftsStr;        break;
+        case kModuleTypeMusic:          return (NSString*)kMusicStr;        break;
+        case kModuleTypePerspective:    return (NSString*)kPerspectiveStr;  break;
+        case kModuleTypeSocial:         return (NSString*)kSocialStr;       break;
+        case kModuleTypeSummary:        return (NSString*)kSummaryStr;      break;
+        case kModuleTypeTombstone:      return (NSString*)kTombstoneStr;    break;
+        case kModuleTypeText:           return (NSString*)kTextStr;         break;
+        case kModuleTypeNarration:      return (NSString*)kNarrationStr;    break;
+        case kModuleTypeNone:           default:                            break;
+    }
+    
+    return nil;
+}
+
 @end

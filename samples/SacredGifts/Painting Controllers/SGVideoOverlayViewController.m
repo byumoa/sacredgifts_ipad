@@ -57,7 +57,6 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
     }
     else
     {
-        //[SGAnalyticsManager startTimedEvent:<#(NSString *)#> category:<#(NSString *)#> data:<#(NSString *)#>]
         [self.moviePlayer prepareToPlay];
         [self.moviePlayer play];
         [SGMusicManager dropVolume];

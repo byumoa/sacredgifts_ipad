@@ -61,6 +61,7 @@
 - (IBAction)pressedDonate:(UIButton *)sender
 {
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString: (NSString*)kDontateURLStr]];
+#pragma warning analytics pressed donate
 }
 
 -(void)pressedFeedback:(UIButton *)sender

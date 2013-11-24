@@ -38,6 +38,7 @@
 #import "ImageTargetsAppDelegate.h"
 #import "ARParentViewController.h"
 #import "QCARutils.h"
+#import "GAI.h"
 
 @implementation ImageTargetsAppDelegate
 
@@ -83,6 +84,10 @@
 {
     QCARutils* qUtils = [QCARutils getInstance];
     [qUtils addTargetName:@"SacredGifts" atPath:@"SacredGifts.xml"];
+    [GAI sharedInstance].trackUncaughtExceptions = YES;
+    [GAI sharedInstance].dispatchInterval = 20;
+    [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
+    /*id<GAITracker> tracker =*/ [[GAI sharedInstance] trackerWithTrackingId:@"UA-45963310-1"];
     
     return YES;
 }

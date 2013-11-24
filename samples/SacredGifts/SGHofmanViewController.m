@@ -19,6 +19,7 @@
     [super loadView];
     
     _scrollContentSize = CGSizeMake(768, 1320);
+    self.screenName = @"hofman bio";
 }
 
 -(void)viewDidLoad

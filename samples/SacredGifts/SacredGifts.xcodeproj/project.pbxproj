@@ -454,6 +454,9 @@
 		61CD534C180C2C1B00D28921 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 61CD534B180C2C1B00D28921 /* Images.xcassets */; };
 		61CD534E180C2C3000D28921 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CD534D180C2C3000D28921 /* GLKit.framework */; };
 		61CD5350180C3E9400D28921 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61CD534F180C3E9400D28921 /* MediaPlayer.framework */; };
+		61E4B8281841A0D00023DEAE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E4B8271841A0D00023DEAE /* CoreData.framework */; };
+		61E4B82C1841A11E0023DEAE /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E4B82B1841A11E0023DEAE /* libGoogleAnalyticsServices.a */; };
+		61E4B82E1841A14A0023DEAE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E4B82D1841A14A0023DEAE /* libz.dylib */; };
 		61E5430B1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E543071832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on.png */; };
 		61E5430C1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E543081832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png */; };
 		61E5430D1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E543091832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png */; };
@@ -984,6 +987,16 @@
 		61CD534B180C2C1B00D28921 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ImageTargets/Images.xcassets; sourceTree = "<group>"; };
 		61CD534D180C2C3000D28921 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
 		61CD534F180C3E9400D28921 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		61E4B81F1841A06F0023DEAE /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		61E4B8201841A06F0023DEAE /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
+		61E4B8211841A06F0023DEAE /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
+		61E4B8221841A06F0023DEAE /* GAILogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAILogger.h; sourceTree = "<group>"; };
+		61E4B8231841A06F0023DEAE /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		61E4B8241841A06F0023DEAE /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		61E4B8271841A0D00023DEAE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		61E4B8291841A1090023DEAE /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../../../Downloads/GoogleAnalyticsServicesiOS_3.02/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		61E4B82B1841A11E0023DEAE /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
+		61E4B82D1841A14A0023DEAE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		61E543071832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch-on.png"; sourceTree = "<group>"; };
 		61E543081832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch-on@2x.png"; sourceTree = "<group>"; };
 		61E543091832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch.png"; sourceTree = "<group>"; };
@@ -1009,6 +1022,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61E4B82E1841A14A0023DEAE /* libz.dylib in Frameworks */,
+				61E4B8281841A0D00023DEAE /* CoreData.framework in Frameworks */,
 				6118B58A18117B6400FB8337 /* CoreMotion.framework in Frameworks */,
 				614C01041824247D00333698 /* MessageUI.framework in Frameworks */,
 				614C01021824247600333698 /* Social.framework in Frameworks */,
@@ -1019,6 +1034,7 @@
 				1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */,
 				1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */,
 				28FD15000DC6FC520079059D /* OpenGLES.framework in Frameworks */,
+				61E4B82C1841A11E0023DEAE /* libGoogleAnalyticsServices.a in Frameworks */,
 				28FD15080DC6FC5B0079059D /* QuartzCore.framework in Frameworks */,
 				15899802132907BC004C3F7B /* AVFoundation.framework in Frameworks */,
 				15899804132907BC004C3F7B /* CoreMedia.framework in Frameworks */,
@@ -1144,6 +1160,11 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				61E4B82D1841A14A0023DEAE /* libz.dylib */,
+				61E4B82B1841A11E0023DEAE /* libGoogleAnalyticsServices.a */,
+				61E4B8291841A1090023DEAE /* libGoogleAnalyticsServices.a */,
+				61E4B8271841A0D00023DEAE /* CoreData.framework */,
+				61E4B81E1841A06F0023DEAE /* GAI Library */,
 				614C01031824247D00333698 /* MessageUI.framework */,
 				614C01011824247600333698 /* Social.framework */,
 				6118B58918117B6400FB8337 /* CoreMotion.framework */,
@@ -1769,6 +1790,19 @@
 			path = SGNavigationvControllers;
 			sourceTree = "<group>";
 		};
+		61E4B81E1841A06F0023DEAE /* GAI Library */ = {
+			isa = PBXGroup;
+			children = (
+				61E4B81F1841A06F0023DEAE /* GAI.h */,
+				61E4B8201841A06F0023DEAE /* GAIDictionaryBuilder.h */,
+				61E4B8211841A06F0023DEAE /* GAIFields.h */,
+				61E4B8221841A06F0023DEAE /* GAILogger.h */,
+				61E4B8231841A06F0023DEAE /* GAITrackedViewController.h */,
+				61E4B8241841A06F0023DEAE /* GAITracker.h */,
+			);
+			path = "GAI Library";
+			sourceTree = "<group>";
+		};
 		61F73CBA1830FDF200D13F7C /* childrensmoduleprompt */ = {
 			isa = PBXGroup;
 			children = (
@@ -2345,7 +2379,12 @@
 				HEADER_SEARCH_PATHS = ../../build/include;
 				INFOPLIST_FILE = "ImageTargets/SacredGifts-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = ../../build/lib/arm;
+				LIBRARY_SEARCH_PATHS = (
+					../../build/lib/arm,
+					"/Users/ontario/Desktop/sacredgifts_ipad/samples/SacredGifts/GAI\\ Library",
+					/Users/ontario/Downloads/GoogleAnalyticsServicesiOS_3.02,
+					/Users/ontario/Desktop/sacredgifts_ipad/samples/SacredGifts,
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = SacredGifts;
 				PROVISIONING_PROFILE = "";
@@ -2374,7 +2413,12 @@
 				HEADER_SEARCH_PATHS = ../../build/include;
 				INFOPLIST_FILE = "ImageTargets/SacredGifts-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = ../../build/lib/arm;
+				LIBRARY_SEARCH_PATHS = (
+					../../build/lib/arm,
+					"/Users/ontario/Desktop/sacredgifts_ipad/samples/SacredGifts/GAI\\ Library",
+					/Users/ontario/Downloads/GoogleAnalyticsServicesiOS_3.02,
+					/Users/ontario/Desktop/sacredgifts_ipad/samples/SacredGifts,
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = SacredGifts;
 				PROVISIONING_PROFILE = "";
@@ -2400,7 +2444,12 @@
 				HEADER_SEARCH_PATHS = ../../build/include;
 				INFOPLIST_FILE = "ImageTargets/SacredGifts-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = ../../build/lib/arm;
+				LIBRARY_SEARCH_PATHS = (
+					../../build/lib/arm,
+					"/Users/ontario/Desktop/sacredgifts_ipad/samples/SacredGifts/GAI\\ Library",
+					/Users/ontario/Downloads/GoogleAnalyticsServicesiOS_3.02,
+					/Users/ontario/Desktop/sacredgifts_ipad/samples/SacredGifts,
+				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = SacredGifts;
 				PROVISIONING_PROFILE = "";

@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Wells Fargo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 #import "SGConstants.h"
 #import "SGAnalyticsManager.h"
 
@@ -21,7 +21,7 @@
 
 @end
 
-@interface SGOverlayViewController : UIViewController
+@interface SGOverlayViewController : GAITrackedViewController
 {
     NSString* _bgImagePath;
     CGPoint _centerPos;
@@ -31,6 +31,7 @@
 @property(nonatomic, weak) id<SGOverlayViewControllerDelegate> delegate;
 @property(nonatomic, strong) NSString* rootFolderPath;
 @property(nonatomic, strong) IBOutlet UIButton* closeButton;
+@property(nonatomic, strong) NSString* paintingName;
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath;
 - (void)addBackgroundImgWithImgName: (NSString*)bgImgName;

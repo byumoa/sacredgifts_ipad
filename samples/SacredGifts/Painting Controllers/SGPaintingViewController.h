@@ -6,12 +6,12 @@
 //  Copyright (c) 2013 Wells Fargo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 #import "SGPaintingImageView.h"
 #import "SGContentControllerDelegate.h"
 #import "SGOverlayViewController.h"
 
-@interface SGPaintingViewController : UIViewController <SGPaintingImageViewDelegate, SGOverlayViewControllerDelegate>
+@interface SGPaintingViewController : GAITrackedViewController <SGPaintingImageViewDelegate, SGOverlayViewControllerDelegate>
 {
     CGRect _lastPortraitFrame;
     NSString* _paintingNameStr;

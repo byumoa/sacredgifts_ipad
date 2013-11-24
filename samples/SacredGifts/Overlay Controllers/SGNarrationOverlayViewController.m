@@ -7,6 +7,7 @@
 //
 
 #import "SGNarrationOverlayViewController.h"
+#import "SGConvenienceFunctionsManager.h"
 
 const CGRect kNarrationFrame = {0, 713, 768, 200};
 
@@ -78,6 +79,12 @@ const CGRect kNarrationFrame = {0, 713, 768, 200};
     [super viewWillDisappear:animated];
     
     [_progressTimer invalidate];
+}
+
+-(void)configureAudioWithPath:(NSString *)rootFolderPath
+{
+    self.rootFolderPath = rootFolderPath;
+    self.screenName = [NSString stringWithFormat:@"%@: %@", self.paintingName, [SGConvenienceFunctionsManager getStringForModule:self.moduleType]];
 }
 
 @end

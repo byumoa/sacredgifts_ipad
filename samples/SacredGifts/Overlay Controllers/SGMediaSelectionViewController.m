@@ -94,6 +94,7 @@ const int kTextStartPositionY = 102;
     }
     
     [self prepareForMediaStart];
+    self.childOverlay.paintingName = self.paintingName;
     
     return self.childOverlay;
 }

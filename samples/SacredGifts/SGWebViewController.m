@@ -27,14 +27,17 @@ NSString* const kFeedbackImgStr = @"SG_General_header_feedback.png";
         case webPageTypeThanks:
             urlStr = kThanksURLStr;
             headerImgStr = kThanksImgStr;
+            self.screenName = @"say thanks webpage";
             break;
         case webpageTypeFeedback:
             urlStr = kFeedbackURLStr;
             headerImgStr = kFeedbackImgStr;
+            self.screenName = @"feedback webpage";
             break;
         case webPageTypeTickets:
             urlStr = kTicketsURLStr;
             headerImgStr = kTicketsImgStr;
+            self.screenName = @"reserve tickets webpage";
             break;
         default:
             break;

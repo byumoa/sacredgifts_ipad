@@ -10,6 +10,7 @@
 #import "SGPanoramaOverlayViewController.h"
 #import "SGOverlayView.h"
 #import "SGBlurManager.h"
+#import "SGConvenienceFunctionsManager.h"
 
 @interface SGHighlightsViewController()
 
@@ -33,8 +34,8 @@
 -(void)configureWithPath:(NSString *)folderPath
 {
     [super configureWithPath:folderPath];
-    
     [self animateButtonsOn];
+    self.screenName = [NSString stringWithFormat:@"%@: %@", self.paintingName, [SGConvenienceFunctionsManager getStringForModule:self.moduleType]];
 }
 
 -(void)animateButtonsOn

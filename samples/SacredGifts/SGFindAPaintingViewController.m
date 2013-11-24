@@ -19,6 +19,7 @@ const int kArtistBlochTag = 3;
 {
     _blurImageName = @"sg_home_bg-findpainting_blur.png";
     [super viewDidLoad];
+    self.screenName = @"find a painting";
 }
 
 - (IBAction)touchedPainting:(UIButton *)sender

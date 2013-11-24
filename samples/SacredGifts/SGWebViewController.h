@@ -6,7 +6,7 @@
 //  Copyright (c) 2013 Wells Fargo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
 typedef enum
 {
@@ -15,7 +15,7 @@ typedef enum
     webpageTypeFeedback
 }WebpageType;
 
-@interface SGWebViewController : UIViewController <UIWebViewDelegate, UIAlertViewDelegate>
+@interface SGWebViewController : GAITrackedViewController <UIWebViewDelegate, UIAlertViewDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *webHeaderImgView;
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;

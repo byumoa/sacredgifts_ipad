@@ -8,6 +8,7 @@
 
 #import "SGAudioViewController.h"
 #import "SGAbstractAudioManager.h"
+#import "SGConvenienceFunctionsManager.h"
 
 @interface SGAudioViewController ()
 
@@ -52,6 +53,7 @@
 -(void)configureAudioWithPath:(NSString *)rootFolderPath
 {
     self.rootFolderPath = rootFolderPath;
+    self.screenName = [NSString stringWithFormat:@"%@: %@", self.paintingName, [SGConvenienceFunctionsManager getStringForModule:self.moduleType]];
 }
 
 - (IBAction)pressedPlayPause:(id)sender{}

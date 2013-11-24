@@ -35,7 +35,6 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
 - (UIButton*)footerBtnForTag:(ModuleType)moduleType;
 - (IBAction)pressedModuleBtn:(UIButton *)sender;
 - (ModuleType)getModuleTypeForStr: (NSString*)moduleStr;
-- (NSString*)getStringForModule: (ModuleType)moduleType;
 - (SGOverlayViewController*)addNewOverlayOfType:(NSString*)moduleStr forPainting:(NSString *)paintingStr;
 - (void)removeCurrentOverlay;
 - (void)addTombstoneDelayed: (NSTimer*)timer;
@@ -46,6 +45,8 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
 @implementation SGPaintingViewController
 -(void)configWithPaintingName:(NSString *)paintingStr;
 {
+    self.screenName = [NSString stringWithFormat:@"painting: %@", paintingStr];
+    
     //Main Painting
     [SGAnalyticsManager registerPageView:[NSString stringWithFormat:@"View Painting: %@", paintingStr]];
     _paintingNameStr = paintingStr;
@@ -189,25 +190,6 @@ static BOOL chromeHidden = NO;
     else return kModuleTypeGifts;
 }
 
--(NSString *)getStringForModule:(ModuleType)moduleType
-{
-    switch (moduleType) {
-        case kModuleTypeChildrens:      return (NSString*)kChildrensStr;    break;
-        case kModuleTypeHighlights:     return (NSString*)kHighlightsStr;   break;
-        case kModuleTypeGifts:          return (NSString*)kGiftsStr;        break;
-        case kModuleTypeMusic:          return (NSString*)kMusicStr;        break;
-        case kModuleTypePerspective:    return (NSString*)kPerspectiveStr;  break;
-        case kModuleTypeSocial:         return (NSString*)kSocialStr;       break;
-        case kModuleTypeSummary:        return (NSString*)kSummaryStr;      break;
-        case kModuleTypeTombstone:      return (NSString*)kTombstoneStr;    break;
-        case kModuleTypeText:           return (NSString*)kTextStr;         break;
-        case kModuleTypeNarration:      return (NSString*)kNarrationStr;    break;
-        case kModuleTypeNone:           default:                            break;
-    }
-    
-    return nil;
-}
-
 -(void)addMainPainting:(NSString*)paintingName
 {
     NSString *paintingPath = [[NSBundle mainBundle] pathForResource:@"MainPainting" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, paintingName]];
@@ -272,7 +254,8 @@ static BOOL chromeHidden = NO;
     }
     else
     {
-        [self addNewOverlayOfType:[self getStringForModule:moduleType] forPainting:_paintingNameStr];
+        //[self addNewOverlayOfType:[self getStringForModule:moduleType] forPainting:_paintingNameStr];
+        [self addNewOverlayOfType:[SGConvenienceFunctionsManager getStringForModule:moduleType] forPainting:_paintingNameStr];
         [self deselectAllModuleBtns];
         sender.selected = YES;
     }
@@ -298,6 +281,8 @@ static BOOL chromeHidden = NO;
         //Create new overlay veiwController
         self.overlayController = [self.storyboard instantiateViewControllerWithIdentifier:moduleStr];
         self.overlayController.delegate = self;
+        self.overlayController.paintingName = _paintingNameStr;
+        
         //Transition new overlay on
         if( [moduleStr isEqualToString:(NSString*)kPanoramaStr] )
             [self.view addSubview:self.overlayController.view];

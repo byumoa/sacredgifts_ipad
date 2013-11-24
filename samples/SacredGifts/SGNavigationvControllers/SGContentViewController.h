@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 Wells Fargo. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 #import "SGContentControllerDelegate.h"
 #import <CoreMotion/CoreMotion.h>
 
-@interface SGContentViewController : UIViewController
+@interface SGContentViewController : GAITrackedViewController
 {
     NSString* _blurImageName;
     CMMotionManager *_motionManager;

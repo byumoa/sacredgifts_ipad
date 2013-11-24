@@ -19,6 +19,7 @@
 {
     _blurImageName = @"sg_home_bg-home_blur.png";
     [super viewDidLoad];
+    self.screenName = @"home";
 }
 
 - (IBAction)pressedBtn:(UIButton *)sender

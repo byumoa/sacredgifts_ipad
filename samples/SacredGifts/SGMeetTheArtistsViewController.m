@@ -21,8 +21,8 @@ typedef enum
 -(void)viewDidLoad
 {
     _blurImageName = @"sg_home_bg-meetartists_blur.png";
-    
     [super viewDidLoad];
+    self.screenName = @"meet the artists";
 }
 
 - (IBAction)pressedBtn:(UIButton *)sender
