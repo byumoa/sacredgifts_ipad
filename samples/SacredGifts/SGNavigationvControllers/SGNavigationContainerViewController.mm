@@ -80,6 +80,9 @@
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     [self dismissWebview];
+    
+    [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"webview" action:@"error" label:@"no internet connection" value:nil] build]];
+    
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:@"We could not reach the internet at this time" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
 }
@@ -202,6 +205,8 @@
     }
     else
     {
+        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action" action:@"button_press" label:@"scan AR" value:nil] build]];
+        
         self.scanController = [self.storyboard instantiateViewControllerWithIdentifier:kScanStr];
         [self.view insertSubview:self.scanController.view belowSubview:self.headerView];
         _footerLastAlpha = self.footerView.alpha;

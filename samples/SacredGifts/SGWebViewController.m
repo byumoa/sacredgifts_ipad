@@ -7,6 +7,8 @@
 //
 
 #import "SGWebViewController.h"
+#import "GAI.h"
+#import "GAIDictionaryBuilder.h"
 
 NSString* const kThanksURLStr = @"http://sacredgifts.byu.edu/say-thank-you/?inapp=true";
 NSString* const kTicketsURLStr = @"http://sacredgifts.byu.edu/tickets/?inapp=true";
@@ -58,6 +60,8 @@ NSString* const kFeedbackImgStr = @"SG_General_header_feedback.png";
 }
 
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)erro{
+    [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"webview" action:@"error" label:@"no internet connection" value:nil] build]];
+    
     UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Connection Error" message:@"We could not reach the internet at this time" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
     [alert show];
 }

@@ -69,13 +69,13 @@
     NSString* audioPath = [[NSBundle mainBundle] pathForResource:@"audio" ofType:@"mp3" inDirectory:btnFolderPath];
     
     if( panoPath )
-        [self loadPanoramaWithFolderPath:btnFolderPath];
+        [self loadPanoramaWithFolderPath:btnFolderPath].screenName = [NSString stringWithFormat:@"%@: persp panorama", self.paintingName];
     else if( videoPath )
-        [self loadVideoWithFolderPath:btnFolderPath];
+        [self loadVideoWithFolderPath:btnFolderPath].screenName = [NSString stringWithFormat:@"%@: persp video", self.paintingName];
     else if( audioPath )
-        [self loadAudioWithFolderPath:btnFolderPath];
+        [self loadAudioWithFolderPath:btnFolderPath].screenName = [NSString stringWithFormat:@"%@: persp audio", self.paintingName];
     else
-        [self loadTextWithFolderPath:btnFolderPath];
+        [self loadTextWithFolderPath:btnFolderPath].screenName = [NSString stringWithFormat:@"%@: persp text", self.paintingName];
 }
 
 @end

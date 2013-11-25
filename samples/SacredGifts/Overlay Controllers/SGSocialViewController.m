@@ -9,6 +9,8 @@
 #import "SGSocialViewController.h"
 #import <Social/Social.h>
 #import "SGWebViewController.h"
+#import "GAI.h"
+#import "GAIDictionaryBuilder.h"
 
 NSString* const kEmailAutofill = @"Enjoying the painting by %@ while using the Sacred Gifts app from the BYU Museum of Art. %@";
 NSString* const kTwitterAutofill = @"Viewing this painting while using the @BYUmoa’s #sacredgifts app.";
@@ -46,12 +48,14 @@ int const kOverlayHeight = 236;
 {
     UIImage* thumbnail = [UIImage imageNamed:self.paintingName];
     
+    NSString* mediaType;
     switch (((UIButton*)sender).tag)
     {
         case SocialMediaTypeFacebook:
         {
             NSString* artist = [self calcArtistForPaintingStr:self.paintingName];
             NSString* autofillStr = [NSString stringWithFormat:kFacebookAutofill, artist];
+            mediaType = @"facebook";
             
             SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
             [socialSheet setInitialText:autofillStr];
@@ -62,6 +66,8 @@ int const kOverlayHeight = 236;
             break;
         case SocialMediaTypeTwitter:
         {
+            mediaType = @"twitter";
+            
             SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
             [socialSheet setInitialText:(NSString*)kTwitterAutofill];
             [socialSheet addImage:thumbnail];
@@ -73,6 +79,7 @@ int const kOverlayHeight = 236;
         {
             NSString* artist = [self calcArtistForPaintingStr:self.paintingName];
             NSString* autofillStr = [NSString stringWithFormat:kEmailAutofill, artist, kAppStoreURL];
+            mediaType = @"email";
             
             MFMailComposeViewController *mailController = [[MFMailComposeViewController alloc] init];
             [mailController setMailComposeDelegate:self];
@@ -93,6 +100,9 @@ int const kOverlayHeight = 236;
         default:
             break;
     }
+    
+    if( ((UIButton*)sender).tag != 4)
+        [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action" action:@"button_press" label:mediaType value:nil] build]];
 }
 
 -(NSString *)calcArtistForPaintingStr:(NSString *)paintingName

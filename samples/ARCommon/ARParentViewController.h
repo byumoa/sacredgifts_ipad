@@ -4,11 +4,11 @@
  Qualcomm Confidential and Proprietary
  ==============================================================================*/
 
-#import <UIKit/UIKit.h>
+#import "GAITrackedViewController.h"
 
 @class ARViewController, OverlayViewController;
 
-@interface ARParentViewController : UIViewController {
+@interface ARParentViewController : GAITrackedViewController {
     OverlayViewController* overlayViewController; // for the overlay view (buttons and action sheets)
     ARViewController* arViewController; // for the Augmented Reality view
     UIImageView* parentView; // a container view to allow use in tabbed views etc.

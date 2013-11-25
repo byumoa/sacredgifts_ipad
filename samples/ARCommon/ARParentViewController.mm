@@ -72,6 +72,7 @@
     [arViewController handleARViewRotation:self.interfaceOrientation];
     // we also have to set the overlay view to the correct width/height for the orientation
     [overlayViewController handleViewRotation:self.interfaceOrientation];
+    self.screenName = @"scan AR";
 }
 
 

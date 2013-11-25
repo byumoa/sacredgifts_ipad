@@ -46,7 +46,9 @@ NSString* const kArtistInstructionStr = @"childrens_%@_prompt.png";
 
 -(SGOverlayViewController*)pressedHighlightBtn:(UIButton *)sender
 {
-    [super pressedHighlightBtn:sender];
+    SGOverlayViewController* childGAIViewController = [super pressedHighlightBtn:sender];
+    NSString* moduleStr = [SGConvenienceFunctionsManager getStringForModule:childGAIViewController.moduleType];
+    childGAIViewController.screenName = [NSString stringWithFormat:@"%@: childrens %@", self.paintingName, moduleStr];
     
     if( ![self.childOverlay isKindOfClass:[SGPanoramaOverlayViewController class]] )
     {
