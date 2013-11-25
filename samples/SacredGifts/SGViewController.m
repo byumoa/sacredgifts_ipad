@@ -39,7 +39,7 @@ const CGPoint kSplashLogoStartPoint = {384,840};
 
 -(void)pressedBack:(UIButton *)sender
 {
-    if( [self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDHomeStr])
+    if( [self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDHomeStr] && (self.scanController == nil))
         [self resetSplash];
     else
         [super pressedBack:sender];

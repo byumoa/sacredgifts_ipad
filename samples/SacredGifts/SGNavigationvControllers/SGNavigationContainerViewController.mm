@@ -211,7 +211,7 @@
         [self.view insertSubview:self.scanController.view belowSubview:self.headerView];
         _footerLastAlpha = self.footerView.alpha;
         self.footerView.alpha = 0;
-        self.headerView.alpha = 0;
+        self.headerView.alpha = 1;
         self.headerBlurDecoy.alpha = 0;
         //set EAGLView delegate
         ((ARViewController*)((ARParentViewController*)self.scanController).arViewController).arView.delegate = self;
