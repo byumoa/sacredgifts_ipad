@@ -127,12 +127,16 @@ NSString* const kArtistInstructionStr = @"childrens_%@_prompt.png";
 {
     for( UIButton* button in _buttons )
         button.hidden = YES;
+    
+    self.instructionPrompt.hidden = YES;
 }
 
 -(void)prepareForMediaEnd
 {
     for( UIButton* button in _buttons )
         button.hidden = NO;
+    
+    self.instructionPrompt.hidden = NO;
 }
 
 @end
