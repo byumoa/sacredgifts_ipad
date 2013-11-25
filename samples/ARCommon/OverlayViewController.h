@@ -31,6 +31,7 @@
     
     QCARutils *qUtils;
 }
+@property(nonatomic, strong) UIView* animatedOverlay;
 
 - (void) handleViewRotation:(UIInterfaceOrientation)interfaceOrientation;
 - (void) showOverlay;

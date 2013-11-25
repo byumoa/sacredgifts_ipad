@@ -13,6 +13,7 @@ Qualcomm Confidential and Proprietary
 
 @interface OverlayViewController (PrivateMethods)
 + (void) determineCameraCapabilities:(struct tagCameraCapabilities *) pCapabilities;
+- (void) startAnimatedOverlay;
 @end
 
 @implementation OverlayViewController
@@ -25,11 +26,73 @@ Qualcomm Confidential and Proprietary
         qUtils = [QCARutils getInstance];
         UIImageView* brackets = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"overlay__brackets.png"]];
         [self.view addSubview:brackets];
+        [self startAnimatedOverlay];
     }
         
     return self;
 }
 
+-(void)startAnimatedOverlay
+{
+    self.animatedOverlay = [[UIView alloc] initWithFrame:self.view.frame];
+    
+    UIImageView* bgImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sg_home_ar_load_bg"]];
+    [self.animatedOverlay addSubview:bgImageView];
+    
+    UIImageView* text1 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sg_home_ar_text1"]];
+    text1.center = CGPointMake(768/2-3, self.view.center.y - 121);
+    [self.animatedOverlay addSubview:text1];
+    text1.alpha = 0;
+    [UIView animateWithDuration:0.5 delay:2.0 options:0 animations:^{
+        text1.alpha = 1;
+    } completion:nil];
+    
+    UIImageView* text2 = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sg_home_ar_text2"]];
+    text2.center = CGPointMake(768/2-3, self.view.center.y - 75);
+    [self.animatedOverlay addSubview:text2];
+    text2.alpha = 0;
+    [UIView animateWithDuration:0.5 delay:3.0 options:0 animations:^{
+        text2.alpha = 1;
+    } completion:nil];
+    
+    UIImageView* initializeLabel = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sg_home_ar_initializing_label"]];
+    initializeLabel.center = CGPointMake(768/2-3, self.view.center.y + 123);
+    [self.animatedOverlay addSubview:initializeLabel];
+    initializeLabel.alpha = 0;
+    [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
+        initializeLabel.alpha = 1;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.5 delay:3.5 options:0 animations:^{
+            initializeLabel.alpha = 0;
+        } completion:nil];
+    }];
+    
+    UIImageView* camera = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sg_home_ar_camera_icon"]];
+    camera.center = CGPointMake(768/2-3, self.view.center.y + 183);
+    [self.animatedOverlay addSubview:camera];
+    camera.alpha = 0;
+    [UIView animateWithDuration:0.5 animations:^{
+        camera.alpha = 1;
+    }];
+    
+    UIImageView* cameraSpinner = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sg_home_ar_load_spinner"]];
+    cameraSpinner.center = CGPointMake(768/2-3, self.view.center.y + 183);
+    [self.animatedOverlay addSubview:cameraSpinner];
+    cameraSpinner.alpha = 0;
+    [UIView animateWithDuration:1.5 delay:0 options:0 animations:^{
+        cameraSpinner.alpha = 1;
+    } completion:^(BOOL finished) {
+        [UIView animateWithDuration:0.5 delay:0.5 options:0 animations:^{
+            cameraSpinner.alpha = 0;
+        } completion:nil];
+    }];
+    
+    [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionRepeat | UIViewAnimationOptionCurveLinear animations:^{
+        cameraSpinner.transform = CGAffineTransformMakeRotation(3.14159265);
+    } completion:nil];
+    
+    [self.view addSubview:self.animatedOverlay];
+}
 
 - (void)dealloc {
     [optionsOverlayView release];
