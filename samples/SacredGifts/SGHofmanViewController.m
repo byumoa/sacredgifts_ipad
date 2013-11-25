@@ -18,7 +18,7 @@
 {
     [super loadView];
     
-    _scrollContentSize = CGSizeMake(768, 1320);
+    _scrollContentSize = CGSizeMake(768, 1494);
     self.screenName = @"hofman bio";
 }
 

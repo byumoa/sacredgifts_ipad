@@ -31,7 +31,10 @@
 -(void)viewDidLoad
 {
     [super viewDidLoad];
-    
+
+    CGRect frame = self.playOverlay.frame;
+    frame.size.width = 0;
+    self.playOverlay.frame = frame;
     _progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(updateProgressBar:) userInfo:nil repeats:YES];
 }
 

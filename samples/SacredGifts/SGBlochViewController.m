@@ -19,7 +19,7 @@
 {
     [super loadView];
     
-    _scrollContentSize = CGSizeMake(768, 1300);
+    _scrollContentSize = CGSizeMake(768, 1530);
     self.screenName = @"bloch bio";
 }
 
