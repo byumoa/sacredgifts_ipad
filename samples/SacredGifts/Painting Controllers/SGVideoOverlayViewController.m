@@ -85,6 +85,8 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
     [self.view insertSubview:self.moviePlayer.view belowSubview:self.freezeFrame];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(playbackFinished:) name:MPMoviePlayerPlaybackDidFinishNotification object:self.moviePlayer];
+    
+    self.screenName = [NSString stringWithFormat:@"%@: video", self.paintingName];
 }
 
 -(void)playbackFinished:(NSNotification *)notification

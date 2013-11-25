@@ -27,7 +27,7 @@ const int kTextStartPositionY = 102;
 
 @implementation SGMediaSelectionViewController
 
--(void)loadPanoramaWithFolderPath:(NSString *)panoFolderPath
+-(SGOverlayViewController*)loadPanoramaWithFolderPath:(NSString *)panoFolderPath
 {
     SGOverlayViewController* overlay = [self addChildOverlay:(NSString*)kPanoramaStr];
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"pano_f" ofType:@"jpg" inDirectory:panoFolderPath];
@@ -36,9 +36,11 @@ const int kTextStartPositionY = 102;
     
     overlay.view.frame = [self.view convertRect:CGRectMake(0, 0, 768, 1024) fromView:self.view.superview];
     [self.delegate dismissChrome];
+    
+    return overlay;
 }
 
--(void)loadVideoWithFolderPath:(NSString *)videoFolderPath
+-(SGOverlayViewController*)loadVideoWithFolderPath:(NSString *)videoFolderPath
 {
     SGOverlayViewController* overlay = [self addChildOverlay:kVideoStr];
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:videoFolderPath];
@@ -46,9 +48,11 @@ const int kTextStartPositionY = 102;
     [((SGVideoOverlayViewController*)overlay) playPerspectiveMovieWithRootFolderPath:videoFolderPath];
     
     [self positionViews];
+    
+    return overlay;
 }
 
--(void)loadAudioWithFolderPath:(NSString *)audioFolderPath
+-(SGOverlayViewController*)loadAudioWithFolderPath:(NSString *)audioFolderPath
 {
     SGOverlayViewController* overlay = [self addChildOverlay:kNarrationStr];
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:audioFolderPath];
@@ -56,9 +60,11 @@ const int kTextStartPositionY = 102;
     [((SGNarrationOverlayViewController*)overlay) configureAudioWithPath:audioFolderPath];
     
     [self positionViews];
+    
+    return overlay;
 }
 
--(void)loadTextWithFolderPath:(NSString *)textFolderPath
+-(SGOverlayViewController*)loadTextWithFolderPath:(NSString *)textFolderPath
 {
     SGOverlayViewController* overlay = [self addChildOverlay:kTextStr];
     NSString *overlayPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@"png" inDirectory:textFolderPath];
@@ -66,6 +72,8 @@ const int kTextStartPositionY = 102;
  
     self.childOverlay.rootFolderPath = textFolderPath;
     [self positionViews];
+    
+    return overlay;
 }
 
 -(SGOverlayViewController*)addChildOverlay:(NSString *)moduleStr

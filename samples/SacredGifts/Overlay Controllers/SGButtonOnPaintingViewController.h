@@ -18,6 +18,6 @@
 
 -(void)configureWithPath:(NSString *)folderPath;
 -(UIButton *)buttonForHighlightIndex:(int)highlightIndex;
--(void)pressedHighlightBtn:(UIButton *)sender;
+-(SGOverlayViewController*)pressedHighlightBtn:(UIButton *)sender;
 
 @end

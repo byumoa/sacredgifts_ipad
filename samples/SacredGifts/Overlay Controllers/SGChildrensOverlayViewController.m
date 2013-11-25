@@ -44,7 +44,7 @@ NSString* const kArtistInstructionStr = @"childrens_%@_prompt.png";
     _buttonHilImgStr = @"childrens_btn-on.png";
 }
 
--(void)pressedHighlightBtn:(UIButton *)sender
+-(SGOverlayViewController*)pressedHighlightBtn:(UIButton *)sender
 {
     [super pressedHighlightBtn:sender];
     
@@ -56,6 +56,8 @@ NSString* const kArtistInstructionStr = @"childrens_%@_prompt.png";
         
         ((SGOverlayView*)self.childOverlay.view).myBlurredBacking.center = center;
     }
+    
+    return self.childOverlay;
 }
 
 - (void)addBackgroundImgWithPath: (NSString*)bgImgPath forgroundImage:(UIImage *)foregroundImg

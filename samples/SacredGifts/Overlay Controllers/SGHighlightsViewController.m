@@ -68,7 +68,7 @@
     }
 }
 
--(void)pressedHighlightBtn:(UIButton *)sender
+-(SGOverlayViewController*)pressedHighlightBtn:(UIButton *)sender
 {
     [super pressedHighlightBtn:sender];
 
@@ -112,6 +112,8 @@
         
         ((SGOverlayView*)self.childOverlay.view).myBlurredBacking.center = center;
     }
+    
+    return self.childOverlay;
 }
 
 -(void)prepareForMediaStart

@@ -14,6 +14,8 @@
 #import "ARParentViewController.h"
 #import "ARViewController.h"
 #import "EAGLView.h"
+#import "GAI.h"
+#import "GAIDictionaryBuilder.h"
 
 @interface SGNavigationContainerViewController ()
 - (void)pressedWebViewBack: (id)sender;
@@ -60,8 +62,8 @@
 #pragma mark webview
 - (IBAction)pressedDonate:(UIButton *)sender
 {
+    [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action" action:@"button_press" label:@"donate" value:nil] build]];
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString: (NSString*)kDontateURLStr]];
-#pragma warning analytics pressed donate
 }
 
 -(void)pressedFeedback:(UIButton *)sender

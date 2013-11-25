@@ -89,6 +89,7 @@
     [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
     /*id<GAITracker> tracker =*/ [[GAI sharedInstance] trackerWithTrackingId:@"UA-45963310-1"];
     
+    
     return YES;
 }
 

@@ -1725,13 +1725,13 @@
         <image name="SG_Home_SplashScreen.png" width="768" height="1024"/>
         <image name="aalborg.png" width="800" height="410"/>
         <image name="artists_pages_artists_bg.png" width="804" height="1060"/>
-        <image name="artists_pages_bloch_overlay.png" width="768" height="844"/>
-        <image name="artists_pages_hofmann_overlay.png" width="769" height="959"/>
-        <image name="artists_pages_schwartz_overlay.png" width="768" height="845"/>
+        <image name="artists_pages_bloch_overlay.png" width="768" height="1074"/>
+        <image name="artists_pages_hofmann_overlay.png" width="768" height="1133"/>
+        <image name="artists_pages_schwartz_overlay.png" width="768" height="1115"/>
         <image name="childrens_bloch_prompt.png" width="768" height="48"/>
         <image name="exhibition_credit_overlay.png" width="768" height="799"/>
         <image name="exhibition_donors_overlay.png" width="768" height="759"/>
-        <image name="exhibition_story_overlay.png" width="768" height="498"/>
+        <image name="exhibition_story_overlay.png" width="768" height="921"/>
         <image name="painting_thumb_aalborg-on.png" width="123" height="164"/>
         <image name="painting_thumb_aalborg.png" width="123" height="164"/>
         <image name="painting_thumb_burial-on.png" width="123" height="164"/>

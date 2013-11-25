@@ -58,7 +58,7 @@
     return button;
 }
 
--(void)pressedHighlightBtn:(UIButton *)sender
+-(SGOverlayViewController*)pressedHighlightBtn:(UIButton *)sender
 {
     NSString* btnFolderPath = [NSString stringWithFormat:@"%@/%@_%i", self.rootFolderPath, _moduleTypeStr, sender.tag];
     NSString* panoPath = [[NSBundle mainBundle] pathForResource:@"pano_b" ofType:@"jpg" inDirectory:btnFolderPath];
@@ -66,13 +66,15 @@
     NSString* audioPath = [[NSBundle mainBundle] pathForResource:@"audio" ofType:@"mp3" inDirectory:btnFolderPath];
     
     if( panoPath )
-        [self loadPanoramaWithFolderPath:btnFolderPath];
+        return [self loadPanoramaWithFolderPath:btnFolderPath];
     else if( videoPath )
-        [self loadVideoWithFolderPath:btnFolderPath];
+        return [self loadVideoWithFolderPath:btnFolderPath];
     else if( audioPath )
-        [self loadAudioWithFolderPath:btnFolderPath];
+        return [self loadAudioWithFolderPath:btnFolderPath];
     else
-        [self loadTextWithFolderPath:btnFolderPath];
+        return [self loadTextWithFolderPath:btnFolderPath];
+    
+    return nil;
 }
 
 @end

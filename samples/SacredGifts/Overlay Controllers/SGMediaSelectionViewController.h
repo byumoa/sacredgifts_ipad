@@ -13,10 +13,10 @@
 @property (nonatomic) BOOL extendePlacement;
 @property (nonatomic, strong) NSString* paintingName;
 
-- (void)loadPanoramaWithFolderPath: (NSString*)panoFolderPath;
-- (void)loadVideoWithFolderPath: (NSString*)videoFolderPath;
-- (void)loadAudioWithFolderPath: (NSString*)audioFolderPath;
-- (void)loadTextWithFolderPath: (NSString*)textFolderPath;
+- (SGOverlayViewController*)loadPanoramaWithFolderPath: (NSString*)panoFolderPath;
+- (SGOverlayViewController*)loadVideoWithFolderPath: (NSString*)videoFolderPath;
+- (SGOverlayViewController*)loadAudioWithFolderPath: (NSString*)audioFolderPath;
+- (SGOverlayViewController*)loadTextWithFolderPath: (NSString*)textFolderPath;
 
 - (void)prepareForMediaStart;
 - (void)prepareForMediaEnd;
