@@ -44,7 +44,8 @@ const CGRect kNarrationFrame = {0, 713, 768, 200};
     CGRect frame = self.playOverlay.frame;
     frame.origin = CGPointMake(0.0, 0.0);
     if( _narrationManager.player.duration > 0.0 )
-        frame.size.width = _narrationManager.player.currentTime / _narrationManager.player.duration * 635.0;
+        //frame.size.width = _narrationManager.player.currentTime / _narrationManager.player.duration * 635.0;
+        frame.size.width = _narrationManager.player.currentTime / _narrationManager.player.duration * self.playUnderlay.frame.size.width;
     
     self.playOverlay.frame = frame;
 }
