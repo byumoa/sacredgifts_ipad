@@ -14,6 +14,7 @@ Qualcomm Confidential and Proprietary
 @interface OverlayViewController (PrivateMethods)
 + (void) determineCameraCapabilities:(struct tagCameraCapabilities *) pCapabilities;
 - (void) startAnimatedOverlay;
+- (void) fireHelpPrompt: (NSTimer*)timer;
 @end
 
 @implementation OverlayViewController
@@ -92,6 +93,28 @@ Qualcomm Confidential and Proprietary
     } completion:nil];
     
     [self.view addSubview:self.animatedOverlay];
+}
+
+-(void)dismissAnimatedOverlay
+{
+    [UIView animateWithDuration:0.5 animations:^{
+        self.animatedOverlay.alpha = 0;
+    } completion:^(BOOL finished) {
+        [self.animatedOverlay removeFromSuperview];
+    }];
+    
+    [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(fireHelpPrompt:) userInfo:nil repeats:NO];
+}
+
+-(void)fireHelpPrompt:(NSTimer *)timer
+{
+    UIImageView* helpPrompt = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"sg_home_ar_help"]];
+    helpPrompt.center = CGPointMake(768/2, 1024/2);
+    [self.view addSubview:helpPrompt];
+    helpPrompt.alpha = 0;
+    [UIView animateWithDuration:0.5 animations:^{
+        helpPrompt.alpha = 1;
+    }];
 }
 
 - (void)dealloc {

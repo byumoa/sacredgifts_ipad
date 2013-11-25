@@ -457,6 +457,8 @@
 		61E4B8281841A0D00023DEAE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E4B8271841A0D00023DEAE /* CoreData.framework */; };
 		61E4B82C1841A11E0023DEAE /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E4B82B1841A11E0023DEAE /* libGoogleAnalyticsServices.a */; };
 		61E4B82E1841A14A0023DEAE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E4B82D1841A14A0023DEAE /* libz.dylib */; };
+		61E4B8331843F9F60023DEAE /* sg_home_ar_help.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E4B8311843F9F60023DEAE /* sg_home_ar_help.png */; };
+		61E4B8341843F9F60023DEAE /* sg_home_ar_help@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E4B8321843F9F60023DEAE /* sg_home_ar_help@2x.png */; };
 		61E5430B1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E543071832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on.png */; };
 		61E5430C1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E543081832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png */; };
 		61E5430D1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E543091832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png */; };
@@ -997,6 +999,8 @@
 		61E4B8291841A1090023DEAE /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../../../Downloads/GoogleAnalyticsServicesiOS_3.02/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		61E4B82B1841A11E0023DEAE /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		61E4B82D1841A14A0023DEAE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		61E4B8311843F9F60023DEAE /* sg_home_ar_help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sg_home_ar_help.png; sourceTree = "<group>"; };
+		61E4B8321843F9F60023DEAE /* sg_home_ar_help@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_ar_help@2x.png"; sourceTree = "<group>"; };
 		61E543071832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch-on.png"; sourceTree = "<group>"; };
 		61E543081832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch-on@2x.png"; sourceTree = "<group>"; };
 		61E543091832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch.png"; sourceTree = "<group>"; };
@@ -1329,6 +1333,8 @@
 		61CD50A6180C242500D28921 /* AR Assets */ = {
 			isa = PBXGroup;
 			children = (
+				61E4B8311843F9F60023DEAE /* sg_home_ar_help.png */,
+				61E4B8321843F9F60023DEAE /* sg_home_ar_help@2x.png */,
 				618BC70B183ED95600DE0504 /* sg_home_ar_camera_icon.png */,
 				618BC70C183ED95600DE0504 /* sg_home_ar_camera_icon@2x.png */,
 				618BC70D183ED95600DE0504 /* sg_home_ar_initializing_label.png */,
@@ -2076,6 +2082,7 @@
 				61CD52C5180C242500D28921 /* painting_thumb_garden@2x.png in Resources */,
 				61CD5298180C242500D28921 /* SG_General_Share_tw-on.png in Resources */,
 				610729E718212EA400E8D7A2 /* Bloch Bio.mp3 in Resources */,
+				61E4B8341843F9F60023DEAE /* sg_home_ar_help@2x.png in Resources */,
 				61072A241822657500E8D7A2 /* castle_thumb.png in Resources */,
 				618713D91830E592005BC973 /* sg_general_painting_detailmarkerbtn.png in Resources */,
 				61CD52B3180C242500D28921 /* painting_thumb_consolator-on@2x.png in Resources */,
@@ -2200,6 +2207,7 @@
 				61072A0A182138B400E8D7A2 /* perspectives_sermon_circle_black@2x.png in Resources */,
 				61CD52B9180C242500D28921 /* painting_thumb_cross@2x.png in Resources */,
 				61CD5213180C242500D28921 /* sg_home_meetartistsbtn@2x.png in Resources */,
+				61E4B8331843F9F60023DEAE /* sg_home_ar_help.png in Resources */,
 				61CD52B6180C242500D28921 /* painting_thumb_cross-on.png in Resources */,
 				61CD5237180C242500D28921 /* SG_General_BackBtn-on.png in Resources */,
 				61735B34183233EE0000D837 /* SG_General_header_feedback.png in Resources */,

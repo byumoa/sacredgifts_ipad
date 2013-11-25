@@ -240,6 +240,7 @@
     // userInteractionEnabled defaults to NO for UIImageViews
     [parentView setUserInteractionEnabled:YES];
     
+    [QCARutils getInstance].videoStreamStarted = NO;
     // Poll to see if the camera video stream has started and if so remove the
     // splash screen
     [NSTimer scheduledTimerWithTimeInterval:0.2 target:self selector:@selector(endSplash:) userInfo:nil repeats:YES];
@@ -301,6 +302,8 @@
         
         // Stop the repeating timer
         [theTimer invalidate];
+        
+        [overlayViewController dismissAnimatedOverlay];
     }
 }
 

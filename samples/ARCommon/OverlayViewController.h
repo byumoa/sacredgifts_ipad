@@ -37,6 +37,7 @@
 - (void) showOverlay;
 - (void) populateActionSheet;
 + (BOOL) doesOverlayHaveContent;
+- (void) dismissAnimatedOverlay;
 
 // UIActionSheetDelegate event handlers (accessible by subclasses)
 - (void) mainOptionClickedButtonAtIndex:(NSInteger)buttonIndex;
