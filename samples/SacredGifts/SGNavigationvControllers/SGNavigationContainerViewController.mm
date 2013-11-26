@@ -43,6 +43,8 @@
         if( [self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDPaintingContainerStr])
         {
             _backViewControllerIDStr = _beforePaintingViewControllerIDStr;
+            if( [_beforePaintingViewControllerIDStr isEqualToString:(NSString*)kControllerIDPaintingContainerStr])
+                _backViewControllerIDStr = (NSString*)kControllerIDFindAPaintingStr;
         }
         else if(   [self.currentContentController.restorationIdentifier isEqualToString:@"bloch"]
                 || [self.currentContentController.restorationIdentifier isEqualToString:@"hofman"]
