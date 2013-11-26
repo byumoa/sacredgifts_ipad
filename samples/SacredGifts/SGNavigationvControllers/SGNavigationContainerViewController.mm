@@ -171,7 +171,7 @@
 
 -(UIViewController*)transitionFromController:(UIViewController *)fromController toPaintingNamed:(NSString *)paintingName fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
 {
-    if ([paintingName rangeOfString:@"aalborg"].location != NSNotFound)
+    if ([paintingName rangeOfString:@"aalborg"].location != NSNotFound || [paintingName rangeOfString:@"alborg"].location != NSNotFound)
         paintingName = @"aalborg";
     
     SGPaintingContainerViewController* paintingContainer = (SGPaintingContainerViewController*)[self transitionFromController:fromController toControllerID:kControllerIDPaintingContainerStr fromButtonRect:frame withAnimType:animType];
