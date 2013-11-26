@@ -37,7 +37,6 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
 - (ModuleType)getModuleTypeForStr: (NSString*)moduleStr;
 - (SGOverlayViewController*)addNewOverlayOfType:(NSString*)moduleStr forPainting:(NSString *)paintingStr;
 - (void)removeCurrentOverlay;
-- (void)addTombstoneDelayed: (NSTimer*)timer;
 - (int)calcCurrentPaintingIndex;
 - (void)deselectAllModuleBtns;
 @end
@@ -56,9 +55,9 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
         self.headerView.alpha = 0;
         self.footerView.alpha = 0;
     }
-    //Not called from AR, why?
+    
+    //Not called after AR, why?
     [NSTimer scheduledTimerWithTimeInterval:self.frameOverlayDelay target:self selector:@selector(addTombstoneDelayed:) userInfo:nil repeats:NO];
-    //[self addTombstoneDelayed:nil];
     self.currentPaintingIndex = [self calcCurrentPaintingIndex];
     
     if( [paintingStr isEqualToString:kPaintingNameTemple] || [paintingStr isEqualToString:kPaintingNameTempleNY])

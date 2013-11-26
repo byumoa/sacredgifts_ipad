@@ -21,7 +21,7 @@
     toController.delegate = self;
 }
 
--(void)transitionFromController:(UIViewController *)fromController toPaintingNamed:(NSString *)paintingName fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
+-(UIViewController*)transitionFromController:(UIViewController *)fromController toPaintingNamed:(NSString *)paintingName fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
 {
     [self stopAudio];
     if( [fromController respondsToSelector:@selector(removeCurrentOverlay)] )
@@ -48,6 +48,8 @@
     [self cycleFromViewController:(UIViewController*)self.currentContentController toViewController:toController fromButtonRect:CGRectZero falling:kAnimTypeZoomIn];
     [toController configWithPaintingName:paintingName];
     ((SGPaintingViewController*)toController).headerView = ((SGPaintingViewController*)fromController).headerView;
+    
+    return toController;
 }
 
 -(void)contentController:(UIViewController *)contentController viewsForBlurredBacking:(NSArray*)views blurredImgName:(NSString *)blurredImgName

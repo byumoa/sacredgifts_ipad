@@ -169,7 +169,7 @@
     return toController;
 }
 
--(void)transitionFromController:(UIViewController *)fromController toPaintingNamed:(NSString *)paintingName fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
+-(UIViewController*)transitionFromController:(UIViewController *)fromController toPaintingNamed:(NSString *)paintingName fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
 {
     if ([paintingName rangeOfString:@"aalborg"].location != NSNotFound)
         paintingName = @"aalborg";
@@ -186,6 +186,8 @@
     [UIView animateWithDuration:0.25 animations:^{
         self.headerBlurDecoy.backgroundColor = [UIColor blackColor];
     }];
+    
+    return paintingContainer;
 }
 
 -(void)contentController:(UIViewController *)contentController viewsForBlurredBacking:(NSArray*)views blurredImgName:(NSString *)blurredImgName
@@ -222,11 +224,13 @@
 
 -(void)scannedPainting:(NSString *)paintingName
 {
-    [self transitionFromController:self.currentContentController toPaintingNamed:paintingName fromButtonRect:CGRectZero withAnimType:kAnimTypeZoomIn];
+    SGPaintingContainerViewController* pContainer = (SGPaintingContainerViewController*)[self transitionFromController:self.currentContentController toPaintingNamed:paintingName fromButtonRect:CGRectZero withAnimType:kAnimTypeZoomIn];
+    
+    [((SGPaintingViewController*)pContainer.childViewControllers[0]) addTombstoneDelayed:nil];
     
     [self.scanController.view removeFromSuperview];
     self.scanController = nil;
-    self.footerView.alpha = _footerLastAlpha;
+    self.footerView.alpha = 0;
     self.headerView.alpha = 1;
     self.headerBlurDecoy.alpha = 1;
 }

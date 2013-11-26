@@ -31,6 +31,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *templeBtnLater;
 
 -(void)configWithPaintingName:(NSString *)paintingStr;
+- (void)addTombstoneDelayed: (NSTimer*)timer;
 
 - (IBAction)swipeRecognized:(UISwipeGestureRecognizer *)sender;
 - (IBAction)pressedTempleToggle:(id)sender;

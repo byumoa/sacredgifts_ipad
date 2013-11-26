@@ -996,7 +996,6 @@
 		61E4B8231841A06F0023DEAE /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
 		61E4B8241841A06F0023DEAE /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
 		61E4B8271841A0D00023DEAE /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		61E4B8291841A1090023DEAE /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libGoogleAnalyticsServices.a; path = ../../../../Downloads/GoogleAnalyticsServicesiOS_3.02/libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		61E4B82B1841A11E0023DEAE /* libGoogleAnalyticsServices.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalyticsServices.a; sourceTree = "<group>"; };
 		61E4B82D1841A14A0023DEAE /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		61E4B8311843F9F60023DEAE /* sg_home_ar_help.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sg_home_ar_help.png; sourceTree = "<group>"; };
@@ -1166,7 +1165,6 @@
 			children = (
 				61E4B82D1841A14A0023DEAE /* libz.dylib */,
 				61E4B82B1841A11E0023DEAE /* libGoogleAnalyticsServices.a */,
-				61E4B8291841A1090023DEAE /* libGoogleAnalyticsServices.a */,
 				61E4B8271841A0D00023DEAE /* CoreData.framework */,
 				61E4B81E1841A06F0023DEAE /* GAI Library */,
 				614C01031824247D00333698 /* MessageUI.framework */,
@@ -2389,9 +2387,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					../../build/lib/arm,
-					"/Users/ontario/Desktop/sacredgifts_ipad/samples/SacredGifts/GAI\\ Library",
-					/Users/ontario/Downloads/GoogleAnalyticsServicesiOS_3.02,
-					/Users/ontario/Desktop/sacredgifts_ipad/samples/SacredGifts,
+					"$(SRCROOT)/GAI\\ Library",
+					"$(SRCROOT)/",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = SacredGifts;
@@ -2423,9 +2420,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					../../build/lib/arm,
-					"/Users/ontario/Desktop/sacredgifts_ipad/samples/SacredGifts/GAI\\ Library",
-					/Users/ontario/Downloads/GoogleAnalyticsServicesiOS_3.02,
-					/Users/ontario/Desktop/sacredgifts_ipad/samples/SacredGifts,
+					"$(SRCROOT)/GAI\\ Library",
+					"$(SRCROOT)/",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = SacredGifts;
@@ -2454,9 +2450,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				LIBRARY_SEARCH_PATHS = (
 					../../build/lib/arm,
-					"/Users/ontario/Desktop/sacredgifts_ipad/samples/SacredGifts/GAI\\ Library",
-					/Users/ontario/Downloads/GoogleAnalyticsServicesiOS_3.02,
-					/Users/ontario/Desktop/sacredgifts_ipad/samples/SacredGifts,
+					"$(SRCROOT)/GAI\\ Library",
+					"$(SRCROOT)/",
 				);
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = SacredGifts;
