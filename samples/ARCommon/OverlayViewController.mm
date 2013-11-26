@@ -103,7 +103,7 @@ Qualcomm Confidential and Proprietary
         [self.animatedOverlay removeFromSuperview];
     }];
     
-    [NSTimer scheduledTimerWithTimeInterval:30 target:self selector:@selector(fireHelpPrompt:) userInfo:nil repeats:NO];
+    [NSTimer scheduledTimerWithTimeInterval:15 target:self selector:@selector(fireHelpPrompt:) userInfo:nil repeats:NO];
 }
 
 -(void)fireHelpPrompt:(NSTimer *)timer
