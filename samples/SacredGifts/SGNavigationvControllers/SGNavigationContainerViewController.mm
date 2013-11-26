@@ -225,7 +225,6 @@
 -(void)scannedPainting:(NSString *)paintingName
 {
     SGPaintingContainerViewController* pContainer = (SGPaintingContainerViewController*)[self transitionFromController:self.currentContentController toPaintingNamed:paintingName fromButtonRect:CGRectZero withAnimType:kAnimTypeZoomIn];
-    
     [((SGPaintingViewController*)pContainer.childViewControllers[0]) addTombstoneDelayed:nil];
     
     [self.scanController.view removeFromSuperview];
