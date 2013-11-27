@@ -133,7 +133,8 @@ int const kOverlayHeight = 236;
      */
     SGFacebookViewController* fbViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"facebook"];
     [self presentViewController:fbViewController animated:YES completion:nil];
-    [fbViewController configureWebpageForURLStr:@"https://m.facebook.com/photo.php?fbid=577324159007371&set=a.577324135674040.1073741825.126723597400765&type=3&theater"];
+    NSString* urlStr = [SGConvenienceFunctionsManager getFBURLStrForModule:self.paintingName];
+    [fbViewController configureWebpageForURLStr:urlStr];
 }
 
 - (void)doInMuseumTWPostWithImage: (UIImage*)thumbnail
