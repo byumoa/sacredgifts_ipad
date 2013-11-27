@@ -1711,6 +1711,74 @@
             </objects>
             <point key="canvasLocation" x="337" y="70"/>
         </scene>
+        <!--Facebook View Controller-->
+        <scene sceneID="kaT-PN-j3K">
+            <objects>
+                <viewController restorationIdentifier="facebook" storyboardIdentifier="facebook" id="Plh-XN-9ab" customClass="SGFacebookViewController" sceneMemberID="viewController">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="0MF-g3-AX5">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="Kqa-dV-UPt">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HSA-rS-HIx">
+                                        <rect key="frame" x="727" y="0.0" width="41" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="SG_General_Module_CloseBtn.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" image="SG_General_Module_CloseBtn-on.png"/>
+                                        <connections>
+                                            <action selector="pressedClose:" destination="Plh-XN-9ab" eventType="touchUpInside" id="2KI-xK-o5F"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="uUZ-zf-tBQ">
+                                <rect key="frame" x="0.0" y="954" width="768" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KPn-WH-tw9">
+                                        <rect key="frame" x="663" y="0.0" width="102" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="SG_General_window_closeBtn.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <state key="highlighted" image="SG_General_window_closeBtn-on.png"/>
+                                        <connections>
+                                            <action selector="pressedClose:" destination="Plh-XN-9ab" eventType="touchUpInside" id="sXs-ej-FBN"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <webView contentMode="scaleToFill" id="SnL-ar-bYJ">
+                                <rect key="frame" x="0.0" y="41" width="768" height="913"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Plh-XN-9ab" id="DPa-Q9-j5a"/>
+                                </connections>
+                            </webView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" id="sI9-dy-9qm">
+                                <rect key="frame" x="374" y="488" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="sI9-dy-9qm" id="f5M-Wr-1oA"/>
+                        <outlet property="webview" destination="SnL-ar-bYJ" id="4Yn-Om-eGF"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gY8-s6-uzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1291" y="1372"/>
+        </scene>
     </scenes>
     <resources>
         <image name="SG_General_BackBtn-on.png" width="122" height="41"/>

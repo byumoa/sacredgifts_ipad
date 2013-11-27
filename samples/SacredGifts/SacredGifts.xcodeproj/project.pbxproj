@@ -467,6 +467,7 @@
 		61E5430D1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E543091832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png */; };
 		61E5430E1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E5430A1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch@2x.png */; };
 		61E5F06A18455BA1003959C7 /* UWFacebookService.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E5F06918455BA1003959C7 /* UWFacebookService.m */; };
+		61E5F0B31845F284003959C7 /* SGFacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E5F0B21845F284003959C7 /* SGFacebookViewController.m */; };
 		61E850E7183AC98D00D6EB08 /* SG_Home_SplashLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E850E5183AC98D00D6EB08 /* SG_Home_SplashLogo.png */; };
 		61E850E8183AC98D00D6EB08 /* SG_Home_SplashLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E850E6183AC98D00D6EB08 /* SG_Home_SplashLogo@2x.png */; };
 		61F73CC11830FDF200D13F7C /* childrens_bloch_prompt.png in Resources */ = {isa = PBXBuildFile; fileRef = 61F73CBB1830FDF200D13F7C /* childrens_bloch_prompt.png */; };
@@ -1013,6 +1014,8 @@
 		61E5430A1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch@2x.png"; sourceTree = "<group>"; };
 		61E5F06818455BA1003959C7 /* UWFacebookService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UWFacebookService.h; sourceTree = "<group>"; };
 		61E5F06918455BA1003959C7 /* UWFacebookService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UWFacebookService.m; sourceTree = "<group>"; };
+		61E5F0B11845F284003959C7 /* SGFacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFacebookViewController.h; sourceTree = "<group>"; };
+		61E5F0B21845F284003959C7 /* SGFacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGFacebookViewController.m; sourceTree = "<group>"; };
 		61E850E5183AC98D00D6EB08 /* SG_Home_SplashLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_Home_SplashLogo.png; sourceTree = "<group>"; };
 		61E850E6183AC98D00D6EB08 /* SG_Home_SplashLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_SplashLogo@2x.png"; sourceTree = "<group>"; };
 		61F73CBB1830FDF200D13F7C /* childrens_bloch_prompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = childrens_bloch_prompt.png; sourceTree = "<group>"; };
@@ -1128,6 +1131,8 @@
 				61D606831844BA510090C77A /* SGDonateViewController.m */,
 				61E5F06818455BA1003959C7 /* UWFacebookService.h */,
 				61E5F06918455BA1003959C7 /* UWFacebookService.m */,
+				61E5F0B11845F284003959C7 /* SGFacebookViewController.h */,
+				61E5F0B21845F284003959C7 /* SGFacebookViewController.m */,
 			);
 			name = SacredGifts;
 			sourceTree = "<group>";
@@ -2347,6 +2352,7 @@
 				610554F3182A60CD0030CCC3 /* SGMediaSelectionViewController.m in Sources */,
 				61CD5326180C253400D28921 /* SGContainerViewController.m in Sources */,
 				6165AA741819C95400857DBD /* SGEAGLView.m in Sources */,
+				61E5F0B31845F284003959C7 /* SGFacebookViewController.m in Sources */,
 				6186729718100E7900DED0D4 /* ARParentViewController.mm in Sources */,
 				61CD5303180C24FD00D28921 /* SGChildrensOverlayViewController.m in Sources */,
 				618713B8182F0B6C005BC973 /* SGConvenienceFunctionsManager.m in Sources */,

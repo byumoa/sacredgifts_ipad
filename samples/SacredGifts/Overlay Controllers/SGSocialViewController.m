@@ -9,6 +9,7 @@
 #import "SGSocialViewController.h"
 #import <Social/Social.h>
 #import "SGWebViewController.h"
+#import "SGFacebookViewController.h"
 #import "GAI.h"
 #import "GAIDictionaryBuilder.h"
 #import <FacebookSDK/FacebookSDK.h>
@@ -116,10 +117,15 @@ int const kOverlayHeight = 236;
 
 -(void)doInMuseumFBPostWithImage:(UIImage *)thumbnail
 {
+    /*
     SGWebViewController* webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"web"];
     [self presentViewController:webViewController animated:YES completion:nil];
     NSURL *url = [NSURL URLWithString:@"https://m.facebook.com/photo.php?fbid=577324159007371&set=a.577324135674040.1073741825.126723597400765&type=3&theater"];
     [webViewController configureWebpageForURL:url];
+     */
+    SGFacebookViewController* fbViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"facebook"];
+    [self presentViewController:fbViewController animated:YES completion:nil];
+    [fbViewController configureWebpageForURLStr:@"https://m.facebook.com/photo.php?fbid=577324159007371&set=a.577324135674040.1073741825.126723597400765&type=3&theater"];
 }
 
 - (void)doInMuseumTWPostWithImage: (UIImage*)thumbnail
