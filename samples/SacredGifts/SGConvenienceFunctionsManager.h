@@ -14,5 +14,6 @@
 + (id)sharedManager;
 + (NSString*)artistForPainting: (NSString*)paintingStr abbreviated:(BOOL)abbreviate;
 + (NSString *)getStringForModule:(ModuleType)moduleType;
++ (NSString *)getFBURLStrForModule:(ModuleType)moduleType;
 
 @end

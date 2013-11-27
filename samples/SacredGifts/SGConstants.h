@@ -29,6 +29,26 @@ typedef enum
     kOverlayAnimationFall
 }OverlayAnimation;
 
+extern const NSString* kfacebookURLcapture;
+extern const NSString* kfacebookURLtemple;
+extern const NSString* kfacebookURLruler;
+extern const NSString* kfacebookURLgethsemane;
+extern const NSString* kfacebookURLsavior;
+extern const NSString* kfacebookURLgarden;
+extern const NSString* kfacebookURLaalborg;
+extern const NSString* kfacebookURLmocking;
+extern const NSString* kfacebookURLconsolator;
+extern const NSString* kfacebookURLemmaus;
+extern const NSString* kfacebookURLshepherds;
+extern const NSString* kfacebookURLsermon;
+extern const NSString* kfacebookURLchildren;
+extern const NSString* kfacebookURLhealing;
+extern const NSString* kfacebookURLcleansing;
+extern const NSString* kfacebookURLdenial;
+extern const NSString* kfacebookURLcross;
+extern const NSString* kfacebookURLburial;
+extern const NSString* kfacebookURLresurrection;
+
 extern const NSString* kAnimTypeZoomIn;
 extern const NSString* kAnimTypeZoomOut;
 extern const NSString* kAnimTypeSwipeRight;

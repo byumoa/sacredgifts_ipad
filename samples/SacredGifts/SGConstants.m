@@ -23,6 +23,26 @@ const NSString* kControllerIDSchwartzStr = @"schwartz";
 const NSString* kControllerIDHofmantr = @"hofman";
 const NSString* kControllerIDPanoramaStr = @"panorama";
 
+const NSString* kfacebookURLcapture = @"https://www.facebook.com/photo.php?fbid=577324175674036&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLtemple = @"https://www.facebook.com/photo.php?fbid=577324482340672&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLruler = @"https://www.facebook.com/photo.php?fbid=577324422340678&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLgethsemane = @"https://www.facebook.com/photo.php?fbid=577324332340687&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLsavior = @"https://www.facebook.com/photo.php?fbid=577324425674011&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLgarden = @"https://www.facebook.com/photo.php?fbid=577324322340688&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLaalborg = @"https://www.facebook.com/photo.php?fbid=577324159007371&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLmocking = @"https://www.facebook.com/photo.php?fbid=577324365674017&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLconsolator = @"https://www.facebook.com/photo.php?fbid=577324295674024&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLemmaus = @"https://www.facebook.com/photo.php?fbid=577324289007358&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLshepherds = @"https://www.facebook.com/photo.php?fbid=577324489007338&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLsermon = @"https://www.facebook.com/photo.php?fbid=577324339007353&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLchildren = @"https://www.facebook.com/photo.php?fbid=577324185674035&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLhealing = @"https://www.facebook.com/photo.php?fbid=577324362340684&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLcleansing = @"https://www.facebook.com/photo.php?fbid=577324205674033&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLdenial = @"https://www.facebook.com/photo.php?fbid=577324259007361&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLcross = @"https://www.facebook.com/photo.php?fbid=577324232340697&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLburial = @"https://www.facebook.com/photo.php?fbid=577324169007370&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+const NSString* kfacebookURLresurrection = @"https://www.facebook.com/photo.php?fbid=577324385674015&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+
 const int kTotalPaintings = 19;
 NSString* const kPaintingNames[] = {
     @"capture",

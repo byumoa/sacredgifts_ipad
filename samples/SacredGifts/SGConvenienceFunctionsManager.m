@@ -58,4 +58,9 @@
     return nil;
 }
 
++ (NSString *)getFBURLStrForModule:(ModuleType)moduleType
+{
+    
+}
+
 @end
