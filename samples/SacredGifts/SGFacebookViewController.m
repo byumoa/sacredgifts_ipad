@@ -97,9 +97,9 @@
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     NSLog(@"didFailLoadWithError: %@", error);
-    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Facebook" message:@"Trouble connecting to the internet" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
-    [alert show];
-    [self pressedClose:nil];
+    //UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Facebook" message:@"Trouble connecting to the internet" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    //[alert show];
+    //[self pressedClose:nil];
 }
 
 @end
