@@ -21,5 +21,6 @@ typedef enum
 @property (weak, nonatomic) IBOutlet UIImageView *paintingThumbnail;
 
 - (IBAction)pressedSocialBtn:(id)sender;
+- (IBAction)pressedSignOut:(id)sender;
 
 @end

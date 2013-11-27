@@ -78,12 +78,16 @@
     if( [urlStr rangeOfString:@"m.facebook.com/messages/read"].location != NSNotFound )
     {
         [self pressedClose:nil];
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Facebook" message:@"Message Successful" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
         return NO;
     }
     
     if( [urlStr rangeOfString:@"m.facebook.com/a/sharer.php"].location != NSNotFound )
     {
         [self pressedClose:nil];
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Facebook" message:@"Post Successful" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        [alert show];
         return NO;
     }
     
@@ -93,6 +97,9 @@
 -(void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error
 {
     NSLog(@"didFailLoadWithError: %@", error);
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Facebook" message:@"Trouble connecting to the internet" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+    [self pressedClose:nil];
 }
 
 @end

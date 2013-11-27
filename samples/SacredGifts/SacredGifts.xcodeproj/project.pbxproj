@@ -468,6 +468,8 @@
 		61E5430E1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E5430A1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch@2x.png */; };
 		61E5F06A18455BA1003959C7 /* UWFacebookService.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E5F06918455BA1003959C7 /* UWFacebookService.m */; };
 		61E5F0B31845F284003959C7 /* SGFacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E5F0B21845F284003959C7 /* SGFacebookViewController.m */; };
+		61E5F0B6184620AD003959C7 /* sg_general_Share_signout.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E5F0B4184620AD003959C7 /* sg_general_Share_signout.png */; };
+		61E5F0B7184620AD003959C7 /* sg_general_Share_signout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E5F0B5184620AD003959C7 /* sg_general_Share_signout@2x.png */; };
 		61E850E7183AC98D00D6EB08 /* SG_Home_SplashLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E850E5183AC98D00D6EB08 /* SG_Home_SplashLogo.png */; };
 		61E850E8183AC98D00D6EB08 /* SG_Home_SplashLogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E850E6183AC98D00D6EB08 /* SG_Home_SplashLogo@2x.png */; };
 		61F73CC11830FDF200D13F7C /* childrens_bloch_prompt.png in Resources */ = {isa = PBXBuildFile; fileRef = 61F73CBB1830FDF200D13F7C /* childrens_bloch_prompt.png */; };
@@ -1016,6 +1018,8 @@
 		61E5F06918455BA1003959C7 /* UWFacebookService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UWFacebookService.m; sourceTree = "<group>"; };
 		61E5F0B11845F284003959C7 /* SGFacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFacebookViewController.h; sourceTree = "<group>"; };
 		61E5F0B21845F284003959C7 /* SGFacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGFacebookViewController.m; sourceTree = "<group>"; };
+		61E5F0B4184620AD003959C7 /* sg_general_Share_signout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sg_general_Share_signout.png; sourceTree = "<group>"; };
+		61E5F0B5184620AD003959C7 /* sg_general_Share_signout@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_general_Share_signout@2x.png"; sourceTree = "<group>"; };
 		61E850E5183AC98D00D6EB08 /* SG_Home_SplashLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_Home_SplashLogo.png; sourceTree = "<group>"; };
 		61E850E6183AC98D00D6EB08 /* SG_Home_SplashLogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Home_SplashLogo@2x.png"; sourceTree = "<group>"; };
 		61F73CBB1830FDF200D13F7C /* childrens_bloch_prompt.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = childrens_bloch_prompt.png; sourceTree = "<group>"; };
@@ -1634,6 +1638,8 @@
 		61CD5167180C242500D28921 /* Social */ = {
 			isa = PBXGroup;
 			children = (
+				61E5F0B4184620AD003959C7 /* sg_general_Share_signout.png */,
+				61E5F0B5184620AD003959C7 /* sg_general_Share_signout@2x.png */,
 				61CD5168180C242500D28921 /* SG_General_Share_email-on.png */,
 				61CD5169180C242500D28921 /* SG_General_Share_email-on@2x.png */,
 				61CD516A180C242500D28921 /* SG_General_Share_email.png */,
@@ -2016,6 +2022,7 @@
 				61CD52BC180C242500D28921 /* painting_thumb_denial.png in Resources */,
 				61267B851819667B00A52CC5 /* splash_donors@2x.png in Resources */,
 				61CD5265180C242500D28921 /* SG_General_Painting_GiftsBtn.png in Resources */,
+				61E5F0B6184620AD003959C7 /* sg_general_Share_signout.png in Resources */,
 				61CD52DF180C242500D28921 /* painting_thumb_sermon-on@2x.png in Resources */,
 				618BC719183ED95600DE0504 /* sg_home_ar_initializing_label.png in Resources */,
 				61CD52C3180C242500D28921 /* painting_thumb_garden-on@2x.png in Resources */,
@@ -2301,6 +2308,7 @@
 				61735B38183233EE0000D837 /* SG_General_header_thanks.png in Resources */,
 				61D606811844B8E10090C77A /* sg_home_museumDonate@2x.png in Resources */,
 				61CD52AD180C242500D28921 /* painting_thumb_children@2x.png in Resources */,
+				61E5F0B7184620AD003959C7 /* sg_general_Share_signout@2x.png in Resources */,
 				61CD52A3180C242500D28921 /* painting_thumb_burial-on@2x.png in Resources */,
 				61CD5264180C242500D28921 /* SG_General_Painting_GiftsBtn-on@2x.png in Resources */,
 			);

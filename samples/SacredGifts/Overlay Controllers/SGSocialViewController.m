@@ -14,6 +14,7 @@
 #import "GAIDictionaryBuilder.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "UWFacebookService.h"
+#import "SGConvenienceFunctionsManager.h"
 
 NSString* const kEmailAutofill = @"Enjoying the painting by %@ while using the Sacred Gifts app from the BYU Museum of Art. %@";
 NSString* const kTwitterAutofill = @"Viewing this painting while using the @BYUmoa’s #sacredgifts app.";
@@ -115,6 +116,13 @@ int const kOverlayHeight = 236;
         [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action" action:@"button_press" label:mediaType value:nil] build]];
 }
 
+- (IBAction)pressedSignOut:(id)sender
+{
+    [SGConvenienceFunctionsManager facebookLogout];
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Facebook" message:@"You are logged out of facebook" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    [alert show];
+}
+
 -(void)doInMuseumFBPostWithImage:(UIImage *)thumbnail
 {
     /*
@@ -132,7 +140,9 @@ int const kOverlayHeight = 236;
 {
     SGWebViewController* webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"web"];
     [self presentViewController:webViewController animated:YES completion:nil];
-    NSURL *url = [NSURL URLWithString:@"https://twitter.com/intent/tweet?source=webclient&text=Viewing+this+Franz+Schwartz+painting+and+feeling+grateful+for+sacredgifts"];
+    
+    NSString* urlStr = [SGConvenienceFunctionsManager getFBURLStrForModule:self.paintingName];
+    NSURL *url = [NSURL URLWithString:urlStr];
     [webViewController configureWebpageForURL:url];
 }
 

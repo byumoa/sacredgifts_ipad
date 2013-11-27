@@ -23,7 +23,7 @@ const NSString* kControllerIDSchwartzStr = @"schwartz";
 const NSString* kControllerIDHofmantr = @"hofman";
 const NSString* kControllerIDPanoramaStr = @"panorama";
 
-const NSString* kfacebookURLcapture = @"https://www.facebook.com/photo.php?fbid=577324175674036&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
+NSString* const kfacebookURLcapture = @"https://www.facebook.com/photo.php?fbid=577324175674036&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
 const NSString* kfacebookURLtemple = @"https://www.facebook.com/photo.php?fbid=577324482340672&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
 const NSString* kfacebookURLruler = @"https://www.facebook.com/photo.php?fbid=577324422340678&set=a.577324135674040.1073741825.126723597400765&type=3&theater";
 const NSString* kfacebookURLgethsemane = @"https://www.facebook.com/photo.php?fbid=577324332340687&set=a.577324135674040.1073741825.126723597400765&type=3&theater";

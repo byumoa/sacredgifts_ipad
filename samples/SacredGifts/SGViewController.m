@@ -11,6 +11,7 @@
 #import "SGConstants.h"
 #import "GAI.h"
 #import "GAIFields.h"
+#import "SGConvenienceFunctionsManager.h"
 
 const CGPoint kSplashLogoStartPoint = {384,840};
 
@@ -70,6 +71,8 @@ const CGPoint kSplashLogoStartPoint = {384,840};
     
     _donorsTimer = [NSTimer scheduledTimerWithTimeInterval:3 target:self selector:@selector(fadeInDonors:) userInfo:nil repeats:NO];
     _splashTimer = [NSTimer scheduledTimerWithTimeInterval:63 target:self selector:@selector(fadeSplash:) userInfo:nil repeats:NO];
+    
+    [SGConvenienceFunctionsManager facebookLogout];
     
     id<GAITracker> tracker = [[GAI sharedInstance] defaultTracker];
     [tracker set:kGAISessionControl
