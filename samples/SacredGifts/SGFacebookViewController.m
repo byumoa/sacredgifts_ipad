@@ -38,18 +38,15 @@
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
-    UIView* coverOverlay = [[UIView alloc] initWithFrame:CGRectMake(0, 642, 768, 600)];
+    UIView* coverOverlay = [[UIView alloc] initWithFrame:CGRectMake(0, 602, 768, 600)];
     coverOverlay.backgroundColor = [UIColor colorWithRed:235/255.0 green:238/255.0 blue:244/255.0 alpha:255/255.0];
     [self.webview addSubview:coverOverlay];
     
-    UIView* commentsOverlay = [[UIView alloc] initWithFrame:CGRectMake(0, 614, 200, 30)];
+    UIView* commentsOverlay = [[UIView alloc] initWithFrame:CGRectMake(0, 574, 200, 30)];
     commentsOverlay.backgroundColor = [UIColor colorWithRed:235/255.0 green:238/255.0 blue:244/255.0 alpha:255/255.0];
     [self.webview addSubview:commentsOverlay];
     
     UIImageView* blueOverlay = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"BlueOverLay.png"]];
-    CGRect frame = blueOverlay.frame;
-    frame.origin.y += 40;
-    blueOverlay.frame = frame;
     [self.webview addSubview:blueOverlay];
     blueOverlay.userInteractionEnabled = YES;
 }
