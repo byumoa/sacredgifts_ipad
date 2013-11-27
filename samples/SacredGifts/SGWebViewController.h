@@ -21,4 +21,5 @@ typedef enum
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 - (IBAction)pressedClose:(UIButton *)sender;
 - (void)configureWebpageFor: (WebpageType)webpageType;
+- (void)configureWebpageForURL: (NSURL*)url;
 @end

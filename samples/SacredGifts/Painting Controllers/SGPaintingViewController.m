@@ -17,7 +17,6 @@
 #import "SGSocialViewController.h"
 #import "SGVideoOverlayViewController.h"
 #import "SGConvenienceFunctionsManager.h"
-#import "SGAnalyticsManager.h"
 
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
@@ -47,7 +46,6 @@ NSString* const kPaintingNameTempleNY = @"temple-ny";
     self.screenName = [NSString stringWithFormat:@"painting: %@", paintingStr];
     
     //Main Painting
-    [SGAnalyticsManager registerPageView:[NSString stringWithFormat:@"View Painting: %@", paintingStr]];
     _paintingNameStr = paintingStr;
     [self addMainPainting:_paintingNameStr];
     if( chromeHidden )
@@ -270,8 +268,6 @@ static BOOL chromeHidden = NO;
 
 -(SGOverlayViewController*)addNewOverlayOfType:(NSString*)moduleStr forPainting:(NSString *)paintingStr
 {
-    [SGAnalyticsManager registerEventName:moduleStr category:paintingStr data:nil];
-    
     //Transition current overlay off
     [self removeCurrentOverlay];
     

@@ -8,7 +8,6 @@
 
 #import "GAITrackedViewController.h"
 #import "SGConstants.h"
-#import "SGAnalyticsManager.h"
 
 @class SGOverlayViewController;
 

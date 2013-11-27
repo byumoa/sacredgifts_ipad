@@ -20,6 +20,11 @@ NSString* const kFeedbackImgStr = @"SG_General_header_feedback.png";
 
 @implementation SGWebViewController
 
+-(void)configureWebpageForURL:(NSURL *)url
+{
+    [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
+}
+
 -(void)configureWebpageFor:(WebpageType)webpageType
 {
     NSString* urlStr = @"";

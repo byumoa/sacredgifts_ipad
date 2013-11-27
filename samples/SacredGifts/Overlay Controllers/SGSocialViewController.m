@@ -11,6 +11,8 @@
 #import "SGWebViewController.h"
 #import "GAI.h"
 #import "GAIDictionaryBuilder.h"
+#import <FacebookSDK/FacebookSDK.h>
+#import "UWFacebookService.h"
 
 NSString* const kEmailAutofill = @"Enjoying the painting by %@ while using the Sacred Gifts app from the BYU Museum of Art. %@";
 NSString* const kTwitterAutofill = @"Viewing this painting while using the @BYUmoa’s #sacredgifts app.";
@@ -26,7 +28,8 @@ int const kOverlayHeight = 236;
 }
 
 - (NSString*)calcArtistForPaintingStr: (NSString*)paintingName;
-
+- (void)doInMuseumFBPostWithImage: (UIImage*)thumbnail;
+- (void)doInMuseumTWPostWithImage: (UIImage*)thumbnail;
 @end
 
 @implementation SGSocialViewController
@@ -53,33 +56,37 @@ int const kOverlayHeight = 236;
     {
         case SocialMediaTypeFacebook:
         {
+            /*
             NSString* artist = [self calcArtistForPaintingStr:self.paintingName];
             NSString* autofillStr = [NSString stringWithFormat:kFacebookAutofill, artist];
-            mediaType = @"facebook";
             
             SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
             [socialSheet setInitialText:autofillStr];
             [socialSheet addImage:thumbnail];
             [socialSheet addURL:[NSURL URLWithString:kAppStoreURL]];
             [self presentViewController:socialSheet animated:YES completion:^{}];
+             */
+            mediaType = @"facebook";
+            [self doInMuseumFBPostWithImage:thumbnail];
         }
             break;
         case SocialMediaTypeTwitter:
         {
-            mediaType = @"twitter";
-            
+            /*
             SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
             [socialSheet setInitialText:(NSString*)kTwitterAutofill];
             [socialSheet addImage:thumbnail];
             [socialSheet addURL:[NSURL URLWithString:kAppStoreURL]];
             [self presentViewController:socialSheet animated:YES completion:^{}];
+             */
+            mediaType = @"twitter";
         }
             break;
         case SocialMediaTypeEmail:
         {
+            /*
             NSString* artist = [self calcArtistForPaintingStr:self.paintingName];
             NSString* autofillStr = [NSString stringWithFormat:kEmailAutofill, artist, kAppStoreURL];
-            mediaType = @"email";
             
             MFMailComposeViewController *mailController = [[MFMailComposeViewController alloc] init];
             [mailController setMailComposeDelegate:self];
@@ -88,6 +95,8 @@ int const kOverlayHeight = 236;
             [self presentViewController:mailController animated:YES completion:^{}];
             NSData *myData = UIImageJPEGRepresentation(thumbnail, 1.0);
             [mailController addAttachmentData:myData mimeType:@"image/png" fileName:@"Thumbnail.png"];
+             */
+            mediaType = @"email";
         }
             break;
         case 4:
@@ -103,6 +112,22 @@ int const kOverlayHeight = 236;
     
     if( ((UIButton*)sender).tag != 4)
         [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action" action:@"button_press" label:mediaType value:nil] build]];
+}
+
+-(void)doInMuseumFBPostWithImage:(UIImage *)thumbnail
+{
+    SGWebViewController* webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"web"];
+    [self presentViewController:webViewController animated:YES completion:nil];
+    NSURL *url = [NSURL URLWithString:@"https://m.facebook.com/photo.php?fbid=577324159007371&set=a.577324135674040.1073741825.126723597400765&type=3&theater"];
+    [webViewController configureWebpageForURL:url];
+}
+
+- (void)doInMuseumTWPostWithImage: (UIImage*)thumbnail
+{
+    SGWebViewController* webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"web"];
+    [self presentViewController:webViewController animated:YES completion:nil];
+    NSURL *url = [NSURL URLWithString:@"https://twitter.com/intent/tweet?source=webclient&text=Viewing+this+Franz+Schwartz+painting+and+feeling+grateful+for+sacredgifts"];
+    [webViewController configureWebpageForURL:url];
 }
 
 -(NSString *)calcArtistForPaintingStr:(NSString *)paintingName

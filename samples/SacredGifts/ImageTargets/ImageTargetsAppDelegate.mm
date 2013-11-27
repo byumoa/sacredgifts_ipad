@@ -88,6 +88,7 @@
     [GAI sharedInstance].dispatchInterval = 20;
     [[[GAI sharedInstance] logger] setLogLevel:kGAILogLevelVerbose];
     [[GAI sharedInstance] trackerWithTrackingId:@"UA-45963310-1"];
+    [[GAI sharedInstance].logger setLogLevel:kGAILogLevelNone];
     
     return YES;
 }

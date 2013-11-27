@@ -13,7 +13,13 @@
 	<key>CFBundleIcons</key>
 	<dict/>
 	<key>CFBundleIcons~ipad</key>
-	<dict/>
+	<dict>
+		<key>New item</key>
+		<dict>
+			<key>CFBundleURLName</key>
+			<string>fb***</string>
+		</dict>
+	</dict>
 	<key>CFBundleIdentifier</key>
 	<string>com.PepperGumGames.${PRODUCT_NAME:rfc1034identifier}</string>
 	<key>CFBundleInfoDictionaryVersion</key>
@@ -60,5 +66,7 @@
 	</array>
 	<key>UIApplicationExistsOnSuspend</key>
 	<true/>
+	<key>FacebookAppID</key>
+	<string>174234872774204</string>
 </dict>
 </plist>
