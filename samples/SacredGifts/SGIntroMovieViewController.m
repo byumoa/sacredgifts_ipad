@@ -37,9 +37,11 @@ NSString* const kIntroMovieStr = @"Sacred Gifts Intro Film FOR IPAD_h264";
 
 - (void)configureVideo
 {
-    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                         pathForResource:kIntroMovieStr ofType:@"mov"]];
-    if( ! url ) return;
+    NSString* path = [[NSBundle mainBundle]
+                      pathForResource:kIntroMovieStr ofType:@"mov"];
+    if( !path ) return;
+    NSURL *url = [NSURL fileURLWithPath:path];
+
     self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
     self.moviePlayer.view.frame = CGRectMake(0, 45, 768, 432);
     self.moviePlayer.movieSourceType = MPMovieSourceTypeFile;
