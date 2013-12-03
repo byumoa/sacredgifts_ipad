@@ -8,7 +8,11 @@
 
 #import "SGIntroMovieViewController.h"
 
+NSString* const kIntroMovieStr = @"Sacred Gifts Intro Film FOR IPAD_h264";
+
 @interface SGIntroMovieViewController ()
+
+- (void)configureVideo;
 
 @end
 
@@ -27,6 +31,21 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    [self configureVideo];
+}
+
+- (void)configureVideo
+{
+    NSURL *url = [NSURL fileURLWithPath:[[NSBundle mainBundle]
+                                         pathForResource:kIntroMovieStr ofType:@"mp4"]];
+    self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
+    self.moviePlayer.view.frame = CGRectMake(0, 45, 768, 432);
+    self.moviePlayer.movieSourceType = MPMovieSourceTypeFile;
+    self.moviePlayer.controlStyle = MPMovieControlStyleNone;
+    [self.view addSubview:self.moviePlayer.view];
+    [self.moviePlayer prepareToPlay];
+    [self.moviePlayer play];
 }
 
 - (void)didReceiveMemoryWarning
