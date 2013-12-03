@@ -28,6 +28,10 @@ const int kPerspectivesButtonWidth = 161;
 NSString* const kPaintingNameTemple = @"temple";
 NSString* const kPaintingNameTempleNY = @"temple-ny";
 
+NSString* const kBlochSocialBGStr = @"SG_Social_Module_Overlay_Bloch";
+NSString* const kHofmannSocialBGStr = @"SG_Social_Module_Overlay_Hofmann";
+NSString* const kSchwartzSocialBGStr = @"SG_Social_Module_Overlay_Schwartz";
+
 @interface SGPaintingViewController (PrivateAPIs)
 - (void) addMainPainting:(NSString*)paintingName;
 - (void) addFooterButtonsForPainting: (NSString*)paintingNameStr;
@@ -302,7 +306,15 @@ static BOOL chromeHidden = NO;
             break;
         case kModuleTypeSocial:{
             ((SGSocialViewController*)self.overlayController).paintingName = _paintingNameStr;
-            [self.overlayController addBackgroundImgWithImgName:@"SG_Social_Module_Overlay.png"];
+            NSString* socialOverlayBGStr = kBlochSocialBGStr;
+            
+            NSString* artistName = [SGConvenienceFunctionsManager artistForPainting:_paintingNameStr abbreviated:YES];
+            if( [artistName isEqualToString:@"hofmann"] )
+                socialOverlayBGStr = kHofmannSocialBGStr;
+            else if( [artistName isEqualToString:@"schwartz"] )
+                socialOverlayBGStr = kSchwartzSocialBGStr;
+            
+            [self.overlayController addBackgroundImgWithImgName:socialOverlayBGStr];
         }
             break;
         case kModuleTypeVideo:{

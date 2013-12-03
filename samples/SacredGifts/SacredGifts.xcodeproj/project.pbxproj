@@ -124,8 +124,6 @@
 		61735B61183249A30000D837 /* shepherds.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B4C183249A30000D837 /* shepherds.png */; };
 		61735B62183249A30000D837 /* temple-ny.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B4D183249A30000D837 /* temple-ny.png */; };
 		61735B63183249A30000D837 /* temple.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B4E183249A30000D837 /* temple.png */; };
-		61735B66183255740000D837 /* SG_Social_Module_Overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B64183255740000D837 /* SG_Social_Module_Overlay.png */; };
-		61735B67183255740000D837 /* SG_Social_Module_Overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B65183255740000D837 /* SG_Social_Module_Overlay@2x.png */; };
 		618645A7181AD11E00195384 /* SGHighlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618645A6181AD11E00195384 /* SGHighlightsViewController.m */; };
 		618645AC181AEEB700195384 /* childrens_btn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 618645A8181AEEB700195384 /* childrens_btn-on.png */; };
 		618645AD181AEEB700195384 /* childrens_btn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 618645A9181AEEB700195384 /* childrens_btn-on@2x.png */; };
@@ -571,6 +569,7 @@
 		6117E626184D3D6E00A50719 /* SG_Social_Module_Overlay_Hofmann@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Social_Module_Overlay_Hofmann@2x.png"; sourceTree = "<group>"; };
 		6117E627184D3D6E00A50719 /* SG_Social_Module_Overlay_Schwartz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_Social_Module_Overlay_Schwartz.png; sourceTree = "<group>"; };
 		6117E628184D3D6E00A50719 /* SG_Social_Module_Overlay_Schwartz@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Social_Module_Overlay_Schwartz@2x.png"; sourceTree = "<group>"; };
+		6117E62F184D555400A50719 /* Sacred Gifts Intro Film FOR IPAD_h264.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sacred Gifts Intro Film FOR IPAD_h264.mp4"; sourceTree = "<group>"; };
 		6118B58918117B6400FB8337 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		61267B7E1819667B00A52CC5 /* splash_artists.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_artists.png; sourceTree = "<group>"; };
 		61267B7F1819667B00A52CC5 /* splash_artists@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_artists@2x.png"; sourceTree = "<group>"; };
@@ -624,8 +623,6 @@
 		61735B4C183249A30000D837 /* shepherds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shepherds.png; sourceTree = "<group>"; };
 		61735B4D183249A30000D837 /* temple-ny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "temple-ny.png"; sourceTree = "<group>"; };
 		61735B4E183249A30000D837 /* temple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = temple.png; sourceTree = "<group>"; };
-		61735B64183255740000D837 /* SG_Social_Module_Overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_Social_Module_Overlay.png; sourceTree = "<group>"; };
-		61735B65183255740000D837 /* SG_Social_Module_Overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Social_Module_Overlay@2x.png"; sourceTree = "<group>"; };
 		618645A5181AD11E00195384 /* SGHighlightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHighlightsViewController.h; sourceTree = "<group>"; };
 		618645A6181AD11E00195384 /* SGHighlightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHighlightsViewController.m; sourceTree = "<group>"; };
 		618645A8181AEEB700195384 /* childrens_btn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "childrens_btn-on.png"; sourceTree = "<group>"; };
@@ -1347,6 +1344,7 @@
 		61CD50A5180C242500D28921 /* GeneralResources */ = {
 			isa = PBXGroup;
 			children = (
+				6117E62F184D555400A50719 /* Sacred Gifts Intro Film FOR IPAD_h264.mp4 */,
 				61E5F0B8184623F1003959C7 /* BlueOverLay.png */,
 				61D6067D1844B8E10090C77A /* donate */,
 				61F73CBA1830FDF200D13F7C /* childrensmoduleprompt */,
@@ -1632,8 +1630,6 @@
 				61CD5158180C242500D28921 /* SG_General_Painting_ShareBtn.png */,
 				61CD5159180C242500D28921 /* SG_General_Painting_ShareBtn@2x.png */,
 				61CD515A180C242500D28921 /* SG_General_Painting_Summary-on@2x.png */,
-				61735B64183255740000D837 /* SG_Social_Module_Overlay.png */,
-				61735B65183255740000D837 /* SG_Social_Module_Overlay@2x.png */,
 				61CD515B180C242500D28921 /* SG_General_Painting_Summary.png */,
 				61CD515C180C242500D28921 /* SG_General_Painting_Summary@2x.png */,
 				61CD515D180C242500D28921 /* SG_General_Painting_SummaryBtn-on.png */,
@@ -2073,7 +2069,6 @@
 				61CD5214180C242500D28921 /* sg_home_originsbtn-on.png in Resources */,
 				61CD5283180C242500D28921 /* SG_General_ScanBtn-on@2x.png in Resources */,
 				618713B5182F0956005BC973 /* SG_General_Module_Overlay.png in Resources */,
-				61735B67183255740000D837 /* SG_Social_Module_Overlay@2x.png in Resources */,
 				61CD5209180C242500D28921 /* sg_home_label_hofmann@2x.png in Resources */,
 				61CD52C7180C242500D28921 /* painting_thumb_gethsemane-on@2x.png in Resources */,
 				61A668ED182EEB2200AC749E /* exhibition_credit_overlay.png in Resources */,
@@ -2104,7 +2099,6 @@
 				61735B51183249A30000D837 /* capture.png in Resources */,
 				61CD51E2180C242500D28921 /* sg_home_bg-meetartists.png in Resources */,
 				61CD52B8180C242500D28921 /* painting_thumb_cross.png in Resources */,
-				61735B66183255740000D837 /* SG_Social_Module_Overlay.png in Resources */,
 				61CD52B5180C242500D28921 /* painting_thumb_consolator@2x.png in Resources */,
 				61CD527F180C242500D28921 /* SG_General_Painting_SummaryBtn-on@2x.png in Resources */,
 				618BC71A183ED95600DE0504 /* sg_home_ar_initializing_label@2x.png in Resources */,
