@@ -11,6 +11,7 @@
 #import "SGWebViewController.h"
 
 const int kNavigationDestinationStoryOfTheExhibition = 9324;
+const int kNavigationIntroMovie = 864;
 const int kNavigationReservations = 456;
 
 @implementation SGAboutTheExhibitionViewController
@@ -37,6 +38,10 @@ const int kNavigationReservations = 456;
             [self presentViewController:webViewController animated:YES completion:nil];
             [webViewController configureWebpageFor:webPageTypeTickets];
         }
+            break;
+        case kNavigationIntroMovie:
+            toControllerIDStr = (NSString*)kControllerIDIntroMovieStr;
+            [self.delegate transitionFromController:self toControllerID:toControllerIDStr fromButtonRect:sender.frame withAnimType:kAnimTypeZoomIn];
             break;
         default:
             break;

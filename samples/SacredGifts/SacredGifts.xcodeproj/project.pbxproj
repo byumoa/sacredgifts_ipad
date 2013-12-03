@@ -74,6 +74,7 @@
 		6117E62C184D3D6E00A50719 /* SG_Social_Module_Overlay_Hofmann@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6117E626184D3D6E00A50719 /* SG_Social_Module_Overlay_Hofmann@2x.png */; };
 		6117E62D184D3D6E00A50719 /* SG_Social_Module_Overlay_Schwartz.png in Resources */ = {isa = PBXBuildFile; fileRef = 6117E627184D3D6E00A50719 /* SG_Social_Module_Overlay_Schwartz.png */; };
 		6117E62E184D3D6E00A50719 /* SG_Social_Module_Overlay_Schwartz@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6117E628184D3D6E00A50719 /* SG_Social_Module_Overlay_Schwartz@2x.png */; };
+		6117E632184D694300A50719 /* SGIntroMovieViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6117E631184D694300A50719 /* SGIntroMovieViewController.m */; };
 		6118B58A18117B6400FB8337 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6118B58918117B6400FB8337 /* CoreMotion.framework */; };
 		61267B821819667B00A52CC5 /* splash_artists.png in Resources */ = {isa = PBXBuildFile; fileRef = 61267B7E1819667B00A52CC5 /* splash_artists.png */; };
 		61267B831819667B00A52CC5 /* splash_artists@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61267B7F1819667B00A52CC5 /* splash_artists@2x.png */; };
@@ -570,6 +571,8 @@
 		6117E627184D3D6E00A50719 /* SG_Social_Module_Overlay_Schwartz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_Social_Module_Overlay_Schwartz.png; sourceTree = "<group>"; };
 		6117E628184D3D6E00A50719 /* SG_Social_Module_Overlay_Schwartz@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Social_Module_Overlay_Schwartz@2x.png"; sourceTree = "<group>"; };
 		6117E62F184D555400A50719 /* Sacred Gifts Intro Film FOR IPAD_h264.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sacred Gifts Intro Film FOR IPAD_h264.mp4"; sourceTree = "<group>"; };
+		6117E630184D694300A50719 /* SGIntroMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGIntroMovieViewController.h; sourceTree = "<group>"; };
+		6117E631184D694300A50719 /* SGIntroMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGIntroMovieViewController.m; sourceTree = "<group>"; };
 		6118B58918117B6400FB8337 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 		61267B7E1819667B00A52CC5 /* splash_artists.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash_artists.png; sourceTree = "<group>"; };
 		61267B7F1819667B00A52CC5 /* splash_artists@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "splash_artists@2x.png"; sourceTree = "<group>"; };
@@ -1148,6 +1151,8 @@
 				61E5F06918455BA1003959C7 /* UWFacebookService.m */,
 				61E5F0B11845F284003959C7 /* SGFacebookViewController.h */,
 				61E5F0B21845F284003959C7 /* SGFacebookViewController.m */,
+				6117E630184D694300A50719 /* SGIntroMovieViewController.h */,
+				6117E631184D694300A50719 /* SGIntroMovieViewController.m */,
 			);
 			name = SacredGifts;
 			sourceTree = "<group>";
@@ -2372,6 +2377,7 @@
 				6186729E18100E7900DED0D4 /* ShaderUtils.cpp in Sources */,
 				61CD5348180C256700D28921 /* SGBlochViewController.m in Sources */,
 				61CD534A180C256700D28921 /* SGHofmanViewController.m in Sources */,
+				6117E632184D694300A50719 /* SGIntroMovieViewController.m in Sources */,
 				61E5F06A18455BA1003959C7 /* UWFacebookService.m in Sources */,
 				150D1CCB1385551A0007C72E /* ImageTargetsAppDelegate.mm in Sources */,
 				61D606841844BA510090C77A /* SGDonateViewController.m in Sources */,

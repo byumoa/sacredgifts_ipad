@@ -16,6 +16,7 @@ const NSString* kControllerIDFindAPaintingStr = @"SacredGifts FindAPainting";
 const NSString* kControllerIDMeetTheArtistsStr = @"SacredGifts MeetTheArtists";
 const NSString* kControllerIDAboutTheExhibitionStr = @"SacredGifts AboutTheExhibition";
 const NSString* kControllerIDStoryOfTheExhibitionStr = @"SacredGifts StoryOfTheExhibition";
+const NSString* kControllerIDIntroMovieStr = @"SacredGifts IntroMovie";
 const NSString* kControllerIDPaintingContainerStr = @"SacredGifts PaintingContainer";
 const NSString* kControllerIDPaintingStr = @"SacredGifts Painting";
 const NSString* kControllerIDBlochStr = @"bloch";

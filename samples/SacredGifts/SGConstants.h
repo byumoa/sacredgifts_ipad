@@ -59,6 +59,7 @@ extern const NSString* kControllerIDFindAPaintingStr;
 extern const NSString* kControllerIDMeetTheArtistsStr;
 extern const NSString* kControllerIDAboutTheExhibitionStr;
 extern const NSString* kControllerIDStoryOfTheExhibitionStr;
+extern const NSString* kControllerIDIntroMovieStr;
 extern const NSString* kControllerIDPaintingContainerStr;
 extern const NSString* kControllerIDPaintingStr;
 extern const NSString* kControllerIDBlochStr;

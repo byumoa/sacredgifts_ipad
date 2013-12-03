@@ -703,7 +703,7 @@
                                     <action selector="pressedBtn:" destination="idu-wO-YB6" eventType="touchUpInside" id="A7a-NA-3Jx"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zjD-Fl-7iI">
+                            <button opaque="NO" tag="864" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zjD-Fl-7iI">
                                 <rect key="frame" x="0.0" y="402" width="768" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="sg_home_filmbtn.png">
@@ -715,7 +715,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="456" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="HcG-w8-2FS">
-                                <rect key="frame" x="0.0" y="402" width="768" height="205"/>
+                                <rect key="frame" x="0.0" y="615" width="768" height="205"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="sg_home_reservationbtn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -733,6 +733,7 @@
                         <outlet property="background" destination="1Ue-Ca-a7e" id="sUB-LN-ZoD"/>
                         <outletCollection property="blurredViews" destination="Whn-1f-3jF" id="jzQ-NI-AXs"/>
                         <outletCollection property="blurredViews" destination="HcG-w8-2FS" id="h0L-tH-oj4"/>
+                        <outletCollection property="blurredViews" destination="zjD-Fl-7iI" id="joi-uo-nNs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="upi-qV-PHL" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1767,6 +1768,20 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gY8-s6-uzf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1291" y="1372"/>
+        </scene>
+        <!--Intro Movie View Controller-->
+        <scene sceneID="N9H-xD-tbF">
+            <objects>
+                <viewController restorationIdentifier="SacredGifts IntroMovie" storyboardIdentifier="SacredGifts IntroMovie" id="CHv-eh-pmv" customClass="SGIntroMovieViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4Jf-jS-Szu">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Urx-N6-ebt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2109" y="646"/>
         </scene>
     </scenes>
     <resources>
