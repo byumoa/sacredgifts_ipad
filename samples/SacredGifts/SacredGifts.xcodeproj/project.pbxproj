@@ -570,7 +570,6 @@
 		6117E626184D3D6E00A50719 /* SG_Social_Module_Overlay_Hofmann@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Social_Module_Overlay_Hofmann@2x.png"; sourceTree = "<group>"; };
 		6117E627184D3D6E00A50719 /* SG_Social_Module_Overlay_Schwartz.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SG_Social_Module_Overlay_Schwartz.png; sourceTree = "<group>"; };
 		6117E628184D3D6E00A50719 /* SG_Social_Module_Overlay_Schwartz@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_Social_Module_Overlay_Schwartz@2x.png"; sourceTree = "<group>"; };
-		6117E62F184D555400A50719 /* Sacred Gifts Intro Film FOR IPAD_h264.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sacred Gifts Intro Film FOR IPAD_h264.mp4"; sourceTree = "<group>"; };
 		6117E630184D694300A50719 /* SGIntroMovieViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGIntroMovieViewController.h; sourceTree = "<group>"; };
 		6117E631184D694300A50719 /* SGIntroMovieViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGIntroMovieViewController.m; sourceTree = "<group>"; };
 		6118B58918117B6400FB8337 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
@@ -1349,7 +1348,6 @@
 		61CD50A5180C242500D28921 /* GeneralResources */ = {
 			isa = PBXGroup;
 			children = (
-				6117E62F184D555400A50719 /* Sacred Gifts Intro Film FOR IPAD_h264.mp4 */,
 				61E5F0B8184623F1003959C7 /* BlueOverLay.png */,
 				61D6067D1844B8E10090C77A /* donate */,
 				61F73CBA1830FDF200D13F7C /* childrensmoduleprompt */,
