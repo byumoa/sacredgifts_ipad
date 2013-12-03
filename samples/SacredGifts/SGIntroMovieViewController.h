@@ -6,10 +6,10 @@
 //
 //
 
-#import <UIKit/UIKit.h>
+#import "SGContentViewController.h"
 #import <MediaPlayer/MediaPlayer.h>
 
-@interface SGIntroMovieViewController : UIViewController
+@interface SGIntroMovieViewController : SGContentViewController
 
 @property(nonatomic, strong) MPMoviePlayerController *moviePlayer;
 
