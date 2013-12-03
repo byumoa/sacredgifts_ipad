@@ -12,7 +12,7 @@
 
 @end
 
-@implementation SGIntoMovieViewController
+@implementation SGIntroMovieViewController
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
