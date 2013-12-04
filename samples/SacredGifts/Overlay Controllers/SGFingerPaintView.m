@@ -30,6 +30,8 @@ const CGRect kEllipseBox = {10, 10, 500, 500};
     return self;
 }
 
+
+//Use imagewithContentsOfFile or IMageWithData to force SD asset on iPad 3's
 -(CGImageRef)drawImageWithContext:(CGContextRef)context inRect:(CGRect)rect
 {
     CGContextClearRect(context, rect);
