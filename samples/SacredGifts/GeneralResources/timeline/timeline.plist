@@ -224,6 +224,10 @@
 					<string>The Denial of Peter</string>
 					<key>popup</key>
 					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>denial</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_denial.png</string>
 				</dict>
@@ -251,7 +255,11 @@
 					<key>text</key>
 					<string>The Mocking of Christ</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>	
+					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>mocking</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_mocking.png</string>
 				</dict>
@@ -265,7 +273,11 @@
 					<key>text</key>
 					<string>The Shepherds and the Angel</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>	
+					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>shepherds</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_shepherds.png</string>
 				</dict>
@@ -279,7 +291,11 @@
 					<key>text</key>
 					<string>Christ at Emmaus</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>	
+					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>emmaus</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_emmaus.png</string>
 				</dict>
@@ -293,7 +309,11 @@
 					<key>text</key>
 					<string>Christ on the Cross</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>	
+					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>cross</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_cross.png</string>
 				</dict>
@@ -307,7 +327,11 @@
 					<key>text</key>
 					<string>Healing of the Blind Man</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>	
+					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>healing</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_healing.png</string>
 				</dict>
@@ -321,7 +345,11 @@
 					<key>text</key>
 					<string>The Burial</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>	
+					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>burial</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_burial.png</string>
 				</dict>
@@ -335,7 +363,11 @@
 					<key>text</key>
 					<string>Cleansing of the Temple</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>	
+					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>cleansing</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_cleansing.png</string>
 				</dict>
@@ -349,7 +381,11 @@
 					<key>text</key>
 					<string>Christus Consolator</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>	
+					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>consolator</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_consolator.png</string>
 				</dict>
@@ -363,7 +399,11 @@
 					<key>text</key>
 					<string>The Resurrection</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>	
+					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>resurrection</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_resurrection.png</string>
 				</dict>
@@ -377,7 +417,11 @@
 					<key>text</key>
 					<string>Sermon on the Mount</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>	
+					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>sermon</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_sermon.png</string>
 				</dict>
@@ -425,7 +469,11 @@
 					<key>text</key>
 					<string>Christ and the Children</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>	
+					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>children</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_children.png</string>
 				</dict>
@@ -465,6 +513,10 @@
 					<string>Frans Schwartz dies</string>
 					<key>popup</key>
 					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_artistBtn.png</string>
+					<key>pageLink</key>
+					<string>schwartz</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -474,7 +526,7 @@
 					<key>width</key>
 					<integer>281</integer>
 					<key>text</key>
-					<string> Schwartz starts an “Art Modeling School”</string>
+					<string>Schwartz starts an “Art Modeling School”</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -484,7 +536,7 @@
 					<key>width</key>
 					<integer>378</integer>
 					<key>text</key>
-					<string> Schwartz leaves Denmark for the first time and visits Spain</string>
+					<string>Schwartz leaves Denmark for the first time and visits Spain</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -536,7 +588,11 @@
 					<key>text</key>
 					<string>Schwartz paints altarpiece</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>	
+					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>aalborg</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_aalborg.png</string>
 				</dict>
@@ -551,6 +607,10 @@
 					<string>Agony in the Garden</string>
 					<key>popup</key>
 					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>garden</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_garden.png</string>
 				</dict>
@@ -562,9 +622,13 @@
 					<key>width</key>
 					<integer>282</integer>
 					<key>text</key>
-					<string> Schwartz begins Royal Danish Academy</string>
+					<string>Schwartz begins Royal Danish Academy</string>
 					<key>popup</key>
 					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_artistBtn.png</string>
+					<key>pageLink</key>
+					<string>schwartz</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -577,6 +641,10 @@
 					<string> Schwartz paints his self-portrait, which is his only work represented in the Danish National Gallery</string>
 					<key>popup</key>
 					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>schwartz</string>
 				</dict>
 			</array>
 		</dict>
@@ -646,6 +714,10 @@
 					<string>Jesus in the Temple</string>
 					<key>popup</key>
 					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>temple</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_temple.png</string>
 				</dict>
@@ -660,6 +732,10 @@
 					<string>Hofmann elected a professor at Royal Academy</string>
 					<key>popup</key>
 					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_artistBtn.png</string>
+					<key>pageLink</key>
+					<string>hofmann</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -672,6 +748,10 @@
 					<string>The Capture of Christ</string>
 					<key>popup</key>
 					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>capture</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_capture.png</string>
 				</dict>
@@ -686,6 +766,10 @@
 					<string>Hofmann enters Academy of Art</string>
 					<key>popup</key>
 					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_artistBtn.png</string>
+					<key>pageLink</key>
+					<string>hofmann</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -758,6 +842,10 @@
 					<string>Jesus in the Temple</string>
 					<key>popup</key>
 					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>temple-ny</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_temple-ny.png</string>
 				</dict>
@@ -772,6 +860,10 @@
 					<string>Hofmann dies</string>
 					<key>popup</key>
 					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_artistBtn.png</string>
+					<key>pageLink</key>
+					<string>hofmann</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -794,6 +886,10 @@
 					<string>Christ in Gethsemane</string>
 					<key>popup</key>
 					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>gethsemane</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_gethsemane.png</string>
 				</dict>
@@ -808,6 +904,10 @@
 					<string>Portrait of Christ, the Savior</string>
 					<key>popup</key>
 					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>savior</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_savior.png</string>
 				</dict>
@@ -822,6 +922,10 @@
 					<string>Christ and the Rich Young Ruler</string>
 					<key>popup</key>
 					<string>popups/popups.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>ruler</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_ruler.png</string>
 				</dict>
