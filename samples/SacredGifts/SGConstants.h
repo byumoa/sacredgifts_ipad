@@ -31,6 +31,7 @@ typedef enum
 
 extern const NSString* kfacebookURLcapture;
 extern const NSString* kfacebookURLtemple;
+extern const NSString* kfacebookURLtempleGermany;
 extern const NSString* kfacebookURLruler;
 extern const NSString* kfacebookURLgethsemane;
 extern const NSString* kfacebookURLsavior;

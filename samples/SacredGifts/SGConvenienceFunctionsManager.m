@@ -69,8 +69,9 @@
 
 + (NSString *)getFBURLStrForModule:(NSString*)paintingStr
 {
+    NSLog(@"paintingStr: %@", paintingStr);
     if( [paintingStr isEqualToString:(NSString*)kPaintingNames[0]] ) return (NSString*)kfacebookURLcapture;
-    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[1]] ) return (NSString*)kfacebookURLtemple;
+    else if( [paintingStr isEqualToString:@"temple-ny"] ) return (NSString*)kfacebookURLtemple;
     else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[2]] ) return (NSString*)kfacebookURLruler;
     else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[3]] ) return (NSString*)kfacebookURLgethsemane;
     else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[4]] ) return (NSString*)kfacebookURLsavior;
@@ -87,6 +88,7 @@
     else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[15]] ) return (NSString*)kfacebookURLdenial;
     else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[16]] ) return (NSString*)kfacebookURLcross;
     else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[17]] ) return (NSString*)kfacebookURLburial;
+    else if( [paintingStr isEqualToString:@"temple"]) return (NSString*)kfacebookURLtempleGermany;
     
     return (NSString*)kfacebookURLresurrection;
 }

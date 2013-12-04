@@ -125,6 +125,7 @@
 		61735B61183249A30000D837 /* shepherds.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B4C183249A30000D837 /* shepherds.png */; };
 		61735B62183249A30000D837 /* temple-ny.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B4D183249A30000D837 /* temple-ny.png */; };
 		61735B63183249A30000D837 /* temple.png in Resources */ = {isa = PBXBuildFile; fileRef = 61735B4E183249A30000D837 /* temple.png */; };
+		618628E2184E882C00060319 /* SGTwitterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618628E1184E882C00060319 /* SGTwitterViewController.m */; };
 		618645A7181AD11E00195384 /* SGHighlightsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 618645A6181AD11E00195384 /* SGHighlightsViewController.m */; };
 		618645AC181AEEB700195384 /* childrens_btn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 618645A8181AEEB700195384 /* childrens_btn-on.png */; };
 		618645AD181AEEB700195384 /* childrens_btn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 618645A9181AEEB700195384 /* childrens_btn-on@2x.png */; };
@@ -461,7 +462,6 @@
 		61D606801844B8E10090C77A /* sg_home_museumDonate.png in Resources */ = {isa = PBXBuildFile; fileRef = 61D6067E1844B8E10090C77A /* sg_home_museumDonate.png */; };
 		61D606811844B8E10090C77A /* sg_home_museumDonate@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61D6067F1844B8E10090C77A /* sg_home_museumDonate@2x.png */; };
 		61D606841844BA510090C77A /* SGDonateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61D606831844BA510090C77A /* SGDonateViewController.m */; };
-		61D606861844C1080090C77A /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61D606851844C1080090C77A /* FacebookSDK.framework */; };
 		61E4B8281841A0D00023DEAE /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E4B8271841A0D00023DEAE /* CoreData.framework */; };
 		61E4B82C1841A11E0023DEAE /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E4B82B1841A11E0023DEAE /* libGoogleAnalyticsServices.a */; };
 		61E4B82E1841A14A0023DEAE /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 61E4B82D1841A14A0023DEAE /* libz.dylib */; };
@@ -471,7 +471,6 @@
 		61E5430C1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E543081832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png */; };
 		61E5430D1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E543091832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png */; };
 		61E5430E1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E5430A1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch@2x.png */; };
-		61E5F06A18455BA1003959C7 /* UWFacebookService.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E5F06918455BA1003959C7 /* UWFacebookService.m */; };
 		61E5F0B31845F284003959C7 /* SGFacebookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E5F0B21845F284003959C7 /* SGFacebookViewController.m */; };
 		61E5F0B6184620AD003959C7 /* sg_general_Share_signout.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E5F0B4184620AD003959C7 /* sg_general_Share_signout.png */; };
 		61E5F0B7184620AD003959C7 /* sg_general_Share_signout@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61E5F0B5184620AD003959C7 /* sg_general_Share_signout@2x.png */; };
@@ -625,6 +624,8 @@
 		61735B4C183249A30000D837 /* shepherds.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = shepherds.png; sourceTree = "<group>"; };
 		61735B4D183249A30000D837 /* temple-ny.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "temple-ny.png"; sourceTree = "<group>"; };
 		61735B4E183249A30000D837 /* temple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = temple.png; sourceTree = "<group>"; };
+		618628E0184E882C00060319 /* SGTwitterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTwitterViewController.h; sourceTree = "<group>"; };
+		618628E1184E882C00060319 /* SGTwitterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTwitterViewController.m; sourceTree = "<group>"; };
 		618645A5181AD11E00195384 /* SGHighlightsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGHighlightsViewController.h; sourceTree = "<group>"; };
 		618645A6181AD11E00195384 /* SGHighlightsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGHighlightsViewController.m; sourceTree = "<group>"; };
 		618645A8181AEEB700195384 /* childrens_btn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "childrens_btn-on.png"; sourceTree = "<group>"; };
@@ -1010,7 +1011,6 @@
 		61D6067F1844B8E10090C77A /* sg_home_museumDonate@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_museumDonate@2x.png"; sourceTree = "<group>"; };
 		61D606821844BA510090C77A /* SGDonateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGDonateViewController.h; sourceTree = "<group>"; };
 		61D606831844BA510090C77A /* SGDonateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGDonateViewController.m; sourceTree = "<group>"; };
-		61D606851844C1080090C77A /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
 		61E4B81F1841A06F0023DEAE /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
 		61E4B8201841A06F0023DEAE /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
 		61E4B8211841A06F0023DEAE /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
@@ -1026,8 +1026,6 @@
 		61E543081832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch-on@2x.png"; sourceTree = "<group>"; };
 		61E543091832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch.png"; sourceTree = "<group>"; };
 		61E5430A1832B1A3001ECC04 /* SG_General_painting-castleBtn-Bloch@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-Bloch@2x.png"; sourceTree = "<group>"; };
-		61E5F06818455BA1003959C7 /* UWFacebookService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UWFacebookService.h; sourceTree = "<group>"; };
-		61E5F06918455BA1003959C7 /* UWFacebookService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UWFacebookService.m; sourceTree = "<group>"; };
 		61E5F0B11845F284003959C7 /* SGFacebookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGFacebookViewController.h; sourceTree = "<group>"; };
 		61E5F0B21845F284003959C7 /* SGFacebookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGFacebookViewController.m; sourceTree = "<group>"; };
 		61E5F0B4184620AD003959C7 /* sg_general_Share_signout.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sg_general_Share_signout.png; sourceTree = "<group>"; };
@@ -1055,7 +1053,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				61E4B82E1841A14A0023DEAE /* libz.dylib in Frameworks */,
-				61D606861844C1080090C77A /* FacebookSDK.framework in Frameworks */,
 				61E4B8281841A0D00023DEAE /* CoreData.framework in Frameworks */,
 				6118B58A18117B6400FB8337 /* CoreMotion.framework in Frameworks */,
 				614C01041824247D00333698 /* MessageUI.framework in Frameworks */,
@@ -1146,10 +1143,10 @@
 				618713B7182F0B6C005BC973 /* SGConvenienceFunctionsManager.m */,
 				61D606821844BA510090C77A /* SGDonateViewController.h */,
 				61D606831844BA510090C77A /* SGDonateViewController.m */,
-				61E5F06818455BA1003959C7 /* UWFacebookService.h */,
-				61E5F06918455BA1003959C7 /* UWFacebookService.m */,
 				61E5F0B11845F284003959C7 /* SGFacebookViewController.h */,
 				61E5F0B21845F284003959C7 /* SGFacebookViewController.m */,
+				618628E0184E882C00060319 /* SGTwitterViewController.h */,
+				618628E1184E882C00060319 /* SGTwitterViewController.m */,
 				6117E630184D694300A50719 /* SGIntroMovieViewController.h */,
 				6117E631184D694300A50719 /* SGIntroMovieViewController.m */,
 			);
@@ -1199,7 +1196,6 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				61D606851844C1080090C77A /* FacebookSDK.framework */,
 				61E4B82D1841A14A0023DEAE /* libz.dylib */,
 				61E4B82B1841A11E0023DEAE /* libGoogleAnalyticsServices.a */,
 				61E4B8271841A0D00023DEAE /* CoreData.framework */,
@@ -2360,6 +2356,7 @@
 				61CD5340180C256700D28921 /* SGViewController.m in Sources */,
 				61CD5309180C24FD00D28921 /* SGOverlayViewController.m in Sources */,
 				61CD530B180C24FD00D28921 /* SGPersepectivesOverlayViewController.m in Sources */,
+				618628E2184E882C00060319 /* SGTwitterViewController.m in Sources */,
 				61CD5305180C24FD00D28921 /* SGFingerPaintView.m in Sources */,
 				61CD5307180C24FD00D28921 /* SGMusicOverlayViewController.m in Sources */,
 				610554F6182A782C0030CCC3 /* SGButtonOnPaintingViewController.m in Sources */,
@@ -2376,7 +2373,6 @@
 				61CD5348180C256700D28921 /* SGBlochViewController.m in Sources */,
 				61CD534A180C256700D28921 /* SGHofmanViewController.m in Sources */,
 				6117E632184D694300A50719 /* SGIntroMovieViewController.m in Sources */,
-				61E5F06A18455BA1003959C7 /* UWFacebookService.m in Sources */,
 				150D1CCB1385551A0007C72E /* ImageTargetsAppDelegate.mm in Sources */,
 				61D606841844BA510090C77A /* SGDonateViewController.m in Sources */,
 				61CD5342180C256700D28921 /* SGHomeViewController.m in Sources */,

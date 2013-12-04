@@ -10,10 +10,9 @@
 #import <Social/Social.h>
 #import "SGWebViewController.h"
 #import "SGFacebookViewController.h"
+#import "SGTwitterViewController.h"
 #import "GAI.h"
 #import "GAIDictionaryBuilder.h"
-#import <FacebookSDK/FacebookSDK.h>
-#import "UWFacebookService.h"
 #import "SGConvenienceFunctionsManager.h"
 
 NSString* const kEmailAutofill = @"Enjoying the painting by %@ while using the Sacred Gifts app from the BYU Museum of Art. %@";
@@ -82,6 +81,7 @@ int const kOverlayHeight = 236;
             [self presentViewController:socialSheet animated:YES completion:^{}];
              */
             mediaType = @"twitter";
+            [self doInMuseumTWPostWithImage:thumbnail];
         }
             break;
         case SocialMediaTypeEmail:
@@ -125,12 +125,6 @@ int const kOverlayHeight = 236;
 
 -(void)doInMuseumFBPostWithImage:(UIImage *)thumbnail
 {
-    /*
-    SGWebViewController* webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"web"];
-    [self presentViewController:webViewController animated:YES completion:nil];
-    NSURL *url = [NSURL URLWithString:@"https://m.facebook.com/photo.php?fbid=577324159007371&set=a.577324135674040.1073741825.126723597400765&type=3&theater"];
-    [webViewController configureWebpageForURL:url];
-     */
     SGFacebookViewController* fbViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"facebook"];
     [self presentViewController:fbViewController animated:YES completion:nil];
     NSString* urlStr = [SGConvenienceFunctionsManager getFBURLStrForModule:self.paintingName];
@@ -139,12 +133,11 @@ int const kOverlayHeight = 236;
 
 - (void)doInMuseumTWPostWithImage: (UIImage*)thumbnail
 {
-    SGWebViewController* webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"web"];
-    [self presentViewController:webViewController animated:YES completion:nil];
+    SGTwitterViewController* twViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"twitter"];
+    [self presentViewController:twViewController animated:YES completion:nil];
     
     NSString* urlStr = [SGConvenienceFunctionsManager getFBURLStrForModule:self.paintingName];
-    NSURL *url = [NSURL URLWithString:urlStr];
-    [webViewController configureWebpageForURL:url];
+    [twViewController configureWebpageForURLStr:urlStr];
 }
 
 -(NSString *)calcArtistForPaintingStr:(NSString *)paintingName
