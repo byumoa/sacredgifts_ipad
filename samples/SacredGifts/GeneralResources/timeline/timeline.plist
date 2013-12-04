@@ -223,7 +223,7 @@
 					<key>text</key>
 					<string>The Denial of Peter</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_denial.png</string>
 				</dict>
@@ -237,7 +237,7 @@
 					<key>text</key>
 					<string>Christ Healing the Sick at Bethesda</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_bethesda.png</string>
 				</dict>
@@ -251,7 +251,7 @@
 					<key>text</key>
 					<string>The Mocking of Christ</string>
 					<key>popup</key>
-					<string></string>	
+					<string>popups/popups.png</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_mocking.png</string>
 				</dict>
@@ -265,7 +265,7 @@
 					<key>text</key>
 					<string>The Shepherds and the Angel</string>
 					<key>popup</key>
-					<string></string>	
+					<string>popups/popups.png</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_shepherds.png</string>
 				</dict>
@@ -279,7 +279,7 @@
 					<key>text</key>
 					<string>Christ at Emmaus</string>
 					<key>popup</key>
-					<string></string>	
+					<string>popups/popups.png</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_emmaus.png</string>
 				</dict>
@@ -293,7 +293,7 @@
 					<key>text</key>
 					<string>Christ on the Cross</string>
 					<key>popup</key>
-					<string></string>	
+					<string>popups/popups.png</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_cross.png</string>
 				</dict>
@@ -307,7 +307,7 @@
 					<key>text</key>
 					<string>Healing of the Blind Man</string>
 					<key>popup</key>
-					<string></string>	
+					<string>popups/popups.png</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_healing.png</string>
 				</dict>
@@ -321,7 +321,7 @@
 					<key>text</key>
 					<string>The Burial</string>
 					<key>popup</key>
-					<string></string>	
+					<string>popups/popups.png</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_burial.png</string>
 				</dict>
@@ -335,7 +335,7 @@
 					<key>text</key>
 					<string>Cleansing of the Temple</string>
 					<key>popup</key>
-					<string></string>	
+					<string>popups/popups.png</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_cleansing.png</string>
 				</dict>
@@ -349,7 +349,7 @@
 					<key>text</key>
 					<string>Christus Consolator</string>
 					<key>popup</key>
-					<string></string>	
+					<string>popups/popups.png</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_consolator.png</string>
 				</dict>
@@ -363,7 +363,7 @@
 					<key>text</key>
 					<string>The Resurrection</string>
 					<key>popup</key>
-					<string></string>	
+					<string>popups/popups.png</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_resurrection.png</string>
 				</dict>
@@ -377,7 +377,7 @@
 					<key>text</key>
 					<string>Sermon on the Mount</string>
 					<key>popup</key>
-					<string></string>	
+					<string>popups/popups.png</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_sermon.png</string>
 				</dict>
@@ -401,7 +401,7 @@
 					<key>text</key>
 					<string>Bloch completes first biblical painting, The Daughter of Jairus</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -413,7 +413,7 @@
 					<key>text</key>
 					<string>Bloch admitted as member to Royal Danish Academy</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -425,7 +425,7 @@
 					<key>text</key>
 					<string>Christ and the Children</string>
 					<key>popup</key>
-					<string></string>	
+					<string>popups/popups.png</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_children.png</string>
 				</dict>
@@ -464,7 +464,7 @@
 					<key>text</key>
 					<string>Frans Schwartz dies</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -536,7 +536,7 @@
 					<key>text</key>
 					<string>Schwartz paints altarpiece</string>
 					<key>popup</key>
-					<string></string>	
+					<string>popups/popups.png</string>	
 					<key>thumbnail</key>
 					<string>thumbs/timeline_aalborg.png</string>
 				</dict>
@@ -550,7 +550,7 @@
 					<key>text</key>
 					<string>Agony in the Garden</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_garden.png</string>
 				</dict>
@@ -564,7 +564,7 @@
 					<key>text</key>
 					<string> Schwartz begins Royal Danish Academy</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -576,7 +576,7 @@
 					<key>text</key>
 					<string> Schwartz paints his self-portrait, which is his only work represented in the Danish National Gallery</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 				</dict>
 			</array>
 		</dict>
@@ -633,7 +633,7 @@
 					<key>text</key>
 					<string>Hofmann’s Christ and the Adulteress earns membership in the Royal Danish Academy of Dresden</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -645,7 +645,7 @@
 					<key>text</key>
 					<string>Jesus in the Temple</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_temple.png</string>
 				</dict>
@@ -659,7 +659,7 @@
 					<key>text</key>
 					<string>Hofmann elected a professor at Royal Academy</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -671,7 +671,7 @@
 					<key>text</key>
 					<string>The Capture of Christ</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_capture.png</string>
 				</dict>
@@ -685,7 +685,7 @@
 					<key>text</key>
 					<string>Hofmann enters Academy of Art</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -757,7 +757,7 @@
 					<key>text</key>
 					<string>Jesus in the Temple</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_temple-ny.png</string>
 				</dict>
@@ -771,7 +771,7 @@
 					<key>text</key>
 					<string>Hofmann dies</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -793,7 +793,7 @@
 					<key>text</key>
 					<string>Christ in Gethsemane</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_gethsemane.png</string>
 				</dict>
@@ -807,7 +807,7 @@
 					<key>text</key>
 					<string>Portrait of Christ, the Savior</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_savior.png</string>
 				</dict>
@@ -821,7 +821,7 @@
 					<key>text</key>
 					<string>Christ and the Rich Young Ruler</string>
 					<key>popup</key>
-					<string></string>
+					<string>popups/popups.png</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_ruler.png</string>
 				</dict>
