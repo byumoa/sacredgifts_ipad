@@ -69,7 +69,6 @@
 
 + (NSString *)getFBURLStrForModule:(NSString*)paintingStr
 {
-    NSLog(@"paintingStr: %@", paintingStr);
     if( [paintingStr isEqualToString:(NSString*)kPaintingNames[0]] ) return (NSString*)kfacebookURLcapture;
     else if( [paintingStr isEqualToString:@"temple-ny"] ) return (NSString*)kfacebookURLtemple;
     else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[2]] ) return (NSString*)kfacebookURLruler;

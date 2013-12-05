@@ -48,6 +48,7 @@
 -(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest*)request navigationType:(UIWebViewNavigationType)navigationType
 {
     NSString* urlStr = [request URL].description;
+    NSLog(@"urlStr: %@", urlStr.description);
     
     if( !_hasLoaded ||
        [urlStr rangeOfString:@"m.facebook.com/story.php"].location != NSNotFound ||
@@ -59,7 +60,7 @@
         return YES;
     }
     
-    if( [urlStr rangeOfString:@"m.facebook.com/profile.php"].location != NSNotFound )
+    if( [urlStr rangeOfString:@"m.facebook.com/BYUmoa"].location != NSNotFound )
     {
         NSURL* url = [NSURL URLWithString:_currentFacebookPage];
         [self.webview loadRequest:[NSURLRequest requestWithURL:url]];

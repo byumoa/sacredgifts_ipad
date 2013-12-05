@@ -44,7 +44,7 @@ Qualcomm Confidential and Proprietary
     text1.center = CGPointMake(768/2-3, self.view.center.y - 121);
     [self.animatedOverlay addSubview:text1];
     text1.alpha = 0;
-    [UIView animateWithDuration:0.5 delay:2.0 options:0 animations:^{
+    [UIView animateWithDuration:0.5 delay:1.0 options:0 animations:^{
         text1.alpha = 1;
     } completion:nil];
     
@@ -52,7 +52,7 @@ Qualcomm Confidential and Proprietary
     text2.center = CGPointMake(768/2-3, self.view.center.y - 75);
     [self.animatedOverlay addSubview:text2];
     text2.alpha = 0;
-    [UIView animateWithDuration:0.5 delay:3.0 options:0 animations:^{
+    [UIView animateWithDuration:0.5 delay:2.0 options:0 animations:^{
         text2.alpha = 1;
     } completion:nil];
     
@@ -63,7 +63,7 @@ Qualcomm Confidential and Proprietary
     [UIView animateWithDuration:0.5 delay:0 options:0 animations:^{
         initializeLabel.alpha = 1;
     } completion:^(BOOL finished) {
-        [UIView animateWithDuration:0.5 delay:3.5 options:0 animations:^{
+        [UIView animateWithDuration:0.5 delay:2.5 options:0 animations:^{
             initializeLabel.alpha = 0;
         } completion:nil];
     }];

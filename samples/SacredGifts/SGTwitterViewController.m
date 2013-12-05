@@ -21,9 +21,10 @@
 
 -(void)configureWebpageForURLStr:(NSString *)urlStr
 {
+    NSLog(@"urlStr: %@", urlStr);
     _currentTwitterPage = urlStr;
-    NSURL *url = [NSURL URLWithString:urlStr];
-    
+    NSURL *url = [NSURL URLWithString:[urlStr stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
+    NSLog(@"url.description: %@", url.description);
     [self openSocialPage:url];
 }
 
@@ -50,7 +51,7 @@
         _hasLoaded = YES;
         return YES;
     }
-    
+    /*
     if( [urlStr rangeOfString:@"m.facebook.com/a/sharer.php"].location != NSNotFound )
     {
         [self pressedClose:nil];
@@ -58,7 +59,7 @@
         [alert show];
         return NO;
     }
-    
+    */
     return YES;
 }
 
