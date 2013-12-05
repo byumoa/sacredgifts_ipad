@@ -1624,6 +1624,13 @@
                                     <action selector="pressedPlayPause:" destination="dhc-Li-d9a" eventType="touchUpInside" id="jKM-mD-aBH"/>
                                 </connections>
                             </button>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="SG_General_Media_Playhead.png" id="M7S-e7-iq8" customClass="SGMediaPlayhead">
+                                <rect key="frame" x="238" y="206" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="dhc-Li-d9a" id="8lw-UE-rDG"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
@@ -1635,6 +1642,7 @@
                         <outlet property="playOverlay" destination="jmm-CE-Jad" id="Gox-47-NiH"/>
                         <outlet property="playPauseButton" destination="eYk-zX-kjK" id="XWh-m1-JyR"/>
                         <outlet property="playUnderlay" destination="M97-QK-A5V" id="GLa-lz-akl"/>
+                        <outlet property="playhead" destination="M7S-e7-iq8" id="r83-gm-aW1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Syu-gM-nxb" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1859,6 +1867,7 @@
         <image name="SG_General_HomeBtn.png" width="200" height="56"/>
         <image name="SG_General_Media_Playbar.png" width="387" height="9"/>
         <image name="SG_General_Media_Playbar_Overlay.png" width="387" height="9"/>
+        <image name="SG_General_Media_Playhead.png" width="40" height="40"/>
         <image name="SG_General_ModuleButtonBar.png" width="768" height="70"/>
         <image name="SG_General_Module_CloseBtn-on.png" width="41" height="41"/>
         <image name="SG_General_Module_CloseBtn.png" width="41" height="41"/>

@@ -8,10 +8,13 @@
 
 #import "SGAudioViewController.h"
 #import "SGNarrationManager.h"
+#import "SGMediaPlayhead.h"
 
-@interface SGNarrationOverlayViewController : SGAudioViewController
+@interface SGNarrationOverlayViewController : SGAudioViewController <SGMediaPlayheadDelegate>
 {
     SGNarrationManager* _narrationManager;
 }
+
+@property(nonatomic, weak) IBOutlet SGMediaPlayhead* playhead;
 
 @end

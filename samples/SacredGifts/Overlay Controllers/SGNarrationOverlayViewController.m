@@ -37,17 +37,28 @@ const CGRect kNarrationFrame = {0, 713, 768, 200};
     [self.playOverlay removeFromSuperview];
     [self.playUnderlay addSubview:self.playOverlay];
     
+    self.playhead.startX = self.playUnderlay.frame.origin.x;
+    self.playhead.endX = self.playUnderlay.frame.origin.x + self.playUnderlay.frame.size.width;
+    
 }
 
 -(void)updateProgressBar:(NSTimer*)timer
 {
     CGRect frame = self.playOverlay.frame;
     frame.origin = CGPointMake(0.0, 0.0);
+    
+    CGPoint center = CGPointZero;
     if( _narrationManager.player.duration > 0.0 )
-        //frame.size.width = _narrationManager.player.currentTime / _narrationManager.player.duration * 635.0;
+    {
         frame.size.width = _narrationManager.player.currentTime / _narrationManager.player.duration * self.playUnderlay.frame.size.width;
+    }
     
     self.playOverlay.frame = frame;
+    center = self.playhead.center;
+    center.x = self.playUnderlay.frame.origin.x + frame.size.width;
+    [UIView animateKeyframesWithDuration:0.25 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+        self.playhead.center = center;
+    } completion:nil];
 }
 
 -(void)addBackgroundImgWithPath:(NSString *)bgImgPath
@@ -86,6 +97,26 @@ const CGRect kNarrationFrame = {0, 713, 768, 200};
 {
     self.rootFolderPath = rootFolderPath;
     self.screenName = [NSString stringWithFormat:@"%@: %@", self.paintingName, [SGConvenienceFunctionsManager getStringForModule:self.moduleType]];
+}
+
+#pragma mark delegate methods
+-(void)playhead:(SGMediaPlayhead *)playhead seekingStartedAtPoint:(CGPoint)pt
+{
+    [_narrationManager.player pause];
+}
+
+-(void)playhead:(SGMediaPlayhead *)playhead seekingMovedAtPoint:(CGPoint)pt
+{
+    float percentComplete = (playhead.center.x - self.playUnderlay.frame.origin.x)/self.playUnderlay.frame.size.width;
+    _narrationManager.player.currentTime = _narrationManager.player.duration * percentComplete;
+    CGRect frame = self.playOverlay.frame;
+    frame.size.width = self.playUnderlay.frame.size.width * percentComplete;
+    self.playOverlay.frame = frame;
+}
+
+-(void)playhead:(SGMediaPlayhead *)playhead seekingEndedAtPoint:(CGPoint)pt
+{
+    [_narrationManager.player play];
 }
 
 @end
