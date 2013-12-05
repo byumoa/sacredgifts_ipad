@@ -167,11 +167,37 @@
 					<key>x</key>
 					<integer>1622</integer>
 					<key>y</key>
-					<integer>430</integer>
+					<integer>350</integer>
 					<key>width</key>
 					<integer>340</integer>
 					<key>text</key>
 					<string>Bloch accepted to Royal Danish Academy of Fine Arts</string>
+				</dict>
+				<dict>
+					<key>x</key>
+					<integer>1622</integer>
+					<key>y</key>
+					<integer>390</integer>
+					<key>width</key>
+					<integer>496</integer>
+					<key>text</key>
+					<string>Bloch commissioned to paint for the King’s Oratory at Frederiksborg Castle</string>
+					<key>popup</key>
+					<string>popups/popup15.png</string>
+					<key>buttonImage</key>
+					<string>buttons/timeline_assets_paintingBtn.png</string>
+					<key>pageLink</key>
+					<string>castle</string>
+				</dict>
+				<dict>
+					<key>x</key>
+					<integer>1622</integer>
+					<key>y</key>
+					<integer>430</integer>
+					<key>width</key>
+					<integer>398</integer>
+					<key>text</key>
+					<string>Bloch travels to Florence, Italy to study for Oratory commission</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -223,7 +249,7 @@
 					<key>text</key>
 					<string>The Denial of Peter</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup25.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -241,7 +267,7 @@
 					<key>text</key>
 					<string>Christ Healing the Sick at Bethesda</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup28.png</string>
 					<key>thumbnail</key>
 					<string>thumbs/timeline_bethesda.png</string>
 				</dict>
@@ -255,7 +281,7 @@
 					<key>text</key>
 					<string>The Mocking of Christ</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup27.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -273,7 +299,7 @@
 					<key>text</key>
 					<string>The Shepherds and the Angel</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup24.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -291,7 +317,7 @@
 					<key>text</key>
 					<string>Christ at Emmaus</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup23.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -309,7 +335,7 @@
 					<key>text</key>
 					<string>Christ on the Cross</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup16.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -327,7 +353,7 @@
 					<key>text</key>
 					<string>Healing of the Blind Man</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup17.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -345,7 +371,7 @@
 					<key>text</key>
 					<string>The Burial</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup19.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -363,7 +389,7 @@
 					<key>text</key>
 					<string>Cleansing of the Temple</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup20.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -381,7 +407,7 @@
 					<key>text</key>
 					<string>Christus Consolator</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup21.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -399,7 +425,7 @@
 					<key>text</key>
 					<string>The Resurrection</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup22.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -417,7 +443,7 @@
 					<key>text</key>
 					<string>Sermon on the Mount</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup18.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -445,7 +471,7 @@
 					<key>text</key>
 					<string>Bloch completes first biblical painting, The Daughter of Jairus</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup14.png</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -456,8 +482,6 @@
 					<integer>359</integer>
 					<key>text</key>
 					<string>Bloch admitted as member to Royal Danish Academy</string>
-					<key>popup</key>
-					<string>popups/popups.png</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -469,7 +493,7 @@
 					<key>text</key>
 					<string>Christ and the Children</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup26.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -496,7 +520,7 @@
 					<key>x</key>
 					<integer>1700</integer>
 					<key>y</key>
-					<integer>390</integer>
+					<integer>310</integer>
 					<key>width</key>
 					<integer>244</integer>
 					<key>text</key>
@@ -512,7 +536,7 @@
 					<key>text</key>
 					<string>Frans Schwartz dies</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup29.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_artistBtn.png</string>
 					<key>pageLink</key>
@@ -588,7 +612,7 @@
 					<key>text</key>
 					<string>Schwartz paints altarpiece</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup12.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -606,7 +630,7 @@
 					<key>text</key>
 					<string>Agony in the Garden</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup11.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -624,7 +648,7 @@
 					<key>text</key>
 					<string>Schwartz begins Royal Danish Academy</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup9.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_artistBtn.png</string>
 					<key>pageLink</key>
@@ -640,7 +664,7 @@
 					<key>text</key>
 					<string> Schwartz paints his self-portrait, which is his only work represented in the Danish National Gallery</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup10.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -700,8 +724,6 @@
 					<integer>616</integer>
 					<key>text</key>
 					<string>Hofmann’s Christ and the Adulteress earns membership in the Royal Danish Academy of Dresden</string>
-					<key>popup</key>
-					<string>popups/popups.png</string>
 				</dict>
 				<dict>
 					<key>x</key>
@@ -713,7 +735,7 @@
 					<key>text</key>
 					<string>Jesus in the Temple</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup4.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -731,7 +753,7 @@
 					<key>text</key>
 					<string>Hofmann elected a professor at Royal Academy</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup2.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_artistBtn.png</string>
 					<key>pageLink</key>
@@ -747,7 +769,7 @@
 					<key>text</key>
 					<string>The Capture of Christ</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup3.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -765,7 +787,7 @@
 					<key>text</key>
 					<string>Hofmann enters Academy of Art</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup1.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_artistBtn.png</string>
 					<key>pageLink</key>
@@ -841,7 +863,7 @@
 					<key>text</key>
 					<string>Jesus in the Temple</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup5.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -859,7 +881,7 @@
 					<key>text</key>
 					<string>Hofmann dies</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup30.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_artistBtn.png</string>
 					<key>pageLink</key>
@@ -885,7 +907,7 @@
 					<key>text</key>
 					<string>Christ in Gethsemane</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup7.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -903,7 +925,7 @@
 					<key>text</key>
 					<string>Portrait of Christ, the Savior</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup8.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
@@ -921,7 +943,7 @@
 					<key>text</key>
 					<string>Christ and the Rich Young Ruler</string>
 					<key>popup</key>
-					<string>popups/popups.png</string>
+					<string>popups/popup6.png</string>
 					<key>buttonImage</key>
 					<string>buttons/timeline_assets_paintingBtn.png</string>
 					<key>pageLink</key>
