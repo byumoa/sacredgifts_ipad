@@ -71,6 +71,11 @@ NSString* const kSchwartzSocialBGStr = @"SG_Social_Module_Overlay_Schwartz";
     }
     else
         self.templeButtonsView.hidden = YES;
+    
+    if([paintingStr isEqualToString:@"castle"])
+        self.shareBtn.hidden = YES;
+    else
+        self.shareBtn.hidden = NO;
 }
 
 - (IBAction)pressedTempleToggle:(id)sender

@@ -820,6 +820,7 @@
                     <connections>
                         <outlet property="footerView" destination="qR1-fw-PT0" id="qe0-Bk-vWI"/>
                         <outlet property="paintingImageView" destination="VdB-kg-beo" id="iKZ-SE-Oxe"/>
+                        <outlet property="shareBtn" destination="p4a-6Y-5K9" id="lbe-iP-QJZ"/>
                         <outlet property="templeBtn1880" destination="7eN-k3-BOD" id="Pqx-Xu-4Gj"/>
                         <outlet property="templeBtnLater" destination="8Dl-fj-9gZ" id="srv-qE-HVJ"/>
                         <outlet property="templeButtonsView" destination="bc8-CD-nQS" id="ULP-zU-0Cr"/>
@@ -1265,7 +1266,7 @@
             <objects>
                 <viewController restorationIdentifier="bloch" storyboardIdentifier="bloch" id="kwW-sc-41B" customClass="SGBlochViewController" sceneMemberID="viewController">
                     <view key="view" autoresizesSubviews="NO" tag="2" contentMode="scaleToFill" id="YPJ-Jy-GnP">
-                        <rect key="frame" x="0.0" y="0.0" width="768" height="2024"/>
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sg_home_bg-home_blur.png" id="UIH-Jo-nG4">
@@ -1273,7 +1274,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView autoresizesSubviews="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" id="ycS-7P-AwM">
-                                <rect key="frame" x="0.0" y="62" width="768" height="1962"/>
+                                <rect key="frame" x="0.0" y="62" width="768" height="962"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="artists_pages_bloch_overlay.png" id="nYs-UR-Zbq">
@@ -1451,7 +1452,6 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="background" destination="UIH-Jo-nG4" id="K2e-gQ-axr"/>
                         <outlet property="scrollView" destination="ycS-7P-AwM" id="vJ3-of-eUq"/>
@@ -1459,7 +1459,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5i-t3-lov" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="242" y="-18"/>
+            <point key="canvasLocation" x="458" y="152"/>
         </scene>
         <!--Parent View Controller-->
         <scene sceneID="9GC-qj-ULx">
