@@ -20,7 +20,6 @@ NSString* const kTwitterAutofill = @"Viewing this painting while using the @BYUm
 NSString* const kFacebookAutofill = @"Viewing this painting by %@ and feeling grateful while using the #sacredgifts app from the BYU Museum of Art.";
 
 NSString* const kAppStoreURL = @"https://itunes.apple.com/us/app/sacred-gifts-brigham-young/id723165787?ls=1&mt=8";
-
 NSString* const kTwitterPrefillTweet = @"https://twitter.com/intent/tweet?text=Viewing this %@ painting & feeling grateful @BYUMOA’s #sacredgifts %@";
 
 int const kOverlayHeight = 236;

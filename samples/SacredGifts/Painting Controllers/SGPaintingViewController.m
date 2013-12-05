@@ -316,6 +316,7 @@ static BOOL chromeHidden = NO;
         }
             break;
         case kModuleTypeSocial:{
+            //Do we have the right painting name string for the two paintings?
             ((SGSocialViewController*)self.overlayController).paintingName = _paintingNameStr;
             NSString* socialOverlayBGStr = kBlochSocialBGStr;
             
