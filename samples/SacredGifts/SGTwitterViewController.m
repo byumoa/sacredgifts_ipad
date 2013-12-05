@@ -48,6 +48,10 @@
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    UIImageView* blueOverlay = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"blackTopBar.png"]];
+    [self.webview addSubview:blueOverlay];
+    blueOverlay.userInteractionEnabled = YES;
+    
     [self.activityIndicator stopAnimating];
 }
 
@@ -55,21 +59,22 @@
 {
     NSString* urlStr = [request URL].description;
     
-    if( !_hasLoaded )
+    if( !_hasLoaded ||
+       [urlStr rangeOfString:@"https://twitter.com/intent/tweet/update"].location != NSNotFound )
     {
         _hasLoaded = YES;
         return YES;
     }
-    /*
-    if( [urlStr rangeOfString:@"m.facebook.com/a/sharer.php"].location != NSNotFound )
+    
+    if( [urlStr rangeOfString:@"https://twitter.com/intent/tweet/complete"].location != NSNotFound )
     {
         [self pressedClose:nil];
-        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Facebook" message:@"Post Successful" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+        UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Twitter" message:@"Update Successful" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
         [alert show];
         return NO;
     }
-    */
-    return YES;
+    
+    return NO;
 }
 
 @end

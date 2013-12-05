@@ -184,6 +184,8 @@
 		61A668F1182EEB2200AC749E /* exhibition_story_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A668EB182EEB2200AC749E /* exhibition_story_overlay.png */; };
 		61A668F2182EEB2200AC749E /* exhibition_story_overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61A668EC182EEB2200AC749E /* exhibition_story_overlay@2x.png */; };
 		61A668F5182EECE300AC749E /* SGStoryOfTheExhibitionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61A668F4182EECE300AC749E /* SGStoryOfTheExhibitionViewController.m */; };
+		61C8C01E18504AB000003608 /* blackTopBar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61C8C01C18504AB000003608 /* blackTopBar@2x.png */; };
+		61C8C01F18504AB000003608 /* blackTopBar.png in Resources */ = {isa = PBXBuildFile; fileRef = 61C8C01D18504AB000003608 /* blackTopBar.png */; };
 		61CD509B180C23B100D28921 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5099180C23B100D28921 /* Main_iPhone.storyboard */; };
 		61CD509C180C23B100D28921 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509A180C23B100D28921 /* Main_iPad.storyboard */; };
 		61CD50A4180C240400D28921 /* PaintingResources in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50A3180C240400D28921 /* PaintingResources */; };
@@ -702,6 +704,8 @@
 		61A668EC182EEB2200AC749E /* exhibition_story_overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "exhibition_story_overlay@2x.png"; sourceTree = "<group>"; };
 		61A668F3182EECE300AC749E /* SGStoryOfTheExhibitionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGStoryOfTheExhibitionViewController.h; sourceTree = "<group>"; };
 		61A668F4182EECE300AC749E /* SGStoryOfTheExhibitionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGStoryOfTheExhibitionViewController.m; sourceTree = "<group>"; };
+		61C8C01C18504AB000003608 /* blackTopBar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blackTopBar@2x.png"; sourceTree = "<group>"; };
+		61C8C01D18504AB000003608 /* blackTopBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blackTopBar.png; sourceTree = "<group>"; };
 		61CD5099180C23B100D28921 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		61CD509A180C23B100D28921 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		61CD50A3180C240400D28921 /* PaintingResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PaintingResources; sourceTree = "<group>"; };
@@ -1344,6 +1348,8 @@
 		61CD50A5180C242500D28921 /* GeneralResources */ = {
 			isa = PBXGroup;
 			children = (
+				61C8C01C18504AB000003608 /* blackTopBar@2x.png */,
+				61C8C01D18504AB000003608 /* blackTopBar.png */,
 				61E5F0B8184623F1003959C7 /* BlueOverLay.png */,
 				61D6067D1844B8E10090C77A /* donate */,
 				61F73CBA1830FDF200D13F7C /* childrensmoduleprompt */,
@@ -2004,6 +2010,7 @@
 				61CD51FA180C242500D28921 /* sg_home_filmbtn.png in Resources */,
 				61CD51D4180C242500D28921 /* artists_pages_hofmann_overlay@2x.png in Resources */,
 				61CD5205180C242500D28921 /* sg_home_hoffmanbtn@2x.png in Resources */,
+				61C8C01F18504AB000003608 /* blackTopBar.png in Resources */,
 				61072A0F182138B400E8D7A2 /* perspectives_sermon_circle_light_blue.png in Resources */,
 				61CD522B180C242500D28921 /* SG_General_Media_Playbar.png in Resources */,
 				61CD52DB180C242500D28921 /* painting_thumb_savior-on@2x.png in Resources */,
@@ -2105,6 +2112,7 @@
 				61735B60183249A30000D837 /* sermon.png in Resources */,
 				6117E62B184D3D6E00A50719 /* SG_Social_Module_Overlay_Hofmann.png in Resources */,
 				61CD52AB180C242500D28921 /* painting_thumb_children-on@2x.png in Resources */,
+				61C8C01E18504AB000003608 /* blackTopBar@2x.png in Resources */,
 				61072A0E182138B400E8D7A2 /* perspectives_sermon_circle_dark_green@2x.png in Resources */,
 				61A668F1182EEB2200AC749E /* exhibition_story_overlay.png in Resources */,
 				61CD52BD180C242500D28921 /* painting_thumb_denial@2x.png in Resources */,
