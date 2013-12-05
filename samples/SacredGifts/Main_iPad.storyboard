@@ -98,7 +98,7 @@
                                 <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="center" image="splash_donors.png" id="mre-GN-Ojo">
-                                <rect key="frame" x="0.0" y="629" width="768" height="395"/>
+                                <rect key="frame" x="0.0" y="524" width="768" height="500"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="center" image="splash_artists.png" id="Ca2-br-Pv0">
@@ -1969,7 +1969,7 @@
         <image name="speaker_btns__narration_btn-on.png" width="71" height="71"/>
         <image name="speaker_btns__narration_btn.png" width="71" height="71"/>
         <image name="splash_artists.png" width="312" height="303"/>
-        <image name="splash_donors.png" width="768" height="395"/>
+        <image name="splash_donors.png" width="768" height="500"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>

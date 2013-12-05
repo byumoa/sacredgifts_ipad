@@ -83,7 +83,7 @@ const CGPoint kSplashLogoStartPoint = {384,840};
 {
     [_donorsTimer invalidate];
     
-    [UIView animateWithDuration:0.25 animations:^{
+    [UIView animateWithDuration:0.5 animations:^{
         self.splashDonors.alpha = 1;
     }];
 }
