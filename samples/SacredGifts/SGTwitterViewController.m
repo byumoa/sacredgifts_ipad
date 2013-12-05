@@ -21,10 +21,19 @@
 
 -(void)configureWebpageForURLStr:(NSString *)urlStr
 {
+    /*
     NSLog(@"urlStr: %@", urlStr);
-    _currentTwitterPage = urlStr;
-    NSURL *url = [NSURL URLWithString:[urlStr stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding]];
+    _currentTwitterPage = [urlStr stringByAddingPercentEscapesUsingEncoding: NSUTF8StringEncoding];
+    NSLog(@"_currentTwitterPage: %@", _currentTwitterPage);
+    NSURL *url = [NSURL URLWithString:_currentTwitterPage];
     NSLog(@"url.description: %@", url.description);
+    [self openSocialPage:url];
+     */
+    NSString *body = urlStr;
+    CFStringRef encodedBody = CFURLCreateStringByAddingPercentEscapes(NULL, (CFStringRef)body, NULL, CFSTR("&"), kCFStringEncodingUTF8);
+    NSString *urlString = [NSString stringWithFormat:@"%@", (__bridge NSString *)encodedBody];
+    CFRelease(encodedBody);
+    NSURL *url = [NSURL URLWithString:urlString];
     [self openSocialPage:url];
 }
 
