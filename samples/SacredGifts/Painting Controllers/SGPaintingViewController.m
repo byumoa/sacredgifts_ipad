@@ -32,6 +32,11 @@ NSString* const kBlochSocialBGStr = @"SG_Social_Module_Overlay_Bloch";
 NSString* const kHofmannSocialBGStr = @"SG_Social_Module_Overlay_Hofmann";
 NSString* const kSchwartzSocialBGStr = @"SG_Social_Module_Overlay_Schwartz";
 
+NSString* const kCastleBtnNrmStr = @"SG_General_painting-castleBtn";
+NSString* const kCastleBtnHilStr = @"SG_General_painting-castleBtn-on";
+
+CGSize const kCastleBtnSize = {768, 41};
+
 @interface SGPaintingViewController (PrivateAPIs)
 - (void) addMainPainting:(NSString*)paintingName;
 - (void) addFooterButtonsForPainting: (NSString*)paintingNameStr;
@@ -42,6 +47,7 @@ NSString* const kSchwartzSocialBGStr = @"SG_Social_Module_Overlay_Schwartz";
 - (void)removeCurrentOverlay;
 - (int)calcCurrentPaintingIndex;
 - (void)deselectAllModuleBtns;
+- (void)navigateToCastle: (UIButton*)sender;
 @end
 
 @implementation SGPaintingViewController
@@ -126,7 +132,7 @@ static BOOL chromeHidden = NO;
 
 - (IBAction)swipeRecognized:(UISwipeGestureRecognizer *)sender
 {
-    if( !_tombstoneShown ) return;
+    if( !_tombstoneShown || [_paintingNameStr isEqualToString:@"castle"] ) return;
     
     NSString* swipeDir = (NSString*)kAnimTypeSwipeLeft;
     int nextPaintingIndex = self.currentPaintingIndex + 1;
@@ -394,6 +400,16 @@ static BOOL chromeHidden = NO;
         default:{
             NSString *overlayPath = [[NSBundle mainBundle] pathForResource:moduleStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingStr, moduleStr]];
             [self.overlayController addBackgroundImgWithPath:overlayPath];
+            
+            if( [moduleStr isEqualToString:kSummaryStr] && [[SGConvenienceFunctionsManager artistForPainting:_paintingNameStr abbreviated:YES] isEqualToString:@"bloch"] && ![_paintingNameStr isEqualToString:@"castle"])
+            {
+                UIButton* castleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+                [castleBtn setImage:[UIImage imageNamed:kCastleBtnNrmStr] forState:UIControlStateNormal];
+                [castleBtn setImage:[UIImage imageNamed:kCastleBtnHilStr] forState:UIControlStateHighlighted];
+                [castleBtn addTarget:self action:@selector(navigateToCastle:) forControlEvents:UIControlEventTouchUpInside];
+                castleBtn.frame = CGRectMake(0, self.overlayController.view.frame.size.height - kCastleBtnSize.height, kCastleBtnSize.width, kCastleBtnSize.height);
+                [self.overlayController.view addSubview:castleBtn];
+            }
         }
             break;
     }
@@ -416,6 +432,11 @@ static BOOL chromeHidden = NO;
     }];
     
     return self.overlayController;
+}
+
+-(void)navigateToCastle:(UIButton *)sender
+{
+    [self.delegate transitionFromController:self toPaintingNamed:@"castle" fromButtonRect:CGRectZero withAnimType:kAnimTypeSwipeLeft];
 }
 
 -(void)removeCurrentOverlay

@@ -93,7 +93,7 @@ const NSString* kModuleBtnGiftsImageSel = @"SG_General_Painting_GiftsBtn-on";
 const NSString* kModuleBtnHighlightsImageNrm = @"SG_General_Painting_DetailsBtn";
 const NSString* kModuleBtnHighlightsImageSel = @"SG_General_Painting_DetailsBtn-on";
 
-const NSString* kSummaryStr = @"summary";
+NSString* const kSummaryStr = @"summary";
 NSString* const kPerspectiveStr = @"perspectives";
 NSString* const kGiftsStr = @"gift";
 const NSString* kMusicStr = @"music";

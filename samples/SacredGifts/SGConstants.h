@@ -91,7 +91,7 @@ extern const NSString* kModuleBtnPerspectiveImageSel;
 extern const NSString* kModuleBtnGiftsImageNrm;
 extern const NSString* kModuleBtnGiftsImageSel;
 
-extern const NSString* kSummaryStr;
+extern NSString* const kSummaryStr;
 extern NSString* const kPerspectiveStr;
 extern NSString* const kGiftsStr;
 extern const NSString* kMusicStr;
