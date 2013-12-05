@@ -35,7 +35,9 @@ const int kNavigationReservations = 456;
         case kNavigationReservations:
         {
             SGWebViewController* webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"web"];
-            [self presentViewController:webViewController animated:YES completion:nil];
+            [self presentViewController:webViewController animated:YES completion:^{
+                [[UIApplication sharedApplication] setStatusBarHidden:YES];
+            }];
             [webViewController configureWebpageFor:webPageTypeTickets];
         }
             break;

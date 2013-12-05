@@ -70,13 +70,17 @@
     //[[UIApplication sharedApplication] openURL:[NSURL URLWithString: (NSString*)kDontateURLStr]];
     //For Museum
     SGDonateViewController* donateViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"donate"];
-    [self presentViewController:donateViewController animated:YES completion:nil];
+    [self presentViewController:donateViewController animated:YES completion:^{
+        [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    }];
 }
 
 -(void)pressedFeedback:(UIButton *)sender
 {
     SGWebViewController* webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"web"];
-    [self presentViewController:webViewController animated:YES completion:nil];
+    [self presentViewController:webViewController animated:YES completion:^{
+        [[UIApplication sharedApplication] setStatusBarHidden:YES];
+    }];
     [webViewController configureWebpageFor:webpageTypeFeedback];
 }
 

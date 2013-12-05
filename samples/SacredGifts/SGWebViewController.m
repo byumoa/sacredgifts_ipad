@@ -61,6 +61,7 @@ NSString* const kFeedbackImgStr = @"SG_General_header_feedback.png";
 
 - (IBAction)pressedClose:(UIButton *)sender
 {
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
@@ -74,5 +75,6 @@ NSString* const kFeedbackImgStr = @"SG_General_header_feedback.png";
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     [self dismissViewControllerAnimated:YES completion:nil];
+    [[UIApplication sharedApplication] setStatusBarHidden:NO];
 }
 @end
