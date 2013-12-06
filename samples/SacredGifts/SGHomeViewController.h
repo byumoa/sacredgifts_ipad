@@ -17,5 +17,6 @@ typedef enum
 }NavigationDestination;
 
 @interface SGHomeViewController : SGContentViewController
+- (IBAction)pressedTimeline:(UIButton *)sender;
 
 @end

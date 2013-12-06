@@ -135,14 +135,15 @@
        ||[toController.restorationIdentifier isEqualToString:(NSString*)kArtistNames[1]]
        ||[toController.restorationIdentifier isEqualToString:(NSString*)kArtistNames[2]])
         isTransitionToArtist = YES;
-
+    BOOL isTransitioningToTimeline = [toController.restorationIdentifier isEqualToString:@"timeline"];
+    
     __weak typeof(self) weakSelf = self;
     animTransitionBlock = ^(void)
     {
         toController.view.alpha = 1;
         [weakSelf.view bringSubviewToFront:weakSelf.headerView];
         [weakSelf.view bringSubviewToFront:weakSelf.footerView];
-        weakSelf.footerView.alpha = !(isTransitionToPainting||isTransitionToArtist);
+        weakSelf.footerView.alpha = !(isTransitionToPainting||isTransitionToArtist||isTransitioningToTimeline);
     };
     
     [self cycleFromViewController:fromController toViewController:toController fromButtonRect:frame falling:animType];
