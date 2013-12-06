@@ -325,6 +325,11 @@
 		61C8C13818512F5600003608 /* timeline_temple@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61C8C0AF18512F5600003608 /* timeline_temple@2x.png */; };
 		61C8C13918512F5600003608 /* timeline.plist in Resources */ = {isa = PBXBuildFile; fileRef = 61C8C0B018512F5600003608 /* timeline.plist */; };
 		61C8C13C1851336300003608 /* SGTimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C8C13B1851336300003608 /* SGTimelineViewController.m */; };
+		61C8C13F1851A6A900003608 /* SGTimelineEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 61C8C13E1851A6A900003608 /* SGTimelineEntry.m */; };
+		61C8C1441851B1F500003608 /* sg_home_timelinebtn-on.png in Resources */ = {isa = PBXBuildFile; fileRef = 61C8C1401851B1F500003608 /* sg_home_timelinebtn-on.png */; };
+		61C8C1451851B1F500003608 /* sg_home_timelinebtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61C8C1411851B1F500003608 /* sg_home_timelinebtn-on@2x.png */; };
+		61C8C1461851B1F500003608 /* sg_home_timelinebtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 61C8C1421851B1F500003608 /* sg_home_timelinebtn.png */; };
+		61C8C1471851B1F500003608 /* sg_home_timelinebtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 61C8C1431851B1F500003608 /* sg_home_timelinebtn@2x.png */; };
 		61CD509B180C23B100D28921 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD5099180C23B100D28921 /* Main_iPhone.storyboard */; };
 		61CD509C180C23B100D28921 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 61CD509A180C23B100D28921 /* Main_iPad.storyboard */; };
 		61CD50A4180C240400D28921 /* PaintingResources in Resources */ = {isa = PBXBuildFile; fileRef = 61CD50A3180C240400D28921 /* PaintingResources */; };
@@ -986,6 +991,12 @@
 		61C8C0B018512F5600003608 /* timeline.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = timeline.plist; sourceTree = "<group>"; };
 		61C8C13A1851336300003608 /* SGTimelineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTimelineViewController.h; sourceTree = "<group>"; };
 		61C8C13B1851336300003608 /* SGTimelineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTimelineViewController.m; sourceTree = "<group>"; };
+		61C8C13D1851A6A900003608 /* SGTimelineEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGTimelineEntry.h; sourceTree = "<group>"; };
+		61C8C13E1851A6A900003608 /* SGTimelineEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGTimelineEntry.m; sourceTree = "<group>"; };
+		61C8C1401851B1F500003608 /* sg_home_timelinebtn-on.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_timelinebtn-on.png"; sourceTree = "<group>"; };
+		61C8C1411851B1F500003608 /* sg_home_timelinebtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_timelinebtn-on@2x.png"; sourceTree = "<group>"; };
+		61C8C1421851B1F500003608 /* sg_home_timelinebtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sg_home_timelinebtn.png; sourceTree = "<group>"; };
+		61C8C1431851B1F500003608 /* sg_home_timelinebtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sg_home_timelinebtn@2x.png"; sourceTree = "<group>"; };
 		61CD5099180C23B100D28921 /* Main_iPhone.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPhone.storyboard; sourceTree = "<group>"; };
 		61CD509A180C23B100D28921 /* Main_iPad.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main_iPad.storyboard; sourceTree = "<group>"; };
 		61CD50A3180C240400D28921 /* PaintingResources */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PaintingResources; sourceTree = "<group>"; };
@@ -1435,6 +1446,8 @@
 				6117E631184D694300A50719 /* SGIntroMovieViewController.m */,
 				61C8C13A1851336300003608 /* SGTimelineViewController.h */,
 				61C8C13B1851336300003608 /* SGTimelineViewController.m */,
+				61C8C13D1851A6A900003608 /* SGTimelineEntry.h */,
+				61C8C13E1851A6A900003608 /* SGTimelineEntry.m */,
 			);
 			name = SacredGifts;
 			sourceTree = "<group>";
@@ -1916,6 +1929,10 @@
 		61CD50C3180C242500D28921 /* home */ = {
 			isa = PBXGroup;
 			children = (
+				61C8C1401851B1F500003608 /* sg_home_timelinebtn-on.png */,
+				61C8C1411851B1F500003608 /* sg_home_timelinebtn-on@2x.png */,
+				61C8C1421851B1F500003608 /* sg_home_timelinebtn.png */,
+				61C8C1431851B1F500003608 /* sg_home_timelinebtn@2x.png */,
 				61E850E5183AC98D00D6EB08 /* SG_Home_SplashLogo.png */,
 				61E850E6183AC98D00D6EB08 /* SG_Home_SplashLogo@2x.png */,
 				61267B7E1819667B00A52CC5 /* splash_artists.png */,
@@ -2696,6 +2713,7 @@
 				61CD52D9180C242500D28921 /* painting_thumb_ruler@2x.png in Resources */,
 				610729EA18212EA400E8D7A2 /* The Art Academies.mp3 in Resources */,
 				61C8C10118512F5600003608 /* popup3@2x.png in Resources */,
+				61C8C1451851B1F500003608 /* sg_home_timelinebtn-on@2x.png in Resources */,
 				61CD5210180C242500D28921 /* sg_home_meetartistsbtn-on.png in Resources */,
 				61CD5288180C242500D28921 /* SG_General_Share_email-on.png in Resources */,
 				610554E718285D600030CCC3 /* sg_temple_btn_1880-on@2x.png in Resources */,
@@ -2724,6 +2742,7 @@
 				61CD5277180C242500D28921 /* SG_General_Painting_ShareBtn-on.png in Resources */,
 				61CD5287180C242500D28921 /* SG_General_TopBar@2x.png in Resources */,
 				61CD51E7180C242500D28921 /* Default.png in Resources */,
+				61C8C1471851B1F500003608 /* sg_home_timelinebtn@2x.png in Resources */,
 				61072A11182138B400E8D7A2 /* perspectives_sermon_cross_hairs.png in Resources */,
 				618713C4182F10AA005BC973 /* SG_General_Module_OverlayHalf_Hofmann@2x.png in Resources */,
 				618713D81830E592005BC973 /* sg_general_painting_detailmarkerbtn-on@2x.png in Resources */,
@@ -2806,6 +2825,7 @@
 				61CD51CD180C242500D28921 /* overlay__brackets.png in Resources */,
 				61C8C12618512F5600003608 /* timeline_gethsemane@2x.png in Resources */,
 				61CD526E180C242500D28921 /* SG_General_Painting_MusicBtn@2x.png in Resources */,
+				61C8C1461851B1F500003608 /* sg_home_timelinebtn.png in Resources */,
 				61C8C0E118512F5600003608 /* popup16@2x.png in Resources */,
 				61CD5274180C242500D28921 /* SG_General_Painting_PerspectivesBtn-on@2x.png in Resources */,
 				61CD5239180C242500D28921 /* SG_General_BackBtn.png in Resources */,
@@ -2821,6 +2841,7 @@
 				61F73CC51830FDF200D13F7C /* childrens_schwartz_prompt.png in Resources */,
 				61CD51E0180C242500D28921 /* sg_home_bg-home@2x.png in Resources */,
 				61CD51E3180C242500D28921 /* sg_home_bg-meetartists@2x.png in Resources */,
+				61C8C1441851B1F500003608 /* sg_home_timelinebtn-on.png in Resources */,
 				6117E62A184D3D6E00A50719 /* SG_Social_Module_Overlay_Bloch@2x.png in Resources */,
 				61CD51D5180C242500D28921 /* artists_pages_schwartz_overlay.png in Resources */,
 				61C8C0FE18512F5600003608 /* popup3.png in Resources */,
@@ -2978,6 +2999,7 @@
 				61CD5306180C24FD00D28921 /* SGGiftOverlayViewController.m in Sources */,
 				6186729E18100E7900DED0D4 /* ShaderUtils.cpp in Sources */,
 				61CD5348180C256700D28921 /* SGBlochViewController.m in Sources */,
+				61C8C13F1851A6A900003608 /* SGTimelineEntry.m in Sources */,
 				61CD534A180C256700D28921 /* SGHofmanViewController.m in Sources */,
 				6117E632184D694300A50719 /* SGIntroMovieViewController.m in Sources */,
 				150D1CCB1385551A0007C72E /* ImageTargetsAppDelegate.mm in Sources */,

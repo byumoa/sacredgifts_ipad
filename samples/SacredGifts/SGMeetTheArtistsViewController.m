@@ -13,7 +13,8 @@ typedef enum
 {
     kNavigationDestinationBloch = 4,
     kNavigationDestinationHofman = 5,
-    kNavigationDestinationSchwartz = 6
+    kNavigationDestinationSchwartz = 6,
+    kNavigationDestinationTimeline = 7
 }ArtistNavigationDestination;
 
 @implementation SGMeetTheArtistsViewController
@@ -38,6 +39,9 @@ typedef enum
             break;
         case kNavigationDestinationSchwartz:
             toControllerIDStr = (NSString*)kControllerIDSchwartzStr;
+            break;
+        case kNavigationDestinationTimeline:
+            toControllerIDStr = @"timeline";
             break;
             
         default:

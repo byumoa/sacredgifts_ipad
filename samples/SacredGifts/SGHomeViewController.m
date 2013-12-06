@@ -42,8 +42,4 @@
     }
     [self.delegate transitionFromController:self toControllerID:toControllerIDStr fromButtonRect:sender.frame withAnimType:kAnimTypeZoomIn];
 }
-- (IBAction)pressedTimeline:(UIButton *)sender
-{
-    [self.delegate transitionFromController:self toControllerID:@"timeline" fromButtonRect:sender.frame withAnimType:nil];
-}
 @end

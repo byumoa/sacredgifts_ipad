@@ -10,7 +10,7 @@
 
 @interface SGTimelineViewController : SGContentViewController
 {
-    NSMutableArray *_bochViews, *_schwartzViews, *_hofmannViews, *_worldViews, *_churchViews;
+    NSMutableArray *_blochViews, *_schwartzViews, *_hofmannViews, *_worldViews, *_churchViews;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 
