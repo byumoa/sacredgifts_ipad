@@ -12,8 +12,10 @@
 {
     NSString* _popup;
     NSString* _pageLink;
+    CGRect _fullFrame;
 }
 
-- (SGTimelineEntry*)initWithDictionary: (NSDictionary*)dict;
-
+- (SGTimelineEntry*)initWithDictionary: (NSDictionary*)dict andColor: (UIColor*)bgColor;
+- (void)animateOn;
+- (void)animateOff;
 @end

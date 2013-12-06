@@ -46,10 +46,10 @@ NSString* const kTimelinePlistName = @"timeline.plist";
         NSDictionary* datas = [dict objectForKey:@"data"];
         for (NSDictionary* data in datas)
         {
-            SGTimelineEntry* timelineEntry = [[SGTimelineEntry alloc] initWithDictionary:data];
-            timelineEntry.backgroundColor = bgColor;
+            SGTimelineEntry* timelineEntry = [[SGTimelineEntry alloc] initWithDictionary:data andColor:bgColor];
             [currentArr addObject:timelineEntry];
             [self.scrollView addSubview:timelineEntry];
+            [timelineEntry animateOn];
         }
     }
 }
@@ -68,4 +68,32 @@ NSString* const kTimelinePlistName = @"timeline.plist";
     return [UIColor colorWithRed:((NSNumber*)colorArr[0]).floatValue green:((NSNumber*)colorArr[1]).floatValue blue:((NSNumber*)colorArr[2]).floatValue alpha:0.7];
 }
 
+- (IBAction)pressedTimelineToggle:(UIButton *)sender
+{
+    NSMutableArray* toggleArray = _hofmannViews;
+    
+    switch (sender.tag) {
+        case 2:
+            toggleArray = _schwartzViews;
+            break;
+        case 3:
+            toggleArray = _blochViews;
+            break;
+        case 4:
+            toggleArray = _worldViews;
+            break;
+        case 5:
+            toggleArray = _churchViews;
+            break;
+        default:
+            break;
+    }
+    
+    if(((SGTimelineEntry*)toggleArray[0]).frame.size.width > 1 )
+        for( int i = 0; i < toggleArray.count; i++ )
+            [((SGTimelineEntry*)toggleArray[i]) animateOff];
+    else
+        for( int i = toggleArray.count-1; i >= 0; i-- )
+            [((SGTimelineEntry*)toggleArray[i]) animateOn];
+}
 @end
