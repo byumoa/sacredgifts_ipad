@@ -7,7 +7,6 @@
 //
 
 #import "SGTimelineViewController.h"
-#import "SGTimelineEntry.h"
 
 NSString* const kTimelinePlistName = @"timeline.plist";
 
@@ -37,6 +36,10 @@ NSString* const kTimelinePlistName = @"timeline.plist";
     _worldViews = [NSMutableArray new];
     _churchViews = [NSMutableArray new];
     [self buildTimelineViews];
+    
+    CGPoint center = self.datesImageView.center;
+    center.y -= 8;
+    self.datesImageView.center = center;
 }
 
 -(void)buildTimelineViews
@@ -52,6 +55,7 @@ NSString* const kTimelinePlistName = @"timeline.plist";
         for (NSDictionary* data in datas)
         {
             SGTimelineEntry* timelineEntry = [[SGTimelineEntry alloc] initWithDictionary:data andColor:bgColor];
+            timelineEntry.delegate = self;
             [currentArr addObject:timelineEntry];
             [self.scrollView addSubview:timelineEntry];
             [timelineEntry animateOn];
@@ -100,5 +104,10 @@ NSString* const kTimelinePlistName = @"timeline.plist";
     else
         for( int i = toggleArray.count-1; i >= 0; i-- )
             [((SGTimelineEntry*)toggleArray[i]) animateOn];
+}
+
+-(void)timelineEntry:(SGTimelineEntry *)timelineEntry triggersPopup:(SGTimelinePopup *)popup
+{
+    
 }
 @end

@@ -7,8 +7,9 @@
 //
 
 #import "SGContentViewController.h"
+#import "SGTimelineEntry.h"
 
-@interface SGTimelineViewController : SGContentViewController
+@interface SGTimelineViewController : SGContentViewController<SGTimelineEntryDelegate>
 {
     NSMutableArray *_blochViews, *_schwartzViews, *_hofmannViews, *_worldViews, *_churchViews;
 }

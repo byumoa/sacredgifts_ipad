@@ -8,6 +8,10 @@
 
 #import "SGTimelineEntry.h"
 
+@interface SGTimelineEntry()
+- (void)pressedEntry: (UIButton*)sender;
+@end
+
 @implementation SGTimelineEntry
 
 -(SGTimelineEntry *)initWithDictionary:(NSDictionary *)dict andColor:(UIColor *)bgColor
@@ -35,15 +39,54 @@
         label.text = [dict objectForKey:@"text"];
         label.textColor = [UIColor whiteColor];
         label.backgroundColor = [UIColor clearColor];
-        label.font = [UIFont fontWithName:@"helvetica" size:14];
+        label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14];
+        CGPoint center = label.center;
+        center.x += 12;
+        label.center = center;
         [self addSubview:label];
         
         frame = self.frame;
         frame.size.width = 1;
         self.frame = frame;
+        
+        NSString* thumbnail = [dict objectForKey:@"thumbnail"];
+        if( thumbnail )
+        {
+            UIImageView *thumbnailImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:thumbnail]];
+            center = thumbnailImgView.center;
+            center.x+=1;
+            thumbnailImgView.center = center;
+            [self addSubview:thumbnailImgView];
+            
+            center = label.center;
+            center.x += thumbnailImgView.frame.size.width + 12;
+            label.center = center;
+        }
+        
+        NSString* buttonImgStr = [dict objectForKey:@"timeline_assets_paintingBtn.png"];
+        
+        
+        _popupName = [dict objectForKey:@"timeline_shepherds.png"];
+        
+        UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+        CGRect buttonFrame = self.frame;
+        buttonFrame.origin = CGPointZero;
+        button.frame = buttonFrame;
+        [button addTarget:self action:@selector(pressedEntry:) forControlEvents:UIControlEventTouchUpInside];
+        [self addSubview:button];
     }
     
     return self;
+}
+
+-(void)pressedEntry:(UIButton *)sender
+{
+    NSLog(@"pressedEntry _popupName: %@", _popupName);
+    
+    if( _popupName )
+    {
+        
+    }
 }
 
 -(void)animateOn
@@ -61,5 +104,9 @@
         self.frame = frame;
     }];
 }
+
+@end
+
+@implementation SGTimelinePopup
 
 @end

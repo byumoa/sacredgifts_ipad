@@ -7,15 +7,25 @@
 //
 
 #import <UIKit/UIKit.h>
+@protocol SGTimelineEntryDelegate;
 
 @interface SGTimelineEntry : UIView
 {
     NSString* _popup;
     NSString* _pageLink;
     CGRect _fullFrame;
+    NSString* _popupName;
 }
-
+@property(nonatomic, weak) id<SGTimelineEntryDelegate> delegate;
 - (SGTimelineEntry*)initWithDictionary: (NSDictionary*)dict andColor: (UIColor*)bgColor;
 - (void)animateOn;
 - (void)animateOff;
+@end
+
+@interface SGTimelinePopup : UIImageView
+
+@end
+
+@protocol SGTimelineEntryDelegate
+- (void) timelineEntry: (SGTimelineEntry*)timelineEntry triggersPopup: (SGTimelinePopup*)popup;
 @end
