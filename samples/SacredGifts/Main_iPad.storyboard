@@ -1816,7 +1816,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="956"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="timeline_assets_dates.png" id="9ZQ-JX-3Dd">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" image="timeline_assets_dates.png" id="9ZQ-JX-3Dd">
                                         <rect key="frame" x="-400" y="459" width="6176" height="31"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -1881,6 +1881,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="datesImageView" destination="9ZQ-JX-3Dd" id="gwL-WA-mwO"/>
                         <outlet property="scrollView" destination="oRN-DB-yUV" id="Meb-qF-ceL"/>
                     </connections>
                 </viewController>

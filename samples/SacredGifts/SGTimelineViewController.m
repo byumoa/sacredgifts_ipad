@@ -26,6 +26,11 @@ NSString* const kTimelinePlistName = @"timeline.plist";
     self.scrollView.contentSize = CGSizeMake(5376, self.scrollView.frame.size.height);
     self.scrollView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"timeline_assets_bg.png"]];
     
+    [self.scrollView setContentOffset:CGPointMake(2500, 0)];
+    [UIView animateWithDuration:2 animations:^{
+        [self.scrollView setContentOffset:CGPointMake(0, 0)];
+    }];
+    
     _blochViews = [NSMutableArray new];
     _schwartzViews = [NSMutableArray new];
     _hofmannViews = [NSMutableArray new];

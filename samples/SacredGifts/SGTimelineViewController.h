@@ -13,6 +13,7 @@
     NSMutableArray *_blochViews, *_schwartzViews, *_hofmannViews, *_worldViews, *_churchViews;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
+@property (weak, nonatomic) IBOutlet UIImageView *datesImageView;
 - (IBAction)pressedTimelineToggle:(UIButton *)sender;
 
 @end
