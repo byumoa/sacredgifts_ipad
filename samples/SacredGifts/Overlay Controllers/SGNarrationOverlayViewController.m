@@ -56,7 +56,7 @@ const CGRect kNarrationFrame = {0, 713, 768, 200};
     self.playOverlay.frame = frame;
     center = self.playhead.center;
     center.x = self.playUnderlay.frame.origin.x + frame.size.width;
-    [UIView animateKeyframesWithDuration:0.25 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+    [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
         self.playhead.center = center;
     } completion:nil];
 }
