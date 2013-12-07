@@ -11,10 +11,10 @@
 
 @interface SGTimelineEntry : UIView
 {
-    NSString* _popup;
     NSString* _pageLink;
     CGRect _fullFrame;
     NSString* _popupName;
+    UIImageView* _popup;
 }
 @property(nonatomic, weak) id<SGTimelineEntryDelegate> delegate;
 - (SGTimelineEntry*)initWithDictionary: (NSDictionary*)dict andColor: (UIColor*)bgColor;

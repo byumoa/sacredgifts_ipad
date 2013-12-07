@@ -10,6 +10,7 @@
 
 @interface SGTimelineEntry()
 - (void)pressedEntry: (UIButton*)sender;
+- (void)removePopup: (UIButton*)sender;
 @end
 
 @implementation SGTimelineEntry
@@ -63,15 +64,19 @@
             label.center = center;
         }
         
-        NSString* buttonImgStr = [dict objectForKey:@"timeline_assets_paintingBtn.png"];
+        NSString* buttonImgStr = [dict objectForKey:@"buttonImage"];
+        if( buttonImgStr )
+        {
+            UIImageView *buttonImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:buttonImgStr]];
+            center = buttonImgView.center;
+            center.x = self.frame.size.width - buttonImgView.frame.size.width/2;
+            buttonImgView.center = center;
+        }
         
-        
-        _popupName = [dict objectForKey:@"timeline_shepherds.png"];
+        _popupName = [dict objectForKey:@"popup"];
         
         UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
-        CGRect buttonFrame = self.frame;
-        buttonFrame.origin = CGPointZero;
-        button.frame = buttonFrame;
+        button.frame = CGRectMake(0, 0, ((NSNumber*)[dict objectForKey:@"width"]).floatValue, 40);
         [button addTarget:self action:@selector(pressedEntry:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:button];
     }
@@ -85,8 +90,25 @@
     
     if( _popupName )
     {
+        _popup = [[UIImageView alloc] initWithImage:[UIImage imageNamed:_popupName]];
+        _popup.center = self.superview.superview.center;
+        [self.superview.superview addSubview:_popup];
         
+        UIButton* popupDismiss = [UIButton buttonWithType:UIButtonTypeCustom];
+        [popupDismiss addTarget:self action:@selector(removePopup:) forControlEvents:UIControlEventTouchUpInside];
+        popupDismiss.frame = self.superview.superview.frame;
+        [self.superview.superview addSubview:popupDismiss];
     }
+}
+
+-(void)removePopup:(UIButton *)sender
+{
+    [UIView animateWithDuration:0.25 animations:^{
+        _popup.alpha = 0;
+    } completion:^(BOOL finished) {
+        [_popup removeFromSuperview];
+        [sender removeFromSuperview];
+    }];
 }
 
 -(void)animateOn
