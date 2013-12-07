@@ -11,6 +11,7 @@
 @interface SGTimelineEntry()
 - (void)pressedEntry: (UIButton*)sender;
 - (void)removePopup: (UIButton*)sender;
+- (void)navigateToNavStr:(UIButton *)sender;
 @end
 
 @implementation SGTimelineEntry
@@ -64,41 +65,61 @@
             label.center = center;
         }
         
-        NSString* buttonImgStr = [dict objectForKey:@"buttonImage"];
-        if( buttonImgStr )
-        {
-            UIImageView *buttonImgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:buttonImgStr]];
-            center = buttonImgView.center;
-            center.x = self.frame.size.width - buttonImgView.frame.size.width/2;
-            buttonImgView.center = center;
-        }
-        
+        _buttonName = [dict objectForKey:@"buttonImage"];
         _popupName = [dict objectForKey:@"popup"];
         
         UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
-        button.frame = CGRectMake(0, 0, ((NSNumber*)[dict objectForKey:@"width"]).floatValue, 40);
+        button.frame = CGRectMake(-2, -2, ((NSNumber*)[dict objectForKey:@"width"]).floatValue+4, 44);
         [button addTarget:self action:@selector(pressedEntry:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:button];
     }
+    
+    _navStr = [dict objectForKey:@"pageLink"];
     
     return self;
 }
 
 -(void)pressedEntry:(UIButton *)sender
 {
-    NSLog(@"pressedEntry _popupName: %@", _popupName);
-    
     if( _popupName )
     {
+        _dismiss1 = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_dismiss1 addTarget:self action:@selector(removePopup:) forControlEvents:UIControlEventTouchUpInside];
+        _dismiss1.frame = self.superview.superview.frame;
+        [self.superview.superview addSubview:_dismiss1];
+        
         _popup = [[UIImageView alloc] initWithImage:[UIImage imageNamed:_popupName]];
         _popup.center = self.superview.superview.center;
+        _popup.userInteractionEnabled = YES;
         [self.superview.superview addSubview:_popup];
         
-        UIButton* popupDismiss = [UIButton buttonWithType:UIButtonTypeCustom];
-        [popupDismiss addTarget:self action:@selector(removePopup:) forControlEvents:UIControlEventTouchUpInside];
-        popupDismiss.frame = self.superview.superview.frame;
-        [self.superview.superview addSubview:popupDismiss];
+        _dismiss2 = [UIButton buttonWithType:UIButtonTypeCustom];
+        [_dismiss2 addTarget:self action:@selector(removePopup:) forControlEvents:UIControlEventTouchUpInside];
+        CGRect frame = _popup.frame;
+        frame.origin = CGPointZero;
+        _dismiss2.frame = frame;
+        [_popup addSubview:_dismiss2];
+        
+        if( _buttonName )
+        {
+            UIButton* navButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            [navButton setImage:[UIImage imageNamed:_buttonName] forState:UIControlStateNormal];
+            NSString* buttonOnStr = [NSString stringWithFormat:@"%@%@", _buttonName, @"-on"];
+            UIImage* buttonOnImg = [UIImage imageNamed:buttonOnStr];
+            [navButton setImage:buttonOnImg forState:UIControlStateHighlighted];
+            CGSize s = buttonOnImg.size;
+            navButton.frame = CGRectMake(_popup.frame.size.width - s.width - 20,
+                                         _popup.frame.size.height - s.height*1.5 - 20, s.width, s.height);
+            [_popup addSubview:navButton];
+            
+            [navButton addTarget:self action:@selector(navigateToNavStr:) forControlEvents:UIControlEventTouchUpInside];
+        }
     }
+}
+
+-(void)navigateToNavStr:(UIButton *)sender
+{
+    [self.delegate timelineEntry:self triggersNavToStr:_navStr];
 }
 
 -(void)removePopup:(UIButton *)sender
@@ -106,8 +127,8 @@
     [UIView animateWithDuration:0.25 animations:^{
         _popup.alpha = 0;
     } completion:^(BOOL finished) {
+        [_dismiss1 removeFromSuperview];
         [_popup removeFromSuperview];
-        [sender removeFromSuperview];
     }];
 }
 

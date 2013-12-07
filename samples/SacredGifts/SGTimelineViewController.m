@@ -106,8 +106,14 @@ NSString* const kTimelinePlistName = @"timeline.plist";
             [((SGTimelineEntry*)toggleArray[i]) animateOn];
 }
 
--(void)timelineEntry:(SGTimelineEntry *)timelineEntry triggersPopup:(SGTimelinePopup *)popup
+-(void)timelineEntry:(SGTimelineEntry *)timelineEntry triggersNavToStr:(NSString *)navStr
 {
-    
+    if([navStr isEqualToString:@"hofmann"] ||
+       [navStr isEqualToString:@"schwartz"] ||
+       [navStr isEqualToString:@"bloch"])
+        [self.delegate transitionFromController:self toControllerID:navStr fromButtonRect:CGRectZero withAnimType:nil];
+    else
+        [self.delegate transitionFromController:self toPaintingNamed:navStr fromButtonRect:CGRectZero withAnimType:nil];
 }
+
 @end

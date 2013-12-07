@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SGContentControllerDelegate.h"
 @protocol SGTimelineEntryDelegate;
 
 @interface SGTimelineEntry : UIView
@@ -14,7 +15,10 @@
     NSString* _pageLink;
     CGRect _fullFrame;
     NSString* _popupName;
+    NSString* _buttonName;
     UIImageView* _popup;
+    UIButton *_dismiss1, *_dismiss2;
+    NSString* _navStr;
 }
 @property(nonatomic, weak) id<SGTimelineEntryDelegate> delegate;
 - (SGTimelineEntry*)initWithDictionary: (NSDictionary*)dict andColor: (UIColor*)bgColor;
@@ -27,5 +31,5 @@
 @end
 
 @protocol SGTimelineEntryDelegate
-- (void) timelineEntry: (SGTimelineEntry*)timelineEntry triggersPopup: (SGTimelinePopup*)popup;
+- (void) timelineEntry: (SGTimelineEntry*)timelineEntry triggersNavToStr: (NSString*)navStr;
 @end

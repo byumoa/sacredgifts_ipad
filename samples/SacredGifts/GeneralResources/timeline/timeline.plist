@@ -181,7 +181,7 @@
 				<key>popup</key>
 				<string>popup15.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>castle</string>
 			</dict>
@@ -247,7 +247,7 @@
 				<key>popup</key>
 				<string>popup25.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>denial</string>
 				<key>thumbnail</key>
@@ -279,7 +279,7 @@
 				<key>popup</key>
 				<string>popup27.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>mocking</string>
 				<key>thumbnail</key>
@@ -297,7 +297,7 @@
 				<key>popup</key>
 				<string>popup24.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>shepherds</string>
 				<key>thumbnail</key>
@@ -315,7 +315,7 @@
 				<key>popup</key>
 				<string>popup23.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>emmaus</string>
 				<key>thumbnail</key>
@@ -333,7 +333,7 @@
 				<key>popup</key>
 				<string>popup16.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>cross</string>
 				<key>thumbnail</key>
@@ -351,7 +351,7 @@
 				<key>popup</key>
 				<string>popup17.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>healing</string>
 				<key>thumbnail</key>
@@ -369,7 +369,7 @@
 				<key>popup</key>
 				<string>popup19.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>burial</string>
 				<key>thumbnail</key>
@@ -387,7 +387,7 @@
 				<key>popup</key>
 				<string>popup20.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>cleansing</string>
 				<key>thumbnail</key>
@@ -405,7 +405,7 @@
 				<key>popup</key>
 				<string>popup21.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>consolator</string>
 				<key>thumbnail</key>
@@ -423,7 +423,7 @@
 				<key>popup</key>
 				<string>popup22.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>resurrection</string>
 				<key>thumbnail</key>
@@ -441,7 +441,7 @@
 				<key>popup</key>
 				<string>popup18.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>sermon</string>
 				<key>thumbnail</key>
@@ -491,7 +491,7 @@
 				<key>popup</key>
 				<string>popup26.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>children</string>
 				<key>thumbnail</key>
@@ -532,7 +532,7 @@
 				<key>popup</key>
 				<string>popup29.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_artistBtn.png</string>
+				<string>timeline_assets_artistBtn</string>
 				<key>pageLink</key>
 				<string>schwartz</string>
 			</dict>
@@ -608,7 +608,7 @@
 				<key>popup</key>
 				<string>popup12.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>aalborg</string>
 				<key>thumbnail</key>
@@ -626,7 +626,7 @@
 				<key>popup</key>
 				<string>popup11.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>garden</string>
 				<key>thumbnail</key>
@@ -644,7 +644,7 @@
 				<key>popup</key>
 				<string>popup9.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_artistBtn.png</string>
+				<string>timeline_assets_artistBtn</string>
 				<key>pageLink</key>
 				<string>schwartz</string>
 			</dict>
@@ -660,7 +660,7 @@
 				<key>popup</key>
 				<string>popup10.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>schwartz</string>
 			</dict>
@@ -729,7 +729,7 @@
 				<key>popup</key>
 				<string>popup4.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>temple</string>
 				<key>thumbnail</key>
@@ -747,7 +747,7 @@
 				<key>popup</key>
 				<string>popup2.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_artistBtn.png</string>
+				<string>timeline_assets_artistBtn</string>
 				<key>pageLink</key>
 				<string>hofmann</string>
 			</dict>
@@ -763,7 +763,7 @@
 				<key>popup</key>
 				<string>popup3.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>capture</string>
 				<key>thumbnail</key>
@@ -781,7 +781,7 @@
 				<key>popup</key>
 				<string>popup1.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_artistBtn.png</string>
+				<string>timeline_assets_artistBtn</string>
 				<key>pageLink</key>
 				<string>hofmann</string>
 			</dict>
@@ -857,7 +857,7 @@
 				<key>popup</key>
 				<string>popup5.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>temple-ny</string>
 				<key>thumbnail</key>
@@ -875,7 +875,7 @@
 				<key>popup</key>
 				<string>popup30.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_artistBtn.png</string>
+				<string>timeline_assets_artistBtn</string>
 				<key>pageLink</key>
 				<string>hofmann</string>
 			</dict>
@@ -901,7 +901,7 @@
 				<key>popup</key>
 				<string>popup7.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>gethsemane</string>
 				<key>thumbnail</key>
@@ -919,7 +919,7 @@
 				<key>popup</key>
 				<string>popup8.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>savior</string>
 				<key>thumbnail</key>
@@ -937,7 +937,7 @@
 				<key>popup</key>
 				<string>popup6.png</string>
 				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn.png</string>
+				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>ruler</string>
 				<key>thumbnail</key>
