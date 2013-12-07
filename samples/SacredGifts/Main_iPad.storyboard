@@ -1108,14 +1108,23 @@
                                     <action selector="pressedPlayPause:" destination="Vy2-fL-KCd" eventType="touchUpInside" id="mvX-kI-Nlo"/>
                                 </connections>
                             </button>
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="SG_General_Media_Playhead.png" id="v83-CX-YKT" customClass="SGMediaPlayhead">
+                                <rect key="frame" x="78" y="946" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Vy2-fL-KCd" id="nEl-1P-9zQ"/>
+                                </connections>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="freezeFrame" destination="VH0-LL-KwJ" id="Mgi-k7-z9Y"/>
+                        <outlet property="mediaPlayhead" destination="v83-CX-YKT" id="Nc2-nK-gPR"/>
                         <outlet property="playOverlay" destination="EX2-Ku-XJK" id="9pH-iJ-z0q"/>
                         <outlet property="playPauseButton" destination="pR6-73-u8v" id="Ua4-QQ-wBC"/>
+                        <outlet property="playUnderlay" destination="kMj-l1-heC" id="Gdm-QA-ASq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GQu-iu-iIX" userLabel="First Responder" sceneMemberID="firstResponder"/>

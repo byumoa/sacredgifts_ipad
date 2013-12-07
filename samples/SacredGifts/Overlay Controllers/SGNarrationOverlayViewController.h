@@ -13,6 +13,7 @@
 @interface SGNarrationOverlayViewController : SGAudioViewController <SGMediaPlayheadDelegate>
 {
     SGNarrationManager* _narrationManager;
+    BOOL _isPlaying;
 }
 
 @property(nonatomic, weak) IBOutlet SGMediaPlayhead* playhead;

@@ -11,9 +11,7 @@
 #import "SGConvenienceFunctionsManager.h"
 
 @interface SGAudioViewController ()
-
 - (void) updateProgressBar: (NSTimer*)timer;
-
 @end
 
 @implementation SGAudioViewController
@@ -40,6 +38,7 @@
 
 -(void)updateProgressBar:(NSTimer*)timer
 {
+    NSLog(@"SGAudioViewController updateProgressBar");
     CGRect frame = self.playOverlay.frame;
     
     if( _audioManager.player.duration > 0 )

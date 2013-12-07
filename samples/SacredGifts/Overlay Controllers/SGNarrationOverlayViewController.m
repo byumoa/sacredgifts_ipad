@@ -45,7 +45,7 @@ const CGRect kNarrationFrame = {0, 713, 768, 200};
 -(void)updateProgressBar:(NSTimer*)timer
 {
     CGRect frame = self.playOverlay.frame;
-    frame.origin = CGPointMake(0.0, 0.0);
+    frame.origin = CGPointZero;
     
     CGPoint center = CGPointZero;
     if( _narrationManager.player.duration > 0.0 )
@@ -53,7 +53,9 @@ const CGRect kNarrationFrame = {0, 713, 768, 200};
         frame.size.width = _narrationManager.player.currentTime / _narrationManager.player.duration * self.playUnderlay.frame.size.width;
     }
     
-    self.playOverlay.frame = frame;
+    if( !isnan(frame.size.width) && !isnan(frame.size.height))
+        self.playOverlay.frame = frame;
+    
     center = self.playhead.center;
     center.x = self.playUnderlay.frame.origin.x + frame.size.width;
     [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
@@ -102,6 +104,7 @@ const CGRect kNarrationFrame = {0, 713, 768, 200};
 #pragma mark delegate methods
 -(void)playhead:(SGMediaPlayhead *)playhead seekingStartedAtPoint:(CGPoint)pt
 {
+    _isPlaying = _narrationManager.player.isPlaying;
     [_narrationManager.player pause];
 }
 
@@ -116,7 +119,8 @@ const CGRect kNarrationFrame = {0, 713, 768, 200};
 
 -(void)playhead:(SGMediaPlayhead *)playhead seekingEndedAtPoint:(CGPoint)pt
 {
-    [_narrationManager.player play];
+    if( _isPlaying )
+        [_narrationManager.player play];
 }
 
 @end

@@ -21,8 +21,7 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
 
 -(id)initWithCoder:(NSCoder *)aDecoder
 {
-    if( self = [super initWithCoder:aDecoder])
-    {
+    if( self = [super initWithCoder:aDecoder]){
         _centerPos = CGPointMake(384, 500);
         self.moduleType = kModuleTypeVideo;
     }
@@ -36,16 +35,36 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
     
     _progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(updateProgressBar:) userInfo:nil repeats:YES];
     self.view.frame = kVideoFrame;
+    
+    [self.playOverlay removeFromSuperview];
+    [self.playUnderlay addSubview:self.playOverlay];
+    
+    self.mediaPlayhead.startX = self.playUnderlay.frame.origin.x;
+    self.mediaPlayhead.endX = self.playUnderlay.frame.origin.x + self.playUnderlay.frame.size.width;
 }
 
 -(void)updateProgressBar:(NSTimer*)timer
 {
-    CGRect frame = self.playOverlay.frame;
-    if( self.moviePlayer.duration > 0 && self.moviePlayer )
-        frame.size.width = self.moviePlayer.currentPlaybackTime / self.moviePlayer.duration * 635.0;
+    if( !_isSeeking )
+    {
+        CGRect frame = self.playOverlay.frame;
+        frame.origin = CGPointZero;
     
-    if( !isnan(frame.size.width) && !isnan(frame.size.height))
-        self.playOverlay.frame = frame;
+    	CGPoint center = CGPointZero;
+    	if( self.moviePlayer.duration > 0 && self.moviePlayer )
+        {
+            frame.size.width = self.moviePlayer.currentPlaybackTime / self.moviePlayer.duration * self.playUnderlay.frame.size.width;
+        }
+    
+        if( !isnan(frame.size.width) && !isnan(frame.size.height))
+            self.playOverlay.frame = frame;
+    
+        center = self.mediaPlayhead.center;
+        center.x = self.playUnderlay.frame.origin.x + frame.size.width;
+        [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+            self.mediaPlayhead.center = center;
+        } completion:nil];
+    }
 }
 
 - (IBAction)pressedPlayPause:(UIButton *)sender
@@ -109,6 +128,31 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
 -(void)pressedClose:(UIButton *)sender
 {
     [super pressedClose:sender];
+}
+
+#pragma mark delegate methods
+-(void)playhead:(SGMediaPlayhead *)playhead seekingStartedAtPoint:(CGPoint)pt
+{
+    _isPlaying = (self.moviePlayer.playbackState == MPMoviePlaybackStatePlaying);
+    _isSeeking = YES;
+    [self.moviePlayer pause];
+}
+
+-(void)playhead:(SGMediaPlayhead *)playhead seekingMovedAtPoint:(CGPoint)pt
+{
+    float percentComplete = (playhead.center.x - self.playUnderlay.frame.origin.x)/self.playUnderlay.frame.size.width;
+    self.moviePlayer.currentPlaybackTime = self.moviePlayer.duration * percentComplete;
+    [self.moviePlayer pause];
+    CGRect frame = self.playOverlay.frame;
+    frame.size.width = self.playUnderlay.frame.size.width * percentComplete;
+    self.playOverlay.frame = frame;
+}
+
+-(void)playhead:(SGMediaPlayhead *)playhead seekingEndedAtPoint:(CGPoint)pt
+{
+    _isSeeking = NO;
+    if( _isPlaying )
+        [self.moviePlayer play];
 }
 
 @end
