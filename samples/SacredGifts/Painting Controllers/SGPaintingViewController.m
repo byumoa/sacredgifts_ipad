@@ -266,7 +266,6 @@ static BOOL chromeHidden = NO;
     }
     else
     {
-        //[self addNewOverlayOfType:[self getStringForModule:moduleType] forPainting:_paintingNameStr];
         [self addNewOverlayOfType:[SGConvenienceFunctionsManager getStringForModule:moduleType] forPainting:_paintingNameStr];
         [self deselectAllModuleBtns];
         sender.selected = YES;
@@ -375,6 +374,7 @@ static BOOL chromeHidden = NO;
                 self.overlayController.screenName = [NSString stringWithFormat:@"%@: gifts text", paintingStr];
             }
             
+            self.overlayController.moduleType = kModuleTypeGifts;
             self.overlayController.paintingName = _paintingNameStr;
         }
             break;
