@@ -197,12 +197,12 @@
         <!--Hofman View Controller-->
         <scene sceneID="Vj2-LF-bd6">
             <objects>
-                <viewController restorationIdentifier="hofman" storyboardIdentifier="hofman" id="jBG-xU-cwl" customClass="SGHofmanViewController" sceneMemberID="viewController">
-                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="Xia-wn-nqc">
+                <viewController restorationIdentifier="hofman" storyboardIdentifier="hofman" wantsFullScreenLayout="YES" id="jBG-xU-cwl" customClass="SGHofmanViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xia-wn-nqc">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sg_home_bg-home_blur.png" id="mCH-LF-c65">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="sg_home_bg-home_blur.png" id="mCH-LF-c65">
                                 <rect key="frame" x="-18" y="-18" width="804" height="1060"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -297,6 +297,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="background" destination="mCH-LF-c65" id="I6c-zv-bJq"/>
                         <outlet property="scrollView" destination="zcQ-lH-V0e" id="Zve-3F-Owc"/>
@@ -1206,8 +1207,8 @@
         <!--Schwartz View Controller-->
         <scene sceneID="PKt-4M-xKP">
             <objects>
-                <viewController restorationIdentifier="schwartz" storyboardIdentifier="schwartz" id="vkt-vk-LdG" customClass="SGSchwartzViewController" sceneMemberID="viewController">
-                    <view key="view" autoresizesSubviews="NO" tag="1" contentMode="scaleToFill" id="KB8-Rl-OOd">
+                <viewController restorationIdentifier="schwartz" storyboardIdentifier="schwartz" wantsFullScreenLayout="YES" id="vkt-vk-LdG" customClass="SGSchwartzViewController" sceneMemberID="viewController">
+                    <view key="view" tag="1" contentMode="scaleToFill" id="KB8-Rl-OOd">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -1273,6 +1274,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="background" destination="Ld5-MX-NYR" id="hMZ-Ye-Zhy"/>
                         <outlet property="scrollView" destination="Ekf-vs-Rsn" id="7Xa-SQ-pGA"/>
@@ -1285,8 +1287,8 @@
         <!--Bloch View Controller-->
         <scene sceneID="xxs-WI-hnk">
             <objects>
-                <viewController restorationIdentifier="bloch" storyboardIdentifier="bloch" id="kwW-sc-41B" customClass="SGBlochViewController" sceneMemberID="viewController">
-                    <view key="view" autoresizesSubviews="NO" tag="2" contentMode="scaleToFill" id="YPJ-Jy-GnP">
+                <viewController restorationIdentifier="bloch" storyboardIdentifier="bloch" wantsFullScreenLayout="YES" id="kwW-sc-41B" customClass="SGBlochViewController" sceneMemberID="viewController">
+                    <view key="view" tag="2" contentMode="scaleToFill" id="YPJ-Jy-GnP">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
@@ -1473,6 +1475,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="background" destination="UIH-Jo-nG4" id="K2e-gQ-axr"/>
                         <outlet property="scrollView" destination="ycS-7P-AwM" id="vJ3-of-eUq"/>
@@ -1692,12 +1695,12 @@
         <!--Story Of The Exhibition View Controller-->
         <scene sceneID="44V-WG-Tw2">
             <objects>
-                <viewController restorationIdentifier="SacredGifts StoryOfTheExhibition" storyboardIdentifier="SacredGifts StoryOfTheExhibition" id="fQ9-Kj-Hgd" customClass="SGStoryOfTheExhibitionViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="SacredGifts StoryOfTheExhibition" storyboardIdentifier="SacredGifts StoryOfTheExhibition" wantsFullScreenLayout="YES" id="fQ9-Kj-Hgd" customClass="SGStoryOfTheExhibitionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Kja-Fb-G2H">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView autoresizesSubviews="NO" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="sg_home_bg-home_blur.png" id="NSo-DL-M96">
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="sg_home_bg-home_blur.png" id="NSo-DL-M96">
                                 <rect key="frame" x="-18" y="-18" width="804" height="1060"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
@@ -1722,6 +1725,7 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="background" destination="NSo-DL-M96" id="AC6-S7-bS5"/>
                         <outlet property="scrollView" destination="5sz-nv-nkX" id="c6E-FP-vtQ"/>
