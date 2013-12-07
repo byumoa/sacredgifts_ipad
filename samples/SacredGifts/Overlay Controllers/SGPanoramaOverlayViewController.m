@@ -50,6 +50,6 @@ const CGPoint kEndPt = {-656, 512};
     self.infoStripImgView.image = [UIImage imageWithContentsOfFile:infoImgStr];
     [self.closeButton removeFromSuperview];
     [self.infoStripImgView addSubview:self.closeButton];
-    self.closeButton.center = CGPointMake(self.infoStripImgView.frame.size.width - 15, 15);
+    self.closeButton.center = CGPointMake(self.infoStripImgView.frame.size.width - 15, self.infoStripImgView.frame.size.height/2);
 }
 @end

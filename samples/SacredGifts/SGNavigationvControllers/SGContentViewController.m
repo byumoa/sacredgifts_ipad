@@ -76,7 +76,7 @@ const float kWall = 0.25;
     
     float x = 0;//attitude.x * kBackgroundDepth;
     float y = attitude.y * kBackgroundDepth;
-    
+
     [UIView animateWithDuration:kUpdateFrequency animations:^{
         self.background.transform = CGAffineTransformTranslate(CGAffineTransformIdentity, kOffsetMultiplier * y, kOffsetMultiplier * x);
         
