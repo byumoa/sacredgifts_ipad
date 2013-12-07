@@ -656,7 +656,7 @@
 				<key>width</key>
 				<integer>620</integer>
 				<key>text</key>
-				<string> Schwartz paints his self-portrait, which is his only work represented in the Danish National Gallery</string>
+				<string>Schwartz paints his self-portrait, which is his only work represented in the Danish National Gallery</string>
 				<key>popup</key>
 				<string>popup10.png</string>
 				<key>buttonImage</key>
@@ -683,7 +683,7 @@
 				<key>y</key>
 				<integer>510</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>259</integer>
 				<key>text</key>
 				<string>Heinrich Hofmann born in Germany</string>
 			</dict>
@@ -693,7 +693,7 @@
 				<key>y</key>
 				<integer>630</integer>
 				<key>width</key>
-				<integer>358</integer>
+				<integer>400</integer>
 				<key>text</key>
 				<string>Hofmann marries long-time sweetheart, Elizabeth Werner</string>
 			</dict>
@@ -703,9 +703,9 @@
 				<key>y</key>
 				<integer>710</integer>
 				<key>width</key>
-				<integer>472</integer>
+				<integer>276</integer>
 				<key>text</key>
-				<string>Hofmann moves to Dresden, Germany, which will be his home until his death</string>
+				<string>Hofmann moves to Dresden, Germany</string>
 			</dict>
 			<dict>
 				<key>x</key>
@@ -743,7 +743,7 @@
 				<key>width</key>
 				<integer>334</integer>
 				<key>text</key>
-				<string>Hofmann elected a professor at Royal Academy</string>
+				<string>Hofmann elected professor at Royal Academy</string>
 				<key>popup</key>
 				<string>popup2.png</string>
 				<key>buttonImage</key>
@@ -775,7 +775,7 @@
 				<key>y</key>
 				<integer>510</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>255</integer>
 				<key>text</key>
 				<string>Hofmann enters Academy of Art</string>
 				<key>popup</key>
@@ -791,9 +791,9 @@
 				<key>y</key>
 				<integer>590</integer>
 				<key>width</key>
-				<integer>454</integer>
+				<integer>268</integer>
 				<key>text</key>
-				<string>Hofmann leaves Düsseldorf Academy in the fall, just prior to father’s death</string>
+				<string>Hofmann leaves Düsseldorf Academy</string>
 			</dict>
 			<dict>
 				<key>x</key>
@@ -801,7 +801,7 @@
 				<key>y</key>
 				<integer>630</integer>
 				<key>width</key>
-				<integer>372</integer>
+				<integer>405</integer>
 				<key>text</key>
 				<string>Hofmann studies briefly at the Antwerp Academy (Belgium)</string>
 			</dict>
@@ -811,7 +811,7 @@
 				<key>y</key>
 				<integer>670</integer>
 				<key>width</key>
-				<integer>381</integer>
+				<integer>419</integer>
 				<key>text</key>
 				<string>Hofmann moves to Munich and paints Shakespearean series</string>
 			</dict>
@@ -821,7 +821,7 @@
 				<key>y</key>
 				<integer>510</integer>
 				<key>width</key>
-				<integer>383</integer>
+				<integer>420</integer>
 				<key>text</key>
 				<string>Hofmann travels to Italy and Rome, where he stays until 1958</string>
 			</dict>
@@ -831,7 +831,7 @@
 				<key>y</key>
 				<integer>670</integer>
 				<key>width</key>
-				<integer>248</integer>
+				<integer>269</integer>
 				<key>text</key>
 				<string>Hofmann’s wife Elisabeth Werner dies</string>
 			</dict>
@@ -841,7 +841,7 @@
 				<key>y</key>
 				<integer>550</integer>
 				<key>width</key>
-				<integer>575</integer>
+				<integer>635</integer>
 				<key>text</key>
 				<string>Inspired by mother’s death, Hofmann begins his first religious piece, The Entombment of Christ</string>
 			</dict>
@@ -885,7 +885,7 @@
 				<key>y</key>
 				<integer>710</integer>
 				<key>width</key>
-				<integer>534</integer>
+				<integer>591</integer>
 				<key>text</key>
 				<string>King Johann bestows on Hofmann the Great Golden Medal for his artistic achievements</string>
 			</dict>
@@ -931,7 +931,7 @@
 				<key>y</key>
 				<integer>550</integer>
 				<key>width</key>
-				<integer>255</integer>
+				<integer>277</integer>
 				<key>text</key>
 				<string>Christ and the Rich Young Ruler</string>
 				<key>popup</key>
