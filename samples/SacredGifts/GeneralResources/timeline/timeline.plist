@@ -15,6 +15,16 @@
 		<array>
 			<dict>
 				<key>x</key>
+				<integer>2978</integer>
+				<key>y</key>
+				<integer>870</integer>
+				<key>width</key>
+				<integer>231</integer>
+				<key>text</key>
+				<string>Brigham Young University founded</string>
+			</dict>
+			<dict>
+				<key>x</key>
 				<integer>193</integer>
 				<key>y</key>
 				<integer>430</integer>
