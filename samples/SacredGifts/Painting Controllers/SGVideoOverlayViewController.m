@@ -41,6 +41,14 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
     
     self.mediaPlayhead.startX = self.playUnderlay.frame.origin.x;
     self.mediaPlayhead.endX = self.playUnderlay.frame.origin.x + self.playUnderlay.frame.size.width;
+    
+    CGPoint center = self.mediaPlayhead.center;
+    center.y = self.playPauseButton.center.y;
+    self.mediaPlayhead.center = center;
+    
+    center = self.playUnderlay.center;
+    center.y = self.playPauseButton.center.y;
+    self.playUnderlay.center = center;
 }
 
 -(void)updateProgressBar:(NSTimer*)timer

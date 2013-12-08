@@ -40,6 +40,13 @@ const CGRect kNarrationFrame = {0, 713, 768, 200};
     self.playhead.startX = self.playUnderlay.frame.origin.x;
     self.playhead.endX = self.playUnderlay.frame.origin.x + self.playUnderlay.frame.size.width;
     
+    CGPoint center = self.playhead.center;
+    center.y = self.playPauseButton.center.y+5;
+    self.playhead.center = center;
+    
+    center = self.playUnderlay.center;
+    center.y = self.playPauseButton.center.y+5;
+    self.playUnderlay.center = center;
 }
 
 -(void)updateProgressBar:(NSTimer*)timer

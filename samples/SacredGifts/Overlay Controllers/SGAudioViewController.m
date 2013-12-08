@@ -34,6 +34,10 @@
     frame.size.width = 0;
     self.playOverlay.frame = frame;
     _progressTimer = [NSTimer scheduledTimerWithTimeInterval:0.25 target:self selector:@selector(updateProgressBar:) userInfo:nil repeats:YES];
+    
+    CGPoint center = self.playUnderlay.center;
+    center.y = self.playPauseButton.center.y+5;
+    self.playUnderlay.center = center;
 }
 
 -(void)updateProgressBar:(NSTimer*)timer

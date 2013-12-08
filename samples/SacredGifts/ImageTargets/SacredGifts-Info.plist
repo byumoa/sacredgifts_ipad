@@ -47,7 +47,11 @@
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
+	<key>FacebookAppID</key>
+	<string>174234872774204</string>
 	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>UIApplicationExistsOnSuspend</key>
 	<true/>
 	<key>UIMainStoryboardFile~ipad</key>
 	<string>Main_iPad</string>
@@ -63,11 +67,9 @@
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
 		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>UIApplicationExistsOnSuspend</key>
-	<true/>
-	<key>FacebookAppID</key>
-	<string>174234872774204</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>
