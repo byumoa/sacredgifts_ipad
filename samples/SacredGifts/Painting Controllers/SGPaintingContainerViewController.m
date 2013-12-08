@@ -33,17 +33,32 @@
  
     int dir = animType == kAnimTypeSwipeLeft ? 1 : -1;
     
-    CGPoint targetCenter = toController.view.center;
-    CGPoint startCenter = targetCenter;
-    startCenter.x += 768 * dir;
-    CGPoint exitCenter = targetCenter;
-    exitCenter.x -= 768 * dir;
-    toController.view.center = startCenter;
-    animTransitionBlock = ^(void){
-        toController.view.alpha = 1;
-        toController.view.center = targetCenter;
-        fromController.view.center = exitCenter;
-    };
+    if( [animType isEqualToString:(NSString*)kAnimTypeFade] )
+    {
+        toController.view.center = CGPointMake(768/2, 1024/2);
+        animTransitionBlock = ^(void)
+        {
+            toController.view.alpha = 1;
+            fromController.view.alpha = 0;
+        };
+    }
+    else
+    {
+        CGPoint targetCenter = toController.view.center;
+        CGPoint startCenter = targetCenter;
+        startCenter.x += 768 * dir;
+        CGPoint exitCenter = targetCenter;
+        exitCenter.x -= 768 * dir;
+        toController.view.center = startCenter;
+        animTransitionBlock = ^(void)
+        {
+            toController.view.alpha = 1;
+            fromController.view.alpha = 0;
+            toController.view.alpha = 1;
+            toController.view.center = targetCenter;
+            fromController.view.center = exitCenter;
+        };
+    }
     
     [self cycleFromViewController:(UIViewController*)self.currentContentController toViewController:toController fromButtonRect:CGRectZero falling:kAnimTypeZoomIn];
     [toController configWithPaintingName:paintingName];

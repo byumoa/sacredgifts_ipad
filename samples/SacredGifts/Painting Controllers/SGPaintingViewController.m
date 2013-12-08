@@ -87,9 +87,9 @@ CGSize const kCastleBtnSize = {768, 41};
 - (IBAction)pressedTempleToggle:(id)sender
 {
     if( ((UIButton*)sender).tag == 0 && [_paintingNameStr isEqualToString:kPaintingNameTempleNY])
-        [self.delegate transitionFromController:self toPaintingNamed:kPaintingNameTemple fromButtonRect:((UIButton*)sender).frame withAnimType:kAnimTypeZoomIn];
+        [self.delegate transitionFromController:self toPaintingNamed:kPaintingNameTemple fromButtonRect:((UIButton*)sender).frame withAnimType:kAnimTypeFade];
     else if( ((UIButton*)sender).tag == 1 && [_paintingNameStr isEqualToString:kPaintingNameTemple])
-        [self.delegate transitionFromController:self toPaintingNamed:kPaintingNameTempleNY fromButtonRect:((UIButton*)sender).frame withAnimType:kAnimTypeZoomIn];
+        [self.delegate transitionFromController:self toPaintingNamed:kPaintingNameTempleNY fromButtonRect:((UIButton*)sender).frame withAnimType:kAnimTypeFade];
 }
 
 -(int)calcCurrentPaintingIndex
@@ -136,6 +136,7 @@ static BOOL chromeHidden = NO;
     
     NSString* swipeDir = (NSString*)kAnimTypeSwipeLeft;
     int nextPaintingIndex = self.currentPaintingIndex + 1;
+    if( [_paintingNameStr isEqualToString:@"temple-ny"] ) nextPaintingIndex++;
     if( sender.direction == UISwipeGestureRecognizerDirectionRight )
     {
         swipeDir = (NSString*)kAnimTypeSwipeRight;

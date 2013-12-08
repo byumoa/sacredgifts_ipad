@@ -54,6 +54,7 @@ extern const NSString* kAnimTypeZoomIn;
 extern const NSString* kAnimTypeZoomOut;
 extern const NSString* kAnimTypeSwipeRight;
 extern const NSString* kAnimTypeSwipeLeft;
+extern const NSString* kAnimTypeFade;
 
 extern const NSString* kControllerIDHomeStr;
 extern const NSString* kControllerIDFindAPaintingStr;
