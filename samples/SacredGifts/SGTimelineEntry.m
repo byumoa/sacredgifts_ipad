@@ -20,7 +20,12 @@
 {
     if( self = [super initWithFrame:CGRectMake(0, 0, ((NSNumber*)[dict objectForKey:@"width"]).floatValue, 40)] )
     {
-        self.center = CGPointMake(((NSNumber*)[dict objectForKey:@"x"]).floatValue, ((NSNumber*)[dict objectForKey:@"y"]).floatValue);
+        CGPoint origin = CGPointMake(((NSNumber*)[dict objectForKey:@"x"]).floatValue, ((NSNumber*)[dict objectForKey:@"y"]).floatValue);
+        
+        CGRect frame = self.frame;
+        frame.origin = origin;
+        self.frame = frame;
+        
         self.backgroundColor = [UIColor clearColor];
         self.clipsToBounds = YES;
         _fullFrame = self.frame;
@@ -35,7 +40,7 @@
         leftHandle.backgroundColor = [UIColor colorWithRed:r green:g blue:b alpha:1.0];
         [self addSubview:leftHandle];
         
-        CGRect frame = self.frame;
+        frame = self.frame;
         frame.origin = CGPointZero;
         UILabel *label = [[UILabel alloc] initWithFrame:frame];
         label.text = [dict objectForKey:@"text"];
@@ -44,6 +49,7 @@
         label.font = [UIFont fontWithName:@"HelveticaNeue-Light" size:14];
         CGPoint center = label.center;
         center.x += 12;
+        center.y -= 2;
         label.center = center;
         [self addSubview:label];
         
