@@ -15,9 +15,19 @@
 		<array>
 			<dict>
 				<key>x</key>
+				<integer>193</integer>
+				<key>y</key>
+				<integer>430</integer>
+				<key>width</key>
+				<integer>320</integer>
+				<key>text</key>
+				<string>Bertel Thorvaldsen completes his Christus statue</string>
+			</dict>
+			<dict>
+				<key>x</key>
 				<integer>667</integer>
 				<key>y</key>
-				<integer>590</integer>
+				<integer>550</integer>
 				<key>width</key>
 				<integer>244</integer>
 				<key>text</key>
@@ -27,7 +37,7 @@
 				<key>x</key>
 				<integer>663</integer>
 				<key>y</key>
-				<integer>630</integer>
+				<integer>510</integer>
 				<key>width</key>
 				<integer>244</integer>
 				<key>text</key>
@@ -39,9 +49,9 @@
 				<key>y</key>
 				<integer>550</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>250</integer>
 				<key>text</key>
-				<string>Joseph Smith, Jr. killed</string>
+				<string>LDS Prophet Joseph Smith, Jr. killed</string>
 			</dict>
 			<dict>
 				<key>x</key>
@@ -52,6 +62,86 @@
 				<integer>244</integer>
 				<key>text</key>
 				<string>Salt Lake Temple completed</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>2171</integer>
+				<key>y</key>
+				<integer>390</integer>
+				<key>width</key>
+				<integer>190</integer>
+				<key>text</key>
+				<string>Frederiksborg castle fire</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>4328</integer>
+				<key>y</key>
+				<integer>350</integer>
+				<key>width</key>
+				<integer>225</integer>
+				<key>text</key>
+				<string>Vor Frue Kirke altarpiece fire</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>3558</integer>
+				<key>y</key>
+				<integer>350</integer>
+				<key>width</key>
+				<integer>622</integer>
+				<key>text</key>
+				<string>Nørresundby Kirke (Nørresundby, Denmark), originally built in the 1100s, receives extensive restoration</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>4069</integer>
+				<key>y</key>
+				<integer>510</integer>
+				<key>width</key>
+				<integer>205</integer>
+				<key>text</key>
+				<string>Nørresundby Kirke renovated and expanded</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>2997</integer>
+				<key>y</key>
+				<integer>150</integer>
+				<key>width</key>
+				<integer>330</integer>
+				<key>text</key>
+				<string>Ordrup Kirke completed (Charlottenlund, Denmark)</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>3100</integer>
+				<key>y</key>
+				<integer>110</integer>
+				<key>width</key>
+				<integer>350</integer>
+				<key>text</key>
+				<string>Sankt Jakobs Kirke completed (Copenhagen, Denmark)</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>1569</integer>
+				<key>y</key>
+				<integer>710</integer>
+				<key>width</key>
+				<integer>450</integer>
+				<key>text</key>
+				<string>Hörups Kyrka (Hörup, Sweden), originally built in the 1100s, is expanded</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>2185</integer>
+				<key>y</key>
+				<integer>750</integer>
+				<key>width</key>
+				<integer>559</integer>
+				<key>text</key>
+				<string>Löderups Kyrka (Löderup, Sweden), originally built in the 1100s, is extensively renovated</string>
 			</dict>
 		</array>
 	</dict>
@@ -82,9 +172,9 @@
 				<key>y</key>
 				<integer>670</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>334</integer>
 				<key>text</key>
-				<string>Great Chicago fire</string>
+				<string>German Empire formed under Otto von Bismarck</string>
 			</dict>
 			<dict>
 				<key>x</key>
@@ -151,13 +241,13 @@
 		<array>
 			<dict>
 				<key>x</key>
-				<integer>864</integer>
+				<integer>873</integer>
 				<key>y</key>
 				<integer>430</integer>
 				<key>width</key>
-				<integer>339</integer>
+				<integer>265</integer>
 				<key>text</key>
-				<string>Carl Bloch born on May 23 in Copenhagen, Denmark</string>
+				<string>Carl Bloch born in Copenhagen, Denmark</string>
 			</dict>
 			<dict>
 				<key>x</key>
@@ -165,7 +255,7 @@
 				<key>y</key>
 				<integer>350</integer>
 				<key>width</key>
-				<integer>340</integer>
+				<integer>350</integer>
 				<key>text</key>
 				<string>Bloch accepted to Royal Danish Academy of Fine Arts</string>
 			</dict>
@@ -191,7 +281,7 @@
 				<key>y</key>
 				<integer>430</integer>
 				<key>width</key>
-				<integer>398</integer>
+				<integer>405</integer>
 				<key>text</key>
 				<string>Bloch travels to Florence, Italy to study for Oratory commission</string>
 			</dict>
@@ -221,7 +311,7 @@
 				<key>y</key>
 				<integer>432</integer>
 				<key>width</key>
-				<integer>375</integer>
+				<integer>385</integer>
 				<key>text</key>
 				<string>Bloch marries Alma Trepka on May 31, against family wishes</string>
 			</dict>
@@ -562,7 +652,7 @@
 				<key>y</key>
 				<integer>590</integer>
 				<key>width</key>
-				<integer>548</integer>
+				<integer>560</integer>
 				<key>text</key>
 				<string> Schwartz paints The Ten Virgins for Soldenfeldt Foundation, his most well-known painting</string>
 			</dict>
@@ -572,9 +662,9 @@
 				<key>y</key>
 				<integer>790</integer>
 				<key>width</key>
-				<integer>525</integer>
+				<integer>535</integer>
 				<key>text</key>
-				<string>Schwartz paints The Sick and Weak Seek Healing from Jesus his first religious piece </string>
+				<string>Schwartz paints The Sick and Weak Seek Healing from Jesus, his first religious piece </string>
 			</dict>
 			<dict>
 				<key>x</key>
@@ -582,7 +672,7 @@
 				<key>y</key>
 				<integer>750</integer>
 				<key>width</key>
-				<integer>886</integer>
+				<integer>900</integer>
 				<key>text</key>
 				<string>Schwartz attends The Artist’s Spring Convention at Charlottenborg and exhibits his first painting, Job and Friends, which wins the lesser Gold Medal</string>
 			</dict>
@@ -592,19 +682,19 @@
 				<key>y</key>
 				<integer>510</integer>
 				<key>width</key>
-				<integer>595</integer>
+				<integer>625</integer>
 				<key>text</key>
 				<string> Schwartz and fellow artists L. Tuxen and P.S. Kroyer begin an alternate art school to the Academy</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>4328</integer>
+				<integer>4333</integer>
 				<key>y</key>
 				<integer>390</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>405</integer>
 				<key>text</key>
-				<string>Schwartz paints altarpiece</string>
+				<string>Schwartz begins new altarpiece for Vor Frue Kirke</string>
 				<key>popup</key>
 				<string>popup12.png</string>
 				<key>buttonImage</key>
@@ -613,6 +703,16 @@
 				<string>aalborg</string>
 				<key>thumbnail</key>
 				<string>timeline_aalborg.png</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>4634</integer>
+				<key>y</key>
+				<integer>430</integer>
+				<key>width</key>
+				<integer>272</integer>
+				<key>text</key>
+				<string>Schwartz finishes Vor Frue altarpiece</string>
 			</dict>
 			<dict>
 				<key>x</key>
@@ -679,13 +779,13 @@
 		<array>
 			<dict>
 				<key>x</key>
-				<integer>358</integer>
+				<integer>360</integer>
 				<key>y</key>
 				<integer>510</integer>
 				<key>width</key>
-				<integer>259</integer>
+				<integer>305</integer>
 				<key>text</key>
-				<string>Heinrich Hofmann born in Germany</string>
+				<string>Heinrich Hofmann born in Darmstadt, Germany</string>
 			</dict>
 			<dict>
 				<key>x</key>
