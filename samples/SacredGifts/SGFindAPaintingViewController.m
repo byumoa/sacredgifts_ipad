@@ -24,6 +24,8 @@ const int kArtistBlochTag = 3;
 
 - (IBAction)touchedPainting:(UIButton *)sender
 {
+    int tag = sender.tag;
+    if( tag > 10 ) tag++;
     NSString* paintingName = (NSString*)kPaintingNames[sender.tag-1];
     [self.delegate transitionFromController:self toPaintingNamed:paintingName fromButtonRect:sender.frame withAnimType:kAnimTypeZoomIn];
 }

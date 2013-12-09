@@ -46,7 +46,7 @@ const NSString* kfacebookURLcross = @"http://on.fb.me/1dNm8Hy";
 const NSString* kfacebookURLburial = @"http://on.fb.me/187Ey3g";
 const NSString* kfacebookURLresurrection = @"http://on.fb.me/1hvr8Bn";
 
-const int kTotalPaintings = 19;
+const int kTotalPaintings = 20;
 NSString* const kPaintingNames[] = {
     @"capture",
     @"temple",
@@ -58,6 +58,7 @@ NSString* const kPaintingNames[] = {
     @"mocking",
     @"consolator",
     @"emmaus",
+    @"castle",
     @"shepherds",
     @"sermon",
     @"children",
@@ -66,7 +67,7 @@ NSString* const kPaintingNames[] = {
     @"denial",
     @"cross",
     @"burial",
-    @"resurrection"
+    @"resurrection",
 };
 
 NSString* const kArtistNames[] = {

@@ -151,7 +151,7 @@ static BOOL chromeHidden = NO;
 
 - (IBAction)swipeRecognized:(UISwipeGestureRecognizer *)sender
 {
-    if( !_tombstoneShown || [_paintingNameStr isEqualToString:@"castle"] ) return;
+    if( !_tombstoneShown ) return;//|| [_paintingNameStr isEqualToString:@"castle"] ) return;
     
     NSString* swipeDir = (NSString*)kAnimTypeSwipeLeft;
     int nextPaintingIndex = self.currentPaintingIndex + 1;
