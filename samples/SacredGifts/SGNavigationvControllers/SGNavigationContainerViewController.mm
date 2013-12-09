@@ -67,12 +67,14 @@
 {
     [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action" action:@"button_press" label:@"donate" value:nil] build]];
     //For App Store
-    //[[UIApplication sharedApplication] openURL:[NSURL URLWithString: (NSString*)kDontateURLStr]];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: (NSString*)kDontateURLStr]];
     //For Museum
+    /*
     SGDonateViewController* donateViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"donate"];
     [self presentViewController:donateViewController animated:YES completion:^{
         [[UIApplication sharedApplication] setStatusBarHidden:YES];
     }];
+     */
 }
 
 -(void)pressedFeedback:(UIButton *)sender

@@ -59,7 +59,7 @@ int const kOverlayHeight = 236;
     {
         case SocialMediaTypeFacebook:
         {
-            /*
+            
             NSString* artist = [self calcArtistForPaintingStr:self.paintingName];
             NSString* autofillStr = [NSString stringWithFormat:kFacebookAutofill, artist];
             
@@ -68,27 +68,27 @@ int const kOverlayHeight = 236;
             [socialSheet addImage:thumbnail];
             [socialSheet addURL:[NSURL URLWithString:kAppStoreURL]];
             [self presentViewController:socialSheet animated:YES completion:^{}];
-             */
+            
             mediaType = @"facebook";
-            [self doInMuseumFBPostWithImage:thumbnail];
+            //[self doInMuseumFBPostWithImage:thumbnail];
         }
             break;
         case SocialMediaTypeTwitter:
         {
-            /*
+            
             SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
             [socialSheet setInitialText:(NSString*)kTwitterAutofill];
             [socialSheet addImage:thumbnail];
             [socialSheet addURL:[NSURL URLWithString:kAppStoreURL]];
             [self presentViewController:socialSheet animated:YES completion:^{}];
-             */
+            
             mediaType = @"twitter";
-            [self doInMuseumTWPostWithImage:thumbnail];
+            //[self doInMuseumTWPostWithImage:thumbnail];
         }
             break;
         case SocialMediaTypeEmail:
         {
-            /*
+            
             NSString* artist = [self calcArtistForPaintingStr:self.paintingName];
             NSString* autofillStr = [NSString stringWithFormat:kEmailAutofill, artist, kAppStoreURL];
             
@@ -99,7 +99,7 @@ int const kOverlayHeight = 236;
             [self presentViewController:mailController animated:YES completion:^{}];
             NSData *myData = UIImageJPEGRepresentation(thumbnail, 1.0);
             [mailController addAttachmentData:myData mimeType:@"image/png" fileName:@"Thumbnail.png"];
-             */
+            
             mediaType = @"email";
         }
             break;

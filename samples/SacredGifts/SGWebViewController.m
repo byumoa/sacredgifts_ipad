@@ -55,7 +55,9 @@ NSString* const kFeedbackImgStr = @"SG_General_header_feedback.png";
     }
     
     self.webHeaderImgView.image = [UIImage imageNamed:headerImgStr];
-    [self.webView loadRequest:[NSURLRequest requestWithURL:[NSURL URLWithString:urlStr]]];
+    NSURL* url = [NSURL URLWithString:urlStr];
+    NSURLRequest* request = [NSURLRequest requestWithURL:url cachePolicy:NSURLCacheStorageAllowed timeoutInterval:120];
+    [self.webView loadRequest:request];
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
