@@ -21,6 +21,27 @@
     toController.delegate = self;
 }
 
+- (NSUInteger)supportedInterfaceOrientations{
+    
+    SGPaintingViewController* paintingViewController = (SGPaintingViewController*)self.currentContentController;
+    if( paintingViewController.overlayController.moduleType == kModuleTypeVideo )
+    {
+        NSLog(@"SGPaintingContainerViewController supportedInterfaceOrientations: All");
+        return UIInterfaceOrientationMaskAll;
+    }
+    else
+        NSLog(@"SGPaintingContainerViewController supportedInterfaceOrientations: Portrait");
+    
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    
+    if( [(SGPaintingViewController*)self.currentContentController isKindOfClass:[SGPaintingViewController class]] )
+        return YES;
+    return UIInterfaceOrientationIsPortrait(UIInterfaceOrientationPortrait);
+}
+
 -(UIViewController*)transitionFromController:(UIViewController *)fromController toPaintingNamed:(NSString *)paintingName fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
 {
     [self stopAudio];

@@ -12,6 +12,8 @@
 #import "GAI.h"
 #import "GAIFields.h"
 #import "SGConvenienceFunctionsManager.h"
+#import "SGPaintingContainerViewController.h"
+#import "SGPaintingViewController.h"
 
 const CGPoint kSplashLogoStartPoint = {384,840};
 
@@ -40,12 +42,28 @@ const CGPoint kSplashLogoStartPoint = {384,840};
     }
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    return UIInterfaceOrientationIsPortrait(UIInterfaceOrientationPortrait);
+- (NSUInteger)supportedInterfaceOrientations{
+    if( [self.currentContentController isKindOfClass:[SGPaintingContainerViewController class]] )
+    {
+        SGPaintingContainerViewController* paintingContainer = (SGPaintingContainerViewController*)self.currentContentController;
+        SGPaintingViewController* paintingViewController = (SGPaintingViewController*)paintingContainer.currentContentController;
+        if( paintingViewController.overlayController.moduleType == kModuleTypeVideo )
+        {
+            NSLog(@"SGViewController supportedInterfaceOrientations: All");
+            return UIInterfaceOrientationMaskAll;
+        }
+        else
+            NSLog(@"SGViewController supportedInterfaceOrientations: Portrait");
+    }
+    
+    return UIInterfaceOrientationMaskPortrait;
 }
 
-- (NSUInteger)supportedInterfaceOrientations{
-    return UIInterfaceOrientationMaskPortrait;
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    
+    if( [self.currentContentController isKindOfClass:[SGPaintingContainerViewController class]] )
+        return YES;
+    return UIInterfaceOrientationIsPortrait(UIInterfaceOrientationPortrait);
 }
 
 -(void)pressedBack:(UIButton *)sender

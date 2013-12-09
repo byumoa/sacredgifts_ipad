@@ -48,6 +48,7 @@ CGSize const kCastleBtnSize = {768, 41};
 - (int)calcCurrentPaintingIndex;
 - (void)deselectAllModuleBtns;
 - (void)navigateToCastle: (UIButton*)sender;
+- (BOOL)shouldShowCastleButton;
 @end
 
 @implementation SGPaintingViewController
@@ -82,6 +83,24 @@ CGSize const kCastleBtnSize = {768, 41};
         self.shareBtn.hidden = YES;
     else
         self.shareBtn.hidden = NO;
+}
+
+- (NSUInteger)supportedInterfaceOrientations{
+    if( self.overlayController.moduleType == kModuleTypeVideo )
+    {
+        NSLog(@"paintingVC supportedInterfaceOrientations: All");
+        return UIInterfaceOrientationMaskAll;
+    }
+    else
+        NSLog(@"paintingVC supportedInterfaceOrientations: Portrait");
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    
+    if( self.overlayController.moduleType == kModuleTypeVideo )
+        return YES;
+    return UIInterfaceOrientationIsPortrait(UIInterfaceOrientationPortrait);
 }
 
 - (IBAction)pressedTempleToggle:(id)sender
@@ -403,7 +422,7 @@ static BOOL chromeHidden = NO;
             NSString *overlayPath = [[NSBundle mainBundle] pathForResource:moduleStr ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@/%@", kPaintingResourcesStr, paintingStr, moduleStr]];
             [self.overlayController addBackgroundImgWithPath:overlayPath];
             
-            if( [moduleStr isEqualToString:kSummaryStr] && [[SGConvenienceFunctionsManager artistForPainting:_paintingNameStr abbreviated:YES] isEqualToString:@"bloch"] && ![_paintingNameStr isEqualToString:@"castle"])
+            if( [self shouldShowCastleButton] && self.overlayController.moduleType == kModuleTypeSummary )
             {
                 UIButton* castleBtn = [UIButton buttonWithType:UIButtonTypeCustom];
                 [castleBtn setImage:[UIImage imageNamed:kCastleBtnNrmStr] forState:UIControlStateNormal];
@@ -434,6 +453,18 @@ static BOOL chromeHidden = NO;
     }];
     
     return self.overlayController;
+}
+
+-(BOOL)shouldShowCastleButton
+{
+    return ([_paintingNameStr isEqualToString:@"healing"] ||
+            [_paintingNameStr isEqualToString:@"sermon"] ||
+            [_paintingNameStr isEqualToString:@"cleansing"] ||
+            [_paintingNameStr isEqualToString:@"shepherds"] ||
+            [_paintingNameStr isEqualToString:@"children"] ||
+            [_paintingNameStr isEqualToString:@"burial"] ||
+            [_paintingNameStr isEqualToString:@"cross"] ||
+            [_paintingNameStr isEqualToString:@"denial"]);
 }
 
 -(void)navigateToCastle:(UIButton *)sender
