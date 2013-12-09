@@ -70,6 +70,7 @@ CGRect const kMovieFrameLandscape = {0, 0, 1024, 768};
     self.moviePlayer.movieSourceType = MPMovieSourceTypeFile;
     self.moviePlayer.controlStyle = MPMovieControlStyleNone;
     [self.view addSubview:self.moviePlayer.view];
+    self.moviePlayer.backgroundView.backgroundColor = [UIColor whiteColor];
     [self.moviePlayer prepareToPlay];
     [self.moviePlayer play];
 }
