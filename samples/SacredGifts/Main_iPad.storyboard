@@ -1158,16 +1158,24 @@
                                     <action selector="pressedSocialBtn:" destination="n9h-Kx-tEQ" eventType="touchUpInside" id="FTm-Lq-RAv"/>
                                 </connections>
                             </button>
-                            <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Acm-bY-uZo">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Acm-bY-uZo">
                                 <rect key="frame" x="376" y="152" width="244" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="SG_General_Share_thanks.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted" image="SG_General_Share_thanks-on.png"/>
+                                <connections>
+                                    <action selector="pressedSocialBtn:" destination="n9h-Kx-tEQ" eventType="touchUpInside" id="YHi-z9-eaH"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oIt-eA-odc">
+                                <rect key="frame" x="598" y="103" width="244" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="SG_General_Share_email.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="highlighted" image="SG_General_Share_email-on.png"/>
-                                <connections>
-                                    <action selector="pressedSocialBtn:" destination="n9h-Kx-tEQ" eventType="touchUpInside" id="YHi-z9-eaH"/>
-                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aalborg.png" id="Sjw-ua-Ere">
                                 <rect key="frame" x="18" y="36" width="319" height="166"/>
@@ -1989,6 +1997,8 @@
         <image name="SG_General_Share_email.png" width="244" height="41"/>
         <image name="SG_General_Share_fb-on.png" width="244" height="41"/>
         <image name="SG_General_Share_fb.png" width="244" height="41"/>
+        <image name="SG_General_Share_thanks-on.png" width="245" height="41"/>
+        <image name="SG_General_Share_thanks.png" width="244" height="41"/>
         <image name="SG_General_Share_tw-on.png" width="244" height="41"/>
         <image name="SG_General_Share_tw.png" width="244" height="41"/>
         <image name="SG_General_TopBar.png" width="768" height="62"/>

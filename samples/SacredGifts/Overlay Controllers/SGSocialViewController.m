@@ -121,7 +121,7 @@ int const kOverlayHeight = 236;
 - (IBAction)pressedSignOut:(id)sender
 {
     [SGConvenienceFunctionsManager facebookLogout];
-    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Social Media" message:@"You are logged out of facebook and twitter" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Social Media" message:@"You are signed out of facebook and twitter" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles: nil];
     [alert show];
 }
 
