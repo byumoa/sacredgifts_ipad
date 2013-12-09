@@ -7,8 +7,11 @@
 //
 
 #import "SGIntroMovieViewController.h"
+#import "SGNavigationContainerViewController.h"
 
 NSString* const kIntroMovieStr = @"Sacred_Gifts_Intro_Film_FOR_IPAD";
+CGRect const kMovieFramePortrait = {0, 45, 768, 432};
+CGRect const kMovieFrameLandscape = {0, 0, 1024, 768};
 
 @interface SGIntroMovieViewController ()
 
@@ -17,6 +20,25 @@ NSString* const kIntroMovieStr = @"Sacred_Gifts_Intro_Film_FOR_IPAD";
 @end
 
 @implementation SGIntroMovieViewController
+
+- (NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskAll;
+}
+
+-(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    if( UIInterfaceOrientationIsLandscape(toInterfaceOrientation))
+    {
+        self.moviePlayer.view.frame = kMovieFrameLandscape;
+        ((SGNavigationContainerViewController*)self.delegate).headerView.alpha = 0;
+    }
+    else
+    {
+        self.moviePlayer.view.frame = kMovieFramePortrait;
+        self.moviePlayer.view.center = self.view.center;
+        ((SGNavigationContainerViewController*)self.delegate).headerView.alpha = 1;
+    }
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -39,13 +61,11 @@ NSString* const kIntroMovieStr = @"Sacred_Gifts_Intro_Film_FOR_IPAD";
 {
     NSString* path = [[NSBundle mainBundle] pathForResource:kIntroMovieStr ofType:@"mp4" inDirectory:@"PaintingResources"];
 
-    NSLog(@"path: %@", path);
     if(!path) return;
     NSURL *url = [NSURL fileURLWithPath:path];
-    NSLog(@"url: %@", url.description);
     
     self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:url];
-    self.moviePlayer.view.frame = CGRectMake(0, 45, 768, 432);
+    self.moviePlayer.view.frame = kMovieFramePortrait;
     self.moviePlayer.view.center = self.view.center;
     self.moviePlayer.movieSourceType = MPMovieSourceTypeFile;
     self.moviePlayer.controlStyle = MPMovieControlStyleNone;

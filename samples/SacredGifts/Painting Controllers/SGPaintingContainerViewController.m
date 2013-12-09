@@ -35,13 +35,6 @@
     return UIInterfaceOrientationMaskPortrait;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    
-    if( [(SGPaintingViewController*)self.currentContentController isKindOfClass:[SGPaintingViewController class]] )
-        return YES;
-    return UIInterfaceOrientationIsPortrait(UIInterfaceOrientationPortrait);
-}
-
 -(UIViewController*)transitionFromController:(UIViewController *)fromController toPaintingNamed:(NSString *)paintingName fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
 {
     [self stopAudio];

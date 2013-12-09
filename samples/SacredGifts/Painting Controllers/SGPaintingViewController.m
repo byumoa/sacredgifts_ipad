@@ -96,13 +96,6 @@ CGSize const kCastleBtnSize = {768, 41};
     return UIInterfaceOrientationMaskPortrait;
 }
 
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
-    
-    if( self.overlayController.moduleType == kModuleTypeVideo )
-        return YES;
-    return UIInterfaceOrientationIsPortrait(UIInterfaceOrientationPortrait);
-}
-
 - (IBAction)pressedTempleToggle:(id)sender
 {
     if( ((UIButton*)sender).tag == 0 && [_paintingNameStr isEqualToString:kPaintingNameTempleNY])

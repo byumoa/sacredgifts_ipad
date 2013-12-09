@@ -14,6 +14,7 @@
 #import "SGConvenienceFunctionsManager.h"
 #import "SGPaintingContainerViewController.h"
 #import "SGPaintingViewController.h"
+#import "SGIntroMovieViewController.h"
 
 const CGPoint kSplashLogoStartPoint = {384,840};
 
@@ -56,14 +57,10 @@ const CGPoint kSplashLogoStartPoint = {384,840};
             NSLog(@"SGViewController supportedInterfaceOrientations: Portrait");
     }
     
-    return UIInterfaceOrientationMaskPortrait;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    if( [self.currentContentController isKindOfClass:[SGIntroMovieViewController class]])
+        return UIInterfaceOrientationMaskAll;
     
-    if( [self.currentContentController isKindOfClass:[SGPaintingContainerViewController class]] )
-        return YES;
-    return UIInterfaceOrientationIsPortrait(UIInterfaceOrientationPortrait);
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 -(void)pressedBack:(UIButton *)sender
