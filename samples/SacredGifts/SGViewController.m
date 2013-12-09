@@ -40,6 +40,14 @@ const CGPoint kSplashLogoStartPoint = {384,840};
     }
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return UIInterfaceOrientationIsPortrait(UIInterfaceOrientationPortrait);
+}
+
+- (NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 -(void)pressedBack:(UIButton *)sender
 {
     if( [self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDHomeStr] && (self.scanController == nil))

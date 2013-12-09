@@ -14,6 +14,14 @@
 
 @implementation SGDonateViewController
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return UIInterfaceOrientationIsPortrait(UIInterfaceOrientationPortrait);
+}
+
+- (NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 -(void)touchedAnywhere:(id)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];

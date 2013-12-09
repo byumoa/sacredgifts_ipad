@@ -19,6 +19,14 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return UIInterfaceOrientationIsPortrait(UIInterfaceOrientationPortrait);
+}
+
+- (NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 -(void)configureWebpageForURLStr:(NSString *)urlStr
 {
     /*

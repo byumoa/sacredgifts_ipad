@@ -14,6 +14,14 @@
 
 @implementation SGFacebookViewController
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return UIInterfaceOrientationIsPortrait(UIInterfaceOrientationPortrait);
+}
+
+- (NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 -(void)pressedClose:(UIButton *)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];

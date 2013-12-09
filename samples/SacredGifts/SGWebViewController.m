@@ -20,6 +20,14 @@ NSString* const kFeedbackImgStr = @"SG_General_header_feedback.png";
 
 @implementation SGWebViewController
 
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation {
+    return UIInterfaceOrientationIsPortrait(UIInterfaceOrientationPortrait);
+}
+
+- (NSUInteger)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
 -(void)configureWebpageForURL:(NSURL *)url
 {
     [self.webView loadRequest:[NSURLRequest requestWithURL:url]];
