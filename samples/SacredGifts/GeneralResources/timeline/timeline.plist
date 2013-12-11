@@ -55,13 +55,33 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>1344</integer>
+				<integer>1314</integer>
 				<key>y</key>
 				<integer>550</integer>
+				<key>width</key>
+				<integer>370</integer>
+				<key>text</key>
+				<string>First LDS congregation in Darmstadt, Germany organized</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>1392</integer>
+				<key>y</key>
+				<integer>590</integer>
 				<key>width</key>
 				<integer>250</integer>
 				<key>text</key>
 				<string>LDS Prophet Joseph Smith, Jr. killed</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>1542</integer>
+				<key>y</key>
+				<integer>750</integer>
+				<key>width</key>
+				<integer>320</integer>
+				<key>text</key>
+				<string>First pioneer company arrives in Salt Lake Valley</string>
 			</dict>
 			<dict>
 				<key>x</key>
@@ -137,9 +157,9 @@
 				<key>x</key>
 				<integer>1569</integer>
 				<key>y</key>
-				<integer>710</integer>
+				<integer>790</integer>
 				<key>width</key>
-				<integer>450</integer>
+				<integer>460</integer>
 				<key>text</key>
 				<string>Hörups Kyrka (Hörup, Sweden), originally built in the 1100s, is expanded</string>
 			</dict>
@@ -147,9 +167,9 @@
 				<key>x</key>
 				<integer>2185</integer>
 				<key>y</key>
-				<integer>750</integer>
+				<integer>670</integer>
 				<key>width</key>
-				<integer>559</integer>
+				<integer>554</integer>
 				<key>text</key>
 				<string>Löderups Kyrka (Löderup, Sweden), originally built in the 1100s, is extensively renovated</string>
 			</dict>
@@ -170,7 +190,7 @@
 				<key>x</key>
 				<integer>2235</integer>
 				<key>y</key>
-				<integer>670</integer>
+				<integer>710</integer>
 				<key>width</key>
 				<integer>244</integer>
 				<key>text</key>
@@ -811,11 +831,11 @@
 				<key>x</key>
 				<integer>2290</integer>
 				<key>y</key>
-				<integer>710</integer>
+				<integer>750</integer>
 				<key>width</key>
-				<integer>276</integer>
+				<integer>443</integer>
 				<key>text</key>
-				<string>Hofmann moves to Dresden, Germany</string>
+				<string>Hofmann moves to Dresden, Germany, where he stays until his death</string>
 			</dict>
 			<dict>
 				<key>x</key>
@@ -899,7 +919,7 @@
 				<key>x</key>
 				<integer>1417</integer>
 				<key>y</key>
-				<integer>590</integer>
+				<integer>630</integer>
 				<key>width</key>
 				<integer>268</integer>
 				<key>text</key>
@@ -909,7 +929,7 @@
 				<key>x</key>
 				<integer>1468</integer>
 				<key>y</key>
-				<integer>630</integer>
+				<integer>670</integer>
 				<key>width</key>
 				<integer>405</integer>
 				<key>text</key>
@@ -919,7 +939,7 @@
 				<key>x</key>
 				<integer>1519</integer>
 				<key>y</key>
-				<integer>670</integer>
+				<integer>710</integer>
 				<key>width</key>
 				<integer>419</integer>
 				<key>text</key>
