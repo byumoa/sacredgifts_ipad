@@ -87,8 +87,12 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
         [self.moviePlayer prepareToPlay];
         [self.moviePlayer play];
         [SGMusicManager dropVolume];
-        [UIView animateWithDuration:0.25 animations:^{
+        
+        [UIView animateWithDuration:0.25 delay:0 options:0 animations:^{
             self.freezeFrame.alpha = 0;
+        } completion:^(BOOL finished) {
+            [self.freezeFrame removeFromSuperview];
+            [self.view insertSubview:self.freezeFrame belowSubview:self.moviePlayer.view];
         }];
     }
     
@@ -118,6 +122,8 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
 
 -(void)playbackFinished:(NSNotification *)notification
 {
+    [self.freezeFrame removeFromSuperview];
+    [self.view insertSubview:self.freezeFrame aboveSubview:self.moviePlayer.view];
     [UIView animateWithDuration:0.25 animations:^{
         self.freezeFrame.alpha = 1;
     }];

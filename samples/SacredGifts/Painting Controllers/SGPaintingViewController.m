@@ -40,8 +40,8 @@ CGSize const kCastleBtnSize = {768, 41};
 CGRect const kPaintingFrameLandscape = {0,20,1024,768};
 CGRect const kPaintingFramePortrait = {0,66,768,892};
 
-CGRect const kVideoFrameLandscape = {0,0,1024,768};
-CGRect const kVideoFramePortrait = {0,0,768,1024};
+CGRect const kVideoFrameLandscape = {0, -210,1024,768};
+CGRect const kVideoFramePortrait = {0, 45, 768, 432};
 
 NSString* const kTempleDefaultKey = @"templeVersion";
 
@@ -135,11 +135,12 @@ NSString* const kTempleDefaultKey = @"templeVersion";
     }
      */
     
-    NSLog(@"");
-    if( [self.overlayController respondsToSelector:@selector(setMoviePlayer)])
+    if([self.overlayController respondsToSelector:@selector(childOverlay)] &&
+       ((SGMediaSelectionViewController*)self.overlayController).childOverlay.moduleType == kModuleTypeVideo)
     {
         CGRect frame = isTurningToLandscape ? kVideoFrameLandscape : kVideoFramePortrait;
-        ((SGVideoOverlayViewController*)self.overlayController).moviePlayer.view.frame = frame;
+        ((SGVideoOverlayViewController*)((SGMediaSelectionViewController*)self.overlayController).childOverlay).moviePlayer.view.frame = frame;
+        NSLog(@"frame: (%.01f, %.01f, %.01f, %.01f)", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
     }
 }
 
@@ -557,12 +558,19 @@ static BOOL chromeHidden = NO;
 {
     [UIView animateWithDuration:0.25 animations:^{
         self.footerView.alpha = targetAlpha;
-        self.overlayController.view.alpha = targetAlpha;
         self.headerView.alpha = targetAlpha;
         ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = targetAlpha;
         
-        if( isTurning && self.overlayController.moduleType == kModuleTypeVideo )
-            ((SGVideoOverlayViewController*)self.overlayController).moviePlayer.view.alpha = 1;
+        if( isTurning &&
+           [self.overlayController respondsToSelector:@selector(childOverlay)] &&
+           ((SGMediaSelectionViewController*)self.overlayController).childOverlay.moduleType == kModuleTypeVideo)
+        {
+            for( UIView* view in ((SGMediaSelectionViewController*)self.overlayController).childOverlay.view.subviews )
+                if( view != ((SGVideoOverlayViewController*)((SGMediaSelectionViewController*)self.overlayController).childOverlay).moviePlayer.view)
+                view.alpha = targetAlpha;
+        }
+        else
+            self.overlayController.view.alpha = targetAlpha;
     }];
 }
 
