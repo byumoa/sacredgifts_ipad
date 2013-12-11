@@ -14,6 +14,13 @@
 
 @implementation SGFacebookViewController
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.screenName = @"facebook";
+}
+
 - (NSUInteger)supportedInterfaceOrientations{
     return UIInterfaceOrientationMaskPortrait;
 }

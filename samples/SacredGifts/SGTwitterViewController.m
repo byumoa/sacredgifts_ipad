@@ -14,6 +14,13 @@
 
 @implementation SGTwitterViewController
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.screenName = @"twitter";
+}
+
 -(void)pressedClose:(UIButton *)sender
 {
     [self dismissViewControllerAnimated:YES completion:nil];

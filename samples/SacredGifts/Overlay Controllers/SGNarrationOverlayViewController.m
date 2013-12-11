@@ -41,7 +41,8 @@ const CGRect kNarrationFrame = {0, 713, 768, 200};
     self.playhead.endX = self.playUnderlay.frame.origin.x + self.playUnderlay.frame.size.width;
     
     CGPoint center = self.playhead.center;
-    center.y = self.playPauseButton.center.y+5;
+    center.y = self.playPauseButton.center.y+3;
+    center.x = self.playUnderlay.frame.origin.x;
     self.playhead.center = center;
     
     center = self.playUnderlay.center;
@@ -58,16 +59,18 @@ const CGRect kNarrationFrame = {0, 713, 768, 200};
     if( _narrationManager.player.duration > 0.0 )
     {
         frame.size.width = _narrationManager.player.currentTime / _narrationManager.player.duration * self.playUnderlay.frame.size.width;
+        
+        center = self.playhead.center;
+        center.x = self.playUnderlay.frame.origin.x + frame.size.width;
+        [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+            self.playhead.center = center;
+        } completion:nil];
     }
     
     if( !isnan(frame.size.width) && !isnan(frame.size.height))
+    {
         self.playOverlay.frame = frame;
-    
-    center = self.playhead.center;
-    center.x = self.playUnderlay.frame.origin.x + frame.size.width;
-    [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
-        self.playhead.center = center;
-    } completion:nil];
+    }
 }
 
 -(void)addBackgroundImgWithPath:(NSString *)bgImgPath

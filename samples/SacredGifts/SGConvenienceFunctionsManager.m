@@ -34,7 +34,7 @@
 + (NSString*)artistForPainting: (NSString*)paintingStr abbreviated:(BOOL)abbreviate
 {
     NSArray* schwartzPaintings = @[@"garden", @"aalborg"];
-    NSArray* hofmannPaintings = @[@"capture", @"temple", @"ruler", @"gethsemane", @"savior"];
+    NSArray* hofmannPaintings = @[@"capture", @"temple", @"temple-ny", @"ruler", @"gethsemane", @"savior"];
     
     for (NSString* pName in schwartzPaintings ) {
         if( [pName isEqualToString:paintingStr])

@@ -45,17 +45,7 @@ const CGPoint kSplashLogoStartPoint = {384,840};
 
 - (NSUInteger)supportedInterfaceOrientations{
     if( [self.currentContentController isKindOfClass:[SGPaintingContainerViewController class]] )
-    {
-        SGPaintingContainerViewController* paintingContainer = (SGPaintingContainerViewController*)self.currentContentController;
-        SGPaintingViewController* paintingViewController = (SGPaintingViewController*)paintingContainer.currentContentController;
-        if( paintingViewController.overlayController.moduleType == kModuleTypeVideo )
-        {
-            NSLog(@"SGViewController supportedInterfaceOrientations: All");
-            return UIInterfaceOrientationMaskAll;
-        }
-        else
-            NSLog(@"SGViewController supportedInterfaceOrientations: Portrait");
-    }
+        return UIInterfaceOrientationMaskAll;
     
     if( [self.currentContentController isKindOfClass:[SGIntroMovieViewController class]])
         return UIInterfaceOrientationMaskAll;

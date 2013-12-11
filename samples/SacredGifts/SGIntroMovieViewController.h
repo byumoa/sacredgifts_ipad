@@ -12,5 +12,4 @@
 @interface SGIntroMovieViewController : SGContentViewController
 
 @property(nonatomic, strong) MPMoviePlayerController *moviePlayer;
-
 @end

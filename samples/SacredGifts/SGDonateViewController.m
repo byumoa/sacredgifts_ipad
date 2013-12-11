@@ -14,6 +14,13 @@
 
 @implementation SGDonateViewController
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.screenName = @"donate: museum";
+}
+
 - (NSUInteger)supportedInterfaceOrientations{
     return UIInterfaceOrientationMaskPortrait;
 }

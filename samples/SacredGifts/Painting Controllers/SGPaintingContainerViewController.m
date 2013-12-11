@@ -21,20 +21,6 @@
     toController.delegate = self;
 }
 
-- (NSUInteger)supportedInterfaceOrientations{
-    
-    SGPaintingViewController* paintingViewController = (SGPaintingViewController*)self.currentContentController;
-    if( paintingViewController.overlayController.moduleType == kModuleTypeVideo )
-    {
-        NSLog(@"SGPaintingContainerViewController supportedInterfaceOrientations: All");
-        return UIInterfaceOrientationMaskAll;
-    }
-    else
-        NSLog(@"SGPaintingContainerViewController supportedInterfaceOrientations: Portrait");
-    
-    return UIInterfaceOrientationMaskPortrait;
-}
-
 -(UIViewController*)transitionFromController:(UIViewController *)fromController toPaintingNamed:(NSString *)paintingName fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
 {
     [self stopAudio];

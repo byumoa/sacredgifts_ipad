@@ -37,6 +37,14 @@ NSString* const kCastleBtnHilStr = @"SG_General_painting-castleBtn-on";
 
 CGSize const kCastleBtnSize = {768, 41};
 
+CGRect const kPaintingFrameLandscape = {0,20,1024,768};
+CGRect const kPaintingFramePortrait = {0,66,768,892};
+
+CGRect const kVideoFrameLandscape = {0,0,1024,768};
+CGRect const kVideoFramePortrait = {0,0,768,1024};
+
+NSString* const kTempleDefaultKey = @"templeVersion";
+
 @interface SGPaintingViewController (PrivateAPIs)
 - (void) addMainPainting:(NSString*)paintingName;
 - (void) addFooterButtonsForPainting: (NSString*)paintingNameStr;
@@ -49,11 +57,20 @@ CGSize const kCastleBtnSize = {768, 41};
 - (void)deselectAllModuleBtns;
 - (void)navigateToCastle: (UIButton*)sender;
 - (BOOL)shouldShowCastleButton;
+- (void)setChromeAlpha: (int)targetAlpha isTurning: (BOOL)isTurning;
 @end
 
 @implementation SGPaintingViewController
 -(void)configWithPaintingName:(NSString *)paintingStr;
 {
+//    if( [paintingStr isEqualToString:@"temple"] ||
+//        [paintingStr isEqualToString:@"temple-ny"] )
+//    {
+//        NSString* lastPainting = [[NSUserDefaults standardUserDefaults] stringForKey:kTempleDefaultKey];
+//        if( lastPainting )
+//            paintingStr = lastPainting;
+//    }
+    
     self.screenName = [NSString stringWithFormat:@"painting: %@", paintingStr];
     
     //Main Painting
@@ -83,17 +100,47 @@ CGSize const kCastleBtnSize = {768, 41};
         self.shareBtn.hidden = YES;
     else
         self.shareBtn.hidden = NO;
+    
+    UIView* blackBacking = [[UIView alloc] initWithFrame:CGRectMake(-1000, -1000, 3000, 3000)];
+    blackBacking.backgroundColor = [UIColor blackColor];
+    [self.view insertSubview:blackBacking atIndex:0];
 }
 
-- (NSUInteger)supportedInterfaceOrientations{
-    if( self.overlayController.moduleType == kModuleTypeVideo )
+-(void)willAnimateRotationToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    BOOL isTurningToLandscape = UIInterfaceOrientationIsLandscape(toInterfaceOrientation);
+    [self setChromeAlpha:isTurningToLandscape?0:1 isTurning:YES];
+    
+    self.paintingImageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.paintingImageView.frame = isTurningToLandscape ? kPaintingFrameLandscape : kPaintingFramePortrait;
+    
+    if( [_paintingNameStr isEqualToString:@"temple"] ||
+        [_paintingNameStr isEqualToString:@"temple-ny"] )
     {
-        NSLog(@"paintingVC supportedInterfaceOrientations: All");
-        return UIInterfaceOrientationMaskAll;
+        self.templeButtonsView.alpha = isTurningToLandscape ? 0 : 1;
     }
-    else
-        NSLog(@"paintingVC supportedInterfaceOrientations: Portrait");
-    return UIInterfaceOrientationMaskPortrait;
+    /*
+    if([_paintingNameStr isEqualToString:@"aalborg"] ||
+       [_paintingNameStr isEqualToString:@"capture"] ||
+       [_paintingNameStr isEqualToString:@"ruler"] ||
+       [_paintingNameStr isEqualToString:@"temple"] ||
+       [_paintingNameStr isEqualToString:@"temple-ny"])
+    {
+        NSString* paintingPath;
+        if( isTurningToLandscape )
+            paintingPath = [[NSBundle mainBundle] pathForResource:@"MainPainting-landscape" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, _paintingNameStr]];
+        else
+            paintingPath = [[NSBundle mainBundle] pathForResource:@"MainPainting" ofType:@"png" inDirectory:[NSString stringWithFormat: @"%@/%@", kPaintingResourcesStr, _paintingNameStr]];
+        self.paintingImageView.image = [UIImage imageWithContentsOfFile:paintingPath];
+    }
+     */
+    
+    NSLog(@"");
+    if( [self.overlayController respondsToSelector:@selector(setMoviePlayer)])
+    {
+        CGRect frame = isTurningToLandscape ? kVideoFrameLandscape : kVideoFramePortrait;
+        ((SGVideoOverlayViewController*)self.overlayController).moviePlayer.view.frame = frame;
+    }
 }
 
 - (IBAction)pressedTempleToggle:(id)sender
@@ -497,52 +544,26 @@ static BOOL chromeHidden = NO;
 
 -(void)paintingTapped:(SGPaintingImageView *)paintingView
 {
-    if( self.overlayController )
-    {
-        [self removeCurrentOverlay];
-        [self deselectAllModuleBtns];
-    }
-    else
-    {
-        float targetAlpha = 1;
-        if( self.footerView.alpha == 1 )
-            targetAlpha = 0;
-        else
-            [self addTombstoneDelayed:0];
+    float targetAlpha = 1;
     
-        chromeHidden = (self.footerView.alpha == 1);
-        
-        [UIView animateWithDuration:0.25 animations:^{
-            self.footerView.alpha = targetAlpha;
-            self.overlayController.view.alpha = targetAlpha;
-            self.headerView.alpha = targetAlpha;
-            
-            ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = targetAlpha;
-        }];
-    }
+    if( self.footerView.alpha == 1 )    targetAlpha = 0;
+    else                                [self addTombstoneDelayed:0];
+    
+    chromeHidden = (self.footerView.alpha == 1);
+    [self setChromeAlpha:targetAlpha isTurning:NO];
 }
 
--(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+-(void)setChromeAlpha:(int)targetAlpha isTurning:(BOOL)isTurning
 {
-    if( UIInterfaceOrientationIsPortrait( self.interfaceOrientation ))
-        _lastPortraitFrame = self.paintingImageView.frame;
-    
-    if( UIInterfaceOrientationIsPortrait(toInterfaceOrientation)){
-        self.paintingImageView.frame = _lastPortraitFrame;
-        [UIView animateWithDuration:duration animations:^{
-            self.footerView.alpha = 1;
-            self.overlayController.view.alpha = 1;
-        }];
-        [[UIApplication sharedApplication] setStatusBarHidden:NO withAnimation:UIStatusBarAnimationFade];
-    }
-    else{
-        self.paintingImageView.frame = CGRectMake(0, -20, 1024, 768);
-        [UIView animateWithDuration:duration animations:^{
-            self.footerView.alpha = 0;
-            self.overlayController.view.alpha = 0;
-        }];
-        [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationFade];
-    }
+    [UIView animateWithDuration:0.25 animations:^{
+        self.footerView.alpha = targetAlpha;
+        self.overlayController.view.alpha = targetAlpha;
+        self.headerView.alpha = targetAlpha;
+        ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = targetAlpha;
+        
+        if( isTurning && self.overlayController.moduleType == kModuleTypeVideo )
+            ((SGVideoOverlayViewController*)self.overlayController).moviePlayer.view.alpha = 1;
+    }];
 }
 
 -(SGOverlayViewController *)overlay:(SGOverlayViewController *)overlay triggersNewOverlayName:(NSString *)overlayName
