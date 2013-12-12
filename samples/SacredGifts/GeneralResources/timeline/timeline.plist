@@ -15,29 +15,9 @@
 		<array>
 			<dict>
 				<key>x</key>
-				<integer>2978</integer>
-				<key>y</key>
-				<integer>870</integer>
-				<key>width</key>
-				<integer>231</integer>
-				<key>text</key>
-				<string>Brigham Young University founded</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<integer>193</integer>
-				<key>y</key>
-				<integer>430</integer>
-				<key>width</key>
-				<integer>320</integer>
-				<key>text</key>
-				<string>Bertel Thorvaldsen completes his Christus statue</string>
-			</dict>
-			<dict>
-				<key>x</key>
 				<integer>667</integer>
 				<key>y</key>
-				<integer>550</integer>
+				<integer>590</integer>
 				<key>width</key>
 				<integer>244</integer>
 				<key>text</key>
@@ -47,7 +27,7 @@
 				<key>x</key>
 				<integer>663</integer>
 				<key>y</key>
-				<integer>510</integer>
+				<integer>550</integer>
 				<key>width</key>
 				<integer>244</integer>
 				<key>text</key>
@@ -55,91 +35,131 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>1314</integer>
+				<integer>193</integer>
 				<key>y</key>
 				<integer>550</integer>
 				<key>width</key>
-				<integer>370</integer>
+				<integer>330</integer>
 				<key>text</key>
-				<string>First LDS congregation in Darmstadt, Germany organized</string>
+				<string>Bertel Thorvaldsen completes his Christus statue</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>1392</integer>
+				<integer>1389</integer>
 				<key>y</key>
-				<integer>590</integer>
+				<integer>750</integer>
 				<key>width</key>
-				<integer>250</integer>
+				<integer>260</integer>
 				<key>text</key>
 				<string>LDS Prophet Joseph Smith, Jr. killed</string>
 			</dict>
 			<dict>
 				<key>x</key>
+				<integer>1314</integer>
+				<key>y</key>
+				<integer>710</integer>
+				<key>width</key>
+				<integer>380</integer>
+				<key>text</key>
+				<string>First LDS congregation in Darmstadt, Germany organized </string>
+			</dict>
+			<dict>
+				<key>x</key>
 				<integer>1542</integer>
 				<key>y</key>
-				<integer>750</integer>
+				<integer>790</integer>
 				<key>width</key>
-				<integer>320</integer>
+				<integer>325</integer>
 				<key>text</key>
 				<string>First pioneer company arrives in Salt Lake Valley</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3726</integer>
+				<integer>1569</integer>
+				<key>y</key>
+				<integer>830</integer>
+				<key>width</key>
+				<integer>465</integer>
+				<key>text</key>
+				<string>Hörups Kyrka (Hörup, Sweden), originally built in the 1100s, is expanded</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>1671</integer>
+				<key>y</key>
+				<integer>870</integer>
+				<key>width</key>
+				<integer>365</integer>
+				<key>text</key>
+				<string>First LDS missionaries arrive in Denmark and Sweden</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>1722</integer>
+				<key>y</key>
+				<integer>910</integer>
+				<key>width</key>
+				<integer>560</integer>
+				<key>text</key>
+				<string>Book of Mormon translated into Danish – the first non-English language edition published</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>1775</integer>
+				<key>y</key>
+				<integer>950</integer>
+				<key>width</key>
+				<integer>350</integer>
+				<key>text</key>
+				<string>First Mormon emigrants leave Denmark and Sweden</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>1775</integer>
 				<key>y</key>
 				<integer>710</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>265</integer>
 				<key>text</key>
-				<string>Salt Lake Temple completed</string>
+				<string>Book of Mormon published in German</string>
 			</dict>
 			<dict>
 				<key>x</key>
 				<integer>2171</integer>
 				<key>y</key>
-				<integer>390</integer>
+				<integer>710</integer>
 				<key>width</key>
-				<integer>190</integer>
+				<integer>475</integer>
 				<key>text</key>
-				<string>Frederiksborg castle fire</string>
+				<string>Frederiksborg castle fire destroys religious paintings in the King’s Oratory</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>4328</integer>
+				<integer>2185</integer>
 				<key>y</key>
-				<integer>350</integer>
+				<integer>750</integer>
 				<key>width</key>
-				<integer>225</integer>
+				<integer>560</integer>
 				<key>text</key>
-				<string>Vor Frue Kirke altarpiece fire</string>
+				<string>Löderups Kyrka (Löderup, Sweden), originally built in the 1100s, is extensively renovated</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3558</integer>
+				<integer>2978</integer>
 				<key>y</key>
-				<integer>350</integer>
+				<integer>870</integer>
 				<key>width</key>
-				<integer>622</integer>
+				<integer>240</integer>
 				<key>text</key>
-				<string>Nørresundby Kirke (Nørresundby, Denmark), originally built in the 1100s, receives extensive restoration</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<integer>4069</integer>
-				<key>y</key>
-				<integer>510</integer>
-				<key>width</key>
-				<integer>205</integer>
-				<key>text</key>
-				<string>Nørresundby Kirke renovated and expanded</string>
+				<string>Brigham Young University founded</string>
 			</dict>
 			<dict>
 				<key>x</key>
 				<integer>2997</integer>
 				<key>y</key>
-				<integer>150</integer>
+				<integer>910</integer>
 				<key>width</key>
-				<integer>330</integer>
+				<integer>340</integer>
 				<key>text</key>
 				<string>Ordrup Kirke completed (Charlottenlund, Denmark)</string>
 			</dict>
@@ -147,31 +167,51 @@
 				<key>x</key>
 				<integer>3100</integer>
 				<key>y</key>
-				<integer>110</integer>
+				<integer>950</integer>
 				<key>width</key>
-				<integer>350</integer>
+				<integer>360</integer>
 				<key>text</key>
 				<string>Sankt Jakobs Kirke completed (Copenhagen, Denmark)</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>1569</integer>
+				<integer>3726</integer>
 				<key>y</key>
-				<integer>790</integer>
+				<integer>710</integer>
 				<key>width</key>
-				<integer>460</integer>
+				<integer>250</integer>
 				<key>text</key>
-				<string>Hörups Kyrka (Hörup, Sweden), originally built in the 1100s, is expanded</string>
+				<string>LDS Salt Lake Temple completed</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>2185</integer>
+				<integer>4069</integer>
+				<key>y</key>
+				<integer>710</integer>
+				<key>width</key>
+				<integer>300</integer>
+				<key>text</key>
+				<string>Nørresundby Kirke renovated and expanded</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>3558</integer>
+				<key>y</key>
+				<integer>750</integer>
+				<key>width</key>
+				<integer>640</integer>
+				<key>text</key>
+				<string>Nørresundby Kirke (Nørresundby, Denmark), originally built in the 1100s, receives extensive restoration</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>4328</integer>
 				<key>y</key>
 				<integer>670</integer>
 				<key>width</key>
-				<integer>554</integer>
+				<integer>230</integer>
 				<key>text</key>
-				<string>Löderups Kyrka (Löderup, Sweden), originally built in the 1100s, is extensively renovated</string>
+				<string>Vor Frue Kirke altarpiece fire</string>
 			</dict>
 		</array>
 	</dict>
@@ -188,39 +228,119 @@
 		<array>
 			<dict>
 				<key>x</key>
-				<integer>2235</integer>
+				<integer>2249</integer>
 				<key>y</key>
-				<integer>710</integer>
+				<integer>310</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>250</integer>
 				<key>text</key>
 				<string>American Civil War (1860–1865)</string>
 			</dict>
 			<dict>
 				<key>x</key>
+				<integer>2385</integer>
+				<key>y</key>
+				<integer>270</integer>
+				<key>width</key>
+				<integer>290</integer>
+				<key>text</key>
+				<string>Denmark annexes Schleswig and Holstein</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>2490</integer>
+				<key>y</key>
+				<integer>230</integer>
+				<key>width</key>
+				<integer>200</integer>
+				<key>text</key>
+				<string>Austro-Prussian War (1866)</string>
+			</dict>
+			<dict>
+				<key>x</key>
 				<integer>2744</integer>
 				<key>y</key>
-				<integer>670</integer>
+				<integer>110</integer>
 				<key>width</key>
-				<integer>334</integer>
+				<integer>335</integer>
 				<key>text</key>
-				<string>German Empire formed under Otto von Bismarck</string>
+				<string>German Empire united under Otto Von Bismarck</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>1620</integer>
+				<integer>2895</integer>
 				<key>y</key>
-				<integer>510</integer>
+				<integer>70</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>210</integer>
 				<key>text</key>
-				<string>The California gold rush begins</string>
+				<string>First impressionist exhibition</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3152</integer>
+				<integer>1584</integer>
 				<key>y</key>
-				<integer>630</integer>
+				<integer>350</integer>
+				<key>width</key>
+				<integer>287</integer>
+				<key>text</key>
+				<string>Revolutions of 1848 in the German states</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>1621</integer>
+				<key>y</key>
+				<integer>310</integer>
+				<key>width</key>
+				<integer>425</integer>
+				<key>text</key>
+				<string>Denmark becomes a constitutional monarchy under Frederick VII</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>1877</integer>
+				<key>y</key>
+				<integer>390</integer>
+				<key>width</key>
+				<integer>195</integer>
+				<key>text</key>
+				<string>Crimean War (1854–55)</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>1887</integer>
+				<key>y</key>
+				<integer>350</integer>
+				<key>width</key>
+				<integer>380</integer>
+				<key>text</key>
+				<string>Florence Nightingale investigates army hospital conditions</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>1469</integer>
+				<key>y</key>
+				<integer>390</integer>
+				<key>width</key>
+				<integer>265</integer>
+				<key>text</key>
+				<string>Mexican-American war (1846–1848)</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>1032</integer>
+				<key>y</key>
+				<integer>390</integer>
+				<key>width</key>
+				<integer>250</integer>
+				<key>text</key>
+				<string>Victoria crowned queen of England</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>3153</integer>
+				<key>y</key>
+				<integer>70</integer>
 				<key>width</key>
 				<integer>244</integer>
 				<key>text</key>
@@ -228,31 +348,81 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3612</integer>
+				<integer>3661</integer>
 				<key>y</key>
-				<integer>590</integer>
+				<integer>310</integer>
+				<key>width</key>
+				<integer>215</integer>
+				<key>text</key>
+				<string>Van Gogh paints Starry Night</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>3203</integer>
+				<key>y</key>
+				<integer>110</integer>
+				<key>width</key>
+				<integer>280</integer>
+				<key>text</key>
+				<string>Rodin sculpts first version of The Thinker</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>4120</integer>
+				<key>y</key>
+				<integer>430</integer>
 				<key>width</key>
 				<integer>244</integer>
 				<key>text</key>
-				<string>Eiffel Tower is built</string>
+				<string>Spanish-American War (1898–99)</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>4273</integer>
+				<key>y</key>
+				<integer>390</integer>
+				<key>width</key>
+				<integer>210</integer>
+				<key>text</key>
+				<string>Edward VII King of England</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>4730</integer>
+				<key>y</key>
+				<integer>430</integer>
+				<key>width</key>
+				<integer>195</integer>
+				<key>text</key>
+				<string>George V King of England</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>3915</integer>
+				<key>y</key>
+				<integer>350</integer>
+				<key>width</key>
+				<integer>215</integer>
+				<key>text</key>
+				<string>Henry Ford’s first automobile</string>
 			</dict>
 			<dict>
 				<key>x</key>
 				<integer>3050</integer>
 				<key>y</key>
-				<integer>550</integer>
+				<integer>30</integer>
 				<key>width</key>
-				<integer>263</integer>
+				<integer>280</integer>
 				<key>text</key>
 				<string>Alexander Graham Bell invents telephone</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>4885</integer>
+				<integer>4934</integer>
 				<key>y</key>
-				<integer>550</integer>
+				<integer>430</integer>
 				<key>width</key>
-				<integer>175</integer>
+				<integer>202</integer>
 				<key>text</key>
 				<string>World War I (1914–1918)</string>
 			</dict>
@@ -275,45 +445,19 @@
 				<key>y</key>
 				<integer>430</integer>
 				<key>width</key>
-				<integer>265</integer>
+				<integer>290</integer>
 				<key>text</key>
 				<string>Carl Bloch born in Copenhagen, Denmark</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>1622</integer>
-				<key>y</key>
-				<integer>350</integer>
-				<key>width</key>
-				<integer>350</integer>
-				<key>text</key>
-				<string>Bloch accepted to Royal Danish Academy of Fine Arts</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<integer>1622</integer>
-				<key>y</key>
-				<integer>390</integer>
-				<key>width</key>
-				<integer>496</integer>
-				<key>text</key>
-				<string>Bloch commissioned to paint for the King’s Oratory at Frederiksborg Castle</string>
-				<key>popup</key>
-				<string>popup15.png</string>
-				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn</string>
-				<key>pageLink</key>
-				<string>castle</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<integer>1622</integer>
+				<integer>1623</integer>
 				<key>y</key>
 				<integer>430</integer>
 				<key>width</key>
-				<integer>405</integer>
+				<integer>360</integer>
 				<key>text</key>
-				<string>Bloch travels to Florence, Italy to study for Oratory commission</string>
+				<string>Bloch accepted to Royal Danish Academy of Fine Arts</string>
 			</dict>
 			<dict>
 				<key>x</key>
@@ -321,7 +465,7 @@
 				<key>y</key>
 				<integer>430</integer>
 				<key>width</key>
-				<integer>396</integer>
+				<integer>400</integer>
 				<key>text</key>
 				<string>Bloch awarded Royal Danish Academy’s traveling scholarship</string>
 			</dict>
@@ -329,21 +473,21 @@
 				<key>x</key>
 				<integer>2744</integer>
 				<key>y</key>
-				<integer>630</integer>
+				<integer>270</integer>
 				<key>width</key>
-				<integer>356</integer>
+				<integer>345</integer>
 				<key>text</key>
 				<string>Bloch becomes professor at Royal Danish Academy</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>2617</integer>
+				<integer>2618</integer>
 				<key>y</key>
-				<integer>432</integer>
+				<integer>430</integer>
 				<key>width</key>
-				<integer>385</integer>
+				<integer>320</integer>
 				<key>text</key>
-				<string>Bloch marries Alma Trepka on May 31, against family wishes</string>
+				<string>Bloch marries Alma Trepka against family wishes</string>
 			</dict>
 			<dict>
 				<key>x</key>
@@ -351,17 +495,17 @@
 				<key>y</key>
 				<integer>430</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>240</integer>
 				<key>text</key>
 				<string>Bloch’s wife, Alma, dies</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3407</integer>
+				<integer>3161</integer>
 				<key>y</key>
-				<integer>270</integer>
+				<integer>190</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>250</integer>
 				<key>text</key>
 				<string>The Denial of Peter</string>
 				<key>popup</key>
@@ -377,9 +521,9 @@
 				<key>x</key>
 				<integer>3361</integer>
 				<key>y</key>
-				<integer>310</integer>
+				<integer>390</integer>
 				<key>width</key>
-				<integer>283</integer>
+				<integer>300</integer>
 				<key>text</key>
 				<string>Christ Healing the Sick at Bethesda</string>
 				<key>popup</key>
@@ -391,7 +535,7 @@
 				<key>x</key>
 				<integer>3208</integer>
 				<key>y</key>
-				<integer>350</integer>
+				<integer>431</integer>
 				<key>width</key>
 				<integer>244</integer>
 				<key>text</key>
@@ -409,9 +553,9 @@
 				<key>x</key>
 				<integer>3158</integer>
 				<key>y</key>
-				<integer>390</integer>
+				<integer>230</integer>
 				<key>width</key>
-				<integer>258</integer>
+				<integer>265</integer>
 				<key>text</key>
 				<string>The Shepherds and the Angel</string>
 				<key>popup</key>
@@ -427,9 +571,9 @@
 				<key>x</key>
 				<integer>3106</integer>
 				<key>y</key>
-				<integer>430</integer>
+				<integer>270</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>250</integer>
 				<key>text</key>
 				<string>Christ at Emmaus</string>
 				<key>popup</key>
@@ -463,9 +607,9 @@
 				<key>x</key>
 				<integer>2749</integer>
 				<key>y</key>
-				<integer>270</integer>
+				<integer>230</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>250</integer>
 				<key>text</key>
 				<string>Healing of the Blind Man</string>
 				<key>popup</key>
@@ -481,9 +625,9 @@
 				<key>x</key>
 				<integer>2851</integer>
 				<key>y</key>
-				<integer>230</integer>
+				<integer>190</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>250</integer>
 				<key>text</key>
 				<string>The Burial</string>
 				<key>popup</key>
@@ -499,9 +643,9 @@
 				<key>x</key>
 				<integer>2901</integer>
 				<key>y</key>
-				<integer>190</integer>
+				<integer>150</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>250</integer>
 				<key>text</key>
 				<string>Cleansing of the Temple</string>
 				<key>popup</key>
@@ -515,11 +659,11 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>2952</integer>
+				<integer>2950</integer>
 				<key>y</key>
-				<integer>350</integer>
+				<integer>430</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>250</integer>
 				<key>text</key>
 				<string>Christus Consolator</string>
 				<key>popup</key>
@@ -535,9 +679,9 @@
 				<key>x</key>
 				<integer>3055</integer>
 				<key>y</key>
-				<integer>310</integer>
+				<integer>390</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>250</integer>
 				<key>text</key>
 				<string>The Resurrection</string>
 				<key>popup</key>
@@ -551,11 +695,11 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3055</integer>
+				<integer>3059</integer>
 				<key>y</key>
-				<integer>270</integer>
+				<integer>350</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>250</integer>
 				<key>text</key>
 				<string>Sermon on the Mount</string>
 				<key>popup</key>
@@ -569,21 +713,21 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3675</integer>
+				<integer>3710</integer>
 				<key>y</key>
 				<integer>390</integer>
 				<key>width</key>
-				<integer>353</integer>
+				<integer>270</integer>
 				<key>text</key>
-				<string>Succumbing to cancer, Carl Bloch Dies on February 22</string>
+				<string>Succumbing to cancer, Carl Bloch dies</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>2437</integer>
+				<integer>2334</integer>
 				<key>y</key>
 				<integer>390</integer>
 				<key>width</key>
-				<integer>408</integer>
+				<integer>420</integer>
 				<key>text</key>
 				<string>Bloch completes first biblical painting, The Daughter of Jairus</string>
 				<key>popup</key>
@@ -595,7 +739,7 @@
 				<key>y</key>
 				<integer>350</integer>
 				<key>width</key>
-				<integer>359</integer>
+				<integer>370</integer>
 				<key>text</key>
 				<string>Bloch admitted as member to Royal Danish Academy</string>
 			</dict>
@@ -603,9 +747,9 @@
 				<key>x</key>
 				<integer>3100</integer>
 				<key>y</key>
-				<integer>230</integer>
+				<integer>310</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>250</integer>
 				<key>text</key>
 				<string>Christ and the Children</string>
 				<key>popup</key>
@@ -617,6 +761,7 @@
 				<key>thumbnail</key>
 				<string>timeline_children.png</string>
 			</dict>
+
 		</array>
 	</dict>
 	<dict>
@@ -634,19 +779,19 @@
 				<key>x</key>
 				<integer>1700</integer>
 				<key>y</key>
-				<integer>310</integer>
+				<integer>670</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>260</integer>
 				<key>text</key>
 				<string>Frans Schwartz born in Copenhagen</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>5038</integer>
+				<integer>5088</integer>
 				<key>y</key>
-				<integer>430</integer>
+				<integer>510</integer>
 				<key>width</key>
-				<integer>164</integer>
+				<integer>180</integer>
 				<key>text</key>
 				<string>Frans Schwartz dies</string>
 				<key>popup</key>
@@ -660,29 +805,39 @@
 				<key>x</key>
 				<integer>3152</integer>
 				<key>y</key>
-				<integer>590</integer>
+				<integer>790</integer>
 				<key>width</key>
-				<integer>281</integer>
+				<integer>290</integer>
 				<key>text</key>
-				<string>Schwartz starts an “Art Modeling School”</string>
+				<string> Schwartz starts an “Art Modeling School”</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>3214</integer>
+				<key>y</key>
+				<integer>830</integer>
+				<key>width</key>
+				<integer>230</integer>
+				<key>text</key>
+				<string> Schwartz paints his self-portrait</string>
 			</dict>
 			<dict>
 				<key>x</key>
 				<integer>3100</integer>
 				<key>y</key>
-				<integer>830</integer>
+				<integer>750</integer>
 				<key>width</key>
-				<integer>378</integer>
+				<integer>390</integer>
 				<key>text</key>
-				<string>Schwartz leaves Denmark for the first time and visits Spain</string>
+				<string> Schwartz leaves Denmark for the first time and visits Spain</string>
 			</dict>
 			<dict>
 				<key>x</key>
 				<integer>3865</integer>
 				<key>y</key>
-				<integer>590</integer>
+				<integer>630</integer>
 				<key>width</key>
-				<integer>560</integer>
+				<integer>570</integer>
 				<key>text</key>
 				<string> Schwartz paints The Ten Virgins for Soldenfeldt Foundation, his most well-known painting</string>
 			</dict>
@@ -690,41 +845,41 @@
 				<key>x</key>
 				<integer>2997</integer>
 				<key>y</key>
-				<integer>790</integer>
+				<integer>710</integer>
 				<key>width</key>
-				<integer>535</integer>
+				<integer>545</integer>
 				<key>text</key>
 				<string>Schwartz paints The Sick and Weak Seek Healing from Jesus, his first religious piece </string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>2899</integer>
+				<integer>2900</integer>
 				<key>y</key>
-				<integer>750</integer>
+				<integer>670</integer>
 				<key>width</key>
-				<integer>900</integer>
+				<integer>340</integer>
 				<key>text</key>
-				<string>Schwartz attends The Artist’s Spring Convention at Charlottenborg and exhibits his first painting, Job and Friends, which wins the lesser Gold Medal</string>
+				<string>Schwartz exhibits his first painting, Job and Friends</string>
 			</dict>
 			<dict>
 				<key>x</key>
 				<integer>3305</integer>
 				<key>y</key>
-				<integer>510</integer>
+				<integer>670</integer>
 				<key>width</key>
-				<integer>625</integer>
+				<integer>470</integer>
 				<key>text</key>
-				<string> Schwartz and fellow artists L. Tuxen and P.S. Kroyer begin an alternate art school to the Academy</string>
+				<string> Schwartz and fellow artists begin an alternate art school to the Academy</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>4333</integer>
+				<integer>4339</integer>
 				<key>y</key>
-				<integer>390</integer>
+				<integer>550</integer>
 				<key>width</key>
-				<integer>405</integer>
+				<integer>640</integer>
 				<key>text</key>
-				<string>Schwartz begins new altarpiece for Vor Frue Kirke</string>
+				<string>Schwartz begins new altarpiece, The Mocking of Christ, for Vor Frue Kirke (Aalborg, Denmark)</string>
 				<key>popup</key>
 				<string>popup12.png</string>
 				<key>buttonImage</key>
@@ -738,19 +893,19 @@
 				<key>x</key>
 				<integer>4634</integer>
 				<key>y</key>
-				<integer>430</integer>
+				<integer>590</integer>
 				<key>width</key>
-				<integer>272</integer>
+				<integer>300</integer>
 				<key>text</key>
-				<string>Schwartz finishes Vor Frue altarpiece</string>
+				<string>Schwartz finishes Vor Frue Kirke altarpiece</string>
 			</dict>
 			<dict>
 				<key>x</key>
 				<integer>4121</integer>
 				<key>y</key>
-				<integer>430</integer>
+				<integer>590</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>250</integer>
 				<key>text</key>
 				<string>Agony in the Garden</string>
 				<key>popup</key>
@@ -766,31 +921,15 @@
 				<key>x</key>
 				<integer>2488</integer>
 				<key>y</key>
-				<integer>230</integer>
+				<integer>670</integer>
 				<key>width</key>
-				<integer>282</integer>
+				<integer>290</integer>
 				<key>text</key>
-				<string>Schwartz begins Royal Danish Academy</string>
+				<string> Schwartz begins Royal Danish Academy</string>
 				<key>popup</key>
 				<string>popup9.png</string>
 				<key>buttonImage</key>
 				<string>timeline_assets_artistBtn</string>
-				<key>pageLink</key>
-				<string>schwartz</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<integer>3203</integer>
-				<key>y</key>
-				<integer>190</integer>
-				<key>width</key>
-				<integer>620</integer>
-				<key>text</key>
-				<string>Schwartz paints his self-portrait, which is his only work represented in the Danish National Gallery</string>
-				<key>popup</key>
-				<string>popup10.png</string>
-				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn</string>
 				<key>pageLink</key>
 				<string>schwartz</string>
 			</dict>
@@ -813,39 +952,39 @@
 				<key>y</key>
 				<integer>510</integer>
 				<key>width</key>
-				<integer>305</integer>
+				<integer>250</integer>
 				<key>text</key>
-				<string>Heinrich Hofmann born in Darmstadt, Germany</string>
+				<string>Heinrich Hofmann born in Germany</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>2133</integer>
+				<integer>2132</integer>
 				<key>y</key>
 				<integer>630</integer>
 				<key>width</key>
-				<integer>400</integer>
-				<key>text</key>
+				<integer>380</integer>
 				<string>Hofmann marries long-time sweetheart, Elizabeth Werner</string>
 			</dict>
+
 			<dict>
 				<key>x</key>
-				<integer>2290</integer>
+				<integer>2293</integer>
 				<key>y</key>
-				<integer>750</integer>
+				<integer>550</integer>
 				<key>width</key>
-				<integer>443</integer>
+				<integer>266</integer>
 				<key>text</key>
-				<string>Hofmann moves to Dresden, Germany, where he stays until his death</string>
+				<string>Hofmann moves to Dresden, Germany</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>2642</integer>
+				<integer>2641</integer>
 				<key>y</key>
 				<integer>510</integer>
 				<key>width</key>
-				<integer>616</integer>
+				<integer>625</integer>
 				<key>text</key>
-				<string>Hofmann’s Christ and the Adulteress earns membership in the Royal Danish Academy of Dresden</string>
+				<string>Hofmann’s Christ and the Adulteress earns membership in the Royal Academy of Dresden</string>
 			</dict>
 			<dict>
 				<key>x</key>
@@ -867,13 +1006,13 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>2698</integer>
+				<integer>2699</integer>
 				<key>y</key>
 				<integer>550</integer>
 				<key>width</key>
-				<integer>334</integer>
+				<integer>345</integer>
 				<key>text</key>
-				<string>Hofmann elected professor at Royal Academy</string>
+				<string>Hofmann elected a professor at Royal Academy</string>
 				<key>popup</key>
 				<string>popup2.png</string>
 				<key>buttonImage</key>
@@ -883,11 +1022,11 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<real>2082</real>
+				<integer>2082</integer>
 				<key>y</key>
 				<integer>590</integer>
 				<key>width</key>
-				<integer>244</integer>
+				<integer>242</integer>
 				<key>text</key>
 				<string>The Capture of Christ</string>
 				<key>popup</key>
@@ -905,7 +1044,7 @@
 				<key>y</key>
 				<integer>510</integer>
 				<key>width</key>
-				<integer>255</integer>
+				<integer>250</integer>
 				<key>text</key>
 				<string>Hofmann enters Academy of Art</string>
 				<key>popup</key>
@@ -919,9 +1058,9 @@
 				<key>x</key>
 				<integer>1417</integer>
 				<key>y</key>
-				<integer>630</integer>
+				<integer>550</integer>
 				<key>width</key>
-				<integer>268</integer>
+				<integer>263</integer>
 				<key>text</key>
 				<string>Hofmann leaves Düsseldorf Academy</string>
 			</dict>
@@ -929,9 +1068,9 @@
 				<key>x</key>
 				<integer>1468</integer>
 				<key>y</key>
-				<integer>670</integer>
+				<integer>590</integer>
 				<key>width</key>
-				<integer>405</integer>
+				<integer>395</integer>
 				<key>text</key>
 				<string>Hofmann studies briefly at the Antwerp Academy (Belgium)</string>
 			</dict>
@@ -939,9 +1078,9 @@
 				<key>x</key>
 				<integer>1519</integer>
 				<key>y</key>
-				<integer>710</integer>
+				<integer>630</integer>
 				<key>width</key>
-				<integer>419</integer>
+				<integer>395</integer>
 				<key>text</key>
 				<string>Hofmann moves to Munich and paints Shakespearean series</string>
 			</dict>
@@ -949,19 +1088,19 @@
 				<key>x</key>
 				<integer>1876</integer>
 				<key>y</key>
-				<integer>510</integer>
+				<integer>550</integer>
 				<key>width</key>
-				<integer>420</integer>
+				<integer>310</integer>
 				<key>text</key>
-				<string>Hofmann travels to Italy and Rome, where he stays until 1958</string>
+				<string>Hofmann travels to Italy and Rome (1854–58)</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3713</integer>
+				<integer>3760</integer>
 				<key>y</key>
-				<integer>670</integer>
+				<integer>590</integer>
 				<key>width</key>
-				<integer>269</integer>
+				<integer>270</integer>
 				<key>text</key>
 				<string>Hofmann’s wife Elisabeth Werner dies</string>
 			</dict>
@@ -969,17 +1108,17 @@
 				<key>x</key>
 				<integer>1876</integer>
 				<key>y</key>
-				<integer>550</integer>
+				<integer>510</integer>
 				<key>width</key>
-				<integer>635</integer>
+				<integer>600</integer>
 				<key>text</key>
 				<string>Inspired by mother’s death, Hofmann begins his first religious piece, The Entombment of Christ</string>
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3203</integer>
+				<integer>3251</integer>
 				<key>y</key>
-				<integer>670</integer>
+				<integer>550</integer>
 				<key>width</key>
 				<integer>244</integer>
 				<key>text</key>
@@ -992,6 +1131,70 @@
 				<string>temple-ny</string>
 				<key>thumbnail</key>
 				<string>timeline_temple-ny.png</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>2796</integer>
+				<key>y</key>
+				<integer>630</integer>
+				<key>width</key>
+				<integer>560</integer>
+				<key>text</key>
+				<string>King Johann bestows on Hofmann the Great Golden Medal for his artistic achievements</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>3712</integer>
+				<key>y</key>
+				<integer>550</integer>
+				<key>width</key>
+				<integer>244</integer>
+				<key>text</key>
+				<string>Christ in Gethsemane</string>
+				<key>popup</key>
+				<string>popup7.png</string>
+				<key>buttonImage</key>
+				<string>timeline_assets_paintingBtn</string>
+				<key>pageLink</key>
+				<string>gethsemane</string>
+				<key>thumbnail</key>
+				<string>timeline_gethsemane.png</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>3915</integer>
+				<key>y</key>
+				<integer>510</integer>
+				<key>width</key>
+				<integer>244</integer>
+				<key>text</key>
+				<string>Portrait of Christ, the Savior</string>
+				<key>popup</key>
+				<string>popup8.png</string>
+				<key>buttonImage</key>
+				<string>timeline_assets_paintingBtn</string>
+				<key>pageLink</key>
+				<string>savior</string>
+				<key>thumbnail</key>
+				<string>timeline_savior.png</string>
+			</dict>
+			<dict>
+				<key>x</key>
+				<integer>3608</integer>
+				<key>y</key>
+				<integer>510</integer>
+				<key>width</key>
+				<integer>265</integer>
+				<key>text</key>
+				<string>Christ and the Rich Young Ruler</string>
+				<key>popup</key>
+				<string>popup6.png</string>
+				<key>buttonImage</key>
+				<string>timeline_assets_paintingBtn</string>
+				<key>pageLink</key>
+				<string>ruler</string>
+				<key>thumbnail</key>
+				<string>timeline_ruler.png</string>
 			</dict>
 			<dict>
 				<key>x</key>
@@ -1008,70 +1211,6 @@
 				<string>timeline_assets_artistBtn</string>
 				<key>pageLink</key>
 				<string>hofmann</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<integer>2796</integer>
-				<key>y</key>
-				<integer>710</integer>
-				<key>width</key>
-				<integer>591</integer>
-				<key>text</key>
-				<string>King Johann bestows on Hofmann the Great Golden Medal for his artistic achievements</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<integer>3661</integer>
-				<key>y</key>
-				<integer>630</integer>
-				<key>width</key>
-				<integer>244</integer>
-				<key>text</key>
-				<string>Christ in Gethsemane</string>
-				<key>popup</key>
-				<string>popup7.png</string>
-				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn</string>
-				<key>pageLink</key>
-				<string>gethsemane</string>
-				<key>thumbnail</key>
-				<string>timeline_gethsemane.png</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<real>3865</real>
-				<key>y</key>
-				<integer>550</integer>
-				<key>width</key>
-				<integer>244</integer>
-				<key>text</key>
-				<string>Portrait of Christ, the Savior</string>
-				<key>popup</key>
-				<string>popup8.png</string>
-				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn</string>
-				<key>pageLink</key>
-				<string>savior</string>
-				<key>thumbnail</key>
-				<string>timeline_savior.png</string>
-			</dict>
-			<dict>
-				<key>x</key>
-				<real>3560</real>
-				<key>y</key>
-				<integer>550</integer>
-				<key>width</key>
-				<integer>277</integer>
-				<key>text</key>
-				<string>Christ and the Rich Young Ruler</string>
-				<key>popup</key>
-				<string>popup6.png</string>
-				<key>buttonImage</key>
-				<string>timeline_assets_paintingBtn</string>
-				<key>pageLink</key>
-				<string>ruler</string>
-				<key>thumbnail</key>
-				<string>timeline_ruler.png</string>
 			</dict>
 		</array>
 	</dict>
