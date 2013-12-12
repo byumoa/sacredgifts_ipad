@@ -50,7 +50,7 @@
                                             <action selector="pressedBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2D5-0f-vwG"/>
                                         </connections>
                                     </button>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="header_Home.png" id="pbp-Ua-Xkc">
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="header_SacredGifts Home.png" id="pbp-Ua-Xkc">
                                         <rect key="frame" x="256" y="20" width="256" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
@@ -2093,7 +2093,7 @@
         <image name="exhibition_credit_overlay.png" width="768" height="799"/>
         <image name="exhibition_donors_overlay.png" width="768" height="759"/>
         <image name="exhibition_story_overlay.png" width="768" height="921"/>
-        <image name="header_Home.png" width="256" height="41"/>
+        <image name="header_SacredGifts Home.png" width="256" height="41"/>
         <image name="painting_thumb_aalborg-on.png" width="123" height="164"/>
         <image name="painting_thumb_aalborg.png" width="123" height="164"/>
         <image name="painting_thumb_burial-on.png" width="123" height="164"/>

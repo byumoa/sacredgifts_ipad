@@ -33,5 +33,4 @@
 - (IBAction)pressedScan:(id)sender;
 - (IBAction)pressedHome:(id)sender;
 
-+ (UIImageView*) getHeaderTitleImageView;
 @end

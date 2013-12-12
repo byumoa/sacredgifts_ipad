@@ -122,7 +122,7 @@
 {
     NSString* headerName = [NSString stringWithFormat:@"header_%@", toControllerID];
     self.headerTitleImgView.image = [UIImage imageNamed:headerName];
-    NSLog(@"headerName: %@", headerName);
+    
     //Handle Back Button Alpha
     float backBtnAlpha = 1;
     self.backBtn.enabled = backBtnAlpha == 1;
@@ -199,7 +199,6 @@
     
     NSString* headerName = [NSString stringWithFormat:@"header_%@", paintingName];
     self.headerTitleImgView.image = [UIImage imageNamed:headerName];
-    NSLog(@"headerName: %@", headerName);
     
     self.headerBGImgView.alpha = 0;
     self.footerView.alpha = 0;

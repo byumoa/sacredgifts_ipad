@@ -32,10 +32,9 @@
     toController.frameOverlayDelay = 0.5;
     
     NSString* headerName = [NSString stringWithFormat:@"header_%@", paintingName];
-    //Why is this headerTitleImgView nil?
+    
     ((SGPaintingViewController*)toController).headerTitleImgView = ((SGPaintingViewController*)self.currentContentController).headerTitleImgView;
     ((SGPaintingViewController*)self.currentContentController).headerTitleImgView.image = [UIImage imageNamed:headerName];
-    NSLog(@"headerName: %@, htiv: %@", headerName, ((SGPaintingViewController*)self.currentContentController).headerTitleImgView);
     
     int dir = animType == kAnimTypeSwipeLeft ? 1 : -1;
     
