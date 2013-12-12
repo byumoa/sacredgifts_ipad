@@ -24,6 +24,7 @@
 @property (weak, nonatomic) id<SGContentControllerDelegate> delegate;
 @property (weak, nonatomic) IBOutlet UIView *footerView;
 @property (weak, nonatomic) IBOutlet UIView *headerView;
+@property (weak, nonatomic) IBOutlet UIImageView *headerTitleImgView;
 @property (nonatomic) float frameOverlayDelay;
 @property (nonatomic) int currentPaintingIndex;
 @property (weak, nonatomic) IBOutlet UIView *templeButtonsView;

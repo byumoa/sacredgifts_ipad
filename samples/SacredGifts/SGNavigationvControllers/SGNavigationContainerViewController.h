@@ -21,6 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIView *footerView;
 @property (weak, nonatomic) IBOutlet UIView *headerBlurDecoy;
 @property (weak, nonatomic) IBOutlet UIImageView *headerBGImgView;
+@property (strong, nonatomic) IBOutlet UIImageView *headerTitleImgView;
 
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
 @property (strong, nonatomic) UIActivityIndicatorView* activityIndicator;
@@ -31,4 +32,6 @@
 - (IBAction)pressedFeedback:(UIButton *)sender;
 - (IBAction)pressedScan:(id)sender;
 - (IBAction)pressedHome:(id)sender;
+
++ (UIImageView*) getHeaderTitleImageView;
 @end

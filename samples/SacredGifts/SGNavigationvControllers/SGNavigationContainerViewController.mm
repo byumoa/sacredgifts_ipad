@@ -120,6 +120,9 @@
 #pragma mark Delegate
 -(UIViewController*)transitionFromController:(UIViewController *)fromController toControllerID:(const NSString *)toControllerID fromButtonRect:(CGRect)frame withAnimType:(const NSString *)animType
 {
+    NSString* headerName = [NSString stringWithFormat:@"header_%@", toControllerID];
+    self.headerTitleImgView.image = [UIImage imageNamed:headerName];
+    NSLog(@"headerName: %@", headerName);
     //Handle Back Button Alpha
     float backBtnAlpha = 1;
     self.backBtn.enabled = backBtnAlpha == 1;
@@ -192,6 +195,11 @@
     
     [(SGPaintingViewController*)paintingContainer.currentContentController configWithPaintingName:paintingName];
     ((SGPaintingViewController*)paintingContainer.currentContentController).headerView = self.headerView;
+    ((SGPaintingViewController*)paintingContainer.currentContentController).headerTitleImgView = self.headerTitleImgView;
+    
+    NSString* headerName = [NSString stringWithFormat:@"header_%@", paintingName];
+    self.headerTitleImgView.image = [UIImage imageNamed:headerName];
+    NSLog(@"headerName: %@", headerName);
     
     self.headerBGImgView.alpha = 0;
     self.footerView.alpha = 0;
