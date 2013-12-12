@@ -847,6 +847,83 @@
             </objects>
             <point key="canvasLocation" x="1794" y="-182"/>
         </scene>
+        <!--Sermon Shapes Overlay View Controller-->
+        <scene sceneID="cg5-hc-xgn">
+            <objects>
+                <viewController restorationIdentifier="SermonShapes" storyboardIdentifier="SermonShapes" id="bgK-sd-fmJ" customClass="SGSermonShapesOverlayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="roS-ST-hWO">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gXn-p1-ume">
+                                <rect key="frame" x="-1" y="954" width="190" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="sermon_cameraToggleOnBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="sermon_cameraToggleOnBtn-on.png"/>
+                                <state key="highlighted" image="sermon_cameraToggleOnBtn-on.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sUn-Wx-TPK">
+                                <rect key="frame" x="666" y="954" width="102" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="SG_General_window_closeBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="SG_General_window_closeBtn-on.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ie2-k5-VhO">
+                                <rect key="frame" x="348" y="954" width="72" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="sermon_triangle2Btn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="sermon_triangle2Btn-on.png"/>
+                                <state key="highlighted" image="sermon_triangle2Btn-on.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sqc-NI-oAm">
+                                <rect key="frame" x="428" y="954" width="72" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="sermon_squareBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="sermon_squareBtn-on.png"/>
+                                <state key="highlighted" image="sermon_squareBtn-on.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uWY-Hy-IA2">
+                                <rect key="frame" x="508" y="954" width="72" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="sermon_crossBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="sermon_crossBtn-on.png"/>
+                                <state key="highlighted" image="sermon_crossBtn-on.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vDU-XS-z4p">
+                                <rect key="frame" x="268" y="954" width="72" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="sermon_triangleBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="sermon_triangleBtn-on.png"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oHv-f7-q9r">
+                                <rect key="frame" x="189" y="954" width="72" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="sermon_circleBtn.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="selected" image="sermon_circleBtn-on.png"/>
+                                <state key="highlighted" image="sermon_circleBtn-on.png"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qjq-o9-2e4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3819" y="1436"/>
+        </scene>
         <!--Tombstone Overlay View Controller-->
         <scene sceneID="Pf1-fy-jtR">
             <objects>
@@ -2056,6 +2133,18 @@
         <image name="painting_thumb_temple-on.png" width="123" height="164"/>
         <image name="painting_thumb_temple.png" width="123" height="164"/>
         <image name="paintings_text.png" width="101" height="41"/>
+        <image name="sermon_cameraToggleOnBtn-on.png" width="190" height="70"/>
+        <image name="sermon_cameraToggleOnBtn.png" width="190" height="70"/>
+        <image name="sermon_circleBtn-on.png" width="72" height="70"/>
+        <image name="sermon_circleBtn.png" width="72" height="70"/>
+        <image name="sermon_crossBtn-on.png" width="72" height="70"/>
+        <image name="sermon_crossBtn.png" width="72" height="70"/>
+        <image name="sermon_squareBtn-on.png" width="72" height="70"/>
+        <image name="sermon_squareBtn.png" width="72" height="70"/>
+        <image name="sermon_triangle2Btn-on.png" width="75" height="70"/>
+        <image name="sermon_triangle2Btn.png" width="75" height="70"/>
+        <image name="sermon_triangleBtn-on.png" width="72" height="70"/>
+        <image name="sermon_triangleBtn.png" width="72" height="70"/>
         <image name="sg_general_Share_signout.png" width="244" height="41"/>
         <image name="sg_home_bg-exhibition.png" width="804" height="1060"/>
         <image name="sg_home_bg-findpainting.png" width="804" height="1060"/>
