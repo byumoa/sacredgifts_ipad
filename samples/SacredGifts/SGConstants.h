@@ -70,6 +70,13 @@ extern const NSString* kControllerIDHofmantr;
 
 extern const int kTotalPaintings;
 extern const NSString* kPaintingNames[];
+extern const int kTotalPaintingsBloch;
+extern NSString* const kPaintingNamesBloch[];
+extern const int kTotalPaintingsSchwartz;
+extern NSString* const kPaintingNamesSchwartz[];
+extern const int kTotalPaintingsHofmann;
+extern NSString* const kPaintingNamesHofmann[];
+
 extern const NSString* kArtistNames[];
 
 extern const CGRect kBlurFrame;

@@ -82,9 +82,7 @@ NSString* const kTempleDefaultKey = @"templeVersion";
         self.footerView.alpha = 0;
     }
     
-    //Not called after AR, why?
     [NSTimer scheduledTimerWithTimeInterval:self.frameOverlayDelay target:self selector:@selector(addTombstoneDelayed:) userInfo:nil repeats:NO];
-    self.currentPaintingIndex = [self calcCurrentPaintingIndex];
     
     if( [paintingStr isEqualToString:kPaintingNameTemple] || [paintingStr isEqualToString:kPaintingNameTempleNY])
     {
@@ -140,7 +138,6 @@ NSString* const kTempleDefaultKey = @"templeVersion";
     {
         CGRect frame = isTurningToLandscape ? kVideoFrameLandscape : kVideoFramePortrait;
         ((SGVideoOverlayViewController*)((SGMediaSelectionViewController*)self.overlayController).childOverlay).moviePlayer.view.frame = frame;
-        NSLog(@"frame: (%.01f, %.01f, %.01f, %.01f)", frame.origin.x, frame.origin.y, frame.size.width, frame.size.height);
     }
 }
 
@@ -154,10 +151,31 @@ NSString* const kTempleDefaultKey = @"templeVersion";
 
 -(int)calcCurrentPaintingIndex
 {
-    for( int i = 0; i < kTotalPaintings; i++ )
-        if( [_paintingNameStr isEqualToString:(NSString*)kPaintingNames[i]])
-            return i;
-    
+    if( [self.fromArtist isEqualToString:@"bloch"])
+    {
+        for( int i = 0; i < kTotalPaintingsBloch; i++ )
+            if( [_paintingNameStr isEqualToString:(NSString*)kPaintingNamesBloch[i]])
+                return i;
+    }
+    else if( [self.fromArtist isEqualToString:@"schwartz"])
+    {
+        for( int i = 0; i < kTotalPaintingsSchwartz; i++ )
+            if( [_paintingNameStr isEqualToString:(NSString*)kPaintingNamesSchwartz[i]])
+                return i;
+    }
+    else if( [self.fromArtist isEqualToString:@"hofmann"])
+    {
+        for( int i = 0; i < kTotalPaintingsHofmann; i++ )
+            if( [_paintingNameStr isEqualToString:(NSString*)kPaintingNamesHofmann[i]])
+                return i;
+    }
+    else
+    {
+        for( int i = 0; i < kTotalPaintings; i++ )
+            if( [_paintingNameStr isEqualToString:(NSString*)kPaintingNames[i]])
+                return i;
+    }
+
     return 0;
 }
 
@@ -176,6 +194,8 @@ NSString* const kTempleDefaultKey = @"templeVersion";
     _currentFooterBtnX = 0;
     [self addFooterButtonsForPainting:_paintingNameStr];
     self.overlayController.closeButton.hidden = YES;
+    
+    self.currentPaintingIndex = [self calcCurrentPaintingIndex];
 }
 
 static BOOL chromeHidden = NO;
@@ -192,21 +212,34 @@ static BOOL chromeHidden = NO;
 
 - (IBAction)swipeRecognized:(UISwipeGestureRecognizer *)sender
 {
-    if( !_tombstoneShown ) return;//|| [_paintingNameStr isEqualToString:@"castle"] ) return;
+    if( !_tombstoneShown ) return;
     
-    NSString* swipeDir = (NSString*)kAnimTypeSwipeLeft;
-    int nextPaintingIndex = self.currentPaintingIndex + 1;
+    NSString* swipeDir = sender.direction == UISwipeGestureRecognizerDirectionRight ? (NSString*)kAnimTypeSwipeRight : (NSString*)kAnimTypeSwipeLeft;
+    int nextPaintingIndex = self.currentPaintingIndex + (sender.direction == UISwipeGestureRecognizerDirectionRight ? -1 : 1);
     if( [_paintingNameStr isEqualToString:@"temple-ny"] ) nextPaintingIndex++;
-    if( sender.direction == UISwipeGestureRecognizerDirectionRight )
-    {
-        swipeDir = (NSString*)kAnimTypeSwipeRight;
-        nextPaintingIndex -= 2;
-        if( nextPaintingIndex < 0 )
-            nextPaintingIndex += kTotalPaintings;
-    }
-    nextPaintingIndex %= kTotalPaintings;
+    
+    int totalPaintings = kTotalPaintings;
+    if( [self.fromArtist isEqualToString:@"bloch"])
+        totalPaintings = kTotalPaintingsBloch;
+    else if( [self.fromArtist isEqualToString:@"schwartz"])
+        totalPaintings = kTotalPaintingsSchwartz;
+    else if( [self.fromArtist isEqualToString:@"hofmann"])
+        totalPaintings = kTotalPaintingsHofmann;
+    if( nextPaintingIndex < 0 )
+        nextPaintingIndex += totalPaintings;
+    nextPaintingIndex %= totalPaintings;
+    
     NSString* nextPaintingName = (NSString*)kPaintingNames[nextPaintingIndex];
-    [self.delegate transitionFromController:self toPaintingNamed:nextPaintingName fromButtonRect:CGRectZero withAnimType:swipeDir];
+    if( [self.fromArtist isEqualToString:@"bloch"])
+        nextPaintingName = (NSString*)kPaintingNamesBloch[nextPaintingIndex];
+    else if( [self.fromArtist isEqualToString:@"schwartz"])
+        nextPaintingName = (NSString*)kPaintingNamesSchwartz[nextPaintingIndex];
+    else if( [self.fromArtist isEqualToString:@"hofmann"])
+        nextPaintingName = (NSString*)kPaintingNamesHofmann[nextPaintingIndex];
+    
+    
+    SGPaintingViewController* paintingViewController = (SGPaintingViewController*)[self.delegate transitionFromController:self toPaintingNamed:nextPaintingName fromButtonRect:CGRectZero withAnimType:swipeDir];
+    paintingViewController.fromArtist = self.fromArtist;
 }
 
 -(void)addFooterButtonsForPainting:(NSString *)paintingNameStr

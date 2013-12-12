@@ -70,6 +70,38 @@ NSString* const kPaintingNames[] = {
     @"resurrection",
 };
 
+const int kTotalPaintingsBloch = 13;
+NSString* const kPaintingNamesBloch[] = {
+    @"mocking",
+    @"consolator",
+    @"emmaus",
+    @"castle",
+    @"shepherds",
+    @"sermon",
+    @"children",
+    @"healing",
+    @"cleansing",
+    @"denial",
+    @"cross",
+    @"burial",
+    @"resurrection",
+};
+
+const int kTotalPaintingsSchwartz = 2;
+NSString* const kPaintingNamesSchwartz[] = {
+    @"garden",
+    @"aalborg",
+};
+
+const int kTotalPaintingsHofmann = 5;
+NSString* const kPaintingNamesHofmann[] = {
+    @"capture",
+    @"temple",
+    @"ruler",
+    @"gethsemane",
+    @"savior",
+};
+
 NSString* const kArtistNames[] = {
     @"hofman",
     @"schwartz",

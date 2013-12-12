@@ -9,6 +9,9 @@
 #import "SGArtistViewController.h"
 #import "SGConstants.h"
 #import "SGNarrationManager.h"
+#import "SGPaintingContainerViewController.h"
+#import "SGPaintingViewController.h"
+#import "SGConvenienceFunctionsManager.h"
 
 @interface SGArtistViewController()
 
@@ -81,7 +84,8 @@
 - (IBAction)pressedPainting:(UIButton *)sender
 {
     NSString* paintingName = (NSString*)kPaintingNames[sender.tag-1];
-    [self.delegate transitionFromController:self toPaintingNamed:paintingName fromButtonRect:sender.frame withAnimType:kAnimTypeZoomIn];
+    SGPaintingContainerViewController* paintingViewController = (SGPaintingContainerViewController*)[self.delegate transitionFromController:self toPaintingNamed:paintingName fromButtonRect:sender.frame withAnimType:kAnimTypeZoomIn];
+    ((SGPaintingViewController*)paintingViewController.currentContentController).fromArtist = [SGConvenienceFunctionsManager artistForPainting:paintingName abbreviated:YES];
 }
 
 
