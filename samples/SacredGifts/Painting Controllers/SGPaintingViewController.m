@@ -61,6 +61,20 @@ NSString* const kTempleDefaultKey = @"templeVersion";
 @end
 
 @implementation SGPaintingViewController
+
+
+-(void)paintingTapped:(SGPaintingImageView *)paintingView
+{
+    float targetAlpha = 1;
+    
+    if( self.footerView.alpha == 1 )    targetAlpha = 0;
+    else                                [self addTombstoneDelayed:0];
+    
+    chromeHidden = (self.footerView.alpha == 1);
+    [self setChromeAlpha:targetAlpha isTurning:NO];
+}
+
+
 -(void)configWithPaintingName:(NSString *)paintingStr;
 {
 //    if( [paintingStr isEqualToString:@"temple"] ||
@@ -400,7 +414,6 @@ static BOOL chromeHidden = NO;
         case kModuleTypePerspective:{
             NSString* perspectivesPath = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", _paintingNameStr, @"perspectives"];
             int totalBtns = [((SGPersepectivesOverlayViewController*)self.overlayController) configurePerspectiveOverlayWithPath:perspectivesPath];
-            NSLog(@"totalBtns: %i", totalBtns);
             NSString* overlayImageStr = totalBtns < 4 ? @"SG_General_Module_OverlayHalf_%@.png" : @"SG_General_Module_Overlay_%@.png";
             if( totalBtns >= 4 )
                 ((SGMediaSelectionViewController*)self.overlayController).extendePlacement = YES;
@@ -576,23 +589,11 @@ static BOOL chromeHidden = NO;
     }
 }
 
--(void)paintingTapped:(SGPaintingImageView *)paintingView
-{
-    float targetAlpha = 1;
-    
-    if( self.footerView.alpha == 1 )    targetAlpha = 0;
-    else                                [self addTombstoneDelayed:0];
-    
-    chromeHidden = (self.footerView.alpha == 1);
-    [self setChromeAlpha:targetAlpha isTurning:NO];
-}
-
 -(void)setChromeAlpha:(int)targetAlpha isTurning:(BOOL)isTurning
 {
     [UIView animateWithDuration:0.25 animations:^{
         self.footerView.alpha = targetAlpha;
         self.headerView.alpha = targetAlpha;
-        ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = targetAlpha;
         
         if( isTurning &&
            [self.overlayController respondsToSelector:@selector(childOverlay)] &&
@@ -603,7 +604,19 @@ static BOOL chromeHidden = NO;
                 view.alpha = targetAlpha;
         }
         else
-            self.overlayController.view.alpha = targetAlpha;
+        {
+            if( [self.overlayController respondsToSelector:@selector(childOverlay)] &&
+               ((SGMediaSelectionViewController*)self.overlayController).childOverlay )
+            {
+                ((SGMediaSelectionViewController*)self.overlayController).childOverlay.view.alpha = targetAlpha;
+                ((SGOverlayView*)((SGMediaSelectionViewController*)self.overlayController).childOverlay.view).myBlurredBacking.alpha = targetAlpha;
+            }
+            else
+            {
+                ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = targetAlpha;
+                self.overlayController.view.alpha = targetAlpha;
+            }
+        }
     }];
 }
 
