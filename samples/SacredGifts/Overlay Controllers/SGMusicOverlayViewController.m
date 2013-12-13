@@ -33,6 +33,7 @@
 
 -(void)updateProgressBar:(NSTimer*)timer
 {
+    if( !_musicManager.player.isPlaying )return;
     CGRect frame = self.playOverlay.frame;
     frame.origin = CGPointMake(100, 221);
     if( _musicManager.player.duration > 0 )
