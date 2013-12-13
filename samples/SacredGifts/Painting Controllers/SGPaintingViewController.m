@@ -400,7 +400,7 @@ static BOOL chromeHidden = NO;
         case kModuleTypePerspective:{
             NSString* perspectivesPath = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", _paintingNameStr, @"perspectives"];
             int totalBtns = [((SGPersepectivesOverlayViewController*)self.overlayController) configurePerspectiveOverlayWithPath:perspectivesPath];
-            
+            NSLog(@"totalBtns: %i", totalBtns);
             NSString* overlayImageStr = totalBtns < 4 ? @"SG_General_Module_OverlayHalf_%@.png" : @"SG_General_Module_Overlay_%@.png";
             if( totalBtns >= 4 )
                 ((SGMediaSelectionViewController*)self.overlayController).extendePlacement = YES;

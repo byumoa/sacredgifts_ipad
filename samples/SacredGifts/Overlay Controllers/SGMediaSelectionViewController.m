@@ -19,7 +19,6 @@ const int kAudioStartPositionY = 160;
 const int kTextStartPositionY = 102;
 
 @interface SGMediaSelectionViewController()
-- (SGOverlayViewController*)addChildOverlay: (NSString*)moduleStr;
 - (ModuleType)getModuleTypeForStr: (NSString*)moduleStr;
 - (UIView*)addBlurredBackingForChildView;
 - (void)positionViews;

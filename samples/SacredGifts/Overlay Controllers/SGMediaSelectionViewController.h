@@ -20,4 +20,6 @@
 
 - (void)prepareForMediaStart;
 - (void)prepareForMediaEnd;
+
+- (SGOverlayViewController*)addChildOverlay: (NSString*)moduleStr;
 @end

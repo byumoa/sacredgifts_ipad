@@ -850,8 +850,8 @@
         <!--Sermon Shapes Overlay View Controller-->
         <scene sceneID="cg5-hc-xgn">
             <objects>
-                <viewController restorationIdentifier="SermonShapes" storyboardIdentifier="SermonShapes" id="bgK-sd-fmJ" customClass="SGSermonShapesOverlayViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="roS-ST-hWO">
+                <viewController restorationIdentifier="composition" storyboardIdentifier="composition" id="bgK-sd-fmJ" customClass="SGSermonShapesOverlayViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="roS-ST-hWO" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>

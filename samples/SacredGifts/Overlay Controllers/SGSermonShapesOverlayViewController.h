@@ -6,8 +6,8 @@
 //
 //
 
-#import <UIKit/UIKit.h>
+#import "SGOverlayViewController.h"
 
-@interface SGSermonShapesOverlayViewController : UIViewController
+@interface SGSermonShapesOverlayViewController : SGOverlayViewController
 
 @end

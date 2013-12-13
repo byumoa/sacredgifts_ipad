@@ -7,10 +7,12 @@
 //
 
 #import "SGPersepectivesOverlayViewController.h"
+#import "SGSermonShapesOverlayViewController.h"
 
 @interface SGPersepectivesOverlayViewController ()
 - (UIButton*)buttonForPerspectiveNumber: (int)perspectiveIndex atPath: (NSString*)folderPath;
 - (void)pressedPerspectiveBtn: (UIButton*)sender;
+- (void)loadComposition;
 @end
 
 @implementation SGPersepectivesOverlayViewController
@@ -28,7 +30,7 @@
 -(int)configurePerspectiveOverlayWithPath:(NSString *)folderPath
 {
     self.rootFolderPath = folderPath;
-    for( int i = 1; i <= 6; i++ )
+    for( int i = 1; i <= 7; i++ )
     {
         NSString* buttonName = [NSString stringWithFormat:@"perspectives_Btn%i", i];
         NSString* buttonPath = [[NSBundle mainBundle] pathForResource:buttonName ofType:@"png" inDirectory:folderPath];
@@ -63,6 +65,11 @@
 
 -(void)pressedPerspectiveBtn:(UIButton *)sender
 {
+    if( [self.paintingName isEqualToString:@"sermon"] && sender.tag == 3){
+        [self loadComposition];
+        return;
+    }
+    
     NSString* btnFolderPath = [NSString stringWithFormat:@"%@perspectives_%i", self.rootFolderPath, sender.tag];
     NSString* panoPath = [[NSBundle mainBundle] pathForResource:@"pano_b" ofType:@"jpg" inDirectory:btnFolderPath];
     NSString* videoPath = [[NSBundle mainBundle] pathForResource:@"video" ofType:@"mp4" inDirectory:btnFolderPath];
@@ -76,6 +83,16 @@
         [self loadAudioWithFolderPath:btnFolderPath].screenName = [NSString stringWithFormat:@"%@: persp audio", self.paintingName];
     else
         [self loadTextWithFolderPath:btnFolderPath].screenName = [NSString stringWithFormat:@"%@: persp text", self.paintingName];
+}
+
+-(void)loadComposition
+{
+    //NSString* paintingDir = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", self.paintingName, @"sermon/perspectives/perspectives_3"];
+//    SGSermonShapesOverlayViewController* overlay = (SGSermonShapesOverlayViewController*)[self addChildOverlay:@"composition"];
+//    overlay.paintingName = self.paintingName;
+//    NSString* paintingPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@".png" inDirectory:paintingDir];
+//    [overlay addBackgroundImgWithPath:paintingPath forgroundImage:self.paintingImageView.image];
+//[((SGSermonShapesOverlayViewController*)self.childOverlay) configureWithPath:paintingDir];
 }
 
 @end
