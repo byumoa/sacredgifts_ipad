@@ -42,4 +42,7 @@
 + (BOOL)chromeHidden;
 + (void)setChromeHidden: (BOOL)val;
 
+- (void)removeCurrentOverlay;
+- (void)deselectAllModuleBtns;
+
 @end

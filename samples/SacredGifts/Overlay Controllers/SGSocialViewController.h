@@ -8,6 +8,7 @@
 
 #import "SGOverlayViewController.h"
 #import <MessageUI/MessageUI.h>
+#import "SGWebViewController.h"
 
 typedef enum
 {
@@ -19,6 +20,7 @@ typedef enum
 @interface SGSocialViewController : SGOverlayViewController<MFMailComposeViewControllerDelegate>
 @property (nonatomic, strong) NSString* paintingName;
 @property (weak, nonatomic) IBOutlet UIImageView *paintingThumbnail;
+@property (weak, nonatomic) SGWebViewController* webViewController;
 
 - (IBAction)pressedSocialBtn:(id)sender;
 - (IBAction)pressedSignOut:(id)sender;

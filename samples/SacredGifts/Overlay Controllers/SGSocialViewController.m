@@ -8,12 +8,15 @@
 
 #import "SGSocialViewController.h"
 #import <Social/Social.h>
-#import "SGWebViewController.h"
 #import "SGFacebookViewController.h"
 #import "SGTwitterViewController.h"
 #import "GAI.h"
 #import "GAIDictionaryBuilder.h"
 #import "SGConvenienceFunctionsManager.h"
+
+#import "SGWebViewController.h"
+#import "SGPaintingContainerViewController.h"
+#import "SGPaintingViewController.h"
 
 NSString* const kEmailAutofill = @"Enjoying the painting by %@ while using the Sacred Gifts app from the BYU Museum of Art. %@";
 NSString* const kTwitterAutofill = @"Viewing this painting while using the @BYUmoa’s #sacredgifts app.";
@@ -105,9 +108,16 @@ int const kOverlayHeight = 236;
             break;
         case 4:
         {
-            SGWebViewController* webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"web"];
-            [self presentViewController:webViewController animated:YES completion:nil];
-            [webViewController configureWebpageFor:webPageTypeThanks];
+            [((SGPaintingViewController*)self.delegate) removeCurrentOverlay];
+            [((SGPaintingViewController*)self.delegate) deselectAllModuleBtns];
+            self.webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"web"];
+            [((SGPaintingViewController*)self.delegate) presentViewController:self.webViewController animated:YES completion:nil];
+            [self.webViewController configureWebpageFor:webPageTypeThanks];
+
+            //((SGPaintingContainerViewController*)((SGPaintingViewController*)self.delegate).delegate
+            //SGWebViewController* webViewController = (SGWebViewController*)[((SGPaintingViewController*)self.delegate) transitionFromController:((SGPaintingViewController*)self.delegate) toControllerID:@"web" fromButtonRect:CGRectZero withAnimType:kAnimTypeFade];
+            //[webViewController configureWebpageFor:webPageTypeThanks];
+            
         }
             break;
         default:

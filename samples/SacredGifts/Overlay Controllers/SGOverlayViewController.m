@@ -91,7 +91,7 @@
 }
 
 -(void)pressedClose:(UIButton *)sender
-{
+{   
     [self.delegate closeOverlay:self];
 }
 @end
