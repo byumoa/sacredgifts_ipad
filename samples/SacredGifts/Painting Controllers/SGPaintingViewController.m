@@ -68,7 +68,7 @@ NSString* const kTempleDefaultKey = @"templeVersion";
     float targetAlpha = 1;
     
     if( self.footerView.alpha == 1 )    targetAlpha = 0;
-    else                                [self addTombstoneDelayed:0];
+    //else                                [self addTombstoneDelayed:0];
     
     chromeHidden = (self.footerView.alpha == 1);
     [self setChromeAlpha:targetAlpha isTurning:NO];

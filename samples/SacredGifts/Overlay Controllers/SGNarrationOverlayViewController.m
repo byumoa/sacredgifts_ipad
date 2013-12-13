@@ -52,6 +52,7 @@ const CGRect kNarrationFrame = {0, 713, 768, 200};
 
 -(void)updateProgressBar:(NSTimer*)timer
 {
+    if( !_narrationManager.player.isPlaying )return;
     CGRect frame = self.playOverlay.frame;
     frame.origin = CGPointZero;
     
