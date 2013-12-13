@@ -563,14 +563,14 @@ static BOOL chromeHidden = NO;
 {
     if( self.overlayController != nil ){
         SGOverlayViewController* exitingOverlay = self.overlayController;
+        if( [exitingOverlay respondsToSelector:@selector(moviePlayer)])
+        {
+            MPMoviePlayerController* moviePlayer = [exitingOverlay performSelector:@selector(moviePlayer)];
+            [moviePlayer stop];
+        }
         [UIView animateWithDuration:0.25 animations:^{
             exitingOverlay.view.alpha = 0;
             ((SGOverlayView*)exitingOverlay.view).myBlurredBacking.alpha = 0;
-            if( [exitingOverlay respondsToSelector:@selector(moviePlayer)])
-            {
-                MPMoviePlayerController* moviePlayer = [exitingOverlay performSelector:@selector(moviePlayer)];
-                [moviePlayer stop];
-            }
         } completion:^(BOOL finished) {
             [exitingOverlay.view removeFromSuperview];
             [((SGOverlayView*)exitingOverlay.view).myBlurredBacking removeFromSuperview];

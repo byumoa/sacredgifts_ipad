@@ -69,9 +69,9 @@ const CGRect kVideoFrame = {0, 225, 768, 688};
     
         center = self.mediaPlayhead.center;
         center.x = self.playUnderlay.frame.origin.x + frame.size.width;
-        [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
-            self.mediaPlayhead.center = center;
-        } completion:nil];
+//        [UIView animateWithDuration:0.25 delay:0 options:UIViewAnimationOptionAllowUserInteraction animations:^{
+//            self.mediaPlayhead.center = center;
+//        } completion:nil];
     }
 }
 
