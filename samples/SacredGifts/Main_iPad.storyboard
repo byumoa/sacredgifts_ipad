@@ -851,12 +851,12 @@
         <scene sceneID="cg5-hc-xgn">
             <objects>
                 <viewController restorationIdentifier="composition" storyboardIdentifier="composition" id="bgK-sd-fmJ" customClass="SGSermonShapesOverlayViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="roS-ST-hWO" customClass="SGOverlayView">
+                    <view key="view" autoresizesSubviews="NO" contentMode="scaleToFill" id="roS-ST-hWO" customClass="SGOverlayView">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gXn-p1-ume">
-                                <rect key="frame" x="-1" y="954" width="190" height="70"/>
+                                <rect key="frame" x="1" y="953" width="190" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="sermon_cameraToggleOnBtn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -917,7 +917,7 @@
                                 <state key="highlighted" image="sermon_circleBtn-on.png"/>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qjq-o9-2e4" userLabel="First Responder" sceneMemberID="firstResponder"/>

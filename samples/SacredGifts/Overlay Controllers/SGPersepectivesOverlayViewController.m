@@ -67,8 +67,7 @@
 {
     if( [self.paintingName isEqualToString:@"sermon"] && sender.tag == 3){
         [self loadComposition];
-        return;
-    }
+        return;     }
     
     NSString* btnFolderPath = [NSString stringWithFormat:@"%@perspectives_%i", self.rootFolderPath, sender.tag];
     NSString* panoPath = [[NSBundle mainBundle] pathForResource:@"pano_b" ofType:@"jpg" inDirectory:btnFolderPath];
@@ -87,12 +86,10 @@
 
 -(void)loadComposition
 {
-    //NSString* paintingDir = [NSString stringWithFormat: @"%@/%@/%@/", @"PaintingResources", self.paintingName, @"sermon/perspectives/perspectives_3"];
-//    SGSermonShapesOverlayViewController* overlay = (SGSermonShapesOverlayViewController*)[self addChildOverlay:@"composition"];
-//    overlay.paintingName = self.paintingName;
-//    NSString* paintingPath = [[NSBundle mainBundle] pathForResource:@"overlay" ofType:@".png" inDirectory:paintingDir];
-//    [overlay addBackgroundImgWithPath:paintingPath forgroundImage:self.paintingImageView.image];
-//[((SGSermonShapesOverlayViewController*)self.childOverlay) configureWithPath:paintingDir];
+    NSString* btnFolderPath = [NSString stringWithFormat:@"%@perspectives_%i", self.rootFolderPath, 3];
+    SGOverlayViewController* overlay = [self addChildOverlay:@"composition"];
+    overlay.view.frame = CGRectMake(0, -self.view.frame.origin.y - 10, 768, 1024);
+    self.childOverlay.rootFolderPath = btnFolderPath;
 }
 
 @end
