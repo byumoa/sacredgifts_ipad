@@ -151,6 +151,13 @@ NSString* const kTempleDefaultKey = @"templeVersion";
         CGRect frame = isTurningToLandscape ? kVideoFrameLandscape : kVideoFramePortrait;
         ((SGVideoOverlayViewController*)((SGMediaSelectionViewController*)self.overlayController).childOverlay).moviePlayer.view.frame = frame;
     }
+    
+    if([self.overlayController respondsToSelector:@selector(moviePlayer)])
+    {
+        NSLog(@"Turning gift");
+        CGRect frame = isTurningToLandscape ? kVideoFrameLandscape : kVideoFramePortrait;
+        ((SGVideoOverlayViewController*)self.overlayController).moviePlayer.view.frame = frame;
+    }
 }
 
 - (IBAction)pressedTempleToggle:(id)sender
@@ -600,6 +607,12 @@ static BOOL chromeHidden = NO;
             for( UIView* view in ((SGMediaSelectionViewController*)self.overlayController).childOverlay.view.subviews )
                 if( view != ((SGVideoOverlayViewController*)((SGMediaSelectionViewController*)self.overlayController).childOverlay).moviePlayer.view)
                 view.alpha = targetAlpha;
+        }        
+        else if( isTurning && [self.overlayController respondsToSelector:@selector(moviePlayer)])
+        {
+            for( UIView* view in self.overlayController.view.subviews )
+                if( view != ((SGVideoOverlayViewController*)self.overlayController).moviePlayer.view)
+                    view.alpha = targetAlpha;
         }
         else
         {
