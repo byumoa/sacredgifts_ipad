@@ -607,7 +607,7 @@ static BOOL chromeHidden = NO;
             for( UIView* view in ((SGMediaSelectionViewController*)self.overlayController).childOverlay.view.subviews )
                 if( view != ((SGVideoOverlayViewController*)((SGMediaSelectionViewController*)self.overlayController).childOverlay).moviePlayer.view)
                 view.alpha = targetAlpha;
-        }        
+        }
         else if( isTurning && [self.overlayController respondsToSelector:@selector(moviePlayer)])
         {
             for( UIView* view in self.overlayController.view.subviews )
@@ -624,8 +624,8 @@ static BOOL chromeHidden = NO;
             }
             else
             {
-                ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = targetAlpha;
                 self.overlayController.view.alpha = targetAlpha;
+                self.overlayController.view.userInteractionEnabled = (targetAlpha == 1);
             }
         }
     }];

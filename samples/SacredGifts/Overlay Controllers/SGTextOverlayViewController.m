@@ -34,7 +34,11 @@ const CGRect kTextFrame = {0, 730, 768, 183};
 {
     [super addBackgroundImgWithPath:bgImgPath];
     CGPoint center = self.closeButton.center;
-    center.y = 20;
+    if( self.view.frame.size.height == 800 )
+        center.y = self.view.frame.size.height - 30;
+    else
+        center.y = 20;
+    
     self.closeButton.center = center;
 }
 

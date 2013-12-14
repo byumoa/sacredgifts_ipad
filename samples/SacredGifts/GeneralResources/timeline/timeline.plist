@@ -234,7 +234,7 @@
 				<key>width</key>
 				<integer>250</integer>
 				<key>text</key>
-				<string>American Civil War (1860–1865)</string>
+				<string>American Civil War (1861–1865)</string>
 			</dict>
 			<dict>
 				<key>x</key>
@@ -751,7 +751,7 @@
 				<key>width</key>
 				<integer>250</integer>
 				<key>text</key>
-				<string>Christ and the Children</string>
+				<string>&quot;Let the Little Children Come Unto Me&quot;</string>
 				<key>popup</key>
 				<string>popup26.png</string>
 				<key>buttonImage</key>
@@ -963,7 +963,7 @@
 				<key>width</key>
 				<integer>380</integer>
 				<key>text</key>
-				<string>Hofmann marries long-time sweetheart, Elizabeth Werner</string>
+				<string>Hofmann marries long-time sweetheart, Elisabeth Werner</string>
 			</dict>
 			<dict>
 				<key>x</key>
@@ -987,7 +987,7 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>2744</integer>
+				<real>2744</real>
 				<key>y</key>
 				<integer>590</integer>
 				<key>width</key>
