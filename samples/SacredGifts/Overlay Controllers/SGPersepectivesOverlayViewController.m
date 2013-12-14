@@ -88,7 +88,7 @@
 {
     NSString* btnFolderPath = [NSString stringWithFormat:@"%@perspectives_%i", self.rootFolderPath, 3];
     SGOverlayViewController* overlay = [self addChildOverlay:@"composition"];
-    overlay.view.frame = CGRectMake(0, -self.view.frame.origin.y - 10, 768, 1024);
+    overlay.view.frame = CGRectMake(0, -self.view.frame.origin.y - 50, 768, 1024);
     self.childOverlay.rootFolderPath = btnFolderPath;
 }
 

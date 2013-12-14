@@ -9,5 +9,14 @@
 #import "SGOverlayViewController.h"
 
 @interface SGSermonShapesOverlayViewController : SGOverlayViewController
+@property (weak, nonatomic) IBOutlet UIImageView *redDot;
+@property (weak, nonatomic) IBOutlet UIImageView *blueCrossHair;
+@property (weak, nonatomic) IBOutlet UIImageView *greenTriangle;
+@property (weak, nonatomic) IBOutlet UIImageView *blueCircleLarge;
+@property (weak, nonatomic) IBOutlet UIImageView *redSquare;
+@property (weak, nonatomic) IBOutlet UIImageView *purpleTriangle;
+- (IBAction)pressedCamera:(UIButton *)sender;
+- (IBAction)pressedShape:(UIButton *)sender;
+- (IBAction)pressedClose:(UIButton *)sender;
 
 @end

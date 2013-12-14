@@ -855,6 +855,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" id="vv2-HV-xY2">
+                                <rect key="frame" x="0.0" y="953" width="768" height="71"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="gXn-p1-ume">
                                 <rect key="frame" x="1" y="953" width="190" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -863,6 +868,9 @@
                                 </state>
                                 <state key="selected" image="sermon_cameraToggleOnBtn-on.png"/>
                                 <state key="highlighted" image="sermon_cameraToggleOnBtn-on.png"/>
+                                <connections>
+                                    <action selector="pressedCamera:" destination="bgK-sd-fmJ" eventType="touchUpInside" id="6j1-yY-moi"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sUn-Wx-TPK">
                                 <rect key="frame" x="666" y="954" width="102" height="70"/>
@@ -871,8 +879,11 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" image="SG_General_window_closeBtn-on.png"/>
+                                <connections>
+                                    <action selector="pressedClose:" destination="bgK-sd-fmJ" eventType="touchUpInside" id="kZm-0n-jdg"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ie2-k5-VhO">
+                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Ie2-k5-VhO">
                                 <rect key="frame" x="348" y="954" width="72" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="sermon_triangle2Btn.png">
@@ -880,8 +891,11 @@
                                 </state>
                                 <state key="selected" image="sermon_triangle2Btn-on.png"/>
                                 <state key="highlighted" image="sermon_triangle2Btn-on.png"/>
+                                <connections>
+                                    <action selector="pressedShape:" destination="bgK-sd-fmJ" eventType="touchUpInside" id="VFr-N7-dIx"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sqc-NI-oAm">
+                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="sqc-NI-oAm">
                                 <rect key="frame" x="428" y="954" width="72" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="sermon_squareBtn.png">
@@ -889,8 +903,11 @@
                                 </state>
                                 <state key="selected" image="sermon_squareBtn-on.png"/>
                                 <state key="highlighted" image="sermon_squareBtn-on.png"/>
+                                <connections>
+                                    <action selector="pressedShape:" destination="bgK-sd-fmJ" eventType="touchUpInside" id="aYM-8i-wq3"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uWY-Hy-IA2">
+                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="uWY-Hy-IA2">
                                 <rect key="frame" x="508" y="954" width="72" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="sermon_crossBtn.png">
@@ -898,16 +915,22 @@
                                 </state>
                                 <state key="selected" image="sermon_crossBtn-on.png"/>
                                 <state key="highlighted" image="sermon_crossBtn-on.png"/>
+                                <connections>
+                                    <action selector="pressedShape:" destination="bgK-sd-fmJ" eventType="touchUpInside" id="J2x-Wr-goZ"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vDU-XS-z4p">
+                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="vDU-XS-z4p">
                                 <rect key="frame" x="268" y="954" width="72" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="sermon_triangleBtn.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <state key="selected" image="sermon_triangleBtn-on.png"/>
+                                <connections>
+                                    <action selector="pressedShape:" destination="bgK-sd-fmJ" eventType="touchUpInside" id="IJK-fq-SVo"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oHv-f7-q9r">
+                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="oHv-f7-q9r">
                                 <rect key="frame" x="189" y="954" width="72" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="sermon_circleBtn.png">
@@ -915,10 +938,49 @@
                                 </state>
                                 <state key="selected" image="sermon_circleBtn-on.png"/>
                                 <state key="highlighted" image="sermon_circleBtn-on.png"/>
+                                <connections>
+                                    <action selector="pressedShape:" destination="bgK-sd-fmJ" eventType="touchUpInside" id="nnT-pC-EjC"/>
+                                </connections>
                             </button>
+                            <imageView hidden="YES" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="AR_Sermon.png" id="w7S-Yo-6hR">
+                                <rect key="frame" x="-20" y="19" width="768" height="1042"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="perspectives_sermon_center_dot.png" id="wZV-E4-kra" userLabel="RedDot">
+                                <rect key="frame" x="383" y="557" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" image="perspectives_sermon_cross_hairs.png" id="Doh-0Y-Ibo" userLabel="BlueCrosshair">
+                                <rect key="frame" x="13" y="189" width="766" height="764"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFill" image="perspectives_sermon_green_triangle.png" id="MwF-K5-2Si" userLabel="GreenTriangle">
+                                <rect key="frame" x="115" y="242" width="562" height="506"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFill" image="perspectives_sermon_large_blue_circle.png" id="rY8-nC-hhx" userLabel="BlueCircleLarge">
+                                <rect key="frame" x="29" y="204" width="736" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" image="perspectives_sermon_red_square.png" id="8Cz-qM-UaN" userLabel="redSquare">
+                                <rect key="frame" x="28" y="207" width="734" height="734"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFill" image="perspectives_sermon_purple_triangle.png" id="IRi-Rt-lgD" userLabel="purpleTriangle">
+                                <rect key="frame" x="111" y="392" width="568" height="512"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="blueCircleLarge" destination="rY8-nC-hhx" id="fi1-O8-lXk"/>
+                        <outlet property="blueCrossHair" destination="Doh-0Y-Ibo" id="VQA-xX-Bt8"/>
+                        <outlet property="greenTriangle" destination="MwF-K5-2Si" id="xtn-1i-hg2"/>
+                        <outlet property="purpleTriangle" destination="IRi-Rt-lgD" id="buS-dN-xOn"/>
+                        <outlet property="redDot" destination="wZV-E4-kra" id="Puu-Sb-ucP"/>
+                        <outlet property="redSquare" destination="8Cz-qM-UaN" id="LOY-yC-sOw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qjq-o9-2e4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2055,6 +2117,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="AR_Sermon.png" width="768" height="1042"/>
         <image name="SG_General_BackBtn-on.png" width="122" height="41"/>
         <image name="SG_General_BackBtn.png" width="122" height="41"/>
         <image name="SG_General_Media_Playbar.png" width="387" height="9"/>
@@ -2133,6 +2196,12 @@
         <image name="painting_thumb_temple-on.png" width="123" height="164"/>
         <image name="painting_thumb_temple.png" width="123" height="164"/>
         <image name="paintings_text.png" width="101" height="41"/>
+        <image name="perspectives_sermon_center_dot.png" width="26" height="26"/>
+        <image name="perspectives_sermon_cross_hairs.png" width="563" height="562"/>
+        <image name="perspectives_sermon_green_triangle.png" width="440" height="395"/>
+        <image name="perspectives_sermon_large_blue_circle.png" width="563" height="563"/>
+        <image name="perspectives_sermon_purple_triangle.png" width="440" height="396"/>
+        <image name="perspectives_sermon_red_square.png" width="563" height="563"/>
         <image name="sermon_cameraToggleOnBtn-on.png" width="190" height="70"/>
         <image name="sermon_cameraToggleOnBtn.png" width="190" height="70"/>
         <image name="sermon_circleBtn-on.png" width="72" height="70"/>

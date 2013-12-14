@@ -35,4 +35,43 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)pressedShape:(UIButton *)sender {
+    UIImageView *targetImageView;
+    
+    switch( sender.tag )
+    {
+        case 1:
+            targetImageView = self.blueCircleLarge;
+            break;
+        case 2:
+            targetImageView = self.greenTriangle;
+            break;
+        case 3:
+            targetImageView = self.purpleTriangle;
+            break;
+        case 4:
+            targetImageView = self.redSquare;
+            break;
+        case 5:
+            targetImageView = self.blueCrossHair;
+            break;
+    }
+    
+    float targetAlpha = targetImageView.alpha == 1 ? 0 : 1;
+    
+    [UIView animateWithDuration:0.25 animations:^{
+        targetImageView.alpha = targetAlpha;
+    }];
+    
+    sender.selected = (targetAlpha == 1);
+}
+
+- (IBAction)pressedClose:(UIButton *)sender
+{
+    [self.delegate closeOverlay:self];
+}
+
+- (IBAction)pressedCamera:(UIButton *)sender {
+}
+
 @end
