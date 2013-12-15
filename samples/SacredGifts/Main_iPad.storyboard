@@ -943,7 +943,7 @@
                                 </connections>
                             </button>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="perspectives_sermon_center_dot.png" id="wZV-E4-kra" userLabel="RedDot">
-                                <rect key="frame" x="383" y="557" width="26" height="26"/>
+                                <rect key="frame" x="382" y="556" width="26" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="scaleAspectFit" image="perspectives_sermon_cross_hairs.png" id="Doh-0Y-Ibo" userLabel="BlueCrosshair">
