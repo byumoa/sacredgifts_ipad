@@ -27,6 +27,14 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    for( UIView* shape in self.shapes )
+    {
+        CGPoint center = shape.center;
+        center.x += 20;
+        center.y += 15;
+        shape.center = center;
+    }
 }
 
 - (void)didReceiveMemoryWarning

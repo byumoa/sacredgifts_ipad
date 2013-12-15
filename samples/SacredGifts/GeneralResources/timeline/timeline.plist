@@ -175,7 +175,7 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3726</integer>
+				<integer>3795</integer>
 				<key>y</key>
 				<integer>710</integer>
 				<key>width</key>
@@ -408,7 +408,7 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3050</integer>
+				<real>3027</real>
 				<key>y</key>
 				<integer>30</integer>
 				<key>width</key>
@@ -695,7 +695,7 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3059</integer>
+				<integer>2921</integer>
 				<key>y</key>
 				<integer>350</integer>
 				<key>width</key>
@@ -745,7 +745,7 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3100</integer>
+				<real>3123</real>
 				<key>y</key>
 				<integer>310</integer>
 				<key>width</key>
@@ -987,7 +987,7 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<real>2744</real>
+				<integer>2974</integer>
 				<key>y</key>
 				<integer>590</integer>
 				<key>width</key>
@@ -1115,7 +1115,7 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3251</integer>
+				<integer>3389</integer>
 				<key>y</key>
 				<integer>550</integer>
 				<key>width</key>
