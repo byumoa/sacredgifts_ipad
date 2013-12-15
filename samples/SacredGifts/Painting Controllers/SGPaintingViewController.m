@@ -625,7 +625,7 @@ static BOOL chromeHidden = NO;
             else
             {
                 self.overlayController.view.alpha = targetAlpha;
-                self.overlayController.view.userInteractionEnabled = (targetAlpha == 1);
+                ((SGOverlayView*)self.overlayController.view).myBlurredBacking.alpha = targetAlpha;
             }
         }
     }];
