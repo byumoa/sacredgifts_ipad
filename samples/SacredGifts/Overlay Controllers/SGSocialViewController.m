@@ -63,30 +63,29 @@ int const kOverlayHeight = 236;
         case SocialMediaTypeFacebook:
         {
             
-            NSString* artist = [self calcArtistForPaintingStr:self.paintingName];
-            NSString* autofillStr = [NSString stringWithFormat:kFacebookAutofill, artist];
-            
-            SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
-            [socialSheet setInitialText:autofillStr];
-            [socialSheet addImage:thumbnail];
-            [socialSheet addURL:[NSURL URLWithString:kAppStoreURL]];
-            [self presentViewController:socialSheet animated:YES completion:^{}];
-            
-            mediaType = @"facebook";
-            //[self doInMuseumFBPostWithImage:thumbnail];
+//            NSString* artist = [self calcArtistForPaintingStr:self.paintingName];
+//            NSString* autofillStr = [NSString stringWithFormat:kFacebookAutofill, artist];
+//            
+//            SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+//            [socialSheet setInitialText:autofillStr];
+//            [socialSheet addImage:thumbnail];
+//            [socialSheet addURL:[NSURL URLWithString:kAppStoreURL]];
+//            [self presentViewController:socialSheet animated:YES completion:^{}];
+//            
+//            mediaType = @"facebook";
+            [self doInMuseumFBPostWithImage:thumbnail];
         }
             break;
         case SocialMediaTypeTwitter:
         {
-            
-            SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
-            [socialSheet setInitialText:(NSString*)kTwitterAutofill];
-            [socialSheet addImage:thumbnail];
-            [socialSheet addURL:[NSURL URLWithString:kAppStoreURL]];
-            [self presentViewController:socialSheet animated:YES completion:^{}];
-            
-            mediaType = @"twitter";
-            //[self doInMuseumTWPostWithImage:thumbnail];
+//            SLComposeViewController *socialSheet = [SLComposeViewController composeViewControllerForServiceType:SLServiceTypeTwitter];
+//            [socialSheet setInitialText:(NSString*)kTwitterAutofill];
+//            [socialSheet addImage:thumbnail];
+//            [socialSheet addURL:[NSURL URLWithString:kAppStoreURL]];
+//            [self presentViewController:socialSheet animated:YES completion:^{}];
+//            
+//            mediaType = @"twitter";
+            [self doInMuseumTWPostWithImage:thumbnail];
         }
             break;
         case SocialMediaTypeEmail:
@@ -113,11 +112,6 @@ int const kOverlayHeight = 236;
             self.webViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"web"];
             [((SGPaintingViewController*)self.delegate) presentViewController:self.webViewController animated:YES completion:nil];
             [self.webViewController configureWebpageFor:webPageTypeThanks];
-
-            //((SGPaintingContainerViewController*)((SGPaintingViewController*)self.delegate).delegate
-            //SGWebViewController* webViewController = (SGWebViewController*)[((SGPaintingViewController*)self.delegate) transitionFromController:((SGPaintingViewController*)self.delegate) toControllerID:@"web" fromButtonRect:CGRectZero withAnimType:kAnimTypeFade];
-            //[webViewController configureWebpageFor:webPageTypeThanks];
-            
         }
             break;
         default:
