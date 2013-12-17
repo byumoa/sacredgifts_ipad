@@ -819,6 +819,7 @@
 		6132D5691860D82000D764FA /* perspectives_sermon_red_square_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perspectives_sermon_red_square_shadow.png; sourceTree = "<group>"; };
 		6132D56A1860D82000D764FA /* perspectives_sermon_red_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perspectives_sermon_red_square.png; sourceTree = "<group>"; };
 		6132D56B1860D82000D764FA /* perspectives_sermon_red_square@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "perspectives_sermon_red_square@2x.png"; sourceTree = "<group>"; };
+		6132D57B1861006F00D764FA /* SGPaintingImageViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGPaintingImageViewDelegate.h; sourceTree = "<group>"; };
 		6141D35E183CFE1800739369 /* SGQCARDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGQCARDelegate.h; sourceTree = "<group>"; };
 		614C01011824247600333698 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		614C01031824247D00333698 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -1633,6 +1634,7 @@
 				61C8C13B1851336300003608 /* SGTimelineViewController.m */,
 				61C8C13D1851A6A900003608 /* SGTimelineEntry.h */,
 				61C8C13E1851A6A900003608 /* SGTimelineEntry.m */,
+				6132D57B1861006F00D764FA /* SGPaintingImageViewDelegate.h */,
 			);
 			name = SacredGifts;
 			sourceTree = "<group>";

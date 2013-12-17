@@ -7,6 +7,7 @@
 //
 
 #import "SGMediaSelectionViewController.h"
+#import "SGPaintingImageViewDelegate.h"
 typedef enum
 {
     kPerspectiveOverlayTypeVideo,
@@ -14,7 +15,10 @@ typedef enum
 }PerspectiveOverlayType;
 
 @interface SGPersepectivesOverlayViewController : SGMediaSelectionViewController
+@property( nonatomic, weak ) id<SGPaintingImageViewDelegate> tappedPaintingDelegate;
 
 - (int)configurePerspectiveOverlayWithPath: (NSString*)folderPath;
+
+
 
 @end

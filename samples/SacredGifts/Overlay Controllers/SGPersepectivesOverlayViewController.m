@@ -8,6 +8,7 @@
 
 #import "SGPersepectivesOverlayViewController.h"
 #import "SGSermonShapesOverlayViewController.h"
+#import "SGOverlayView.h"
 
 @interface SGPersepectivesOverlayViewController ()
 - (UIButton*)buttonForPerspectiveNumber: (int)perspectiveIndex atPath: (NSString*)folderPath;
@@ -67,7 +68,8 @@
 {
     if( [self.paintingName isEqualToString:@"sermon"] && sender.tag == 3){
         [self loadComposition];
-        return;     }
+        return;
+}
     
     NSString* btnFolderPath = [NSString stringWithFormat:@"%@perspectives_%i", self.rootFolderPath, sender.tag];
     NSString* panoPath = [[NSBundle mainBundle] pathForResource:@"pano_b" ofType:@"jpg" inDirectory:btnFolderPath];
@@ -91,5 +93,11 @@
     overlay.view.frame = CGRectMake(0, -self.view.frame.origin.y - 50, 768, 1024);
     self.childOverlay.rootFolderPath = btnFolderPath;
 }
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if(((SGOverlayView*)self.view).myBlurredBacking.alpha == 0 )
+        [self.tappedPaintingDelegate paintingTapped:nil];
+};
 
 @end

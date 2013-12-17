@@ -7,11 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "SGPaintingImageViewDelegate.h"
 @class SGPaintingImageView;
-
-@protocol SGPaintingImageViewDelegate <NSObject>
-- (void)paintingTapped: (SGPaintingImageView*) paintingView;
-@end
 
 @interface SGPaintingImageView : UIImageView
 @property (weak, nonatomic) UIViewController<SGPaintingImageViewDelegate>* delegate;
