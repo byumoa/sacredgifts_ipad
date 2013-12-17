@@ -63,6 +63,8 @@ NSString* const kTempleDefaultKey = @"templeVersion";
 
 -(void)paintingTapped:(SGPaintingImageView *)paintingView
 {
+    if( UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) return;
+    
     float targetAlpha = 1;
     
     if( self.footerView.alpha == 1 )    targetAlpha = 0;
@@ -231,7 +233,7 @@ static BOOL chromeHidden = NO;
 
 - (IBAction)swipeRecognized:(UISwipeGestureRecognizer *)sender
 {
-    if( !_tombstoneShown ) return;
+    if( !_tombstoneShown || UIInterfaceOrientationIsLandscape(self.interfaceOrientation)) return;
     
     NSString* swipeDir = sender.direction == UISwipeGestureRecognizerDirectionRight ? (NSString*)kAnimTypeSwipeRight : (NSString*)kAnimTypeSwipeLeft;
     int nextPaintingIndex = self.currentPaintingIndex + (sender.direction == UISwipeGestureRecognizerDirectionRight ? -1 : 1);
