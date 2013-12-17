@@ -107,7 +107,7 @@
 				<key>x</key>
 				<integer>1775</integer>
 				<key>y</key>
-				<integer>950</integer>
+				<integer>750</integer>
 				<key>width</key>
 				<integer>350</integer>
 				<key>text</key>
@@ -145,9 +145,9 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>2978</integer>
+				<integer>2968</integer>
 				<key>y</key>
-				<integer>870</integer>
+				<integer>830</integer>
 				<key>width</key>
 				<integer>240</integer>
 				<key>text</key>
@@ -157,7 +157,7 @@
 				<key>x</key>
 				<integer>2997</integer>
 				<key>y</key>
-				<integer>910</integer>
+				<integer>870</integer>
 				<key>width</key>
 				<integer>340</integer>
 				<key>text</key>
@@ -167,7 +167,7 @@
 				<key>x</key>
 				<integer>3100</integer>
 				<key>y</key>
-				<integer>950</integer>
+				<integer>910</integer>
 				<key>width</key>
 				<integer>360</integer>
 				<key>text</key>
@@ -408,7 +408,7 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<real>3027</real>
+				<real>3000</real>
 				<key>y</key>
 				<integer>30</integer>
 				<key>width</key>
@@ -501,7 +501,7 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3161</integer>
+				<integer>3153</integer>
 				<key>y</key>
 				<integer>190</integer>
 				<key>width</key>
@@ -551,7 +551,7 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3158</integer>
+				<integer>3153</integer>
 				<key>y</key>
 				<integer>230</integer>
 				<key>width</key>
@@ -571,7 +571,7 @@
 				<key>x</key>
 				<integer>3106</integer>
 				<key>y</key>
-				<integer>270</integer>
+				<integer>310</integer>
 				<key>width</key>
 				<integer>250</integer>
 				<key>text</key>
@@ -625,7 +625,7 @@
 				<key>x</key>
 				<integer>2851</integer>
 				<key>y</key>
-				<integer>190</integer>
+				<integer>150</integer>
 				<key>width</key>
 				<integer>250</integer>
 				<key>text</key>
@@ -643,7 +643,7 @@
 				<key>x</key>
 				<integer>2901</integer>
 				<key>y</key>
-				<integer>150</integer>
+				<integer>390</integer>
 				<key>width</key>
 				<integer>250</integer>
 				<key>text</key>
@@ -679,7 +679,7 @@
 				<key>x</key>
 				<integer>3055</integer>
 				<key>y</key>
-				<integer>390</integer>
+				<integer>350</integer>
 				<key>width</key>
 				<integer>250</integer>
 				<key>text</key>
@@ -695,9 +695,9 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>2921</integer>
+				<integer>2749</integer>
 				<key>y</key>
-				<integer>350</integer>
+				<integer>190</integer>
 				<key>width</key>
 				<integer>250</integer>
 				<key>text</key>
@@ -745,13 +745,13 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<real>3123</real>
+				<real>3153</real>
 				<key>y</key>
-				<integer>310</integer>
+				<integer>270</integer>
 				<key>width</key>
-				<integer>250</integer>
+				<integer>310</integer>
 				<key>text</key>
-				<string>&quot;Let the Little Children Come Unto Me&quot;</string>
+				<string>Let the Little Children Come Unto Me</string>
 				<key>popup</key>
 				<string>popup26.png</string>
 				<key>buttonImage</key>
@@ -987,9 +987,9 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>2974</integer>
+				<integer>3203</integer>
 				<key>y</key>
-				<integer>590</integer>
+				<integer>630</integer>
 				<key>width</key>
 				<integer>244</integer>
 				<key>text</key>
@@ -1115,13 +1115,13 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<integer>3389</integer>
+				<integer>3559</integer>
 				<key>y</key>
-				<integer>550</integer>
+				<integer>630</integer>
 				<key>width</key>
 				<integer>244</integer>
 				<key>text</key>
-				<string>Jesus in the Temple</string>
+				<string>Jesus in the Temple (again)</string>
 				<key>popup</key>
 				<string>popup5.png</string>
 				<key>buttonImage</key>
@@ -1135,7 +1135,7 @@
 				<key>x</key>
 				<integer>2796</integer>
 				<key>y</key>
-				<integer>630</integer>
+				<integer>590</integer>
 				<key>width</key>
 				<integer>560</integer>
 				<key>text</key>
