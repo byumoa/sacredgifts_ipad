@@ -85,6 +85,10 @@
 		6132D5781860D82000D764FA /* perspectives_sermon_red_square_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D5691860D82000D764FA /* perspectives_sermon_red_square_shadow.png */; };
 		6132D5791860D82000D764FA /* perspectives_sermon_red_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D56A1860D82000D764FA /* perspectives_sermon_red_square.png */; };
 		6132D57A1860D82000D764FA /* perspectives_sermon_red_square@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D56B1860D82000D764FA /* perspectives_sermon_red_square@2x.png */; };
+		6132D5801861082900D764FA /* sermon_instruction_overlay_ar.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D57C1861082900D764FA /* sermon_instruction_overlay_ar.png */; };
+		6132D5811861082900D764FA /* sermon_instruction_overlay_ar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D57D1861082900D764FA /* sermon_instruction_overlay_ar@2x.png */; };
+		6132D5821861082900D764FA /* sermon_instruction_overlay.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D57E1861082900D764FA /* sermon_instruction_overlay.png */; };
+		6132D5831861082900D764FA /* sermon_instruction_overlay@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D57F1861082900D764FA /* sermon_instruction_overlay@2x.png */; };
 		614C01021824247600333698 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 614C01011824247600333698 /* Social.framework */; };
 		614C01041824247D00333698 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 614C01031824247D00333698 /* MessageUI.framework */; };
 		614E3C9A180D8D9C002E875B /* SacredGifts.dat in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C98180D8D9C002E875B /* SacredGifts.dat */; };
@@ -820,6 +824,10 @@
 		6132D56A1860D82000D764FA /* perspectives_sermon_red_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perspectives_sermon_red_square.png; sourceTree = "<group>"; };
 		6132D56B1860D82000D764FA /* perspectives_sermon_red_square@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "perspectives_sermon_red_square@2x.png"; sourceTree = "<group>"; };
 		6132D57B1861006F00D764FA /* SGPaintingImageViewDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGPaintingImageViewDelegate.h; sourceTree = "<group>"; };
+		6132D57C1861082900D764FA /* sermon_instruction_overlay_ar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sermon_instruction_overlay_ar.png; sourceTree = "<group>"; };
+		6132D57D1861082900D764FA /* sermon_instruction_overlay_ar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sermon_instruction_overlay_ar@2x.png"; sourceTree = "<group>"; };
+		6132D57E1861082900D764FA /* sermon_instruction_overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sermon_instruction_overlay.png; sourceTree = "<group>"; };
+		6132D57F1861082900D764FA /* sermon_instruction_overlay@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "sermon_instruction_overlay@2x.png"; sourceTree = "<group>"; };
 		6141D35E183CFE1800739369 /* SGQCARDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGQCARDelegate.h; sourceTree = "<group>"; };
 		614C01011824247600333698 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		614C01031824247D00333698 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -2592,6 +2600,10 @@
 		61E163C41859E3540076F73A /* ar_sermon */ = {
 			isa = PBXGroup;
 			children = (
+				6132D57C1861082900D764FA /* sermon_instruction_overlay_ar.png */,
+				6132D57D1861082900D764FA /* sermon_instruction_overlay_ar@2x.png */,
+				6132D57E1861082900D764FA /* sermon_instruction_overlay.png */,
+				6132D57F1861082900D764FA /* sermon_instruction_overlay@2x.png */,
 				61E163C51859E3540076F73A /* sermon_cameraToggleOffBtn-on.png */,
 				61E163C61859E3540076F73A /* sermon_cameraToggleOffBtn-on@2x.png */,
 				61E163C71859E3540076F73A /* sermon_cameraToggleOffBtn.png */,
@@ -2800,6 +2812,7 @@
 				61C8C12418512F5600003608 /* timeline_garden@2x.png in Resources */,
 				61CD52AA180C242500D28921 /* painting_thumb_children-on.png in Resources */,
 				61CD51F8180C242500D28921 /* sg_home_filmbtn-on.png in Resources */,
+				6132D5821861082900D764FA /* sermon_instruction_overlay.png in Resources */,
 				61CD521D180C242500D28921 /* sg_home_reservationbtn-on@2x.png in Resources */,
 				61CD525A180C242500D28921 /* SG_General_Painting_DetailMarkerBtn-on@2x.png in Resources */,
 				61C8C12D18512F5600003608 /* timeline_ruler.png in Resources */,
@@ -2915,6 +2928,7 @@
 				613292E218325C9E00551F09 /* SG_General_painting-castleBtn-on.png in Resources */,
 				61C8C0D018512F5600003608 /* timeline_assets_paintingBtn-on@2x.png in Resources */,
 				61E163EB1859E3540076F73A /* sermon_circleBtn.png in Resources */,
+				6132D5831861082900D764FA /* sermon_instruction_overlay@2x.png in Resources */,
 				61E163921859B4AB0076F73A /* header_cleansing@2x.png in Resources */,
 				61CD52D0180C242500D28921 /* painting_thumb_mocking.png in Resources */,
 				61CD52D8180C242500D28921 /* painting_thumb_ruler.png in Resources */,
@@ -3173,6 +3187,7 @@
 				618713D71830E592005BC973 /* sg_general_painting_detailmarkerbtn-on.png in Resources */,
 				61CD528D180C242500D28921 /* SG_General_Share_fb-on@2x.png in Resources */,
 				61CD51E1180C242500D28921 /* sg_home_bg-home_blur.png in Resources */,
+				6132D5811861082900D764FA /* sermon_instruction_overlay_ar@2x.png in Resources */,
 				61CD51DD180C242500D28921 /* sg_home_bg-findpainting@2x.png in Resources */,
 				61267B841819667B00A52CC5 /* splash_donors.png in Resources */,
 				61CD5266180C242500D28921 /* SG_General_Painting_GiftsBtn@2x.png in Resources */,
@@ -3239,6 +3254,7 @@
 				61CD521E180C242500D28921 /* sg_home_reservationbtn.png in Resources */,
 				61E163B11859B4AB0076F73A /* header_ruler.png in Resources */,
 				61CD51D3180C242500D28921 /* artists_pages_hofmann_overlay.png in Resources */,
+				6132D5801861082900D764FA /* sermon_instruction_overlay_ar.png in Resources */,
 				61C8C12F18512F5600003608 /* timeline_savior.png in Resources */,
 				6132D5701860D82000D764FA /* perspectives_sermon_green_triangle.png in Resources */,
 				61CD5228180C242500D28921 /* SG_Home_SplashScreen.png in Resources */,

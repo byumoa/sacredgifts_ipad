@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *blueCircleLarge;
 @property (weak, nonatomic) IBOutlet UIImageView *redSquare;
 @property (weak, nonatomic) IBOutlet UIImageView *purpleTriangle;
+@property (weak, nonatomic) IBOutlet UIImageView *instruction2;
 @property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *shapes;
 - (IBAction)pressedCamera:(UIButton *)sender;
 - (IBAction)pressedShape:(UIButton *)sender;

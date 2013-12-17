@@ -967,6 +967,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <inset key="insetFor6xAndEarlier" minX="20" minY="-10" maxX="-20" maxY="10"/>
                             </imageView>
+                            <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" image="sermon_instruction_overlay.png" id="fWx-Pa-ra7">
+                                <rect key="frame" x="0.0" y="658" width="768" height="325"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
@@ -974,6 +978,7 @@
                         <outlet property="blueCircleLarge" destination="rY8-nC-hhx" id="fi1-O8-lXk"/>
                         <outlet property="blueCrossHair" destination="Doh-0Y-Ibo" id="VQA-xX-Bt8"/>
                         <outlet property="greenTriangle" destination="MwF-K5-2Si" id="xtn-1i-hg2"/>
+                        <outlet property="instruction2" destination="fWx-Pa-ra7" id="2eQ-LQ-0nz"/>
                         <outlet property="purpleTriangle" destination="IRi-Rt-lgD" id="buS-dN-xOn"/>
                         <outlet property="redSquare" destination="8Cz-qM-UaN" id="LOY-yC-sOw"/>
                         <outletCollection property="shapes" destination="Doh-0Y-Ibo" id="FDb-xG-Rkt"/>
@@ -2207,6 +2212,7 @@
         <image name="sermon_circleBtn.png" width="72" height="70"/>
         <image name="sermon_crossBtn-on.png" width="72" height="70"/>
         <image name="sermon_crossBtn.png" width="72" height="70"/>
+        <image name="sermon_instruction_overlay.png" width="768" height="325"/>
         <image name="sermon_squareBtn-on.png" width="72" height="70"/>
         <image name="sermon_squareBtn.png" width="72" height="70"/>
         <image name="sermon_triangle2Btn-on.png" width="75" height="70"/>

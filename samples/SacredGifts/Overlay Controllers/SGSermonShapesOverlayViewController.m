@@ -9,7 +9,10 @@
 #import "SGSermonShapesOverlayViewController.h"
 
 @interface SGSermonShapesOverlayViewController ()
-
+{
+    int _totalSelectedButtons;
+}
+- (void) setInstructionVisibility;
 @end
 
 @implementation SGSermonShapesOverlayViewController
@@ -72,6 +75,16 @@
     }];
     
     sender.selected = (targetAlpha == 1);
+    _totalSelectedButtons += sender.selected ? 1 : -1;
+    
+    [self setInstructionVisibility];
+}
+
+-(void)setInstructionVisibility
+{
+    [UIView animateWithDuration:0.25 animations:^{
+        self.instruction2.alpha = (_totalSelectedButtons == 0) ? 1: 0;
+    }];
 }
 
 - (IBAction)pressedClose:(UIButton *)sender
