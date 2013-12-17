@@ -70,6 +70,21 @@
 		613292E318325C9E00551F09 /* SG_General_painting-castleBtn-on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 613292DF18325C9E00551F09 /* SG_General_painting-castleBtn-on@2x.png */; };
 		613292E418325C9E00551F09 /* SG_General_painting-castleBtn.png in Resources */ = {isa = PBXBuildFile; fileRef = 613292E018325C9E00551F09 /* SG_General_painting-castleBtn.png */; };
 		613292E518325C9E00551F09 /* SG_General_painting-castleBtn@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 613292E118325C9E00551F09 /* SG_General_painting-castleBtn@2x.png */; };
+		6132D56C1860D82000D764FA /* perspectives_sermon_cross_hairs_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D55D1860D82000D764FA /* perspectives_sermon_cross_hairs_shadow.png */; };
+		6132D56D1860D82000D764FA /* perspectives_sermon_cross_hairs.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D55E1860D82000D764FA /* perspectives_sermon_cross_hairs.png */; };
+		6132D56E1860D82000D764FA /* perspectives_sermon_cross_hairs@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D55F1860D82000D764FA /* perspectives_sermon_cross_hairs@2x.png */; };
+		6132D56F1860D82000D764FA /* perspectives_sermon_green_triangle_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D5601860D82000D764FA /* perspectives_sermon_green_triangle_shadow.png */; };
+		6132D5701860D82000D764FA /* perspectives_sermon_green_triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D5611860D82000D764FA /* perspectives_sermon_green_triangle.png */; };
+		6132D5711860D82000D764FA /* perspectives_sermon_green_triangle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D5621860D82000D764FA /* perspectives_sermon_green_triangle@2x.png */; };
+		6132D5721860D82000D764FA /* perspectives_sermon_large_blue_circle_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D5631860D82000D764FA /* perspectives_sermon_large_blue_circle_shadow.png */; };
+		6132D5731860D82000D764FA /* perspectives_sermon_large_blue_circle.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D5641860D82000D764FA /* perspectives_sermon_large_blue_circle.png */; };
+		6132D5741860D82000D764FA /* perspectives_sermon_large_blue_circle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D5651860D82000D764FA /* perspectives_sermon_large_blue_circle@2x.png */; };
+		6132D5751860D82000D764FA /* perspectives_sermon_purple_triangle_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D5661860D82000D764FA /* perspectives_sermon_purple_triangle_shadow.png */; };
+		6132D5761860D82000D764FA /* perspectives_sermon_purple_triangle.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D5671860D82000D764FA /* perspectives_sermon_purple_triangle.png */; };
+		6132D5771860D82000D764FA /* perspectives_sermon_purple_triangle@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D5681860D82000D764FA /* perspectives_sermon_purple_triangle@2x.png */; };
+		6132D5781860D82000D764FA /* perspectives_sermon_red_square_shadow.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D5691860D82000D764FA /* perspectives_sermon_red_square_shadow.png */; };
+		6132D5791860D82000D764FA /* perspectives_sermon_red_square.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D56A1860D82000D764FA /* perspectives_sermon_red_square.png */; };
+		6132D57A1860D82000D764FA /* perspectives_sermon_red_square@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6132D56B1860D82000D764FA /* perspectives_sermon_red_square@2x.png */; };
 		614C01021824247600333698 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 614C01011824247600333698 /* Social.framework */; };
 		614C01041824247D00333698 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 614C01031824247D00333698 /* MessageUI.framework */; };
 		614E3C9A180D8D9C002E875B /* SacredGifts.dat in Resources */ = {isa = PBXBuildFile; fileRef = 614E3C98180D8D9C002E875B /* SacredGifts.dat */; };
@@ -789,6 +804,21 @@
 		613292DF18325C9E00551F09 /* SG_General_painting-castleBtn-on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn-on@2x.png"; sourceTree = "<group>"; };
 		613292E018325C9E00551F09 /* SG_General_painting-castleBtn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn.png"; sourceTree = "<group>"; };
 		613292E118325C9E00551F09 /* SG_General_painting-castleBtn@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SG_General_painting-castleBtn@2x.png"; sourceTree = "<group>"; };
+		6132D55D1860D82000D764FA /* perspectives_sermon_cross_hairs_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perspectives_sermon_cross_hairs_shadow.png; sourceTree = "<group>"; };
+		6132D55E1860D82000D764FA /* perspectives_sermon_cross_hairs.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perspectives_sermon_cross_hairs.png; sourceTree = "<group>"; };
+		6132D55F1860D82000D764FA /* perspectives_sermon_cross_hairs@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "perspectives_sermon_cross_hairs@2x.png"; sourceTree = "<group>"; };
+		6132D5601860D82000D764FA /* perspectives_sermon_green_triangle_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perspectives_sermon_green_triangle_shadow.png; sourceTree = "<group>"; };
+		6132D5611860D82000D764FA /* perspectives_sermon_green_triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perspectives_sermon_green_triangle.png; sourceTree = "<group>"; };
+		6132D5621860D82000D764FA /* perspectives_sermon_green_triangle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "perspectives_sermon_green_triangle@2x.png"; sourceTree = "<group>"; };
+		6132D5631860D82000D764FA /* perspectives_sermon_large_blue_circle_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perspectives_sermon_large_blue_circle_shadow.png; sourceTree = "<group>"; };
+		6132D5641860D82000D764FA /* perspectives_sermon_large_blue_circle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perspectives_sermon_large_blue_circle.png; sourceTree = "<group>"; };
+		6132D5651860D82000D764FA /* perspectives_sermon_large_blue_circle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "perspectives_sermon_large_blue_circle@2x.png"; sourceTree = "<group>"; };
+		6132D5661860D82000D764FA /* perspectives_sermon_purple_triangle_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perspectives_sermon_purple_triangle_shadow.png; sourceTree = "<group>"; };
+		6132D5671860D82000D764FA /* perspectives_sermon_purple_triangle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perspectives_sermon_purple_triangle.png; sourceTree = "<group>"; };
+		6132D5681860D82000D764FA /* perspectives_sermon_purple_triangle@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "perspectives_sermon_purple_triangle@2x.png"; sourceTree = "<group>"; };
+		6132D5691860D82000D764FA /* perspectives_sermon_red_square_shadow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perspectives_sermon_red_square_shadow.png; sourceTree = "<group>"; };
+		6132D56A1860D82000D764FA /* perspectives_sermon_red_square.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = perspectives_sermon_red_square.png; sourceTree = "<group>"; };
+		6132D56B1860D82000D764FA /* perspectives_sermon_red_square@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "perspectives_sermon_red_square@2x.png"; sourceTree = "<group>"; };
 		6141D35E183CFE1800739369 /* SGQCARDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SGQCARDelegate.h; sourceTree = "<group>"; };
 		614C01011824247600333698 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		614C01031824247D00333698 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
@@ -2000,6 +2030,21 @@
 		61CD50A6180C242500D28921 /* AR Assets */ = {
 			isa = PBXGroup;
 			children = (
+				6132D55D1860D82000D764FA /* perspectives_sermon_cross_hairs_shadow.png */,
+				6132D55E1860D82000D764FA /* perspectives_sermon_cross_hairs.png */,
+				6132D55F1860D82000D764FA /* perspectives_sermon_cross_hairs@2x.png */,
+				6132D5601860D82000D764FA /* perspectives_sermon_green_triangle_shadow.png */,
+				6132D5611860D82000D764FA /* perspectives_sermon_green_triangle.png */,
+				6132D5621860D82000D764FA /* perspectives_sermon_green_triangle@2x.png */,
+				6132D5631860D82000D764FA /* perspectives_sermon_large_blue_circle_shadow.png */,
+				6132D5641860D82000D764FA /* perspectives_sermon_large_blue_circle.png */,
+				6132D5651860D82000D764FA /* perspectives_sermon_large_blue_circle@2x.png */,
+				6132D5661860D82000D764FA /* perspectives_sermon_purple_triangle_shadow.png */,
+				6132D5671860D82000D764FA /* perspectives_sermon_purple_triangle.png */,
+				6132D5681860D82000D764FA /* perspectives_sermon_purple_triangle@2x.png */,
+				6132D5691860D82000D764FA /* perspectives_sermon_red_square_shadow.png */,
+				6132D56A1860D82000D764FA /* perspectives_sermon_red_square.png */,
+				6132D56B1860D82000D764FA /* perspectives_sermon_red_square@2x.png */,
 				61E163C41859E3540076F73A /* ar_sermon */,
 				61E4B8311843F9F60023DEAE /* sg_home_ar_help.png */,
 				61E4B8321843F9F60023DEAE /* sg_home_ar_help@2x.png */,
@@ -2682,6 +2727,7 @@
 				61735B5B183249A30000D837 /* healing.png in Resources */,
 				610554EB18285D600030CCC3 /* sg_temple_btn_later-on@2x.png in Resources */,
 				76CEC820146D45F7009E8098 /* StonesAndChips.dat in Resources */,
+				6132D5731860D82000D764FA /* perspectives_sermon_large_blue_circle.png in Resources */,
 				61CD51DB180C242500D28921 /* sg_home_bg-exhibition_blur.png in Resources */,
 				61735B63183249A30000D837 /* temple.png in Resources */,
 				61C8C10918512F5600003608 /* popup7@2x.png in Resources */,
@@ -2845,6 +2891,7 @@
 				61CD52BF180C242500D28921 /* painting_thumb_emmaus-on@2x.png in Resources */,
 				61CD52BC180C242500D28921 /* painting_thumb_denial.png in Resources */,
 				61267B851819667B00A52CC5 /* splash_donors@2x.png in Resources */,
+				6132D56D1860D82000D764FA /* perspectives_sermon_cross_hairs.png in Resources */,
 				61C8C0D918512F5600003608 /* popup12@2x.png in Resources */,
 				61CD5265180C242500D28921 /* SG_General_Painting_GiftsBtn.png in Resources */,
 				61E5F0B6184620AD003959C7 /* sg_general_Share_signout.png in Resources */,
@@ -2853,6 +2900,7 @@
 				61CD52DF180C242500D28921 /* painting_thumb_sermon-on@2x.png in Resources */,
 				618BC719183ED95600DE0504 /* sg_home_ar_initializing_label.png in Resources */,
 				61CD52C3180C242500D28921 /* painting_thumb_garden-on@2x.png in Resources */,
+				6132D57A1860D82000D764FA /* perspectives_sermon_red_square@2x.png in Resources */,
 				61CD52DD180C242500D28921 /* painting_thumb_savior@2x.png in Resources */,
 				61E163861859B4AB0076F73A /* header_SacredGifts AboutTheExhibition@2x.png in Resources */,
 				61E163F81859E3540076F73A /* sermon_triangle2Btn@2x.png in Resources */,
@@ -2890,6 +2938,7 @@
 				618713B5182F0956005BC973 /* SG_General_Module_Overlay.png in Resources */,
 				61C8C10E18512F5600003608 /* popup@2x.png in Resources */,
 				61E163F01859E3540076F73A /* sermon_crossBtn@2x.png in Resources */,
+				6132D5741860D82000D764FA /* perspectives_sermon_large_blue_circle@2x.png in Resources */,
 				61CD5209180C242500D28921 /* sg_home_label_hofmann@2x.png in Resources */,
 				61CD52C7180C242500D28921 /* painting_thumb_gethsemane-on@2x.png in Resources */,
 				61A668ED182EEB2200AC749E /* exhibition_credit_overlay.png in Resources */,
@@ -2996,6 +3045,7 @@
 				61735B62183249A30000D837 /* temple-ny.png in Resources */,
 				61C8C0D318512F5600003608 /* popup.png in Resources */,
 				61E163E91859E3540076F73A /* sermon_circleBtn-on.png in Resources */,
+				6132D5781860D82000D764FA /* perspectives_sermon_red_square_shadow.png in Resources */,
 				61CD52AF180C242500D28921 /* painting_thumb_cleansing-on@2x.png in Resources */,
 				61CD524F180C242500D28921 /* SG_General_Painting_ChildrensBtn.png in Resources */,
 				61F73CC61830FDF200D13F7C /* childrens_schwartz_prompt@2x.png in Resources */,
@@ -3013,6 +3063,7 @@
 				61CD5288180C242500D28921 /* SG_General_Share_email-on.png in Resources */,
 				610554E718285D600030CCC3 /* sg_temple_btn_1880-on@2x.png in Resources */,
 				61C8C0E718512F5600003608 /* popup19@2x.png in Resources */,
+				6132D56F1860D82000D764FA /* perspectives_sermon_green_triangle_shadow.png in Resources */,
 				618713C3182F10AA005BC973 /* SG_General_Module_OverlayHalf_Hofmann.png in Resources */,
 				61E163FC1859E3540076F73A /* sermon_triangleBtn@2x.png in Resources */,
 				61F73CC41830FDF200D13F7C /* childrens_hofmann_prompt@2x.png in Resources */,
@@ -3051,6 +3102,7 @@
 				610554E918285D600030CCC3 /* sg_temple_btn_1880@2x.png in Resources */,
 				61CD534C180C2C1B00D28921 /* Images.xcassets in Resources */,
 				61CD52D5180C242500D28921 /* painting_thumb_resurrection@2x.png in Resources */,
+				6132D5721860D82000D764FA /* perspectives_sermon_large_blue_circle_shadow.png in Resources */,
 				61CD52B2180C242500D28921 /* painting_thumb_consolator-on.png in Resources */,
 				61C8C13118512F5600003608 /* timeline_sermon.png in Resources */,
 				61735B61183249A30000D837 /* shepherds.png in Resources */,
@@ -3059,14 +3111,17 @@
 				618713C6182F10AA005BC973 /* SG_General_Module_OverlayHalf_Schwartz@2x.png in Resources */,
 				61CD522F180C242500D28921 /* SG_General_Media_Playhead-on.png in Resources */,
 				61CD5292180C242500D28921 /* SG_General_Share_other.png in Resources */,
+				6132D5761860D82000D764FA /* perspectives_sermon_purple_triangle.png in Resources */,
 				61CD5294180C242500D28921 /* SG_General_Share_thanks-on.png in Resources */,
 				61CD51FD180C242500D28921 /* sg_home_findbtn-on@2x.png in Resources */,
 				618BC717183ED95600DE0504 /* sg_home_ar_camera_icon.png in Resources */,
+				6132D56E1860D82000D764FA /* perspectives_sermon_cross_hairs@2x.png in Resources */,
 				61CD51F6180C242500D28921 /* sg_home_feedbackbtn.png in Resources */,
 				61E163E61859E3540076F73A /* sermon_cameraToggleOnBtn-on@2x.png in Resources */,
 				61CD51F5180C242500D28921 /* sg_home_feedbackbtn-on@2x.png in Resources */,
 				61CD52CC180C242500D28921 /* painting_thumb_healing.png in Resources */,
 				61E163B31859B4AB0076F73A /* header_savior.png in Resources */,
+				6132D56C1860D82000D764FA /* perspectives_sermon_cross_hairs_shadow.png in Resources */,
 				61C8C0DA18512F5600003608 /* popup13.png in Resources */,
 				61C8C0F918512F5600003608 /* popup28.png in Resources */,
 				61C8C13418512F5600003608 /* timeline_shepherds@2x.png in Resources */,
@@ -3135,6 +3190,7 @@
 				61E163B41859B4AB0076F73A /* header_savior@2x.png in Resources */,
 				61CD5274180C242500D28921 /* SG_General_Painting_PerspectivesBtn-on@2x.png in Resources */,
 				61CD5239180C242500D28921 /* SG_General_BackBtn.png in Resources */,
+				6132D5751860D82000D764FA /* perspectives_sermon_purple_triangle_shadow.png in Resources */,
 				61CD525F180C242500D28921 /* SG_General_Painting_DetailsBtn-on.png in Resources */,
 				61C8C0C218512F5600003608 /* timeline_assets_hofmannBtn@2x.png in Resources */,
 				61E1639E1859B4AB0076F73A /* header_SacredGifts FindAPainting@2x.png in Resources */,
@@ -3142,6 +3198,7 @@
 				61C8C11B18512F5600003608 /* timeline_consolator.png in Resources */,
 				613292E518325C9E00551F09 /* SG_General_painting-castleBtn@2x.png in Resources */,
 				61CD529F180C242500D28921 /* painting_thumb_aalborg-on@2x.png in Resources */,
+				6132D5771860D82000D764FA /* perspectives_sermon_purple_triangle@2x.png in Resources */,
 				61C8C0F118512F5600003608 /* popup24.png in Resources */,
 				61CD52CB180C242500D28921 /* painting_thumb_healing-on@2x.png in Resources */,
 				61E163981859B4AB0076F73A /* header_denial@2x.png in Resources */,
@@ -3181,6 +3238,7 @@
 				61E163B11859B4AB0076F73A /* header_ruler.png in Resources */,
 				61CD51D3180C242500D28921 /* artists_pages_hofmann_overlay.png in Resources */,
 				61C8C12F18512F5600003608 /* timeline_savior.png in Resources */,
+				6132D5701860D82000D764FA /* perspectives_sermon_green_triangle.png in Resources */,
 				61CD5228180C242500D28921 /* SG_Home_SplashScreen.png in Resources */,
 				7695D9D414D2F49B0013AD95 /* TextureTeapotRed.png in Resources */,
 				61C8C11218512F5600003608 /* timeline_bethesda@2x.png in Resources */,
@@ -3230,6 +3288,7 @@
 				61C8C0D518512F5600003608 /* popup10@2x.png in Resources */,
 				618645AD181AEEB700195384 /* childrens_btn-on@2x.png in Resources */,
 				61C8C0B718512F5600003608 /* timeline_assets_blochBtn.png in Resources */,
+				6132D5711860D82000D764FA /* perspectives_sermon_green_triangle@2x.png in Resources */,
 				61E163B81859B4AB0076F73A /* header_sermon@2x.png in Resources */,
 				61E1638F1859B4AB0076F73A /* header_children.png in Resources */,
 				61CD51D7180C242500D28921 /* paintings_text.png in Resources */,
@@ -3240,6 +3299,7 @@
 				61CD5280180C242500D28921 /* SG_General_Painting_SummaryBtn.png in Resources */,
 				61C8C11618512F5600003608 /* timeline_capture@2x.png in Resources */,
 				61C8C0C918512F5600003608 /* timeline_assets_worldBtn.png in Resources */,
+				6132D5791860D82000D764FA /* perspectives_sermon_red_square.png in Resources */,
 				61F73CC31830FDF200D13F7C /* childrens_hofmann_prompt.png in Resources */,
 				61C8C12318512F5600003608 /* timeline_garden.png in Resources */,
 				61CD51E4180C242500D28921 /* sg_home_bg-meetartists_blur.png in Resources */,
