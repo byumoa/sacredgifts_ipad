@@ -945,27 +945,27 @@
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" image="perspectives_sermon_cross_hairs.png" id="Doh-0Y-Ibo" userLabel="BlueCrosshair">
                                 <rect key="frame" x="-19" y="134" width="768" height="838"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
+                                <inset key="insetFor6xAndEarlier" minX="20" minY="-10" maxX="-20" maxY="10"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" image="perspectives_sermon_green_triangle.png" id="MwF-K5-2Si" userLabel="GreenTriangle">
                                 <rect key="frame" x="-19" y="134" width="768" height="838"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
+                                <inset key="insetFor6xAndEarlier" minX="20" minY="-10" maxX="-20" maxY="10"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" image="perspectives_sermon_large_blue_circle.png" id="rY8-nC-hhx" userLabel="BlueCircleLarge">
                                 <rect key="frame" x="-19" y="134" width="768" height="838"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
+                                <inset key="insetFor6xAndEarlier" minX="20" minY="-10" maxX="-20" maxY="10"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFit" image="perspectives_sermon_red_square.png" id="8Cz-qM-UaN" userLabel="redSquare">
                                 <rect key="frame" x="-19" y="134" width="768" height="838"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
+                                <inset key="insetFor6xAndEarlier" minX="20" minY="-10" maxX="-20" maxY="10"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.0" contentMode="scaleAspectFill" image="perspectives_sermon_purple_triangle.png" id="IRi-Rt-lgD" userLabel="purpleTriangle">
                                 <rect key="frame" x="-19" y="134" width="768" height="838"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <inset key="insetFor6xAndEarlier" minX="0.0" minY="-20" maxX="0.0" maxY="20"/>
+                                <inset key="insetFor6xAndEarlier" minX="20" minY="-10" maxX="-20" maxY="10"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

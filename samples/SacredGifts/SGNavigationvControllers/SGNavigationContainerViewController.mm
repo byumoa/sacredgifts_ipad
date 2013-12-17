@@ -18,6 +18,8 @@
 #import "GAIDictionaryBuilder.h"
 #import "SGDonateViewController.h"
 
+const int kDonateAlertViewTag = 1;
+
 @interface SGNavigationContainerViewController ()
 - (void)pressedWebViewBack: (id)sender;
 - (void)dismissWebview;
@@ -67,14 +69,10 @@
 {
     [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action" action:@"button_press" label:@"donate" value:nil] build]];
     //For App Store
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString: (NSString*)kDontateURLStr]];
-    //For Museum
-    /*
-    SGDonateViewController* donateViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"donate"];
-    [self presentViewController:donateViewController animated:YES completion:^{
-        [[UIApplication sharedApplication] setStatusBarHidden:YES];
-    }];
-     */
+    
+    UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Donate" message:@"Share your gift of gratitude by supporting the Sacred Gifts exhibition and the Brigham Young University Museum of Art. Thank you!" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
+    alertView.tag = kDonateAlertViewTag;
+    [alertView show];
 }
 
 -(void)pressedFeedback:(UIButton *)sender
@@ -100,13 +98,41 @@
     [alert show];
 }
 
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    switch (alertView.tag) {
+        case kDonateAlertViewTag:
+            if( buttonIndex > 0 )
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString: (NSString*)kDontateURLStr]];
+            //For Museum
+            /*
+             SGDonateViewController* donateViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"donate"];
+             [self presentViewController:donateViewController animated:YES completion:^{
+             [[UIApplication sharedApplication] setStatusBarHidden:YES];
+             }];
+             */
+            break;
+            
+        default:
+        
+            break;
+    }
+}
+
 -(void)alertViewCancel:(UIAlertView *)alertView
 {
-    [self dismissWebview];
+    switch (alertView.tag) {
+        case kDonateAlertViewTag:
+            break;
+            
+        default:
+            [self dismissWebview];
+            break;
+    }
 }
 
 -(void)pressedWebViewBack:(id)sender{
-    //[self dismissWebview];
+    [self dismissWebview];
 }
 
 -(void)dismissWebview{
