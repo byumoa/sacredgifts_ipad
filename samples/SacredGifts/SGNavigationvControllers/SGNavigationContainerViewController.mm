@@ -45,6 +45,7 @@ const int kDonateAlertViewTag = 1;
     {
         if( [self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDPaintingContainerStr])
         {
+            NSLog(@"_backViewControllerIDStr: %@, _beforePaintingViewControllerIDStr: %@", _backViewControllerIDStr, _beforePaintingViewControllerIDStr);
             _backViewControllerIDStr = _beforePaintingViewControllerIDStr;
             if( [_beforePaintingViewControllerIDStr isEqualToString:(NSString*)kControllerIDPaintingContainerStr])
                 _backViewControllerIDStr = (NSString*)kControllerIDFindAPaintingStr;
