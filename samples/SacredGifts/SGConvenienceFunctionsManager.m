@@ -80,14 +80,14 @@
     else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[7]] ) return (NSString*)kfacebookURLmocking;
     else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[8]] ) return (NSString*)kfacebookURLconsolator;
     else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[9]] ) return (NSString*)kfacebookURLemmaus;
-    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[10]] ) return (NSString*)kfacebookURLshepherds;
-    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[11]] ) return (NSString*)kfacebookURLsermon;
-    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[12]] ) return (NSString*)kfacebookURLchildren;
-    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[13]] ) return (NSString*)kfacebookURLhealing;
-    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[14]] ) return (NSString*)kfacebookURLcleansing;
-    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[15]] ) return (NSString*)kfacebookURLdenial;
-    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[16]] ) return (NSString*)kfacebookURLcross;
-    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[17]] ) return (NSString*)kfacebookURLburial;
+    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[11]] ) return (NSString*)kfacebookURLshepherds;
+    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[12]] ) return (NSString*)kfacebookURLsermon;
+    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[13]] ) return (NSString*)kfacebookURLchildren;
+    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[14]] ) return (NSString*)kfacebookURLhealing;
+    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[15]] ) return (NSString*)kfacebookURLcleansing;
+    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[16]] ) return (NSString*)kfacebookURLdenial;
+    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[17]] ) return (NSString*)kfacebookURLcross;
+    else if( [paintingStr isEqualToString:(NSString*)kPaintingNames[18]] ) return (NSString*)kfacebookURLburial;
     
     return (NSString*)kfacebookURLresurrection;
 }
