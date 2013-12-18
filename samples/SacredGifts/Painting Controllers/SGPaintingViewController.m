@@ -17,6 +17,8 @@
 #import "SGSocialViewController.h"
 #import "SGVideoOverlayViewController.h"
 #import "SGConvenienceFunctionsManager.h"
+#import "SGNavigationContainerViewController.h"
+#import "SGPaintingContainerViewController.h"
 
 const int kFooterBtnOffset = 140;
 const int kFooterBtnY = 35;
@@ -258,6 +260,7 @@ static BOOL chromeHidden = NO;
     else if( [self.fromArtist isEqualToString:@"hofmann"])
         nextPaintingName = (NSString*)kPaintingNamesHofmann[nextPaintingIndex];
     
+    ((SGNavigationContainerViewController*)((SGPaintingContainerViewController*)self.delegate).delegate).hasSwiped = YES;
     
     SGPaintingViewController* paintingViewController = (SGPaintingViewController*)[self.delegate transitionFromController:self toPaintingNamed:nextPaintingName fromButtonRect:CGRectZero withAnimType:swipeDir];
     paintingViewController.fromArtist = self.fromArtist;

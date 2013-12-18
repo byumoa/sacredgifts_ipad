@@ -46,6 +46,12 @@ const int kDonateAlertViewTag = 1;
         if( [self.currentContentController.restorationIdentifier isEqualToString:(NSString*)kControllerIDPaintingContainerStr])
         {
             NSLog(@"_backViewControllerIDStr: %@, _beforePaintingViewControllerIDStr: %@", _backViewControllerIDStr, _beforePaintingViewControllerIDStr);
+            if( self.hasSwiped &&
+               ![_beforePaintingViewControllerIDStr isEqualToString:@"bloch"] &&
+               ![_beforePaintingViewControllerIDStr isEqualToString:@"schwartz"] &&
+               ![_beforePaintingViewControllerIDStr isEqualToString:@"hofmann"])
+                _beforePaintingViewControllerIDStr = (NSString*)kControllerIDFindAPaintingStr;
+            
             _backViewControllerIDStr = _beforePaintingViewControllerIDStr;
             if( [_beforePaintingViewControllerIDStr isEqualToString:(NSString*)kControllerIDPaintingContainerStr])
                 _backViewControllerIDStr = (NSString*)kControllerIDFindAPaintingStr;
@@ -151,6 +157,9 @@ const int kDonateAlertViewTag = 1;
 {
     NSString* headerName = [NSString stringWithFormat:@"header_%@", toControllerID];
     self.headerTitleImgView.image = [UIImage imageNamed:headerName];
+    
+    if( [fromController.restorationIdentifier isEqualToString:@"timeline"] )
+        self.hasSwiped = NO;
     
     //Handle Back Button Alpha
     float backBtnAlpha = 1;

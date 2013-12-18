@@ -26,6 +26,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *backBtn;
 @property (strong, nonatomic) UIActivityIndicatorView* activityIndicator;
 @property (strong, nonatomic) ARParentViewController* scanController;
+@property (nonatomic) BOOL hasSwiped;
 
 - (IBAction)pressedBack:(UIButton*)sender;
 - (IBAction)pressedDonate:(UIButton *)sender;
