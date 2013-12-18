@@ -408,16 +408,6 @@
 			</dict>
 			<dict>
 				<key>x</key>
-				<real>3000</real>
-				<key>y</key>
-				<integer>30</integer>
-				<key>width</key>
-				<integer>280</integer>
-				<key>text</key>
-				<string>Alexander Graham Bell invents telephone</string>
-			</dict>
-			<dict>
-				<key>x</key>
 				<integer>4934</integer>
 				<key>y</key>
 				<integer>430</integer>
