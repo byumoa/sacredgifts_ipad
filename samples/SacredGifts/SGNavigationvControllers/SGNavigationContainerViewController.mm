@@ -111,13 +111,13 @@ const int kDonateAlertViewTag = 1;
         case kDonateAlertViewTag:
             if( buttonIndex > 0 )
             {
-                //[[UIApplication sharedApplication] openURL:[NSURL URLWithString: (NSString*)kDontateURLStr]];
+                [[UIApplication sharedApplication] openURL:[NSURL URLWithString: (NSString*)kDontateURLStr]];
             //For Museum
             
-             SGDonateViewController* donateViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"donate"];
-             [self presentViewController:donateViewController animated:YES completion:^{
-             [[UIApplication sharedApplication] setStatusBarHidden:YES];
-             }];
+//             SGDonateViewController* donateViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"donate"];
+//             [self presentViewController:donateViewController animated:YES completion:^{
+//             [[UIApplication sharedApplication] setStatusBarHidden:YES];
+//             }];
              
             }
             break;
