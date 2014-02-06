@@ -75,7 +75,6 @@ const int kDonateAlertViewTag = 1;
 - (IBAction)pressedDonate:(UIButton *)sender
 {
     [[[GAI sharedInstance] defaultTracker] send:[[GAIDictionaryBuilder createEventWithCategory:@"ui_action" action:@"button_press" label:@"donate" value:nil] build]];
-    //For App Store
     
     UIAlertView* alertView = [[UIAlertView alloc] initWithTitle:@"Donate" message:@"Share your gift of gratitude by supporting the Sacred Gifts exhibition and the Brigham Young University Museum of Art. Thank you!" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"OK", nil];
     alertView.tag = kDonateAlertViewTag;
@@ -111,13 +110,13 @@ const int kDonateAlertViewTag = 1;
         case kDonateAlertViewTag:
             if( buttonIndex > 0 )
             {
-                [[UIApplication sharedApplication] openURL:[NSURL URLWithString: (NSString*)kDontateURLStr]];
+                //[[UIApplication sharedApplication] openURL:[NSURL URLWithString: (NSString*)kDontateURLStr]];
             //For Museum
             
-//             SGDonateViewController* donateViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"donate"];
-//             [self presentViewController:donateViewController animated:YES completion:^{
-//             [[UIApplication sharedApplication] setStatusBarHidden:YES];
-//             }];
+             SGDonateViewController* donateViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"donate"];
+             [self presentViewController:donateViewController animated:YES completion:^{
+             [[UIApplication sharedApplication] setStatusBarHidden:YES];
+             }];
              
             }
             break;
